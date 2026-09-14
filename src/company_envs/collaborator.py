@@ -476,6 +476,7 @@ def source_inputs(root):
         "docs/GATE4-RUNBOOK.md",
         "docs/PIPELINE-REPAIRS.md",
         "README.md",
+        "AGENTS.md",
         "CONTRIBUTING.md",
     ):
         files[name] = (root / name).read_bytes()

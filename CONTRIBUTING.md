@@ -5,6 +5,7 @@ Issues and pull requests are welcome. Describe the problem, the behavior you
 changed, and how you checked it. Include a small reproducer for a bug when possible.
 
 See [development](docs/DEVELOPMENT.md) for extension points and focused checks.
+[AGENTS.md](AGENTS.md) contains the repository-wide working guide for coding agents.
 
 ## Checks
 

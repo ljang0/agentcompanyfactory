@@ -118,6 +118,9 @@ The Python package and CLI are named `company_envs` and `company-envs`.
 
 ## Development
 
+Coding agents should start with [AGENTS.md](AGENTS.md) for setup, stage contracts,
+checkpoint rules, testing and operational pitfalls.
+
 ```sh
 make check
 ```

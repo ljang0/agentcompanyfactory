@@ -7,6 +7,7 @@
 - [Architecture](ARCHITECTURE.md): code map, company layout and execution boundaries.
 - [Use as a template](TEMPLATE.md): create and customize your own project.
 - [Development](DEVELOPMENT.md): checks and extension points.
+- [Agent guide](../AGENTS.md): setup, operating rules, checkpoint handling and troubleshooting.
 
 ## Inspect an existing run
 
