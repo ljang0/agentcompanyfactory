@@ -200,6 +200,39 @@ def test_derived_repairs_preserve_source_facts_and_are_idempotent():
     assert any("loss reason" in e for e in quality_errors({"hubspot_mock": repaired}))
 
 
+def test_dm_preview_follows_latest_message_and_preserves_empty_conversations():
+    from company_envs.world.population_derived import repair_derived_state
+
+    state = {
+        "dms": [
+            {"dmId": "active", "lastMessage": "Stale preview", "lastTime": "2026-08-01T00:00:00Z"},
+            {"dmId": "empty", "lastMessage": "Retained", "lastTime": "2026-01-01T00:00:00Z"},
+        ],
+        "messages": {
+            "active": [
+                {"messageId": "first", "timestamp": "2026-07-01T10:00:00-04:00", "content": "Ready?"},
+                {"messageId": "older", "timestamp": "2026-07-01T13:00:00Z", "content": "Checking"},
+                {"messageId": "last", "timestamp": "2026-07-01T14:00:00Z", "content": "Ready."},
+            ],
+            "empty": [],
+        },
+    }
+    original = deepcopy(state)
+    repaired, changes = repair_derived_state("slack_mock", state)
+    assert state == original
+    assert repaired["messages"] == original["messages"]
+    assert repaired["dms"][1] == original["dms"][1]
+    assert changes == [
+        {"path": ["dms", 0, "lastMessage"], "before": "Stale preview", "after": "Ready."},
+        {
+            "path": ["dms", 0, "lastTime"],
+            "before": "2026-08-01T00:00:00Z",
+            "after": "2026-07-01T14:00:00Z",
+        },
+    ]
+    assert repair_derived_state("slack_mock", repaired) == (repaired, [])
+
+
 def test_incomplete_snapshot_is_repairable_but_never_acceptable(tmp_path, monkeypatch):
     from company_envs.world import population_repair
     from company_envs.world import population_snapshot as module
