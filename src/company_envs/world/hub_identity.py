@@ -30,6 +30,8 @@ import secrets
 import threading
 import time
 import zlib
+from collections import OrderedDict
+from contextlib import contextmanager
 from copy import deepcopy
 from email.message import Message
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -60,6 +62,8 @@ _MISSING = object()
 # Names a proxy refusal in the response, so a browser-fault check can tell a harness route the
 # worker may not reach from an app request that genuinely failed.
 REFUSED_HEADER = "X-Company-Envs-Refused"
+VIEW_HEADER = "X-Company-Env-View"
+MAX_VIEWS = 32
 
 
 # One mutual-exclusion lock per upstream app, taken by reads as well as writes. Measured
@@ -260,6 +264,21 @@ BOOTSTRAP = """<script data-company-envs="identity">
   var worker = %(worker)s;
   var sid = %(sid)s;
   window.__companyWorker = worker;
+  // A worker may have several tabs with different loaded snapshots.
+  var view = Array.from(crypto.getRandomValues(new Uint8Array(16)), function (b) {
+    return b.toString(16).padStart(2, "0");
+  }).join("");
+  var fetchPage = window.fetch.bind(window);
+  window.fetch = function (input, options) {
+    var url = new URL(input instanceof Request ? input.url : input, location.href);
+    if (url.origin === location.origin && (url.pathname === "/state" || url.pathname === "/post")) {
+      var headers = new Headers(options && options.headers !== undefined ? options.headers :
+        input instanceof Request ? input.headers : undefined);
+      headers.set("X-Company-Env-View", view);
+      options = Object.assign({}, options, {headers: headers});
+    }
+    return fetchPage(input, options);
+  };
   function withSid(href) {
     var url = new URL(href, location.href);
     url.searchParams.set("sid", sid);
@@ -273,12 +292,10 @@ BOOTSTRAP = """<script data-company-envs="identity">
     }
   } catch (e) {}
   try {
-    // Always start from the shared server state, never from this browser's stale copy.
-    if (!sessionStorage.getItem("__company_envs_fresh")) {
-      localStorage.clear();
-      sessionStorage.clear();
-      sessionStorage.setItem("__company_envs_fresh", "1");
-    }
+    // Each new page must load its own server snapshot, including after a reload.
+    // Native apps use both stores to decide whether they can skip requesting /state.
+    localStorage.clear();
+    sessionStorage.clear();
   } catch (e) {}
   var lastInput = Date.now();
   ["keydown", "mousedown", "input", "pointerdown", "wheel"].forEach(function (name) {
@@ -293,8 +310,6 @@ BOOTSTRAP = """<script data-company-envs="identity">
         var text = JSON.stringify(data.stored_state);
         if (seen === null) { seen = text; return; }
         if (text !== seen && Date.now() - lastInput > %(idle_ms)d) {
-          try { localStorage.clear(); } catch (e) {}
-          sessionStorage.removeItem("__company_envs_fresh");
           // Navigate, not reload: the fresh load must carry this worker's sid in the URL.
           location.replace(withSid(location.href));
         }
@@ -626,6 +641,7 @@ class WorkerAppProxy:
         self.on_write = on_write
         self.app_id = app_id
         self.base = None
+        self._view_bases = OrderedDict()
         # Records this worker has written through this proxy. A scoped collection hides records
         # the account is not a party to, which is right for reading a colleague's mail and wrong
         # for reading back your own work: a secretary who books a visit for the nurse and the
@@ -697,6 +713,10 @@ class WorkerAppProxy:
                     self.send_error(400, "Invalid request framing")
                     return
                 route = self.path.split("?", 1)[0]
+                view = self.headers.get(VIEW_HEADER)
+                if view is not None and not re.fullmatch(r"[0-9a-f]{32}", view):
+                    self.send(400, b"Invalid page view", [])
+                    return
                 if route.startswith(RESOURCE_ROUTE) and proxy.resources is not None:
                     if self.command not in ("GET", "HEAD"):
                         self.send(405, b"", [("Allow", "GET, HEAD")])
@@ -774,16 +794,20 @@ class WorkerAppProxy:
                     and isinstance(body.get("state"), dict)
                 ):
                     with proxy._merge_lock:
-                        status, data, out = proxy.write_state(
-                            body, path, headers, self.upstream_call, rebased_action=rebased_action
-                        )
+                        if view is not None and view not in proxy._view_bases:
+                            self.send(409, b"Reload this page before saving its state", [])
+                            return
+                        with proxy.view_base(view):
+                            status, data, out = proxy.write_state(
+                                body, path, headers, self.upstream_call, rebased_action=rebased_action
+                            )
                         if status == 200 and proxy.identity_key:
                             payload = json.loads(data)
                             if isinstance(payload, dict) and isinstance(payload.get("state"), dict):
                                 payload["state"][proxy.identity_key] = proxy.identity_value
                                 data = json.dumps(payload).encode()
                 elif route == "/state" and method == "GET":
-                    with proxy._merge_lock:
+                    with proxy._merge_lock, proxy.view_base(view):
                         status, data, out = self.upstream_call(method, path, raw, headers)
                         if status == 200:
                             # Polls observe peer changes without loading them into the UI.
@@ -854,6 +878,23 @@ class WorkerAppProxy:
     def identity_value(self):
         """What this worker's identity key holds: its own record, or its id for a pointer key."""
         return self.user_record if self.user_pointer is None else self.user_pointer
+
+    @contextmanager
+    def view_base(self, view):
+        """Select a page's loaded snapshot while the upstream merge lock is held."""
+        if view is None:
+            yield
+            return
+        default = self.base
+        self.base = self._view_bases.pop(view, None)
+        try:
+            yield
+        finally:
+            if self.base is not None:
+                self._view_bases[view] = self.base
+                while len(self._view_bases) > MAX_VIEWS:
+                    self._view_bases.popitem(last=False)
+            self.base = default
 
     @staticmethod
     def inject(html, bootstrap):

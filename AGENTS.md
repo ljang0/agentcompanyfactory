@@ -163,6 +163,10 @@ do not describe those helpers as a generic one-command generator.
 - Use the explicit repair commands. `patch-population` requires the prior baseline
   and old/new field values; `recheck-population` revalidates existing records after
   compiler/checker changes without model generation. Data changes invalidate proof.
+- After runtime-only repair, run `verify-world`, then `freeze-world --refresh-tasks`.
+  This archives old proof and bindings and requires unchanged population and content
+  review. Replay references before new teams; preserve previous calibration and trial
+  outcomes, including scored failures and attempt limits.
 - Some receipts pin raw source bytes. Broad formatting, comments or path cleanup
   can invalidate a snapshot even when behavior seems unchanged. Format only the
   files being changed and inspect the affected fingerprints.

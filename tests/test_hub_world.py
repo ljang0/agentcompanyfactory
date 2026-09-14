@@ -106,7 +106,14 @@ def test_serve_gives_each_worker_its_own_logged_in_view_of_shared_data(company):
             # The HTML a worker loads carries the identity bootstrap.
             page = urllib.request.urlopen(endpoints["workers"]["w1"], timeout=5).read()
             assert b'data-company-envs="identity"' in page and b'"id": "w1"' in page
+            request = urllib.request.Request(
+                endpoints["workers"]["w1"].replace("/?", "/state?"),
+                headers={"X-Company-Env-View": "a" * 32},
+            )
+            urllib.request.urlopen(request, timeout=5).read()
+            assert world.proxies[0]._view_bases
             world.reset()
+            assert all(not proxy._view_bases for proxy in world.proxies)
             assert HubClient(stub.url).inspect("acme-ep1")["current_state"] == SEEDED
             assert not (folder / "runtime/attribution/demo_mock.jsonl").read_text()
             archived = list((folder / "runtime/attribution/archive").glob("*/demo_mock.jsonl"))

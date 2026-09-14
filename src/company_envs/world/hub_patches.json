@@ -1369,6 +1369,24 @@
       "old": "<head>",
       "new": "<head>\n    <style>img.rounded-full[src=\"\"],img.rounded-full:not([src]){content:url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%2040%22%3E%3Crect%20width%3D%2240%22%20height%3D%2240%22%20rx%3D%2220%22%20fill%3D%22%23e5e7eb%22%2F%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2215%22%20r%3D%227%22%20fill%3D%22%236b7280%22%2F%3E%3Cpath%20d%3D%22M7%2036c0-15%2026-15%2026%200%22%20fill%3D%22%236b7280%22%2F%3E%3C%2Fsvg%3E\");}</style>",
       "reason": "Render a default avatar for an empty round profile image. CSS supplies the visual fallback without changing the seeded identity or saved app state."
+    },
+    {
+      "file": "src/types.ts",
+      "old": "  transitions: WorkflowTransition[];",
+      "new": "  transitions: WorkflowTransition[] | Partial<Record<IssueStatus, IssueStatus[]>>;",
+      "reason": "Accept the equivalent status-to-targets map used by existing company worlds without changing their saved transition rules."
+    },
+    {
+      "file": "src/components/IssueModal.tsx",
+      "old": "    workflow.transitions.find((t) => t.from === editedIssue.status)?.to || [];",
+      "new": "    (Array.isArray(workflow.transitions)\n      ? workflow.transitions.find((t) => t.from === editedIssue.status)?.to\n      : workflow.transitions[editedIssue.status]) || [];",
+      "reason": "Open issue details for both transition lists and equivalent maps; retain the configured status restrictions."
+    },
+    {
+      "file": "src/pages/Board.tsx",
+      "old": "        workflow.transitions.find((t) => t.from === issue.status)?.to || [];",
+      "new": "        (Array.isArray(workflow.transitions)\n          ? workflow.transitions.find((t) => t.from === issue.status)?.to\n          : workflow.transitions[issue.status]) || [];",
+      "reason": "Apply the same declared transition rules when dragging an issue on the board."
     }
   ]
 }

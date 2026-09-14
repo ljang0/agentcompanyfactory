@@ -594,6 +594,31 @@ def test_jira_creates_distinct_issue_keys_in_a_seeded_project(tmp_path, existing
     assert json.loads(result.stdout) == expected
 
 
+@pytest.mark.skipif(shutil.which("node") is None, reason="Running Jira transition rules requires Node")
+@pytest.mark.parametrize("file", ["src/components/IssueModal.tsx", "src/pages/Board.tsx"])
+@pytest.mark.parametrize("as_map", [False, True])
+@pytest.mark.parametrize("status, expected", [("To Do", ["In Progress"]), ("Done", []), ("Unknown", [])])
+def test_jira_issue_and_board_preserve_transition_rules_in_lists_and_maps(
+    tmp_path, file, as_map, status, expected
+):
+    rules = {"To Do": ["In Progress"], "In Progress": ["To Do", "Done"], "Done": []}
+    transitions = rules if as_map else [{"from": key, "to": value} for key, value in rules.items()]
+    patch = next(p for p in hub_app.patches("jira_mock") if p["file"] == file)
+    harness = tmp_path / "transitions.mjs"
+    harness.write_text(
+        "const workflow = JSON.parse(process.argv[2]);\n"
+        "const issue = {status: process.argv[3]}; const editedIssue = issue;\n"
+        "const allowed = " + patch["new"] + "\nconsole.log(JSON.stringify(allowed));\n"
+    )
+    result = subprocess.run(
+        ["node", str(harness), json.dumps({"transitions": transitions}), status],
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    assert json.loads(result.stdout) == expected
+
+
 def test_docs_patches_take_seeds_verbatim_hold_saves_and_keep_sid_on_routes(tmp_path):
     target = patched_copy(tmp_path, "google_docs_mock")
     store = (target / "src/store/initialData.js").read_text()

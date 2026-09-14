@@ -53,6 +53,14 @@ an exact previous baseline and explicit old/new field values and reasons.
 `recheck-population FOLDER` handles compiler/checker updates without generating
 new records. Data changes invalidate earlier acceptance.
 
+After a runtime-only repair, keep the existing company and its receipts. Run
+`verify-world FOLDER --work WORK`, then `freeze-world FOLDER --refresh-tasks`.
+The second command requires the identical population and accepted content review,
+archives the previous runtime proof and task bindings, and binds the unchanged tasks
+to the new acceptance receipt. It does not change calibration or trial results.
+Replay references on the repaired runtime before new team attempts. Reuse verifier
+calibration only while its requirements, code and evidence still match.
+
 SanMar population also used the historical helpers now under `scripts/pilots/sanmar/`.
 The [software delivery example](../examples/thoughtbot/README.md) exercised the
 shared commands through Stage 4, including checkpointed continuation and recorded
@@ -84,7 +92,8 @@ Use a new positive `--attempt` only after diagnosing the prior result. Each task
 allows at most three scored trials of each kind. Infrastructure failures that
 prevent grading remain archived and do not consume that limit. Trial and grading
 budgets are separate. The pilot allows 450 shared worker model calls, 150 actions
-per worker and 1,500 seconds per worker-execution/grading phase.
+per worker and 1,500 seconds for trial preparation and execution, with time reserved
+for final exports. Grading has a separate 1,500-second allowance.
 
 `diagnose-trial` inspects an environment failure without changing its status.
 `regrade-trial` can grade a healthy saved episode after verifier repair and

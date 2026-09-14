@@ -398,6 +398,7 @@ class CompanyWorld:
                 client.seed(self.sid, item["state"])
             for proxy in self.proxies:
                 proxy.base = None
+                proxy._view_bases.clear()
                 proxy.authored = set()
             self.archive_attribution()
 

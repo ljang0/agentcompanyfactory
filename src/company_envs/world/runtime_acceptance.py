@@ -466,7 +466,7 @@ def verify_runtime(root, folder, *, work=None):
             }
             if not ok:
                 raise ValueError(f"Reset failed: {item['app_id']}")
-        if any(proxy.base is not None or proxy.authored for proxy in world.proxies):
+        if any(proxy.base is not None or proxy.authored or proxy._view_bases for proxy in world.proxies):
             raise ValueError("Reset did not clear proxy session caches")
         for item in world.plan:
             path = folder / "runtime/attribution" / f"{item['app_id']}.jsonl"

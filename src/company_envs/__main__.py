@@ -123,6 +123,11 @@ def main():
         "freeze-world", help="freeze only an accepted, tested, unchanged population"
     )
     freezeworld.add_argument("folder", type=Path)
+    freezeworld.add_argument(
+        "--refresh-tasks",
+        action="store_true",
+        help="retain tasks after runtime-only repair; archive old bindings",
+    )
     core.add_argument("--timeout", type=positive_integer, default=2700)
     core.add_argument("--review-rounds", type=int, choices=range(3), default=2)
     core.add_argument(
@@ -667,7 +672,7 @@ def _dispatch(args, parser):
     elif args.command == "freeze-world":
         from .world.world_acceptance import freeze_population
 
-        print(json.dumps(freeze_population(root, args.folder), indent=2))
+        print(json.dumps(freeze_population(root, args.folder, refresh_tasks=args.refresh_tasks), indent=2))
     elif args.command == "seed-world":
         from .world.state_seed import seed_world
 

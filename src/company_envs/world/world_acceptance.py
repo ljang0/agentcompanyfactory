@@ -124,7 +124,7 @@ def review_population(root, folder, *, models=None, round_index=0):
     return result
 
 
-def freeze_population(root, folder, runtime=None):
+def freeze_population(root, folder, runtime=None, *, refresh_tasks=False):
     """Fail closed on stale, skipped, failed or incomplete acceptance evidence."""
     root, folder = Path(root).resolve(), Path(folder).resolve()
     snapshot = population_snapshot(root, folder)
@@ -140,6 +140,16 @@ def freeze_population(root, folder, runtime=None):
     ):
         raise ValueError("Complete runtime acceptance evidence is required")
     validate_runtime_evidence(root, folder, runtime, snapshot)
+    frozen_path = folder / "world/FROZEN.json"
+    if frozen_path.exists():
+        previous = read(frozen_path)
+        if (
+            previous.get("status") == "world_accepted"
+            and previous.get("baseline") == snapshot
+            and previous.get("review_hash") == digest(review)
+            and previous.get("runtime_hash") == digest(runtime)
+        ):
+            return previous
     receipt = {
         "schema_version": 1,
         "status": "world_accepted",
@@ -149,9 +159,76 @@ def freeze_population(root, folder, runtime=None):
         "runtime_hash": digest(runtime),
         "reference_date": read(folder / "world/POPULATION.json")["reference_date"],
     }
+    bindings = sorted((folder / "tasks").glob("*/WORLD.json"))
+    if bindings:
+        if not refresh_tasks:
+            raise ValueError("Tasks already bind this world; use --refresh-tasks after runtime-only repair")
+        _refresh_task_bindings(folder, receipt, runtime, bindings)
+    elif refresh_tasks:
+        raise ValueError("No existing task bindings to refresh")
     write(folder / "world/acceptance/RUNTIME.json", runtime)
     write(folder / "world/FROZEN.json", receipt)
     return receipt
+
+
+def _refresh_task_bindings(folder, receipt, runtime, bindings):
+    """Carry unchanged tasks across a measured runtime repair, retaining their old proof."""
+    previous = read(folder / "world/FROZEN.json")
+    if previous.get("status") != "world_accepted" or any(
+        previous[key] != receipt[key] for key in ("baseline", "review_hash", "reference_date")
+    ):
+        raise ValueError("Task binding refresh requires unchanged population and accepted content review")
+    old_hash = digest(previous)
+    saved = {str(p.relative_to(folder)): read(p) for p in bindings}
+    if any(b.get("frozen_hash") != old_hash for b in saved.values()):
+        raise ValueError("Task binding does not match the previous frozen world")
+    # verify-world writes a new current receipt but retains every native run.
+    candidates = [folder / "world/acceptance/RUNTIME.json"]
+    candidates += sorted((folder / "world/acceptance/runtime").glob("*/RESULT.json"))
+    prior_runtime = next(
+        (read(p) for p in candidates if p.exists() and digest(read(p)) == previous["runtime_hash"]), None
+    )
+    if prior_runtime is None or prior_runtime.get("baseline") != previous["baseline"]:
+        raise ValueError("The previous runtime receipt must be retained before refreshing task bindings")
+    for relative, expected in prior_runtime.get("evidence", {}).items():
+        path = (folder / relative).resolve()
+        if not path.is_relative_to(folder) or not path.is_file() or digest(path.read_bytes()) != expected:
+            raise ValueError(f"Previous runtime evidence changed: {relative}")
+    archive = (
+        folder
+        / "world/acceptance/task-binding-refreshes"
+        / digest({"previous": previous, "runtime": runtime})
+    )
+    if archive.exists():
+        raise ValueError(f"Task binding refresh already started; inspect retained journal: {archive}")
+    task_files = {
+        str(p.relative_to(folder)): digest(p.read_bytes())
+        for binding in bindings
+        for p in sorted(binding.parent.iterdir())
+        if p.is_file() and p != binding
+    }
+    journal = {
+        "at": now(),
+        "previous_frozen_hash": old_hash,
+        "frozen_hash": digest(receipt),
+        "previous_runtime_hash": previous["runtime_hash"],
+        "runtime_hash": receipt["runtime_hash"],
+        "task_files": task_files,
+        "bindings": saved,
+        "scope": "runtime acceptance and task bindings; task content, calibration and trials unchanged",
+    }
+    write(archive / "FROZEN.json", previous)
+    write(archive / "RUNTIME.json", prior_runtime)
+    write(archive / "NEXT-FROZEN.json", receipt)
+    write(archive / "REFRESH.json", journal)
+    for path in bindings:
+        write(
+            path,
+            {
+                "frozen_hash": digest(receipt),
+                "runtime_refresh": str((archive / "REFRESH.json").relative_to(folder)),
+            },
+        )
 
 
 def validate_runtime_evidence(root, folder, runtime, snapshot):

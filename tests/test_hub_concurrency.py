@@ -174,6 +174,57 @@ def test_background_poll_does_not_adopt_state_that_ui_has_not_loaded(tmp_path):
         assert {ticket["id"] for ticket in shared.current(SID)["stored_state"]["tickets"]} == {7, 8, 9}
 
 
+def page_state(proxy, view, state=None, *, poll=False):
+    headers = {"X-Company-Env-View": view}
+    if poll:
+        headers["X-Company-Env-Poll"] = "1"
+    route = "state" if state is None else "post"
+    body = None if state is None else json.dumps({"action": "set_current", "state": state}).encode()
+    if body is not None:
+        headers["Content-Type"] = "application/json"
+    request = Request(f"http://127.0.0.1:{proxy.port}/{route}?sid={SID}", data=body, headers=headers)
+    with urlopen(request, timeout=5) as response:
+        return json.load(response)
+
+
+def test_a_second_tab_read_cannot_turn_a_stale_save_into_a_peer_record_deletion(tmp_path):
+    with workers(tmp_path) as (shared, clients, states, _, proxies):
+        old_tab, new_tab = "a" * 32, "b" * 32
+        stale = page_state(proxies[1], old_tab)["stored_state"]
+        states[0]["tickets"].append({"id": 8, "status": "open"})
+        clients[0].update(SID, states[0])
+        fresh = page_state(proxies[1], new_tab)["stored_state"]
+        assert {t["id"] for t in fresh["tickets"]} == {7, 8}
+        page_state(proxies[1], old_tab, poll=True)
+        stale["tickets"][0]["subject"] = "Updated in the original tab"
+        page_state(proxies[1], old_tab, stale)
+        current = shared.current(SID)["stored_state"]
+        assert {t["id"] for t in current["tickets"]} == {7, 8}
+        assert current["tickets"][0]["subject"] == "Updated in the original tab"
+        # Deliberately deleting a record that this page loaded is still possible.
+        fresh["tickets"] = [t for t in fresh["tickets"] if t["id"] != 8]
+        page_state(proxies[1], new_tab, fresh)
+        assert shared.current(SID)["stored_state"]["tickets"] == [current["tickets"][0]]
+
+
+def test_unknown_or_evicted_page_must_load_state_before_saving(tmp_path, monkeypatch):
+    monkeypatch.setattr(hub_identity, "MAX_VIEWS", 2)
+    with workers(tmp_path) as (shared, _, states, _, proxies):
+        for view in ("a" * 32, "b" * 32, "c" * 32):
+            page_state(proxies[0], view)
+        assert len(proxies[0]._view_bases) == 2
+        for view in ("a" * 32, "d" * 32):
+            # A background poll does not establish that the UI loaded this state.
+            page_state(proxies[0], view, poll=True)
+            with pytest.raises(HTTPError) as error:
+                page_state(proxies[0], view, states[0])
+            assert error.value.code == 409
+        with pytest.raises(HTTPError) as error:
+            page_state(proxies[0], "not-a-page-id")
+        assert error.value.code == 400
+        assert shared.current(SID)["stored_state"] == STATE
+
+
 def test_simultaneous_writes_lock_the_entire_read_merge_write(tmp_path, monkeypatch):
     with workers(tmp_path) as (shared, clients, states, _, proxies):
         lock = proxies[0]._merge_lock
@@ -320,6 +371,54 @@ def test_bootstrap_preserves_doctype_and_handles_head_attributes():
         injected = WorkerAppProxy.inject(page, bootstrap)
         assert injected.startswith(b"<!doctype html>")
         assert injected.lower().index(b"<html>") < injected.index(bootstrap) < injected.index(b"<body>")
+
+
+def test_each_document_clears_stale_cache_and_fetches_with_its_own_view(tmp_path):
+    script = hub_identity.BOOTSTRAP % {"worker": "{}", "sid": '"shared"', "idle_ms": 10000, "poll_ms": 5000}
+    script = script.split(">", 1)[1].split("</script>", 1)[0]
+    (tmp_path / "bootstrap.js").write_text(script)
+    result = subprocess.run(
+        [
+            "node",
+            "-e",
+            r"""
+const vm = require('node:vm'), fs = require('node:fs');
+const script = fs.readFileSync(process.argv[1], 'utf8');
+function document() {
+  const calls = [], storage = {cleared: 0, clear() { this.cleared++; }};
+  const context = {
+    crypto: require('node:crypto').webcrypto, URL, Request, Headers,
+    location: {href: 'http://app/?sid=shared', origin: 'http://app'},
+    localStorage: storage, sessionStorage: {getItem: () => '1', clear() {}},
+    setInterval() {}, setTimeout() {},
+    window: {addEventListener() {}, fetch(input, options) {
+      calls.push(Object.fromEntries(new Headers(options?.headers)));
+      return Promise.resolve({});
+    }}
+  };
+  vm.runInNewContext(script, context);
+  context.window.fetch('/state?sid=shared', {headers: {'X-Company-Env-Poll': '1'}});
+  context.window.fetch(new Request('http://app/post', {headers: {'X-App': 'kept'}}));
+  context.window.fetch('https://external.test/state');
+  context.window.fetch('/other');
+  return {cleared: storage.cleared, calls};
+}
+process.stdout.write(JSON.stringify([document(), document()]));
+""",
+            str(tmp_path / "bootstrap.js"),
+        ],
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    pages = json.loads(result.stdout)
+    assert pages[0]["calls"][0]["x-company-env-view"] != pages[1]["calls"][0]["x-company-env-view"]
+    for page in pages:
+        assert page["cleared"] == 1
+        poll, post, external, other = page["calls"]
+        assert poll["x-company-env-view"] == post["x-company-env-view"]
+        assert poll["x-company-env-poll"] == "1" and post["x-app"] == "kept"
+        assert external == other == {}
 
 
 def test_proxy_rejects_invalid_session_id():
