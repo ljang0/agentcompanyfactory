@@ -571,6 +571,29 @@ def test_every_recorded_patch_anchor_matches_the_hub_source_once(tmp_path, app_i
     patched_copy(tmp_path, app_id)  # apply_patches raises when an anchor is missing or ambiguous
 
 
+@pytest.mark.skipif(shutil.which("node") is None, reason="Running the patched issue numbering requires Node")
+@pytest.mark.parametrize("existing, expected", [([], ["RD-1", "RD-2"]), ([7, 280, 19], ["RD-281", "RD-282"])])
+def test_jira_creates_distinct_issue_keys_in_a_seeded_project(tmp_path, existing, expected):
+    patch = hub_app.patches("jira_mock")[0]
+    state = {
+        "projects": [{"id": "project-relaydesk", "key": "RD"}],
+        "issues": [{"projectId": "project-relaydesk", "key": f"RD-{number}"} for number in existing]
+        + [{"projectId": "p1", "key": "DEMO-999"}],
+    }
+    harness = tmp_path / "issue-keys.mjs"
+    harness.write_text(
+        "const state = JSON.parse(process.argv[2]);\nfunction createIssue() {\n"
+        + patch["new"]
+        + "const issue = {projectId: project.id, key: `${project.key}-${maxKeyNum + 1}`};\n"
+        + "state.issues.push(issue); return issue.key;\n}\n"
+        + "console.log(JSON.stringify([createIssue(), createIssue()]));\n"
+    )
+    result = subprocess.run(
+        ["node", str(harness), json.dumps(state)], capture_output=True, text=True, check=True
+    )
+    assert json.loads(result.stdout) == expected
+
+
 def test_docs_patches_take_seeds_verbatim_hold_saves_and_keep_sid_on_routes(tmp_path):
     target = patched_copy(tmp_path, "google_docs_mock")
     store = (target / "src/store/initialData.js").read_text()

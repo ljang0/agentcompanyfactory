@@ -1344,5 +1344,13 @@
       "new": "HubSpot — Manage your customer relationships, activities and follow-ups.",
       "reason": "Remove the worker help link to the host-only inspector."
     }
+  ],
+  "jira_mock": [
+    {
+      "file": "src/components/CreateIssueModal.tsx",
+      "old": "    const maxKeyNum = state.issues\n      .filter((i) => i.projectId === 'p1')\n      .reduce((max, i) => {\n        const num = parseInt(i.key.split('-')[1], 10);\n        return num > max ? num : max;\n      }, 0);\n\n    const project = state.projects[0];\n\n",
+      "new": "    const project = state.projects[0];\n\n    const maxKeyNum = state.issues\n      .filter((i) => i.projectId === project.id)\n      .reduce((max, i) => {\n        const num = parseInt(i.key.split('-')[1], 10);\n        return num > max ? num : max;\n      }, 0);\n\n",
+      "reason": "Choose the next issue number from the current project. The demo project ID p1 ignores seeded projects and creates duplicate issue keys on successive saves."
+    }
   ]
 }
