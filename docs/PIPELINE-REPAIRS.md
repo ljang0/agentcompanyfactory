@@ -77,3 +77,10 @@ The final teacher attempts use a recorded validation profile of 3,000 seconds,
 ablation comparisons use the same profile. The original 1,500-second attempts,
 their grades and the three-scored-attempt cap are preserved. Inspection packages
 include the budget and ablation plan at `runtime/trials/PLAN.json`.
+
+The third product-scope teacher passed with score 1.0 and all three collaboration
+checks. The third release-readiness teacher scored 0.8: its reviews, scope,
+follow-ups and collaboration checks passed, but the client draft remained empty.
+All four release workers reached the time limit. The final manager actions were
+checking specialist work, leaving the draft unfinished. This is a retained task
+failure, not another runtime repair or a reason to repeat the grade.

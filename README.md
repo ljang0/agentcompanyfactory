@@ -94,7 +94,7 @@ a VM image and model access. The setup guide lists each execution mode's require
 | Company | What you can inspect |
 | --- | --- |
 | [Apparel supply](examples/sanmar/README.md), informed by SanMar | Eight apps, two tasks, references, grades, desktop traces and native replay |
-| [Software delivery](examples/thoughtbot/README.md), informed by thoughtbot | Seven apps, four roles, a year of history and an accepted world with clean-extraction checks |
+| [Software delivery](examples/thoughtbot/README.md), informed by thoughtbot | Seven apps, four roles, two tasks, calibrated graders and desktop trials |
 
 [Cedarline Apparel Supply](examples/sanmar/README.md), informed by SanMar research,
 contains four workers, eight apps and two reviewed tasks: an account assortment
@@ -109,10 +109,12 @@ Both references passed native replay and reset; full ordinary-team and ablation
 acceptance remains open. [Measured results and limits](docs/END-TO-END-PLAN.md).
 
 [Harbor Loom Software](examples/thoughtbot/README.md) exercises the shared pipeline
-through world acceptance with a second company. Its download includes native
-states, worker files, the exact source and the recorded content repairs. All three
-reviewers accepted it; seven warnings remain visible in the review. Task design and
-team trials have not been run for this company.
+with a second company. Its two tasks cover product scope and release readiness.
+Both passed independent task review, native reference replay and grader calibration.
+The continuation retains the runtime repairs and actual desktop-team outcomes;
+[measured status](docs/END-TO-END-PLAN.md) distinguishes these checks from full
+benchmark acceptance. The original world snapshot remains available, including
+its native states, worker files and seven retained content-review warnings.
 
 ## Repository map
 

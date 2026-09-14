@@ -5,8 +5,10 @@ research. Its four-person team maintains Relaydesk, a request-management applica
 for the client Brindle Works. The world includes a year of delivery history, customer
 observations, code review records, research notes and unfinished product decisions.
 
-This example covers world construction and acceptance, through Stage 4. Task design,
-reference solutions, grading and team trials have not been run for this company.
+This directory preserves the original world construction and acceptance snapshot,
+through Stage 4. A continuation has since added product-scope and release-readiness
+tasks, references, calibrated graders and desktop trials. See
+[measured status](../../docs/END-TO-END-PLAN.md) for the continuation's results.
 
 ## People and information
 
@@ -95,5 +97,5 @@ Download the full [world snapshot](https://github.com/ljang0/agentcompanyfactory
 for the native states, worker files, research, repair history and exact pipeline
 source. Its `WORLD-README.md` gives hash verification and native replay commands.
 The separate `thoughtbot-world-20260914-VERIFIED.json` identifies the tested archive
-by SHA256. No task authoring, grading, VM team trial or ablation was run for this
-company; [SanMar](../sanmar/README.md) provides the task-level example.
+by SHA256. This earlier archive ends at world acceptance; later task and trial
+results do not change its contents or acceptance scope.

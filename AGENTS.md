@@ -247,6 +247,7 @@ intended files, inspect the staged diff, and verify the target remote before a p
 | Bubblewrap fails to create namespaces | Check Linux user/PID/network namespace permissions; do not replace isolated verification with unrestricted execution |
 | Desktop prerequisite failure | Check `doctor --profile desktop`, `/dev/kvm`, image and guest browser paths |
 | `model_unavailable` | Retain the unscored attempt and provider result; do not rewrite it as a task failure |
+| Saved evidence exceeds the judge input limit | Preserve all events; diagnose the lossless encoding, recalibrate after a grading change, and regrade the saved episode without rerunning workers |
 | Saved proof is stale | Compare input/code fingerprints and use the relevant recheck/repair path; do not edit hashes by hand |
 | Receipt appeared to precede its own call | Filesystem timestamps can round below wall time; compare before/after file versions, as the batch refusal check does |
 
@@ -262,10 +263,11 @@ The small Git example is not a runnable company checkpoint. Its
 archive, which contains its exact measured source and data. Use that source when
 reproducing the archive's fingerprints; do not substitute the current checkout.
 
-The [software delivery example](examples/thoughtbot/README.md) provides a second
-accepted world through Stage 4, with seven retained review warnings and a separate
-clean-extraction receipt. It has no tasks or team trials. Its own provenance file
-maps the curated files to that world's archive.
+The earlier [software delivery world snapshot](examples/thoughtbot/README.md)
+records Stage 4, with seven retained review warnings and a separate clean-extraction
+receipt. Its provenance file maps those curated files to the original archive.
+The task and team-trial continuation reuses that company and preserves the earlier
+world snapshot; see [measured status](docs/END-TO-END-PLAN.md) for its results.
 
 `prepare-collaborator --inspection` records accepted world/tasks/calibration and
 actual retained trial outcomes. Default packaging additionally enforces the full

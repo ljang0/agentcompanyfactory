@@ -21,16 +21,40 @@ traces for the latest teacher of each task and the latest ordinary trial.
 
 ## Second company
 
-The [thoughtbot-derived world](../examples/thoughtbot/README.md) reached Stage 4
-through the shared staged commands on September 14. It contains four workers,
-seven apps and a year of operating history. All three content reviewers accepted
-it, with seven warning-level findings retained. All seven runtime gates passed
-across 28 worker/app views. A clean extraction repeated native acceptance and reset
-using the archived source, without model calls.
+The [thoughtbot-derived company](../examples/thoughtbot/README.md) contains four
+workers, seven apps and a year of operating history. Its original world snapshot
+reached Stage 4 through the shared staged commands. All three content reviewers
+accepted it, retaining seven warning-level findings. Native acceptance covered all
+seven gates and 28 worker/app views; a clean extraction repeated those checks and
+reset with no model calls.
 
-This run reused accepted research and retained the accepted core while repairing
-native content through explicit patches and amendments. It required operator-directed
-repairs. It did not author tasks, run team trials or measure ablations.
+The continuation reuses that company's accepted inputs and adds two independently
+reviewed tasks: product scope and release readiness. Both native references passed
+replay, isolated mechanics and exact reset. Both graders passed all 20 calibration
+checks, including complete losslessly encoded evidence.
+
+The first teacher attempts exposed a Jira issue-view crash and a stale-tab write
+bug. The runtime was repaired, accepted again and explicitly rebound to the same
+business world before reference replay and new trials. The second teachers reached
+their execution limits. Product scope scored 0.30 after a lossless encoding repair
+allowed its saved evidence to be graded; release readiness scored 0.25. Missing
+final deliverables remained failures. See [the repair record](PIPELINE-REPAIRS.md).
+
+The final teacher attempts used a budget declared before those runs: 3,000 seconds,
+250 actions per worker and 800 shared worker model calls. Subsequent ordinary and
+ablation comparisons must use those same limits. Earlier trials and their original
+limits remain recorded.
+
+| Task | Third teacher result | Next gate |
+| --- | --- | --- |
+| Product scope | Passed: 1.00, all four business criteria, all three collaboration checks, reset passed | Ordinary attempt 1 is running without reference hints |
+| Release readiness | Failed: 0.80; code reviews, scope, Jira work and all four collaboration checks passed, but the client draft was empty; reset passed | Three scored teachers used; ordinary trial is blocked for the current task |
+
+The ordinary result and a new clean-extraction inspection package are pending.
+
+Population and runtime work required operator-directed repairs. This second company
+exercises the shared pipeline; unattended generation for arbitrary companies remains
+unproven.
 
 ## Remaining work
 
