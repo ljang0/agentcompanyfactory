@@ -425,6 +425,12 @@
       "old": "import { XitHub, Bell,",
       "new": "import { Github as XitHub, Bell,",
       "reason": "Upstream build error: Layout.jsx imports a non-existent lucide-react icon 'XitHub' (search/replace artifact of 'Github'), so vite build fails and the app never renders."
+    },
+    {
+      "file": "index.html",
+      "old": "<head>",
+      "new": "<head>\n    <style>img.rounded-full[src=\"\"],img.rounded-full:not([src]){content:url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%2040%22%3E%3Crect%20width%3D%2240%22%20height%3D%2240%22%20rx%3D%2220%22%20fill%3D%22%23e5e7eb%22%2F%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2215%22%20r%3D%227%22%20fill%3D%22%236b7280%22%2F%3E%3Cpath%20d%3D%22M7%2036c0-15%2026-15%2026%200%22%20fill%3D%22%236b7280%22%2F%3E%3C%2Fsvg%3E\");}</style>",
+      "reason": "Render a default avatar for an empty round profile image. CSS supplies the visual fallback without changing the seeded identity or saved app state."
     }
   ],
   "gmail_mock": [
@@ -1351,6 +1357,18 @@
       "old": "    const maxKeyNum = state.issues\n      .filter((i) => i.projectId === 'p1')\n      .reduce((max, i) => {\n        const num = parseInt(i.key.split('-')[1], 10);\n        return num > max ? num : max;\n      }, 0);\n\n    const project = state.projects[0];\n\n",
       "new": "    const project = state.projects[0];\n\n    const maxKeyNum = state.issues\n      .filter((i) => i.projectId === project.id)\n      .reduce((max, i) => {\n        const num = parseInt(i.key.split('-')[1], 10);\n        return num > max ? num : max;\n      }, 0);\n\n",
       "reason": "Choose the next issue number from the current project. The demo project ID p1 ignores seeded projects and creates duplicate issue keys on successive saves."
+    },
+    {
+      "file": "src/components/Sidebar.tsx",
+      "old": "        <NavLink to=\"/go\" className={navClass}>\n          <Database size={20} /> State Inspector\n        </NavLink>\n",
+      "new": "",
+      "reason": "Remove the host-only state inspector from worker navigation; the worker proxy already denies that route."
+    },
+    {
+      "file": "index.html",
+      "old": "<head>",
+      "new": "<head>\n    <style>img.rounded-full[src=\"\"],img.rounded-full:not([src]){content:url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%2040%22%3E%3Crect%20width%3D%2240%22%20height%3D%2240%22%20rx%3D%2220%22%20fill%3D%22%23e5e7eb%22%2F%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2215%22%20r%3D%227%22%20fill%3D%22%236b7280%22%2F%3E%3Cpath%20d%3D%22M7%2036c0-15%2026-15%2026%200%22%20fill%3D%22%236b7280%22%2F%3E%3C%2Fsvg%3E\");}</style>",
+      "reason": "Render a default avatar for an empty round profile image. CSS supplies the visual fallback without changing the seeded identity or saved app state."
     }
   ]
 }
