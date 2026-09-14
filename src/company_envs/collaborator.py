@@ -361,8 +361,8 @@ def inspection_index(relative, trials, attempts):
         ),
         "",
         (
-            f"Start with the [pilot results]({relative}/../RESULTS.md), "
-            "[setup instructions](docs/COLLABORATOR.md), and [pipeline plan](docs/PILOT.md)."
+            f"Start with the [company dossier]({relative}/company.json), "
+            "[setup instructions](docs/COLLABORATOR.md), and [pipeline guide](docs/PIPELINE.md)."
         ),
         "",
         "## Tasks and latest real trials",
@@ -458,6 +458,7 @@ def source_inputs(root):
         ".gitignore",
         "config.toml",
         "configs/pilot-sanmar.toml",
+        "configs/thoughtbot.toml",
         "configs/company.example.toml",
         "configs/desktop-cloud-init.yaml",
         "configs/README.md",

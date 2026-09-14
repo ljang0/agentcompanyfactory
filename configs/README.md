@@ -2,7 +2,9 @@
 
 Start from `company.example.toml`. `make setup` copies it to the ignored
 `company.local.toml` without replacing an existing file. Use `pilot-sanmar.toml`
-when inspecting the measured SanMar snapshot.
+when inspecting the measured SanMar snapshot, or `thoughtbot.toml` for the software
+delivery company. These presets preserve each example's app surface and budgets;
+set machine paths in an ignored local copy.
 
 Configuration precedence is the command's `--config`, then `COMPANY_ENVS_CONFIG`,
 then the repository's `config.toml`. Relative paths resolve beside the selected

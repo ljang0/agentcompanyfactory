@@ -1,10 +1,15 @@
-# Setup and inspect the SanMar run
+# Inspect company snapshots
 
 You can read the [small example](../examples/sanmar/README.md) on GitHub without
 installing anything. To inspect native states, files, screenshots and replay proof,
 use the full [September 14 inspection release](https://github.com/ljang0/agentcompanyfactory/releases/tag/sanmar-inspection-2026-09-14).
 
-## Download the measured snapshot
+For any task inspection package, start with its `INSPECT.md` and use the company
+path recorded in `COLLABORATOR.json`. The replay instructions below apply to these
+packages. The earlier [software delivery world snapshot](../examples/thoughtbot/README.md)
+covers Stage 4 and instead provides `WORLD-README.md` for its native world checks.
+
+## Download the SanMar inspection snapshot
 
 With the GitHub CLI:
 
@@ -54,17 +59,18 @@ VM image are external assets, not included in this repository or release. Use th
 pinned source. Native replay does not require a VM image. The runtime guide also
 provides a desktop build recipe and identifies the historical pilot image.
 
-From the extracted snapshot:
+Choose the preset matching the extracted task package: `configs/pilot-sanmar.toml`
+for SanMar or `configs/thoughtbot.toml` for the software delivery company. Work in
+an ignored local copy and set its machine paths. For example:
 
 ```sh
-cp configs/pilot-sanmar.toml configs/pilot-sanmar.local.toml
+cp configs/pilot-sanmar.toml configs/inspection.local.toml
 # Edit hub and other machine paths in the local config.
-uv run company-envs --config configs/pilot-sanmar.local.toml doctor \
-  --folder experiments/pilot-sanmar/company
-uv run company-envs --config configs/pilot-sanmar.local.toml preflight
-uv run company-envs --config configs/pilot-sanmar.local.toml pilot-status \
-  experiments/pilot-sanmar/company
-uv run company-envs --config configs/pilot-sanmar.local.toml verify-collaborator \
+company_dir=$(python3 -c 'import json; print(json.load(open("COLLABORATOR.json"))["company"])')
+uv run company-envs --config configs/inspection.local.toml doctor --folder "$company_dir"
+uv run company-envs --config configs/inspection.local.toml preflight --scope runtime
+uv run company-envs --config configs/inspection.local.toml pilot-status "$company_dir"
+uv run company-envs --config configs/inspection.local.toml verify-collaborator \
   --work /tmp/agentcompanyfactory-replay
 ```
 
@@ -80,7 +86,7 @@ and browser distribution. The guest uses Python GTK 3 bindings and xdotool for
 clipboard text entry. Configure a model account outside the repository. Run
 `doctor --profile desktop` and `preflight` before any paid work.
 
-Follow [the stage guide](PILOT.md) for new attempts and their limits. Keep private
-assessments, references and verifiers off worker desktops. Both example tasks share
-one world lineage and belong in the same benchmark split. Ordinary-team and
-ablation acceptance remains incomplete; publication does not change the grades.
+Follow [the stage guide](PIPELINE.md) for new attempts and their limits. Keep private
+assessments, references and verifiers off worker desktops. Tasks from one company
+share a world lineage and belong in the same benchmark split. Read the package's
+actual trial results; publication does not change its acceptance status.
