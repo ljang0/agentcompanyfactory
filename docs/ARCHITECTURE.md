@@ -1,5 +1,9 @@
 # Architecture
 
+AgentCompanyFactory implements company environment generation and validation.
+Research, world construction, worker desktops and task evaluation are the core
+components of this repository.
+
 The staged pipeline separates construction, acceptance and evaluation. Each stage
 writes receipts alongside its outputs. Downstream commands check those inputs and
 hashes before reusing a checkpoint; a saved file alone does not count as acceptance.

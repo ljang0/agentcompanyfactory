@@ -25,4 +25,4 @@ For source changes, run the development checks before recording new runtime proo
 scripts/check.sh
 ```
 
-See [stage commands](PILOT.md) for bounded population repairs and checkpoint reuse.
+See [stage commands](PIPELINE.md) for bounded population repairs and checkpoint reuse.

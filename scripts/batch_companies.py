@@ -785,26 +785,34 @@ def mine_outcome(receipt, want):
     return Receipt.refused("author-tasks accepted nothing and recorded no reason")
 
 
-def oversized_refusal(folder, since):
-    """Why an author-tasks call in this run refused an over-ceiling payload, or None.
+def oversized_receipts(folder):
+    """Snapshot refusal versions without comparing the filesystem clock to wall time."""
+    receipts = {}
+    for path in folder.glob("tasks/_rejected/oversized-*.json"):
+        stat = path.stat()
+        receipts[path] = (stat.st_ino, stat.st_mtime_ns, stat.st_ctime_ns, stat.st_size)
+    return receipts
 
-    ``task_author.oversized_mining`` returns instead of raising, and that is the right shape: a prompt
-    past the provider's ceiling is terminal, and raising had the step rebuild the same payload every
-    loop -- 12 call ids across 12 companies reached 234 attempts none of which could succeed. The
-    command therefore exits 0 having accepted nothing, which the mine step reads as "no failure" and
-    banks in its receipt.
 
-    That is also exactly what a designer which simply accepted nothing looks like, and MINE.json
-    recorded ``requested: 2, accepted: []`` for both, while the two other ways to mine nothing each
-    write a note. The reason is read from the refusal's own receipt beside the rejected drafts rather
-    than from a marker in the log: the driver only ever reads the last 20 KB of a company log and
-    author-tasks prints its whole report into it, so a log marker is the more fragile of the two.
-    Scoped by mtime to this run, the way a failed seed's call receipts are.
+def oversized_refusal(folder, since=None, *, previous=None):
+    """Read a new refusal from this attempt; ignore receipts retained by earlier runs.
+
+    File timestamps may round below the wall-clock time sampled before the call.
+    Comparing versions captured before and after the call avoids missing a newly
+    created receipt on filesystems with a coarse timestamp resolution. The time
+    filter remains available for callers inspecting an explicit historical interval.
     """
-    written = [p for p in folder.glob("tasks/_rejected/oversized-*.json") if p.stat().st_mtime >= since]
+    current = oversized_receipts(folder)
+    written = [
+        path
+        for path, version in current.items()
+        if (previous.get(path) != version if previous is not None else path.stat().st_mtime >= since)
+    ]
     if not written:
         return None
-    return clip(load(max(written, key=lambda p: p.stat().st_mtime)).get("reason") or "refused: over ceiling")
+    return clip(
+        load(max(written, key=lambda path: current[path][1])).get("reason") or "refused: over ceiling"
+    )
 
 
 def mine(ctx, folder, log):
@@ -842,12 +850,13 @@ def mine(ctx, folder, log):
         # requested number of distinct unused outlines -- and asking for three at once fails whole
         # where asking for one at a time banks each task that lands.
         published, refused = set(have), set(rejected_tasks(folder))
-        rc, started, oversized = 0, time.time(), None
+        rc, oversized = 0, None
+        previous_refusals = oversized_receipts(folder)
         for _ in range(want):
             rc = run(CLI + ["author-tasks", str(folder), "--count", "1"], log, 2 * HOUR)
             if rc:
                 break
-            if oversized := oversized_refusal(folder, started):
+            if oversized := oversized_refusal(folder, previous=previous_refusals):
                 break  # the refusal's own words: nothing this stage can shrink, and no retry changes it
         receipt["accepted"] = sorted(set(tasks(folder)) - published)
         receipt["rejected"] = sorted(set(rejected_tasks(folder)) - refused)

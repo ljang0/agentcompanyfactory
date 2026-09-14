@@ -427,7 +427,8 @@ def source_inputs(root):
     files = {}
     directories = (
         "src",
-        "examples/sanmar",
+        "examples",
+        "docs",
         "tests",
         "scripts",
         "catalogs",
@@ -457,6 +458,9 @@ def source_inputs(root):
         ".gitignore",
         "config.toml",
         "configs/pilot-sanmar.toml",
+        "configs/company.example.toml",
+        "configs/README.md",
+        "Makefile",
         "data/person_names.json",
         "experiments/app-audit/probes.json",
         "companies/cort/company.json",

@@ -1,0 +1,27 @@
+name: Bug report
+description: Report a reproducible problem in the source or a pipeline stage.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How can we reproduce it?
+      description: Include the command, input shape and smallest useful example.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Commit, OS, Python version and relevant hub/browser/model configuration.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Relevant output
+      description: Add the error or stage receipt. Remove credentials and private data before sharing.

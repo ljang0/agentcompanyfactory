@@ -35,8 +35,8 @@ Git, bubblewrap and a Chromium browser, then:
 
 ```sh
 uv sync --frozen --extra browser
-uv run playwright install --with-deps chromium
-export COMPANY_ENVS_BROWSER="$(uv run python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')"
+uv run playwright install --with-deps chromium-headless-shell
+export COMPANY_ENVS_BROWSER="$(uv run playwright install --dry-run chromium-headless-shell | sed -n 's/^  Install location: *//p' | head -1)/chrome-headless-shell-linux64/chrome-headless-shell"
 uv run ruff check src scripts tests
 uv run pytest -q
 ```

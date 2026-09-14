@@ -1,8 +1,10 @@
 # Contributing
 
-Start with the [architecture](docs/ARCHITECTURE.md) and [stage guide](docs/PILOT.md).
+Start with the [architecture](docs/ARCHITECTURE.md) and [stage guide](docs/PIPELINE.md).
 Issues and pull requests are welcome. Describe the problem, the behavior you
 changed, and how you checked it. Include a small reproducer for a bug when possible.
+
+See [development](docs/DEVELOPMENT.md) for extension points and focused checks.
 
 ## Checks
 

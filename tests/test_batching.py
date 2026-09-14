@@ -1139,7 +1139,10 @@ def test_a_world_whose_spare_outlines_are_refused_is_mined_only_once(folder, fak
     assert "author-tasks" not in commands, "the receipt stops a second attempt"
 
 
-def test_an_over_ceiling_mining_payload_is_recorded_and_asked_for_once(folder, fake_pipeline, monkeypatch):
+@pytest.mark.parametrize("receipt_age", [0, 1])
+def test_an_over_ceiling_mining_payload_is_recorded_and_asked_for_once(
+    folder, fake_pipeline, monkeypatch, receipt_age
+):
     """author-tasks stopped raising PromptTooLarge and returns a report with nothing accepted, which is
     what ends the retry: raising had the step rebuild the same payload every loop, 12 call ids across
     12 companies reaching 234 attempts that could never succeed. Verified here rather than trusted: the
@@ -1161,6 +1164,10 @@ def test_an_over_ceiling_mining_payload_is_recorded_and_asked_for_once(folder, f
             diagnostic = folder / "tasks/_rejected/oversized-abc123.json"
             diagnostic.parent.mkdir(parents=True, exist_ok=True)
             diagnostic.write_text(json.dumps({"at": "now", "call": "design", "reason": reason}))
+            # Simulate timestamps rounded below the time sampled before the command.
+            if receipt_age:
+                stamp = time.time() - receipt_age
+                os.utime(diagnostic, (stamp, stamp))
             with open(log_path, "a") as stream:
                 stream.write(f"warning: author-tasks mined nothing: {reason}\n")
             return 0

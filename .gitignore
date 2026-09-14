@@ -51,3 +51,7 @@ inspection-download/
 verification/
 *.qcow2
 *.qcow2.*
+
+# New template runs stay local until explicitly curated for sharing
+workspace/
+runs/

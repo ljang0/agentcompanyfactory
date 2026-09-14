@@ -1,0 +1,20 @@
+name: Feature request
+description: Propose a capability or improvement.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What work are you trying to do?
+      description: Describe the use case and what currently gets in the way.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Explain the behavior you would like and any alternatives considered.
+  - type: textarea
+    id: validation
+    attributes:
+      label: How would we know it works?
+      description: Suggest an example, test or measurable outcome.
