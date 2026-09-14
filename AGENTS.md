@@ -258,6 +258,11 @@ The small Git example is not a runnable company checkpoint. Its
 archive, which contains its exact measured source and data. Use that source when
 reproducing the archive's fingerprints; do not substitute the current checkout.
 
+The [software delivery example](examples/thoughtbot/README.md) provides a second
+accepted world through Stage 4, with seven retained review warnings and a separate
+clean-extraction receipt. It has no tasks or team trials. Its own provenance file
+maps the curated files to that world's archive.
+
 `prepare-collaborator --inspection` records accepted world/tasks/calibration and
 actual retained trial outcomes. Default packaging additionally enforces the full
 teacher/ordinary and ablation gates. Neither packaging nor GitHub publication

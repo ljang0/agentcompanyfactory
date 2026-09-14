@@ -1,0 +1,278 @@
+{
+  "status": "core_reviewed",
+  "created_at": "2026-09-14T05:38:49.487463+00:00",
+  "inputs": {
+    "company": "efc7ce1ea2ea3ea92f1c6973d028ab4d6530251df5bcaf752b410ad844edd18f",
+    "apps": "9e245e76a6a8de38c748941cb568a167516f9a2ff5b46f133f5856426a3b7e6f",
+    "spec": "db9f77ecde0bf307cb13cfce043aedea1eacaf7e2c4890ee8ac4185552565fed",
+    "skill": "c6be908afd67eab87f019dfb297647b49696e509ab670c9f3f06be80efedbb26",
+    "schemas": {
+      "github_mock": "88bde4172047fa860d2501b13f632801275c8cffd1c4225bd356295f328a5de6",
+      "gmail_mock": "68bfacb08d08790eef3fceea5cacaf24abe96b06b16a40d75b2b244b6dc800ca",
+      "google_calendar_mock": "b1d92a1de321e66d6e3ef7db819499624d4c270c0f6de21a3ca53f59f2f786f6",
+      "google_docs_mock": "f548b57be8db49f5e799287c3904ba3de19e3670628dd8cde6d7b46192afb350",
+      "google_drive_mock": "f458dc5120509b76d866a8cd6f15241c8df67835e8c03af6185140a0cb849d3c",
+      "jira_mock": "aeb655baa116bf56a7f072c86867fdecaaf97e6c3044a325eec2388c7b0d9673",
+      "slack_mock": "fb2a2a7ecfdb71c8d99aa84e05b1c88b0a29115f8994e267bed75b0d85785ec0"
+    },
+    "implementation": "ce80abe023b1882bc9e726ef0b9e7047679dbae3bb6a94a5bfee44c7fb583a41"
+  },
+  "skill": {
+    "path": ".agents/skills/company-world-states/SKILL.md",
+    "hash": "c6be908afd67eab87f019dfb297647b49696e509ab670c9f3f06be80efedbb26"
+  },
+  "receipt": {
+    "job": "world_states",
+    "model": "codex/gpt-6-astra",
+    "started_at": "2026-09-14T05:17:04.279073+00:00",
+    "prompt_hash": "711a5aa56ad68b329adfc69e64ce186698d5b557eeff64bc2c7e0c35ade447a9",
+    "call_id": "842c3d086f54a5c8dbe2856723be28043aa20b0d100e2d699a1a4a00d515ab79",
+    "attempt": 1,
+    "status": "complete",
+    "seconds": 1202.1065096890088,
+    "usage": {
+      "input_tokens": 24890,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 39946,
+      "reasoning_output_tokens": 1352
+    },
+    "cost_usd": null,
+    "tool_context_hash": null,
+    "tool_calls": [],
+    "codex_home": "<user-home>/.codex-b",
+    "session_id": "01a09e58-f30a-73b1-a127-931b0ef1d20f"
+  },
+  "generation_inputs": {
+    "company": "efc7ce1ea2ea3ea92f1c6973d028ab4d6530251df5bcaf752b410ad844edd18f",
+    "apps": "9e245e76a6a8de38c748941cb568a167516f9a2ff5b46f133f5856426a3b7e6f",
+    "spec": "db9f77ecde0bf307cb13cfce043aedea1eacaf7e2c4890ee8ac4185552565fed",
+    "skill": "c6be908afd67eab87f019dfb297647b49696e509ab670c9f3f06be80efedbb26",
+    "schemas": {
+      "github_mock": "88bde4172047fa860d2501b13f632801275c8cffd1c4225bd356295f328a5de6",
+      "gmail_mock": "68bfacb08d08790eef3fceea5cacaf24abe96b06b16a40d75b2b244b6dc800ca",
+      "google_calendar_mock": "b1d92a1de321e66d6e3ef7db819499624d4c270c0f6de21a3ca53f59f2f786f6",
+      "google_docs_mock": "f548b57be8db49f5e799287c3904ba3de19e3670628dd8cde6d7b46192afb350",
+      "google_drive_mock": "f458dc5120509b76d866a8cd6f15241c8df67835e8c03af6185140a0cb849d3c",
+      "jira_mock": "aeb655baa116bf56a7f072c86867fdecaaf97e6c3044a325eec2388c7b0d9673",
+      "slack_mock": "fb2a2a7ecfdb71c8d99aa84e05b1c88b0a29115f8994e267bed75b0d85785ec0"
+    },
+    "implementation": "ce80abe023b1882bc9e726ef0b9e7047679dbae3bb6a94a5bfee44c7fb583a41"
+  },
+  "resumed": false,
+  "core_metadata": {
+    "rationale": "A complete delivery-team checkpoint with eighty open backlog items, thirty-two individually recorded completed items, twelve monthly delivery summaries, shared operating documents, and separate working evidence for each specialist. Population targets describe subsequent application traffic, not records already populated.",
+    "reference_date": "2026-09-01",
+    "operating_scope": "Harbor Loom Software's Boston client-delivery team maintains Relaydesk for Brindle Works. The engagement began on 2025-09-01. This checkpoint covers ordinary operations through 2026-09-01T09:00:00-04:00.",
+    "assumptions": [
+      "The four named delivery workers constitute the complete engagement team. Additional people are client contacts or shared consultancy staff.",
+      "The snapshot instant is 2026-09-01T09:00:00-04:00. Business timestamps use America/New_York unless explicitly expressed in UTC.",
+      "Relaydesk serves 120 customer organizations and 3,500 active users, as measured in the August account census. Twelve organizations are individually represented because they have continuing correspondence or product research.",
+      "Monthly delivery summaries preserve the full year's aggregate throughput. Thirty-two completed items have individually retained records in this checkpoint; aggregate totals do not imply additional individually authored issues.",
+      "All four workers use all seven supplied applications. Application identity shapes lack role fields in several contracts, so job authority and document permissions are recorded in the canonical staff and access records.",
+      "Source snapshots and test reports are retained historical documents. Their contents describe their named revisions and recorded executions.",
+      "No final tasks have been supplied. Open product questions and engineering work remain ordinary unresolved business."
+    ]
+  },
+  "materials": [
+    {
+      "worker_id": "w-product-lead",
+      "path": "Documents/Brindle Works/Delivery agreement.pdf"
+    },
+    {
+      "worker_id": "w-product-lead",
+      "path": "Documents/Planning/September capacity v2.xlsx"
+    },
+    {
+      "worker_id": "w-product-lead",
+      "path": "Downloads/re_ September coverage.eml"
+    },
+    {
+      "worker_id": "w-product-lead",
+      "path": "Desktop/Client review Aug.pptx"
+    },
+    {
+      "worker_id": "w-product-lead",
+      "path": "Downloads/Invoice 4471 - Beacon Roomworks.pdf"
+    },
+    {
+      "worker_id": "w-product-lead",
+      "path": "Desktop/Mara notes.md"
+    },
+    {
+      "worker_id": "w-designer",
+      "path": "Documents/Research/Summer observations.xlsx"
+    },
+    {
+      "worker_id": "w-designer",
+      "path": "Documents/Research/Participant notes.docx"
+    },
+    {
+      "worker_id": "w-designer",
+      "path": "Downloads/Customer research permissions.pdf"
+    },
+    {
+      "worker_id": "w-designer",
+      "path": "Downloads/Interview notes guidance 2025.docx"
+    },
+    {
+      "worker_id": "w-designer",
+      "path": "Documents/Reviews/Attachment recovery notes.pdf"
+    },
+    {
+      "worker_id": "w-designer",
+      "path": "Desktop/Imani scratchpad.md"
+    },
+    {
+      "worker_id": "w-backend",
+      "path": "Documents/Relaydesk/source/request_serializer.rb"
+    },
+    {
+      "worker_id": "w-backend",
+      "path": "Documents/Relaydesk/Imported request sample.csv"
+    },
+    {
+      "worker_id": "w-backend",
+      "path": "Downloads/Attachment lookup report.pdf"
+    },
+    {
+      "worker_id": "w-backend",
+      "path": "Documents/Relaydesk/July restore notebook.docx"
+    },
+    {
+      "worker_id": "w-backend",
+      "path": "Downloads/server regression Aug 28.txt"
+    },
+    {
+      "worker_id": "w-backend",
+      "path": "Desktop/Theo notes.md"
+    },
+    {
+      "worker_id": "w-frontend",
+      "path": "Documents/Relaydesk/source/requestDecisionLabel.ts"
+    },
+    {
+      "worker_id": "w-frontend",
+      "path": "Documents/Relaydesk/Browser observations.xlsx"
+    },
+    {
+      "worker_id": "w-frontend",
+      "path": "Downloads/Browser support.pdf"
+    },
+    {
+      "worker_id": "w-frontend",
+      "path": "Downloads/re_ export button.eml"
+    },
+    {
+      "worker_id": "w-frontend",
+      "path": "Documents/Reviews/Filter panel review April.docx"
+    },
+    {
+      "worker_id": "w-frontend",
+      "path": "Desktop/June working notes.md"
+    }
+  ],
+  "hashes": {
+    "world/CORE-REVIEW.json": "b82089ba55427775a9df5cea9cf883e44366fde1d75689c6e9cb105974976e28",
+    "world/world.json": "9d3ceecb2cfaab9cb8b46e0ce357dd5a6e60ebe0c786e127fc03e1df82d096b6",
+    "world/identities.json": "c9beb1e508d8d33991bcd5a801453ad37104204ed39975c48a47b2b60ee06d7d",
+    "world/worker_apps.json": "f771032a926336de0bed4438a5040383554cc224e1d2e4f793bb4df16ad455ce",
+    "world/population.json": "07dd4984209bfac789244bd7da19747a60d205ec032889ad0ad258bd006d50a6",
+    "world/CORE-CHECKS.json": "667a404b302e9096df12b1529004a4b22fa61dbdfdd147b04304267be2beb43b",
+    "world/materials/w-product-lead/Documents/Brindle Works/Delivery agreement.pdf": "41daf69ac398b1ccc667684e2e7339ff590737787b300f981a545a74c61e6dae",
+    "world/desktop/w-product-lead/Documents/Brindle Works/Delivery agreement.pdf": "46f54ffd6caa0670c431c5c4cf4f0880f45374974cb665c9ac263e7694e34b15",
+    "world/materials/w-product-lead/Documents/Planning/September capacity v2.xlsx": "ef27f841cc7d37bb95634d609d2844110ee1b20aa5328d1d8f50d402af536e73",
+    "world/desktop/w-product-lead/Documents/Planning/September capacity v2.xlsx": "98c72d854b96d0ed6843854b58b200a97ce97a8a29e256bf950bfb24a2f9062f",
+    "world/materials/w-product-lead/Downloads/re_ September coverage.eml": "708b806664a47df5763042adfd12ef2313add07bdff68d2f0f366a7714e095f1",
+    "world/desktop/w-product-lead/Downloads/re_ September coverage.eml": "708b806664a47df5763042adfd12ef2313add07bdff68d2f0f366a7714e095f1",
+    "world/materials/w-product-lead/Desktop/Client review Aug.pptx": "50e47b57bd22219fedef9214882a1d51cd2d2e744b2353205d5cd8b66c61f84b",
+    "world/desktop/w-product-lead/Desktop/Client review Aug.pptx": "b3e69c048422d5e4333892460d272fcd8551eea6045550292b581f8ee3566ea9",
+    "world/materials/w-product-lead/Downloads/Invoice 4471 - Beacon Roomworks.pdf": "878190f1277eb15cd026065a802968f40d0cfa02a84468237def590dba8b9af4",
+    "world/desktop/w-product-lead/Downloads/Invoice 4471 - Beacon Roomworks.pdf": "eb3671fc834fa4e9ac6ab8585e588caabb5a68d8b1d09724dc7b9cbcb6f7fc04",
+    "world/materials/w-product-lead/Desktop/Mara notes.md": "2bd37572c3ae0641bdf5cfc55724e0a5b50b380744a587a835585ed9f905f803",
+    "world/desktop/w-product-lead/Desktop/Mara notes.md": "2bd37572c3ae0641bdf5cfc55724e0a5b50b380744a587a835585ed9f905f803",
+    "world/materials/w-designer/Documents/Research/Summer observations.xlsx": "ca0fe58249b96cf32cf66f84e8561bd8690563a453846dfffcdaebed4b38fdf1",
+    "world/desktop/w-designer/Documents/Research/Summer observations.xlsx": "f089bc6bcef6f3b91f4c7c0959efb899f8ef9ac402197ae6e0f182393569b42c",
+    "world/materials/w-designer/Documents/Research/Participant notes.docx": "1a2ed7a394b74fd36b7006085ed551c7e5d00b6cf72a38a0229e8c96abae15f3",
+    "world/desktop/w-designer/Documents/Research/Participant notes.docx": "0a1d8c996097fed2b559b913958bc4681b1d20b6fe7a7ad4d1f7fa9536965d80",
+    "world/materials/w-designer/Downloads/Customer research permissions.pdf": "c99a556cfd6900f57ff2cd8ffb605a6c1107dbf3f633ad539e45bc531dd5bdbd",
+    "world/desktop/w-designer/Downloads/Customer research permissions.pdf": "272a6c4a9ac91ad8637fcf91c8f933f0a7147f88ffa79817c9abe432a94c9c76",
+    "world/materials/w-designer/Downloads/Interview notes guidance 2025.docx": "0057fe1072fc9919337667e3703e046ebcd1583ff582df2c0893d5a4a415473a",
+    "world/desktop/w-designer/Downloads/Interview notes guidance 2025.docx": "6a7254a65cd2828338b37587637550c7292160d09cc7c4e6fdbced602ca7e48c",
+    "world/materials/w-designer/Documents/Reviews/Attachment recovery notes.pdf": "6535e7e06671fee0cfd4ccbfdf3ce0d23cc7f56ea6a71e5306d73413bb46c6aa",
+    "world/desktop/w-designer/Documents/Reviews/Attachment recovery notes.pdf": "b4a63a9f21ba9632fd699efab47a8218bfc2745cee5601af42f93c1c71ec26e3",
+    "world/materials/w-designer/Desktop/Imani scratchpad.md": "193c7d69c225e4f59ccde269b3bd93deb7cad95279e53f52a7dae070eac90e71",
+    "world/desktop/w-designer/Desktop/Imani scratchpad.md": "193c7d69c225e4f59ccde269b3bd93deb7cad95279e53f52a7dae070eac90e71",
+    "world/materials/w-backend/Documents/Relaydesk/source/request_serializer.rb": "f044e87e4f9e19f438a6d9bb4c002f2ac8fb531c8ccc20e2a29917c954258863",
+    "world/desktop/w-backend/Documents/Relaydesk/source/request_serializer.rb": "f044e87e4f9e19f438a6d9bb4c002f2ac8fb531c8ccc20e2a29917c954258863",
+    "world/materials/w-backend/Documents/Relaydesk/Imported request sample.csv": "8cd0e32c205dd9c346e74328007abab56cfd6b3ec054637f8fbd8ef13d1d0af1",
+    "world/desktop/w-backend/Documents/Relaydesk/Imported request sample.csv": "8cd0e32c205dd9c346e74328007abab56cfd6b3ec054637f8fbd8ef13d1d0af1",
+    "world/materials/w-backend/Downloads/Attachment lookup report.pdf": "87e0c923bd4e9f1a41b5da146c0efb36318aa1dd1bf3cd332382ee58df4157dc",
+    "world/desktop/w-backend/Downloads/Attachment lookup report.pdf": "bd08e0f600fc6bc2dbdd581262644d11e4250b7def92d12f2be572f14b24c1d7",
+    "world/materials/w-backend/Documents/Relaydesk/July restore notebook.docx": "f5f5ea19642e0325da4f72a6a651c1d3adc0c026d7326c2c816913815154bec8",
+    "world/desktop/w-backend/Documents/Relaydesk/July restore notebook.docx": "3d38fbabddd4bd0aa7376a17048ef20cbd67dfeb2d88cfdca3392fce7378c3d4",
+    "world/materials/w-backend/Downloads/server regression Aug 28.txt": "1033aaad5235cc6fcf21dea8fa4fc73adf7527b5df5ec5de43761f9c3f575867",
+    "world/desktop/w-backend/Downloads/server regression Aug 28.txt": "1033aaad5235cc6fcf21dea8fa4fc73adf7527b5df5ec5de43761f9c3f575867",
+    "world/materials/w-backend/Desktop/Theo notes.md": "8b2f7002758c29959aa6b1029948204f8ec75563037d39e1193eca391b6a5b72",
+    "world/desktop/w-backend/Desktop/Theo notes.md": "8b2f7002758c29959aa6b1029948204f8ec75563037d39e1193eca391b6a5b72",
+    "world/materials/w-frontend/Documents/Relaydesk/source/requestDecisionLabel.ts": "0e10fe637ac3f00ff7aa7aca110d49944c1e69005b59d377b1f2f03c23265ca7",
+    "world/desktop/w-frontend/Documents/Relaydesk/source/requestDecisionLabel.ts": "0e10fe637ac3f00ff7aa7aca110d49944c1e69005b59d377b1f2f03c23265ca7",
+    "world/materials/w-frontend/Documents/Relaydesk/Browser observations.xlsx": "b5e6ae8591d3869676de7e02371a12a4113eb51aa4184576800725ca06064dba",
+    "world/desktop/w-frontend/Documents/Relaydesk/Browser observations.xlsx": "650421d25f1dd9308279b9c1855e11dd145f7994779b1c4feeba82ca7900dc00",
+    "world/materials/w-frontend/Downloads/Browser support.pdf": "95636657d33d079466e946e0f6b020a84e5b7216148babf830da144ea149324c",
+    "world/desktop/w-frontend/Downloads/Browser support.pdf": "a733e2c588df7a0576dbb0c77d23fef32c0710a5ba6689caab8f0f95f1b25bfe",
+    "world/materials/w-frontend/Downloads/re_ export button.eml": "52ea2e8166f248f60091433602e0c0f17b016714a775f419d0548d5b812ce747",
+    "world/desktop/w-frontend/Downloads/re_ export button.eml": "52ea2e8166f248f60091433602e0c0f17b016714a775f419d0548d5b812ce747",
+    "world/materials/w-frontend/Documents/Reviews/Filter panel review April.docx": "c68a6bbc0958146367d13e3e86d9a36b0935d6c459cc570f1c00ab4d9cf28f69",
+    "world/desktop/w-frontend/Documents/Reviews/Filter panel review April.docx": "d44fa56fbfa224320427f7df835e7fb4af1017a87351a36215ea0ecdf4282b22",
+    "world/materials/w-frontend/Desktop/June working notes.md": "378dd4580cc70c36bfc5d54799506fb74bdbc025c01672e2ad9d8faf7de929f5",
+    "world/desktop/w-frontend/Desktop/June working notes.md": "378dd4580cc70c36bfc5d54799506fb74bdbc025c01672e2ad9d8faf7de929f5"
+  },
+  "checks": {
+    "ok": true,
+    "errors": [],
+    "entities": 224,
+    "history_records": 65,
+    "history_months": [
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05",
+      "2026-06",
+      "2026-07",
+      "2026-08",
+      "2026-09"
+    ],
+    "history_by_month": {
+      "2025-09": 4,
+      "2025-10": 4,
+      "2025-11": 4,
+      "2025-12": 4,
+      "2026-01": 4,
+      "2026-02": 4,
+      "2026-03": 4,
+      "2026-04": 4,
+      "2026-05": 4,
+      "2026-06": 4,
+      "2026-07": 8,
+      "2026-08": 16,
+      "2026-09": 1
+    },
+    "materials_by_worker": {
+      "w-product-lead": 6,
+      "w-designer": 6,
+      "w-backend": 6,
+      "w-frontend": 6
+    },
+    "planned_streams": 17,
+    "native_population": "not_started",
+    "material_validation": "rendered and parsed; formula syntax checked, recalculation not run"
+  },
+  "review": "accept",
+  "native_apps": "not_started"
+}

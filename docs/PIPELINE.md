@@ -43,7 +43,8 @@ not lower the target or count as completed population.
 Matching accepted core and population checkpoints are rechecked without model
 calls. Changed inputs or native state drift are refused for inspection. The raw
 `world/world.json` is the Stage 2 base; `world/population/EFFECTIVE-WORLD.json`
-contains accepted additions. A valid `FROZEN.json` binds the accepted baseline.
+contains additions and explicit corrections from `EXTENSION.json` and
+`AMENDMENTS.json`. A valid `FROZEN.json` binds the accepted baseline.
 
 `seed-core FOLDER --resume` reviews deliberate source corrections without calling
 the original world author again. It still requires unchanged dossier, app, schema,
@@ -53,8 +54,10 @@ an exact previous baseline and explicit old/new field values and reasons.
 new records. Data changes invalidate earlier acceptance.
 
 SanMar population also used the historical helpers now under `scripts/pilots/sanmar/`.
-The saved outputs are
-inspectable and replayable; those helper steps are not yet a generic generator.
+The [software delivery example](../examples/thoughtbot/README.md) exercised the
+shared commands through Stage 4, including checkpointed continuation and recorded
+content repairs. Both examples required operator-directed repair; neither
+establishes unattended generation for arbitrary companies.
 
 ## Task evaluation
 

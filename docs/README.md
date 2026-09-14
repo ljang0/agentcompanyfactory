@@ -14,6 +14,7 @@
 ## Inspect an existing run
 
 - [SanMar example](../examples/sanmar/README.md): assignments, verifiers and grades.
+- [Software delivery example](../examples/thoughtbot/README.md): a second company through world acceptance, with screenshots and a verified snapshot.
 - [Snapshot download and replay](COLLABORATOR.md): full outputs and native replay.
 - [Pilot guide](PILOT.md): the example's roles, app surface and evidence.
 - [Measured status and remaining work](END-TO-END-PLAN.md).

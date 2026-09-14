@@ -1,4 +1,4 @@
-# Repairs measured during the pilot
+# Repairs measured during company runs
 
 The inspection archive retains the original attempts and repaired evidence. These
 changes explain which results can be reused and which limitations remain.
@@ -22,6 +22,24 @@ packaging. Fresh extraction verification replayed both references through worker
 proxies and checked isolated mechanics and reset. It did not run new desktops or
 repeat semantic model judgments.
 
-Pilot-specific population scripts still exist. The staged commands enforce
-checkpoints, but the pilot does not establish that every company can be generated
-without tailored population work. See [remaining work](END-TO-END-PLAN.md).
+## Software delivery world
+
+The [second company](../examples/thoughtbot/README.md) exercised the shared path
+through world acceptance and exposed several reusable fixes:
+
+| Problem | Shared change |
+| --- | --- |
+| Checked templates could not supply missing human correspondence | Continue with at most 20 literal records per batch and save each completed batch |
+| Jira and GitHub encode issue completion differently | Compare their completion meaning while retaining actual contradictions |
+| Jira's create dialog used the demo project when allocating issue numbers | Allocate within the current project; a browser check created RD-281 and RD-282 |
+| Slack DM previews retained old text after message repair | Derive preview text and timestamp together from the latest existing message |
+
+The run also required recorded content repairs for repeated conversations, missing
+branch artifacts, dates and source projections. Those patches, original states,
+failed reviews and final warning-level findings remain in its archive. The accepted
+core was preserved, with two explicit corrections and three artifact additions
+represented in the effective world.
+
+Pilot-specific helpers remain as historical tools. A second accepted world is
+evidence that the staged path works beyond SanMar; unattended generation still
+requires further work. See [remaining work](END-TO-END-PLAN.md).

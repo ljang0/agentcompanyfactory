@@ -1,0 +1,52 @@
+{
+  "archive": "thoughtbot-world-20260914.tar.gz",
+  "archive_sha256": "2e05601172e5da60af455c0d25961dd2ad1e08e42b2e1443d3c9e4acc3e9c9b2",
+  "source_commit": "55b735a0d7b93c0ccc2e3846787dca46d0cad457",
+  "files": {
+    "company.json": {
+      "archive_path": "workspace/companies/thoughtbot/company.json",
+      "sha256": "efc7ce1ea2ea3ea92f1c6973d028ab4d6530251df5bcaf752b410ad844edd18f"
+    },
+    "reports/CORE.json": {
+      "archive_path": "workspace/companies/thoughtbot/world/CORE.json",
+      "sha256": "8cf60e39baea8574b56102760d6c9c8f1fdd1d707419486ff07dc19d0a61daa9"
+    },
+    "reports/POPULATION.json": {
+      "archive_path": "workspace/companies/thoughtbot/world/POPULATION.json",
+      "sha256": "0cac4e3010445e866246dcd6ee65f53b0d9b8d9cf969f8409390f9c0ee2ae2d4"
+    },
+    "reports/REVIEW.json": {
+      "archive_path": "workspace/companies/thoughtbot/world/acceptance/REVIEW.json",
+      "sha256": "341c8396693d397ca078b394d6799ddc3c9b109230f02a8c7de71121deeef6ae"
+    },
+    "reports/RUNTIME.json": {
+      "archive_path": "workspace/companies/thoughtbot/world/acceptance/RUNTIME.json",
+      "sha256": "3b94146dca58999d41d4996d91011cc9d9500ace1f75d2c6561a84e8b64940c4"
+    },
+    "reports/FROZEN.json": {
+      "archive_path": "workspace/companies/thoughtbot/world/FROZEN.json",
+      "sha256": "051159e9c653b22a25502f5a6fa0bce2778bf6d596d17cc6ffb19e550af839b0"
+    },
+    "reports/AMENDMENTS.json": {
+      "archive_path": "workspace/companies/thoughtbot/world/population/AMENDMENTS.json",
+      "sha256": "dc517ad9a174c558c7c432e7044efa923fa7c6662692ad812c7b52c32f7f493f"
+    },
+    "reports/EXTENSION.json": {
+      "archive_path": "workspace/companies/thoughtbot/world/population/EXTENSION.json",
+      "sha256": "dc648e33dfa353b64e35ef4e67f3a0b8173f9e83d61f86bf426a11454991a968"
+    },
+    "screenshots/jira.png": {
+      "archive_path": "workspace/companies/thoughtbot/world/acceptance/runtime/2026-09-14T14-00-10.800225+00-00/render-jira_mock-w-product-lead.png",
+      "sha256": "e882bfd22a50787656079fd6d4dedd751181e0ddbd348b57e91af7f1b2041521"
+    },
+    "screenshots/slack.png": {
+      "archive_path": "workspace/companies/thoughtbot/world/acceptance/runtime/2026-09-14T14-00-10.800225+00-00/render-slack_mock-w-product-lead.png",
+      "sha256": "1ee3794ef16c968b3b97bf4828f87fc12f832dd313838d80be86675b17a564e6"
+    }
+  },
+  "verification": {
+    "file": "reports/VERIFIED.json",
+    "release_asset": "thoughtbot-world-20260914-VERIFIED.json",
+    "sha256": "c4e34196b5abb1db32c49bc5795d6754b802cbd3da8376867c3358a416ef08ff"
+  }
+}

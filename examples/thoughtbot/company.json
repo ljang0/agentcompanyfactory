@@ -1,0 +1,369 @@
+{
+  "schema_version": "1",
+  "id": "thoughtbot",
+  "name": "Harbor Loom Software",
+  "real_firm": "thoughtbot, inc.",
+  "website": "https://thoughtbot.com/",
+  "sector": "Professional, Scientific, and Technical Services",
+  "naics": "541511",
+  "location": "Modeled operation: a Boston, Massachusetts-based United States client-delivery team. Harbor Loom Software is a fictional analogue of thoughtbot's documented Boston software-design and development activity.",
+  "operations": "thoughtbot provides software design, development, modernization and product-management services. Its published guidance connects prioritized work with implementation, review and acceptance. Harbor Loom Software is the fictional analogue; the modeled unit is one four-person delivery team within its United States consultancy. Synthetic scale: the team maintains and extends one established web application for managing business customer workflows, serving a United States software-company client with 120 customer organizations and approximately 3,500 active users. The engagement has operated for twelve months and includes a product delivery lead, product designer and two developers. Ordinary work includes interpreting customer feedback, refining requirements, implementing changes, reviewing code, assessing defects, maintaining documentation and preparing release recommendations. A typical week completes six to ten mixed stories, fixes and maintenance items while retaining approximately 80 open backlog items. The workspace contains earlier releases, superseded requirements, research findings, architectural decisions and unresolved maintenance work beyond any selected episode. The proposed cycles cover product and engineering decisions using existing records within this ongoing operation; production execution remains outside their completion boundary.",
+  "evidence": [
+    {
+      "id": "core-identity",
+      "kind": "sourced",
+      "text": "thoughtbot, inc. offers software-building and modernization services, grounding the dossier's professional software-services operation.",
+      "source_url": "https://thoughtbot.com/",
+      "quote": "We specialize in building and modernizing software where reliability, compliance, and long-term maintainability matter as much as speed.",
+      "basis": "The supplied captured homepage was read for this repair. Its footer identifies thoughtbot, inc. The quote supports the operating activity; the supplied sector is preserved as a classification, not presented as the page's own industry code."
+    },
+    {
+      "id": "boston-operation",
+      "kind": "sourced",
+      "text": "thoughtbot publicly describes web and mobile design and development activity in Boston.",
+      "source_url": "https://thoughtbot.com/boston",
+      "quote": "Web and Mobile App Design and Development, Built in Boston",
+      "basis": "The supplied captured Boston page was read. Its heading grounds a Boston operating connection without establishing a current office address or headcount."
+    },
+    {
+      "id": "delivery-process",
+      "kind": "sourced",
+      "text": "The playbook describes review for accuracy and user experience within a process distinguishing staging acceptance, readiness for production and released work.",
+      "source_url": "https://thoughtbot.com/playbook/the-thoughtbot-way/how-we-work/planning/manage-priorities-with-a-lightweight-process",
+      "quote": "The card creator and a designer review it for accuracy and user experience.",
+      "basis": "The supplied captured process section was read, including prioritization, feature branches, pull requests, staging acceptance and released-work lists. The quote directly supports interdisciplinary review; the surrounding section supports the distinct stages. The page expressly permits everyone to merge and release, so it does not support exclusive managerial release authority."
+    },
+    {
+      "id": "product-management",
+      "kind": "sourced",
+      "text": "thoughtbot's product-management service includes prioritizing a roadmap with implementation details and milestones.",
+      "source_url": "https://thoughtbot.com/services/product-management",
+      "quote": "Prepare a prioritized roadmap outlining implementation details and milestones",
+      "basis": "The supplied captured service page was read. Its surrounding text describes research, dependencies and interdisciplinary coordination. These support a coordinating product-management function without establishing the fictional team's specific delegation rights."
+    },
+    {
+      "id": "classification",
+      "kind": "inferred",
+      "text": "North American Industry Classification System code 541511, Custom Computer Programming Services, is an appropriate modeling classification for the selected client software-delivery unit.",
+      "source_url": "https://thoughtbot.com/",
+      "quote": "",
+      "basis": "The selected operation primarily develops and modifies client software. This is an analytical classification, not a verified official filing for thoughtbot."
+    },
+    {
+      "id": "team-model",
+      "kind": "inferred",
+      "text": "A coordinating product lead, designer and developers form a coherent delivery team with shared access to product and technical evidence.",
+      "source_url": "https://thoughtbot.com/services/product-management",
+      "quote": "",
+      "basis": "Product-management coordination and the playbook's designer/developer review responsibilities support interdependent contributions. Exact staffing, titles, reporting lines and decision authority are fictional choices."
+    },
+    {
+      "id": "scenario-model",
+      "kind": "synthetic",
+      "text": "Harbor Loom's four-person Boston delivery team supports an established application for business customers throughout a continuing United States client engagement.",
+      "source_url": "",
+      "quote": "",
+      "basis": "The fictional name, client segment, twelve-month engagement, customer population, workload and backlog size provide a reusable operating context. None is a claim about thoughtbot's actual staff, customers or volumes."
+    },
+    {
+      "id": "scenario-authority",
+      "kind": "synthetic",
+      "text": "The product delivery lead coordinates the team and decides internal recommendations within an existing client-approved objective and capacity envelope.",
+      "source_url": "",
+      "quote": "",
+      "basis": "This gives the digital team a legitimate coordinating boss without inventing exclusive real-firm merge authority. Client budget changes, commercial commitments and production authorization remain governed by pre-existing client instructions or are recorded as unresolved."
+    },
+    {
+      "id": "workspace-model",
+      "kind": "synthetic",
+      "text": "The fictional workplace uses the mandatory communication and document bundle plus Jira and GitHub for delivery records.",
+      "source_url": "",
+      "quote": "",
+      "basis": "The supplied catalog and frozen search_catalog results were consulted, and read_app_schema documentation was inspected for all seven selected applications. Their documented records fit the proposed cycles. These are synthetic infrastructure selections, not claims of real-firm adoption. Documentation does not establish mounted availability, working interfaces, valid seed construction, shared persistence, permissions or integration."
+    },
+    {
+      "id": "scenario-cycles",
+      "kind": "synthetic",
+      "text": "Complementary cycles address release readiness, evidence-led product scope and compatibility-preserving technical change.",
+      "source_url": "",
+      "quote": "",
+      "basis": "Each is a recurring decision problem within the same maintained client application. All decisive source records exist at episode start; worker-produced analysis changes backlog commitments and downstream engineering instructions."
+    }
+  ],
+  "workers": [
+    {
+      "id": "w-product-lead",
+      "title": "Product Delivery Lead",
+      "soc": "13-1082",
+      "responsibility": "Receive the client objective, create the work plan, reconcile product value, capacity and technical constraints, and maintain an actionable delivery commitment. Integrate specialist findings into scope decisions, readiness recommendations and client-facing explanations.",
+      "information_access": [
+        "Client objective, approved scope, capacity assumptions and acceptance authority",
+        "Customer findings, usage exports and prior product decisions",
+        "Shared Jira issues, GitHub review records and technical assessments",
+        "Shared email, chat, calendars, drive records and collaborative documents"
+      ],
+      "authority": "Coordinates the modeled team and approves its internal plan and recommendations within documented client constraints. May change backlog priorities and proposed scope. Cannot invent client acceptance, increase budget or treat a recommendation as a deployment.",
+      "evidence_ids": [
+        "product-management",
+        "team-model",
+        "scenario-authority"
+      ]
+    },
+    {
+      "id": "w-designer",
+      "title": "Product Designer",
+      "soc": "15-1255",
+      "responsibility": "Synthesize existing research, assess complete user journeys, review interface behavior and accessibility evidence, and turn findings into acceptance criteria and design requirements that developers can implement.",
+      "information_access": [
+        "Interview transcripts, usability findings, support examples and usage exports",
+        "Existing interface specifications, screenshots and acceptance records",
+        "Relevant source files and pull-request descriptions",
+        "Shared product backlog and team communication and document applications"
+      ],
+      "authority": "Owns design findings and proposed interaction requirements; can identify unsupported usability acceptance and request revisions. Product tradeoffs are resolved with the delivery lead and developers.",
+      "evidence_ids": [
+        "delivery-process",
+        "team-model",
+        "scenario-model"
+      ]
+    },
+    {
+      "id": "w-backend",
+      "title": "Backend Software Developer",
+      "soc": "15-1252",
+      "responsibility": "Analyze server behavior, data contracts and dependencies; implement backend changes during ordinary delivery; review code and existing test evidence; and specify migration, compatibility and recovery requirements.",
+      "information_access": [
+        "Repository source snapshots, branches, commits and pull requests",
+        "Application programming interface contracts defining requests, responses and data exchange; data-model documentation and technical decision history",
+        "Existing test reports, defect reproductions and release records",
+        "Shared product requirements, Jira backlog and team applications"
+      ],
+      "authority": "Owns backend technical assessments and estimates, proposes implementation alternatives and records review objections. Cannot claim a build, migration or test execution from a mock status change.",
+      "evidence_ids": [
+        "core-identity",
+        "delivery-process",
+        "team-model",
+        "scenario-model"
+      ]
+    },
+    {
+      "id": "w-frontend",
+      "title": "Frontend Software Developer",
+      "soc": "15-1252",
+      "responsibility": "Analyze browser behavior and client/server interactions; implement interface changes during ordinary delivery; review frontend code, error handling and existing test coverage; and reconcile technical behavior with design acceptance criteria.",
+      "information_access": [
+        "Frontend source snapshots, pull requests and review discussions",
+        "Application programming interface contracts defining requests, responses and data exchange; browser-support assumptions and existing test results",
+        "Design specifications, screenshots, usability findings and defect records",
+        "Shared Jira backlog and communication and document applications"
+      ],
+      "authority": "Owns frontend feasibility and compatibility findings, estimates work and requests corrections to unsafe or unsupported implementation assumptions. Shares technical review responsibilities with the backend developer.",
+      "evidence_ids": [
+        "delivery-process",
+        "team-model",
+        "scenario-model"
+      ]
+    }
+  ],
+  "teams": [
+    {
+      "id": "t-client-delivery",
+      "name": "US Client Product Delivery",
+      "purpose": "Maintain and improve one established client application by joining product decisions, user experience and implementation knowledge.",
+      "worker_ids": [
+        "w-product-lead",
+        "w-designer",
+        "w-backend",
+        "w-frontend"
+      ]
+    }
+  ],
+  "software": [
+    {
+      "id": "sw-email",
+      "capability": "Email correspondence containing client objectives, prior decisions and prepared delivery updates.",
+      "reference_product": "Gmail",
+      "catalog_app_ids": [
+        "gmail_mock"
+      ],
+      "status": "substitution",
+      "rationale": "Mandatory synthetic workplace infrastructure, without a claim of thoughtbot adoption. The inspected schema documents emails, thread identifiers, attachments and saved drafts. Existing correspondence supplies context; workers prepare matching client updates. Working draft controls, attachment readability and persistence remain unverified; external delivery is not required.",
+      "evidence_ids": [
+        "workspace-model"
+      ]
+    },
+    {
+      "id": "sw-chat",
+      "capability": "Team chat for planning, questions, specialist findings and cross-record handoffs.",
+      "reference_product": "Slack",
+      "catalog_app_ids": [
+        "slack_mock"
+      ],
+      "status": "substitution",
+      "rationale": "Mandatory synthetic workplace infrastructure, without a claim of thoughtbot adoption. The inspected schema documents channels, messages and thread replies. The boss creates the plan through ordinary collaboration; no delegation sequence is prescribed. Working thread interactions and shared persistence remain unverified. Actions require attribution by each worker's virtual machine because the application identity is shared.",
+      "evidence_ids": [
+        "workspace-model"
+      ]
+    },
+    {
+      "id": "sw-calendar",
+      "capability": "Scheduling and visibility into established client reviews, team commitments and available capacity.",
+      "reference_product": "Google Calendar",
+      "catalog_app_ids": [
+        "google_calendar_mock"
+      ],
+      "status": "substitution",
+      "rationale": "Mandatory synthetic workplace infrastructure, without a claim of thoughtbot adoption. The inspected schema documents calendars and editable events with dates, descriptions and guests. Calendar records inform planning; no outline requires a meeting to occur or an external guest to respond. Deployed viewing, editing and persistence remain unverified.",
+      "evidence_ids": [
+        "workspace-model"
+      ]
+    },
+    {
+      "id": "sw-drive",
+      "capability": "Shared drive storage for engagement records, research exports, acceptance evidence and reference assets.",
+      "reference_product": "Google Drive",
+      "catalog_app_ids": [
+        "google_drive_mock"
+      ],
+      "status": "substitution",
+      "rationale": "Mandatory synthetic workplace infrastructure, without a claim of thoughtbot adoption. The inspected schema documents folders, file metadata, optional text content and selectedItems. Critical evidence must be readable; filenames and thumbnails are insufficient. Selecting multiple files, reading their contents and preserving selections across shared sessions remain launch gates. A packet manifest does not establish that its files are selected. Binary previews and automatic Google Docs integration remain unverified.",
+      "evidence_ids": [
+        "workspace-model"
+      ]
+    },
+    {
+      "id": "sw-documents",
+      "capability": "Collaborative documents for scope rationale, acceptance criteria, architecture decisions and review discussions.",
+      "reference_product": "Google Docs",
+      "catalog_app_ids": [
+        "google_docs_mock"
+      ],
+      "status": "substitution",
+      "rationale": "Mandatory synthetic workplace infrastructure, without a claim of thoughtbot adoption. The inspected schema documents editable content, comments, replies, resolved flags, the open document, viewing modes and sidebar controls. Actual editing, comment persistence, viewing controls and shared transient state remain launch gates. Approval is expressed in document content and corresponding work records; no native document approval status is assumed.",
+      "evidence_ids": [
+        "workspace-model"
+      ]
+    },
+    {
+      "id": "sw-backlog",
+      "capability": "Delivery backlog with stories, bugs, technical tasks, priorities, estimates, sprint assignments and linked work.",
+      "reference_product": "Jira",
+      "catalog_app_ids": [
+        "jira_mock"
+      ],
+      "status": "substitution",
+      "rationale": "Proposed synthetic implementation. The inspected schema documents issues, comments, storyPoints, sprintId, linkedIssueIds and To Do/In Progress/In Review/Done states. Release eligibility and dependency direction belong in explicit descriptions and comments; linkedIssueIds alone does not encode blocking direction. Done is not proof of deployment. Working editing controls and shared persistence remain unverified; cross-app synchronization is manual.",
+      "evidence_ids": [
+        "delivery-process",
+        "workspace-model"
+      ]
+    },
+    {
+      "id": "sw-code-review",
+      "capability": "Repository and pull-request evidence, technical review conversations and historical release references.",
+      "reference_product": "GitHub",
+      "catalog_app_ids": [
+        "github_mock"
+      ],
+      "status": "substitution",
+      "rationale": "Proposed synthetic implementation. The inspected schema documents repository files with content and branch association, branches, commits, pull requests, comments, reviewers, checks, action-run records and releases. It describes adding pull-request comments and editing wiki pages. Formal approval controls are not required. Branch-specific source access, report readability, comments and shared edits remain launch gates. Files and checks lack a dedicated commit reference, so existing revision manifests and report contents must explicitly identify the revisions they describe. Stored checks and action statuses are historical evidence, not executable continuous integration.",
+      "evidence_ids": [
+        "delivery-process",
+        "workspace-model"
+      ]
+    },
+    {
+      "id": "sw-execution-gap",
+      "capability": "Executable application builds, automated integration tests, staging interaction and production deployment.",
+      "reference_product": "Client application runtime and continuous integration and delivery environment",
+      "catalog_app_ids": [],
+      "status": "gap",
+      "rationale": "GitHub record support does not establish a runnable repository, dependency installation, automated test execution or deployment. The selected cycles finish with reviewed decisions and actionable engineering records. Actual implementation, fresh test runs and rollout require a separately verified runtime and remain outside these outlines.",
+      "evidence_ids": [
+        "workspace-model",
+        "scenario-cycles"
+      ]
+    }
+  ],
+  "outlines": [
+    {
+      "id": "o-release-readiness",
+      "title": "Resolve release scope against conflicting acceptance and technical evidence",
+      "objective": "Produce a defensible release-readiness recommendation and a consistent remediation backlog for the existing client application.",
+      "decision_problem": "A proposed release combines valuable changes with incompatible dependencies, uneven acceptance evidence and apparently successful checks that may refer to earlier code. The product lead creates the plan and weighs a smaller coherent release against deferral. The backend developer traces server-side dependencies and evidence applicability; the frontend developer checks browser behavior and client/server compatibility; the designer assesses whether the included changes complete usable journeys. Their findings must change which work is recommended, held or returned for correction. GitHub review comments preserve technical objections, while Jira descriptions, priorities and appropriate statuses reflect the resulting scope and feasible repair allocation. The completed cycle leaves a decision with evidence references, unresolved conditions and downstream remediation requirements. A hold addresses supported smaller-release alternatives and delayed value; partial repair allocations preserve incomplete and unfunded work. Planning repairs does not establish repaired readiness. The cycle does not merge, deploy or manufacture fresh test results.",
+      "team_ids": [
+        "t-client-delivery"
+      ],
+      "worker_ids": [
+        "w-product-lead",
+        "w-designer",
+        "w-backend",
+        "w-frontend"
+      ],
+      "evidence_ids": [
+        "delivery-process",
+        "scenario-authority",
+        "scenario-cycles",
+        "workspace-model"
+      ]
+    },
+    {
+      "id": "o-product-scope",
+      "title": "Choose the next product increment from conflicting customer evidence",
+      "objective": "Replace an assumption-heavy feature backlog with a justified, capacity-bounded increment and implementable acceptance criteria.",
+      "decision_problem": "Existing interviews, usage exports and support examples point to different causes of customer difficulty. A prominent feature request may benefit a small segment while a less visible workflow problem affects more customers; duplicate observations, consent restrictions and incomplete evidence may also make either conclusion premature. The product lead creates the plan and evaluates value, capacity and prior commitments. The designer synthesizes research, distinguishes observations from hypotheses and defines complete user journeys. The backend developer assesses data availability, hidden dependencies and the cost of alternative slices. Their outputs jointly determine whether to advance a feature, narrow it, prioritize a workflow correction or pursue justified investigation. Updated Jira work and a reviewed rationale become the next implementation team's requirements. Any investigation choice preserves maintenance obligations, deferred requests and a usable evidence handoff. No new interviews or live analytics are required to finish.",
+      "team_ids": [
+        "t-client-delivery"
+      ],
+      "worker_ids": [
+        "w-product-lead",
+        "w-designer",
+        "w-backend"
+      ],
+      "evidence_ids": [
+        "product-management",
+        "team-model",
+        "scenario-authority",
+        "scenario-cycles"
+      ]
+    },
+    {
+      "id": "o-compatibility-change",
+      "title": "Select a migration approach that preserves customer workflows",
+      "objective": "Choose an implementable approach to an existing application programming interface or data-contract change and translate its consequences into engineering and acceptance work.",
+      "decision_problem": "A proposed cleanup simplifies server maintenance but changes fields or behavior still used by current browser flows and historical records. Existing architecture notes, source snapshots and defect evidence allow comparison of immediate replacement, a compatibility layer and staged migration. The product lead creates the plan and balances maintenance savings against scope and continuity. The backend developer maps data invariants, conversion requirements and recovery limits. The frontend developer identifies consumers, mixed-version behavior and error-handling consequences. The designer determines how partial migration, unavailable data and recovery affect user understanding and task completion. Their findings must alter the chosen approach, prerequisite work and retirement conditions. The cycle finishes with a reviewed technical decision, linked Jira tasks and corrected GitHub review guidance that downstream implementers can use; migration execution and new tests remain subsequent work.",
+      "team_ids": [
+        "t-client-delivery"
+      ],
+      "worker_ids": [
+        "w-product-lead",
+        "w-designer",
+        "w-backend",
+        "w-frontend"
+      ],
+      "evidence_ids": [
+        "core-identity",
+        "team-model",
+        "scenario-authority",
+        "scenario-cycles",
+        "workspace-model"
+      ]
+    }
+  ],
+  "assumptions": [
+    "The fictional analogue's name, four-person unit, business customer application, 120 customer organizations, 3,500 active users, twelve-month engagement, weekly throughput and 80-item backlog are synthetic scale assumptions. The dossier does not estimate thoughtbot's real headcount.",
+    "The roster represents the complete modeled delivery team, not the consultancy's entire organization. Sales, payroll and other corporate functions are outside this bounded operation.",
+    "The product lead is the coordinating boss for all outlines and receives an objective from which to create a plan. Responsibilities define substantive contributions without prescribing a delegation sequence.",
+    "Each worker uses a separate desktop and a stable individual account in the shared apps. Worker proxies scope personal communication to its named participants. Shared product records are available according to the role grants; private client constraints, research notes and technical records are distributed to the responsible workers. The native runtime must verify those boundaries before tasks are authored.",
+    "All seven selected applications are within the supplied available_runtime_apps list. This declares the construction surface, not verified mounted availability. Each requires its own origin and complete native seed state containing every documented top-level key and no invented keys. Conformity of an actual seed to the pinned schemas remains unverified.",
+    "Schema inspection establishes documented record and state support only. Working user interface controls, content readability, shared persistence, reset behavior and concurrent edits require construction-time verification. No runtime validation was performed in this repair.",
+    "Before launch, verify Google Drive multiple-file selection and readable evidence, Google Docs open-document and viewing/sidebar controls, GitHub branch-specific source and report access, and persistent shared comments and edits. Shared transient selections and open-document state require particular verification. A manifest alone cannot satisfy a requirement to select files.",
+    "The populated workspace includes ordinary historical and unrelated work as well as selected episode evidence: earlier decisions, completed issues, old review discussions, research limitations, accepted releases and continuing maintenance obligations.",
+    "Source snapshots and stored test reports must identify the revision or branch they describe. Explicit manifests and report contents supply associations absent from dedicated schema fields. Missing or stale verification remains unresolved; workers cannot repair it by changing a check status.",
+    "Jira workflow states describe work progress. Release readiness, holds and deployment history are separately stated in ordinary descriptions and decision records; no synthetic native status field is introduced.",
+    "The selected cycles use existing design evidence and produce requirements and acceptance decisions. They do not require an interactive design-authoring application or imply that documents replace a production design tool.",
+    "Client constraints and any delegated acceptance rights are seeded as existing records. A cycle can finish with a justified hold or recommendation requiring later client action; completion cannot depend on a new external response or elapsed time.",
+    "Worker materials and episode instructions use plain wording or introduce abbreviations on first use. Describe selected files and open-document controls directly; write pull-request descriptions in full; introduce Hypertext Transfer Protocol before using HTTP when discussing response behavior.",
+    "This bounded repair reuses the supplied captured public pages and prior dossier and reads frozen application documentation. It introduces no new web research or real-firm facts. Captured statements ground the real operation; synthetic scenario rules remain independent of changing live prices, employee identities and future website content."
+  ]
+}

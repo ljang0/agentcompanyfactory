@@ -1,0 +1,55 @@
+{
+  "parent_world_hash": "3c736ad621ebed3c80534691d2cace6ba0a2e238874dd1a7b19231bd8456e2de",
+  "collections": {
+    "shared_artifacts": [
+      {
+        "id": "artifact-return-filter-change",
+        "title": "Request return navigation",
+        "owner_id": "p-june",
+        "branch": "keep-return-filters",
+        "revision": "b461efad1028493ca0e715f985c3246e09ad7732",
+        "repository_path": "web/RequestReturnLink.tsx",
+        "updated": "2026-08-31T16:40:00-04:00",
+        "content": "import React from 'react';\n\nexport type RequestReturnLinkProps = { savedViewQuery: string };\n\nexport function RequestReturnLink({ savedViewQuery }: RequestReturnLinkProps) {\n  const query = savedViewQuery.startsWith('?') ? savedViewQuery : `?${savedViewQuery}`;\n  const target = savedViewQuery ? `/requests${query}` : '/requests';\n  return <a href={target}>Back to requests</a>;\n}\n\n// The detail page passes the query captured when the request was opened.\n// Review is still needed for keyboard focus on return and an empty result list.\n",
+        "created": "2026-08-31T16:40:00-04:00",
+        "folder_id": "folder-engineering",
+        "access_id": "access-delivery",
+        "apps": [
+          "github_mock"
+        ]
+      },
+      {
+        "id": "artifact-state-contract-sketch",
+        "title": "Request state contract sketch",
+        "owner_id": "p-theo",
+        "branch": "request-state-contract",
+        "revision": "23e184c7b865af119a52d46e3900fa726d81bc55",
+        "repository_path": "docs/request-state-proposal.md",
+        "updated": "2026-08-31T14:20:00-04:00",
+        "content": "# Request state field\n\nDraft for PR #88.\n\nAdd `state` to the serialized request alongside `approved`, `rejected` and `reviewer_id` while consumers migrate. Initial proposal: `approved` when approved is true, `declined` when rejected is true, and `pending` otherwise. Keep the existing fields during the transition.\n\n## Questions for June and Nolan\n\n- Imported undecided requests can have neither flag set and no reviewer. Should their state differ from a request waiting with an assigned reviewer?\n- What response should a consumer show if both flags are true?\n- Which consumers need the old fields, and how will we agree when they can be removed?\n- Should state remain a serialized projection or become stored data? The migration approach depends on that choice.\n\nThe current serializer and browser labels are in the main-branch extracts. This sketch is open for their review.\n",
+        "created": "2026-08-31T14:20:00-04:00",
+        "folder_id": "folder-engineering",
+        "access_id": "access-delivery",
+        "apps": [
+          "github_mock"
+        ]
+      },
+      {
+        "id": "artifact-attachment-index-migration",
+        "title": "Attachment request index migration",
+        "owner_id": "p-theo",
+        "branch": "attachment-request-index",
+        "revision": "64a2185cd772fb93a0d614ecc93984b5f108de27",
+        "repository_path": "db/migrate/20260828155000_add_request_lookup_index.rb",
+        "updated": "2026-08-28T16:20:00-04:00",
+        "content": "class AddRequestLookupIndex < ActiveRecord::Migration[7.1]\n  disable_ddl_transaction!\n\n  def change\n    add_index :attachments, :request_id,\n      name: 'index_attachments_on_request_id',\n      algorithm: :concurrently\n  end\nend\n",
+        "created": "2026-08-28T16:20:00-04:00",
+        "folder_id": "folder-engineering",
+        "access_id": "access-delivery",
+        "apps": [
+          "github_mock"
+        ]
+      }
+    ]
+  }
+}

@@ -19,6 +19,19 @@ The [example index](../examples/sanmar/README.md) links to the original receipts
 The release archive retains nine attempt receipts, available grades and complete
 traces for the latest teacher of each task and the latest ordinary trial.
 
+## Second company
+
+The [thoughtbot-derived world](../examples/thoughtbot/README.md) reached Stage 4
+through the shared staged commands on September 14. It contains four workers,
+seven apps and a year of operating history. All three content reviewers accepted
+it, with seven warning-level findings retained. All seven runtime gates passed
+across 28 worker/app views. A clean extraction repeated native acceptance and reset
+using the archived source, without model calls.
+
+This run reused accepted research and retained the accepted core while repairing
+native content through explicit patches and amendments. It required operator-directed
+repairs. It did not author tasks, run team trials or measure ablations.
+
 ## Remaining work
 
 - Diagnose the assortment task's failed dependency consumption and later failed
@@ -27,8 +40,9 @@ traces for the latest teacher of each task and the latest ordinary trial.
 - Obtain a successful ordinary acquisition trial after the unscored provider outage.
 - Measure worker and input ablations against successful ordinary trials. Missing
   dependency evidence alone does not prove a reduction in business quality.
-- Replace remaining SanMar population helpers with a portable, tested path for a
-  second company before claiming general one-command generation.
+- Reduce the operator-directed repairs still needed during population. The second
+  company exercised the shared path; unattended generation for arbitrary companies
+  remains unproven.
 
 Reuse matching accepted checkpoints. Do not reseed or repeat paid review to obtain
 a different result on unchanged data. Changed task or world inputs require new

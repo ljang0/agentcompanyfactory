@@ -1,0 +1,35 @@
+{
+  "at": "2026-09-14T14:06:01.940235+00:00",
+  "status": "accepted_world_clean_extraction_verified",
+  "archive": "thoughtbot-world-20260914.tar.gz",
+  "archive_sha256": "2e05601172e5da60af455c0d25961dd2ad1e08e42b2e1443d3c9e4acc3e9c9b2",
+  "source_commit": "55b735a0d7b93c0ccc2e3846787dca46d0cad457",
+  "payload_files_checked": 1382,
+  "dependency_environment": "Existing environment installed from the same uv.lock; imported pipeline source from the clean extraction",
+  "dependency_lock_sha256": "303c132c58a38e66c18da7078be18aeb0860585b740a07a836755b3fa0a4ee88",
+  "original_payload_unchanged": true,
+  "model_calls": 0,
+  "checks": {
+    "build": true,
+    "render": true,
+    "writes": true,
+    "persistence": true,
+    "access": true,
+    "resources": true,
+    "reset": true
+  },
+  "worker_views": 28,
+  "apps": [
+    "github_mock",
+    "gmail_mock",
+    "google_calendar_mock",
+    "google_docs_mock",
+    "google_drive_mock",
+    "jira_mock",
+    "slack_mock"
+  ],
+  "frozen_hash": "951e47562f8d9638d4a6a825ef7ff6b4ae0a25d7e2086f0d46ac3a4c82928abe",
+  "runtime_hash": "4438951f859a983ea04d77668fae1263fee202fd8e03d208a245d95d85b7ee4b",
+  "seconds": 116.429,
+  "tasks_and_trials": "not_run"
+}

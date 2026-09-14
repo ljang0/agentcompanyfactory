@@ -1,0 +1,22 @@
+{
+  "parent_world_hash": "98963458b1e9aa60f736caf8dba71e6b1a64cc92240d5aa5e70228d123468c9c",
+  "world": [
+    {
+      "collection": "documents",
+      "id": "doc-july-research",
+      "field": "body",
+      "before": "Support contacts from Alder and Moraine describe uncertainty about the next reviewer. Cedar Reach has asked about routing by department. These are different customer contexts. Existing notes include repeat contact from one Alder participant and a forwarded Copperline export screenshot. Participant details and quotation permissions remain in Imani's working notes. The next summary needs to distinguish observed behavior, requests and interpretations.",
+      "after": "Support contacts from Alder and Moraine describe uncertainty about the next reviewer. Cedar Reach has asked about routing by department. These are different customer contexts. Existing notes include repeat contact from one Alder participant. Participant details and quotation permissions remain in Imani's working notes. The next summary needs to distinguish observed behavior, requests and interpretations.",
+      "reason": "The August 7 revision cannot include Copperline evidence first received August 14 and forwarded August 20."
+    },
+    {
+      "collection": "work_items",
+      "id": "RD-252",
+      "field": "created",
+      "before": "2026-08-03T10:00:00-04:00",
+      "after": "2026-08-20T14:00:00-04:00",
+      "reason": "This follow-up was opened for the screenshot resend received August 20 at 14:00. Its initial August 3 date predates the originating contact."
+    }
+  ],
+  "materials": []
+}

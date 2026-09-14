@@ -17,7 +17,7 @@ trials. Its outputs are inspectable company environments with evidence of what
 worked, what failed and whether the initial state was restored.
 
 **[Getting started](docs/GETTING-STARTED.md)** · **[Pipeline](docs/PIPELINE.md)** ·
-**[Example](examples/sanmar/README.md)** · **[Use as a template](docs/TEMPLATE.md)** ·
+**[Examples](#examples)** · **[Use as a template](docs/TEMPLATE.md)** ·
 **[Contributing](CONTRIBUTING.md)**
 
 ## Why company environments?
@@ -89,7 +89,12 @@ Next, [inspect the included example](examples/sanmar/README.md),
 Native app execution requires the external CUA-Gym hub; desktop trials also require
 a VM image and model access. The setup guide lists each execution mode's requirements.
 
-## Example: apparel supply company
+## Examples
+
+| Company | What you can inspect |
+| --- | --- |
+| [Apparel supply](examples/sanmar/README.md), informed by SanMar | Eight apps, two tasks, references, grades, desktop traces and native replay |
+| [Software delivery](examples/thoughtbot/README.md), informed by thoughtbot | Seven apps, four roles, a year of history and an accepted world with clean-extraction checks |
 
 [Cedarline Apparel Supply](examples/sanmar/README.md), informed by SanMar research,
 contains four workers, eight apps and two reviewed tasks: an account assortment
@@ -103,6 +108,12 @@ contains the complete world, delivered files, screenshots and replay proof.
 Both references passed native replay and reset; full ordinary-team and ablation
 acceptance remains open. [Measured results and limits](docs/END-TO-END-PLAN.md).
 
+[Harbor Loom Software](examples/thoughtbot/README.md) exercises the shared pipeline
+through world acceptance with a second company. Its download includes native
+states, worker files, the exact source and the recorded content repairs. All three
+reviewers accepted it; seven warnings remain visible in the review. Task design and
+team trials have not been run for this company.
+
 ## Repository map
 
 | Path | Purpose |
@@ -110,7 +121,7 @@ acceptance remains open. [Measured results and limits](docs/END-TO-END-PLAN.md).
 | `src/company_envs/` | Pipeline, app runtime, task evaluation and packaging |
 | `configs/` | Starter configuration and the measured pilot configuration |
 | `docs/` | Setup, pipeline, architecture and extension guides |
-| `examples/` | Inspectable company tasks and measured outputs |
+| `examples/` | World snapshots, company tasks and measured outputs |
 | `catalogs/` | App contracts, probes and occupational reference data |
 | `.agents/skills/` | Authoring and independent review instructions |
 | `tests/` | Regression tests and fixtures |
