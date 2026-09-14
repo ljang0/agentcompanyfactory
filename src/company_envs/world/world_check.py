@@ -483,13 +483,31 @@ def check_facts(world, states):
                         or (isinstance(va, str) and isinstance(vb, str) and max(len(va), len(vb)) > 160)
                     ):
                         continue
-                    if _lifecycle_word(va) != _lifecycle_word(vb) and not (
+                    comparable_a, comparable_b = normalize(va), normalize(vb)
+                    if (
+                        key == "status"
+                        and kind_a == kind_b == "issue"
+                        and {src_a, src_b} == {"github_mock", "jira_mock"}
+                    ):
+                        # GitHub tracks open/closed; Jira separates unfinished work
+                        # into three stages. A completion disagreement still blocks.
+                        jira_status = {
+                            "to do": "open",
+                            "in progress": "open",
+                            "in review": "open",
+                            "done": "closed",
+                        }
+                        if src_a == "jira_mock":
+                            comparable_a = jira_status.get(comparable_a, comparable_a)
+                        else:
+                            comparable_b = jira_status.get(comparable_b, comparable_b)
+                    elif _lifecycle_word(va) != _lifecycle_word(vb) and not (
                         _status_like(va) and _status_like(vb)
                     ):
                         # The same field name means different things: an app's account
                         # ``state`` (enabled/disabled) is not the customer's US state (NJ).
                         continue
-                    if normalize(va) != normalize(vb):
+                    if comparable_a != comparable_b:
                         findings.append(
                             finding(
                                 "error",
