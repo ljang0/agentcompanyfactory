@@ -39,6 +39,46 @@ def test_packaging_refuses_to_redact_canonical_business_records():
         )
 
 
+def test_company_payload_retains_repair_history_without_model_logs(tmp_path):
+    from company_envs.collaborator import company_inputs
+    from company_envs.storage import write
+
+    original_grade = {"passed": False, "reason": "alternative trace contradicted final records"}
+    files = {
+        "MANIFEST.json": {"tasks": ["task"]},
+        "company.json": {},
+        "apps.json": {},
+        "world-spec.json": {},
+        "world/CORE.json": {"hashes": {}},
+        "world/POPULATION.json": {"artifacts": {}, "states": {}, "effective_world": "world/world.json"},
+        "world/world.json": {},
+        "world/FROZEN.json": {},
+        "world/acceptance/REVIEW.json": {},
+        "world/acceptance/RUNTIME.json": {"evidence": {}},
+        "world/acceptance/task-binding-refreshes/repair/REFRESH.json": {"bindings": {}},
+        "world/acceptance/task-binding-refreshes/repair/RUNTIME.json": {
+            "evidence": {"old-proof.json": "hash"}
+        },
+        "old-proof.json": {"retained": True},
+        "tasks/task/verifier-calibration.json": {"reference_hash": "reference", "cases": []},
+        "tasks/task/verifier-calibration-history/first/verifier-calibration.json": {
+            "cases": [{"report_hash": digest(original_grade)}]
+        },
+        "tasks/task/fixture-trace-repairs/repair/verifier-cases.json": {"original": True},
+        "tasks/task/fixture-trace-repairs/repair/VALIDATION.json": {"checked": True},
+        "runtime/verifier/task/references/one/REFERENCE.json": {"data_hash": "reference"},
+        "runtime/verifier/task/references/one/data.json": {},
+        "runtime/verifier/task/calibration/original/report.json": original_grade,
+        "runtime/verifier/task/calibration/original/RESULT.json": {"ok": False},
+    }
+    for name, value in files.items():
+        write(tmp_path / name, value)
+    write(tmp_path / "tasks/task/fixture-trace-repairs/repair/calls/private.json", {"raw": True})
+    payload = company_inputs(tmp_path)
+    assert set(payload) == set(files)
+    assert json.loads(payload["runtime/verifier/task/calibration/original/report.json"]) == original_grade
+
+
 def test_clean_checkout_verification_refuses_tampered_payload_before_live_work(tmp_path):
     from company_envs.storage import write
 

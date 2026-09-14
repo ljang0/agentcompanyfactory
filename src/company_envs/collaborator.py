@@ -87,7 +87,7 @@ def portable_metadata(files, *, repository, user_home):
 
 
 def company_inputs(folder, trials=None):
-    """Close over the accepted native resources and evidence, excluding failed attempts and model logs."""
+    """Select native resources, evaluation and repair evidence; exclude model logs."""
     folder = Path(folder)
     core, population = read(folder / "world/CORE.json"), read(folder / "world/POPULATION.json")
     runtime = read(folder / "world/acceptance/RUNTIME.json")
@@ -107,6 +107,9 @@ def company_inputs(folder, trials=None):
     names.update(population["artifacts"])
     names.update(entry["path"] for entry in population["states"].values())
     names.update(runtime["evidence"])
+    for archive in (folder / "world/acceptance/task-binding-refreshes").glob("*"):
+        names.update(str(p.relative_to(folder)) for p in archive.glob("*.json"))
+        names.update(read(archive / "RUNTIME.json")["evidence"])
     for relative in (
         "EXTENSION.json",
         "AMENDMENTS.json",
@@ -136,6 +139,12 @@ def company_inputs(folder, trials=None):
             f"tasks/{task_id}/{name}" for name in task_files if (folder / "tasks" / task_id / name).is_file()
         )
         calibration = read(folder / "tasks" / task_id / "verifier-calibration.json")
+        histories = list(
+            (folder / "tasks" / task_id / "verifier-calibration-history").glob("*/verifier-calibration.json")
+        )
+        names.update(str(p.relative_to(folder)) for p in histories)
+        for repair in (folder / "tasks" / task_id / "fixture-trace-repairs").glob("*"):
+            names.update(str(p.relative_to(folder)) for p in repair.glob("*.json"))
         for path in (folder / "tasks" / task_id / "verifier-case-targets").glob("*/TARGETS.json"):
             if {row["kind"]: row for row in read(path).get("targets", [])} == calibration.get(
                 "failure_targets"
@@ -153,7 +162,11 @@ def company_inputs(folder, trials=None):
             str((matched[0].parent / name).relative_to(folder)) for name in ("REFERENCE.json", "data.json")
         )
         case_dir = folder / "runtime/verifier" / task_id / "calibration"
-        required = {row.get("report_hash") for row in calibration["cases"]} - {None}
+        required = {
+            row.get("report_hash")
+            for record in (calibration, *(read(p) for p in histories))
+            for row in record["cases"]
+        } - {None}
         for path in case_dir.glob("*/report.json"):
             if digest(read(path)) in required:
                 names.update(
