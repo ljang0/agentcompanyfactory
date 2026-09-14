@@ -1,6 +1,6 @@
 # Measured status and remaining work
 
-The September 14, 2026 inspection snapshot demonstrates the pipeline from accepted
+The September 14, 2026 SanMar inspection snapshot demonstrates the pipeline from accepted
 research through world construction, tasks, grading, desktop trials and a clean
 native replay/reset. It is an inspection release, not a fully accepted team benchmark.
 
@@ -47,10 +47,23 @@ limits remain recorded.
 
 | Task | Third teacher result | Next gate |
 | --- | --- | --- |
-| Product scope | Passed: 1.00, all four business criteria, all three collaboration checks, reset passed | Ordinary attempt 1 is running without reference hints |
+| Product scope | Passed: 1.00, all four business criteria, all three collaboration checks, reset passed | Ordinary attempt 1 scored 0.70 and failed; all collaboration checks and reset passed |
 | Release readiness | Failed: 0.80; code reviews, scope, Jira work and all four collaboration checks passed, but the client draft was empty; reset passed | Three scored teachers used; ordinary trial is blocked for the current task |
 
-The ordinary result and a new clean-extraction inspection package are pending.
+The ordinary team corrected all eight tracker descriptions and produced a shared
+brief and client draft. It left the existing summer research summary unchanged.
+All three judges failed the first criterion on that basis. The public brief names
+the tracker corrections and a shared explanation, but does not explicitly name
+that existing summary; seeded correspondence establishes its relevance. This
+public-brief/assessment alignment needs review before interpreting the score gap
+as evidence of difficulty. The recorded grade remains unchanged.
+
+No ordinary retry or ablation was run. There was no runtime or grading failure to
+repair, and the predeclared ablation plan requires a successful ordinary baseline.
+The [task inspection release](https://github.com/ljang0/agentcompanyfactory/releases/tag/thoughtbot-inspection-2026-09-14)
+retains all seven trial attempts, the alignment note, calibration history, runtime
+repair evidence and complete latest teacher and ordinary traces. Its separate
+verification receipt identifies the archive and fresh replay proof by SHA256.
 
 Population and runtime work required operator-directed repairs. This second company
 exercises the shared pipeline; unattended generation for arbitrary companies remains
@@ -64,6 +77,10 @@ unproven.
 - Obtain a successful ordinary acquisition trial after the unscored provider outage.
 - Measure worker and input ablations against successful ordinary trials. Missing
   dependency evidence alone does not prove a reduction in business quality.
+- Review the product-scope brief's required research-summary output before a new
+  task version or a claim about difficulty. Preserve the existing grade and trials.
+- Review release-readiness completion behavior before a new task version; its
+  three scored teachers are exhausted and the final client draft remained empty.
 - Reduce the operator-directed repairs still needed during population. The second
   company exercised the shared path; unattended generation for arbitrary companies
   remains unproven.

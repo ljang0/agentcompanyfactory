@@ -1,13 +1,36 @@
 # Inspect company snapshots
 
-You can read the [small example](../examples/sanmar/README.md) on GitHub without
-installing anything. To inspect native states, files, screenshots and replay proof,
-use the full [September 14 inspection release](https://github.com/ljang0/agentcompanyfactory/releases/tag/sanmar-inspection-2026-09-14).
+You can read the [apparel supply](../examples/sanmar/README.md) and
+[software delivery](../examples/thoughtbot/README.md) examples on GitHub without
+installing anything. Full inspection packages add native states, worker files,
+desktop traces and replay proof.
 
 For any task inspection package, start with its `INSPECT.md` and use the company
 path recorded in `COLLABORATOR.json`. The replay instructions below apply to these
 packages. The earlier [software delivery world snapshot](../examples/thoughtbot/README.md)
 covers Stage 4 and instead provides `WORLD-README.md` for its native world checks.
+
+## Download the software delivery task snapshot
+
+The [task inspection release](https://github.com/ljang0/agentcompanyfactory/releases/tag/thoughtbot-inspection-2026-09-14)
+contains two reviewed tasks, calibrated verifiers and the recorded team results.
+It preserves the earlier world snapshot and failed teacher attempts.
+
+```sh
+gh release download thoughtbot-inspection-2026-09-14 --repo ljang0/agentcompanyfactory \
+  --pattern 'thoughtbot-inspection-20260914*' --dir thoughtbot-download
+cd thoughtbot-download
+sha256sum -c thoughtbot-inspection-20260914.tar.gz.sha256
+sha256sum -c thoughtbot-inspection-20260914-proofs.tar.gz.sha256
+tar -xzf thoughtbot-inspection-20260914.tar.gz
+tar -xzf thoughtbot-inspection-20260914-proofs.tar.gz
+cd thoughtbot-inspection-20260914
+```
+
+The companion proofs archive adds `COLLABORATOR-VERIFIED.json` and the fresh
+reference-replay evidence to the extracted folder. The separate
+`thoughtbot-inspection-20260914-VERIFIED.json` identifies the tested main archive
+and proof archive by SHA256 and records the source commit. Start with `INSPECT.md`.
 
 ## Download the SanMar inspection snapshot
 
@@ -27,6 +50,9 @@ native states, delivered files and desktop traces. `COLLABORATOR.json` records
 payload hashes; `COLLABORATOR-VERIFIED.json` records the measured clean replay.
 Its historical `inspection_verified_not_published` status predates this GitHub
 release and does not imply full benchmark acceptance.
+
+The same status in the software delivery proof records verification before its
+GitHub release. Publishing an inspection package does not change any task grade.
 
 The archive contains the exact source used for that proof. The Git repository
 adds public documentation, CI and a smaller example; use the archive's source

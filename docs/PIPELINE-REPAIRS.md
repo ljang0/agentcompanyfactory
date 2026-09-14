@@ -84,3 +84,10 @@ follow-ups and collaboration checks passed, but the client draft remained empty.
 All four release workers reached the time limit. The final manager actions were
 checking specialist work, leaving the draft unfinished. This is a retained task
 failure, not another runtime repair or a reason to repeat the grade.
+
+Product scope's ordinary run scored 0.70, with all collaboration checks and reset
+passing. The existing summer summary remained unchanged, causing criterion 1 to
+fail. The public brief does not explicitly name that output, although the company
+context references it. An operator inspection note records this alignment question;
+the grade was preserved. The comparison needs review before being used as evidence
+of difficulty. No further ordinary attempt or ablation was run.
