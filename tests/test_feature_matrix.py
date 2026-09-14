@@ -612,7 +612,8 @@ def test_fallback_schema_keys_exclude_interface_state(tmp_path, two_app_company)
     assert workflows.company_collections(two_app_company, catalogs) == ["google_docs_mock.documents"]
 
 
-def test_a_decisive_app_nobody_on_the_team_holds_is_rejected(two_app_company):
+@pytest.mark.parametrize("frozen", [False, True])
+def test_a_decisive_app_nobody_on_the_team_holds_is_rejected(two_app_company, frozen):
     """worker_apps.check_binding verifies the manager is EXCLUDED from a decisive app and never that
     anyone is included, so a decisive collection held by nobody passed every gate and the work it
     names could not be done. Latent rather than live: 0 of the 178 accepted tasks with a cell and
@@ -627,10 +628,51 @@ def test_a_decisive_app_nobody_on_the_team_holds_is_rejected(two_app_company):
             SimpleNamespace(worker_id="analyst", apps=["google_sheets_mock"]),
         ],
     )
-    workflows.check_contribution_apps(two_app_company, workflow)  # the specialist holds the cell
+    grants = {c.worker_id: list(c.apps) for c in workflow.contributions} if frozen else None
+    workflows.check_contribution_apps(two_app_company, workflow, worker_apps=grants)
     workflow.contributions[1].apps = ["google_docs_mock"]
     with pytest.raises(ValueError, match=r"nobody on the team holds \['google_sheets_mock'\]"):
-        workflows.check_contribution_apps(two_app_company, workflow)
+        workflows.check_contribution_apps(
+            two_app_company,
+            workflow,
+            worker_apps={c.worker_id: c.apps for c in workflow.contributions} if frozen else None,
+        )
+
+
+def test_frozen_shared_apps_preserve_grants_without_inventing_access_barriers(two_app_company):
+    apps = ["google_docs_mock", "google_sheets_mock"]
+    task = SimpleNamespace(
+        id="shared-apps",
+        manager_id="boss",
+        feature_cell=SimpleNamespace(collections=["google_sheets_mock.sheets"]),
+        contributions=[SimpleNamespace(worker_id=w, apps=list(apps)) for w in ("boss", "analyst")],
+    )
+    grants = {c.worker_id: list(apps) for c in task.contributions}
+    with pytest.raises(ValueError, match="every worker holds every domain app"):
+        workflows.check_contribution_apps(two_app_company, task)
+    workflows.check_contribution_apps(two_app_company, task, worker_apps=grants)
+
+    # The manager can hold the decisive app in an accepted world even when
+    # another worker only uses shared documents for their contribution.
+    task.contributions[1].apps = ["google_docs_mock"]
+    with pytest.raises(ValueError, match="manager holds every app"):
+        workflows.check_contribution_apps(two_app_company, task)
+    workflows.check_contribution_apps(two_app_company, task, worker_apps=grants)
+
+    grants["boss"] = ["google_docs_mock"]
+    with pytest.raises(ValueError, match="outside frozen grants"):
+        workflows.check_contribution_apps(two_app_company, task, worker_apps=grants)
+    task.contributions[0].apps = ["google_sheets_mock"]
+    task.contributions[1].apps = ["google_sheets_mock"]
+    task.feature_cell.collections = ["google_docs_mock.documents"]
+    with pytest.raises(ValueError, match=r"nobody on the team holds \['google_docs_mock'\]"):
+        workflows.check_contribution_apps(
+            two_app_company, task, worker_apps={c.worker_id: c.apps for c in task.contributions}
+        )
+    for contribution in task.contributions:
+        contribution.apps = []
+    with pytest.raises(ValueError, match="every contribution names apps"):
+        workflows.check_contribution_apps(two_app_company, task, worker_apps=grants)
 
 
 def test_record_counts_and_not_the_id_index_decide_the_matrix_surface(root, two_app_company, workflow):

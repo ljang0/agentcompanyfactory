@@ -63,8 +63,11 @@ establishes unattended generation for arbitrary companies.
 
 Tasks and assessments are authored together and independently reviewed. Each
 worker's contribution must be grounded in visible records, authority or work that
-another participant needs. Local access checks establish record visibility;
-necessity is a separate empirical question for team and ablation trials.
+another participant needs. Tasks inherit the frozen world's app grants and
+individual identities. Workers may use the same apps while having different
+mailboxes, private conversations and file permissions. Task generation cannot
+broaden those grants or require a new access barrier. Local checks establish record
+visibility; necessity is a separate empirical question for team and ablation trials.
 
 Reference and verifier authors are independent. Calibration checks full, partial,
 no-op, alternative and negative outcomes. Python mechanics run in bubblewrap;

@@ -644,7 +644,13 @@ def design(
             validate_execution_support(amended, workflow, getattr(models, "config", {}))
             validate_workflow(amended, workflow, version=workflow_version, minimum_workers=worker_floor)
             check_plain_english(workflow)
-            check_contribution_apps(amended, workflow)
+            check_contribution_apps(
+                amended,
+                workflow,
+                worker_apps=seeded_world["worker_apps"]
+                if seeded_world and seeded_world.get("accepted_world")
+                else None,
+            )
             check_criteria_are_about_records(workflow)
             if workflow.id != f"{company.id}_{workflow.outline_id}":
                 raise ValueError("workflow id must be company_id + '_' + outline_id")
@@ -831,11 +837,11 @@ def now_iso():
     return now()
 
 
-def check_contribution_apps(company, workflow):
-    """Contributions that name apps name the company's apps, and not everyone holds every domain app."""
+def check_contribution_apps(company, workflow, *, worker_apps=None):
+    """Check app coverage and access, using frozen grants when the world already exists."""
     known = {a for software in company.software for a in software.catalog_app_ids} | STANDARD_APPS
     named = [c for c in workflow.contributions if c.apps]
-    if not named:
+    if not named and worker_apps is None:
         return
     if len(named) != len(workflow.contributions):
         raise ValueError(f"{workflow.id}: every contribution names apps, or none does")
@@ -845,25 +851,32 @@ def check_contribution_apps(company, workflow):
             raise ValueError(
                 f"{workflow.id}: {c.worker_id} holds apps the company does not have: {sorted(unknown)}"
             )
+        if worker_apps is not None:
+            unavailable = set(c.apps) - set(worker_apps.get(c.worker_id, []))
+            if unavailable:
+                raise ValueError(
+                    f"{workflow.id}: {c.worker_id} names apps outside frozen grants: {sorted(unavailable)}"
+                )
     domain = known - STANDARD_APPS
-    if domain and all(domain <= set(c.apps) for c in named):
+    # Before seeding, app separation is a design constraint. Accepted worlds
+    # already fix access; task assessment checks dependencies and input visibility.
+    if worker_apps is None and domain and all(domain <= set(c.apps) for c in named):
         raise ValueError(f"{workflow.id}: every worker holds every domain app; at least one must lack one")
     manager = next((c for c in named if c.worker_id == workflow.manager_id), None)
     cell = getattr(workflow, "feature_cell", None)
     if cell is not None:
-        # check_binding verifies the manager is EXCLUDED from a decisive app and never that anyone
-        # is included, so a decisive collection held by nobody passes every gate and the work it
-        # names can never be done. Latent rather than live: 0 of the 178 accepted tasks with a cell
-        # and per-worker apps has an unheld decisive app, and in all of them a worker on the team
-        # holds it. The manager not holding one is by design and stays legal.
-        reachable = set(STANDARD_APPS).union(*(set(c.apps) for c in named))
+        # Legacy designs get standard apps implicitly. Frozen tasks must name
+        # their granted apps, including the standard workplace tools.
+        reachable = set().union(*(set(c.apps) for c in named))
+        if worker_apps is None:
+            reachable |= STANDARD_APPS
         unheld = sorted({c.split(".")[0] for c in cell.collections} - reachable)
         if unheld:
             raise ValueError(
                 f"{workflow.id}: nobody on the team holds {unheld}, where the decisive collections "
                 "live; give the app to the specialist whose contribution works in it"
             )
-    if manager is not None and domain and cell is not None:
+    if worker_apps is None and manager is not None and domain and cell is not None:
         reach = set(manager.apps) | STANDARD_APPS
         if all(c.split(".")[0] in reach for c in cell.collections):
             raise ValueError(

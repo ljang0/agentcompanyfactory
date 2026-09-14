@@ -592,7 +592,7 @@ def review_candidate(root, folder, candidate, *, models=None):
     workflows.validate_execution_support(company, task, config)
     validate_workflow(company, task, version="2", minimum_workers=3)
     workflows.check_plain_english(task)
-    workflows.check_contribution_apps(company, task)
+    workflows.check_contribution_apps(company, task, worker_apps=snapshot["worker_apps"])
     workflows.check_criteria_are_about_records(task)
     validate_seeded_records(task, snapshot)
     validate_assessment(task, snapshot)
