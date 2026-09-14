@@ -51,6 +51,12 @@ reference and verifier remain on the host. A teacher receives reference guidance
 an ordinary team does not. Trial outputs retain actor attribution so grading can
 check both the business result and whether another worker consumed a contribution.
 
+App state is shared, but each browser tab has its own loaded snapshot. Worker
+proxies merge a save against that snapshot so an older tab cannot delete records
+it never loaded. New pages fetch current server state; reset clears page snapshots
+and actor history. File permissions and worker identities are checked independently
+of these merge rules.
+
 Python verification runs under Linux bubblewrap with read-only inputs, restricted
 resources and no network or host credentials. Semantic judgments use a separate
 model allowance. Reference replay uses native app APIs; desktop trials use real

@@ -101,8 +101,8 @@ preset for a new company.
 [configs/company.example.toml](configs/company.example.toml) starts with one company,
 two tasks, four workers and the pilot's eight-app surface. Its hub revision is
 `1e50b797200f8afd6f11ca8e3ee04412de97b0f2`. It allows 500 seed calls, 450 shared
-worker model calls per trial, 150 actions per worker and 1,500 seconds for the
-worker-execution phase. Grading has a separate allowance. Read the selected config
+worker model calls per trial, 150 actions per worker and 1,500 seconds for trial
+preparation, execution and export. Grading has a separate allowance. Read the selected config
 and actual receipts when estimating use; these values are defaults, not usage claims.
 
 Keep credentials and machine-specific paths in ignored `*.local.toml` files or
