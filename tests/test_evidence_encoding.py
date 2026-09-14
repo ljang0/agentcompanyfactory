@@ -37,8 +37,59 @@ def test_actor_encoding_keeps_reverts_and_uncredited_projection_changes():
     # A reverted record is absent from final changed_records; the anchor still preserves it.
     encoded = encode_actors(events, {})
     assert decode_actors(encoded, {}) == events
-    assert "before_sync" in encoded["events"][1]["changes"]["docs#memo"]
     assert len(json.dumps(encoded)) < len(json.dumps(events)) / 3
+
+
+def test_character_edits_keep_all_events_within_a_bounded_judge_packet():
+    from datetime import UTC, datetime, timedelta
+
+    start = datetime(2026, 9, 14, 16, 0, tzinfo=UTC)
+    initial = {"content": "", "updated": start.isoformat()}
+    before, events = initial, []
+    for i in range(4000):
+        at = (start + timedelta(microseconds=i * 12017)).isoformat()
+        after = {"content": before["content"] + "A日本🙂"[i % 4], "updated": at}
+        events.append(
+            {
+                "sequence": i + 1,
+                "at": at,
+                "sid": "shared-company-session",
+                "worker_id": "boss" if i < 2000 else "peer",
+                "app_id": "docs",
+                "basis": "committed write through the worker-bound proxy",
+                "changes": {"docs.documents#memo": {"before": before, "after": after}},
+            }
+        )
+        before = after
+    changes = {"docs.documents#memo": {"before": initial, "after": before}}
+    encoded = encode_actors(events, changes)
+    assert decode_actors(encoded, changes) == events
+    assert len(json.dumps(encoded)) < 400_000
+
+
+def test_compact_headers_preserve_absent_null_and_extra_metadata():
+    events = [
+        {"sequence": 1, "at": None, "worker_id": "boss", "note": False, "changes": {}},
+        {"sequence": 2, "worker_id": "peer", "note": 0, "changes": {}},
+        {"at": "arbitrary time", "extra": {"nested": [None, True]}, "changes": {}},
+    ]
+    assert decode_actors(encode_actors(events, {}), {}) == events
+
+
+def test_previous_actor_encoding_remains_readable():
+    encoded = {
+        "encoding": "lossless_actor_edits_v1",
+        "anchors": {"memo": {"value": None}},
+        "events": [
+            {
+                "sequence": 1,
+                "changes": {"memo": {"edits": [{"op": "set", "path": [], "value": {"body": "saved"}}]}},
+            }
+        ],
+    }
+    assert decode_actors(encoded, {}) == [
+        {"sequence": 1, "changes": {"memo": {"before": None, "after": {"body": "saved"}}}}
+    ]
 
 
 def test_a_text_splice_cannot_silently_apply_to_the_wrong_record_version():
