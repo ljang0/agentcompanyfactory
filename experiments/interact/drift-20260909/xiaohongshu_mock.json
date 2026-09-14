@@ -1,0 +1,152 @@
+{
+  "app_id": "xiaohongshu_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "comments",
+    "conversations",
+    "currentUserId",
+    "isDarkMode",
+    "messages",
+    "notes",
+    "notifications",
+    "topics",
+    "users"
+  ],
+  "observed": [
+    "comments",
+    "conversations",
+    "currentUserId",
+    "isDarkMode",
+    "messages",
+    "notes",
+    "notifications",
+    "topics",
+    "users"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUserId": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "isDarkMode": {
+      "kind": "boolean",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "object",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "nickname",
+        "redId",
+        "avatar",
+        "banner",
+        "bio",
+        "gender",
+        "location",
+        "verified",
+        "followingIds",
+        "followerIds",
+        "likesAndBookmarksReceived"
+      ],
+      "keyed_by_id": true
+    },
+    "notes": {
+      "kind": "object",
+      "count": 32,
+      "record_fields": [
+        "id",
+        "authorId",
+        "type",
+        "title",
+        "content",
+        "images",
+        "videoUrl",
+        "hashtags",
+        "location",
+        "likedByIds",
+        "bookmarkedByIds",
+        "commentCount",
+        "shareCount",
+        "isPinned",
+        "createdAt",
+        "category"
+      ],
+      "keyed_by_id": true
+    },
+    "comments": {
+      "kind": "object",
+      "count": 52,
+      "record_fields": [
+        "id",
+        "noteId",
+        "authorId",
+        "content",
+        "likedByIds",
+        "parentCommentId",
+        "createdAt"
+      ],
+      "keyed_by_id": true
+    },
+    "notifications": {
+      "kind": "object",
+      "count": 18,
+      "record_fields": [
+        "id",
+        "recipientId",
+        "actorId",
+        "type",
+        "noteId",
+        "commentId",
+        "isRead",
+        "createdAt"
+      ],
+      "keyed_by_id": true
+    },
+    "conversations": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "participantIds",
+        "lastMessagePreview",
+        "lastMessageAt",
+        "unreadCount"
+      ],
+      "keyed_by_id": true
+    },
+    "messages": {
+      "kind": "object",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "conversationId",
+        "senderId",
+        "content",
+        "type",
+        "imageUrl",
+        "sharedNoteId",
+        "createdAt"
+      ],
+      "keyed_by_id": true
+    },
+    "topics": {
+      "kind": "object",
+      "count": 16,
+      "record_fields": [
+        "id",
+        "name",
+        "noteCount",
+        "viewCount"
+      ],
+      "keyed_by_id": true
+    }
+  }
+}

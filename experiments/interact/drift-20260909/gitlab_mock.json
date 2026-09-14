@@ -1,0 +1,177 @@
+{
+  "app_id": "gitlab_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "currentUser",
+    "issues",
+    "mergeRequests",
+    "milestones",
+    "pipelines",
+    "projects",
+    "registry",
+    "releases",
+    "snippets",
+    "vulnerabilities",
+    "wiki"
+  ],
+  "observed": [
+    "currentUser",
+    "issues",
+    "mergeRequests",
+    "milestones",
+    "pipelines",
+    "projects",
+    "registry",
+    "releases",
+    "snippets",
+    "vulnerabilities",
+    "wiki"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "projects": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "visibility",
+        "stars",
+        "forks",
+        "updatedAt",
+        "branches",
+        "files"
+      ],
+      "keyed_by_id": false
+    },
+    "pipelines": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "projectId",
+        "status",
+        "branch",
+        "commit",
+        "message",
+        "duration",
+        "createdAt",
+        "stages"
+      ],
+      "keyed_by_id": false
+    },
+    "issues": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "projectId",
+        "title",
+        "description",
+        "status",
+        "labels",
+        "assignee"
+      ],
+      "keyed_by_id": false
+    },
+    "mergeRequests": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "projectId",
+        "title",
+        "sourceBranch",
+        "targetBranch",
+        "status",
+        "author",
+        "createdAt",
+        "reviewers"
+      ],
+      "keyed_by_id": false
+    },
+    "registry": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "projectId",
+        "name",
+        "tags",
+        "size",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "snippets": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "title",
+        "code",
+        "language",
+        "author"
+      ],
+      "keyed_by_id": false
+    },
+    "wiki": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "projectId",
+        "title",
+        "content"
+      ],
+      "keyed_by_id": false
+    },
+    "vulnerabilities": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "projectId",
+        "severity",
+        "name",
+        "status"
+      ],
+      "keyed_by_id": false
+    },
+    "milestones": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "projectId",
+        "title",
+        "dueDate",
+        "progress"
+      ],
+      "keyed_by_id": false
+    },
+    "releases": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "projectId",
+        "tagName",
+        "name",
+        "description",
+        "createdAt",
+        "author"
+      ],
+      "keyed_by_id": false
+    }
+  }
+}

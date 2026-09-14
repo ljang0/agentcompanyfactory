@@ -1,0 +1,198 @@
+{
+  "app_id": "klaviyo_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "account",
+    "campaigns",
+    "flows",
+    "lists",
+    "metrics",
+    "profiles",
+    "segments",
+    "signupForms",
+    "tags",
+    "templates",
+    "ui"
+  ],
+  "observed": [
+    "account",
+    "campaigns",
+    "flows",
+    "lists",
+    "metrics",
+    "profiles",
+    "segments",
+    "signupForms",
+    "tags",
+    "templates",
+    "ui"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "account": {
+      "kind": "object",
+      "count": 11,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "profiles": {
+      "kind": "array",
+      "count": 520,
+      "record_fields": [
+        "id",
+        "email",
+        "firstName",
+        "lastName",
+        "phone",
+        "location",
+        "title",
+        "organization",
+        "createdAt",
+        "lastActive",
+        "customProperties",
+        "predictedGender",
+        "predictedLTV",
+        "listIds",
+        "segmentIds",
+        "consent",
+        "tags"
+      ],
+      "keyed_by_id": false
+    },
+    "campaigns": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "name",
+        "status",
+        "channel",
+        "subject",
+        "previewText",
+        "senderName",
+        "senderEmail",
+        "templateId",
+        "audienceInclude",
+        "audienceExclude",
+        "sendStrategy",
+        "scheduledAt",
+        "sentAt",
+        "createdAt",
+        "updatedAt",
+        "tags",
+        "trackingOptions",
+        "stats"
+      ],
+      "keyed_by_id": false
+    },
+    "flows": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "status",
+        "triggerType",
+        "triggerDetails",
+        "createdAt",
+        "updatedAt",
+        "tags",
+        "actions",
+        "stats"
+      ],
+      "keyed_by_id": false
+    },
+    "lists": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "memberCount",
+        "createdAt",
+        "updatedAt",
+        "tags"
+      ],
+      "keyed_by_id": false
+    },
+    "segments": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "isStarred",
+        "isActive",
+        "memberCount",
+        "conditionGroups",
+        "createdAt",
+        "lastCalculated"
+      ],
+      "keyed_by_id": false
+    },
+    "templates": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "name",
+        "category",
+        "channel",
+        "htmlContent",
+        "previewImageUrl",
+        "createdAt",
+        "updatedAt",
+        "tags"
+      ],
+      "keyed_by_id": false
+    },
+    "metrics": {
+      "kind": "array",
+      "count": 14,
+      "record_fields": [
+        "id",
+        "name",
+        "integration",
+        "eventCount",
+        "lastEventAt"
+      ],
+      "keyed_by_id": false
+    },
+    "signupForms": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "status",
+        "targetListId",
+        "views",
+        "submissions",
+        "conversionRate",
+        "createdAt",
+        "updatedAt",
+        "config"
+      ],
+      "keyed_by_id": false
+    },
+    "tags": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "name"
+      ],
+      "keyed_by_id": false
+    },
+    "ui": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

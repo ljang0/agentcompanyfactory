@@ -1,0 +1,87 @@
+{
+  "app_id": "google_flights_mock",
+  "source": "localStorage:flight_search_app_v1_initial_drift",
+  "documented": [
+    "activeTab",
+    "airlines",
+    "airports",
+    "bookings",
+    "dateViewMode",
+    "filters",
+    "flights",
+    "popularDestinations",
+    "priceAlerts",
+    "priceCalendar",
+    "search",
+    "segments",
+    "selectedOutboundFlight",
+    "selectedReturnFlight",
+    "trackedRoutes",
+    "user"
+  ],
+  "observed": [
+    "alerts",
+    "bookings",
+    "flights",
+    "user"
+  ],
+  "undocumented_so_unseedable": [
+    "alerts"
+  ],
+  "documented_but_app_keeps_none": [
+    "activeTab",
+    "airlines",
+    "airports",
+    "dateViewMode",
+    "filters",
+    "popularDestinations",
+    "priceAlerts",
+    "priceCalendar",
+    "search",
+    "segments",
+    "selectedOutboundFlight",
+    "selectedReturnFlight",
+    "trackedRoutes"
+  ],
+  "agrees": false,
+  "shapes": {
+    "flights": {
+      "kind": "array",
+      "count": 207,
+      "record_fields": [
+        "id",
+        "airline",
+        "origin",
+        "destination",
+        "departure",
+        "arrival",
+        "duration",
+        "stops",
+        "segments",
+        "price",
+        "aircraft",
+        "baggage",
+        "seatsAvailable"
+      ],
+      "keyed_by_id": false
+    },
+    "bookings": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "alerts": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "user": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

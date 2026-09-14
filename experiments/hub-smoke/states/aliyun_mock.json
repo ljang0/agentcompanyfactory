@@ -1,0 +1,112 @@
+{
+  "user": {
+    "accountId": "1742-3310-8827",
+    "accountName": "Qingyun Logistics Co.",
+    "displayName": "Fang Meilin",
+    "email": "meilin.fang@qingyun-logistics.example",
+    "phone": "+86-139-xxxx-2210",
+    "region": "cn-shanghai",
+    "language": "zh-CN",
+    "role": "admin",
+    "balance": 8420.15,
+    "creditRating": "A",
+    "verificationStatus": "verified"
+  },
+  "currentRegion": "cn-shanghai",
+  "regions": [
+    { "id": "cn-shanghai", "name": "华东2（上海）", "nameZh": "华东2（上海）", "zone": "cn" },
+    { "id": "cn-hangzhou", "name": "华东1（杭州）", "nameZh": "华东1（杭州）", "zone": "cn" },
+    { "id": "ap-southeast-1", "name": "新加坡", "nameZh": "新加坡", "zone": "intl" }
+  ],
+  "ecsInstances": [
+    {
+      "id": "i-uf6qy001dispatch01", "name": "dispatch-api-prod-01", "status": "Running", "regionId": "cn-shanghai", "zoneId": "cn-shanghai-b",
+      "instanceType": "ecs.g7.large", "vCPU": 2, "memory": 8, "osType": "linux", "osName": "Alibaba Cloud Linux 3.2104 LTS 64-bit",
+      "imageId": "aliyun_3_x64_20G_alibase_20240101.vhd", "publicIpAddress": "47.100.22.18", "privateIpAddress": "172.20.0.11",
+      "vpcId": "vpc-uf6qyprod0001", "vswitchId": "vsw-uf6qyprodapp01", "securityGroupIds": ["sg-uf6qyapp0001"], "keyPairName": "qingyun-ops",
+      "billingMethod": "Subscription", "renewalStatus": "AutoRenewal", "creationTime": "2026-02-10T08:30:00Z", "expiredTime": "2027-02-10T08:30:00Z",
+      "tags": [{ "key": "env", "value": "prod" }], "systemDiskSize": 40, "systemDiskCategory": "cloud_essd", "dataDiskCount": 1
+    },
+    {
+      "id": "i-uf6qy002tracking01", "name": "tracking-worker-01", "status": "Stopped", "regionId": "cn-shanghai", "zoneId": "cn-shanghai-b",
+      "instanceType": "ecs.c7.large", "vCPU": 2, "memory": 4, "osType": "linux", "osName": "Ubuntu 22.04 64-bit",
+      "imageId": "ubuntu_22_04_x64_20G_alibase_20240101.vhd", "publicIpAddress": "", "privateIpAddress": "172.20.0.12",
+      "vpcId": "vpc-uf6qyprod0001", "vswitchId": "vsw-uf6qyprodapp01", "securityGroupIds": ["sg-uf6qyapp0001"], "keyPairName": "qingyun-ops",
+      "billingMethod": "PayAsYouGo", "renewalStatus": "Normal", "creationTime": "2026-05-02T02:00:00Z", "expiredTime": null,
+      "tags": [{ "key": "env", "value": "staging" }], "systemDiskSize": 40, "systemDiskCategory": "cloud_efficiency", "dataDiskCount": 0
+    }
+  ],
+  "disks": [
+    { "id": "d-uf6qysys0001", "name": "dispatch-api-sys", "status": "In_use", "regionId": "cn-shanghai", "zoneId": "cn-shanghai-b", "category": "cloud_essd", "performanceLevel": "PL1", "size": 40, "instanceId": "i-uf6qy001dispatch01", "device": "/dev/xvda", "diskType": "system", "billingMethod": "Subscription", "encrypted": false, "creationTime": "2026-02-10T08:30:00Z", "tags": [] },
+    { "id": "d-uf6qydata0001", "name": "dispatch-api-data", "status": "In_use", "regionId": "cn-shanghai", "zoneId": "cn-shanghai-b", "category": "cloud_essd", "performanceLevel": "PL1", "size": 200, "instanceId": "i-uf6qy001dispatch01", "device": "/dev/xvdb", "diskType": "data", "billingMethod": "Subscription", "encrypted": true, "creationTime": "2026-02-10T08:35:00Z", "tags": [] }
+  ],
+  "securityGroups": [
+    {
+      "id": "sg-uf6qyapp0001", "name": "app-sg-prod", "description": "Dispatch API servers", "regionId": "cn-shanghai", "vpcId": "vpc-uf6qyprod0001", "type": "normal", "instanceCount": 2, "creationTime": "2026-02-01T09:00:00Z",
+      "rules": [
+        { "id": "rule-001", "direction": "ingress", "protocol": "TCP", "portRange": "443/443", "sourceCidrIp": "0.0.0.0/0", "priority": 1, "policy": "accept", "description": "HTTPS" },
+        { "id": "rule-002", "direction": "ingress", "protocol": "TCP", "portRange": "22/22", "sourceCidrIp": "203.0.113.0/24", "sourceCidr": "203.0.113.0/24", "priority": 1, "policy": "accept", "description": "Office SSH" }
+      ]
+    }
+  ],
+  "vpcs": [
+    { "id": "vpc-uf6qyprod0001", "name": "qingyun-prod-vpc", "status": "Available", "regionId": "cn-shanghai", "cidrBlock": "172.20.0.0/16", "description": "Production network", "vswitchCount": 1, "routeTableCount": 1, "creationTime": "2026-02-01T08:00:00Z", "isDefault": false, "tags": [] }
+  ],
+  "vswitches": [
+    { "id": "vsw-uf6qyprodapp01", "name": "prod-app-subnet", "status": "Available", "vpcId": "vpc-uf6qyprod0001", "zoneId": "cn-shanghai-b", "cidrBlock": "172.20.0.0/24", "availableIpCount": 249, "description": "App tier", "creationTime": "2026-02-01T08:05:00Z", "isDefault": false }
+  ],
+  "eips": [
+    { "id": "eip-uf6qy0001", "name": "dispatch-api-eip", "status": "InUse", "ipAddress": "47.100.22.18", "bandwidth": 10, "internetChargeType": "PayByTraffic", "instanceId": "i-uf6qy001dispatch01", "instanceType": "EcsInstance", "regionId": "cn-shanghai", "billingMethod": "PayAsYouGo", "creationTime": "2026-02-10T08:40:00Z" }
+  ],
+  "ossBuckets": [
+    {
+      "name": "qingyun-waybill-scans", "regionId": "cn-shanghai", "storageClass": "Standard", "acl": "private", "creationTime": "2026-02-12T03:00:00Z",
+      "objectCount": 3, "storageSize": 5242880, "lastModifiedTime": "2026-09-05T10:20:00Z", "versioning": false, "encryption": "AES256", "tags": [],
+      "files": [
+        { "name": "2026-09/", "size": 0, "lastModified": "2026-09-01T00:00:00Z", "storageClass": "Standard", "type": "folder" },
+        { "name": "manifest-0905.pdf", "size": 184320, "lastModified": "2026-09-05T10:20:00Z", "storageClass": "Standard", "type": "file" }
+      ]
+    }
+  ],
+  "rdsInstances": [
+    { "id": "rm-uf6qymysql0001", "name": "dispatch-mysql-prod", "status": "Running", "regionId": "cn-shanghai", "zoneId": "cn-shanghai-b", "engine": "MySQL", "engineVersion": "8.0", "instanceType": "mysql.n2.medium.1", "vCPU": 2, "memory": 4, "storageSize": 100, "storageType": "cloud_essd", "connectionString": "rm-uf6qymysql0001.mysql.rds.aliyuncs.com", "port": 3306, "vpcId": "vpc-uf6qyprod0001", "vswitchId": "vsw-uf6qyprodapp01", "billingMethod": "Subscription", "creationTime": "2026-02-11T06:00:00Z", "expiredTime": "2027-02-11T06:00:00Z", "category": "HighAvailability", "maxConnections": 1200, "maxIOPS": 4500, "tags": [] }
+  ],
+  "slbInstances": [
+    { "id": "lb-uf6qy0001", "name": "dispatch-api-lb", "status": "active", "regionId": "cn-shanghai", "addressType": "internet", "address": "47.100.22.40", "networkType": "vpc", "vpcId": "vpc-uf6qyprod0001", "bandwidth": 20, "billingMethod": "PayAsYouGo", "creationTime": "2026-02-12T08:00:00Z", "listenerCount": 1, "backendServerCount": 1, "listeners": [ { "protocol": "HTTPS", "frontendPort": 443, "backendPort": 8080, "status": "running" } ] }
+  ],
+  "billing": {
+    "balance": 8420.15,
+    "currency": "CNY",
+    "monthlySpend": [
+      { "month": "2026-08", "amount": 1985.40 },
+      { "month": "2026-07", "amount": 1902.10 },
+      { "month": "2026-06", "amount": 1877.65 }
+    ],
+    "productBreakdown": [
+      { "product": "ECS", "amount": 1120.00, "percentage": 56.4 },
+      { "product": "RDS", "amount": 480.00, "percentage": 24.2 },
+      { "product": "其他", "amount": 385.40, "percentage": 19.4 }
+    ],
+    "unpaidOrders": 0,
+    "coupons": [ { "id": "coupon-001", "name": "物流行业专项优惠", "amount": 300, "expiry": "2026-12-31", "status": "可用" } ],
+    "renewalReminders": [ { "resourceId": "i-uf6qy001dispatch01", "resourceName": "dispatch-api-prod-01", "type": "ECS", "expiry": "2027-02-10T08:30:00Z", "daysLeft": 156 } ]
+  },
+  "alarms": [
+    { "id": "alarm-001", "name": "Dispatch API CPU high", "status": "OK", "product": "ECS", "metricName": "CPUUtilization", "threshold": 80, "comparisonOperator": ">=", "statistics": "Average", "period": 300, "evaluationCount": 3, "instanceId": "i-uf6qy001dispatch01", "contactGroups": ["运维团队"], "enabled": true, "creationTime": "2026-02-15T10:00:00Z" }
+  ],
+  "operationLog": [
+    { "id": "op-001", "eventTime": "2026-09-06T09:12:00Z", "serviceName": "Ecs", "eventName": "StopInstance", "resourceType": "ACS::ECS::Instance", "resourceId": "i-uf6qy002tracking01", "resourceName": "tracking-worker-01", "userAgent": "AlibabaCloud Console", "sourceIpAddress": "203.0.113.24", "result": "Success" },
+    { "id": "op-002", "eventTime": "2026-09-05T10:20:00Z", "serviceName": "Oss", "eventName": "PutObject", "resourceType": "ACS::OSS::Object", "resourceId": "qingyun-waybill-scans/manifest-0905.pdf", "resourceName": "manifest-0905.pdf", "userAgent": "ossutil", "sourceIpAddress": "203.0.113.24", "result": "Success" }
+  ],
+  "messages": [
+    { "id": "msg-001", "type": "billing", "title": "8月账单已出", "content": "您2026年8月的账单金额为 1985.40 元。", "isRead": false, "createdAt": "2026-09-01T02:00:00Z" },
+    { "id": "msg-002", "type": "security", "title": "安全组规则提醒", "content": "app-sg-prod 允许 0.0.0.0/0 访问 443 端口。", "isRead": true, "createdAt": "2026-08-28T06:30:00Z" }
+  ],
+  "recentProducts": [
+    { "id": "ecs", "name": "Elastic Compute Service", "nameZh": "云服务器 ECS", "path": "/ecs/instances", "icon": "ecs", "lastVisited": "2026-09-06T09:10:00Z" }
+  ],
+  "favoriteProducts": [
+    { "id": "ecs", "name": "Elastic Compute Service", "nameZh": "云服务器 ECS", "path": "/ecs/instances" },
+    { "id": "oss", "name": "Object Storage Service", "nameZh": "对象存储 OSS", "path": "/oss/buckets" }
+  ]
+}

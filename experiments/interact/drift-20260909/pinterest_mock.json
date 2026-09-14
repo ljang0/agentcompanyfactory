@@ -1,0 +1,180 @@
+{
+  "app_id": "pinterest_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "boards",
+    "comments",
+    "currentUser",
+    "lastUsedBoardId",
+    "notifications",
+    "pins",
+    "searchFilters",
+    "searchQuery",
+    "selectedCategory",
+    "users"
+  ],
+  "observed": [
+    "boards",
+    "comments",
+    "currentUser",
+    "exploreCategories",
+    "lastUsedBoardId",
+    "messages",
+    "notifications",
+    "pins",
+    "searchFilters",
+    "searchQuery",
+    "selectedCategory",
+    "users"
+  ],
+  "undocumented_so_unseedable": [
+    "exploreCategories",
+    "messages"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "username",
+        "name",
+        "avatar",
+        "bio",
+        "website",
+        "followers",
+        "following",
+        "monthlyViews",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "pins": {
+      "kind": "array",
+      "count": 72,
+      "record_fields": [
+        "id",
+        "userId",
+        "title",
+        "description",
+        "image",
+        "imageWidth",
+        "imageHeight",
+        "url",
+        "source",
+        "boardId",
+        "sectionId",
+        "altText",
+        "tags",
+        "likes",
+        "likedBy",
+        "commentCount",
+        "saves",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "boards": {
+      "kind": "array",
+      "count": 13,
+      "record_fields": [
+        "id",
+        "userId",
+        "name",
+        "description",
+        "privacy",
+        "coverPinId",
+        "pins",
+        "sections",
+        "collaborators",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "comments": {
+      "kind": "array",
+      "count": 14,
+      "record_fields": [
+        "id",
+        "pinId",
+        "userId",
+        "text",
+        "likes",
+        "likedBy",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "type",
+        "fromUserId",
+        "targetId",
+        "message",
+        "thumbnail",
+        "read",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "messages": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "participants",
+        "messages",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "exploreCategories": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "tag",
+        "icon",
+        "color"
+      ],
+      "keyed_by_id": false
+    },
+    "searchQuery": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": ""
+    },
+    "searchFilters": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "selectedCategory": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    },
+    "lastUsedBoardId": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

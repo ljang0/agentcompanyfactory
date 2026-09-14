@@ -1,0 +1,63 @@
+{
+  "currentUser": {
+    "userId": "user-0", "name": "Naomi Adeyemi", "email": "naomi.adeyemi@riverbend-health.example",
+    "avatar": "https://picsum.photos/100/100?random=user0", "title": "Operations Manager", "department": "Operations",
+    "location": "Portland, OR", "timezone": "PST", "theme": "light"
+  },
+  "users": [
+    { "userId": "user-0", "name": "Naomi Adeyemi", "email": "naomi.adeyemi@riverbend-health.example", "avatar": "https://picsum.photos/100/100?random=user0", "title": "Operations Manager", "department": "Operations", "location": "Portland, OR", "timezone": "PST", "theme": "light" },
+    { "userId": "user-1", "name": "Tomas Herrera", "email": "tomas.herrera@riverbend-health.example", "avatar": "https://picsum.photos/100/100?random=user1", "title": "Front Desk Lead", "department": "Patient Services", "location": "Portland, OR", "timezone": "PST", "theme": "light" },
+    { "userId": "user-2", "name": "Grace Whitcombe", "email": "grace.whitcombe@riverbend-health.example", "avatar": "https://picsum.photos/100/100?random=user2", "title": "IT Coordinator", "department": "IT", "location": "Salem, OR", "timezone": "PST", "theme": "dark" }
+  ],
+  "teams": [
+    { "teamId": "team-1", "name": "Clinic Operations", "description": "Front desk, scheduling and intake", "memberIds": ["user-0", "user-1"], "ownerId": "user-0", "privacy": "public", "createdDate": "2026-01-10T09:00:00Z" },
+    { "teamId": "team-2", "name": "IT & Systems", "description": "Clinic systems and devices", "memberIds": ["user-0", "user-2"], "ownerId": "user-2", "privacy": "private", "createdDate": "2026-01-10T09:00:00Z" }
+  ],
+  "projects": [
+    {
+      "projectId": "project-1", "name": "Riverbend Clinic Intake Redesign", "teamId": "team-1",
+      "description": "Replace paper intake forms with tablet check-in at both clinics.", "color": "#4573D2", "icon": "list",
+      "ownerId": "user-0", "memberIds": ["user-0", "user-1", "user-2"],
+      "sections": [
+        { "sectionId": "section-1-1", "name": "To do", "collapsed": false },
+        { "sectionId": "section-1-2", "name": "In progress", "collapsed": false },
+        { "sectionId": "section-1-3", "name": "Done", "collapsed": false }
+      ],
+      "customFields": [ { "fieldId": "field-priority", "name": "Priority", "type": "single-select", "options": ["Low", "Medium", "High"], "required": false } ],
+      "privacy": "public", "startDate": "2026-08-01", "dueDate": "2026-10-31", "archived": false, "starred": true,
+      "createdDate": "2026-07-28T15:00:00Z", "modifiedDate": "2026-09-05T18:20:00Z"
+    },
+    {
+      "projectId": "project-2", "name": "Tablet Rollout", "teamId": "team-2",
+      "description": "Procure and configure check-in tablets.", "color": "#F1BD6C", "icon": "board",
+      "ownerId": "user-2", "memberIds": ["user-0", "user-2"],
+      "sections": [
+        { "sectionId": "section-2-1", "name": "Backlog", "collapsed": false },
+        { "sectionId": "section-2-2", "name": "Complete", "collapsed": false }
+      ],
+      "customFields": [], "privacy": "private", "startDate": "2026-09-01", "dueDate": "2026-09-30", "archived": false, "starred": false,
+      "createdDate": "2026-08-20T10:00:00Z", "modifiedDate": "2026-09-04T12:00:00Z"
+    }
+  ],
+  "tasks": [
+    { "taskId": "task-1", "name": "Draft new intake questionnaire", "projectId": "project-1", "sectionId": "section-1-2", "description": "Combine medical history and consent into one flow.", "assigneeId": "user-0", "creatorId": "user-0", "dueDate": "2026-09-12", "completed": false, "dependencies": [], "tags": ["forms"], "attachmentIds": ["attachment-1"], "customFieldValues": { "field-priority": "High" }, "likeCount": 2, "createdDate": "2026-08-02T09:00:00Z", "modifiedDate": "2026-09-05T18:20:00Z" },
+    { "taskId": "task-2", "name": "Train front desk on tablet check-in", "projectId": "project-1", "sectionId": "section-1-1", "description": "", "assigneeId": "user-1", "creatorId": "user-0", "dueDate": "2026-09-25", "completed": false, "dependencies": ["task-3"], "tags": [], "attachmentIds": [], "customFieldValues": { "field-priority": "Medium" }, "likeCount": 0, "createdDate": "2026-08-05T09:00:00Z", "modifiedDate": "2026-08-05T09:00:00Z" },
+    { "taskId": "task-3", "name": "Order 6 check-in tablets", "projectId": "project-2", "sectionId": "section-2-2", "description": "Approved vendor quote attached to PO.", "assigneeId": "user-2", "creatorId": "user-2", "dueDate": "2026-09-03", "completed": true, "completedDate": "2026-09-02T16:30:00Z", "dependencies": [], "tags": ["procurement"], "attachmentIds": [], "customFieldValues": {}, "likeCount": 1, "createdDate": "2026-08-21T10:00:00Z", "modifiedDate": "2026-09-02T16:30:00Z" }
+  ],
+  "comments": [
+    { "commentId": "comment-1", "taskId": "task-1", "userId": "user-1", "content": "Can we keep the insurance section on the first page?", "createdDate": "2026-09-04T14:00:00Z", "likedBy": ["user-0"] }
+  ],
+  "portfolios": [
+    { "portfolioId": "portfolio-1", "name": "Riverbend 2026 Initiatives", "description": "Clinic modernization work", "ownerId": "user-0", "memberIds": ["user-0", "user-2"], "projectIds": ["project-1", "project-2"], "color": "#4573D2" }
+  ],
+  "goals": [
+    { "goalId": "goal-1", "name": "Cut patient check-in time to under 5 minutes", "description": "Measured at both clinics by end of Q4.", "ownerId": "user-0", "timePeriod": "Q4 2026", "progress": 35, "status": "on-track", "supportingProjectIds": ["project-1", "project-2"], "metrics": ["Average check-in time"] }
+  ],
+  "notifications": [
+    { "notificationId": "notification-1", "userId": "user-0", "type": "comment", "actorId": "user-1", "targetId": "task-1", "targetType": "task", "read": false, "archived": false, "createdDate": "2026-09-04T14:00:00Z" },
+    { "notificationId": "notification-2", "userId": "user-0", "type": "task-completed", "actorId": "user-2", "targetId": "task-3", "targetType": "task", "read": true, "archived": false, "createdDate": "2026-09-02T16:30:00Z" }
+  ],
+  "attachments": [
+    { "attachmentId": "attachment-1", "taskId": "task-1", "fileName": "intake-questionnaire-v2.pdf", "fileType": "application/pdf", "fileSize": 245760, "fileUrl": "/uploads/intake-questionnaire-v2.pdf", "uploaderId": "user-0", "uploadDate": "2026-09-01T11:00:00Z" }
+  ]
+}

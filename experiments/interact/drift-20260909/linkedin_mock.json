@@ -1,0 +1,160 @@
+{
+  "app_id": "linkedin_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "chats",
+    "companies",
+    "connectionRequests",
+    "currentUser",
+    "jobs",
+    "notifications",
+    "posts",
+    "users"
+  ],
+  "observed": [
+    "chats",
+    "companies",
+    "connectionRequests",
+    "currentUser",
+    "dismissedSuggestions",
+    "followedCompanies",
+    "jobs",
+    "notifications",
+    "posts",
+    "users"
+  ],
+  "undocumented_so_unseedable": [
+    "dismissedSuggestions",
+    "followedCompanies"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 11,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "object",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "headline",
+        "location",
+        "about",
+        "avatar",
+        "banner",
+        "connections",
+        "experience",
+        "education",
+        "skills"
+      ],
+      "keyed_by_id": true
+    },
+    "companies": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "name",
+        "logo",
+        "industry",
+        "size",
+        "headquarters",
+        "description"
+      ],
+      "keyed_by_id": true
+    },
+    "posts": {
+      "kind": "array",
+      "count": 11,
+      "record_fields": [
+        "id",
+        "userId",
+        "content",
+        "image",
+        "reactions",
+        "comments",
+        "created",
+        "repostedBy",
+        "repostOf"
+      ],
+      "keyed_by_id": false
+    },
+    "jobs": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "title",
+        "company",
+        "companyId",
+        "location",
+        "type",
+        "level",
+        "logo",
+        "description",
+        "requirements",
+        "salary",
+        "posted",
+        "postedDate",
+        "applicants",
+        "saved",
+        "applied"
+      ],
+      "keyed_by_id": false
+    },
+    "chats": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "participants",
+        "messages"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "type",
+        "actorId",
+        "targetId",
+        "content",
+        "read",
+        "created"
+      ],
+      "keyed_by_id": false
+    },
+    "connectionRequests": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "fromUserId",
+        "toUserId",
+        "note",
+        "status",
+        "created"
+      ],
+      "keyed_by_id": false
+    },
+    "followedCompanies": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "dismissedSuggestions": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

@@ -1,0 +1,381 @@
+{
+  "app_id": "Canvas-LMS_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activeCourseNav",
+    "announcementReplies",
+    "announcements",
+    "assignmentGroups",
+    "assignments",
+    "calendarEvents",
+    "conversationMessages",
+    "conversations",
+    "courses",
+    "currentUser",
+    "dashboardView",
+    "discussionEntries",
+    "discussionTopics",
+    "enrollments",
+    "files",
+    "folders",
+    "moduleItems",
+    "modules",
+    "pages",
+    "submissions",
+    "todoItems",
+    "users"
+  ],
+  "observed": [
+    "activeCourseNav",
+    "announcementReplies",
+    "announcements",
+    "assignmentGroups",
+    "assignments",
+    "calendarEvents",
+    "conversationMessages",
+    "conversations",
+    "courses",
+    "currentUser",
+    "dashboardView",
+    "discussionEntries",
+    "discussionTopics",
+    "enrollments",
+    "files",
+    "folders",
+    "moduleItems",
+    "modules",
+    "pages",
+    "submissions",
+    "todoItems",
+    "users"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "name",
+        "short_name",
+        "sortable_name",
+        "email",
+        "avatar_url",
+        "role",
+        "pronouns",
+        "bio"
+      ],
+      "keyed_by_id": false
+    },
+    "courses": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "course_code",
+        "term",
+        "workflow_state",
+        "start_at",
+        "end_at",
+        "color",
+        "default_view",
+        "syllabus_body",
+        "total_students",
+        "image_url"
+      ],
+      "keyed_by_id": false
+    },
+    "enrollments": {
+      "kind": "array",
+      "count": 27,
+      "record_fields": [
+        "id",
+        "user_id",
+        "course_id",
+        "type",
+        "enrollment_state",
+        "course_section_id",
+        "created_at"
+      ],
+      "keyed_by_id": false
+    },
+    "assignmentGroups": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "course_id",
+        "name",
+        "weight",
+        "position"
+      ],
+      "keyed_by_id": false
+    },
+    "assignments": {
+      "kind": "array",
+      "count": 13,
+      "record_fields": [
+        "id",
+        "course_id",
+        "assignment_group_id",
+        "name",
+        "description",
+        "due_at",
+        "points_possible",
+        "grading_type",
+        "submission_types",
+        "published",
+        "position",
+        "needs_grading_count",
+        "allowed_extensions",
+        "workflow_state"
+      ],
+      "keyed_by_id": false
+    },
+    "submissions": {
+      "kind": "array",
+      "count": 62,
+      "record_fields": [
+        "id",
+        "assignment_id",
+        "user_id",
+        "score",
+        "grade",
+        "submitted_at",
+        "graded_at",
+        "workflow_state",
+        "submission_type",
+        "late",
+        "missing",
+        "excused",
+        "attempt",
+        "body"
+      ],
+      "keyed_by_id": false
+    },
+    "modules": {
+      "kind": "array",
+      "count": 9,
+      "record_fields": [
+        "id",
+        "course_id",
+        "name",
+        "position",
+        "published",
+        "items_count",
+        "state"
+      ],
+      "keyed_by_id": false
+    },
+    "moduleItems": {
+      "kind": "array",
+      "count": 38,
+      "record_fields": [
+        "id",
+        "module_id",
+        "title",
+        "type",
+        "content_id",
+        "position",
+        "indent",
+        "published"
+      ],
+      "keyed_by_id": false
+    },
+    "announcements": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "course_id",
+        "title",
+        "message",
+        "author_id",
+        "posted_at",
+        "read_state",
+        "published"
+      ],
+      "keyed_by_id": false
+    },
+    "discussionTopics": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "course_id",
+        "title",
+        "message",
+        "author_id",
+        "posted_at",
+        "last_reply_at",
+        "discussion_type",
+        "published",
+        "pinned",
+        "locked",
+        "allow_rating",
+        "require_initial_post",
+        "read_state",
+        "unread_count",
+        "discussion_subentry_count",
+        "assignment_id"
+      ],
+      "keyed_by_id": false
+    },
+    "discussionEntries": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "discussion_topic_id",
+        "user_id",
+        "message",
+        "created_at",
+        "parent_id",
+        "read_state",
+        "rating_count",
+        "rating_sum"
+      ],
+      "keyed_by_id": false
+    },
+    "conversations": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "subject",
+        "workflow_state",
+        "last_message",
+        "last_message_at",
+        "message_count",
+        "starred",
+        "private",
+        "participants",
+        "context_name",
+        "context_id"
+      ],
+      "keyed_by_id": false
+    },
+    "conversationMessages": {
+      "kind": "array",
+      "count": 11,
+      "record_fields": [
+        "id",
+        "conversation_id",
+        "author_id",
+        "body",
+        "created_at",
+        "generated",
+        "attachments"
+      ],
+      "keyed_by_id": false
+    },
+    "calendarEvents": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "title",
+        "description",
+        "start_at",
+        "end_at",
+        "all_day",
+        "location_name",
+        "context_code",
+        "context_name",
+        "workflow_state"
+      ],
+      "keyed_by_id": false
+    },
+    "pages": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "course_id",
+        "title",
+        "url",
+        "body",
+        "published",
+        "front_page",
+        "created_at",
+        "updated_at",
+        "editing_roles",
+        "last_edited_by"
+      ],
+      "keyed_by_id": false
+    },
+    "files": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "course_id",
+        "display_name",
+        "filename",
+        "content_type",
+        "size",
+        "folder_id",
+        "created_at",
+        "updated_at",
+        "url"
+      ],
+      "keyed_by_id": false
+    },
+    "folders": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "course_id",
+        "name",
+        "parent_folder_id",
+        "position",
+        "files_count",
+        "folders_count"
+      ],
+      "keyed_by_id": false
+    },
+    "todoItems": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "type",
+        "assignment_id",
+        "course_id",
+        "title",
+        "needs_grading_count",
+        "due_at",
+        "points_possible"
+      ],
+      "keyed_by_id": false
+    },
+    "announcementReplies": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "dashboardView": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "activeCourseNav": {
+      "kind": "object",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

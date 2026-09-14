@@ -1,0 +1,112 @@
+{
+  "app_id": "docusign_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "auditLog",
+    "contacts",
+    "envelopes",
+    "folders",
+    "templates",
+    "user"
+  ],
+  "observed": [
+    "auditLog",
+    "contacts",
+    "envelopes",
+    "folders",
+    "templates",
+    "user"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "user": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "envelopes": {
+      "kind": "array",
+      "count": 9,
+      "record_fields": [
+        "id",
+        "subject",
+        "message",
+        "status",
+        "createdAt",
+        "sentAt",
+        "completedAt",
+        "voidedAt",
+        "declinedAt",
+        "lastActivityAt",
+        "expiresAt",
+        "senderId",
+        "folderId",
+        "templateId",
+        "reminderEnabled",
+        "reminderDays",
+        "reminderFrequency",
+        "documents",
+        "recipients",
+        "fields",
+        "history"
+      ],
+      "keyed_by_id": false
+    },
+    "templates": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "createdAt",
+        "lastUsedAt",
+        "usageCount",
+        "ownerId",
+        "shared",
+        "documents",
+        "roles",
+        "fields"
+      ],
+      "keyed_by_id": false
+    },
+    "folders": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "parentFolder",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "contacts": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "email",
+        "company",
+        "title"
+      ],
+      "keyed_by_id": false
+    },
+    "auditLog": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "timestamp",
+        "action",
+        "details",
+        "envelopeId"
+      ],
+      "keyed_by_id": false
+    }
+  }
+}

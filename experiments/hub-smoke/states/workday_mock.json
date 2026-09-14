@@ -1,0 +1,54 @@
+{
+  "currentUser": {"id": "emp001", "name": "Selin Karadag", "email": "selin.karadag@ironbridge-transit.example", "phone": "(216) 555-0171", "role": "Manager", "department": "Operations", "departmentId": "dept001", "avatar": null, "managerId": "emp002", "title": "Depot Operations Manager", "location": "Cleveland, OH", "joinDate": "2020-02-10", "employeeType": "Full-Time", "compensationGrade": "M2", "annualSalary": 94000, "workSchedule": "Mon-Fri 6:00-14:30", "skills": ["Scheduling", "Fleet maintenance", "Safety compliance"], "birthday": "1987-07-19", "workAnniversary": "02-10"},
+  "employees": [
+    {"id": "emp001", "name": "Selin Karadag", "email": "selin.karadag@ironbridge-transit.example", "phone": "(216) 555-0171", "role": "Manager", "department": "Operations", "departmentId": "dept001", "avatar": null, "managerId": "emp002", "title": "Depot Operations Manager", "location": "Cleveland, OH", "joinDate": "2020-02-10", "employeeType": "Full-Time", "compensationGrade": "M2", "annualSalary": 94000, "workSchedule": "Mon-Fri 6:00-14:30", "skills": ["Scheduling", "Fleet maintenance", "Safety compliance"], "birthday": "1987-07-19", "workAnniversary": "02-10"},
+    {"id": "emp002", "name": "Roland Achterberg", "email": "roland.achterberg@ironbridge-transit.example", "phone": "(216) 555-0102", "role": "Director", "department": "Operations", "departmentId": "dept001", "avatar": null, "managerId": null, "title": "Director of Operations", "location": "Cleveland, OH", "joinDate": "2015-09-01", "employeeType": "Full-Time", "birthday": "1975-03-03", "workAnniversary": "09-01"},
+    {"id": "emp003", "name": "Deshawn Pruitt", "email": "deshawn.pruitt@ironbridge-transit.example", "phone": "(216) 555-0188", "role": "Employee", "department": "Operations", "departmentId": "dept001", "avatar": null, "managerId": "emp001", "title": "Fleet Technician", "location": "Cleveland, OH", "joinDate": "2023-05-15", "employeeType": "Full-Time", "birthday": "1996-12-08", "workAnniversary": "05-15"}
+  ],
+  "departments": [
+    {"id": "dept001", "name": "Operations", "headcount": 3, "managerId": "emp002"},
+    {"id": "dept002", "name": "Finance", "headcount": 0, "managerId": null}
+  ],
+  "timeEntries": [
+    {"entryId": "te1", "employeeId": "emp001", "date": "2026-09-01", "hours": 8, "project": "General", "status": "Approved", "notes": ""},
+    {"entryId": "te2", "employeeId": "emp001", "date": "2026-09-02", "hours": 8, "project": "Internal Meetings", "status": "Approved", "notes": "Safety briefing"},
+    {"entryId": "te3", "employeeId": "emp001", "date": "2026-09-04", "hours": 6, "project": "Training", "status": "Pending", "notes": "Forklift recertification"}
+  ],
+  "timeOffRequests": [
+    {"requestId": "tr1", "employeeId": "emp003", "type": "Vacation", "startDate": "2026-09-21", "endDate": "2026-09-25", "status": "Pending", "reason": "Family trip", "totalHours": 40, "reviewedBy": null, "reviewedDate": null},
+    {"requestId": "tr2", "employeeId": "emp001", "type": "Sick", "startDate": "2026-08-18", "endDate": "2026-08-18", "status": "Approved", "reason": "Dentist", "totalHours": 8, "reviewedBy": "emp002", "reviewedDate": "2026-08-17"}
+  ],
+  "timeOffBalance": {"vacation": 96, "sick": 32, "personal": 16},
+  "payroll": [
+    {"paystubId": "ps1", "employeeId": "emp001", "period": "Aug 16 - Aug 31, 2026", "payDate": "2026-09-05", "date": "2026-09-05", "grossPay": 3916.67, "federalTax": 587.5, "stateTax": 156.67, "socialSecurity": 242.83, "medicare": 56.79, "healthInsurance": 210.0, "retirement401k": 195.83, "otherDeductions": 0, "totalDeductions": 1449.62, "netPay": 2467.05, "deductions": 1449.62}
+  ],
+  "benefits": {
+    "employeeId": "emp001", "enrollmentStatus": "Complete",
+    "plans": [
+      {"id": "b1", "type": "Medical", "name": "Lakefront Health PPO", "provider": "Lakefront Health", "coverageLevel": "Employee + Family", "employeeCost": 210.0, "employerCost": 890.0, "cost": 210.0, "status": "Active", "effectiveDate": "2026-01-01", "details": {"deductible": 1500, "outOfPocketMax": 6000, "copay": 25, "coinsurance": "20%"}},
+      {"id": "b2", "type": "401k", "name": "Ironbridge Retirement Plan", "provider": "Summit Fiduciary", "coverageLevel": "Employee Only", "employeeCost": 195.83, "employerCost": 117.5, "cost": 195.83, "status": "Active", "effectiveDate": "2020-05-01", "details": {"contributionRate": "5%", "employerMatch": "3%"}}
+    ],
+    "dependents": [{"id": "dep1", "name": "Emre Karadag", "relationship": "Spouse", "dateOfBirth": "1986-04-14"}]
+  },
+  "reviews": [
+    {"reviewId": "r1", "employeeId": "emp001", "managerId": "emp002", "period": "2025 Annual", "rating": "Exceeds Expectations", "ratingScore": 4, "status": "Completed", "selfReviewComments": "Reduced unscheduled downtime by 18%.", "managerComments": "Strong year; keep developing the team.", "comments": "Strong year; keep developing the team.", "completedDate": "2026-01-20"},
+    {"reviewId": "r2", "employeeId": "emp003", "managerId": "emp001", "period": "2026 Mid-Year", "rating": "", "ratingScore": null, "status": "Pending Manager Review", "selfReviewComments": "Completed brake system certification.", "managerComments": "", "comments": "", "completedDate": null}
+  ],
+  "goals": [
+    {"goalId": "g1", "employeeId": "emp001", "title": "Cut depot fuel spend by 8%", "description": "Route idling audit and driver coaching.", "category": "Business", "status": "On Track", "progress": 55, "dueDate": "2026-12-31", "createdDate": "2026-01-15", "milestones": ["Idling baseline measured", "Coaching sessions scheduled"]},
+    {"goalId": "g2", "employeeId": "emp001", "title": "Complete OSHA 30 certification", "description": "", "category": "Personal", "status": "At Risk", "progress": 20, "dueDate": "2026-10-31", "createdDate": "2026-03-01", "milestones": []}
+  ],
+  "tasks": [
+    {"taskId": "t1", "employeeId": "emp001", "type": "Approval", "subType": "Time Off Request", "description": "Approve time off request for Deshawn Pruitt (Sep 21 - Sep 25)", "status": "Pending", "dueDate": "2026-09-12", "createdDate": "2026-09-05", "relatedId": "tr1", "initiator": "Deshawn Pruitt", "businessProcess": "Request Time Off", "priority": "Normal", "comments": []},
+    {"taskId": "t2", "employeeId": "emp001", "type": "Review", "subType": "Performance Review", "description": "Complete manager review for Deshawn Pruitt - 2026 Mid-Year", "status": "Pending", "dueDate": "2026-09-19", "createdDate": "2026-09-01", "relatedId": "r2", "initiator": "HR System", "businessProcess": "Performance Review", "priority": "High", "comments": []}
+  ],
+  "announcements": [
+    {"id": "a1", "title": "Ironbridge Transit winter fleet inspection schedule posted", "date": "2026-09-05", "content": "All depots must complete pre-winter inspections by October 30. See the maintenance portal for your depot's slots.", "category": "Company", "priority": "High"},
+    {"id": "a2", "title": "Open enrollment begins November 1", "date": "2026-09-02", "content": "Benefits open enrollment runs November 1-15.", "category": "Benefits", "priority": "Normal"}
+  ],
+  "notifications": [
+    {"id": "n1", "type": "task", "title": "New approval request", "message": "Deshawn Pruitt requested time off", "timestamp": "2026-09-05T14:20:00Z", "read": false, "link": "/inbox"},
+    {"id": "n2", "type": "pay", "title": "Paystub available", "message": "Your Sep 5 paystub is ready", "timestamp": "2026-09-05T08:00:00Z", "read": true, "link": "/pay"}
+  ],
+  "clockStatus": {"isClockedIn": false, "startTime": null}
+}

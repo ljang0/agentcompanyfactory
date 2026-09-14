@@ -1,0 +1,6135 @@
+{
+  "currentUser": {
+    "id": "user-1",
+    "username": "alex-ml",
+    "name": "Marisol Quintero",
+    "email": "marisol.quintero@harborlight-robotics.example",
+    "avatar": null,
+    "teams": [
+      "ml-team"
+    ],
+    "defaultEntity": "alex-ml"
+  },
+  "users": [
+    {
+      "id": "user-1",
+      "username": "alex-ml",
+      "name": "Marisol Quintero",
+      "email": "alex@example.com",
+      "avatar": null
+    },
+    {
+      "id": "user-2",
+      "username": "sarah-ds",
+      "name": "Sarah Kim",
+      "email": "sarah@example.com",
+      "avatar": null
+    },
+    {
+      "id": "user-3",
+      "username": "mike-eng",
+      "name": "Mike Johnson",
+      "email": "mike@example.com",
+      "avatar": null
+    },
+    {
+      "id": "user-4",
+      "username": "lisa-res",
+      "name": "Lisa Wang",
+      "email": "lisa@example.com",
+      "avatar": null
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "name": "image-classifier",
+      "displayName": "Harborlight Defect Classifier",
+      "entity": "alex-ml",
+      "description": "ResNet and EfficientNet experiments on CIFAR-10 and ImageNet",
+      "visibility": "public",
+      "createdAt": "2025-11-15T10:30:00Z",
+      "updatedAt": "2026-03-05T14:22:00Z",
+      "totalRuns": 6,
+      "totalComputeHours": 47.3,
+      "tags": [
+        "computer-vision",
+        "classification"
+      ]
+    },
+    {
+      "id": "proj-2",
+      "name": "nlp-sentiment",
+      "displayName": "NLP Sentiment",
+      "entity": "alex-ml",
+      "description": "BERT sentiment analysis fine-tuning on movie reviews dataset",
+      "visibility": "public",
+      "createdAt": "2026-01-10T09:00:00Z",
+      "updatedAt": "2026-03-06T11:15:00Z",
+      "totalRuns": 4,
+      "totalComputeHours": 23.1,
+      "tags": [
+        "nlp",
+        "sentiment-analysis"
+      ]
+    },
+    {
+      "id": "proj-3",
+      "name": "rl-cartpole",
+      "displayName": "RL CartPole",
+      "entity": "alex-ml",
+      "description": "Reinforcement learning CartPole experiments with PPO and DQN",
+      "visibility": "private",
+      "createdAt": "2026-02-01T14:00:00Z",
+      "updatedAt": "2026-03-04T09:30:00Z",
+      "totalRuns": 2,
+      "totalComputeHours": 5.8,
+      "tags": [
+        "reinforcement-learning"
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "run-1",
+      "runId": "a1b2c3d4",
+      "name": "golden-sunset-1",
+      "projectId": "proj-1",
+      "state": "finished",
+      "createdAt": "2026-03-01T08:15:00Z",
+      "updatedAt": "2026-03-01T10:45:00Z",
+      "duration": 9000,
+      "color": "#ff6384",
+      "visible": true,
+      "user": "alex-ml",
+      "tags": [
+        "baseline",
+        "resnet"
+      ],
+      "notes": "Initial ResNet-50 baseline on CIFAR-10",
+      "config": {
+        "model": "resnet50",
+        "dataset": "cifar10",
+        "learning_rate": 0.001,
+        "batch_size": 64,
+        "epochs": 50,
+        "optimizer": "adam",
+        "weight_decay": 0.0001,
+        "dropout": 0.3,
+        "augmentation": false,
+        "seed": 42
+      },
+      "summary": {
+        "train_loss": 0.234,
+        "train_acc": 0.912,
+        "val_loss": 0.389,
+        "val_acc": 0.876,
+        "best_val_acc": 0.881,
+        "epoch": 50,
+        "total_params": 25557032,
+        "learning_rate": 0.001
+      },
+      "history": [
+        {
+          "step": 0,
+          "train_loss": 2.2971,
+          "train_acc": 0.1021,
+          "val_loss": 2.2938,
+          "val_acc": 0.1068,
+          "epoch": 0
+        },
+        {
+          "step": 42,
+          "train_loss": 2.0482,
+          "train_acc": 0.1982,
+          "val_loss": 2.0747,
+          "val_acc": 0.1893,
+          "epoch": 2
+        },
+        {
+          "step": 83,
+          "train_loss": 1.835,
+          "train_acc": 0.2847,
+          "val_loss": 1.869,
+          "val_acc": 0.278,
+          "epoch": 4
+        },
+        {
+          "step": 125,
+          "train_loss": 1.6633,
+          "train_acc": 0.3564,
+          "val_loss": 1.7124,
+          "val_acc": 0.3465,
+          "epoch": 6
+        },
+        {
+          "step": 167,
+          "train_loss": 1.4859,
+          "train_acc": 0.4273,
+          "val_loss": 1.5548,
+          "val_acc": 0.4051,
+          "epoch": 8
+        },
+        {
+          "step": 208,
+          "train_loss": 1.3477,
+          "train_acc": 0.4848,
+          "val_loss": 1.404,
+          "val_acc": 0.4698,
+          "epoch": 10
+        },
+        {
+          "step": 250,
+          "train_loss": 1.2013,
+          "train_acc": 0.5198,
+          "val_loss": 1.2918,
+          "val_acc": 0.5115,
+          "epoch": 13
+        },
+        {
+          "step": 292,
+          "train_loss": 1.0952,
+          "train_acc": 0.5798,
+          "val_loss": 1.1801,
+          "val_acc": 0.5601,
+          "epoch": 15
+        },
+        {
+          "step": 333,
+          "train_loss": 0.9976,
+          "train_acc": 0.6055,
+          "val_loss": 1.0987,
+          "val_acc": 0.5831,
+          "epoch": 17
+        },
+        {
+          "step": 375,
+          "train_loss": 0.9113,
+          "train_acc": 0.6541,
+          "val_loss": 1.0021,
+          "val_acc": 0.6234,
+          "epoch": 19
+        },
+        {
+          "step": 417,
+          "train_loss": 0.8186,
+          "train_acc": 0.6844,
+          "val_loss": 0.9417,
+          "val_acc": 0.6633,
+          "epoch": 21
+        },
+        {
+          "step": 458,
+          "train_loss": 0.7644,
+          "train_acc": 0.7023,
+          "val_loss": 0.8633,
+          "val_acc": 0.6748,
+          "epoch": 23
+        },
+        {
+          "step": 500,
+          "train_loss": 0.695,
+          "train_acc": 0.7282,
+          "val_loss": 0.8063,
+          "val_acc": 0.7028,
+          "epoch": 25
+        },
+        {
+          "step": 542,
+          "train_loss": 0.6439,
+          "train_acc": 0.7608,
+          "val_loss": 0.7609,
+          "val_acc": 0.7254,
+          "epoch": 27
+        },
+        {
+          "step": 583,
+          "train_loss": 0.593,
+          "train_acc": 0.7692,
+          "val_loss": 0.7129,
+          "val_acc": 0.7358,
+          "epoch": 29
+        },
+        {
+          "step": 625,
+          "train_loss": 0.5458,
+          "train_acc": 0.7836,
+          "val_loss": 0.6799,
+          "val_acc": 0.7665,
+          "epoch": 31
+        },
+        {
+          "step": 667,
+          "train_loss": 0.5217,
+          "train_acc": 0.7946,
+          "val_loss": 0.6574,
+          "val_acc": 0.7749,
+          "epoch": 33
+        },
+        {
+          "step": 708,
+          "train_loss": 0.4811,
+          "train_acc": 0.8198,
+          "val_loss": 0.6097,
+          "val_acc": 0.7834,
+          "epoch": 35
+        },
+        {
+          "step": 750,
+          "train_loss": 0.4534,
+          "train_acc": 0.8304,
+          "val_loss": 0.5978,
+          "val_acc": 0.8024,
+          "epoch": 38
+        },
+        {
+          "step": 792,
+          "train_loss": 0.4312,
+          "train_acc": 0.8337,
+          "val_loss": 0.557,
+          "val_acc": 0.8132,
+          "epoch": 40
+        },
+        {
+          "step": 833,
+          "train_loss": 0.4089,
+          "train_acc": 0.8427,
+          "val_loss": 0.5556,
+          "val_acc": 0.8114,
+          "epoch": 42
+        },
+        {
+          "step": 875,
+          "train_loss": 0.3862,
+          "train_acc": 0.8452,
+          "val_loss": 0.5259,
+          "val_acc": 0.8289,
+          "epoch": 44
+        },
+        {
+          "step": 917,
+          "train_loss": 0.3698,
+          "train_acc": 0.8565,
+          "val_loss": 0.5143,
+          "val_acc": 0.836,
+          "epoch": 46
+        },
+        {
+          "step": 958,
+          "train_loss": 0.3561,
+          "train_acc": 0.8637,
+          "val_loss": 0.4947,
+          "val_acc": 0.8305,
+          "epoch": 48
+        },
+        {
+          "step": 1000,
+          "train_loss": 0.3293,
+          "train_acc": 0.8783,
+          "val_loss": 0.4803,
+          "val_acc": 0.8327,
+          "epoch": 50
+        }
+      ],
+      "systemMetrics": [
+        {
+          "timestamp": 0,
+          "gpu_util": 84,
+          "gpu_memory": 4.4,
+          "cpu_util": 48.7,
+          "memory_util": 42.6,
+          "disk_io": 171.7,
+          "network_sent": 1.28,
+          "network_recv": 9.32
+        },
+        {
+          "timestamp": 30,
+          "gpu_util": 92.2,
+          "gpu_memory": 7,
+          "cpu_util": 59.6,
+          "memory_util": 36.1,
+          "disk_io": 150.9,
+          "network_sent": 2,
+          "network_recv": 24.12
+        },
+        {
+          "timestamp": 60,
+          "gpu_util": 71.4,
+          "gpu_memory": 7,
+          "cpu_util": 53.2,
+          "memory_util": 29.1,
+          "disk_io": 126.3,
+          "network_sent": 1.5,
+          "network_recv": 16.61
+        },
+        {
+          "timestamp": 90,
+          "gpu_util": 80.9,
+          "gpu_memory": 7.2,
+          "cpu_util": 46.9,
+          "memory_util": 34.1,
+          "disk_io": 93,
+          "network_sent": 1.18,
+          "network_recv": 9.83
+        },
+        {
+          "timestamp": 120,
+          "gpu_util": 93.4,
+          "gpu_memory": 7.4,
+          "cpu_util": 44.2,
+          "memory_util": 29.1,
+          "disk_io": 111.6,
+          "network_sent": 1.51,
+          "network_recv": 22.11
+        },
+        {
+          "timestamp": 150,
+          "gpu_util": 83.5,
+          "gpu_memory": 4,
+          "cpu_util": 37.9,
+          "memory_util": 28.9,
+          "disk_io": 128.5,
+          "network_sent": 0.36,
+          "network_recv": 11.99
+        },
+        {
+          "timestamp": 180,
+          "gpu_util": 75.5,
+          "gpu_memory": 5.3,
+          "cpu_util": 49.9,
+          "memory_util": 29.9,
+          "disk_io": 117.7,
+          "network_sent": 1.27,
+          "network_recv": 15.23
+        },
+        {
+          "timestamp": 210,
+          "gpu_util": 82.3,
+          "gpu_memory": 4.8,
+          "cpu_util": 56.6,
+          "memory_util": 25.1,
+          "disk_io": 52,
+          "network_sent": 1.82,
+          "network_recv": 9.73
+        },
+        {
+          "timestamp": 240,
+          "gpu_util": 86.1,
+          "gpu_memory": 4.1,
+          "cpu_util": 41.4,
+          "memory_util": 31.4,
+          "disk_io": 111.6,
+          "network_sent": 0.3,
+          "network_recv": 20.85
+        },
+        {
+          "timestamp": 270,
+          "gpu_util": 94,
+          "gpu_memory": 6,
+          "cpu_util": 43.1,
+          "memory_util": 35.6,
+          "disk_io": 78.7,
+          "network_sent": 1.32,
+          "network_recv": 8.87
+        },
+        {
+          "timestamp": 300,
+          "gpu_util": 85.9,
+          "gpu_memory": 5.6,
+          "cpu_util": 49.8,
+          "memory_util": 42.5,
+          "disk_io": 104.4,
+          "network_sent": 2.03,
+          "network_recv": 11.08
+        },
+        {
+          "timestamp": 330,
+          "gpu_util": 75.2,
+          "gpu_memory": 6.1,
+          "cpu_util": 50.4,
+          "memory_util": 31.5,
+          "disk_io": 112.7,
+          "network_sent": 1.22,
+          "network_recv": 19.23
+        },
+        {
+          "timestamp": 360,
+          "gpu_util": 77.4,
+          "gpu_memory": 6.4,
+          "cpu_util": 43,
+          "memory_util": 44.2,
+          "disk_io": 187.9,
+          "network_sent": 1.86,
+          "network_recv": 19.09
+        },
+        {
+          "timestamp": 390,
+          "gpu_util": 90.1,
+          "gpu_memory": 4.4,
+          "cpu_util": 47.6,
+          "memory_util": 27.9,
+          "disk_io": 193.1,
+          "network_sent": 0.94,
+          "network_recv": 8.54
+        },
+        {
+          "timestamp": 420,
+          "gpu_util": 79.8,
+          "gpu_memory": 9.2,
+          "cpu_util": 56.9,
+          "memory_util": 37.8,
+          "disk_io": 176.5,
+          "network_sent": 0.86,
+          "network_recv": 22.24
+        }
+      ],
+      "metadata": {
+        "os": "Linux-5.15.0-x86_64",
+        "python": "3.10.12",
+        "gpu": "NVIDIA A100 40GB",
+        "gpuCount": 1,
+        "cudaVersion": "11.8",
+        "framework": "PyTorch 2.1.0",
+        "gitCommit": "a3f7e2b",
+        "gitBranch": "main"
+      },
+      "logs": [
+        {
+          "timestamp": "2026-03-01T08:15:00.000Z",
+          "level": "INFO",
+          "message": "wandb: Currently logged in as: alex-ml"
+        },
+        {
+          "timestamp": "2026-03-01T08:15:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Tracking run with wandb version 0.16.3"
+        },
+        {
+          "timestamp": "2026-03-01T08:15:02.000Z",
+          "level": "INFO",
+          "message": "wandb: Run golden-sunset-1 started"
+        },
+        {
+          "timestamp": "2026-03-01T08:15:03.000Z",
+          "level": "INFO",
+          "message": "wandb: Run data is saved locally in ./wandb/run-*"
+        },
+        {
+          "timestamp": "2026-03-01T08:20:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 1/50 - train_loss: 2.081 - train_acc: 0.307"
+        },
+        {
+          "timestamp": "2026-03-01T08:25:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 2/50 - train_loss: 1.883 - train_acc: 0.461"
+        },
+        {
+          "timestamp": "2026-03-01T08:30:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 3/50 - train_loss: 1.704 - train_acc: 0.575"
+        },
+        {
+          "timestamp": "2026-03-01T08:35:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 4/50 - train_loss: 1.542 - train_acc: 0.659"
+        },
+        {
+          "timestamp": "2026-03-01T08:40:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 5/50 - train_loss: 1.395 - train_acc: 0.721"
+        },
+        {
+          "timestamp": "2026-03-01T08:45:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 6/50 - train_loss: 1.262 - train_acc: 0.768"
+        },
+        {
+          "timestamp": "2026-03-01T08:50:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 7/50 - train_loss: 1.142 - train_acc: 0.802"
+        },
+        {
+          "timestamp": "2026-03-01T08:55:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 8/50 - train_loss: 1.033 - train_acc: 0.827"
+        },
+        {
+          "timestamp": "2026-03-01T09:00:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 9/50 - train_loss: 0.935 - train_acc: 0.846"
+        },
+        {
+          "timestamp": "2026-03-01T09:05:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 10/50 - train_loss: 0.846 - train_acc: 0.860"
+        },
+        {
+          "timestamp": "2026-03-01T09:05:00.000Z",
+          "level": "INFO",
+          "message": "Training complete. Best model saved."
+        },
+        {
+          "timestamp": "2026-03-01T09:05:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Synced run to https://wandb.ai/alex-ml/project"
+        }
+      ],
+      "files": [
+        {
+          "name": "model.pt",
+          "size": 102400000,
+          "updatedAt": "2026-03-01T10:45:00Z"
+        },
+        {
+          "name": "config.yaml",
+          "size": 1024,
+          "updatedAt": "2026-03-01T08:15:00Z"
+        },
+        {
+          "name": "requirements.txt",
+          "size": 512,
+          "updatedAt": "2026-03-01T08:15:00Z"
+        },
+        {
+          "name": "wandb-summary.json",
+          "size": 2048,
+          "updatedAt": "2026-03-01T10:45:00Z"
+        }
+      ],
+      "inputArtifacts": [
+        "art-1"
+      ],
+      "outputArtifacts": [
+        "art-2"
+      ]
+    },
+    {
+      "id": "run-2",
+      "runId": "e5f6g7h8",
+      "name": "electric-wood-2",
+      "projectId": "proj-1",
+      "state": "finished",
+      "createdAt": "2026-03-01T14:00:00Z",
+      "updatedAt": "2026-03-01T16:30:00Z",
+      "duration": 9000,
+      "color": "#36a2eb",
+      "visible": true,
+      "user": "sarah-ds",
+      "tags": [
+        "augmentation",
+        "resnet"
+      ],
+      "notes": "ResNet-50 with data augmentation",
+      "config": {
+        "model": "resnet50",
+        "dataset": "cifar10",
+        "learning_rate": 0.001,
+        "batch_size": 64,
+        "epochs": 50,
+        "optimizer": "adam",
+        "weight_decay": 0.0001,
+        "dropout": 0.3,
+        "augmentation": true,
+        "seed": 43
+      },
+      "summary": {
+        "train_loss": 0.198,
+        "train_acc": 0.928,
+        "val_loss": 0.342,
+        "val_acc": 0.891,
+        "best_val_acc": 0.895,
+        "epoch": 50,
+        "total_params": 25557032,
+        "learning_rate": 0.001
+      },
+      "history": [
+        {
+          "step": 0,
+          "train_loss": 2.2927,
+          "train_acc": 0.0961,
+          "val_loss": 2.2995,
+          "val_acc": 0.1065,
+          "epoch": 0
+        },
+        {
+          "step": 42,
+          "train_loss": 2.0483,
+          "train_acc": 0.2052,
+          "val_loss": 2.0666,
+          "val_acc": 0.1935,
+          "epoch": 2
+        },
+        {
+          "step": 83,
+          "train_loss": 1.8356,
+          "train_acc": 0.2803,
+          "val_loss": 1.8767,
+          "val_acc": 0.2808,
+          "epoch": 4
+        },
+        {
+          "step": 125,
+          "train_loss": 1.6515,
+          "train_acc": 0.3567,
+          "val_loss": 1.6815,
+          "val_acc": 0.3537,
+          "epoch": 6
+        },
+        {
+          "step": 167,
+          "train_loss": 1.4773,
+          "train_acc": 0.4168,
+          "val_loss": 1.5321,
+          "val_acc": 0.4211,
+          "epoch": 8
+        },
+        {
+          "step": 208,
+          "train_loss": 1.3195,
+          "train_acc": 0.4814,
+          "val_loss": 1.3914,
+          "val_acc": 0.4728,
+          "epoch": 10
+        },
+        {
+          "step": 250,
+          "train_loss": 1.1993,
+          "train_acc": 0.5438,
+          "val_loss": 1.269,
+          "val_acc": 0.5098,
+          "epoch": 13
+        },
+        {
+          "step": 292,
+          "train_loss": 1.076,
+          "train_acc": 0.5892,
+          "val_loss": 1.1663,
+          "val_acc": 0.5582,
+          "epoch": 15
+        },
+        {
+          "step": 333,
+          "train_loss": 0.9722,
+          "train_acc": 0.6146,
+          "val_loss": 1.0644,
+          "val_acc": 0.6079,
+          "epoch": 17
+        },
+        {
+          "step": 375,
+          "train_loss": 0.8772,
+          "train_acc": 0.6688,
+          "val_loss": 0.9808,
+          "val_acc": 0.6335,
+          "epoch": 19
+        },
+        {
+          "step": 417,
+          "train_loss": 0.7927,
+          "train_acc": 0.6823,
+          "val_loss": 0.9022,
+          "val_acc": 0.6734,
+          "epoch": 21
+        },
+        {
+          "step": 458,
+          "train_loss": 0.7224,
+          "train_acc": 0.7125,
+          "val_loss": 0.8365,
+          "val_acc": 0.6904,
+          "epoch": 23
+        },
+        {
+          "step": 500,
+          "train_loss": 0.663,
+          "train_acc": 0.74,
+          "val_loss": 0.7787,
+          "val_acc": 0.7128,
+          "epoch": 25
+        },
+        {
+          "step": 542,
+          "train_loss": 0.6139,
+          "train_acc": 0.7684,
+          "val_loss": 0.7319,
+          "val_acc": 0.7256,
+          "epoch": 27
+        },
+        {
+          "step": 583,
+          "train_loss": 0.5729,
+          "train_acc": 0.7749,
+          "val_loss": 0.6854,
+          "val_acc": 0.7571,
+          "epoch": 29
+        },
+        {
+          "step": 625,
+          "train_loss": 0.5233,
+          "train_acc": 0.795,
+          "val_loss": 0.65,
+          "val_acc": 0.7636,
+          "epoch": 31
+        },
+        {
+          "step": 667,
+          "train_loss": 0.4874,
+          "train_acc": 0.8151,
+          "val_loss": 0.5986,
+          "val_acc": 0.7748,
+          "epoch": 33
+        },
+        {
+          "step": 708,
+          "train_loss": 0.4445,
+          "train_acc": 0.8306,
+          "val_loss": 0.5841,
+          "val_acc": 0.8043,
+          "epoch": 35
+        },
+        {
+          "step": 750,
+          "train_loss": 0.4165,
+          "train_acc": 0.8504,
+          "val_loss": 0.5462,
+          "val_acc": 0.8074,
+          "epoch": 38
+        },
+        {
+          "step": 792,
+          "train_loss": 0.4013,
+          "train_acc": 0.844,
+          "val_loss": 0.523,
+          "val_acc": 0.8129,
+          "epoch": 40
+        },
+        {
+          "step": 833,
+          "train_loss": 0.3758,
+          "train_acc": 0.8573,
+          "val_loss": 0.5124,
+          "val_acc": 0.8288,
+          "epoch": 42
+        },
+        {
+          "step": 875,
+          "train_loss": 0.3537,
+          "train_acc": 0.869,
+          "val_loss": 0.4829,
+          "val_acc": 0.8257,
+          "epoch": 44
+        },
+        {
+          "step": 917,
+          "train_loss": 0.342,
+          "train_acc": 0.8742,
+          "val_loss": 0.4705,
+          "val_acc": 0.8385,
+          "epoch": 46
+        },
+        {
+          "step": 958,
+          "train_loss": 0.3148,
+          "train_acc": 0.8852,
+          "val_loss": 0.4594,
+          "val_acc": 0.8378,
+          "epoch": 48
+        },
+        {
+          "step": 1000,
+          "train_loss": 0.2963,
+          "train_acc": 0.8946,
+          "val_loss": 0.4363,
+          "val_acc": 0.8497,
+          "epoch": 50
+        }
+      ],
+      "systemMetrics": [
+        {
+          "timestamp": 0,
+          "gpu_util": 71.6,
+          "gpu_memory": 7.5,
+          "cpu_util": 32.6,
+          "memory_util": 31.3,
+          "disk_io": 81.7,
+          "network_sent": 1.67,
+          "network_recv": 11.68
+        },
+        {
+          "timestamp": 30,
+          "gpu_util": 75.4,
+          "gpu_memory": 8.6,
+          "cpu_util": 37,
+          "memory_util": 25.3,
+          "disk_io": 193.6,
+          "network_sent": 0.13,
+          "network_recv": 14.46
+        },
+        {
+          "timestamp": 60,
+          "gpu_util": 79,
+          "gpu_memory": 6.9,
+          "cpu_util": 35.1,
+          "memory_util": 31,
+          "disk_io": 118.4,
+          "network_sent": 1,
+          "network_recv": 17.54
+        },
+        {
+          "timestamp": 90,
+          "gpu_util": 90.8,
+          "gpu_memory": 6.5,
+          "cpu_util": 54.5,
+          "memory_util": 32.8,
+          "disk_io": 173.1,
+          "network_sent": 1.34,
+          "network_recv": 14.39
+        },
+        {
+          "timestamp": 120,
+          "gpu_util": 90.7,
+          "gpu_memory": 6.8,
+          "cpu_util": 60,
+          "memory_util": 26,
+          "disk_io": 153.2,
+          "network_sent": 1.4,
+          "network_recv": 5.95
+        },
+        {
+          "timestamp": 150,
+          "gpu_util": 85.2,
+          "gpu_memory": 8.3,
+          "cpu_util": 59.4,
+          "memory_util": 30.6,
+          "disk_io": 184,
+          "network_sent": 0.59,
+          "network_recv": 17.83
+        },
+        {
+          "timestamp": 180,
+          "gpu_util": 80.3,
+          "gpu_memory": 9,
+          "cpu_util": 56.7,
+          "memory_util": 38.5,
+          "disk_io": 109.1,
+          "network_sent": 1.22,
+          "network_recv": 23.57
+        },
+        {
+          "timestamp": 210,
+          "gpu_util": 94.6,
+          "gpu_memory": 5,
+          "cpu_util": 41.5,
+          "memory_util": 44.6,
+          "disk_io": 173.8,
+          "network_sent": 0.4,
+          "network_recv": 12.51
+        },
+        {
+          "timestamp": 240,
+          "gpu_util": 83.4,
+          "gpu_memory": 6.8,
+          "cpu_util": 50.9,
+          "memory_util": 43.2,
+          "disk_io": 152.9,
+          "network_sent": 1.18,
+          "network_recv": 5.96
+        },
+        {
+          "timestamp": 270,
+          "gpu_util": 80.9,
+          "gpu_memory": 6.7,
+          "cpu_util": 59,
+          "memory_util": 31.8,
+          "disk_io": 109,
+          "network_sent": 0.95,
+          "network_recv": 9.3
+        },
+        {
+          "timestamp": 300,
+          "gpu_util": 80.3,
+          "gpu_memory": 5,
+          "cpu_util": 55.5,
+          "memory_util": 37.1,
+          "disk_io": 160.2,
+          "network_sent": 1.32,
+          "network_recv": 22.96
+        },
+        {
+          "timestamp": 330,
+          "gpu_util": 79.4,
+          "gpu_memory": 8.2,
+          "cpu_util": 49.6,
+          "memory_util": 37.1,
+          "disk_io": 157.3,
+          "network_sent": 0.98,
+          "network_recv": 24.26
+        },
+        {
+          "timestamp": 360,
+          "gpu_util": 88.4,
+          "gpu_memory": 4.9,
+          "cpu_util": 35.4,
+          "memory_util": 26.6,
+          "disk_io": 89,
+          "network_sent": 0.46,
+          "network_recv": 14.64
+        },
+        {
+          "timestamp": 390,
+          "gpu_util": 76.7,
+          "gpu_memory": 5.4,
+          "cpu_util": 52.6,
+          "memory_util": 42.7,
+          "disk_io": 113,
+          "network_sent": 1.27,
+          "network_recv": 11
+        },
+        {
+          "timestamp": 420,
+          "gpu_util": 89.7,
+          "gpu_memory": 6.5,
+          "cpu_util": 52.6,
+          "memory_util": 26.5,
+          "disk_io": 95.1,
+          "network_sent": 1.38,
+          "network_recv": 20.4
+        }
+      ],
+      "metadata": {
+        "os": "Linux-5.15.0-x86_64",
+        "python": "3.10.12",
+        "gpu": "NVIDIA A100 40GB",
+        "gpuCount": 1,
+        "cudaVersion": "11.8",
+        "framework": "PyTorch 2.1.0",
+        "gitCommit": "b4c8d3e",
+        "gitBranch": "augmentation"
+      },
+      "logs": [
+        {
+          "timestamp": "2026-03-01T14:00:00.000Z",
+          "level": "INFO",
+          "message": "wandb: Currently logged in as: alex-ml"
+        },
+        {
+          "timestamp": "2026-03-01T14:00:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Tracking run with wandb version 0.16.3"
+        },
+        {
+          "timestamp": "2026-03-01T14:00:02.000Z",
+          "level": "INFO",
+          "message": "wandb: Run electric-wood-2 started"
+        },
+        {
+          "timestamp": "2026-03-01T14:00:03.000Z",
+          "level": "INFO",
+          "message": "wandb: Run data is saved locally in ./wandb/run-*"
+        },
+        {
+          "timestamp": "2026-03-01T14:05:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 1/50 - train_loss: 2.081 - train_acc: 0.307"
+        },
+        {
+          "timestamp": "2026-03-01T14:10:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 2/50 - train_loss: 1.883 - train_acc: 0.461"
+        },
+        {
+          "timestamp": "2026-03-01T14:15:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 3/50 - train_loss: 1.704 - train_acc: 0.575"
+        },
+        {
+          "timestamp": "2026-03-01T14:20:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 4/50 - train_loss: 1.542 - train_acc: 0.659"
+        },
+        {
+          "timestamp": "2026-03-01T14:25:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 5/50 - train_loss: 1.395 - train_acc: 0.721"
+        },
+        {
+          "timestamp": "2026-03-01T14:30:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 6/50 - train_loss: 1.262 - train_acc: 0.768"
+        },
+        {
+          "timestamp": "2026-03-01T14:35:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 7/50 - train_loss: 1.142 - train_acc: 0.802"
+        },
+        {
+          "timestamp": "2026-03-01T14:40:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 8/50 - train_loss: 1.033 - train_acc: 0.827"
+        },
+        {
+          "timestamp": "2026-03-01T14:45:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 9/50 - train_loss: 0.935 - train_acc: 0.846"
+        },
+        {
+          "timestamp": "2026-03-01T14:50:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 10/50 - train_loss: 0.846 - train_acc: 0.860"
+        },
+        {
+          "timestamp": "2026-03-01T14:50:00.000Z",
+          "level": "INFO",
+          "message": "Training complete. Best model saved."
+        },
+        {
+          "timestamp": "2026-03-01T14:50:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Synced run to https://wandb.ai/alex-ml/project"
+        }
+      ],
+      "files": [
+        {
+          "name": "model.pt",
+          "size": 102400000,
+          "updatedAt": "2026-03-01T16:30:00Z"
+        },
+        {
+          "name": "config.yaml",
+          "size": 1200,
+          "updatedAt": "2026-03-01T14:00:00Z"
+        },
+        {
+          "name": "requirements.txt",
+          "size": 512,
+          "updatedAt": "2026-03-01T14:00:00Z"
+        },
+        {
+          "name": "wandb-summary.json",
+          "size": 2048,
+          "updatedAt": "2026-03-01T16:30:00Z"
+        }
+      ],
+      "inputArtifacts": [
+        "art-1"
+      ],
+      "outputArtifacts": [
+        "art-2"
+      ]
+    },
+    {
+      "id": "run-3",
+      "runId": "i9j0k1l2",
+      "name": "snowy-oath-3",
+      "projectId": "proj-1",
+      "state": "finished",
+      "createdAt": "2026-03-02T09:00:00Z",
+      "updatedAt": "2026-03-02T11:00:00Z",
+      "duration": 7200,
+      "color": "#4bc0c0",
+      "visible": true,
+      "user": "alex-ml",
+      "tags": [
+        "efficientnet"
+      ],
+      "notes": "EfficientNet-B0 baseline",
+      "config": {
+        "model": "efficientnet-b0",
+        "dataset": "cifar10",
+        "learning_rate": 0.0005,
+        "batch_size": 32,
+        "epochs": 40,
+        "optimizer": "adamw",
+        "weight_decay": 0.0005,
+        "dropout": 0.2,
+        "augmentation": true,
+        "seed": 44
+      },
+      "summary": {
+        "train_loss": 0.178,
+        "train_acc": 0.938,
+        "val_loss": 0.312,
+        "val_acc": 0.902,
+        "best_val_acc": 0.905,
+        "epoch": 40,
+        "total_params": 5288548,
+        "learning_rate": 0.0005
+      },
+      "history": [
+        {
+          "step": 0,
+          "train_loss": 2.2962,
+          "train_acc": 0.0928,
+          "val_loss": 2.3023,
+          "val_acc": 0.1064,
+          "epoch": 0
+        },
+        {
+          "step": 42,
+          "train_loss": 2.0572,
+          "train_acc": 0.2059,
+          "val_loss": 2.0733,
+          "val_acc": 0.1984,
+          "epoch": 2
+        },
+        {
+          "step": 83,
+          "train_loss": 1.8231,
+          "train_acc": 0.2784,
+          "val_loss": 1.8546,
+          "val_acc": 0.2784,
+          "epoch": 3
+        },
+        {
+          "step": 125,
+          "train_loss": 1.6317,
+          "train_acc": 0.365,
+          "val_loss": 1.6877,
+          "val_acc": 0.3603,
+          "epoch": 5
+        },
+        {
+          "step": 167,
+          "train_loss": 1.4697,
+          "train_acc": 0.4396,
+          "val_loss": 1.5255,
+          "val_acc": 0.4214,
+          "epoch": 7
+        },
+        {
+          "step": 208,
+          "train_loss": 1.3236,
+          "train_acc": 0.4805,
+          "val_loss": 1.371,
+          "val_acc": 0.4797,
+          "epoch": 8
+        },
+        {
+          "step": 250,
+          "train_loss": 1.1777,
+          "train_acc": 0.542,
+          "val_loss": 1.245,
+          "val_acc": 0.5262,
+          "epoch": 10
+        },
+        {
+          "step": 292,
+          "train_loss": 1.0598,
+          "train_acc": 0.5856,
+          "val_loss": 1.1308,
+          "val_acc": 0.564,
+          "epoch": 12
+        },
+        {
+          "step": 333,
+          "train_loss": 0.9665,
+          "train_acc": 0.632,
+          "val_loss": 1.0434,
+          "val_acc": 0.6167,
+          "epoch": 13
+        },
+        {
+          "step": 375,
+          "train_loss": 0.8756,
+          "train_acc": 0.6635,
+          "val_loss": 0.9653,
+          "val_acc": 0.6402,
+          "epoch": 15
+        },
+        {
+          "step": 417,
+          "train_loss": 0.7924,
+          "train_acc": 0.6923,
+          "val_loss": 0.8914,
+          "val_acc": 0.6806,
+          "epoch": 17
+        },
+        {
+          "step": 458,
+          "train_loss": 0.7155,
+          "train_acc": 0.7208,
+          "val_loss": 0.8115,
+          "val_acc": 0.6938,
+          "epoch": 18
+        },
+        {
+          "step": 500,
+          "train_loss": 0.6439,
+          "train_acc": 0.7527,
+          "val_loss": 0.7626,
+          "val_acc": 0.7315,
+          "epoch": 20
+        },
+        {
+          "step": 542,
+          "train_loss": 0.5931,
+          "train_acc": 0.7744,
+          "val_loss": 0.7035,
+          "val_acc": 0.7393,
+          "epoch": 22
+        },
+        {
+          "step": 583,
+          "train_loss": 0.5426,
+          "train_acc": 0.7871,
+          "val_loss": 0.6509,
+          "val_acc": 0.7642,
+          "epoch": 23
+        },
+        {
+          "step": 625,
+          "train_loss": 0.4961,
+          "train_acc": 0.8104,
+          "val_loss": 0.6096,
+          "val_acc": 0.7886,
+          "epoch": 25
+        },
+        {
+          "step": 667,
+          "train_loss": 0.4638,
+          "train_acc": 0.818,
+          "val_loss": 0.5902,
+          "val_acc": 0.8007,
+          "epoch": 27
+        },
+        {
+          "step": 708,
+          "train_loss": 0.4393,
+          "train_acc": 0.8354,
+          "val_loss": 0.5423,
+          "val_acc": 0.8054,
+          "epoch": 28
+        },
+        {
+          "step": 750,
+          "train_loss": 0.3938,
+          "train_acc": 0.8468,
+          "val_loss": 0.5131,
+          "val_acc": 0.8154,
+          "epoch": 30
+        },
+        {
+          "step": 792,
+          "train_loss": 0.3701,
+          "train_acc": 0.8671,
+          "val_loss": 0.4885,
+          "val_acc": 0.8353,
+          "epoch": 32
+        },
+        {
+          "step": 833,
+          "train_loss": 0.3573,
+          "train_acc": 0.8642,
+          "val_loss": 0.48,
+          "val_acc": 0.8311,
+          "epoch": 33
+        },
+        {
+          "step": 875,
+          "train_loss": 0.3323,
+          "train_acc": 0.8825,
+          "val_loss": 0.4635,
+          "val_acc": 0.846,
+          "epoch": 35
+        },
+        {
+          "step": 917,
+          "train_loss": 0.3111,
+          "train_acc": 0.8808,
+          "val_loss": 0.4455,
+          "val_acc": 0.8452,
+          "epoch": 37
+        },
+        {
+          "step": 958,
+          "train_loss": 0.3003,
+          "train_acc": 0.8984,
+          "val_loss": 0.4261,
+          "val_acc": 0.8514,
+          "epoch": 38
+        },
+        {
+          "step": 1000,
+          "train_loss": 0.2826,
+          "train_acc": 0.9014,
+          "val_loss": 0.4175,
+          "val_acc": 0.8652,
+          "epoch": 40
+        }
+      ],
+      "systemMetrics": [
+        {
+          "timestamp": 0,
+          "gpu_util": 94.3,
+          "gpu_memory": 4.8,
+          "cpu_util": 45.6,
+          "memory_util": 26.7,
+          "disk_io": 128.8,
+          "network_sent": 0.47,
+          "network_recv": 17.32
+        },
+        {
+          "timestamp": 30,
+          "gpu_util": 86.8,
+          "gpu_memory": 4.4,
+          "cpu_util": 33.6,
+          "memory_util": 37.5,
+          "disk_io": 115.4,
+          "network_sent": 1.44,
+          "network_recv": 6.76
+        },
+        {
+          "timestamp": 60,
+          "gpu_util": 93.3,
+          "gpu_memory": 5.1,
+          "cpu_util": 44.8,
+          "memory_util": 32.3,
+          "disk_io": 139.9,
+          "network_sent": 1.85,
+          "network_recv": 14.78
+        },
+        {
+          "timestamp": 90,
+          "gpu_util": 94.7,
+          "gpu_memory": 8.2,
+          "cpu_util": 51,
+          "memory_util": 31.8,
+          "disk_io": 147.5,
+          "network_sent": 1.25,
+          "network_recv": 24.21
+        },
+        {
+          "timestamp": 120,
+          "gpu_util": 87,
+          "gpu_memory": 7.8,
+          "cpu_util": 31.6,
+          "memory_util": 43.2,
+          "disk_io": 122,
+          "network_sent": 1.45,
+          "network_recv": 6.04
+        },
+        {
+          "timestamp": 150,
+          "gpu_util": 81.9,
+          "gpu_memory": 6.2,
+          "cpu_util": 55.4,
+          "memory_util": 35.2,
+          "disk_io": 63.4,
+          "network_sent": 1.99,
+          "network_recv": 23.66
+        },
+        {
+          "timestamp": 180,
+          "gpu_util": 82.4,
+          "gpu_memory": 8,
+          "cpu_util": 34.8,
+          "memory_util": 33.2,
+          "disk_io": 83.3,
+          "network_sent": 1.83,
+          "network_recv": 10.98
+        },
+        {
+          "timestamp": 210,
+          "gpu_util": 88,
+          "gpu_memory": 7.6,
+          "cpu_util": 49.9,
+          "memory_util": 41.3,
+          "disk_io": 158.6,
+          "network_sent": 0.99,
+          "network_recv": 9.35
+        },
+        {
+          "timestamp": 240,
+          "gpu_util": 73.4,
+          "gpu_memory": 7,
+          "cpu_util": 46.6,
+          "memory_util": 34.5,
+          "disk_io": 195.7,
+          "network_sent": 0.67,
+          "network_recv": 18.57
+        },
+        {
+          "timestamp": 270,
+          "gpu_util": 91.1,
+          "gpu_memory": 4.1,
+          "cpu_util": 38.4,
+          "memory_util": 43.1,
+          "disk_io": 90.4,
+          "network_sent": 0.11,
+          "network_recv": 18
+        },
+        {
+          "timestamp": 300,
+          "gpu_util": 85.4,
+          "gpu_memory": 4.5,
+          "cpu_util": 57.4,
+          "memory_util": 30.1,
+          "disk_io": 93.6,
+          "network_sent": 0.31,
+          "network_recv": 10.13
+        },
+        {
+          "timestamp": 330,
+          "gpu_util": 89.5,
+          "gpu_memory": 5.4,
+          "cpu_util": 43.9,
+          "memory_util": 27.6,
+          "disk_io": 154.3,
+          "network_sent": 1.44,
+          "network_recv": 5.49
+        },
+        {
+          "timestamp": 360,
+          "gpu_util": 78.8,
+          "gpu_memory": 7,
+          "cpu_util": 31.4,
+          "memory_util": 28.5,
+          "disk_io": 171.8,
+          "network_sent": 1.93,
+          "network_recv": 22.7
+        },
+        {
+          "timestamp": 390,
+          "gpu_util": 81.5,
+          "gpu_memory": 6.8,
+          "cpu_util": 33.1,
+          "memory_util": 43.4,
+          "disk_io": 123.3,
+          "network_sent": 0.29,
+          "network_recv": 17.99
+        },
+        {
+          "timestamp": 420,
+          "gpu_util": 93.3,
+          "gpu_memory": 5.2,
+          "cpu_util": 48.3,
+          "memory_util": 34.8,
+          "disk_io": 99.1,
+          "network_sent": 1.66,
+          "network_recv": 15.75
+        }
+      ],
+      "metadata": {
+        "os": "Linux-5.15.0-x86_64",
+        "python": "3.10.12",
+        "gpu": "NVIDIA A100 40GB",
+        "gpuCount": 1,
+        "cudaVersion": "11.8",
+        "framework": "PyTorch 2.1.0",
+        "gitCommit": "c5d9e4f",
+        "gitBranch": "efficientnet"
+      },
+      "logs": [
+        {
+          "timestamp": "2026-03-02T09:00:00.000Z",
+          "level": "INFO",
+          "message": "wandb: Currently logged in as: alex-ml"
+        },
+        {
+          "timestamp": "2026-03-02T09:00:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Tracking run with wandb version 0.16.3"
+        },
+        {
+          "timestamp": "2026-03-02T09:00:02.000Z",
+          "level": "INFO",
+          "message": "wandb: Run snowy-oath-3 started"
+        },
+        {
+          "timestamp": "2026-03-02T09:00:03.000Z",
+          "level": "INFO",
+          "message": "wandb: Run data is saved locally in ./wandb/run-*"
+        },
+        {
+          "timestamp": "2026-03-02T09:04:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 1/40 - train_loss: 2.081 - train_acc: 0.307"
+        },
+        {
+          "timestamp": "2026-03-02T09:08:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 2/40 - train_loss: 1.883 - train_acc: 0.461"
+        },
+        {
+          "timestamp": "2026-03-02T09:12:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 3/40 - train_loss: 1.704 - train_acc: 0.575"
+        },
+        {
+          "timestamp": "2026-03-02T09:16:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 4/40 - train_loss: 1.542 - train_acc: 0.659"
+        },
+        {
+          "timestamp": "2026-03-02T09:20:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 5/40 - train_loss: 1.395 - train_acc: 0.721"
+        },
+        {
+          "timestamp": "2026-03-02T09:24:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 6/40 - train_loss: 1.262 - train_acc: 0.768"
+        },
+        {
+          "timestamp": "2026-03-02T09:28:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 7/40 - train_loss: 1.142 - train_acc: 0.802"
+        },
+        {
+          "timestamp": "2026-03-02T09:32:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 8/40 - train_loss: 1.033 - train_acc: 0.827"
+        },
+        {
+          "timestamp": "2026-03-02T09:36:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 9/40 - train_loss: 0.935 - train_acc: 0.846"
+        },
+        {
+          "timestamp": "2026-03-02T09:40:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 10/40 - train_loss: 0.846 - train_acc: 0.860"
+        },
+        {
+          "timestamp": "2026-03-02T09:40:00.000Z",
+          "level": "INFO",
+          "message": "Training complete. Best model saved."
+        },
+        {
+          "timestamp": "2026-03-02T09:40:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Synced run to https://wandb.ai/alex-ml/project"
+        }
+      ],
+      "files": [
+        {
+          "name": "model.pt",
+          "size": 21200000,
+          "updatedAt": "2026-03-02T11:00:00Z"
+        },
+        {
+          "name": "config.yaml",
+          "size": 1100,
+          "updatedAt": "2026-03-02T09:00:00Z"
+        },
+        {
+          "name": "wandb-summary.json",
+          "size": 2048,
+          "updatedAt": "2026-03-02T11:00:00Z"
+        }
+      ],
+      "inputArtifacts": [
+        "art-1"
+      ],
+      "outputArtifacts": [
+        "art-3"
+      ]
+    },
+    {
+      "id": "run-4",
+      "runId": "m3n4o5p6",
+      "name": "crimson-breeze-4",
+      "projectId": "proj-1",
+      "state": "finished",
+      "createdAt": "2026-03-03T08:00:00Z",
+      "updatedAt": "2026-03-03T10:30:00Z",
+      "duration": 9000,
+      "color": "#ff9f40",
+      "visible": true,
+      "user": "mike-eng",
+      "tags": [
+        "efficientnet",
+        "best"
+      ],
+      "notes": "EfficientNet-B2 — best accuracy so far",
+      "config": {
+        "model": "efficientnet-b2",
+        "dataset": "cifar10",
+        "learning_rate": 0.0003,
+        "batch_size": 64,
+        "epochs": 50,
+        "optimizer": "adamw",
+        "weight_decay": 0.0005,
+        "dropout": 0.2,
+        "augmentation": true,
+        "seed": 45
+      },
+      "summary": {
+        "train_loss": 0.145,
+        "train_acc": 0.952,
+        "val_loss": 0.278,
+        "val_acc": 0.918,
+        "best_val_acc": 0.921,
+        "epoch": 50,
+        "total_params": 9109994,
+        "learning_rate": 0.0003
+      },
+      "history": [
+        {
+          "step": 0,
+          "train_loss": 2.3012,
+          "train_acc": 0.1096,
+          "val_loss": 2.298,
+          "val_acc": 0.1019,
+          "epoch": 0
+        },
+        {
+          "step": 42,
+          "train_loss": 2.0495,
+          "train_acc": 0.1972,
+          "val_loss": 2.0687,
+          "val_acc": 0.201,
+          "epoch": 2
+        },
+        {
+          "step": 83,
+          "train_loss": 1.8299,
+          "train_acc": 0.2787,
+          "val_loss": 1.8505,
+          "val_acc": 0.2766,
+          "epoch": 4
+        },
+        {
+          "step": 125,
+          "train_loss": 1.6292,
+          "train_acc": 0.3758,
+          "val_loss": 1.6607,
+          "val_acc": 0.3544,
+          "epoch": 6
+        },
+        {
+          "step": 167,
+          "train_loss": 1.4433,
+          "train_acc": 0.4293,
+          "val_loss": 1.5126,
+          "val_acc": 0.4307,
+          "epoch": 8
+        },
+        {
+          "step": 208,
+          "train_loss": 1.29,
+          "train_acc": 0.4935,
+          "val_loss": 1.3686,
+          "val_acc": 0.4901,
+          "epoch": 10
+        },
+        {
+          "step": 250,
+          "train_loss": 1.1597,
+          "train_acc": 0.5444,
+          "val_loss": 1.2422,
+          "val_acc": 0.5253,
+          "epoch": 13
+        },
+        {
+          "step": 292,
+          "train_loss": 1.0342,
+          "train_acc": 0.604,
+          "val_loss": 1.1231,
+          "val_acc": 0.5822,
+          "epoch": 15
+        },
+        {
+          "step": 333,
+          "train_loss": 0.9375,
+          "train_acc": 0.6458,
+          "val_loss": 1.0219,
+          "val_acc": 0.622,
+          "epoch": 17
+        },
+        {
+          "step": 375,
+          "train_loss": 0.845,
+          "train_acc": 0.6794,
+          "val_loss": 0.9289,
+          "val_acc": 0.6546,
+          "epoch": 19
+        },
+        {
+          "step": 417,
+          "train_loss": 0.7554,
+          "train_acc": 0.7024,
+          "val_loss": 0.8519,
+          "val_acc": 0.6781,
+          "epoch": 21
+        },
+        {
+          "step": 458,
+          "train_loss": 0.6937,
+          "train_acc": 0.7344,
+          "val_loss": 0.7817,
+          "val_acc": 0.7163,
+          "epoch": 23
+        },
+        {
+          "step": 500,
+          "train_loss": 0.628,
+          "train_acc": 0.7697,
+          "val_loss": 0.7275,
+          "val_acc": 0.7435,
+          "epoch": 25
+        },
+        {
+          "step": 542,
+          "train_loss": 0.5687,
+          "train_acc": 0.7875,
+          "val_loss": 0.6707,
+          "val_acc": 0.7633,
+          "epoch": 27
+        },
+        {
+          "step": 583,
+          "train_loss": 0.5252,
+          "train_acc": 0.8035,
+          "val_loss": 0.6356,
+          "val_acc": 0.7858,
+          "epoch": 29
+        },
+        {
+          "step": 625,
+          "train_loss": 0.4823,
+          "train_acc": 0.8178,
+          "val_loss": 0.5865,
+          "val_acc": 0.7938,
+          "epoch": 31
+        },
+        {
+          "step": 667,
+          "train_loss": 0.4322,
+          "train_acc": 0.8303,
+          "val_loss": 0.5452,
+          "val_acc": 0.8059,
+          "epoch": 33
+        },
+        {
+          "step": 708,
+          "train_loss": 0.4073,
+          "train_acc": 0.8412,
+          "val_loss": 0.5101,
+          "val_acc": 0.8229,
+          "epoch": 35
+        },
+        {
+          "step": 750,
+          "train_loss": 0.3797,
+          "train_acc": 0.8675,
+          "val_loss": 0.4876,
+          "val_acc": 0.8234,
+          "epoch": 38
+        },
+        {
+          "step": 792,
+          "train_loss": 0.3429,
+          "train_acc": 0.8799,
+          "val_loss": 0.4677,
+          "val_acc": 0.8359,
+          "epoch": 40
+        },
+        {
+          "step": 833,
+          "train_loss": 0.312,
+          "train_acc": 0.8902,
+          "val_loss": 0.4419,
+          "val_acc": 0.8502,
+          "epoch": 42
+        },
+        {
+          "step": 875,
+          "train_loss": 0.2934,
+          "train_acc": 0.8821,
+          "val_loss": 0.4312,
+          "val_acc": 0.8581,
+          "epoch": 44
+        },
+        {
+          "step": 917,
+          "train_loss": 0.2883,
+          "train_acc": 0.8976,
+          "val_loss": 0.4114,
+          "val_acc": 0.864,
+          "epoch": 46
+        },
+        {
+          "step": 958,
+          "train_loss": 0.2732,
+          "train_acc": 0.907,
+          "val_loss": 0.4012,
+          "val_acc": 0.8762,
+          "epoch": 48
+        },
+        {
+          "step": 1000,
+          "train_loss": 0.2451,
+          "train_acc": 0.9142,
+          "val_loss": 0.3859,
+          "val_acc": 0.8785,
+          "epoch": 50
+        }
+      ],
+      "systemMetrics": [
+        {
+          "timestamp": 0,
+          "gpu_util": 72.4,
+          "gpu_memory": 6.2,
+          "cpu_util": 41,
+          "memory_util": 30.4,
+          "disk_io": 75.3,
+          "network_sent": 2.07,
+          "network_recv": 15.48
+        },
+        {
+          "timestamp": 30,
+          "gpu_util": 80.8,
+          "gpu_memory": 9.8,
+          "cpu_util": 49.8,
+          "memory_util": 28.6,
+          "disk_io": 163.8,
+          "network_sent": 0.52,
+          "network_recv": 12.83
+        },
+        {
+          "timestamp": 60,
+          "gpu_util": 75.5,
+          "gpu_memory": 5.4,
+          "cpu_util": 54.4,
+          "memory_util": 44.2,
+          "disk_io": 185.3,
+          "network_sent": 1.5,
+          "network_recv": 9.65
+        },
+        {
+          "timestamp": 90,
+          "gpu_util": 91.1,
+          "gpu_memory": 9.7,
+          "cpu_util": 52.5,
+          "memory_util": 42.5,
+          "disk_io": 113,
+          "network_sent": 1.82,
+          "network_recv": 15.29
+        },
+        {
+          "timestamp": 120,
+          "gpu_util": 75.4,
+          "gpu_memory": 7.1,
+          "cpu_util": 52.6,
+          "memory_util": 35.6,
+          "disk_io": 127.2,
+          "network_sent": 0.83,
+          "network_recv": 18.02
+        },
+        {
+          "timestamp": 150,
+          "gpu_util": 75.7,
+          "gpu_memory": 4.3,
+          "cpu_util": 48,
+          "memory_util": 28.2,
+          "disk_io": 66,
+          "network_sent": 0.24,
+          "network_recv": 8.62
+        },
+        {
+          "timestamp": 180,
+          "gpu_util": 91.5,
+          "gpu_memory": 8.3,
+          "cpu_util": 55.3,
+          "memory_util": 27.7,
+          "disk_io": 194,
+          "network_sent": 2.05,
+          "network_recv": 12.27
+        },
+        {
+          "timestamp": 210,
+          "gpu_util": 80,
+          "gpu_memory": 7.4,
+          "cpu_util": 59.6,
+          "memory_util": 44.9,
+          "disk_io": 87.6,
+          "network_sent": 0.38,
+          "network_recv": 14.52
+        },
+        {
+          "timestamp": 240,
+          "gpu_util": 80.2,
+          "gpu_memory": 6.8,
+          "cpu_util": 35.4,
+          "memory_util": 36.2,
+          "disk_io": 66.5,
+          "network_sent": 1.08,
+          "network_recv": 20.91
+        },
+        {
+          "timestamp": 270,
+          "gpu_util": 87.2,
+          "gpu_memory": 5.8,
+          "cpu_util": 56.8,
+          "memory_util": 28,
+          "disk_io": 87.6,
+          "network_sent": 0.71,
+          "network_recv": 5
+        },
+        {
+          "timestamp": 300,
+          "gpu_util": 91.9,
+          "gpu_memory": 4.6,
+          "cpu_util": 36.8,
+          "memory_util": 41.8,
+          "disk_io": 102.6,
+          "network_sent": 1.81,
+          "network_recv": 5.2
+        },
+        {
+          "timestamp": 330,
+          "gpu_util": 70.3,
+          "gpu_memory": 7.1,
+          "cpu_util": 49.9,
+          "memory_util": 41.1,
+          "disk_io": 167.2,
+          "network_sent": 2.1,
+          "network_recv": 12.01
+        },
+        {
+          "timestamp": 360,
+          "gpu_util": 86.3,
+          "gpu_memory": 7,
+          "cpu_util": 44.8,
+          "memory_util": 37.8,
+          "disk_io": 177.1,
+          "network_sent": 1.57,
+          "network_recv": 6.6
+        },
+        {
+          "timestamp": 390,
+          "gpu_util": 94,
+          "gpu_memory": 6.2,
+          "cpu_util": 39.6,
+          "memory_util": 39.3,
+          "disk_io": 84.4,
+          "network_sent": 1.26,
+          "network_recv": 22.24
+        },
+        {
+          "timestamp": 420,
+          "gpu_util": 78.3,
+          "gpu_memory": 7.9,
+          "cpu_util": 40.6,
+          "memory_util": 34.8,
+          "disk_io": 145.9,
+          "network_sent": 2.08,
+          "network_recv": 23.62
+        }
+      ],
+      "metadata": {
+        "os": "Linux-5.15.0-x86_64",
+        "python": "3.10.12",
+        "gpu": "NVIDIA A100 40GB",
+        "gpuCount": 2,
+        "cudaVersion": "11.8",
+        "framework": "PyTorch 2.1.0",
+        "gitCommit": "d6e0f5a",
+        "gitBranch": "efficientnet-b2"
+      },
+      "logs": [
+        {
+          "timestamp": "2026-03-03T08:00:00.000Z",
+          "level": "INFO",
+          "message": "wandb: Currently logged in as: alex-ml"
+        },
+        {
+          "timestamp": "2026-03-03T08:00:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Tracking run with wandb version 0.16.3"
+        },
+        {
+          "timestamp": "2026-03-03T08:00:02.000Z",
+          "level": "INFO",
+          "message": "wandb: Run crimson-breeze-4 started"
+        },
+        {
+          "timestamp": "2026-03-03T08:00:03.000Z",
+          "level": "INFO",
+          "message": "wandb: Run data is saved locally in ./wandb/run-*"
+        },
+        {
+          "timestamp": "2026-03-03T08:05:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 1/50 - train_loss: 2.081 - train_acc: 0.307"
+        },
+        {
+          "timestamp": "2026-03-03T08:10:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 2/50 - train_loss: 1.883 - train_acc: 0.461"
+        },
+        {
+          "timestamp": "2026-03-03T08:15:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 3/50 - train_loss: 1.704 - train_acc: 0.575"
+        },
+        {
+          "timestamp": "2026-03-03T08:20:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 4/50 - train_loss: 1.542 - train_acc: 0.659"
+        },
+        {
+          "timestamp": "2026-03-03T08:25:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 5/50 - train_loss: 1.395 - train_acc: 0.721"
+        },
+        {
+          "timestamp": "2026-03-03T08:30:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 6/50 - train_loss: 1.262 - train_acc: 0.768"
+        },
+        {
+          "timestamp": "2026-03-03T08:35:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 7/50 - train_loss: 1.142 - train_acc: 0.802"
+        },
+        {
+          "timestamp": "2026-03-03T08:40:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 8/50 - train_loss: 1.033 - train_acc: 0.827"
+        },
+        {
+          "timestamp": "2026-03-03T08:45:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 9/50 - train_loss: 0.935 - train_acc: 0.846"
+        },
+        {
+          "timestamp": "2026-03-03T08:50:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 10/50 - train_loss: 0.846 - train_acc: 0.860"
+        },
+        {
+          "timestamp": "2026-03-03T08:50:00.000Z",
+          "level": "INFO",
+          "message": "Training complete. Best model saved."
+        },
+        {
+          "timestamp": "2026-03-03T08:50:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Synced run to https://wandb.ai/alex-ml/project"
+        }
+      ],
+      "files": [
+        {
+          "name": "model.pt",
+          "size": 36400000,
+          "updatedAt": "2026-03-03T10:30:00Z"
+        },
+        {
+          "name": "config.yaml",
+          "size": 1200,
+          "updatedAt": "2026-03-03T08:00:00Z"
+        },
+        {
+          "name": "wandb-summary.json",
+          "size": 2048,
+          "updatedAt": "2026-03-03T10:30:00Z"
+        }
+      ],
+      "inputArtifacts": [
+        "art-1"
+      ],
+      "outputArtifacts": [
+        "art-3"
+      ]
+    },
+    {
+      "id": "run-5",
+      "runId": "q7r8s9t0",
+      "name": "quiet-river-5",
+      "projectId": "proj-1",
+      "state": "crashed",
+      "createdAt": "2026-03-04T07:00:00Z",
+      "updatedAt": "2026-03-04T07:45:00Z",
+      "duration": 2700,
+      "color": "#9966ff",
+      "visible": true,
+      "user": "alex-ml",
+      "tags": [
+        "resnet",
+        "large"
+      ],
+      "notes": "ResNet-101 — crashed due to OOM on large batch",
+      "config": {
+        "model": "resnet101",
+        "dataset": "cifar10",
+        "learning_rate": 0.001,
+        "batch_size": 256,
+        "epochs": 50,
+        "optimizer": "adam",
+        "weight_decay": 0.0001,
+        "dropout": 0.3,
+        "augmentation": true,
+        "seed": 46
+      },
+      "summary": {
+        "train_loss": 1.12,
+        "train_acc": 0.58,
+        "val_loss": 1.35,
+        "val_acc": 0.52,
+        "epoch": 12,
+        "total_params": 44549160,
+        "learning_rate": 0.001
+      },
+      "history": [
+        {
+          "step": 0,
+          "train_loss": 2.2976,
+          "train_acc": 0.0904,
+          "val_loss": 2.3072,
+          "val_acc": 0.1048,
+          "epoch": 0
+        },
+        {
+          "step": 44,
+          "train_loss": 1.9621,
+          "train_acc": 0.2278,
+          "val_loss": 2.0303,
+          "val_acc": 0.2094,
+          "epoch": 1
+        },
+        {
+          "step": 89,
+          "train_loss": 1.7177,
+          "train_acc": 0.3253,
+          "val_loss": 1.8373,
+          "val_acc": 0.3093,
+          "epoch": 3
+        },
+        {
+          "step": 133,
+          "train_loss": 1.5639,
+          "train_acc": 0.4077,
+          "val_loss": 1.6903,
+          "val_acc": 0.3636,
+          "epoch": 4
+        },
+        {
+          "step": 178,
+          "train_loss": 1.4214,
+          "train_acc": 0.4455,
+          "val_loss": 1.6081,
+          "val_acc": 0.413,
+          "epoch": 5
+        },
+        {
+          "step": 222,
+          "train_loss": 1.3466,
+          "train_acc": 0.4849,
+          "val_loss": 1.5298,
+          "val_acc": 0.4408,
+          "epoch": 7
+        },
+        {
+          "step": 267,
+          "train_loss": 1.2762,
+          "train_acc": 0.5177,
+          "val_loss": 1.4818,
+          "val_acc": 0.4716,
+          "epoch": 8
+        },
+        {
+          "step": 311,
+          "train_loss": 1.2394,
+          "train_acc": 0.5418,
+          "val_loss": 1.4409,
+          "val_acc": 0.4808,
+          "epoch": 9
+        },
+        {
+          "step": 356,
+          "train_loss": 1.2,
+          "train_acc": 0.5487,
+          "val_loss": 1.4146,
+          "val_acc": 0.4893,
+          "epoch": 11
+        },
+        {
+          "step": 400,
+          "train_loss": 1.1842,
+          "train_acc": 0.5481,
+          "val_loss": 1.4064,
+          "val_acc": 0.5084,
+          "epoch": 12
+        }
+      ],
+      "systemMetrics": [
+        {
+          "timestamp": 0,
+          "gpu_util": 84.2,
+          "gpu_memory": 7.9,
+          "cpu_util": 38.9,
+          "memory_util": 33.4,
+          "disk_io": 170.5,
+          "network_sent": 1.36,
+          "network_recv": 22.9
+        },
+        {
+          "timestamp": 30,
+          "gpu_util": 92.7,
+          "gpu_memory": 5.8,
+          "cpu_util": 46.6,
+          "memory_util": 29.3,
+          "disk_io": 177.1,
+          "network_sent": 1.64,
+          "network_recv": 16.66
+        },
+        {
+          "timestamp": 60,
+          "gpu_util": 84.6,
+          "gpu_memory": 9.2,
+          "cpu_util": 50.6,
+          "memory_util": 31.1,
+          "disk_io": 84.9,
+          "network_sent": 1.87,
+          "network_recv": 22.41
+        },
+        {
+          "timestamp": 90,
+          "gpu_util": 90.8,
+          "gpu_memory": 9.7,
+          "cpu_util": 34.4,
+          "memory_util": 31.9,
+          "disk_io": 190.9,
+          "network_sent": 1.31,
+          "network_recv": 14.02
+        },
+        {
+          "timestamp": 120,
+          "gpu_util": 75.1,
+          "gpu_memory": 8.3,
+          "cpu_util": 36.7,
+          "memory_util": 25.2,
+          "disk_io": 75.2,
+          "network_sent": 0.11,
+          "network_recv": 15.91
+        },
+        {
+          "timestamp": 150,
+          "gpu_util": 90.7,
+          "gpu_memory": 6.3,
+          "cpu_util": 46.7,
+          "memory_util": 38.3,
+          "disk_io": 156.8,
+          "network_sent": 1.15,
+          "network_recv": 8.15
+        },
+        {
+          "timestamp": 180,
+          "gpu_util": 81.4,
+          "gpu_memory": 5.5,
+          "cpu_util": 58.7,
+          "memory_util": 39.3,
+          "disk_io": 70.7,
+          "network_sent": 2.01,
+          "network_recv": 22.81
+        },
+        {
+          "timestamp": 210,
+          "gpu_util": 76.6,
+          "gpu_memory": 8.5,
+          "cpu_util": 42.6,
+          "memory_util": 41.7,
+          "disk_io": 80.7,
+          "network_sent": 0.34,
+          "network_recv": 18.98
+        },
+        {
+          "timestamp": 240,
+          "gpu_util": 76.2,
+          "gpu_memory": 6,
+          "cpu_util": 54.5,
+          "memory_util": 34.4,
+          "disk_io": 131.1,
+          "network_sent": 1.37,
+          "network_recv": 6.64
+        },
+        {
+          "timestamp": 270,
+          "gpu_util": 99.8,
+          "gpu_memory": 39.8,
+          "cpu_util": 34,
+          "memory_util": 39,
+          "disk_io": 119.8,
+          "network_sent": 0.5,
+          "network_recv": 9.83
+        }
+      ],
+      "metadata": {
+        "os": "Linux-5.15.0-x86_64",
+        "python": "3.10.12",
+        "gpu": "NVIDIA A100 40GB",
+        "gpuCount": 1,
+        "cudaVersion": "11.8",
+        "framework": "PyTorch 2.1.0",
+        "gitCommit": "e7f1a2b",
+        "gitBranch": "resnet101"
+      },
+      "logs": [
+        {
+          "timestamp": "2026-03-04T07:00:00.000Z",
+          "level": "INFO",
+          "message": "wandb: Currently logged in as: alex-ml"
+        },
+        {
+          "timestamp": "2026-03-04T07:00:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Tracking run with wandb version 0.16.3"
+        },
+        {
+          "timestamp": "2026-03-04T07:00:02.000Z",
+          "level": "INFO",
+          "message": "wandb: Run quiet-river-5 started"
+        },
+        {
+          "timestamp": "2026-03-04T07:00:03.000Z",
+          "level": "INFO",
+          "message": "wandb: Run data is saved locally in ./wandb/run-*"
+        },
+        {
+          "timestamp": "2026-03-04T07:01:15.000Z",
+          "level": "INFO",
+          "message": "Epoch 1/12 - train_loss: 2.081 - train_acc: 0.307"
+        },
+        {
+          "timestamp": "2026-03-04T07:02:27.000Z",
+          "level": "INFO",
+          "message": "Epoch 2/12 - train_loss: 1.883 - train_acc: 0.461"
+        },
+        {
+          "timestamp": "2026-03-04T07:03:39.000Z",
+          "level": "INFO",
+          "message": "Epoch 3/12 - train_loss: 1.704 - train_acc: 0.575"
+        },
+        {
+          "timestamp": "2026-03-04T07:04:51.000Z",
+          "level": "INFO",
+          "message": "Epoch 4/12 - train_loss: 1.542 - train_acc: 0.659"
+        },
+        {
+          "timestamp": "2026-03-04T07:06:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 5/12 - train_loss: 1.395 - train_acc: 0.721"
+        },
+        {
+          "timestamp": "2026-03-04T07:07:15.000Z",
+          "level": "INFO",
+          "message": "Epoch 6/12 - train_loss: 1.262 - train_acc: 0.768"
+        },
+        {
+          "timestamp": "2026-03-04T07:08:27.000Z",
+          "level": "INFO",
+          "message": "Epoch 7/12 - train_loss: 1.142 - train_acc: 0.802"
+        },
+        {
+          "timestamp": "2026-03-04T07:09:39.000Z",
+          "level": "INFO",
+          "message": "Epoch 8/12 - train_loss: 1.033 - train_acc: 0.827"
+        },
+        {
+          "timestamp": "2026-03-04T07:10:51.000Z",
+          "level": "INFO",
+          "message": "Epoch 9/12 - train_loss: 0.935 - train_acc: 0.846"
+        },
+        {
+          "timestamp": "2026-03-04T07:12:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 10/12 - train_loss: 0.846 - train_acc: 0.860"
+        },
+        {
+          "timestamp": "2026-03-04T07:12:00.000Z",
+          "level": "ERROR",
+          "message": "RuntimeError: CUDA out of memory. Tried to allocate 2.00 GiB"
+        },
+        {
+          "timestamp": "2026-03-04T07:12:00.500Z",
+          "level": "ERROR",
+          "message": "wandb: Run crashed. Check logs for details."
+        }
+      ],
+      "files": [
+        {
+          "name": "config.yaml",
+          "size": 1024,
+          "updatedAt": "2026-03-04T07:00:00Z"
+        },
+        {
+          "name": "requirements.txt",
+          "size": 512,
+          "updatedAt": "2026-03-04T07:00:00Z"
+        }
+      ],
+      "inputArtifacts": [
+        "art-1"
+      ],
+      "outputArtifacts": []
+    },
+    {
+      "id": "run-6",
+      "runId": "u1v2w3x4",
+      "name": "bright-dawn-6",
+      "projectId": "proj-1",
+      "state": "running",
+      "createdAt": "2026-03-05T06:00:00Z",
+      "updatedAt": "2026-03-05T08:00:00Z",
+      "duration": 7200,
+      "color": "#ffce56",
+      "visible": true,
+      "user": "lisa-res",
+      "tags": [
+        "efficientnet",
+        "cosine-lr"
+      ],
+      "notes": "EfficientNet-B0 with cosine annealing LR",
+      "config": {
+        "model": "efficientnet-b0",
+        "dataset": "cifar10",
+        "learning_rate": 0.001,
+        "batch_size": 64,
+        "epochs": 60,
+        "optimizer": "adamw",
+        "weight_decay": 0.0005,
+        "dropout": 0.2,
+        "augmentation": true,
+        "seed": 47
+      },
+      "summary": {
+        "train_loss": 0.312,
+        "train_acc": 0.889,
+        "val_loss": 0.398,
+        "val_acc": 0.862,
+        "epoch": 25,
+        "total_params": 5288548,
+        "learning_rate": 0.0004
+      },
+      "history": [
+        {
+          "step": 0,
+          "train_loss": 2.3016,
+          "train_acc": 0.1078,
+          "val_loss": 2.3026,
+          "val_acc": 0.1019,
+          "epoch": 0
+        },
+        {
+          "step": 43,
+          "train_loss": 1.9066,
+          "train_acc": 0.2458,
+          "val_loss": 1.9416,
+          "val_acc": 0.2414,
+          "epoch": 2
+        },
+        {
+          "step": 86,
+          "train_loss": 1.6141,
+          "train_acc": 0.376,
+          "val_loss": 1.6455,
+          "val_acc": 0.3572,
+          "epoch": 4
+        },
+        {
+          "step": 129,
+          "train_loss": 1.3499,
+          "train_acc": 0.4672,
+          "val_loss": 1.3987,
+          "val_acc": 0.4668,
+          "epoch": 5
+        },
+        {
+          "step": 171,
+          "train_loss": 1.1625,
+          "train_acc": 0.5471,
+          "val_loss": 1.21,
+          "val_acc": 0.5317,
+          "epoch": 7
+        },
+        {
+          "step": 214,
+          "train_loss": 0.9835,
+          "train_acc": 0.6131,
+          "val_loss": 1.0428,
+          "val_acc": 0.5979,
+          "epoch": 9
+        },
+        {
+          "step": 257,
+          "train_loss": 0.8627,
+          "train_acc": 0.6778,
+          "val_loss": 0.92,
+          "val_acc": 0.6512,
+          "epoch": 11
+        },
+        {
+          "step": 300,
+          "train_loss": 0.7504,
+          "train_acc": 0.7124,
+          "val_loss": 0.8206,
+          "val_acc": 0.6874,
+          "epoch": 13
+        },
+        {
+          "step": 343,
+          "train_loss": 0.6617,
+          "train_acc": 0.7536,
+          "val_loss": 0.7435,
+          "val_acc": 0.7164,
+          "epoch": 14
+        },
+        {
+          "step": 386,
+          "train_loss": 0.6063,
+          "train_acc": 0.7695,
+          "val_loss": 0.6735,
+          "val_acc": 0.7422,
+          "epoch": 16
+        },
+        {
+          "step": 429,
+          "train_loss": 0.5458,
+          "train_acc": 0.7923,
+          "val_loss": 0.6298,
+          "val_acc": 0.7813,
+          "epoch": 18
+        },
+        {
+          "step": 471,
+          "train_loss": 0.493,
+          "train_acc": 0.809,
+          "val_loss": 0.5823,
+          "val_acc": 0.79,
+          "epoch": 20
+        },
+        {
+          "step": 514,
+          "train_loss": 0.4539,
+          "train_acc": 0.8361,
+          "val_loss": 0.547,
+          "val_acc": 0.8116,
+          "epoch": 21
+        },
+        {
+          "step": 557,
+          "train_loss": 0.4304,
+          "train_acc": 0.8418,
+          "val_loss": 0.5174,
+          "val_acc": 0.8181,
+          "epoch": 23
+        },
+        {
+          "step": 600,
+          "train_loss": 0.409,
+          "train_acc": 0.8418,
+          "val_loss": 0.4901,
+          "val_acc": 0.8239,
+          "epoch": 25
+        }
+      ],
+      "systemMetrics": [
+        {
+          "timestamp": 0,
+          "gpu_util": 85.8,
+          "gpu_memory": 6.3,
+          "cpu_util": 56,
+          "memory_util": 32.1,
+          "disk_io": 66.6,
+          "network_sent": 1.77,
+          "network_recv": 16.21
+        },
+        {
+          "timestamp": 30,
+          "gpu_util": 71.2,
+          "gpu_memory": 8,
+          "cpu_util": 55.8,
+          "memory_util": 29.4,
+          "disk_io": 97.6,
+          "network_sent": 0.19,
+          "network_recv": 6.23
+        },
+        {
+          "timestamp": 60,
+          "gpu_util": 75.4,
+          "gpu_memory": 6.7,
+          "cpu_util": 57.1,
+          "memory_util": 31.3,
+          "disk_io": 177.7,
+          "network_sent": 0.8,
+          "network_recv": 10.6
+        },
+        {
+          "timestamp": 90,
+          "gpu_util": 82.7,
+          "gpu_memory": 6,
+          "cpu_util": 33.5,
+          "memory_util": 28.3,
+          "disk_io": 82.6,
+          "network_sent": 0.15,
+          "network_recv": 19.69
+        },
+        {
+          "timestamp": 120,
+          "gpu_util": 75,
+          "gpu_memory": 4.1,
+          "cpu_util": 50.2,
+          "memory_util": 25.4,
+          "disk_io": 74.8,
+          "network_sent": 1.77,
+          "network_recv": 15.67
+        },
+        {
+          "timestamp": 150,
+          "gpu_util": 84.3,
+          "gpu_memory": 9,
+          "cpu_util": 59.7,
+          "memory_util": 38.3,
+          "disk_io": 97.8,
+          "network_sent": 0.4,
+          "network_recv": 24.78
+        },
+        {
+          "timestamp": 180,
+          "gpu_util": 89.5,
+          "gpu_memory": 4.5,
+          "cpu_util": 51.6,
+          "memory_util": 28.1,
+          "disk_io": 130,
+          "network_sent": 1.2,
+          "network_recv": 23.53
+        },
+        {
+          "timestamp": 210,
+          "gpu_util": 90.1,
+          "gpu_memory": 4.3,
+          "cpu_util": 35.4,
+          "memory_util": 40.9,
+          "disk_io": 125.3,
+          "network_sent": 0.42,
+          "network_recv": 11.4
+        },
+        {
+          "timestamp": 240,
+          "gpu_util": 92.1,
+          "gpu_memory": 5.5,
+          "cpu_util": 57.5,
+          "memory_util": 27.6,
+          "disk_io": 93.8,
+          "network_sent": 0.31,
+          "network_recv": 20.28
+        },
+        {
+          "timestamp": 270,
+          "gpu_util": 70.9,
+          "gpu_memory": 4.3,
+          "cpu_util": 35,
+          "memory_util": 29.6,
+          "disk_io": 118.5,
+          "network_sent": 0.34,
+          "network_recv": 16.78
+        },
+        {
+          "timestamp": 300,
+          "gpu_util": 82.1,
+          "gpu_memory": 8.7,
+          "cpu_util": 40.3,
+          "memory_util": 38.9,
+          "disk_io": 145.6,
+          "network_sent": 0.15,
+          "network_recv": 21.81
+        },
+        {
+          "timestamp": 330,
+          "gpu_util": 85.4,
+          "gpu_memory": 7.9,
+          "cpu_util": 51.6,
+          "memory_util": 29.6,
+          "disk_io": 175.2,
+          "network_sent": 1.63,
+          "network_recv": 15.59
+        },
+        {
+          "timestamp": 360,
+          "gpu_util": 76.5,
+          "gpu_memory": 6.5,
+          "cpu_util": 43.2,
+          "memory_util": 44.4,
+          "disk_io": 168.2,
+          "network_sent": 0.31,
+          "network_recv": 16.5
+        },
+        {
+          "timestamp": 390,
+          "gpu_util": 83.8,
+          "gpu_memory": 5,
+          "cpu_util": 57.6,
+          "memory_util": 29.5,
+          "disk_io": 86.5,
+          "network_sent": 0.43,
+          "network_recv": 7.83
+        },
+        {
+          "timestamp": 420,
+          "gpu_util": 86.2,
+          "gpu_memory": 9.6,
+          "cpu_util": 35.6,
+          "memory_util": 37.2,
+          "disk_io": 97.7,
+          "network_sent": 1.89,
+          "network_recv": 21.2
+        }
+      ],
+      "metadata": {
+        "os": "Linux-5.15.0-x86_64",
+        "python": "3.10.12",
+        "gpu": "NVIDIA A100 40GB",
+        "gpuCount": 1,
+        "cudaVersion": "11.8",
+        "framework": "PyTorch 2.1.0",
+        "gitCommit": "f8a2b3c",
+        "gitBranch": "cosine-lr"
+      },
+      "logs": [
+        {
+          "timestamp": "2026-03-05T06:00:00.000Z",
+          "level": "INFO",
+          "message": "wandb: Currently logged in as: alex-ml"
+        },
+        {
+          "timestamp": "2026-03-05T06:00:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Tracking run with wandb version 0.16.3"
+        },
+        {
+          "timestamp": "2026-03-05T06:00:02.000Z",
+          "level": "INFO",
+          "message": "wandb: Run bright-dawn-6 started"
+        },
+        {
+          "timestamp": "2026-03-05T06:00:03.000Z",
+          "level": "INFO",
+          "message": "wandb: Run data is saved locally in ./wandb/run-*"
+        },
+        {
+          "timestamp": "2026-03-05T06:02:33.000Z",
+          "level": "INFO",
+          "message": "Epoch 1/25 - train_loss: 2.081 - train_acc: 0.307"
+        },
+        {
+          "timestamp": "2026-03-05T06:05:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 2/25 - train_loss: 1.883 - train_acc: 0.461"
+        },
+        {
+          "timestamp": "2026-03-05T06:07:33.000Z",
+          "level": "INFO",
+          "message": "Epoch 3/25 - train_loss: 1.704 - train_acc: 0.575"
+        },
+        {
+          "timestamp": "2026-03-05T06:10:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 4/25 - train_loss: 1.542 - train_acc: 0.659"
+        },
+        {
+          "timestamp": "2026-03-05T06:12:33.000Z",
+          "level": "INFO",
+          "message": "Epoch 5/25 - train_loss: 1.395 - train_acc: 0.721"
+        },
+        {
+          "timestamp": "2026-03-05T06:15:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 6/25 - train_loss: 1.262 - train_acc: 0.768"
+        },
+        {
+          "timestamp": "2026-03-05T06:17:33.000Z",
+          "level": "INFO",
+          "message": "Epoch 7/25 - train_loss: 1.142 - train_acc: 0.802"
+        },
+        {
+          "timestamp": "2026-03-05T06:20:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 8/25 - train_loss: 1.033 - train_acc: 0.827"
+        },
+        {
+          "timestamp": "2026-03-05T06:22:33.000Z",
+          "level": "INFO",
+          "message": "Epoch 9/25 - train_loss: 0.935 - train_acc: 0.846"
+        },
+        {
+          "timestamp": "2026-03-05T06:25:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 10/25 - train_loss: 0.846 - train_acc: 0.860"
+        }
+      ],
+      "files": [
+        {
+          "name": "checkpoint.pt",
+          "size": 21200000,
+          "updatedAt": "2026-03-05T08:00:00Z"
+        },
+        {
+          "name": "config.yaml",
+          "size": 1200,
+          "updatedAt": "2026-03-05T06:00:00Z"
+        }
+      ],
+      "inputArtifacts": [
+        "art-1"
+      ],
+      "outputArtifacts": []
+    },
+    {
+      "id": "run-7",
+      "runId": "y5z6a7b8",
+      "name": "misty-forest-1",
+      "projectId": "proj-2",
+      "state": "finished",
+      "createdAt": "2026-02-20T10:00:00Z",
+      "updatedAt": "2026-02-20T14:00:00Z",
+      "duration": 14400,
+      "color": "#ff6384",
+      "visible": true,
+      "user": "alex-ml",
+      "tags": [
+        "bert",
+        "baseline"
+      ],
+      "notes": "BERT-base sentiment classifier baseline",
+      "config": {
+        "model": "bert-base-uncased",
+        "dataset": "imdb",
+        "learning_rate": 2e-05,
+        "batch_size": 16,
+        "epochs": 5,
+        "optimizer": "adamw",
+        "max_length": 512,
+        "warmup_steps": 500
+      },
+      "summary": {
+        "train_loss": 0.198,
+        "eval_loss": 0.312,
+        "f1": 0.892,
+        "accuracy": 0.889,
+        "epoch": 5,
+        "total_params": 109482240
+      },
+      "history": [
+        {
+          "step": 0,
+          "train_loss": 0.8056,
+          "eval_loss": 0.8521,
+          "f1": 0.4981,
+          "accuracy": 0.4926,
+          "epoch": 0
+        },
+        {
+          "step": 21,
+          "train_loss": 0.7239,
+          "eval_loss": 0.7935,
+          "f1": 0.5404,
+          "accuracy": 0.5476,
+          "epoch": 0
+        },
+        {
+          "step": 42,
+          "train_loss": 0.6734,
+          "eval_loss": 0.7323,
+          "f1": 0.5807,
+          "accuracy": 0.5823,
+          "epoch": 0
+        },
+        {
+          "step": 63,
+          "train_loss": 0.6063,
+          "eval_loss": 0.6837,
+          "f1": 0.6151,
+          "accuracy": 0.615,
+          "epoch": 1
+        },
+        {
+          "step": 83,
+          "train_loss": 0.5694,
+          "eval_loss": 0.6439,
+          "f1": 0.6586,
+          "accuracy": 0.6465,
+          "epoch": 1
+        },
+        {
+          "step": 104,
+          "train_loss": 0.5246,
+          "eval_loss": 0.6014,
+          "f1": 0.6867,
+          "accuracy": 0.6851,
+          "epoch": 1
+        },
+        {
+          "step": 125,
+          "train_loss": 0.4799,
+          "eval_loss": 0.5684,
+          "f1": 0.7054,
+          "accuracy": 0.7035,
+          "epoch": 1
+        },
+        {
+          "step": 146,
+          "train_loss": 0.4507,
+          "eval_loss": 0.5301,
+          "f1": 0.7233,
+          "accuracy": 0.7301,
+          "epoch": 1
+        },
+        {
+          "step": 167,
+          "train_loss": 0.4189,
+          "eval_loss": 0.5145,
+          "f1": 0.7516,
+          "accuracy": 0.7404,
+          "epoch": 2
+        },
+        {
+          "step": 188,
+          "train_loss": 0.3946,
+          "eval_loss": 0.4837,
+          "f1": 0.7635,
+          "accuracy": 0.7681,
+          "epoch": 2
+        },
+        {
+          "step": 208,
+          "train_loss": 0.3631,
+          "eval_loss": 0.4651,
+          "f1": 0.7804,
+          "accuracy": 0.7833,
+          "epoch": 2
+        },
+        {
+          "step": 229,
+          "train_loss": 0.3532,
+          "eval_loss": 0.4523,
+          "f1": 0.7965,
+          "accuracy": 0.7942,
+          "epoch": 2
+        },
+        {
+          "step": 250,
+          "train_loss": 0.3326,
+          "eval_loss": 0.4279,
+          "f1": 0.7996,
+          "accuracy": 0.8085,
+          "epoch": 3
+        },
+        {
+          "step": 271,
+          "train_loss": 0.3237,
+          "eval_loss": 0.4184,
+          "f1": 0.8119,
+          "accuracy": 0.8075,
+          "epoch": 3
+        },
+        {
+          "step": 292,
+          "train_loss": 0.2967,
+          "eval_loss": 0.4016,
+          "f1": 0.8283,
+          "accuracy": 0.8198,
+          "epoch": 3
+        },
+        {
+          "step": 313,
+          "train_loss": 0.2839,
+          "eval_loss": 0.3949,
+          "f1": 0.8341,
+          "accuracy": 0.8325,
+          "epoch": 3
+        },
+        {
+          "step": 333,
+          "train_loss": 0.2841,
+          "eval_loss": 0.3851,
+          "f1": 0.835,
+          "accuracy": 0.8319,
+          "epoch": 3
+        },
+        {
+          "step": 354,
+          "train_loss": 0.2671,
+          "eval_loss": 0.3729,
+          "f1": 0.8405,
+          "accuracy": 0.8366,
+          "epoch": 4
+        },
+        {
+          "step": 375,
+          "train_loss": 0.2619,
+          "eval_loss": 0.3755,
+          "f1": 0.8463,
+          "accuracy": 0.8511,
+          "epoch": 4
+        },
+        {
+          "step": 396,
+          "train_loss": 0.2575,
+          "eval_loss": 0.3637,
+          "f1": 0.8602,
+          "accuracy": 0.8583,
+          "epoch": 4
+        },
+        {
+          "step": 417,
+          "train_loss": 0.2484,
+          "eval_loss": 0.3524,
+          "f1": 0.8618,
+          "accuracy": 0.8565,
+          "epoch": 4
+        },
+        {
+          "step": 438,
+          "train_loss": 0.2381,
+          "eval_loss": 0.3441,
+          "f1": 0.8657,
+          "accuracy": 0.8614,
+          "epoch": 4
+        },
+        {
+          "step": 458,
+          "train_loss": 0.2435,
+          "eval_loss": 0.3443,
+          "f1": 0.8701,
+          "accuracy": 0.8639,
+          "epoch": 5
+        },
+        {
+          "step": 479,
+          "train_loss": 0.2392,
+          "eval_loss": 0.3381,
+          "f1": 0.8682,
+          "accuracy": 0.8597,
+          "epoch": 5
+        },
+        {
+          "step": 500,
+          "train_loss": 0.2309,
+          "eval_loss": 0.3331,
+          "f1": 0.8754,
+          "accuracy": 0.8744,
+          "epoch": 5
+        }
+      ],
+      "systemMetrics": [
+        {
+          "timestamp": 0,
+          "gpu_util": 80.9,
+          "gpu_memory": 5.5,
+          "cpu_util": 54.5,
+          "memory_util": 25.5,
+          "disk_io": 125.2,
+          "network_sent": 0.93,
+          "network_recv": 21.54
+        },
+        {
+          "timestamp": 30,
+          "gpu_util": 72.8,
+          "gpu_memory": 9.9,
+          "cpu_util": 31.4,
+          "memory_util": 42.4,
+          "disk_io": 179.4,
+          "network_sent": 0.86,
+          "network_recv": 24.53
+        },
+        {
+          "timestamp": 60,
+          "gpu_util": 73,
+          "gpu_memory": 5.3,
+          "cpu_util": 52.2,
+          "memory_util": 34.4,
+          "disk_io": 77.9,
+          "network_sent": 0.49,
+          "network_recv": 17.31
+        },
+        {
+          "timestamp": 90,
+          "gpu_util": 71.9,
+          "gpu_memory": 5.7,
+          "cpu_util": 51.9,
+          "memory_util": 37.8,
+          "disk_io": 147.1,
+          "network_sent": 1.7,
+          "network_recv": 23.19
+        },
+        {
+          "timestamp": 120,
+          "gpu_util": 93.4,
+          "gpu_memory": 7.2,
+          "cpu_util": 58.8,
+          "memory_util": 34.5,
+          "disk_io": 143.3,
+          "network_sent": 0.63,
+          "network_recv": 11.86
+        },
+        {
+          "timestamp": 150,
+          "gpu_util": 94.9,
+          "gpu_memory": 7.3,
+          "cpu_util": 44.1,
+          "memory_util": 41.3,
+          "disk_io": 116,
+          "network_sent": 0.64,
+          "network_recv": 10.67
+        },
+        {
+          "timestamp": 180,
+          "gpu_util": 87.5,
+          "gpu_memory": 6.3,
+          "cpu_util": 31.7,
+          "memory_util": 35.8,
+          "disk_io": 109.6,
+          "network_sent": 0.81,
+          "network_recv": 5.74
+        },
+        {
+          "timestamp": 210,
+          "gpu_util": 90.7,
+          "gpu_memory": 8.4,
+          "cpu_util": 56.8,
+          "memory_util": 37.2,
+          "disk_io": 132.1,
+          "network_sent": 0.46,
+          "network_recv": 5.57
+        },
+        {
+          "timestamp": 240,
+          "gpu_util": 87.7,
+          "gpu_memory": 5.7,
+          "cpu_util": 58.6,
+          "memory_util": 35.1,
+          "disk_io": 144.3,
+          "network_sent": 1.09,
+          "network_recv": 24.6
+        },
+        {
+          "timestamp": 270,
+          "gpu_util": 93.4,
+          "gpu_memory": 5.8,
+          "cpu_util": 49.7,
+          "memory_util": 27.1,
+          "disk_io": 142.9,
+          "network_sent": 1.44,
+          "network_recv": 15.59
+        },
+        {
+          "timestamp": 300,
+          "gpu_util": 80.7,
+          "gpu_memory": 4.9,
+          "cpu_util": 36.7,
+          "memory_util": 43.9,
+          "disk_io": 189.7,
+          "network_sent": 1.28,
+          "network_recv": 6.72
+        },
+        {
+          "timestamp": 330,
+          "gpu_util": 78.8,
+          "gpu_memory": 8.8,
+          "cpu_util": 33.3,
+          "memory_util": 34.8,
+          "disk_io": 93.8,
+          "network_sent": 0.31,
+          "network_recv": 6.77
+        },
+        {
+          "timestamp": 360,
+          "gpu_util": 81.9,
+          "gpu_memory": 4.4,
+          "cpu_util": 57.6,
+          "memory_util": 25.3,
+          "disk_io": 163.1,
+          "network_sent": 1.06,
+          "network_recv": 22.54
+        },
+        {
+          "timestamp": 390,
+          "gpu_util": 73.5,
+          "gpu_memory": 9.9,
+          "cpu_util": 39,
+          "memory_util": 27.3,
+          "disk_io": 161.3,
+          "network_sent": 0.61,
+          "network_recv": 12.76
+        },
+        {
+          "timestamp": 420,
+          "gpu_util": 88.5,
+          "gpu_memory": 4.1,
+          "cpu_util": 30.3,
+          "memory_util": 29.1,
+          "disk_io": 91.5,
+          "network_sent": 1.85,
+          "network_recv": 15.76
+        }
+      ],
+      "metadata": {
+        "os": "Linux-5.15.0-x86_64",
+        "python": "3.10.12",
+        "gpu": "NVIDIA A100 40GB",
+        "gpuCount": 1,
+        "cudaVersion": "11.8",
+        "framework": "PyTorch 2.1.0 + HuggingFace 4.36.0",
+        "gitCommit": "g9h0i1j",
+        "gitBranch": "main"
+      },
+      "logs": [
+        {
+          "timestamp": "2026-02-20T10:00:00.000Z",
+          "level": "INFO",
+          "message": "wandb: Currently logged in as: alex-ml"
+        },
+        {
+          "timestamp": "2026-02-20T10:00:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Tracking run with wandb version 0.16.3"
+        },
+        {
+          "timestamp": "2026-02-20T10:00:02.000Z",
+          "level": "INFO",
+          "message": "wandb: Run misty-forest-1 started"
+        },
+        {
+          "timestamp": "2026-02-20T10:00:03.000Z",
+          "level": "INFO",
+          "message": "wandb: Run data is saved locally in ./wandb/run-*"
+        },
+        {
+          "timestamp": "2026-02-20T10:01:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 1/5 - train_loss: 2.081 - train_acc: 0.307"
+        },
+        {
+          "timestamp": "2026-02-20T10:02:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 2/5 - train_loss: 1.883 - train_acc: 0.461"
+        },
+        {
+          "timestamp": "2026-02-20T10:03:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 3/5 - train_loss: 1.704 - train_acc: 0.575"
+        },
+        {
+          "timestamp": "2026-02-20T10:04:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 4/5 - train_loss: 1.542 - train_acc: 0.659"
+        },
+        {
+          "timestamp": "2026-02-20T10:05:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 5/5 - train_loss: 1.395 - train_acc: 0.721"
+        },
+        {
+          "timestamp": "2026-02-20T10:05:00.000Z",
+          "level": "INFO",
+          "message": "Training complete. Best model saved."
+        },
+        {
+          "timestamp": "2026-02-20T10:05:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Synced run to https://wandb.ai/alex-ml/project"
+        }
+      ],
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size": 437900000,
+          "updatedAt": "2026-02-20T14:00:00Z"
+        },
+        {
+          "name": "tokenizer.json",
+          "size": 512000,
+          "updatedAt": "2026-02-20T10:00:00Z"
+        },
+        {
+          "name": "config.json",
+          "size": 2048,
+          "updatedAt": "2026-02-20T10:00:00Z"
+        }
+      ],
+      "inputArtifacts": [],
+      "outputArtifacts": []
+    },
+    {
+      "id": "run-8",
+      "runId": "c2d3e4f5",
+      "name": "wandering-star-2",
+      "projectId": "proj-2",
+      "state": "finished",
+      "createdAt": "2026-02-21T09:00:00Z",
+      "updatedAt": "2026-02-21T11:00:00Z",
+      "duration": 7200,
+      "color": "#36a2eb",
+      "visible": true,
+      "user": "sarah-ds",
+      "tags": [
+        "distilbert",
+        "lightweight"
+      ],
+      "notes": "DistilBERT — faster training, slight accuracy drop",
+      "config": {
+        "model": "distilbert-base-uncased",
+        "dataset": "imdb",
+        "learning_rate": 3e-05,
+        "batch_size": 32,
+        "epochs": 5,
+        "optimizer": "adamw",
+        "max_length": 512,
+        "warmup_steps": 300
+      },
+      "summary": {
+        "train_loss": 0.225,
+        "eval_loss": 0.345,
+        "f1": 0.871,
+        "accuracy": 0.868,
+        "epoch": 5,
+        "total_params": 66955010
+      },
+      "history": [
+        {
+          "step": 0,
+          "train_loss": 0.8061,
+          "eval_loss": 0.8442,
+          "f1": 0.4926,
+          "accuracy": 0.5051,
+          "epoch": 0
+        },
+        {
+          "step": 21,
+          "train_loss": 0.727,
+          "eval_loss": 0.7833,
+          "f1": 0.5453,
+          "accuracy": 0.5489,
+          "epoch": 0
+        },
+        {
+          "step": 42,
+          "train_loss": 0.6762,
+          "eval_loss": 0.7444,
+          "f1": 0.5892,
+          "accuracy": 0.5858,
+          "epoch": 0
+        },
+        {
+          "step": 63,
+          "train_loss": 0.6274,
+          "eval_loss": 0.6915,
+          "f1": 0.6164,
+          "accuracy": 0.622,
+          "epoch": 1
+        },
+        {
+          "step": 83,
+          "train_loss": 0.5665,
+          "eval_loss": 0.6586,
+          "f1": 0.649,
+          "accuracy": 0.639,
+          "epoch": 1
+        },
+        {
+          "step": 104,
+          "train_loss": 0.5266,
+          "eval_loss": 0.6211,
+          "f1": 0.6757,
+          "accuracy": 0.6719,
+          "epoch": 1
+        },
+        {
+          "step": 125,
+          "train_loss": 0.4947,
+          "eval_loss": 0.5896,
+          "f1": 0.6995,
+          "accuracy": 0.687,
+          "epoch": 1
+        },
+        {
+          "step": 146,
+          "train_loss": 0.4702,
+          "eval_loss": 0.5493,
+          "f1": 0.714,
+          "accuracy": 0.7196,
+          "epoch": 1
+        },
+        {
+          "step": 167,
+          "train_loss": 0.4356,
+          "eval_loss": 0.5369,
+          "f1": 0.7295,
+          "accuracy": 0.7332,
+          "epoch": 2
+        },
+        {
+          "step": 188,
+          "train_loss": 0.4046,
+          "eval_loss": 0.5045,
+          "f1": 0.7516,
+          "accuracy": 0.7538,
+          "epoch": 2
+        },
+        {
+          "step": 208,
+          "train_loss": 0.3947,
+          "eval_loss": 0.4881,
+          "f1": 0.7649,
+          "accuracy": 0.7653,
+          "epoch": 2
+        },
+        {
+          "step": 229,
+          "train_loss": 0.3666,
+          "eval_loss": 0.4773,
+          "f1": 0.7836,
+          "accuracy": 0.7697,
+          "epoch": 2
+        },
+        {
+          "step": 250,
+          "train_loss": 0.3539,
+          "eval_loss": 0.4611,
+          "f1": 0.7888,
+          "accuracy": 0.7839,
+          "epoch": 3
+        },
+        {
+          "step": 271,
+          "train_loss": 0.3373,
+          "eval_loss": 0.4493,
+          "f1": 0.7961,
+          "accuracy": 0.791,
+          "epoch": 3
+        },
+        {
+          "step": 292,
+          "train_loss": 0.3229,
+          "eval_loss": 0.4272,
+          "f1": 0.8022,
+          "accuracy": 0.7993,
+          "epoch": 3
+        },
+        {
+          "step": 313,
+          "train_loss": 0.3196,
+          "eval_loss": 0.4252,
+          "f1": 0.817,
+          "accuracy": 0.8077,
+          "epoch": 3
+        },
+        {
+          "step": 333,
+          "train_loss": 0.3089,
+          "eval_loss": 0.4063,
+          "f1": 0.8224,
+          "accuracy": 0.8208,
+          "epoch": 3
+        },
+        {
+          "step": 354,
+          "train_loss": 0.2989,
+          "eval_loss": 0.4064,
+          "f1": 0.8279,
+          "accuracy": 0.8222,
+          "epoch": 4
+        },
+        {
+          "step": 375,
+          "train_loss": 0.2875,
+          "eval_loss": 0.3951,
+          "f1": 0.8309,
+          "accuracy": 0.8263,
+          "epoch": 4
+        },
+        {
+          "step": 396,
+          "train_loss": 0.2747,
+          "eval_loss": 0.3886,
+          "f1": 0.8336,
+          "accuracy": 0.831,
+          "epoch": 4
+        },
+        {
+          "step": 417,
+          "train_loss": 0.2784,
+          "eval_loss": 0.3812,
+          "f1": 0.8377,
+          "accuracy": 0.8345,
+          "epoch": 4
+        },
+        {
+          "step": 438,
+          "train_loss": 0.2595,
+          "eval_loss": 0.3775,
+          "f1": 0.8504,
+          "accuracy": 0.836,
+          "epoch": 4
+        },
+        {
+          "step": 458,
+          "train_loss": 0.2585,
+          "eval_loss": 0.3704,
+          "f1": 0.8519,
+          "accuracy": 0.85,
+          "epoch": 5
+        },
+        {
+          "step": 479,
+          "train_loss": 0.2601,
+          "eval_loss": 0.3793,
+          "f1": 0.8462,
+          "accuracy": 0.8517,
+          "epoch": 5
+        },
+        {
+          "step": 500,
+          "train_loss": 0.2586,
+          "eval_loss": 0.3675,
+          "f1": 0.8477,
+          "accuracy": 0.8557,
+          "epoch": 5
+        }
+      ],
+      "systemMetrics": [
+        {
+          "timestamp": 0,
+          "gpu_util": 84.7,
+          "gpu_memory": 6.6,
+          "cpu_util": 32.6,
+          "memory_util": 32,
+          "disk_io": 199.7,
+          "network_sent": 2.02,
+          "network_recv": 5.76
+        },
+        {
+          "timestamp": 30,
+          "gpu_util": 85.2,
+          "gpu_memory": 9.1,
+          "cpu_util": 48.6,
+          "memory_util": 36.1,
+          "disk_io": 50.2,
+          "network_sent": 1.59,
+          "network_recv": 11.15
+        },
+        {
+          "timestamp": 60,
+          "gpu_util": 78.3,
+          "gpu_memory": 9.3,
+          "cpu_util": 50.5,
+          "memory_util": 33.8,
+          "disk_io": 63.8,
+          "network_sent": 0.36,
+          "network_recv": 7.11
+        },
+        {
+          "timestamp": 90,
+          "gpu_util": 90.7,
+          "gpu_memory": 8.1,
+          "cpu_util": 41.8,
+          "memory_util": 31.8,
+          "disk_io": 197.6,
+          "network_sent": 1.2,
+          "network_recv": 8
+        },
+        {
+          "timestamp": 120,
+          "gpu_util": 78.8,
+          "gpu_memory": 6.3,
+          "cpu_util": 39.5,
+          "memory_util": 42.9,
+          "disk_io": 79.3,
+          "network_sent": 0.65,
+          "network_recv": 24.76
+        },
+        {
+          "timestamp": 150,
+          "gpu_util": 82.2,
+          "gpu_memory": 5.3,
+          "cpu_util": 39.2,
+          "memory_util": 31.9,
+          "disk_io": 189.3,
+          "network_sent": 1.89,
+          "network_recv": 22.95
+        },
+        {
+          "timestamp": 180,
+          "gpu_util": 72,
+          "gpu_memory": 9.1,
+          "cpu_util": 33.8,
+          "memory_util": 25.5,
+          "disk_io": 93.1,
+          "network_sent": 1.49,
+          "network_recv": 12.63
+        },
+        {
+          "timestamp": 210,
+          "gpu_util": 94.1,
+          "gpu_memory": 8.1,
+          "cpu_util": 40.6,
+          "memory_util": 32.2,
+          "disk_io": 66.2,
+          "network_sent": 0.37,
+          "network_recv": 14.83
+        },
+        {
+          "timestamp": 240,
+          "gpu_util": 87.5,
+          "gpu_memory": 8.6,
+          "cpu_util": 42.5,
+          "memory_util": 35,
+          "disk_io": 84.5,
+          "network_sent": 1.57,
+          "network_recv": 13.06
+        },
+        {
+          "timestamp": 270,
+          "gpu_util": 72.1,
+          "gpu_memory": 7.7,
+          "cpu_util": 37.2,
+          "memory_util": 36.7,
+          "disk_io": 144.6,
+          "network_sent": 1.93,
+          "network_recv": 17.22
+        },
+        {
+          "timestamp": 300,
+          "gpu_util": 74.5,
+          "gpu_memory": 5.7,
+          "cpu_util": 54.7,
+          "memory_util": 41,
+          "disk_io": 64.7,
+          "network_sent": 1.11,
+          "network_recv": 24.1
+        },
+        {
+          "timestamp": 330,
+          "gpu_util": 73.8,
+          "gpu_memory": 9.3,
+          "cpu_util": 42,
+          "memory_util": 26.8,
+          "disk_io": 177.9,
+          "network_sent": 1.57,
+          "network_recv": 12.23
+        },
+        {
+          "timestamp": 360,
+          "gpu_util": 76.1,
+          "gpu_memory": 9.2,
+          "cpu_util": 32,
+          "memory_util": 37.4,
+          "disk_io": 75,
+          "network_sent": 0.25,
+          "network_recv": 7.98
+        },
+        {
+          "timestamp": 390,
+          "gpu_util": 89.5,
+          "gpu_memory": 8.4,
+          "cpu_util": 56.8,
+          "memory_util": 35.4,
+          "disk_io": 82,
+          "network_sent": 1.17,
+          "network_recv": 10.82
+        },
+        {
+          "timestamp": 420,
+          "gpu_util": 77.9,
+          "gpu_memory": 9.1,
+          "cpu_util": 53.4,
+          "memory_util": 30.9,
+          "disk_io": 74.1,
+          "network_sent": 1.18,
+          "network_recv": 9.94
+        }
+      ],
+      "metadata": {
+        "os": "Linux-5.15.0-x86_64",
+        "python": "3.10.12",
+        "gpu": "NVIDIA V100 16GB",
+        "gpuCount": 1,
+        "cudaVersion": "11.8",
+        "framework": "PyTorch 2.1.0 + HuggingFace 4.36.0",
+        "gitCommit": "k2l3m4n",
+        "gitBranch": "distilbert"
+      },
+      "logs": [
+        {
+          "timestamp": "2026-02-21T09:00:00.000Z",
+          "level": "INFO",
+          "message": "wandb: Currently logged in as: alex-ml"
+        },
+        {
+          "timestamp": "2026-02-21T09:00:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Tracking run with wandb version 0.16.3"
+        },
+        {
+          "timestamp": "2026-02-21T09:00:02.000Z",
+          "level": "INFO",
+          "message": "wandb: Run wandering-star-2 started"
+        },
+        {
+          "timestamp": "2026-02-21T09:00:03.000Z",
+          "level": "INFO",
+          "message": "wandb: Run data is saved locally in ./wandb/run-*"
+        },
+        {
+          "timestamp": "2026-02-21T09:01:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 1/5 - train_loss: 2.081 - train_acc: 0.307"
+        },
+        {
+          "timestamp": "2026-02-21T09:02:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 2/5 - train_loss: 1.883 - train_acc: 0.461"
+        },
+        {
+          "timestamp": "2026-02-21T09:03:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 3/5 - train_loss: 1.704 - train_acc: 0.575"
+        },
+        {
+          "timestamp": "2026-02-21T09:04:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 4/5 - train_loss: 1.542 - train_acc: 0.659"
+        },
+        {
+          "timestamp": "2026-02-21T09:05:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 5/5 - train_loss: 1.395 - train_acc: 0.721"
+        },
+        {
+          "timestamp": "2026-02-21T09:05:00.000Z",
+          "level": "INFO",
+          "message": "Training complete. Best model saved."
+        },
+        {
+          "timestamp": "2026-02-21T09:05:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Synced run to https://wandb.ai/alex-ml/project"
+        }
+      ],
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size": 267800000,
+          "updatedAt": "2026-02-21T11:00:00Z"
+        },
+        {
+          "name": "config.json",
+          "size": 2048,
+          "updatedAt": "2026-02-21T09:00:00Z"
+        }
+      ],
+      "inputArtifacts": [],
+      "outputArtifacts": []
+    },
+    {
+      "id": "run-9",
+      "runId": "g6h7i8j9",
+      "name": "silver-moon-3",
+      "projectId": "proj-2",
+      "state": "finished",
+      "createdAt": "2026-02-22T08:00:00Z",
+      "updatedAt": "2026-02-22T16:00:00Z",
+      "duration": 28800,
+      "color": "#4bc0c0",
+      "visible": true,
+      "user": "mike-eng",
+      "tags": [
+        "bert-large",
+        "high-compute"
+      ],
+      "notes": "BERT-large for max accuracy",
+      "config": {
+        "model": "bert-large-uncased",
+        "dataset": "imdb",
+        "learning_rate": 1e-05,
+        "batch_size": 8,
+        "epochs": 3,
+        "optimizer": "adamw",
+        "max_length": 512,
+        "warmup_steps": 1000
+      },
+      "summary": {
+        "train_loss": 0.156,
+        "eval_loss": 0.289,
+        "f1": 0.908,
+        "accuracy": 0.905,
+        "epoch": 3,
+        "total_params": 335141890
+      },
+      "history": [
+        {
+          "step": 0,
+          "train_loss": 0.7976,
+          "eval_loss": 0.852,
+          "f1": 0.4975,
+          "accuracy": 0.4951,
+          "epoch": 0
+        },
+        {
+          "step": 21,
+          "train_loss": 0.7282,
+          "eval_loss": 0.7891,
+          "f1": 0.5472,
+          "accuracy": 0.5413,
+          "epoch": 0
+        },
+        {
+          "step": 42,
+          "train_loss": 0.6514,
+          "eval_loss": 0.7233,
+          "f1": 0.5864,
+          "accuracy": 0.5875,
+          "epoch": 0
+        },
+        {
+          "step": 63,
+          "train_loss": 0.5945,
+          "eval_loss": 0.6717,
+          "f1": 0.6301,
+          "accuracy": 0.6278,
+          "epoch": 0
+        },
+        {
+          "step": 83,
+          "train_loss": 0.5396,
+          "eval_loss": 0.6321,
+          "f1": 0.6624,
+          "accuracy": 0.6543,
+          "epoch": 1
+        },
+        {
+          "step": 104,
+          "train_loss": 0.5059,
+          "eval_loss": 0.591,
+          "f1": 0.686,
+          "accuracy": 0.6942,
+          "epoch": 1
+        },
+        {
+          "step": 125,
+          "train_loss": 0.4541,
+          "eval_loss": 0.5475,
+          "f1": 0.7179,
+          "accuracy": 0.7199,
+          "epoch": 1
+        },
+        {
+          "step": 146,
+          "train_loss": 0.4284,
+          "eval_loss": 0.5231,
+          "f1": 0.7405,
+          "accuracy": 0.73,
+          "epoch": 1
+        },
+        {
+          "step": 167,
+          "train_loss": 0.3942,
+          "eval_loss": 0.4954,
+          "f1": 0.7621,
+          "accuracy": 0.763,
+          "epoch": 1
+        },
+        {
+          "step": 188,
+          "train_loss": 0.3638,
+          "eval_loss": 0.4711,
+          "f1": 0.7748,
+          "accuracy": 0.767,
+          "epoch": 1
+        },
+        {
+          "step": 208,
+          "train_loss": 0.3338,
+          "eval_loss": 0.4529,
+          "f1": 0.7906,
+          "accuracy": 0.7854,
+          "epoch": 1
+        },
+        {
+          "step": 229,
+          "train_loss": 0.3201,
+          "eval_loss": 0.4287,
+          "f1": 0.8001,
+          "accuracy": 0.8087,
+          "epoch": 1
+        },
+        {
+          "step": 250,
+          "train_loss": 0.2933,
+          "eval_loss": 0.4117,
+          "f1": 0.8132,
+          "accuracy": 0.8107,
+          "epoch": 2
+        },
+        {
+          "step": 271,
+          "train_loss": 0.2834,
+          "eval_loss": 0.3924,
+          "f1": 0.8284,
+          "accuracy": 0.819,
+          "epoch": 2
+        },
+        {
+          "step": 292,
+          "train_loss": 0.2643,
+          "eval_loss": 0.3811,
+          "f1": 0.8314,
+          "accuracy": 0.8384,
+          "epoch": 2
+        },
+        {
+          "step": 313,
+          "train_loss": 0.2594,
+          "eval_loss": 0.3717,
+          "f1": 0.8487,
+          "accuracy": 0.8364,
+          "epoch": 2
+        },
+        {
+          "step": 333,
+          "train_loss": 0.2466,
+          "eval_loss": 0.371,
+          "f1": 0.8591,
+          "accuracy": 0.8451,
+          "epoch": 2
+        },
+        {
+          "step": 354,
+          "train_loss": 0.2369,
+          "eval_loss": 0.3604,
+          "f1": 0.8666,
+          "accuracy": 0.8527,
+          "epoch": 2
+        },
+        {
+          "step": 375,
+          "train_loss": 0.2228,
+          "eval_loss": 0.3537,
+          "f1": 0.8576,
+          "accuracy": 0.863,
+          "epoch": 2
+        },
+        {
+          "step": 396,
+          "train_loss": 0.2133,
+          "eval_loss": 0.3402,
+          "f1": 0.8695,
+          "accuracy": 0.8735,
+          "epoch": 2
+        },
+        {
+          "step": 417,
+          "train_loss": 0.2089,
+          "eval_loss": 0.3292,
+          "f1": 0.8801,
+          "accuracy": 0.8744,
+          "epoch": 3
+        },
+        {
+          "step": 438,
+          "train_loss": 0.1995,
+          "eval_loss": 0.3354,
+          "f1": 0.8824,
+          "accuracy": 0.8772,
+          "epoch": 3
+        },
+        {
+          "step": 458,
+          "train_loss": 0.2014,
+          "eval_loss": 0.3318,
+          "f1": 0.8796,
+          "accuracy": 0.8861,
+          "epoch": 3
+        },
+        {
+          "step": 479,
+          "train_loss": 0.1899,
+          "eval_loss": 0.3266,
+          "f1": 0.8813,
+          "accuracy": 0.8767,
+          "epoch": 3
+        },
+        {
+          "step": 500,
+          "train_loss": 0.1925,
+          "eval_loss": 0.3156,
+          "f1": 0.8951,
+          "accuracy": 0.8793,
+          "epoch": 3
+        }
+      ],
+      "systemMetrics": [
+        {
+          "timestamp": 0,
+          "gpu_util": 90.1,
+          "gpu_memory": 8.8,
+          "cpu_util": 52.5,
+          "memory_util": 42.2,
+          "disk_io": 191.4,
+          "network_sent": 1.52,
+          "network_recv": 12.84
+        },
+        {
+          "timestamp": 30,
+          "gpu_util": 70.8,
+          "gpu_memory": 8.7,
+          "cpu_util": 53.5,
+          "memory_util": 34.4,
+          "disk_io": 107.6,
+          "network_sent": 0.16,
+          "network_recv": 16.72
+        },
+        {
+          "timestamp": 60,
+          "gpu_util": 83.3,
+          "gpu_memory": 5.7,
+          "cpu_util": 42.3,
+          "memory_util": 40.9,
+          "disk_io": 143,
+          "network_sent": 1.85,
+          "network_recv": 23.89
+        },
+        {
+          "timestamp": 90,
+          "gpu_util": 93.5,
+          "gpu_memory": 9.8,
+          "cpu_util": 32.8,
+          "memory_util": 26.6,
+          "disk_io": 109.4,
+          "network_sent": 0.85,
+          "network_recv": 23.16
+        },
+        {
+          "timestamp": 120,
+          "gpu_util": 77.4,
+          "gpu_memory": 5.5,
+          "cpu_util": 54.4,
+          "memory_util": 42.3,
+          "disk_io": 184.6,
+          "network_sent": 1.65,
+          "network_recv": 11.83
+        },
+        {
+          "timestamp": 150,
+          "gpu_util": 77.7,
+          "gpu_memory": 5.6,
+          "cpu_util": 54.6,
+          "memory_util": 39.7,
+          "disk_io": 165.5,
+          "network_sent": 1.34,
+          "network_recv": 6.54
+        },
+        {
+          "timestamp": 180,
+          "gpu_util": 94.3,
+          "gpu_memory": 4,
+          "cpu_util": 54.6,
+          "memory_util": 38.3,
+          "disk_io": 97.5,
+          "network_sent": 0.63,
+          "network_recv": 22.73
+        },
+        {
+          "timestamp": 210,
+          "gpu_util": 90.8,
+          "gpu_memory": 9.3,
+          "cpu_util": 33.8,
+          "memory_util": 33.8,
+          "disk_io": 115.3,
+          "network_sent": 1.35,
+          "network_recv": 6.24
+        },
+        {
+          "timestamp": 240,
+          "gpu_util": 83.5,
+          "gpu_memory": 6.3,
+          "cpu_util": 31.6,
+          "memory_util": 40.4,
+          "disk_io": 90,
+          "network_sent": 1.03,
+          "network_recv": 19.21
+        },
+        {
+          "timestamp": 270,
+          "gpu_util": 71.2,
+          "gpu_memory": 9.3,
+          "cpu_util": 54,
+          "memory_util": 32.4,
+          "disk_io": 84.8,
+          "network_sent": 1.22,
+          "network_recv": 17.44
+        },
+        {
+          "timestamp": 300,
+          "gpu_util": 70.5,
+          "gpu_memory": 5.5,
+          "cpu_util": 36.3,
+          "memory_util": 31.1,
+          "disk_io": 58.8,
+          "network_sent": 0.12,
+          "network_recv": 7.99
+        },
+        {
+          "timestamp": 330,
+          "gpu_util": 81.9,
+          "gpu_memory": 5.4,
+          "cpu_util": 57.7,
+          "memory_util": 41.2,
+          "disk_io": 59.5,
+          "network_sent": 0.17,
+          "network_recv": 12.88
+        },
+        {
+          "timestamp": 360,
+          "gpu_util": 93.6,
+          "gpu_memory": 7.5,
+          "cpu_util": 33.3,
+          "memory_util": 38.6,
+          "disk_io": 93.9,
+          "network_sent": 0.45,
+          "network_recv": 5.94
+        },
+        {
+          "timestamp": 390,
+          "gpu_util": 77.4,
+          "gpu_memory": 5.4,
+          "cpu_util": 42.9,
+          "memory_util": 35.6,
+          "disk_io": 145.5,
+          "network_sent": 1.07,
+          "network_recv": 8.45
+        },
+        {
+          "timestamp": 420,
+          "gpu_util": 91,
+          "gpu_memory": 6.8,
+          "cpu_util": 41.7,
+          "memory_util": 30.8,
+          "disk_io": 63,
+          "network_sent": 0.14,
+          "network_recv": 14.18
+        }
+      ],
+      "metadata": {
+        "os": "Linux-5.15.0-x86_64",
+        "python": "3.10.12",
+        "gpu": "NVIDIA A100 40GB",
+        "gpuCount": 2,
+        "cudaVersion": "11.8",
+        "framework": "PyTorch 2.1.0 + HuggingFace 4.36.0",
+        "gitCommit": "o5p6q7r",
+        "gitBranch": "bert-large"
+      },
+      "logs": [
+        {
+          "timestamp": "2026-02-22T08:00:00.000Z",
+          "level": "INFO",
+          "message": "wandb: Currently logged in as: alex-ml"
+        },
+        {
+          "timestamp": "2026-02-22T08:00:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Tracking run with wandb version 0.16.3"
+        },
+        {
+          "timestamp": "2026-02-22T08:00:02.000Z",
+          "level": "INFO",
+          "message": "wandb: Run silver-moon-3 started"
+        },
+        {
+          "timestamp": "2026-02-22T08:00:03.000Z",
+          "level": "INFO",
+          "message": "wandb: Run data is saved locally in ./wandb/run-*"
+        },
+        {
+          "timestamp": "2026-02-22T08:01:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 1/3 - train_loss: 2.081 - train_acc: 0.307"
+        },
+        {
+          "timestamp": "2026-02-22T08:02:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 2/3 - train_loss: 1.883 - train_acc: 0.461"
+        },
+        {
+          "timestamp": "2026-02-22T08:03:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 3/3 - train_loss: 1.704 - train_acc: 0.575"
+        },
+        {
+          "timestamp": "2026-02-22T08:03:00.000Z",
+          "level": "INFO",
+          "message": "Training complete. Best model saved."
+        },
+        {
+          "timestamp": "2026-02-22T08:03:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Synced run to https://wandb.ai/alex-ml/project"
+        }
+      ],
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size": 1340000000,
+          "updatedAt": "2026-02-22T16:00:00Z"
+        },
+        {
+          "name": "config.json",
+          "size": 3072,
+          "updatedAt": "2026-02-22T08:00:00Z"
+        }
+      ],
+      "inputArtifacts": [],
+      "outputArtifacts": []
+    },
+    {
+      "id": "run-10",
+      "runId": "s8t9u0v1",
+      "name": "amber-wave-4",
+      "projectId": "proj-2",
+      "state": "running",
+      "createdAt": "2026-03-06T10:00:00Z",
+      "updatedAt": "2026-03-06T11:00:00Z",
+      "duration": 3600,
+      "color": "#ff9f40",
+      "visible": true,
+      "user": "lisa-res",
+      "tags": [
+        "roberta"
+      ],
+      "notes": "RoBERTa-base experiment — currently running",
+      "config": {
+        "model": "roberta-base",
+        "dataset": "imdb",
+        "learning_rate": 2e-05,
+        "batch_size": 16,
+        "epochs": 5,
+        "optimizer": "adamw",
+        "max_length": 512,
+        "warmup_steps": 500
+      },
+      "summary": {
+        "train_loss": 0.345,
+        "eval_loss": 0.412,
+        "f1": 0.834,
+        "accuracy": 0.831,
+        "epoch": 2,
+        "total_params": 124645632
+      },
+      "history": [
+        {
+          "step": 0,
+          "train_loss": 0.8004,
+          "eval_loss": 0.8504,
+          "f1": 0.497,
+          "accuracy": 0.5011,
+          "epoch": 0
+        },
+        {
+          "step": 21,
+          "train_loss": 0.71,
+          "eval_loss": 0.7661,
+          "f1": 0.5653,
+          "accuracy": 0.5577,
+          "epoch": 0
+        },
+        {
+          "step": 43,
+          "train_loss": 0.6403,
+          "eval_loss": 0.7002,
+          "f1": 0.6098,
+          "accuracy": 0.6166,
+          "epoch": 0
+        },
+        {
+          "step": 64,
+          "train_loss": 0.5895,
+          "eval_loss": 0.64,
+          "f1": 0.6581,
+          "accuracy": 0.6547,
+          "epoch": 0
+        },
+        {
+          "step": 86,
+          "train_loss": 0.5417,
+          "eval_loss": 0.5911,
+          "f1": 0.6894,
+          "accuracy": 0.6855,
+          "epoch": 1
+        },
+        {
+          "step": 107,
+          "train_loss": 0.4999,
+          "eval_loss": 0.5614,
+          "f1": 0.7257,
+          "accuracy": 0.7213,
+          "epoch": 1
+        },
+        {
+          "step": 129,
+          "train_loss": 0.4718,
+          "eval_loss": 0.5282,
+          "f1": 0.742,
+          "accuracy": 0.7434,
+          "epoch": 1
+        },
+        {
+          "step": 150,
+          "train_loss": 0.4493,
+          "eval_loss": 0.5042,
+          "f1": 0.7644,
+          "accuracy": 0.7559,
+          "epoch": 1
+        },
+        {
+          "step": 171,
+          "train_loss": 0.4219,
+          "eval_loss": 0.4906,
+          "f1": 0.7669,
+          "accuracy": 0.776,
+          "epoch": 1
+        },
+        {
+          "step": 193,
+          "train_loss": 0.4163,
+          "eval_loss": 0.4798,
+          "f1": 0.7824,
+          "accuracy": 0.7758,
+          "epoch": 1
+        },
+        {
+          "step": 214,
+          "train_loss": 0.3976,
+          "eval_loss": 0.4672,
+          "f1": 0.7968,
+          "accuracy": 0.7862,
+          "epoch": 1
+        },
+        {
+          "step": 236,
+          "train_loss": 0.3915,
+          "eval_loss": 0.4496,
+          "f1": 0.7954,
+          "accuracy": 0.8006,
+          "epoch": 2
+        },
+        {
+          "step": 257,
+          "train_loss": 0.3813,
+          "eval_loss": 0.4435,
+          "f1": 0.8105,
+          "accuracy": 0.802,
+          "epoch": 2
+        },
+        {
+          "step": 279,
+          "train_loss": 0.3665,
+          "eval_loss": 0.4329,
+          "f1": 0.8191,
+          "accuracy": 0.8153,
+          "epoch": 2
+        },
+        {
+          "step": 300,
+          "train_loss": 0.3703,
+          "eval_loss": 0.4389,
+          "f1": 0.8194,
+          "accuracy": 0.8175,
+          "epoch": 2
+        }
+      ],
+      "systemMetrics": [
+        {
+          "timestamp": 0,
+          "gpu_util": 94.2,
+          "gpu_memory": 5.5,
+          "cpu_util": 39,
+          "memory_util": 27.6,
+          "disk_io": 64,
+          "network_sent": 0.88,
+          "network_recv": 18.69
+        },
+        {
+          "timestamp": 30,
+          "gpu_util": 79.2,
+          "gpu_memory": 7.1,
+          "cpu_util": 50.7,
+          "memory_util": 41.4,
+          "disk_io": 178.1,
+          "network_sent": 0.85,
+          "network_recv": 16.89
+        },
+        {
+          "timestamp": 60,
+          "gpu_util": 73.3,
+          "gpu_memory": 8.4,
+          "cpu_util": 36.1,
+          "memory_util": 31.5,
+          "disk_io": 142.8,
+          "network_sent": 0.64,
+          "network_recv": 17.75
+        },
+        {
+          "timestamp": 90,
+          "gpu_util": 79.8,
+          "gpu_memory": 7.7,
+          "cpu_util": 31.6,
+          "memory_util": 29.7,
+          "disk_io": 76.7,
+          "network_sent": 1.87,
+          "network_recv": 21.42
+        },
+        {
+          "timestamp": 120,
+          "gpu_util": 90.1,
+          "gpu_memory": 5,
+          "cpu_util": 52.8,
+          "memory_util": 37.5,
+          "disk_io": 128,
+          "network_sent": 0.73,
+          "network_recv": 10.5
+        },
+        {
+          "timestamp": 150,
+          "gpu_util": 75.1,
+          "gpu_memory": 8.8,
+          "cpu_util": 33.5,
+          "memory_util": 36.7,
+          "disk_io": 81.8,
+          "network_sent": 0.83,
+          "network_recv": 10.6
+        },
+        {
+          "timestamp": 180,
+          "gpu_util": 75.6,
+          "gpu_memory": 9.2,
+          "cpu_util": 32.5,
+          "memory_util": 40.5,
+          "disk_io": 90.5,
+          "network_sent": 0.16,
+          "network_recv": 8.24
+        },
+        {
+          "timestamp": 210,
+          "gpu_util": 82.8,
+          "gpu_memory": 7.5,
+          "cpu_util": 52.3,
+          "memory_util": 41.3,
+          "disk_io": 130.4,
+          "network_sent": 1.82,
+          "network_recv": 22.24
+        },
+        {
+          "timestamp": 240,
+          "gpu_util": 93.5,
+          "gpu_memory": 6.5,
+          "cpu_util": 31.1,
+          "memory_util": 29,
+          "disk_io": 150.8,
+          "network_sent": 0.1,
+          "network_recv": 21.14
+        },
+        {
+          "timestamp": 270,
+          "gpu_util": 71.3,
+          "gpu_memory": 6.5,
+          "cpu_util": 48.6,
+          "memory_util": 25.1,
+          "disk_io": 146.8,
+          "network_sent": 1.76,
+          "network_recv": 23.76
+        }
+      ],
+      "metadata": {
+        "os": "Linux-5.15.0-x86_64",
+        "python": "3.10.12",
+        "gpu": "NVIDIA A100 40GB",
+        "gpuCount": 1,
+        "cudaVersion": "11.8",
+        "framework": "PyTorch 2.1.0 + HuggingFace 4.36.0",
+        "gitCommit": "w2x3y4z",
+        "gitBranch": "roberta"
+      },
+      "logs": [
+        {
+          "timestamp": "2026-03-06T10:00:00.000Z",
+          "level": "INFO",
+          "message": "wandb: Currently logged in as: alex-ml"
+        },
+        {
+          "timestamp": "2026-03-06T10:00:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Tracking run with wandb version 0.16.3"
+        },
+        {
+          "timestamp": "2026-03-06T10:00:02.000Z",
+          "level": "INFO",
+          "message": "wandb: Run amber-wave-4 started"
+        },
+        {
+          "timestamp": "2026-03-06T10:00:03.000Z",
+          "level": "INFO",
+          "message": "wandb: Run data is saved locally in ./wandb/run-*"
+        },
+        {
+          "timestamp": "2026-03-06T10:01:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 1/2 - train_loss: 2.081 - train_acc: 0.307"
+        },
+        {
+          "timestamp": "2026-03-06T10:02:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 2/2 - train_loss: 1.883 - train_acc: 0.461"
+        }
+      ],
+      "files": [
+        {
+          "name": "checkpoint-epoch2.pt",
+          "size": 498000000,
+          "updatedAt": "2026-03-06T11:00:00Z"
+        },
+        {
+          "name": "config.json",
+          "size": 2048,
+          "updatedAt": "2026-03-06T10:00:00Z"
+        }
+      ],
+      "inputArtifacts": [],
+      "outputArtifacts": []
+    },
+    {
+      "id": "run-11",
+      "runId": "a5b6c7d8",
+      "name": "dancing-leaf-1",
+      "projectId": "proj-3",
+      "state": "finished",
+      "createdAt": "2026-02-28T15:00:00Z",
+      "updatedAt": "2026-02-28T16:30:00Z",
+      "duration": 5400,
+      "color": "#ff6384",
+      "visible": true,
+      "user": "alex-ml",
+      "tags": [
+        "ppo",
+        "stable-baselines"
+      ],
+      "notes": "PPO on CartPole-v1 — solved",
+      "config": {
+        "algorithm": "PPO",
+        "env": "CartPole-v1",
+        "learning_rate": 0.0003,
+        "n_steps": 2048,
+        "batch_size": 64,
+        "n_epochs": 10,
+        "gamma": 0.99,
+        "clip_range": 0.2
+      },
+      "summary": {
+        "mean_reward": 487.2,
+        "episode_length": 487,
+        "value_loss": 0.012,
+        "policy_loss": -0.008,
+        "epoch": 100,
+        "total_timesteps": 100000
+      },
+      "history": [
+        {
+          "step": 0,
+          "mean_reward": 42.4,
+          "episode_length": 103,
+          "value_loss": 1.0058,
+          "policy_loss": 0.5008,
+          "epoch": 0
+        },
+        {
+          "step": 1042,
+          "mean_reward": 114.6,
+          "episode_length": 137,
+          "value_loss": 0.9487,
+          "policy_loss": 0.4646,
+          "epoch": 4
+        },
+        {
+          "step": 2083,
+          "mean_reward": 146.9,
+          "episode_length": 179,
+          "value_loss": 0.8743,
+          "policy_loss": 0.4469,
+          "epoch": 8
+        },
+        {
+          "step": 3125,
+          "mean_reward": 174,
+          "episode_length": 199,
+          "value_loss": 0.8226,
+          "policy_loss": 0.4114,
+          "epoch": 13
+        },
+        {
+          "step": 4167,
+          "mean_reward": 231.8,
+          "episode_length": 226,
+          "value_loss": 0.7521,
+          "policy_loss": 0.3927,
+          "epoch": 17
+        },
+        {
+          "step": 5208,
+          "mean_reward": 252.9,
+          "episode_length": 252,
+          "value_loss": 0.6892,
+          "policy_loss": 0.3608,
+          "epoch": 21
+        },
+        {
+          "step": 6250,
+          "mean_reward": 272.3,
+          "episode_length": 282,
+          "value_loss": 0.6403,
+          "policy_loss": 0.3407,
+          "epoch": 25
+        },
+        {
+          "step": 7292,
+          "mean_reward": 313.6,
+          "episode_length": 298,
+          "value_loss": 0.5631,
+          "policy_loss": 0.3238,
+          "epoch": 29
+        },
+        {
+          "step": 8333,
+          "mean_reward": 329.9,
+          "episode_length": 307,
+          "value_loss": 0.5341,
+          "policy_loss": 0.3115,
+          "epoch": 33
+        },
+        {
+          "step": 9375,
+          "mean_reward": 335.8,
+          "episode_length": 329,
+          "value_loss": 0.4911,
+          "policy_loss": 0.2936,
+          "epoch": 38
+        },
+        {
+          "step": 10417,
+          "mean_reward": 375.9,
+          "episode_length": 362,
+          "value_loss": 0.448,
+          "policy_loss": 0.2709,
+          "epoch": 42
+        },
+        {
+          "step": 11458,
+          "mean_reward": 386.9,
+          "episode_length": 364,
+          "value_loss": 0.4145,
+          "policy_loss": 0.255,
+          "epoch": 46
+        },
+        {
+          "step": 12500,
+          "mean_reward": 398.9,
+          "episode_length": 374,
+          "value_loss": 0.384,
+          "policy_loss": 0.2391,
+          "epoch": 50
+        },
+        {
+          "step": 13542,
+          "mean_reward": 415.7,
+          "episode_length": 383,
+          "value_loss": 0.3869,
+          "policy_loss": 0.2206,
+          "epoch": 54
+        },
+        {
+          "step": 14583,
+          "mean_reward": 418.3,
+          "episode_length": 393,
+          "value_loss": 0.3247,
+          "policy_loss": 0.2018,
+          "epoch": 58
+        },
+        {
+          "step": 15625,
+          "mean_reward": 423.5,
+          "episode_length": 397,
+          "value_loss": 0.308,
+          "policy_loss": 0.1885,
+          "epoch": 63
+        },
+        {
+          "step": 16667,
+          "mean_reward": 419,
+          "episode_length": 420,
+          "value_loss": 0.2795,
+          "policy_loss": 0.1906,
+          "epoch": 67
+        },
+        {
+          "step": 17708,
+          "mean_reward": 433.6,
+          "episode_length": 414,
+          "value_loss": 0.2549,
+          "policy_loss": 0.1823,
+          "epoch": 71
+        },
+        {
+          "step": 18750,
+          "mean_reward": 450.8,
+          "episode_length": 425,
+          "value_loss": 0.2546,
+          "policy_loss": 0.1702,
+          "epoch": 75
+        },
+        {
+          "step": 19792,
+          "mean_reward": 437.1,
+          "episode_length": 446,
+          "value_loss": 0.2054,
+          "policy_loss": 0.1555,
+          "epoch": 79
+        },
+        {
+          "step": 20833,
+          "mean_reward": 455.4,
+          "episode_length": 436,
+          "value_loss": 0.2305,
+          "policy_loss": 0.152,
+          "epoch": 83
+        },
+        {
+          "step": 21875,
+          "mean_reward": 460.3,
+          "episode_length": 456,
+          "value_loss": 0.222,
+          "policy_loss": 0.1337,
+          "epoch": 88
+        },
+        {
+          "step": 22917,
+          "mean_reward": 451.6,
+          "episode_length": 457,
+          "value_loss": 0.1645,
+          "policy_loss": 0.1259,
+          "epoch": 92
+        },
+        {
+          "step": 23958,
+          "mean_reward": 455.8,
+          "episode_length": 454,
+          "value_loss": 0.1964,
+          "policy_loss": 0.1125,
+          "epoch": 96
+        },
+        {
+          "step": 25000,
+          "mean_reward": 452.4,
+          "episode_length": 458,
+          "value_loss": 0.1485,
+          "policy_loss": 0.1059,
+          "epoch": 100
+        }
+      ],
+      "systemMetrics": [
+        {
+          "timestamp": 0,
+          "gpu_util": 94.2,
+          "gpu_memory": 6.2,
+          "cpu_util": 41.5,
+          "memory_util": 37.6,
+          "disk_io": 163.9,
+          "network_sent": 1.74,
+          "network_recv": 18.2
+        },
+        {
+          "timestamp": 30,
+          "gpu_util": 94.2,
+          "gpu_memory": 4.5,
+          "cpu_util": 52.3,
+          "memory_util": 43.1,
+          "disk_io": 179.7,
+          "network_sent": 1.5,
+          "network_recv": 22.43
+        },
+        {
+          "timestamp": 60,
+          "gpu_util": 74.8,
+          "gpu_memory": 9,
+          "cpu_util": 43.6,
+          "memory_util": 27.6,
+          "disk_io": 140.9,
+          "network_sent": 0.69,
+          "network_recv": 24.02
+        },
+        {
+          "timestamp": 90,
+          "gpu_util": 83.3,
+          "gpu_memory": 8.8,
+          "cpu_util": 38.8,
+          "memory_util": 25,
+          "disk_io": 198.6,
+          "network_sent": 1.11,
+          "network_recv": 6.29
+        },
+        {
+          "timestamp": 120,
+          "gpu_util": 78.6,
+          "gpu_memory": 7.5,
+          "cpu_util": 43.6,
+          "memory_util": 40.5,
+          "disk_io": 109.5,
+          "network_sent": 0.79,
+          "network_recv": 7.62
+        },
+        {
+          "timestamp": 150,
+          "gpu_util": 84.9,
+          "gpu_memory": 7,
+          "cpu_util": 56.4,
+          "memory_util": 38.4,
+          "disk_io": 162.3,
+          "network_sent": 1.64,
+          "network_recv": 15.71
+        },
+        {
+          "timestamp": 180,
+          "gpu_util": 73.3,
+          "gpu_memory": 7,
+          "cpu_util": 46.5,
+          "memory_util": 43.5,
+          "disk_io": 151.8,
+          "network_sent": 0.38,
+          "network_recv": 24.61
+        },
+        {
+          "timestamp": 210,
+          "gpu_util": 91.7,
+          "gpu_memory": 5.5,
+          "cpu_util": 36.3,
+          "memory_util": 36.5,
+          "disk_io": 172.8,
+          "network_sent": 0.22,
+          "network_recv": 16.82
+        },
+        {
+          "timestamp": 240,
+          "gpu_util": 83.7,
+          "gpu_memory": 6.3,
+          "cpu_util": 38,
+          "memory_util": 43.8,
+          "disk_io": 198.6,
+          "network_sent": 1.42,
+          "network_recv": 20.15
+        },
+        {
+          "timestamp": 270,
+          "gpu_util": 78.4,
+          "gpu_memory": 8.3,
+          "cpu_util": 56.9,
+          "memory_util": 41.9,
+          "disk_io": 178.8,
+          "network_sent": 0.29,
+          "network_recv": 22.14
+        },
+        {
+          "timestamp": 300,
+          "gpu_util": 71.5,
+          "gpu_memory": 9.4,
+          "cpu_util": 52.5,
+          "memory_util": 30.5,
+          "disk_io": 63.4,
+          "network_sent": 0.93,
+          "network_recv": 13.3
+        },
+        {
+          "timestamp": 330,
+          "gpu_util": 73.3,
+          "gpu_memory": 7.7,
+          "cpu_util": 36.1,
+          "memory_util": 41.6,
+          "disk_io": 199.4,
+          "network_sent": 0.78,
+          "network_recv": 10.24
+        },
+        {
+          "timestamp": 360,
+          "gpu_util": 78.4,
+          "gpu_memory": 9.5,
+          "cpu_util": 45.8,
+          "memory_util": 36.2,
+          "disk_io": 179.6,
+          "network_sent": 1.62,
+          "network_recv": 12.01
+        },
+        {
+          "timestamp": 390,
+          "gpu_util": 90.8,
+          "gpu_memory": 8.8,
+          "cpu_util": 41.1,
+          "memory_util": 37.6,
+          "disk_io": 109.3,
+          "network_sent": 0.7,
+          "network_recv": 16.41
+        },
+        {
+          "timestamp": 420,
+          "gpu_util": 81,
+          "gpu_memory": 6.4,
+          "cpu_util": 42.9,
+          "memory_util": 26.3,
+          "disk_io": 119.4,
+          "network_sent": 0.26,
+          "network_recv": 8.5
+        }
+      ],
+      "metadata": {
+        "os": "Linux-5.15.0-x86_64",
+        "python": "3.10.12",
+        "gpu": "NVIDIA RTX 3090",
+        "gpuCount": 1,
+        "cudaVersion": "11.8",
+        "framework": "Stable-Baselines3 2.2.1",
+        "gitCommit": "e9f0a1b",
+        "gitBranch": "ppo"
+      },
+      "logs": [
+        {
+          "timestamp": "2026-02-28T15:00:00.000Z",
+          "level": "INFO",
+          "message": "wandb: Currently logged in as: alex-ml"
+        },
+        {
+          "timestamp": "2026-02-28T15:00:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Tracking run with wandb version 0.16.3"
+        },
+        {
+          "timestamp": "2026-02-28T15:00:02.000Z",
+          "level": "INFO",
+          "message": "wandb: Run dancing-leaf-1 started"
+        },
+        {
+          "timestamp": "2026-02-28T15:00:03.000Z",
+          "level": "INFO",
+          "message": "wandb: Run data is saved locally in ./wandb/run-*"
+        },
+        {
+          "timestamp": "2026-02-28T15:10:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 1/100 - train_loss: 2.081 - train_acc: 0.307"
+        },
+        {
+          "timestamp": "2026-02-28T15:20:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 2/100 - train_loss: 1.883 - train_acc: 0.461"
+        },
+        {
+          "timestamp": "2026-02-28T15:30:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 3/100 - train_loss: 1.704 - train_acc: 0.575"
+        },
+        {
+          "timestamp": "2026-02-28T15:40:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 4/100 - train_loss: 1.542 - train_acc: 0.659"
+        },
+        {
+          "timestamp": "2026-02-28T15:50:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 5/100 - train_loss: 1.395 - train_acc: 0.721"
+        },
+        {
+          "timestamp": "2026-02-28T16:00:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 6/100 - train_loss: 1.262 - train_acc: 0.768"
+        },
+        {
+          "timestamp": "2026-02-28T16:10:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 7/100 - train_loss: 1.142 - train_acc: 0.802"
+        },
+        {
+          "timestamp": "2026-02-28T16:20:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 8/100 - train_loss: 1.033 - train_acc: 0.827"
+        },
+        {
+          "timestamp": "2026-02-28T16:30:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 9/100 - train_loss: 0.935 - train_acc: 0.846"
+        },
+        {
+          "timestamp": "2026-02-28T16:40:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 10/100 - train_loss: 0.846 - train_acc: 0.860"
+        },
+        {
+          "timestamp": "2026-02-28T16:40:00.000Z",
+          "level": "INFO",
+          "message": "Training complete. Best model saved."
+        },
+        {
+          "timestamp": "2026-02-28T16:40:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Synced run to https://wandb.ai/alex-ml/project"
+        }
+      ],
+      "files": [
+        {
+          "name": "ppo_cartpole.zip",
+          "size": 5120000,
+          "updatedAt": "2026-02-28T16:30:00Z"
+        },
+        {
+          "name": "config.yaml",
+          "size": 800,
+          "updatedAt": "2026-02-28T15:00:00Z"
+        }
+      ],
+      "inputArtifacts": [],
+      "outputArtifacts": []
+    },
+    {
+      "id": "run-12",
+      "runId": "f2g3h4i5",
+      "name": "frozen-lake-2",
+      "projectId": "proj-3",
+      "state": "finished",
+      "createdAt": "2026-03-01T10:00:00Z",
+      "updatedAt": "2026-03-01T11:30:00Z",
+      "duration": 5400,
+      "color": "#36a2eb",
+      "visible": true,
+      "user": "alex-ml",
+      "tags": [
+        "dqn",
+        "stable-baselines"
+      ],
+      "notes": "DQN on CartPole-v1 — moderate performance",
+      "config": {
+        "algorithm": "DQN",
+        "env": "CartPole-v1",
+        "learning_rate": 0.001,
+        "buffer_size": 50000,
+        "batch_size": 32,
+        "exploration_fraction": 0.1,
+        "gamma": 0.99,
+        "target_update_interval": 1000
+      },
+      "summary": {
+        "mean_reward": 312.5,
+        "episode_length": 312,
+        "value_loss": 0.045,
+        "policy_loss": 0,
+        "epoch": 100,
+        "total_timesteps": 100000
+      },
+      "history": [
+        {
+          "step": 0,
+          "mean_reward": 41.5,
+          "episode_length": 95,
+          "value_loss": 1.0049,
+          "policy_loss": 0.5033,
+          "epoch": 0
+        },
+        {
+          "step": 1042,
+          "mean_reward": 68,
+          "episode_length": 108,
+          "value_loss": 0.9622,
+          "policy_loss": 0.4625,
+          "epoch": 4
+        },
+        {
+          "step": 2083,
+          "mean_reward": 94.4,
+          "episode_length": 126,
+          "value_loss": 0.8685,
+          "policy_loss": 0.4383,
+          "epoch": 8
+        },
+        {
+          "step": 3125,
+          "mean_reward": 118.1,
+          "episode_length": 150,
+          "value_loss": 0.802,
+          "policy_loss": 0.4193,
+          "epoch": 13
+        },
+        {
+          "step": 4167,
+          "mean_reward": 162.2,
+          "episode_length": 185,
+          "value_loss": 0.7206,
+          "policy_loss": 0.3968,
+          "epoch": 17
+        },
+        {
+          "step": 5208,
+          "mean_reward": 172,
+          "episode_length": 171,
+          "value_loss": 0.6745,
+          "policy_loss": 0.3731,
+          "epoch": 21
+        },
+        {
+          "step": 6250,
+          "mean_reward": 177.3,
+          "episode_length": 211,
+          "value_loss": 0.6343,
+          "policy_loss": 0.3467,
+          "epoch": 25
+        },
+        {
+          "step": 7292,
+          "mean_reward": 203.8,
+          "episode_length": 213,
+          "value_loss": 0.597,
+          "policy_loss": 0.3134,
+          "epoch": 29
+        },
+        {
+          "step": 8333,
+          "mean_reward": 213.2,
+          "episode_length": 215,
+          "value_loss": 0.5245,
+          "policy_loss": 0.2944,
+          "epoch": 33
+        },
+        {
+          "step": 9375,
+          "mean_reward": 223.5,
+          "episode_length": 218,
+          "value_loss": 0.5212,
+          "policy_loss": 0.2912,
+          "epoch": 38
+        },
+        {
+          "step": 10417,
+          "mean_reward": 230.5,
+          "episode_length": 228,
+          "value_loss": 0.4371,
+          "policy_loss": 0.2657,
+          "epoch": 42
+        },
+        {
+          "step": 11458,
+          "mean_reward": 235.5,
+          "episode_length": 244,
+          "value_loss": 0.405,
+          "policy_loss": 0.2596,
+          "epoch": 46
+        },
+        {
+          "step": 12500,
+          "mean_reward": 265.5,
+          "episode_length": 241,
+          "value_loss": 0.3707,
+          "policy_loss": 0.236,
+          "epoch": 50
+        },
+        {
+          "step": 13542,
+          "mean_reward": 256.5,
+          "episode_length": 255,
+          "value_loss": 0.3707,
+          "policy_loss": 0.2123,
+          "epoch": 54
+        },
+        {
+          "step": 14583,
+          "mean_reward": 262.3,
+          "episode_length": 251,
+          "value_loss": 0.3437,
+          "policy_loss": 0.2071,
+          "epoch": 58
+        },
+        {
+          "step": 15625,
+          "mean_reward": 264.6,
+          "episode_length": 260,
+          "value_loss": 0.3113,
+          "policy_loss": 0.191,
+          "epoch": 63
+        },
+        {
+          "step": 16667,
+          "mean_reward": 263.7,
+          "episode_length": 267,
+          "value_loss": 0.2713,
+          "policy_loss": 0.1777,
+          "epoch": 67
+        },
+        {
+          "step": 17708,
+          "mean_reward": 292.3,
+          "episode_length": 274,
+          "value_loss": 0.2839,
+          "policy_loss": 0.1769,
+          "epoch": 71
+        },
+        {
+          "step": 18750,
+          "mean_reward": 273,
+          "episode_length": 289,
+          "value_loss": 0.2728,
+          "policy_loss": 0.1716,
+          "epoch": 75
+        },
+        {
+          "step": 19792,
+          "mean_reward": 296.3,
+          "episode_length": 288,
+          "value_loss": 0.2359,
+          "policy_loss": 0.1433,
+          "epoch": 79
+        },
+        {
+          "step": 20833,
+          "mean_reward": 294.6,
+          "episode_length": 284,
+          "value_loss": 0.231,
+          "policy_loss": 0.1359,
+          "epoch": 83
+        },
+        {
+          "step": 21875,
+          "mean_reward": 298.5,
+          "episode_length": 291,
+          "value_loss": 0.1826,
+          "policy_loss": 0.1267,
+          "epoch": 88
+        },
+        {
+          "step": 22917,
+          "mean_reward": 283.9,
+          "episode_length": 281,
+          "value_loss": 0.187,
+          "policy_loss": 0.122,
+          "epoch": 92
+        },
+        {
+          "step": 23958,
+          "mean_reward": 294.1,
+          "episode_length": 278,
+          "value_loss": 0.1694,
+          "policy_loss": 0.125,
+          "epoch": 96
+        },
+        {
+          "step": 25000,
+          "mean_reward": 295.5,
+          "episode_length": 307,
+          "value_loss": 0.1779,
+          "policy_loss": 0.113,
+          "epoch": 100
+        }
+      ],
+      "systemMetrics": [
+        {
+          "timestamp": 0,
+          "gpu_util": 73.3,
+          "gpu_memory": 6.1,
+          "cpu_util": 43.1,
+          "memory_util": 27.8,
+          "disk_io": 165.1,
+          "network_sent": 1.16,
+          "network_recv": 19.83
+        },
+        {
+          "timestamp": 30,
+          "gpu_util": 78.3,
+          "gpu_memory": 8,
+          "cpu_util": 39.8,
+          "memory_util": 27,
+          "disk_io": 79.9,
+          "network_sent": 0.39,
+          "network_recv": 13.36
+        },
+        {
+          "timestamp": 60,
+          "gpu_util": 74.3,
+          "gpu_memory": 5.1,
+          "cpu_util": 32.2,
+          "memory_util": 25.9,
+          "disk_io": 127.2,
+          "network_sent": 0.9,
+          "network_recv": 9.05
+        },
+        {
+          "timestamp": 90,
+          "gpu_util": 91.1,
+          "gpu_memory": 6.3,
+          "cpu_util": 48.3,
+          "memory_util": 37.2,
+          "disk_io": 177.7,
+          "network_sent": 1.38,
+          "network_recv": 17.49
+        },
+        {
+          "timestamp": 120,
+          "gpu_util": 92.5,
+          "gpu_memory": 8.4,
+          "cpu_util": 31.7,
+          "memory_util": 28.9,
+          "disk_io": 134.8,
+          "network_sent": 1.7,
+          "network_recv": 5.23
+        },
+        {
+          "timestamp": 150,
+          "gpu_util": 81.9,
+          "gpu_memory": 9.3,
+          "cpu_util": 49.5,
+          "memory_util": 37.8,
+          "disk_io": 128.9,
+          "network_sent": 1.7,
+          "network_recv": 18.53
+        },
+        {
+          "timestamp": 180,
+          "gpu_util": 76.3,
+          "gpu_memory": 4.2,
+          "cpu_util": 49.9,
+          "memory_util": 31.1,
+          "disk_io": 162.7,
+          "network_sent": 0.53,
+          "network_recv": 19.19
+        },
+        {
+          "timestamp": 210,
+          "gpu_util": 79.7,
+          "gpu_memory": 7.2,
+          "cpu_util": 45.1,
+          "memory_util": 43,
+          "disk_io": 186,
+          "network_sent": 1.93,
+          "network_recv": 16.39
+        },
+        {
+          "timestamp": 240,
+          "gpu_util": 79.2,
+          "gpu_memory": 6.8,
+          "cpu_util": 36.6,
+          "memory_util": 36,
+          "disk_io": 96.7,
+          "network_sent": 1.63,
+          "network_recv": 5.79
+        },
+        {
+          "timestamp": 270,
+          "gpu_util": 88.1,
+          "gpu_memory": 7.4,
+          "cpu_util": 45.2,
+          "memory_util": 28.3,
+          "disk_io": 105.8,
+          "network_sent": 1.18,
+          "network_recv": 18.98
+        },
+        {
+          "timestamp": 300,
+          "gpu_util": 91.7,
+          "gpu_memory": 9.2,
+          "cpu_util": 43.5,
+          "memory_util": 30.7,
+          "disk_io": 72.9,
+          "network_sent": 0.76,
+          "network_recv": 14.92
+        },
+        {
+          "timestamp": 330,
+          "gpu_util": 92.3,
+          "gpu_memory": 4,
+          "cpu_util": 40.7,
+          "memory_util": 44.7,
+          "disk_io": 55.6,
+          "network_sent": 0.88,
+          "network_recv": 12.84
+        },
+        {
+          "timestamp": 360,
+          "gpu_util": 80.3,
+          "gpu_memory": 9.5,
+          "cpu_util": 49.6,
+          "memory_util": 38.6,
+          "disk_io": 164.5,
+          "network_sent": 1.62,
+          "network_recv": 21.23
+        },
+        {
+          "timestamp": 390,
+          "gpu_util": 72.9,
+          "gpu_memory": 4.1,
+          "cpu_util": 52.7,
+          "memory_util": 36.4,
+          "disk_io": 95.2,
+          "network_sent": 1.74,
+          "network_recv": 18.82
+        },
+        {
+          "timestamp": 420,
+          "gpu_util": 83,
+          "gpu_memory": 5.5,
+          "cpu_util": 41.8,
+          "memory_util": 28.9,
+          "disk_io": 139.8,
+          "network_sent": 1.67,
+          "network_recv": 5.87
+        }
+      ],
+      "metadata": {
+        "os": "Linux-5.15.0-x86_64",
+        "python": "3.10.12",
+        "gpu": "NVIDIA RTX 3090",
+        "gpuCount": 1,
+        "cudaVersion": "11.8",
+        "framework": "Stable-Baselines3 2.2.1",
+        "gitCommit": "j6k7l8m",
+        "gitBranch": "dqn"
+      },
+      "logs": [
+        {
+          "timestamp": "2026-03-01T10:00:00.000Z",
+          "level": "INFO",
+          "message": "wandb: Currently logged in as: alex-ml"
+        },
+        {
+          "timestamp": "2026-03-01T10:00:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Tracking run with wandb version 0.16.3"
+        },
+        {
+          "timestamp": "2026-03-01T10:00:02.000Z",
+          "level": "INFO",
+          "message": "wandb: Run frozen-lake-2 started"
+        },
+        {
+          "timestamp": "2026-03-01T10:00:03.000Z",
+          "level": "INFO",
+          "message": "wandb: Run data is saved locally in ./wandb/run-*"
+        },
+        {
+          "timestamp": "2026-03-01T10:10:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 1/100 - train_loss: 2.081 - train_acc: 0.307"
+        },
+        {
+          "timestamp": "2026-03-01T10:20:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 2/100 - train_loss: 1.883 - train_acc: 0.461"
+        },
+        {
+          "timestamp": "2026-03-01T10:30:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 3/100 - train_loss: 1.704 - train_acc: 0.575"
+        },
+        {
+          "timestamp": "2026-03-01T10:40:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 4/100 - train_loss: 1.542 - train_acc: 0.659"
+        },
+        {
+          "timestamp": "2026-03-01T10:50:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 5/100 - train_loss: 1.395 - train_acc: 0.721"
+        },
+        {
+          "timestamp": "2026-03-01T11:00:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 6/100 - train_loss: 1.262 - train_acc: 0.768"
+        },
+        {
+          "timestamp": "2026-03-01T11:10:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 7/100 - train_loss: 1.142 - train_acc: 0.802"
+        },
+        {
+          "timestamp": "2026-03-01T11:20:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 8/100 - train_loss: 1.033 - train_acc: 0.827"
+        },
+        {
+          "timestamp": "2026-03-01T11:30:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 9/100 - train_loss: 0.935 - train_acc: 0.846"
+        },
+        {
+          "timestamp": "2026-03-01T11:40:03.000Z",
+          "level": "INFO",
+          "message": "Epoch 10/100 - train_loss: 0.846 - train_acc: 0.860"
+        },
+        {
+          "timestamp": "2026-03-01T11:40:00.000Z",
+          "level": "INFO",
+          "message": "Training complete. Best model saved."
+        },
+        {
+          "timestamp": "2026-03-01T11:40:01.000Z",
+          "level": "INFO",
+          "message": "wandb: Synced run to https://wandb.ai/alex-ml/project"
+        }
+      ],
+      "files": [
+        {
+          "name": "dqn_cartpole.zip",
+          "size": 4096000,
+          "updatedAt": "2026-03-01T11:30:00Z"
+        },
+        {
+          "name": "config.yaml",
+          "size": 800,
+          "updatedAt": "2026-03-01T10:00:00Z"
+        }
+      ],
+      "inputArtifacts": [],
+      "outputArtifacts": []
+    }
+  ],
+  "sweeps": [
+    {
+      "id": "sweep-1",
+      "sweepId": "abc123xy",
+      "projectId": "proj-1",
+      "name": "ResNet LR Sweep",
+      "state": "finished",
+      "createdAt": "2026-02-20T09:00:00Z",
+      "method": "bayes",
+      "metric": {
+        "name": "val_acc",
+        "goal": "maximize"
+      },
+      "parameters": {
+        "learning_rate": {
+          "min": 0.0001,
+          "max": 0.01,
+          "distribution": "log_uniform"
+        },
+        "batch_size": {
+          "values": [
+            32,
+            64,
+            128
+          ]
+        },
+        "dropout": {
+          "min": 0.1,
+          "max": 0.5,
+          "distribution": "uniform"
+        },
+        "optimizer": {
+          "values": [
+            "adam",
+            "sgd",
+            "adamw"
+          ]
+        }
+      },
+      "runCount": 8,
+      "bestRun": {
+        "runId": "sr-3",
+        "name": "crimson-breeze-4",
+        "val_acc": 0.918,
+        "config": {
+          "learning_rate": 0.0003,
+          "batch_size": 64,
+          "dropout": 0.2,
+          "optimizer": "adamw"
+        }
+      },
+      "sweepRuns": [
+        {
+          "runId": "sr-1",
+          "config": {
+            "learning_rate": 0.001,
+            "batch_size": 64,
+            "dropout": 0.3,
+            "optimizer": "adam"
+          },
+          "val_acc": 0.876
+        },
+        {
+          "runId": "sr-2",
+          "config": {
+            "learning_rate": 0.0005,
+            "batch_size": 32,
+            "dropout": 0.2,
+            "optimizer": "adam"
+          },
+          "val_acc": 0.889
+        },
+        {
+          "runId": "sr-3",
+          "config": {
+            "learning_rate": 0.0003,
+            "batch_size": 64,
+            "dropout": 0.2,
+            "optimizer": "adamw"
+          },
+          "val_acc": 0.918
+        },
+        {
+          "runId": "sr-4",
+          "config": {
+            "learning_rate": 0.005,
+            "batch_size": 128,
+            "dropout": 0.4,
+            "optimizer": "sgd"
+          },
+          "val_acc": 0.812
+        },
+        {
+          "runId": "sr-5",
+          "config": {
+            "learning_rate": 0.0001,
+            "batch_size": 64,
+            "dropout": 0.1,
+            "optimizer": "adam"
+          },
+          "val_acc": 0.895
+        },
+        {
+          "runId": "sr-6",
+          "config": {
+            "learning_rate": 0.003,
+            "batch_size": 32,
+            "dropout": 0.5,
+            "optimizer": "sgd"
+          },
+          "val_acc": 0.841
+        },
+        {
+          "runId": "sr-7",
+          "config": {
+            "learning_rate": 0.0008,
+            "batch_size": 128,
+            "dropout": 0.3,
+            "optimizer": "adamw"
+          },
+          "val_acc": 0.901
+        },
+        {
+          "runId": "sr-8",
+          "config": {
+            "learning_rate": 0.0002,
+            "batch_size": 64,
+            "dropout": 0.15,
+            "optimizer": "adamw"
+          },
+          "val_acc": 0.911
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "art-1",
+      "name": "cifar10-dataset",
+      "type": "dataset",
+      "projectId": "proj-1",
+      "description": "CIFAR-10 training and validation splits",
+      "createdAt": "2026-02-15T12:00:00Z",
+      "versions": [
+        {
+          "version": "v0",
+          "alias": [
+            "latest"
+          ],
+          "size": 178257920,
+          "createdAt": "2026-02-15T12:00:00Z",
+          "createdBy": "alex-ml",
+          "metadata": {
+            "num_train": 50000,
+            "num_val": 10000,
+            "classes": 10,
+            "image_size": "32x32"
+          },
+          "files": [
+            {
+              "name": "train.tar.gz",
+              "size": 160000000
+            },
+            {
+              "name": "val.tar.gz",
+              "size": 18000000
+            },
+            {
+              "name": "metadata.json",
+              "size": 257920
+            }
+          ],
+          "usedBy": [
+            "run-1",
+            "run-2",
+            "run-3"
+          ]
+        },
+        {
+          "version": "v1",
+          "alias": [
+            "latest",
+            "augmented"
+          ],
+          "size": 267000000,
+          "createdAt": "2026-02-20T10:00:00Z",
+          "createdBy": "sarah-ds",
+          "metadata": {
+            "num_train": 50000,
+            "num_val": 10000,
+            "classes": 10,
+            "image_size": "32x32",
+            "augmented": true
+          },
+          "files": [
+            {
+              "name": "train_augmented.tar.gz",
+              "size": 248000000
+            },
+            {
+              "name": "val.tar.gz",
+              "size": 18000000
+            },
+            {
+              "name": "metadata.json",
+              "size": 1000000
+            }
+          ],
+          "usedBy": [
+            "run-4",
+            "run-5",
+            "run-6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art-2",
+      "name": "resnet50-model",
+      "type": "model",
+      "projectId": "proj-1",
+      "description": "Trained ResNet-50 model checkpoints",
+      "createdAt": "2026-03-01T10:45:00Z",
+      "versions": [
+        {
+          "version": "v0",
+          "alias": [],
+          "size": 102400000,
+          "createdAt": "2026-03-01T10:45:00Z",
+          "createdBy": "alex-ml",
+          "metadata": {
+            "architecture": "resnet50",
+            "val_acc": 0.876,
+            "epochs": 50
+          },
+          "files": [
+            {
+              "name": "model.pt",
+              "size": 102400000
+            }
+          ],
+          "usedBy": []
+        },
+        {
+          "version": "v1",
+          "alias": [
+            "latest"
+          ],
+          "size": 102400000,
+          "createdAt": "2026-03-01T16:30:00Z",
+          "createdBy": "sarah-ds",
+          "metadata": {
+            "architecture": "resnet50",
+            "val_acc": 0.891,
+            "epochs": 50,
+            "augmentation": true
+          },
+          "files": [
+            {
+              "name": "model.pt",
+              "size": 102400000
+            }
+          ],
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "id": "art-3",
+      "name": "efficientnet-model",
+      "type": "model",
+      "projectId": "proj-1",
+      "description": "Trained EfficientNet model checkpoints",
+      "createdAt": "2026-03-02T11:00:00Z",
+      "versions": [
+        {
+          "version": "v0",
+          "alias": [],
+          "size": 21200000,
+          "createdAt": "2026-03-02T11:00:00Z",
+          "createdBy": "alex-ml",
+          "metadata": {
+            "architecture": "efficientnet-b0",
+            "val_acc": 0.902,
+            "epochs": 40
+          },
+          "files": [
+            {
+              "name": "model.pt",
+              "size": 21200000
+            }
+          ],
+          "usedBy": []
+        },
+        {
+          "version": "v1",
+          "alias": [
+            "latest",
+            "best"
+          ],
+          "size": 36400000,
+          "createdAt": "2026-03-03T10:30:00Z",
+          "createdBy": "mike-eng",
+          "metadata": {
+            "architecture": "efficientnet-b2",
+            "val_acc": 0.918,
+            "epochs": 50
+          },
+          "files": [
+            {
+              "name": "model.pt",
+              "size": 36400000
+            }
+          ],
+          "usedBy": []
+        }
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "id": "report-1",
+      "title": "CIFAR-10 Baseline Comparison",
+      "projectId": "proj-1",
+      "description": "Comparing ResNet and EfficientNet architectures on CIFAR-10",
+      "authorId": "user-1",
+      "createdAt": "2026-03-02T11:00:00Z",
+      "updatedAt": "2026-03-04T16:30:00Z",
+      "viewCount": 42,
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "CIFAR-10 Architecture Comparison"
+        },
+        {
+          "type": "paragraph",
+          "text": "This report compares ResNet and EfficientNet architectures trained on CIFAR-10. We evaluate accuracy, training speed, and parameter efficiency."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Training Curves"
+        },
+        {
+          "type": "panel_grid",
+          "panels": [
+            {
+              "type": "line_chart",
+              "metric": "val_acc",
+              "title": "Validation Accuracy",
+              "runIds": [
+                "run-1",
+                "run-2",
+                "run-3",
+                "run-4"
+              ]
+            },
+            {
+              "type": "line_chart",
+              "metric": "train_loss",
+              "title": "Training Loss",
+              "runIds": [
+                "run-1",
+                "run-2",
+                "run-3",
+                "run-4"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Key Findings"
+        },
+        {
+          "type": "paragraph",
+          "text": "EfficientNet-B2 achieves the highest validation accuracy (91.8%) with 5.3M parameters, compared to ResNet-50's 87.6% with 25.6M parameters."
+        },
+        {
+          "type": "code_block",
+          "language": "python",
+          "code": "# Best config\nmodel = EfficientNet.from_pretrained('efficientnet-b2')\noptimizer = torch.optim.AdamW(model.parameters(), lr=3e-4)"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Conclusion"
+        },
+        {
+          "type": "paragraph",
+          "text": "EfficientNet models consistently outperform ResNet variants while using significantly fewer parameters. Recommended for production deployment."
+        }
+      ]
+    },
+    {
+      "id": "report-2",
+      "title": "Sentiment Analysis Results",
+      "projectId": "proj-2",
+      "description": "Comparison of BERT variants for sentiment analysis on IMDB",
+      "authorId": "user-2",
+      "createdAt": "2026-02-25T14:00:00Z",
+      "updatedAt": "2026-03-01T09:00:00Z",
+      "viewCount": 28,
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "Sentiment Analysis Model Comparison"
+        },
+        {
+          "type": "paragraph",
+          "text": "We compare BERT-base, DistilBERT, and BERT-large for binary sentiment classification on the IMDB movie reviews dataset."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "F1 Score Comparison"
+        },
+        {
+          "type": "panel_grid",
+          "panels": [
+            {
+              "type": "line_chart",
+              "metric": "f1",
+              "title": "F1 Score",
+              "runIds": [
+                "run-7",
+                "run-8",
+                "run-9"
+              ]
+            },
+            {
+              "type": "line_chart",
+              "metric": "eval_loss",
+              "title": "Evaluation Loss",
+              "runIds": [
+                "run-7",
+                "run-8",
+                "run-9"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Results Summary"
+        },
+        {
+          "type": "paragraph",
+          "text": "BERT-large achieves the best F1 score (0.908) but requires 4x more compute. DistilBERT offers the best speed-accuracy tradeoff at 0.871 F1 with 2x faster training."
+        }
+      ]
+    }
+  ],
+  "activeProjectId": "proj-1",
+  "activeRunId": null,
+  "selectedRunIds": [
+    "run-1",
+    "run-2",
+    "run-3",
+    "run-4",
+    "run-5",
+    "run-6"
+  ],
+  "workspace": {
+    "panelSections": [
+      {
+        "id": "section-1",
+        "name": "Charts",
+        "collapsed": false,
+        "panels": [
+          {
+            "id": "panel-1",
+            "type": "line_chart",
+            "metric": "train_loss",
+            "title": "train_loss"
+          },
+          {
+            "id": "panel-2",
+            "type": "line_chart",
+            "metric": "train_acc",
+            "title": "train_acc"
+          },
+          {
+            "id": "panel-3",
+            "type": "line_chart",
+            "metric": "val_loss",
+            "title": "val_loss"
+          },
+          {
+            "id": "panel-4",
+            "type": "line_chart",
+            "metric": "val_acc",
+            "title": "val_acc"
+          }
+        ]
+      }
+    ],
+    "runTableColumns": [
+      "name",
+      "state",
+      "createdAt",
+      "duration",
+      "train_loss",
+      "val_acc",
+      "config.learning_rate",
+      "config.model"
+    ],
+    "sortBy": "createdAt",
+    "sortOrder": "desc",
+    "filters": [],
+    "groupBy": null
+  },
+  "notifications": [
+    {
+      "id": "notif-1",
+      "type": "run_finished",
+      "runName": "crimson-breeze-4",
+      "timestamp": "2026-03-03T10:30:00Z",
+      "read": false
+    },
+    {
+      "id": "notif-2",
+      "type": "run_crashed",
+      "runName": "quiet-river-5",
+      "timestamp": "2026-03-04T07:45:00Z",
+      "read": false
+    },
+    {
+      "id": "notif-3",
+      "type": "run_finished",
+      "runName": "golden-sunset-1",
+      "timestamp": "2026-03-01T10:45:00Z",
+      "read": true
+    }
+  ]
+}

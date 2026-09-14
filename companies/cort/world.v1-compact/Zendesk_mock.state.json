@@ -1,0 +1,1960 @@
+{
+  "currentUser": {
+    "id": 1,
+    "name": "Maya Chen",
+    "email": "maya.chen@hearthway.example",
+    "role": "agent",
+    "phone": null,
+    "photo": null,
+    "organization_id": null,
+    "group_id": 1,
+    "time_zone": "America/New_York",
+    "locale": "en-US",
+    "signature": "Maya Chen | Residential Rental Consultant",
+    "notes": "w1; t1. Standard tariff quotations and accepted lease administration; no readiness overrides or unlisted concessions.",
+    "suspended": false,
+    "verified": true,
+    "active": true,
+    "created_at": "2021-09-08T12:00:00Z",
+    "updated_at": "2026-09-08T12:00:00Z",
+    "last_login_at": "2026-09-08T12:00:00Z",
+    "initials": "MC"
+  },
+  "users": [
+    {
+      "id": 1,
+      "name": "Maya Chen",
+      "email": "maya.chen@hearthway.example",
+      "role": "agent",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": 1,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "Maya Chen | Residential Rental Consultant",
+      "notes": "w1; t1. Standard tariff quotations and accepted lease administration; no readiness overrides or unlisted concessions.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2021-09-08T12:00:00Z",
+      "updated_at": "2026-09-08T12:00:00Z",
+      "last_login_at": "2026-09-08T12:00:00Z",
+      "initials": "MC"
+    },
+    {
+      "id": 2,
+      "name": "Eli Brooks",
+      "email": "eli.brooks@hearthway.example",
+      "role": "agent",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": 1,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "Eli Brooks | Inventory Controller",
+      "notes": "w2; t1 and t2. Primary group 1; shared Asset Reuse and Outlet Operations responsibilities. Supported inventory corrections and eligible reservations; no invented receipts, repair releases or retirement approvals.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2021-09-08T12:00:00Z",
+      "updated_at": "2026-09-08T12:00:00Z",
+      "last_login_at": "2026-09-08T12:00:00Z",
+      "initials": "EB"
+    },
+    {
+      "id": 3,
+      "name": "Nora Patel",
+      "email": "nora.patel@hearthway.example",
+      "role": "agent",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": 1,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "Nora Patel | Delivery and Pickup Dispatcher",
+      "notes": "w3; t1. Assign available crews within calendar and capacity limits. Appointment changes need recorded customer acceptance; no overtime under RV-1.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2021-09-08T12:00:00Z",
+      "updated_at": "2026-09-08T12:00:00Z",
+      "last_login_at": "2026-09-08T12:00:00Z",
+      "initials": "NP"
+    },
+    {
+      "id": 4,
+      "name": "Luis Romero",
+      "email": "luis.romero@hearthway.example",
+      "role": "agent",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": 2,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "Luis Romero | Refurbishment Supervisor",
+      "notes": "w4; t2. Sequence approved repair work and validate condition evidence. No structural-hold waiver or retirement-economic approval.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2021-09-08T12:00:00Z",
+      "updated_at": "2026-09-08T12:00:00Z",
+      "last_login_at": "2026-09-08T12:00:00Z",
+      "initials": "LR"
+    },
+    {
+      "id": 5,
+      "name": "Dana Whitfield",
+      "email": "dana.whitfield@hearthway.example",
+      "role": "agent",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": 2,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "Dana Whitfield | District Asset Manager",
+      "notes": "w5; t2. Approve district repair spending, allocation priorities and retirement within documented limits; capital commitments require regional approval.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2021-09-08T12:00:00Z",
+      "updated_at": "2026-09-08T12:00:00Z",
+      "last_login_at": "2026-09-08T12:00:00Z",
+      "initials": "DW"
+    },
+    {
+      "id": 6,
+      "name": "Simone Price",
+      "email": "simone.price@hearthway.example",
+      "role": "agent",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": 2,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "Simone Price | Outlet Manager",
+      "notes": "w6; t2. Accept authorized eligible transfers and price within district floors. No sale of rental-reserved assets or clearance of condition holds.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2021-09-08T12:00:00Z",
+      "updated_at": "2026-09-08T12:00:00Z",
+      "last_login_at": "2026-09-08T12:00:00Z",
+      "initials": "SP"
+    },
+    {
+      "id": 101,
+      "name": "Jordan Ellis",
+      "email": "jordan.ellis@household.example",
+      "role": "end-user",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": null,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "",
+      "notes": "H310; L310. 310 Maple Landing Drive, Durham, Apt 204.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2026-06-01T14:00:00Z",
+      "updated_at": "2026-09-07T19:10:00Z",
+      "last_login_at": "2026-09-07T19:10:00Z",
+      "initials": "JE"
+    },
+    {
+      "id": 102,
+      "name": "Priya Shah",
+      "email": "priya.shah@household.example",
+      "role": "end-user",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": null,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "",
+      "notes": "H311; F311. 311 Oak Terrace Court, Raleigh, Apt 102. Verified sofa access limit 220 cm.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2026-08-27T14:00:00Z",
+      "updated_at": "2026-09-02T14:00:00Z",
+      "last_login_at": "2026-09-02T14:00:00Z",
+      "initials": "PS"
+    },
+    {
+      "id": 103,
+      "name": "Mateo Rivera",
+      "email": "mateo.rivera@household.example",
+      "role": "end-user",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": null,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "",
+      "notes": "H312; F312. 312 Cedar Walk, Durham, Apt 3.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2026-08-28T15:00:00Z",
+      "updated_at": "2026-09-02T15:00:00Z",
+      "last_login_at": "2026-09-02T15:00:00Z",
+      "initials": "MR"
+    },
+    {
+      "id": 104,
+      "name": "Avery Morgan",
+      "email": "avery.morgan@northline.example",
+      "role": "end-user",
+      "phone": null,
+      "photo": null,
+      "organization_id": 1,
+      "group_id": null,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "",
+      "notes": "H320; accepted order F320.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2026-08-19T14:00:00Z",
+      "updated_at": "2026-09-07T14:00:00Z",
+      "last_login_at": "2026-09-07T14:00:00Z",
+      "initials": "AM"
+    },
+    {
+      "id": 105,
+      "name": "Samira Khan",
+      "email": "samira.khan@household.example",
+      "role": "end-user",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": null,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "",
+      "notes": "H321; accepted order F321.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2026-08-21T14:00:00Z",
+      "updated_at": "2026-09-04T15:00:00Z",
+      "last_login_at": "2026-09-04T15:00:00Z",
+      "initials": "SK"
+    },
+    {
+      "id": 106,
+      "name": "Theo Grant",
+      "email": "theo.grant@northline.example",
+      "role": "end-user",
+      "phone": null,
+      "photo": null,
+      "organization_id": 1,
+      "group_id": null,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "",
+      "notes": "H322; L322 active through October 31.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2026-08-03T14:00:00Z",
+      "updated_at": "2026-09-07T16:00:00Z",
+      "last_login_at": "2026-09-07T16:00:00Z",
+      "initials": "TG"
+    },
+    {
+      "id": 107,
+      "name": "Lena Ortiz",
+      "email": "lena.ortiz@trianglevisiting.example",
+      "role": "end-user",
+      "phone": null,
+      "photo": null,
+      "organization_id": 2,
+      "group_id": null,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "",
+      "notes": "H323; L323; visiting researcher.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2026-05-12T14:00:00Z",
+      "updated_at": "2026-09-07T17:00:00Z",
+      "last_login_at": "2026-09-07T17:00:00Z",
+      "initials": "LO"
+    },
+    {
+      "id": 108,
+      "name": "Caleb Ross",
+      "email": "caleb.ross@household.example",
+      "role": "end-user",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": null,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "",
+      "notes": "H324; L324; expected end September 22.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2026-04-10T14:00:00Z",
+      "updated_at": "2026-09-07T18:00:00Z",
+      "last_login_at": "2026-09-07T18:00:00Z",
+      "initials": "CR"
+    },
+    {
+      "id": 109,
+      "name": "Mei Tan",
+      "email": "mei.tan@trianglevisiting.example",
+      "role": "end-user",
+      "phone": null,
+      "photo": null,
+      "organization_id": 2,
+      "group_id": null,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "",
+      "notes": "H325; L325; add-on F325 accepted.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2026-06-08T14:00:00Z",
+      "updated_at": "2026-09-07T15:00:00Z",
+      "last_login_at": "2026-09-07T15:00:00Z",
+      "initials": "MT"
+    },
+    {
+      "id": 110,
+      "name": "Owen Clark",
+      "email": "owen.clark@household.example",
+      "role": "end-user",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": null,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "",
+      "notes": "H326; L326; desk add-on F326 accepted.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2026-07-15T14:00:00Z",
+      "updated_at": "2026-09-04T18:00:00Z",
+      "last_login_at": "2026-09-04T18:00:00Z",
+      "initials": "OC"
+    },
+    {
+      "id": 111,
+      "name": "Imani Reed",
+      "email": "imani.reed@household.example",
+      "role": "end-user",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": null,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "",
+      "notes": "H327; L327; departure September 16.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2026-05-01T14:00:00Z",
+      "updated_at": "2026-09-07T18:30:00Z",
+      "last_login_at": "2026-09-07T18:30:00Z",
+      "initials": "IR"
+    },
+    {
+      "id": 112,
+      "name": "Noah Bennett",
+      "email": "noah.bennett@household.example",
+      "role": "end-user",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": null,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "",
+      "notes": "H328; L328; possible October extension.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2026-06-24T14:00:00Z",
+      "updated_at": "2026-09-07T19:00:00Z",
+      "last_login_at": "2026-09-07T19:00:00Z",
+      "initials": "NB"
+    }
+  ],
+  "organizations": [
+    {
+      "id": 1,
+      "name": "Northline Relocation Sponsor",
+      "domain_names": [
+        "northline.example"
+      ],
+      "details": "Employer sponsor for selected relocating households",
+      "notes": "Individual household acceptance still required for appointments.",
+      "group_id": 1,
+      "shared_tickets": false,
+      "shared_comments": false,
+      "tags": [
+        "relocation"
+      ],
+      "created_at": "2023-01-10T14:00:00Z",
+      "updated_at": "2026-08-03T14:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Triangle Visiting Scholars Office",
+      "domain_names": [
+        "trianglevisiting.example"
+      ],
+      "details": "Sponsor for visiting researchers",
+      "notes": "No blanket authority to accept household substitutions.",
+      "group_id": 1,
+      "shared_tickets": false,
+      "shared_comments": false,
+      "tags": [
+        "academic"
+      ],
+      "created_at": "2022-08-15T14:00:00Z",
+      "updated_at": "2026-06-08T14:00:00Z"
+    }
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "name": "Rental Service and Delivery Coordination",
+      "description": "t1: requirements, lease administration, inventory coordination and dispatch",
+      "default": true,
+      "created_at": "2021-09-08T12:00:00Z",
+      "updated_at": "2026-09-01T12:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Asset Reuse and Outlet Operations",
+      "description": "t2: inventory, refurbishment, district asset management and outlet",
+      "default": false,
+      "created_at": "2021-09-08T12:00:00Z",
+      "updated_at": "2026-09-01T12:00:00Z"
+    }
+  ],
+  "tickets": [
+    {
+      "id": 1310,
+      "subject": "H310 / L310-v2 — departure date change",
+      "description": "Our departure moved to September 24. We need B1 and D1 until then. S1 can stay until then or be collected September 14. One final visit or two planned staged visits works. Please keep additional pre-tax charges within $70. Access: September 14 09:00–11:00 and September 24 09:00–12:00. Please send terms before changing the booking.",
+      "status": "open",
+      "type": "task",
+      "priority": "high",
+      "requester_id": 101,
+      "submitter_id": 101,
+      "assignee_id": 1,
+      "group_id": 1,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [
+        2,
+        3
+      ],
+      "tags": [
+        "extension",
+        "pickup",
+        "L310"
+      ],
+      "via": {
+        "channel": "email"
+      },
+      "satisfaction_rating": null,
+      "due_at": "2026-09-09T20:00:00Z",
+      "is_public": true,
+      "custom_fields": [],
+      "created_at": "2026-09-07T19:10:00Z",
+      "updated_at": "2026-09-08T11:45:00Z",
+      "comment_count": 2,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": "2026-09-08T20:00:00Z",
+        "breached": false
+      }
+    },
+    {
+      "id": 1311,
+      "subject": "H311 / F311 — September 17 sofa delivery",
+      "description": "Accepted one sofa at $60 monthly for September 17–December 16. Delivery window September 17 10:00–12:00. Please send exact dimensions for any proposed alternative before changing my selection.",
+      "status": "pending",
+      "type": "task",
+      "priority": "normal",
+      "requester_id": 102,
+      "submitter_id": 1,
+      "assignee_id": 1,
+      "group_id": 1,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [
+        2,
+        3
+      ],
+      "tags": [
+        "delivery",
+        "F311"
+      ],
+      "via": {
+        "channel": "email"
+      },
+      "satisfaction_rating": null,
+      "due_at": "2026-09-11T20:00:00Z",
+      "is_public": true,
+      "custom_fields": [],
+      "created_at": "2026-09-02T14:00:00Z",
+      "updated_at": "2026-09-04T14:00:00Z",
+      "comment_count": 2,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1312,
+      "subject": "H312 / F312 — September 18 queen bed delivery",
+      "description": "Accepted queen bed at $90 monthly for September 18–December 17, delivery September 18 10:00–12:00. An alternative bed needs my confirmation at the existing size, rate and window.",
+      "status": "open",
+      "type": "task",
+      "priority": "normal",
+      "requester_id": 103,
+      "submitter_id": 1,
+      "assignee_id": 1,
+      "group_id": 1,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [
+        2,
+        3
+      ],
+      "tags": [
+        "delivery",
+        "F312"
+      ],
+      "via": {
+        "channel": "email"
+      },
+      "satisfaction_rating": null,
+      "due_at": "2026-09-11T20:00:00Z",
+      "is_public": true,
+      "custom_fields": [],
+      "created_at": "2026-09-02T15:00:00Z",
+      "updated_at": "2026-09-04T14:15:00Z",
+      "comment_count": 2,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1313,
+      "subject": "H320 / F320 — receiving contact",
+      "description": "September 9 delivery remains accepted. Please add my building concierge as the arrival contact; I will provide the phone number.",
+      "status": "pending",
+      "type": "task",
+      "priority": "normal",
+      "requester_id": 104,
+      "submitter_id": 104,
+      "assignee_id": 3,
+      "group_id": 1,
+      "organization_id": 1,
+      "collaborator_ids": [],
+      "follower_ids": [
+        1
+      ],
+      "tags": [
+        "delivery",
+        "access"
+      ],
+      "via": {
+        "channel": "email"
+      },
+      "satisfaction_rating": null,
+      "due_at": "2026-09-08T20:00:00Z",
+      "is_public": true,
+      "custom_fields": [],
+      "created_at": "2026-09-07T14:00:00Z",
+      "updated_at": "2026-09-07T14:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1314,
+      "subject": "H321 / F321 — loading entrance clarification",
+      "description": "The September 10 delivery should use the west loading entrance. Building manager confirmation is still outstanding.",
+      "status": "open",
+      "type": "task",
+      "priority": "normal",
+      "requester_id": 105,
+      "submitter_id": 105,
+      "assignee_id": 3,
+      "group_id": 1,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [
+        1
+      ],
+      "tags": [
+        "delivery",
+        "access"
+      ],
+      "via": {
+        "channel": "web"
+      },
+      "satisfaction_rating": null,
+      "due_at": "2026-09-09T20:00:00Z",
+      "is_public": true,
+      "custom_fields": [],
+      "created_at": "2026-09-04T15:00:00Z",
+      "updated_at": "2026-09-04T15:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1315,
+      "subject": "H322 / L322 — sofa cushion question",
+      "description": "S4's left cushion feels softer than the right. Can you review whether a service visit is needed? The sofa remains at my home.",
+      "status": "open",
+      "type": "question",
+      "priority": "normal",
+      "requester_id": 106,
+      "submitter_id": 106,
+      "assignee_id": 4,
+      "group_id": 2,
+      "organization_id": 1,
+      "collaborator_ids": [],
+      "follower_ids": [
+        1,
+        2
+      ],
+      "tags": [
+        "condition",
+        "L322"
+      ],
+      "via": {
+        "channel": "email"
+      },
+      "satisfaction_rating": null,
+      "due_at": null,
+      "is_public": true,
+      "custom_fields": [],
+      "created_at": "2026-09-07T16:00:00Z",
+      "updated_at": "2026-09-07T16:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": "2026-09-08T20:00:00Z",
+        "breached": false
+      }
+    },
+    {
+      "id": 1316,
+      "subject": "H323 / L323 — September 30 pickup inquiry",
+      "description": "I expect to leave September 30 but do not have building elevator approval. Please hold off confirming a pickup time.",
+      "status": "pending",
+      "type": "task",
+      "priority": "normal",
+      "requester_id": 107,
+      "submitter_id": 107,
+      "assignee_id": 1,
+      "group_id": 1,
+      "organization_id": 2,
+      "collaborator_ids": [],
+      "follower_ids": [
+        3
+      ],
+      "tags": [
+        "pickup",
+        "access"
+      ],
+      "via": {
+        "channel": "email"
+      },
+      "satisfaction_rating": null,
+      "due_at": null,
+      "is_public": true,
+      "custom_fields": [],
+      "created_at": "2026-09-03T17:00:00Z",
+      "updated_at": "2026-09-03T17:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1317,
+      "subject": "H324 / L324 — armchair exchange inquiry",
+      "description": "Could A21 be exchanged for a firmer chair? Please send options and any charge before scheduling.",
+      "status": "open",
+      "type": "question",
+      "priority": "low",
+      "requester_id": 108,
+      "submitter_id": 108,
+      "assignee_id": 1,
+      "group_id": 1,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [
+        2
+      ],
+      "tags": [
+        "exchange"
+      ],
+      "via": {
+        "channel": "web"
+      },
+      "satisfaction_rating": null,
+      "due_at": null,
+      "is_public": true,
+      "custom_fields": [],
+      "created_at": "2026-09-07T18:00:00Z",
+      "updated_at": "2026-09-07T18:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": "2026-09-09T20:00:00Z",
+        "breached": false
+      }
+    },
+    {
+      "id": 1318,
+      "subject": "H325 / F325 — nightstand placement",
+      "description": "For the September 11 N22 add-on, please place it beside the window. Existing delivery window remains accepted.",
+      "status": "open",
+      "type": "task",
+      "priority": "low",
+      "requester_id": 109,
+      "submitter_id": 109,
+      "assignee_id": 3,
+      "group_id": 1,
+      "organization_id": 2,
+      "collaborator_ids": [],
+      "follower_ids": [
+        1
+      ],
+      "tags": [
+        "delivery"
+      ],
+      "via": {
+        "channel": "email"
+      },
+      "satisfaction_rating": null,
+      "due_at": "2026-09-10T20:00:00Z",
+      "is_public": true,
+      "custom_fields": [],
+      "created_at": "2026-09-07T15:00:00Z",
+      "updated_at": "2026-09-07T15:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1319,
+      "subject": "H326 / F326 — desk delivery contact",
+      "description": "The M22 desk order for September 15 is accepted. Please confirm whether the driver can call when leaving the warehouse.",
+      "status": "open",
+      "type": "question",
+      "priority": "normal",
+      "requester_id": 110,
+      "submitter_id": 110,
+      "assignee_id": 3,
+      "group_id": 1,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [],
+      "tags": [
+        "delivery"
+      ],
+      "via": {
+        "channel": "email"
+      },
+      "satisfaction_rating": null,
+      "due_at": null,
+      "is_public": true,
+      "custom_fields": [],
+      "created_at": "2026-09-04T18:00:00Z",
+      "updated_at": "2026-09-04T18:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": "2026-09-08T20:00:00Z",
+        "breached": false
+      }
+    },
+    {
+      "id": 1320,
+      "subject": "H327 / L327 — pickup parking permit",
+      "description": "September 16 pickup is booked. The management office has not yet issued the truck parking permit.",
+      "status": "hold",
+      "type": "task",
+      "priority": "normal",
+      "requester_id": 111,
+      "submitter_id": 111,
+      "assignee_id": 3,
+      "group_id": 1,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [
+        1
+      ],
+      "tags": [
+        "pickup",
+        "access"
+      ],
+      "via": {
+        "channel": "email"
+      },
+      "satisfaction_rating": null,
+      "due_at": "2026-09-14T20:00:00Z",
+      "is_public": true,
+      "custom_fields": [],
+      "created_at": "2026-09-07T18:30:00Z",
+      "updated_at": "2026-09-07T18:30:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1321,
+      "subject": "H328 / L328 — possible October extension",
+      "description": "My work assignment may continue through October. Please explain the renewal process; I cannot accept a new term yet.",
+      "status": "new",
+      "type": "question",
+      "priority": "normal",
+      "requester_id": 112,
+      "submitter_id": 112,
+      "assignee_id": 1,
+      "group_id": 1,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [],
+      "tags": [
+        "extension"
+      ],
+      "via": {
+        "channel": "email"
+      },
+      "satisfaction_rating": null,
+      "due_at": null,
+      "is_public": true,
+      "custom_fields": [],
+      "created_at": "2026-09-07T19:00:00Z",
+      "updated_at": "2026-09-07T19:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": "2026-09-08T20:00:00Z",
+        "breached": false
+      }
+    },
+    {
+      "id": 1322,
+      "subject": "B4 — cracked rail inspection follow-up",
+      "description": "INSP-B4-0904 records a cracked rail. B4 is at WH1-HOLD with structural hold through September 30. Repair scope and evidence requirements remain under review.",
+      "status": "hold",
+      "type": "problem",
+      "priority": "high",
+      "requester_id": 2,
+      "submitter_id": 2,
+      "assignee_id": 4,
+      "group_id": 2,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [
+        5
+      ],
+      "tags": [
+        "condition",
+        "repair"
+      ],
+      "via": {
+        "channel": "web"
+      },
+      "satisfaction_rating": null,
+      "due_at": null,
+      "is_public": false,
+      "custom_fields": [],
+      "created_at": "2026-09-04T16:00:00Z",
+      "updated_at": "2026-09-04T16:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1323,
+      "subject": "A22 — upholstery estimate awaiting fabric",
+      "description": "INSP-A22-0903 shows arm abrasion without reported structural defect. Preliminary estimate: 2.5 labor hours and $34 fabric. Matching fabric stock confirmation is outstanding; no release exists.",
+      "status": "pending",
+      "type": "task",
+      "priority": "normal",
+      "requester_id": 4,
+      "submitter_id": 4,
+      "assignee_id": 4,
+      "group_id": 2,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [
+        2,
+        5
+      ],
+      "tags": [
+        "repair"
+      ],
+      "via": {
+        "channel": "web"
+      },
+      "satisfaction_rating": null,
+      "due_at": "2026-09-10T20:00:00Z",
+      "is_public": false,
+      "custom_fields": [],
+      "created_at": "2026-09-03T18:00:00Z",
+      "updated_at": "2026-09-03T18:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1324,
+      "subject": "T22 — outlet floor placement review",
+      "description": "T22 was received August 28 under OR-T22-0828 and is priced at $165. Please review whether the dining display has room before moving it from outlet receiving storage.",
+      "status": "open",
+      "type": "task",
+      "priority": "low",
+      "requester_id": 6,
+      "submitter_id": 6,
+      "assignee_id": 6,
+      "group_id": 2,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [
+        5
+      ],
+      "tags": [
+        "outlet"
+      ],
+      "via": {
+        "channel": "web"
+      },
+      "satisfaction_rating": null,
+      "due_at": null,
+      "is_public": false,
+      "custom_fields": [],
+      "created_at": "2026-09-04T19:00:00Z",
+      "updated_at": "2026-09-04T19:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1325,
+      "subject": "C22 — outlet label replacement",
+      "description": "C22 is received outlet stock, unsold at $45. The condition label is faded; verify the receipt notes before printing a replacement.",
+      "status": "open",
+      "type": "task",
+      "priority": "low",
+      "requester_id": 6,
+      "submitter_id": 6,
+      "assignee_id": 6,
+      "group_id": 2,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [
+        2
+      ],
+      "tags": [
+        "outlet",
+        "condition"
+      ],
+      "via": {
+        "channel": "web"
+      },
+      "satisfaction_rating": null,
+      "due_at": null,
+      "is_public": false,
+      "custom_fields": [],
+      "created_at": "2026-09-07T14:30:00Z",
+      "updated_at": "2026-09-07T14:30:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1326,
+      "subject": "WH1 — scanner cradle discrepancy",
+      "description": "Receiving reports one scanner cradle at the repair desk while the supply count lists two. Recount requested; no furniture quantities should change from this report.",
+      "status": "open",
+      "type": "incident",
+      "priority": "low",
+      "requester_id": 4,
+      "submitter_id": 4,
+      "assignee_id": 2,
+      "group_id": 2,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [],
+      "tags": [
+        "inventory"
+      ],
+      "via": {
+        "channel": "web"
+      },
+      "satisfaction_rating": null,
+      "due_at": null,
+      "is_public": false,
+      "custom_fields": [],
+      "created_at": "2026-09-07T13:00:00Z",
+      "updated_at": "2026-09-07T13:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1327,
+      "subject": "SR1 — L22 display card missing",
+      "description": "L22 remains on display at SR1. Its specification card is missing; showroom staff request a replacement after the SKU is checked.",
+      "status": "open",
+      "type": "task",
+      "priority": "low",
+      "requester_id": 1,
+      "submitter_id": 1,
+      "assignee_id": 2,
+      "group_id": 1,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [],
+      "tags": [
+        "inventory"
+      ],
+      "via": {
+        "channel": "web"
+      },
+      "satisfaction_rating": null,
+      "due_at": null,
+      "is_public": false,
+      "custom_fields": [],
+      "created_at": "2026-09-04T17:00:00Z",
+      "updated_at": "2026-09-04T17:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1328,
+      "subject": "September repair supplies — purchase request",
+      "description": "The repair station requests $240 of cleaner and protective pads. Purchase authorization and vendor lead time have not yet been recorded.",
+      "status": "open",
+      "type": "task",
+      "priority": "normal",
+      "requester_id": 4,
+      "submitter_id": 4,
+      "assignee_id": 5,
+      "group_id": 2,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [
+        4
+      ],
+      "tags": [
+        "repair",
+        "spending"
+      ],
+      "via": {
+        "channel": "web"
+      },
+      "satisfaction_rating": null,
+      "due_at": "2026-09-10T20:00:00Z",
+      "is_public": false,
+      "custom_fields": [],
+      "created_at": "2026-09-07T15:30:00Z",
+      "updated_at": "2026-09-07T15:30:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1329,
+      "subject": "Outlet — August settlement reconciliation",
+      "description": "Outlet batch OUT-AUG31 reports $1840 gross receipts. Accounting has requested receipt references before reconciliation; this request does not establish a new sale of T22 or C22.",
+      "status": "pending",
+      "type": "task",
+      "priority": "normal",
+      "requester_id": 6,
+      "submitter_id": 6,
+      "assignee_id": 6,
+      "group_id": 2,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [
+        5
+      ],
+      "tags": [
+        "outlet",
+        "billing"
+      ],
+      "via": {
+        "channel": "web"
+      },
+      "satisfaction_rating": null,
+      "due_at": null,
+      "is_public": false,
+      "custom_fields": [],
+      "created_at": "2026-09-03T16:00:00Z",
+      "updated_at": "2026-09-03T16:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1330,
+      "subject": "H325 / L325 — receipt copy requested",
+      "description": "Could you send a copy of my September receipt for the sponsor expense report? Please leave my existing delivery instructions unchanged.",
+      "status": "new",
+      "type": "question",
+      "priority": "low",
+      "requester_id": 109,
+      "submitter_id": 109,
+      "assignee_id": 1,
+      "group_id": 1,
+      "organization_id": 2,
+      "collaborator_ids": [],
+      "follower_ids": [],
+      "tags": [
+        "billing"
+      ],
+      "via": {
+        "channel": "email"
+      },
+      "satisfaction_rating": null,
+      "due_at": null,
+      "is_public": true,
+      "custom_fields": [],
+      "created_at": "2026-09-07T15:10:00Z",
+      "updated_at": "2026-09-07T15:10:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": "2026-09-09T20:00:00Z",
+        "breached": false
+      }
+    },
+    {
+      "id": 1331,
+      "subject": "H323 / L323 — dresser handle query",
+      "description": "One handle on D2 is loose. I have not attempted a repair. Please advise what information you need for a service assessment.",
+      "status": "open",
+      "type": "incident",
+      "priority": "normal",
+      "requester_id": 107,
+      "submitter_id": 107,
+      "assignee_id": 4,
+      "group_id": 2,
+      "organization_id": 2,
+      "collaborator_ids": [],
+      "follower_ids": [
+        1
+      ],
+      "tags": [
+        "condition"
+      ],
+      "via": {
+        "channel": "web"
+      },
+      "satisfaction_rating": null,
+      "due_at": null,
+      "is_public": true,
+      "custom_fields": [],
+      "created_at": "2026-09-07T17:00:00Z",
+      "updated_at": "2026-09-07T17:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": "2026-09-08T20:00:00Z",
+        "breached": false
+      }
+    },
+    {
+      "id": 1332,
+      "subject": "C2 — September 17 route paperwork",
+      "description": "Protected route P-C2-0917 has accepted stops and a 480-minute day. One building insurance certificate needs attaching before manifest release. Capacity remains committed.",
+      "status": "hold",
+      "type": "task",
+      "priority": "normal",
+      "requester_id": 3,
+      "submitter_id": 3,
+      "assignee_id": 3,
+      "group_id": 1,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [],
+      "tags": [
+        "dispatch",
+        "access"
+      ],
+      "via": {
+        "channel": "web"
+      },
+      "satisfaction_rating": null,
+      "due_at": "2026-09-15T20:00:00Z",
+      "is_public": false,
+      "custom_fields": [],
+      "created_at": "2026-09-07T16:30:00Z",
+      "updated_at": "2026-09-07T16:30:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1333,
+      "subject": "WH1 — September 28 routine-station roster",
+      "description": "Nine person-hours of the September 28 station are committed to protected work. Three hours remain available. Confirm technician attendance without increasing the published residual capacity.",
+      "status": "open",
+      "type": "task",
+      "priority": "normal",
+      "requester_id": 4,
+      "submitter_id": 4,
+      "assignee_id": 4,
+      "group_id": 2,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [
+        2
+      ],
+      "tags": [
+        "repair",
+        "capacity"
+      ],
+      "via": {
+        "channel": "web"
+      },
+      "satisfaction_rating": null,
+      "due_at": null,
+      "is_public": false,
+      "custom_fields": [],
+      "created_at": "2026-09-07T17:30:00Z",
+      "updated_at": "2026-09-07T17:30:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1334,
+      "subject": "September outlet assortment review",
+      "description": "Outlet stock review is due this week. Dining-table space is tight while compact accent pieces are selling faster. No additional retirement or markdown approval has been issued.",
+      "status": "open",
+      "type": "task",
+      "priority": "low",
+      "requester_id": 6,
+      "submitter_id": 6,
+      "assignee_id": 5,
+      "group_id": 2,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [
+        2,
+        6
+      ],
+      "tags": [
+        "outlet",
+        "inventory"
+      ],
+      "via": {
+        "channel": "web"
+      },
+      "satisfaction_rating": null,
+      "due_at": "2026-09-11T20:00:00Z",
+      "is_public": false,
+      "custom_fields": [],
+      "created_at": "2026-09-07T18:00:00Z",
+      "updated_at": "2026-09-07T18:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1201,
+      "subject": "H310 / L310 — August partial return completed",
+      "description": "Table T310 and chairs C310A/C310B returned August 14. Remaining items continue under L310-v2.",
+      "status": "closed",
+      "type": "task",
+      "priority": "normal",
+      "requester_id": 101,
+      "submitter_id": 1,
+      "assignee_id": 1,
+      "group_id": 1,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [
+        2,
+        3
+      ],
+      "tags": [
+        "pickup",
+        "L310",
+        "history"
+      ],
+      "via": {
+        "channel": "email"
+      },
+      "satisfaction_rating": null,
+      "due_at": null,
+      "is_public": true,
+      "custom_fields": [],
+      "created_at": "2026-08-10T14:00:00Z",
+      "updated_at": "2026-08-17T14:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": "2026-08-17T14:00:00Z",
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1202,
+      "subject": "S2 — prior return and routine release",
+      "description": "S2 returned September 3 and passed routine preparation September 4.",
+      "status": "solved",
+      "type": "task",
+      "priority": "normal",
+      "requester_id": 2,
+      "submitter_id": 2,
+      "assignee_id": 4,
+      "group_id": 2,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [
+        2
+      ],
+      "tags": [
+        "condition",
+        "history"
+      ],
+      "via": {
+        "channel": "web"
+      },
+      "satisfaction_rating": null,
+      "due_at": null,
+      "is_public": false,
+      "custom_fields": [],
+      "created_at": "2026-09-03T18:40:00Z",
+      "updated_at": "2026-09-04T20:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    },
+    {
+      "id": 1203,
+      "subject": "B2 — prior return and routine release",
+      "description": "B2 returned September 4 and passed routine preparation September 7.",
+      "status": "solved",
+      "type": "task",
+      "priority": "normal",
+      "requester_id": 2,
+      "submitter_id": 2,
+      "assignee_id": 4,
+      "group_id": 2,
+      "organization_id": null,
+      "collaborator_ids": [],
+      "follower_ids": [
+        2
+      ],
+      "tags": [
+        "condition",
+        "history"
+      ],
+      "via": {
+        "channel": "web"
+      },
+      "satisfaction_rating": null,
+      "due_at": null,
+      "is_public": false,
+      "custom_fields": [],
+      "created_at": "2026-09-04T18:10:00Z",
+      "updated_at": "2026-09-07T20:00:00Z",
+      "comment_count": 1,
+      "sla": {
+        "first_reply_at": null,
+        "next_reply_due": null,
+        "breached": false
+      }
+    }
+  ],
+  "comments": {
+    "1310": [
+      {
+        "id": 5100,
+        "ticket_id": 1310,
+        "author_id": 101,
+        "body": "Our departure moved to September 24. We need B1 and D1 through that date. S1 can stay or be collected September 14. One final visit or two staged visits is acceptable; incremental pre-tax ceiling $70. Access September 14 09:00–11:00 and September 24 09:00–12:00. Please send terms first.",
+        "html_body": "<p>Our departure moved to September 24. We need B1 and D1 through that date. S1 can stay or be collected September 14. One final visit or two staged visits is acceptable; incremental pre-tax ceiling $70. Access September 14 09:00–11:00 and September 24 09:00–12:00. Please send terms first.</p>",
+        "public": true,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-07T19:10:00Z"
+      },
+      {
+        "id": 5101,
+        "ticket_id": 1310,
+        "author_id": 1,
+        "body": "Intake only: REQ-H310-0907. Operative lease remains L310-v2 / TX-L310-2; AP310-14 remains booked for all three items. INV310-0815 and PAY310-0815 balance at $180 through September 14. Earlier table/chair return is ticket 1201. No quote, accepted change or transaction request yet. Source extracts and frozen rules are in workbook HW-RDU-0908.",
+        "html_body": "<p>Intake only: REQ-H310-0907. Operative lease remains L310-v2 / TX-L310-2; AP310-14 remains booked for all three items. INV310-0815 and PAY310-0815 balance at $180 through September 14. Earlier table/chair return is ticket 1201. No quote, accepted change or transaction request yet. Source extracts and frozen rules are in workbook HW-RDU-0908.</p>",
+        "public": false,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-08T11:45:00Z"
+      }
+    ],
+    "1311": [
+      {
+        "id": 5110,
+        "ticket_id": 1311,
+        "author_id": 102,
+        "body": "ACC-F311-1: I accept one sofa, $60 monthly, September 17–December 16, with delivery September 17 10:00–12:00. Please provide exact dimensions before proposing a different sofa.",
+        "html_body": "<p>ACC-F311-1: I accept one sofa, $60 monthly, September 17–December 16, with delivery September 17 10:00–12:00. Please provide exact dimensions before proposing a different sofa.</p>",
+        "public": true,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-02T14:00:00Z"
+      },
+      {
+        "id": 5111,
+        "ticket_id": 1311,
+        "author_id": 2,
+        "body": "F311-v1 export: AP311-17 booked; source field S1 is tentative expected-return sourcing, not an asset reservation. Access survey AS311 confirms 220 cm limit and room fit for 190 cm or 215 cm sofa. Customer confirmation for a specific alternative is absent.",
+        "html_body": "<p>F311-v1 export: AP311-17 booked; source field S1 is tentative expected-return sourcing, not an asset reservation. Access survey AS311 confirms 220 cm limit and room fit for 190 cm or 215 cm sofa. Customer confirmation for a specific alternative is absent.</p>",
+        "public": false,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-04T14:00:00Z"
+      }
+    ],
+    "1312": [
+      {
+        "id": 5120,
+        "ticket_id": 1312,
+        "author_id": 103,
+        "body": "ACC-F312-1: I accept a queen bed, $90 monthly, September 18–December 17, delivered September 18 10:00–12:00. Please confirm any alternative with me at the same size, rate and window.",
+        "html_body": "<p>ACC-F312-1: I accept a queen bed, $90 monthly, September 18–December 17, delivered September 18 10:00–12:00. Please confirm any alternative with me at the same size, rate and window.</p>",
+        "public": true,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-02T15:00:00Z"
+      },
+      {
+        "id": 5121,
+        "ticket_id": 1312,
+        "author_id": 2,
+        "body": "F312-v1 export: AP312-18 booked. B1 is tentative expected-return sourcing, not a reservation. Queen-Q specification is 210 x 165 x 110 cm assembled. No asset-specific substitution acceptance exists.",
+        "html_body": "<p>F312-v1 export: AP312-18 booked. B1 is tentative expected-return sourcing, not a reservation. Queen-Q specification is 210 x 165 x 110 cm assembled. No asset-specific substitution acceptance exists.</p>",
+        "public": false,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-04T14:15:00Z"
+      }
+    ],
+    "1313": [
+      {
+        "id": 5130,
+        "ticket_id": 1313,
+        "author_id": 104,
+        "body": "Please add my concierge as the September 9 arrival contact. Phone number to follow.",
+        "html_body": "<p>Please add my concierge as the September 9 arrival contact. Phone number to follow.</p>",
+        "public": true,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-07T14:00:00Z"
+      }
+    ],
+    "1314": [
+      {
+        "id": 5140,
+        "ticket_id": 1314,
+        "author_id": 105,
+        "body": "West loading entrance requested for September 10; manager approval is pending.",
+        "html_body": "<p>West loading entrance requested for September 10; manager approval is pending.</p>",
+        "public": true,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-04T15:00:00Z"
+      }
+    ],
+    "1315": [
+      {
+        "id": 5150,
+        "ticket_id": 1315,
+        "author_id": 106,
+        "body": "S4's left cushion feels softer. The sofa is still in my home; please assess whether service is needed.",
+        "html_body": "<p>S4's left cushion feels softer. The sofa is still in my home; please assess whether service is needed.</p>",
+        "public": true,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-07T16:00:00Z"
+      }
+    ],
+    "1316": [
+      {
+        "id": 5160,
+        "ticket_id": 1316,
+        "author_id": 107,
+        "body": "September 30 is my expected departure. Elevator approval is pending; no pickup time accepted yet.",
+        "html_body": "<p>September 30 is my expected departure. Elevator approval is pending; no pickup time accepted yet.</p>",
+        "public": true,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-03T17:00:00Z"
+      }
+    ],
+    "1317": [
+      {
+        "id": 5170,
+        "ticket_id": 1317,
+        "author_id": 108,
+        "body": "Please quote a firmer-chair exchange for A21 before scheduling anything.",
+        "html_body": "<p>Please quote a firmer-chair exchange for A21 before scheduling anything.</p>",
+        "public": true,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-07T18:00:00Z"
+      }
+    ],
+    "1318": [
+      {
+        "id": 5180,
+        "ticket_id": 1318,
+        "author_id": 109,
+        "body": "Please place N22 beside the window on September 11. Existing window remains accepted.",
+        "html_body": "<p>Please place N22 beside the window on September 11. Existing window remains accepted.</p>",
+        "public": true,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-07T15:00:00Z"
+      }
+    ],
+    "1319": [
+      {
+        "id": 5190,
+        "ticket_id": 1319,
+        "author_id": 110,
+        "body": "Can the driver call when leaving WH1 with M22 on September 15?",
+        "html_body": "<p>Can the driver call when leaving WH1 with M22 on September 15?</p>",
+        "public": true,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-04T18:00:00Z"
+      }
+    ],
+    "1320": [
+      {
+        "id": 5200,
+        "ticket_id": 1320,
+        "author_id": 111,
+        "body": "Truck permit for my booked September 16 pickup is still pending with management.",
+        "html_body": "<p>Truck permit for my booked September 16 pickup is still pending with management.</p>",
+        "public": true,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-07T18:30:00Z"
+      }
+    ],
+    "1321": [
+      {
+        "id": 5210,
+        "ticket_id": 1321,
+        "author_id": 112,
+        "body": "Please explain October renewal. My assignment has not been extended yet, so this is only an inquiry.",
+        "html_body": "<p>Please explain October renewal. My assignment has not been extended yet, so this is only an inquiry.</p>",
+        "public": true,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-07T19:00:00Z"
+      }
+    ],
+    "1322": [
+      {
+        "id": 5220,
+        "ticket_id": 1322,
+        "author_id": 2,
+        "body": "INSP-B4-0904: cracked rail; WH1-HOLD through September 30. No structural repair completion or release evidence.",
+        "html_body": "<p>INSP-B4-0904: cracked rail; WH1-HOLD through September 30. No structural repair completion or release evidence.</p>",
+        "public": false,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-04T16:00:00Z"
+      }
+    ],
+    "1323": [
+      {
+        "id": 5230,
+        "ticket_id": 1323,
+        "author_id": 4,
+        "body": "A22 estimate is preliminary: 2.5 hours plus $34 fabric. Verify fabric and authorize work before scheduling; condition remains cosmetic hold.",
+        "html_body": "<p>A22 estimate is preliminary: 2.5 hours plus $34 fabric. Verify fabric and authorize work before scheduling; condition remains cosmetic hold.</p>",
+        "public": false,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-03T18:00:00Z"
+      }
+    ],
+    "1324": [
+      {
+        "id": 5240,
+        "ticket_id": 1324,
+        "author_id": 6,
+        "body": "OR-T22-0828 confirms receipt. Asking price $165; unsold. Floor placement review outstanding.",
+        "html_body": "<p>OR-T22-0828 confirms receipt. Asking price $165; unsold. Floor placement review outstanding.</p>",
+        "public": false,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-04T19:00:00Z"
+      }
+    ],
+    "1325": [
+      {
+        "id": 5250,
+        "ticket_id": 1325,
+        "author_id": 6,
+        "body": "C22: OR-C22-0828 received, $45 asking price, unsold. Label must disclose seat-edge wear shown on receipt.",
+        "html_body": "<p>C22: OR-C22-0828 received, $45 asking price, unsold. Label must disclose seat-edge wear shown on receipt.</p>",
+        "public": false,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-07T14:30:00Z"
+      }
+    ],
+    "1326": [
+      {
+        "id": 5260,
+        "ticket_id": 1326,
+        "author_id": 4,
+        "body": "Scanner cradle count discrepancy: one observed, two in supply count. Recount pending.",
+        "html_body": "<p>Scanner cradle count discrepancy: one observed, two in supply count. Recount pending.</p>",
+        "public": false,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-07T13:00:00Z"
+      }
+    ],
+    "1327": [
+      {
+        "id": 5270,
+        "ticket_id": 1327,
+        "author_id": 1,
+        "body": "L22 specification card missing at SR1; asset physically remains on display.",
+        "html_body": "<p>L22 specification card missing at SR1; asset physically remains on display.</p>",
+        "public": false,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-04T17:00:00Z"
+      }
+    ],
+    "1328": [
+      {
+        "id": 5280,
+        "ticket_id": 1328,
+        "author_id": 4,
+        "body": "Request $240 cleaner/pads replenishment. Approval and delivery date pending.",
+        "html_body": "<p>Request $240 cleaner/pads replenishment. Approval and delivery date pending.</p>",
+        "public": false,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-07T15:30:00Z"
+      }
+    ],
+    "1329": [
+      {
+        "id": 5290,
+        "ticket_id": 1329,
+        "author_id": 6,
+        "body": "OUT-AUG31 gross receipts $1840; accounting requests receipt crosswalk. T22/C22 remain unsold current stock.",
+        "html_body": "<p>OUT-AUG31 gross receipts $1840; accounting requests receipt crosswalk. T22/C22 remain unsold current stock.</p>",
+        "public": false,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-03T16:00:00Z"
+      }
+    ],
+    "1330": [
+      {
+        "id": 5300,
+        "ticket_id": 1330,
+        "author_id": 109,
+        "body": "Please send the September receipt copy for my sponsor expense report.",
+        "html_body": "<p>Please send the September receipt copy for my sponsor expense report.</p>",
+        "public": true,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-07T15:10:00Z"
+      }
+    ],
+    "1331": [
+      {
+        "id": 5310,
+        "ticket_id": 1331,
+        "author_id": 107,
+        "body": "D2 has a loose handle. I have not repaired it; please advise what evidence you need.",
+        "html_body": "<p>D2 has a loose handle. I have not repaired it; please advise what evidence you need.</p>",
+        "public": true,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-07T17:00:00Z"
+      }
+    ],
+    "1332": [
+      {
+        "id": 5320,
+        "ticket_id": 1332,
+        "author_id": 3,
+        "body": "P-C2-0917 is protected at 480 minutes; insurance document pending. Do not treat paperwork status as released capacity.",
+        "html_body": "<p>P-C2-0917 is protected at 480 minutes; insurance document pending. Do not treat paperwork status as released capacity.</p>",
+        "public": false,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-07T16:30:00Z"
+      }
+    ],
+    "1333": [
+      {
+        "id": 5330,
+        "ticket_id": 1333,
+        "author_id": 4,
+        "body": "September 28 routine station: 12 person-hours gross, 9 protected, 3 residual. Roster confirmation outstanding.",
+        "html_body": "<p>September 28 routine station: 12 person-hours gross, 9 protected, 3 residual. Roster confirmation outstanding.</p>",
+        "public": false,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-07T17:30:00Z"
+      }
+    ],
+    "1334": [
+      {
+        "id": 5340,
+        "ticket_id": 1334,
+        "author_id": 6,
+        "body": "Review dining-table space and accent-piece sell-through. No new disposition or markdown decision has been made.",
+        "html_body": "<p>Review dining-table space and accent-piece sell-through. No new disposition or markdown decision has been made.</p>",
+        "public": false,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-07T18:00:00Z"
+      }
+    ],
+    "1201": [
+      {
+        "id": 5001,
+        "ticket_id": 1201,
+        "author_id": 1,
+        "body": "Completed: RCV310-0814 confirms T310/C310A/C310B collected and received August 14. TX-L310-2 executed against ACC-L310-2, leaving S1/B1/D1. INV310-0815 is $180 for August 15–September 14; PAY310-0815 settled it August 15. AP310-14 is booked September 14 09:00–11:00 for the remaining three pieces.",
+        "html_body": "<p>Completed: RCV310-0814 confirms T310/C310A/C310B collected and received August 14. TX-L310-2 executed against ACC-L310-2, leaving S1/B1/D1. INV310-0815 is $180 for August 15–September 14; PAY310-0815 settled it August 15. AP310-14 is booked September 14 09:00–11:00 for the remaining three pieces.</p>",
+        "public": true,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-08-17T14:00:00Z"
+      }
+    ],
+    "1202": [
+      {
+        "id": 5002,
+        "ticket_id": 1202,
+        "author_id": 4,
+        "body": "RCV-S2-0903 received at 14:40 local September 3. RC-S2-0904 completed September 4 16:00: inspection, cleaning and function checks passed; routine release acknowledged. S2 at WH1-A03, no reservation in September 8 snapshot.",
+        "html_body": "<p>RCV-S2-0903 received at 14:40 local September 3. RC-S2-0904 completed September 4 16:00: inspection, cleaning and function checks passed; routine release acknowledged. S2 at WH1-A03, no reservation in September 8 snapshot.</p>",
+        "public": false,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-04T20:00:00Z"
+      }
+    ],
+    "1203": [
+      {
+        "id": 5003,
+        "ticket_id": 1203,
+        "author_id": 4,
+        "body": "RCV-B2-0904 received at 14:10 local September 4. RC-B2-0907 completed September 7 16:00: inspection, cleaning and function checks passed; routine release acknowledged. B2 at WH1-B04, no reservation in September 8 snapshot.",
+        "html_body": "<p>RCV-B2-0904 received at 14:10 local September 4. RC-B2-0907 completed September 7 16:00: inspection, cleaning and function checks passed; routine release acknowledged. B2 at WH1-B04, no reservation in September 8 snapshot.</p>",
+        "public": false,
+        "type": "Comment",
+        "attachments": [],
+        "created_at": "2026-09-07T20:00:00Z"
+      }
+    ]
+  },
+  "views": [
+    {
+      "id": 1,
+      "title": "All open district work",
+      "description": "Shared unsolved service and operating requests",
+      "active": true,
+      "position": 0,
+      "type": "shared",
+      "conditions": {
+        "all": [
+          {
+            "field": "status",
+            "operator": "less_than",
+            "value": "solved"
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "id": 2,
+      "title": "Pending information",
+      "description": "Requests awaiting information",
+      "active": true,
+      "position": 1,
+      "type": "shared",
+      "conditions": {
+        "all": [
+          {
+            "field": "status",
+            "operator": "is",
+            "value": "pending"
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "id": 3,
+      "title": "Condition and operational holds",
+      "description": "Held work across the district",
+      "active": true,
+      "position": 2,
+      "type": "shared",
+      "conditions": {
+        "all": [
+          {
+            "field": "status",
+            "operator": "is",
+            "value": "hold"
+          }
+        ],
+        "any": []
+      }
+    }
+  ],
+  "macros": [
+    {
+      "id": 1,
+      "title": "Record evidence request",
+      "description": "Internal evidence-request starter",
+      "active": true,
+      "position": 0,
+      "actions": [
+        {
+          "field": "comment_mode",
+          "value": "internal"
+        },
+        {
+          "field": "comment_value",
+          "value": "Evidence requested. Record source ID, observed time, affected records and owner here before changing operational status."
+        }
+      ],
+      "restriction": null
+    }
+  ],
+  "tags": [
+    "extension",
+    "pickup",
+    "delivery",
+    "access",
+    "condition",
+    "repair",
+    "outlet",
+    "inventory",
+    "billing",
+    "dispatch",
+    "capacity",
+    "spending",
+    "exchange",
+    "history",
+    "L310",
+    "L322",
+    "F311",
+    "F312",
+    "relocation",
+    "academic"
+  ],
+  "ui": {
+    "activeView": 1,
+    "openTicketTabs": [],
+    "activeTicketId": null,
+    "searchQuery": "",
+    "selectedTicketIds": [],
+    "replyMode": "internal",
+    "sidebarCollapsed": false
+  }
+}

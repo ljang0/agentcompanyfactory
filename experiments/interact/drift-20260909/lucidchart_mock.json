@@ -1,0 +1,190 @@
+{
+  "app_id": "lucidchart_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "comments",
+    "connectors",
+    "currentUser",
+    "documents",
+    "folders",
+    "pages",
+    "shapes",
+    "templates",
+    "ui",
+    "users"
+  ],
+  "observed": [
+    "comments",
+    "connectors",
+    "currentUser",
+    "documents",
+    "folders",
+    "pages",
+    "shapes",
+    "templates",
+    "ui",
+    "users"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "email",
+        "avatar",
+        "avatarColor"
+      ],
+      "keyed_by_id": false
+    },
+    "folders": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "name",
+        "parentId",
+        "type",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "documents": {
+      "kind": "array",
+      "count": 9,
+      "record_fields": [
+        "id",
+        "title",
+        "folderId",
+        "ownerId",
+        "starred",
+        "status",
+        "thumbnailUrl",
+        "createdAt",
+        "updatedAt",
+        "lastOpenedAt",
+        "sharedWith",
+        "pageOrder"
+      ],
+      "keyed_by_id": false
+    },
+    "pages": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "documentId",
+        "name",
+        "order",
+        "width",
+        "height",
+        "gridVisible",
+        "gridSize",
+        "backgroundColor"
+      ],
+      "keyed_by_id": false
+    },
+    "shapes": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "pageId",
+        "type",
+        "category",
+        "x",
+        "y",
+        "width",
+        "height",
+        "rotation",
+        "text",
+        "fontSize",
+        "fontFamily",
+        "fontWeight",
+        "fontStyle",
+        "textAlign",
+        "textColor",
+        "fillColor",
+        "borderColor",
+        "borderWidth",
+        "borderStyle",
+        "opacity",
+        "locked",
+        "visible",
+        "zIndex",
+        "groupId"
+      ],
+      "keyed_by_id": false
+    },
+    "connectors": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "pageId",
+        "sourceShapeId",
+        "sourcePoint",
+        "targetShapeId",
+        "targetPoint",
+        "waypoints",
+        "lineStyle",
+        "lineWidth",
+        "lineColor",
+        "sourceArrow",
+        "targetArrow",
+        "label",
+        "labelPosition",
+        "routingType",
+        "zIndex"
+      ],
+      "keyed_by_id": false
+    },
+    "comments": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "pageId",
+        "shapeId",
+        "x",
+        "y",
+        "authorId",
+        "authorName",
+        "text",
+        "resolved",
+        "createdAt",
+        "replies"
+      ],
+      "keyed_by_id": false
+    },
+    "templates": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "name",
+        "category",
+        "icon",
+        "description"
+      ],
+      "keyed_by_id": false
+    },
+    "ui": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

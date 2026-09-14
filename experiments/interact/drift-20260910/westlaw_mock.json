@@ -1,0 +1,130 @@
+{
+  "app_id": "westlaw_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "cases",
+    "currentUser",
+    "favorites",
+    "filters",
+    "folders",
+    "history",
+    "notes",
+    "searchQuery",
+    "searchResults",
+    "statutes"
+  ],
+  "observed": [
+    "cases",
+    "currentUser",
+    "favorites",
+    "filters",
+    "folders",
+    "history",
+    "notes",
+    "searchQuery",
+    "searchResults",
+    "statutes"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "cases": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "title",
+        "citation",
+        "court",
+        "date",
+        "judge",
+        "type",
+        "keyciteFlag",
+        "topics",
+        "synopsis",
+        "headnotes",
+        "holdings",
+        "opinion",
+        "citingReferences"
+      ],
+      "keyed_by_id": false
+    },
+    "statutes": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "title",
+        "citation",
+        "type",
+        "jurisdiction",
+        "text",
+        "annotations",
+        "lastAmended",
+        "effectiveDate"
+      ],
+      "keyed_by_id": false
+    },
+    "folders": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "createdAt",
+        "documentIds"
+      ],
+      "keyed_by_id": false
+    },
+    "history": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "type",
+        "query",
+        "timestamp",
+        "resultCount"
+      ],
+      "keyed_by_id": false
+    },
+    "notes": {
+      "kind": "object",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "filters": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "searchQuery": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": ""
+    },
+    "searchResults": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "favorites": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  },
+  "note": "Observed with the three proposed hub_patches.json amendments applied (see experiments/PORT-NOTES-port-five.md); the app as shipped does not reach a served state."
+}

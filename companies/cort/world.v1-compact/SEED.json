@@ -1,0 +1,44 @@
+{
+  "seeded_at": "2026-09-07T18:14:26.684037+00:00",
+  "skill": {
+    "path": ".agents/skills/company-world-states/SKILL.md",
+    "hash": "5b1a00a5697fdc536f43f75699427e8314077a211a0b002a45af7f725ffdf655"
+  },
+  "reference_date": "2026-09-08T08:00:00-04:00",
+  "operating_scope": "Hearthway's Raleigh–Durham residential district: one warehouse, two rental showrooms, one associated outlet and four delivery crews. The apps contain a compact district working extract; district totals and historical summaries describe the larger operation. Zendesk and Sheets are shared communication and analytical workspaces. Authoritative rental, physical-execution and accounting transactions belong to external actors.",
+  "rationale": "Shared service records and source workbooks establish the unamended household request, existing future orders, actual inventory and constrained operating capacity. Historical and unrelated work surround the affected records. No offer, substitution acceptance, allocation decision or future execution result has been seeded.",
+  "assumptions": [
+    "All personal identities, addresses, operational records, prices and business rules are synthetic.",
+    "The scenario clock takes precedence over the environment date. All initial observations and execution acknowledgments end at September 8, 2026, 08:00 America/New_York. Future dates describe existing commitments or available capacity, never future actual results.",
+    "The district has 900 active leases and 12,000 current serialized pieces. Compact named extracts replace thousands of repetitive records; the matching-stock scope certificate explicitly accounts for alternatives outside the extract.",
+    "Zendesk's example agent and customer ID ranges are illustrative. Six agents and twelve end-users receive unique numeric IDs using the documented object shape.",
+    "All six workers receive both shared apps. Inventory Controller Eli Brooks has primary group 1 and also serves team 2, recorded in his user notes. Sheets has no identity field.",
+    "All amounts are USD. The billing handoff is pre-tax. L310 has no arrears, refunds, cancellation penalty or early-return penalty.",
+    "Operations run weekdays 08:00–17:00 with no modeled holiday closures during September 8–28. RV-1 and RC-1 capacity is residual after protected work.",
+    "The 13-week activity register is an aggregate extract from the external archive, not a claim that every underlying lease, asset or ticket is hydrated here.",
+    "External rental-system, crew, receiving, routine-preparation and accounting actors are runtime dependencies, not additional mocked apps. Initial materials document their evidence requirements but do not claim that their future responses have occurred.",
+    "The three affected households are individual customers, not members of either sponsor organization. Customer-facing correspondence must remain limited to the receiving household's facts."
+  ],
+  "receipt": {
+    "job": "world_states",
+    "model": "codex/gpt-6-astra",
+    "started_at": "2026-09-07T17:55:48.669351+00:00",
+    "prompt_hash": "ec95360e87c4af719bd5232a996a5c4f525400e8c105370a5c6d50c439519bbc",
+    "call_id": "596bbdcd76fe446e4b5d2303d3a7e6a67e8de5c03b348b16d2718e2eebea8043",
+    "attempt": 1,
+    "status": "complete",
+    "seconds": 1117.9535568929277,
+    "usage": {
+      "input_tokens": 30220,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 37150,
+      "reasoning_output_tokens": 1034
+    },
+    "cost_usd": null,
+    "tool_context_hash": null,
+    "tool_calls": [],
+    "session_id": "01a07d03-13ee-7ab3-bf84-0e6aea618c99"
+  },
+  "status": "seeded_readback_verified"
+}

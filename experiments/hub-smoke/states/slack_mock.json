@@ -1,0 +1,49 @@
+{
+  "currentUser": {"userId": "user_1", "fullName": "Marguerite Delacroix-Osei", "displayName": "Marguerite", "email": "marguerite@cobblestonebooks.example", "avatar": "https://picsum.photos/200/200?random=1", "title": "Store Manager", "status": "online", "statusMessage": "On the floor until 2", "statusEmoji": "📚", "timeZone": "America/Denver"},
+  "workspace": {"workspaceId": "ws_1", "workspaceName": "Cobblestone Books Collective", "icon": ""},
+  "users": [
+    {"userId": "user_1", "fullName": "Marguerite Delacroix-Osei", "displayName": "Marguerite", "email": "marguerite@cobblestonebooks.example", "avatar": "https://picsum.photos/200/200?random=1", "title": "Store Manager", "status": "online", "statusMessage": "On the floor until 2", "statusEmoji": "📚", "timeZone": "America/Denver"},
+    {"userId": "user_2", "fullName": "Idris Halvorsen", "displayName": "Idris", "email": "idris@cobblestonebooks.example", "avatar": "https://picsum.photos/200/200?random=2", "title": "Events Coordinator", "status": "online", "statusMessage": "", "statusEmoji": "", "timeZone": "America/Denver"},
+    {"userId": "user_3", "fullName": "Sunita Brandvold", "displayName": "Sunita", "email": "sunita@cobblestonebooks.example", "avatar": "https://picsum.photos/200/200?random=3", "title": "Buyer", "status": "away", "statusMessage": "At the distributor", "statusEmoji": "🚗", "timeZone": "America/Denver"}
+  ],
+  "channels": [
+    {"channelId": "general", "name": "general", "description": "Store-wide announcements", "topic": "Fall author series starts Sept 18", "isPrivate": false, "isStarred": true, "members": ["user_1", "user_2", "user_3"], "createdBy": "user_1", "createdAt": "2024-02-01T10:00:00Z", "pinnedMessages": ["msg_1"], "unreadCount": 0},
+    {"channelId": "events", "name": "author-events", "description": "Planning readings and signings", "topic": "", "isPrivate": false, "isStarred": false, "members": ["user_1", "user_2"], "createdBy": "user_2", "createdAt": "2024-03-15T10:00:00Z", "pinnedMessages": [], "unreadCount": 2},
+    {"channelId": "buying", "name": "buying-private", "description": "Order planning with the distributor", "topic": "", "isPrivate": true, "isStarred": false, "members": ["user_1", "user_3"], "createdBy": "user_3", "createdAt": "2024-04-02T10:00:00Z", "pinnedMessages": [], "unreadCount": 0}
+  ],
+  "messages": {
+    "general": [
+      {"messageId": "msg_1", "senderId": "user_1", "content": "Welcome to the Cobblestone Books Collective workspace. Schedules for September are posted in the back office.", "timestamp": "2026-09-01T15:00:00Z", "threadId": null, "reactions": [{"emoji": "👍", "users": ["user_2", "user_3"]}], "attachments": [], "isEdited": false},
+      {"messageId": "msg_2", "senderId": "user_2", "content": "Reminder: the Fall author series kicks off Sept 18 with Nadia Ferreira-Quill. Chairs arrive Thursday.", "timestamp": "2026-09-03T14:20:00Z", "threadId": "thread_1", "reactions": [], "attachments": [], "isEdited": false}
+    ],
+    "events": [
+      {"messageId": "msg_3", "senderId": "user_2", "content": "Do we have enough copies of Quill's new novel for the signing? I count 28 on the shelf.", "timestamp": "2026-09-03T16:05:00Z", "threadId": null, "reactions": [], "attachments": [], "isEdited": false},
+      {"messageId": "msg_4", "senderId": "user_2", "content": "Also need someone on the register from 6 to 8 that night.", "timestamp": "2026-09-03T16:06:00Z", "threadId": null, "reactions": [], "attachments": [], "isEdited": false}
+    ],
+    "buying": [
+      {"messageId": "msg_5", "senderId": "user_3", "content": "Distributor confirmed 40 more copies of the Quill novel arriving Sept 15.", "timestamp": "2026-09-03T17:30:00Z", "threadId": null, "reactions": [], "attachments": [], "isEdited": false}
+    ],
+    "dm_1": [
+      {"messageId": "msg_6", "senderId": "user_2", "content": "Can you approve the catering quote for the 18th?", "timestamp": "2026-09-03T18:00:00Z", "threadId": null, "reactions": [], "attachments": [], "isEdited": false}
+    ]
+  },
+  "threads": {
+    "thread_1": {"threadId": "thread_1", "parentMessageId": "msg_2", "channelId": "general", "dmId": null, "replies": [
+      {"messageId": "msg_7", "senderId": "user_1", "content": "I will handle the chair delivery.", "timestamp": "2026-09-03T14:32:00Z", "threadId": "thread_1", "reactions": [], "attachments": [], "isEdited": false}
+    ], "followers": ["user_1", "user_2"]}
+  },
+  "dms": [
+    {"dmId": "dm_1", "participants": ["user_1", "user_2"], "lastMessage": "Can you approve the catering quote for the 18th?", "lastTime": "2026-09-03T18:00:00Z", "unreadCount": 1}
+  ],
+  "bookmarkedMessages": ["msg_5"],
+  "callHistory": [
+    {"callId": "call_1", "type": "huddle", "participants": ["user_1", "user_3"], "dmId": null, "startTime": "2026-09-02T20:00:00Z", "duration": 840, "status": "completed"}
+  ],
+  "settings": {"theme": "light", "notifications": "all", "displayDensity": "comfortable", "showAvatars": true, "use24Hour": false},
+  "invitations": [
+    {"invitationId": "inv_1", "email": "weekend.staff@cobblestonebooks.example", "sentBy": "user_1", "sentAt": "2026-09-02T10:00:00Z", "status": "pending"}
+  ],
+  "notifications": [
+    {"notificationId": "notif_1", "type": "mention", "messageId": "msg_6", "channelId": null, "dmId": "dm_1", "userId": "user_2", "timestamp": "2026-09-03T18:00:00Z", "read": false}
+  ]
+}

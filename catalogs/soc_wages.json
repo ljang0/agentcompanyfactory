@@ -1,0 +1,374 @@
+{
+  "_meta": {
+    "doc": "Canonical per-SOC median annual wage (single source of truth) — BLS OEWS May 2024. coherence_check enforces every company's economic_grounding wage matches this table, killing cross-company drift. Wage values tagged verify:live for exact BLS confirmation.",
+    "source": "BLS OEWS May 2024",
+    "verify": "live"
+  },
+  "wages": {
+    "11-1021": {
+      "title": "General and Operations Managers",
+      "median_annual_wage_usd": 102950,
+      "source": "BLS OEWS May 2024"
+    },
+    "11-3012": {
+      "title": "Administrative Services Managers",
+      "median_annual_wage_usd": 108390,
+      "source": "BLS OEWS May 2024"
+    },
+    "11-3031": {
+      "title": "Financial Managers",
+      "median_annual_wage_usd": 161700,
+      "source": "BLS OEWS May 2024 (web-verified 2026-07-02: BLS OOH/OEWS Financial Managers median annual wage $161,700, May 2024)"
+    },
+    "11-3051": {
+      "title": "Industrial Production Managers",
+      "median_annual_wage_usd": 121440,
+      "source": "BLS OEWS May 2024"
+    },
+    "11-3061": {
+      "title": "Purchasing Managers",
+      "median_annual_wage_usd": 139510,
+      "source": "BLS OEWS May 2024"
+    },
+    "11-9041": {
+      "title": "Architectural and Engineering Managers",
+      "median_annual_wage_usd": 167740,
+      "source": "BLS OEWS May 2024 (national cross-industry, oesm24nat national_M2024_dl.xlsx A_MEDIAN)"
+    },
+    "11-9141": {
+      "title": "Property, Real Estate, and Community Association Managers",
+      "median_annual_wage_usd": 66700,
+      "source": "BLS OEWS May 2024"
+    },
+    "11-9199": {
+      "title": "Managers, All Other",
+      "median_annual_wage_usd": 136550,
+      "source": "BLS OEWS May 2024 (national_M2024_dl.xlsx, A_MEDIAN)"
+    },
+    "13-1022": {
+      "title": "Wholesale and Retail Buyers, Except Farm Products",
+      "median_annual_wage_usd": 75650,
+      "source": "BLS OEWS May 2024 (reported at broad SOC 13-1020 'Buyers and Purchasing Agents', the level OEWS publishes for this detailed code)"
+    },
+    "13-1023": {
+      "title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products (BLS reports this 2018-SOC detail within 13-1020 Buyers and Purchasing Agents under the 2023 SOC)",
+      "median_annual_wage_usd": 75650,
+      "source": "BLS OEWS May 2024 (13-1020 Buyers and Purchasing Agents aggregate)"
+    },
+    "13-1031": {
+      "title": "Claims Adjusters, Examiners, and Investigators",
+      "median_annual_wage_usd": 76790,
+      "source": "BLS OEWS May 2024"
+    },
+    "13-1041": {
+      "title": "Compliance Officers",
+      "median_annual_wage_usd": 78420,
+      "source": "BLS OEWS May 2024 (May 2023 value was $75,670)"
+    },
+    "13-1081": {
+      "title": "Logisticians",
+      "median_annual_wage_usd": 80880,
+      "source": "BLS OEWS May 2024"
+    },
+    "13-1111": {
+      "title": "Management Analysts",
+      "median_annual_wage_usd": 101190,
+      "source": "BLS OEWS May 2024"
+    },
+    "13-1199": {
+      "title": "Business Operations Specialists, All Other",
+      "median_annual_wage_usd": 81270,
+      "source": "BLS OEWS May 2024"
+    },
+    "13-2011": {
+      "title": "Accountants and Auditors",
+      "median_annual_wage_usd": 81680,
+      "source": "BLS OEWS May 2024"
+    },
+    "13-2061": {
+      "title": "Financial Examiners",
+      "median_annual_wage_usd": 90400,
+      "source": "BLS OEWS May 2024 (web-verified 2026-07-02: BLS OOH/OEWS Financial Examiners median annual wage $90,400, May 2024)"
+    },
+    "13-2023": {
+      "title": "Appraisers and Assessors of Real Estate",
+      "median_annual_wage_usd": 65420,
+      "source": "BLS OOH May 2024 (figure published for the broader 13-2020 Property Appraisers and Assessors group)"
+    },
+    "13-2041": {
+      "title": "Credit Analysts",
+      "median_annual_wage_usd": 80970,
+      "source": "BLS OEWS May 2024"
+    },
+    "13-2051": {
+      "title": "Financial and Investment Analysts",
+      "median_annual_wage_usd": 101350,
+      "source": "BLS OEWS May 2024 (bls.gov/oes/current/oes132051.htm — Financial and Investment Analysts median annual wage $101,350, May 2024)"
+    },
+    "13-2053": {
+      "title": "Insurance Underwriters",
+      "median_annual_wage_usd": 79880,
+      "source": "BLS OEWS May 2024 (May 2023 value was $77,860)"
+    },
+    "13-2072": {
+      "title": "Loan Officers",
+      "median_annual_wage_usd": 74180,
+      "source": "BLS OEWS May 2024"
+    },
+    "13-2081": {
+      "title": "Tax Examiners and Collectors, and Revenue Agents",
+      "median_annual_wage_usd": 59740,
+      "source": "BLS OEWS May 2024"
+    },
+    "15-1243": {
+      "title": "Database Architects",
+      "median_annual_wage_usd": 135980,
+      "source": "BLS OEWS May 2024"
+    },
+    "15-1252": {
+      "title": "Software Developers",
+      "median_annual_wage_usd": 133080,
+      "source": "BLS OEWS May 2024"
+    },
+    "21-1029": {
+      "title": "Social Workers, All Other",
+      "median_annual_wage_usd": 64580,
+      "source": "BLS OEWS May 2024"
+    },
+    "23-1011": {
+      "title": "Lawyers",
+      "median_annual_wage_usd": 151160,
+      "source": "BLS OEWS May 2024"
+    },
+    "23-2011": {
+      "title": "Paralegals and Legal Assistants",
+      "median_annual_wage_usd": 61010,
+      "source": "BLS OEWS May 2024"
+    },
+    "23-2093": {
+      "title": "Title Examiners, Abstractors, and Searchers",
+      "median_annual_wage_usd": 54980,
+      "source": "BLS OEWS May 2024"
+    },
+    "27-3042": {
+      "title": "Technical Writers",
+      "median_annual_wage_usd": 91670,
+      "source": "BLS OEWS May 2024"
+    },
+    "29-1051": {
+      "title": "Pharmacists",
+      "median_annual_wage_usd": 137480,
+      "source": "BLS OEWS May 2024"
+    },
+    "29-1141": {
+      "title": "Registered Nurses (Utilization Review)",
+      "median_annual_wage_usd": 93600,
+      "source": "BLS OEWS May 2024"
+    },
+    "29-1229": {
+      "title": "Physicians, All Other",
+      "median_annual_wage_usd": 239200,
+      "source": "BLS OEWS May 2024 (top-coded floor: BLS reports the median at or above $239,200; 29-1228 was the retired May 2019/2020 hybrid code)"
+    },
+    "29-2072": {
+      "title": "Medical Records Specialists (Medical Coders)",
+      "median_annual_wage_usd": 50250,
+      "source": "BLS OEWS May 2024"
+    },
+    "43-1011": {
+      "title": "First-Line Supervisors of Office and Administrative Support Workers",
+      "median_annual_wage_usd": 66140,
+      "source": "BLS OEWS May 2024 (via O*NET/My Next Move 43-1011.00, 2024 wage data)"
+    },
+    "41-4011": {
+      "title": "Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",
+      "median_annual_wage_usd": 100070,
+      "source": "BLS OEWS May 2024 (bls.gov/oes/current/oes414011.htm — Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products median annual wage $100,070, May 2024)"
+    },
+    "41-4012": {
+      "title": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",
+      "median_annual_wage_usd": 66780,
+      "source": "BLS OEWS May 2024"
+    },
+    "41-9021": {
+      "title": "Real Estate Brokers",
+      "median_annual_wage_usd": 72280,
+      "source": "BLS OEWS May 2024"
+    },
+    "43-3031": {
+      "title": "Bookkeeping, Accounting, and Auditing Clerks",
+      "median_annual_wage_usd": 49210,
+      "source": "BLS OEWS May 2024"
+    },
+    "43-4051": {
+      "title": "Customer Service Representatives",
+      "median_annual_wage_usd": 42810,
+      "source": "BLS OEWS May 2024"
+    },
+    "43-4061": {
+      "title": "Eligibility Interviewers, Government Programs",
+      "median_annual_wage_usd": 51500,
+      "source": "BLS OEWS May 2024 (via O*NET OnLine 43-4061.00)"
+    },
+    "43-4131": {
+      "title": "Loan Interviewers and Clerks",
+      "median_annual_wage_usd": 47480,
+      "source": "BLS OEWS May 2024"
+    },
+    "43-5071": {
+      "title": "Shipping, Receiving, and Inventory Clerks",
+      "median_annual_wage_usd": 43780,
+      "source": "BLS OEWS May 2024"
+    },
+    "43-9061": {
+      "title": "Office Clerks, General",
+      "median_annual_wage_usd": 43620,
+      "source": "BLS OEWS May 2024 (median hourly $20.97)"
+    },
+    "51-9041": {
+      "title": "Extruding, Forming, Pressing, and Compacting Machine Setters, Operators, and Tenders",
+      "median_annual_wage_usd": 45130,
+      "source": "BLS OEWS May 2024 (national cross-industry, oesm24nat national_M2024_dl.xlsx A_MEDIAN)"
+    },
+    "51-9061": {
+      "title": "Inspectors, Testers, Sorters, Samplers, and Weighers (Quality Control Inspectors)",
+      "median_annual_wage_usd": 47460,
+      "source": "BLS OEWS May 2024"
+    },
+    "43-9041": {
+      "title": "Insurance Claims and Policy Processing Clerks",
+      "median_annual_wage_usd": 48450,
+      "source": "BLS OEWS May 2024"
+    },
+    "17-2051": {
+      "title": "Civil Engineers",
+      "median_annual_wage_usd": 99590,
+      "source": "BLS OEWS May 2024"
+    },
+    "17-2141": {
+      "title": "Mechanical Engineers",
+      "median_annual_wage_usd": 102320,
+      "source": "BLS OEWS May 2024"
+    },
+    "17-3011": {
+      "title": "Architectural and Civil Drafters",
+      "median_annual_wage_usd": 63500,
+      "source": "BLS OEWS May 2024"
+    },
+    "47-4011": {
+      "title": "Construction and Building Inspectors",
+      "median_annual_wage_usd": 72120,
+      "source": "BLS OEWS May 2024"
+    },
+    "19-3051": {
+      "title": "Urban and Regional Planners",
+      "median_annual_wage_usd": 83720,
+      "source": "BLS OEWS May 2024"
+    },
+    "43-4031": {
+      "title": "Court, Municipal, and License Clerks",
+      "median_annual_wage_usd": 48760,
+      "source": "BLS OEWS May 2024"
+    },
+    "19-1022": {
+      "title": "Microbiologists",
+      "median_annual_wage_usd": 87330,
+      "source": "BLS OEWS May 2024"
+    },
+    "19-2031": {
+      "title": "Chemists",
+      "median_annual_wage_usd": 84150,
+      "source": "BLS OEWS May 2024"
+    },
+    "19-4099": {
+      "title": "Life, Physical, and Social Science Technicians, All Other (the SOC that O*NET 19-4099.01 Quality Control Analysts — the pharma QC/QA analyst who interprets release data and performs the independent second review — rolls up to; BLS publishes wages only at this 19-4099 level)",
+      "median_annual_wage_usd": 62280,
+      "source": "BLS OEWS via O*NET OnLine 19-4099.00 (\"$29.94 hourly, $62,280 annual\") — verify:live: every bls.gov/oes page AND the oesm24nat.zip microdata return HTTP 403 from this environment, so the exact May-2024 cell could not be read; this is the live-verifiable BLS-sourced median for 19-4099 (same bls.gov access limitation already recorded for 51-1011). Confirm the May-2024 cell before release."
+    },
+    "19-5011": {
+      "title": "Occupational Health and Safety Specialists",
+      "median_annual_wage_usd": 83910,
+      "source": "BLS OEWS May 2024 (national cross-industry; also published by the BLS Occupational Outlook Handbook)"
+    },
+    "49-9071": {
+      "title": "Maintenance and Repair Workers, General",
+      "median_annual_wage_usd": 48620,
+      "source": "BLS OEWS May 2024 (national cross-industry, oesm24nat national_M2024_dl.xlsx A_MEDIAN)"
+    },
+    "51-1011": {
+      "title": "First-Line Supervisors of Production and Operating Workers",
+      "median_annual_wage_usd": 67050,
+      "source": "BLS OEWS May 2024 (verify:live — exact May-2024 cell to be confirmed at oes511011.htm)"
+    },
+    "11-3021": {
+      "title": "Computer and Information Systems Managers",
+      "median_annual_wage_usd": 171200,
+      "source": "BLS OEWS May 2024 (national cross-industry, oesm24nat national_M2024_dl.xlsx A_MEDIAN)"
+    },
+    "13-2099": {
+      "title": "Financial Specialists, All Other",
+      "median_annual_wage_usd": 81100,
+      "source": "BLS OEWS May 2025 (via O*NET/My Next Move 13-2099.04 Fraud Examiners, Investigators and Analysts: $38.99 hourly / $81,100 annual)"
+    },
+    "15-1242": {
+      "title": "Database Administrators",
+      "median_annual_wage_usd": 104620,
+      "source": "BLS OEWS May 2024 (national cross-industry, oesm24nat national_M2024_dl.xlsx A_MEDIAN)"
+    },
+    "15-1244": {
+      "title": "Network and Computer Systems Administrators",
+      "median_annual_wage_usd": 96800,
+      "source": "BLS OEWS May 2024 (national cross-industry, oesm24nat national_M2024_dl.xlsx A_MEDIAN)"
+    },
+    "15-1253": {
+      "title": "Software Quality Assurance Analysts and Testers",
+      "median_annual_wage_usd": 102610,
+      "source": "BLS OEWS May 2024 (national cross-industry, oesm24nat national_M2024_dl.xlsx A_MEDIAN)"
+    },
+    "15-2051": {
+      "title": "Data Scientists",
+      "median_annual_wage_usd": 112590,
+      "source": "BLS OEWS May 2024 (national cross-industry, oesm24nat national_M2024_dl.xlsx A_MEDIAN)"
+    },
+    "17-2112": {
+      "title": "Industrial Engineers",
+      "median_annual_wage_usd": 101140,
+      "source": "BLS OEWS May 2024"
+    },
+    "17-2071": {
+      "title": "Electrical Engineers",
+      "median_annual_wage_usd": 111910,
+      "source": "BLS OEWS May 2024 (national cross-industry, oesm24nat national_M2024_dl.xlsx A_MEDIAN; OOH Electrical and Electronics Engineers page reports the 17-2071 detail at $111,910, May 2024)"
+    },
+    "47-2111": {
+      "title": "Electricians",
+      "median_annual_wage_usd": 62350,
+      "source": "BLS OEWS May 2024 (national cross-industry, oesm24nat national_M2024_dl.xlsx A_MEDIAN; OOH Electricians median annual wage $62,350, May 2024)"
+    },
+    "33-9099": {
+      "title": "Protective Service Workers, All Other",
+      "median_annual_wage_usd": 42540,
+      "source": "BLS OEWS May 2025 (via O*NET/My Next Move 33-9099.02 Retail Loss Prevention Specialists: $20.45 hourly / $42,540 annual)"
+    },
+    "25-4012": {
+      "title": "Curators",
+      "median_annual_wage_usd": 63420,
+      "source": "BLS OEWS via O*NET OnLine 25-4012.00 (\"$30.49 hourly, $63,420 annual\", 2025 median) — verify:live: bls.gov/oes returns HTTP 403 from this environment (same access limitation recorded for 51-1011/19-4099); confirm the exact OEWS cell before release."
+    },
+    "25-4013": {
+      "title": "Museum Technicians and Conservators",
+      "median_annual_wage_usd": 51440,
+      "source": "BLS OEWS via O*NET OnLine 25-4013.00 (\"$24.73 hourly, $51,440 annual\", 2025 median) — verify:live, same bls.gov access limitation."
+    },
+    "19-3093": {
+      "title": "Historians",
+      "median_annual_wage_usd": 76750,
+      "source": "BLS OEWS via O*NET OnLine 19-3093.00 (\"$36.90 hourly, $76,750 annual\", 2025 median) — verify:live, same bls.gov access limitation."
+    },
+    "33-1012": {
+      "title": "First-Line Supervisors of Police and Detectives",
+      "median_annual_wage_usd": 101750,
+      "source": "BLS OEWS May 2023 (bls.gov/oes/2023/may/oes331012.htm; May 2024 page blocked automated verification — refresh when fetchable)"
+    }
+  }
+}

@@ -1,0 +1,403 @@
+{
+  "app_id": "SAP_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activeTab",
+    "companyInfo",
+    "currentUser",
+    "customers",
+    "filterState",
+    "journalEntries",
+    "journalEntryItems",
+    "materials",
+    "navigationTabs",
+    "notificationCount",
+    "notifications",
+    "plants",
+    "purchaseOrderItems",
+    "purchaseOrders",
+    "salesOrderItems",
+    "salesOrders",
+    "searchQuery",
+    "selectedVariant",
+    "suppliers",
+    "tileGroups",
+    "tiles"
+  ],
+  "observed": [
+    "activeTab",
+    "companyInfo",
+    "currentUser",
+    "customers",
+    "filterState",
+    "journalEntries",
+    "journalEntryItems",
+    "materials",
+    "navigationTabs",
+    "notificationCount",
+    "notifications",
+    "plants",
+    "purchaseOrderItems",
+    "purchaseOrders",
+    "salesOrderItems",
+    "salesOrders",
+    "searchQuery",
+    "selectedVariant",
+    "suppliers",
+    "tileGroups",
+    "tiles"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 13,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "companyInfo": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "navigationTabs": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "label",
+        "key",
+        "isDefault",
+        "order"
+      ],
+      "keyed_by_id": false
+    },
+    "tileGroups": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "title",
+        "tabKey",
+        "order"
+      ],
+      "keyed_by_id": false
+    },
+    "tiles": {
+      "kind": "array",
+      "count": 37,
+      "record_fields": [
+        "id",
+        "groupId",
+        "title",
+        "subtitle",
+        "icon",
+        "type",
+        "numericValue",
+        "numericUnit",
+        "kpiData",
+        "appRoute",
+        "order",
+        "isActive"
+      ],
+      "keyed_by_id": false
+    },
+    "purchaseOrders": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "poNumber",
+        "supplier",
+        "supplierName",
+        "poType",
+        "poTypeName",
+        "purchasingOrg",
+        "purchasingOrgName",
+        "purchasingGroup",
+        "purchasingGroupName",
+        "companyCode",
+        "createdDate",
+        "createdBy",
+        "totalNetValue",
+        "currency",
+        "status",
+        "deliveryStatus",
+        "plant",
+        "plantName",
+        "paymentTerms",
+        "incoterms",
+        "notes",
+        "lastChanged",
+        "lastChangedBy"
+      ],
+      "keyed_by_id": false
+    },
+    "purchaseOrderItems": {
+      "kind": "array",
+      "count": 25,
+      "record_fields": [
+        "id",
+        "poId",
+        "itemNumber",
+        "materialId",
+        "materialName",
+        "materialNumber",
+        "quantity",
+        "unit",
+        "netPrice",
+        "priceUnit",
+        "netValue",
+        "currency",
+        "deliveryDate",
+        "plant",
+        "storageLocation",
+        "taxCode",
+        "accountAssignment",
+        "costCenter",
+        "glAccount"
+      ],
+      "keyed_by_id": false
+    },
+    "salesOrders": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "soNumber",
+        "customer",
+        "customerName",
+        "orderType",
+        "orderTypeName",
+        "salesOrg",
+        "salesOrgName",
+        "distributionChannel",
+        "division",
+        "createdDate",
+        "createdBy",
+        "totalNetValue",
+        "currency",
+        "status",
+        "overallDeliveryStatus",
+        "overallBillingStatus",
+        "requestedDeliveryDate",
+        "customerReference",
+        "soldToParty",
+        "shipToParty",
+        "paymentTerms",
+        "incoterms",
+        "lastChanged",
+        "lastChangedBy"
+      ],
+      "keyed_by_id": false
+    },
+    "salesOrderItems": {
+      "kind": "array",
+      "count": 21,
+      "record_fields": [
+        "id",
+        "soId",
+        "itemNumber",
+        "materialId",
+        "materialName",
+        "materialNumber",
+        "quantity",
+        "unit",
+        "netPrice",
+        "netValue",
+        "currency",
+        "plant",
+        "deliveryDate",
+        "deliveryStatus",
+        "billingStatus",
+        "rejectionReason"
+      ],
+      "keyed_by_id": false
+    },
+    "materials": {
+      "kind": "array",
+      "count": 20,
+      "record_fields": [
+        "id",
+        "materialNumber",
+        "description",
+        "materialGroup",
+        "materialGroupName",
+        "materialType",
+        "materialTypeName",
+        "baseUnit",
+        "grossWeight",
+        "netWeight",
+        "weightUnit",
+        "productCategory",
+        "division",
+        "gtin",
+        "image",
+        "standardPrice",
+        "currency",
+        "plantData",
+        "stockQuantity",
+        "lastChanged",
+        "lastChangedBy"
+      ],
+      "keyed_by_id": false
+    },
+    "suppliers": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "supplierNumber",
+        "name",
+        "name2",
+        "country",
+        "city",
+        "postalCode",
+        "street",
+        "region",
+        "phone",
+        "email",
+        "taxNumber",
+        "paymentTerms",
+        "currency",
+        "accountGroup",
+        "purchasingOrg",
+        "isBlocked"
+      ],
+      "keyed_by_id": false
+    },
+    "customers": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "customerNumber",
+        "name",
+        "name2",
+        "country",
+        "city",
+        "postalCode",
+        "street",
+        "region",
+        "phone",
+        "email",
+        "salesOrg",
+        "distributionChannel",
+        "division",
+        "paymentTerms",
+        "currency",
+        "creditLimit",
+        "accountGroup"
+      ],
+      "keyed_by_id": false
+    },
+    "journalEntries": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "documentNumber",
+        "companyCode",
+        "fiscalYear",
+        "fiscalPeriod",
+        "documentType",
+        "documentTypeName",
+        "postingDate",
+        "documentDate",
+        "entryDate",
+        "reference",
+        "headerText",
+        "totalDebit",
+        "totalCredit",
+        "currency",
+        "status",
+        "createdBy",
+        "ledgerGroup"
+      ],
+      "keyed_by_id": false
+    },
+    "journalEntryItems": {
+      "kind": "array",
+      "count": 20,
+      "record_fields": [
+        "id",
+        "journalEntryId",
+        "itemNumber",
+        "glAccount",
+        "glAccountName",
+        "debitAmount",
+        "creditAmount",
+        "currency",
+        "costCenter",
+        "costCenterName",
+        "profitCenter",
+        "taxCode",
+        "assignment",
+        "text"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "title",
+        "description",
+        "timestamp",
+        "type",
+        "priority",
+        "isRead",
+        "category",
+        "actionUrl",
+        "icon"
+      ],
+      "keyed_by_id": false
+    },
+    "plants": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "plantCode",
+        "name",
+        "city",
+        "country"
+      ],
+      "keyed_by_id": false
+    },
+    "activeTab": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "searchQuery": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": ""
+    },
+    "notificationCount": {
+      "kind": "number",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "selectedVariant": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "filterState": {
+      "kind": "object",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

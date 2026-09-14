@@ -1,0 +1,82 @@
+{
+  "user": {
+    "id": "user_1", "firstName": "Imogen", "lastName": "Baxter", "email": "imogen.baxter@fernhill-consulting.example",
+    "phone": "+44 20 7946 0810", "country": "United Kingdom", "nationality": "British", "avatarUrl": null,
+    "geniusLevel": 1, "geniusBookings": 1, "geniusBookingsRequired": 5, "currency": "GBP", "language": "English (UK)",
+    "savedProperties": ["prop_2"]
+  },
+  "destinations": [
+    { "id": "dest_1", "name": "Cape Wexley", "country": "United Kingdom", "countryCode": "GB", "type": "city", "propertyCount": 2, "trending": true, "description": "Windswept harbour town with a Victorian pier" },
+    { "id": "dest_2", "name": "Lindenholm", "country": "Germany", "countryCode": "DE", "type": "city", "propertyCount": 1, "trending": true, "description": "Half-timbered old town on the river Ems" }
+  ],
+  "properties": [
+    {
+      "id": "prop_1", "name": "The Wexley Harbour Hotel", "type": "hotel", "stars": 4, "destinationId": "dest_1", "city": "Cape Wexley", "country": "United Kingdom",
+      "address": "12 Pier Road, Cape Wexley", "distanceFromCenter": "0.3 km from center", "coordinates": { "lat": 50.62, "lng": -1.95 },
+      "description": "A restored Victorian hotel on the seafront with a conservatory restaurant.", "shortDescription": "Seafront Victorian hotel",
+      "reviewScore": 8.7, "reviewScoreWord": "Fabulous", "reviewCount": 2, "pricePerNight": 145, "originalPrice": 170, "currency": "USD", "taxesAndFees": 18,
+      "genius": true, "geniusDiscountPercent": 10, "freeCancellation": true, "freeCancellationUntil": "2026-09-20", "prepayment": "no_prepayment", "breakfastIncluded": true,
+      "thumbnailUrl": "https://picsum.photos/400/300?random=101", "photos": [ { "id": "photo_1_1", "url": "https://picsum.photos/800/600?random=101", "caption": "Seafront facade", "category": "exterior" } ],
+      "facilities": ["free_wifi", "restaurant", "bar", "parking"], "popularFacilities": ["Free WiFi", "Restaurant", "Bar", "Free parking"],
+      "rooms": ["room_1_1", "room_1_2"], "checkInTime": "15:00", "checkOutTime": "11:00", "petsAllowed": true, "smokingAllowed": false,
+      "sustainability": true, "sustainabilityLevel": 2, "limitedTimeDeal": true, "newToBooking": false
+    },
+    {
+      "id": "prop_2", "name": "Pier View Apartments", "type": "apartment", "stars": 0, "destinationId": "dest_1", "city": "Cape Wexley", "country": "United Kingdom",
+      "address": "4 Esplanade, Cape Wexley", "distanceFromCenter": "0.8 km from center", "coordinates": { "lat": 50.63, "lng": -1.94 },
+      "description": "Self-catering apartments overlooking the pier.", "shortDescription": "Self-catering with sea views",
+      "reviewScore": 9.1, "reviewScoreWord": "Superb", "reviewCount": 1, "pricePerNight": 110, "originalPrice": null, "currency": "USD", "taxesAndFees": 12,
+      "genius": false, "geniusDiscountPercent": 0, "freeCancellation": false, "freeCancellationUntil": null, "prepayment": "prepayment_required", "breakfastIncluded": false,
+      "thumbnailUrl": "https://picsum.photos/400/300?random=102", "photos": [ { "id": "photo_2_1", "url": "https://picsum.photos/800/600?random=102", "caption": "Living room", "category": "room" } ],
+      "facilities": ["free_wifi", "kitchen", "sea_view"], "popularFacilities": ["Free WiFi", "Kitchen", "Sea view"],
+      "rooms": ["room_2_1"], "checkInTime": "16:00", "checkOutTime": "10:00", "petsAllowed": false, "smokingAllowed": false,
+      "sustainability": false, "sustainabilityLevel": 0, "limitedTimeDeal": false, "newToBooking": true
+    },
+    {
+      "id": "prop_3", "name": "Gasthaus Lindenholm", "type": "guesthouse", "stars": 3, "destinationId": "dest_2", "city": "Lindenholm", "country": "Germany",
+      "address": "Marktplatz 7, Lindenholm", "distanceFromCenter": "0.1 km from center", "coordinates": { "lat": 52.72, "lng": 7.29 },
+      "description": "Family-run guesthouse on the market square.", "shortDescription": "Family-run guesthouse",
+      "reviewScore": 8.2, "reviewScoreWord": "Very good", "reviewCount": 0, "pricePerNight": 89, "originalPrice": null, "currency": "USD", "taxesAndFees": 9,
+      "genius": false, "geniusDiscountPercent": 0, "freeCancellation": true, "freeCancellationUntil": "2026-10-01", "prepayment": "no_prepayment", "breakfastIncluded": true,
+      "thumbnailUrl": "https://picsum.photos/400/300?random=103", "photos": [], "facilities": ["free_wifi", "restaurant"], "popularFacilities": ["Free WiFi", "Restaurant"],
+      "rooms": ["room_3_1"], "checkInTime": "14:00", "checkOutTime": "11:00", "petsAllowed": true, "smokingAllowed": false,
+      "sustainability": false, "sustainabilityLevel": 0, "limitedTimeDeal": false, "newToBooking": false
+    }
+  ],
+  "rooms": [
+    { "id": "room_1_1", "propertyId": "prop_1", "name": "Sea View Double", "type": "double", "maxGuests": 2, "bedType": "1 king bed", "size": "28 m2", "pricePerNight": 145, "originalPrice": 170, "amenities": ["Sea view", "Ensuite bathroom", "Tea/coffee maker"], "view": "Sea view", "breakfastIncluded": true, "breakfastPrice": null, "freeCancellation": true, "cancellationDeadline": "2026-09-20", "prepayment": "no_prepayment", "availableCount": 3, "smokingAllowed": false, "imageUrl": "https://picsum.photos/400/300?random=111" },
+    { "id": "room_1_2", "propertyId": "prop_1", "name": "Pier Suite", "type": "suite", "maxGuests": 3, "bedType": "1 king bed and 1 sofa bed", "size": "45 m2", "pricePerNight": 230, "originalPrice": null, "amenities": ["Balcony", "Bathtub", "Minibar"], "view": "Pier view", "breakfastIncluded": true, "breakfastPrice": null, "freeCancellation": true, "cancellationDeadline": "2026-09-20", "prepayment": "no_prepayment", "availableCount": 1, "smokingAllowed": false, "imageUrl": "https://picsum.photos/400/300?random=112" },
+    { "id": "room_2_1", "propertyId": "prop_2", "name": "One-Bedroom Apartment", "type": "studio", "maxGuests": 2, "bedType": "1 double bed", "size": "40 m2", "pricePerNight": 110, "originalPrice": null, "amenities": ["Kitchen", "Washing machine", "Sea view"], "view": "Sea view", "breakfastIncluded": false, "breakfastPrice": null, "freeCancellation": false, "cancellationDeadline": null, "prepayment": "prepayment_required", "availableCount": 2, "smokingAllowed": false, "imageUrl": "https://picsum.photos/400/300?random=121" },
+    { "id": "room_3_1", "propertyId": "prop_3", "name": "Standard Twin", "type": "double", "maxGuests": 2, "bedType": "2 single beds", "size": "20 m2", "pricePerNight": 89, "originalPrice": null, "amenities": ["Ensuite bathroom", "Desk"], "view": null, "breakfastIncluded": true, "breakfastPrice": null, "freeCancellation": true, "cancellationDeadline": "2026-10-01", "prepayment": "no_prepayment", "availableCount": 4, "smokingAllowed": false, "imageUrl": "https://picsum.photos/400/300?random=131" }
+  ],
+  "reviews": [
+    { "id": "review_1_1", "propertyId": "prop_1", "authorName": "Callum", "authorCountry": "United Kingdom", "authorCountryCode": "GB", "date": "2026-08-12", "score": 9.0, "title": "Lovely stay by the sea", "positive": "Breakfast in the conservatory was superb.", "negative": "Parking fills up early.", "roomType": "Sea View Double", "nightsStayed": 2, "travellerType": "couple" },
+    { "id": "review_1_2", "propertyId": "prop_1", "authorName": "Sofie", "authorCountry": "Netherlands", "authorCountryCode": "NL", "date": "2026-07-30", "score": 8.4, "title": "Great location", "positive": "Steps from the pier.", "negative": "", "roomType": "Pier Suite", "nightsStayed": 3, "travellerType": "family" },
+    { "id": "review_2_1", "propertyId": "prop_2", "authorName": "Marta", "authorCountry": "Spain", "authorCountryCode": "ES", "date": "2026-08-20", "score": 9.1, "title": "Perfect for a work week", "positive": "Fast wifi and a proper desk.", "negative": "", "roomType": "One-Bedroom Apartment", "nightsStayed": 5, "travellerType": "business" }
+  ],
+  "reviewCategories": {
+    "prop_1": { "staff": 9.2, "facilities": 8.5, "cleanliness": 9.0, "comfort": 8.8, "valueForMoney": 8.1, "location": 9.5, "freeWifi": 8.0 },
+    "prop_2": { "staff": 9.0, "facilities": 8.9, "cleanliness": 9.4, "comfort": 9.0, "valueForMoney": 8.8, "location": 9.1, "freeWifi": 9.3 },
+    "prop_3": { "staff": 8.6, "facilities": 7.8, "cleanliness": 8.5, "comfort": 8.0, "valueForMoney": 8.7, "location": 9.0, "freeWifi": 7.9 }
+  },
+  "bookings": [
+    {
+      "id": "booking_1", "confirmationNumber": "4471092238", "pinCode": "5821", "userId": "user_1", "propertyId": "prop_1", "propertyName": "The Wexley Harbour Hotel",
+      "propertyImage": "https://picsum.photos/400/300?random=101", "propertyCity": "Cape Wexley", "propertyAddress": "12 Pier Road, Cape Wexley",
+      "roomId": "room_1_1", "roomName": "Sea View Double", "checkIn": "2026-09-26", "checkOut": "2026-09-28", "nights": 2, "guests": { "adults": 2, "children": 0 }, "rooms": 1,
+      "pricePerNight": 145, "totalPrice": 290, "taxesAndFees": 36, "grandTotal": 326, "status": "confirmed",
+      "guestFirstName": "Imogen", "guestLastName": "Baxter", "guestEmail": "imogen.baxter@fernhill-consulting.example", "guestPhone": "+44 20 7946 0810",
+      "specialRequests": "Quiet room if possible", "arrivalTime": "16:00 - 17:00", "freeCancellation": true, "cancellationDeadline": "2026-09-20", "createdAt": "2026-09-02T10:15:00Z"
+    }
+  ],
+  "searchParams": { "destination": "", "destinationId": null, "checkIn": null, "checkOut": null, "adults": 2, "children": 0, "childrenAges": [], "rooms": 1, "travelingForWork": false },
+  "searchFilters": { "priceMin": null, "priceMax": null, "starRating": [], "reviewScore": null, "propertyType": [], "facilities": [], "freeCancellation": false, "breakfastIncluded": false, "geniusDeals": false, "sortBy": "our_top_picks" },
+  "searchResults": [],
+  "selectedPropertyId": null,
+  "recentSearches": [
+    { "destination": "Cape Wexley", "destinationId": "dest_1", "dates": "26 Sep - 28 Sep", "guests": "2 adults · 1 room" }
+  ],
+  "recentlyViewed": ["prop_1"],
+  "notifications": [],
+  "viewedProperties": ["prop_1"]
+}

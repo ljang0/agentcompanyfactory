@@ -1,0 +1,1204 @@
+{
+  "captured_at": "2026-09-09",
+  "how": "scripts/app_schema_drift.py serves each app unseeded and reads the state it keeps.",
+  "contract": "These keys are PERMITTED in a seed but not required. Move a key into the imported schema document, and make it required, only once the seeding skill fills it.",
+  "apps": {
+    "Expensify_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "exportSettings": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "adp_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "departments": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "headcount",
+            "manager",
+            "managerId",
+            "location",
+            "costCenter"
+          ]
+        },
+        "employees": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "firstName",
+            "lastName",
+            "email",
+            "phone",
+            "employeeId",
+            "hireDate",
+            "jobTitle",
+            "department",
+            "division",
+            "manager",
+            "managerId",
+            "workLocation",
+            "employmentStatus",
+            "payRate",
+            "payFrequency",
+            "avatar",
+            "status"
+          ]
+        },
+        "locations": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "address",
+            "phone",
+            "headcount",
+            "type"
+          ]
+        },
+        "payPolicies": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "frequency",
+            "overtimeRule",
+            "effectiveDate",
+            "status"
+          ]
+        },
+        "payrollRuns": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "payDate",
+            "periodStart",
+            "periodEnd",
+            "status",
+            "totalGross",
+            "totalNet",
+            "employeeCount",
+            "approvedBy",
+            "approvedDate"
+          ]
+        },
+        "savedReports": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "type",
+            "lastRun",
+            "schedule",
+            "createdBy"
+          ]
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "airtable_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "activityLog": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "aliyun_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "tickets": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "title",
+            "category",
+            "priority",
+            "status",
+            "createdAt",
+            "updatedAt",
+            "description",
+            "replies"
+          ]
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "amplitude_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "askThreads": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "userPaths": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "aws_console_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "amis": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "description",
+            "owner",
+            "state",
+            "architecture",
+            "platform",
+            "rootDeviceType",
+            "virtualization",
+            "created",
+            "public"
+          ]
+        },
+        "autoScalingGroups": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "name",
+            "minSize",
+            "maxSize",
+            "desiredCapacity",
+            "launchTemplate",
+            "launchTemplateVersion",
+            "az",
+            "vpcZoneIdentifier",
+            "targetGroupARNs",
+            "healthCheckType",
+            "healthCheckGracePeriod",
+            "instances",
+            "created",
+            "tags",
+            "policies"
+          ]
+        },
+        "cloudfront": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "cloudwatch": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "dynamodb": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "elasticIps": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "allocationId",
+            "publicIp",
+            "associationId",
+            "instanceId",
+            "privateIp",
+            "networkInterfaceId",
+            "domain",
+            "tags"
+          ]
+        },
+        "lambdaLayers": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "name",
+            "arn",
+            "version",
+            "runtime",
+            "description",
+            "size",
+            "created"
+          ]
+        },
+        "launchTemplates": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "version",
+            "defaultVersion",
+            "latestVersion",
+            "ami",
+            "instanceType",
+            "keyPair",
+            "securityGroups",
+            "userData",
+            "iamInstanceProfile",
+            "monitoring",
+            "created",
+            "createdBy",
+            "tags"
+          ]
+        },
+        "loadBalancers": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "name",
+            "arn",
+            "type",
+            "scheme",
+            "state",
+            "dnsName",
+            "vpcId",
+            "az",
+            "securityGroups",
+            "listeners",
+            "created",
+            "tags"
+          ]
+        },
+        "rdsParameterGroups": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "name",
+            "family",
+            "description",
+            "type"
+          ]
+        },
+        "rdsSnapshots": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "dbInstanceId",
+            "engine",
+            "status",
+            "snapshotType",
+            "created",
+            "allocatedStorage",
+            "encrypted"
+          ]
+        },
+        "rdsSubnetGroups": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "name",
+            "description",
+            "vpcId",
+            "status",
+            "subnets"
+          ]
+        },
+        "route53": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "snapshots": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "description",
+            "volumeId",
+            "volumeSize",
+            "status",
+            "started",
+            "progress",
+            "encrypted",
+            "ownerId"
+          ]
+        },
+        "sns": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "sqs": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "targetGroups": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "name",
+            "arn",
+            "protocol",
+            "port",
+            "targetType",
+            "vpcId",
+            "healthCheck",
+            "targets",
+            "loadBalancer"
+          ]
+        },
+        "volumes": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "size",
+            "volumeType",
+            "state",
+            "iops",
+            "throughput",
+            "az",
+            "attachedTo",
+            "device",
+            "created",
+            "encrypted",
+            "snapshotId"
+          ]
+        },
+        "vpc": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "clio_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "appIntegrations": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "icon",
+            "status",
+            "connectedAt",
+            "description",
+            "category"
+          ]
+        },
+        "onlinePayments": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "trustAccounts": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "bank",
+            "accountNumber",
+            "balance",
+            "type",
+            "status",
+            "createdAt"
+          ]
+        },
+        "trustTransactions": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "accountId",
+            "type",
+            "amount",
+            "description",
+            "matterId",
+            "contactId",
+            "date",
+            "createdAt"
+          ]
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "coinbase_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "notificationPreferences": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "datadog_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "containers": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "image",
+            "status",
+            "host",
+            "cpu",
+            "memory",
+            "memoryLimit",
+            "uptime",
+            "restarts",
+            "ports",
+            "network",
+            "tags"
+          ]
+        },
+        "incidents": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "title",
+            "severity",
+            "status",
+            "commander",
+            "created",
+            "updated",
+            "resolved",
+            "services",
+            "tags",
+            "timeline",
+            "impact",
+            "customerNotification"
+          ]
+        },
+        "notebooks": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "title",
+            "author",
+            "created",
+            "modified",
+            "tags",
+            "cells"
+          ]
+        },
+        "traces": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "traceId",
+            "rootService",
+            "rootResource",
+            "startTime",
+            "duration",
+            "status",
+            "spans"
+          ]
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "dingtalk_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "dailyReports": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "type",
+            "authorId",
+            "createdAt",
+            "todayWork",
+            "tomorrowPlan",
+            "problems",
+            "readBy",
+            "recipientIds"
+          ]
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "ebay_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "cart": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "epic-health_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "drafts": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "familyHistory": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "letters": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "medicalHistory": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "expedia_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "activitySearchFilters": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "cruiseSearchFilters": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "cruises": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "cruiseLine",
+            "ship",
+            "image",
+            "duration",
+            "departure",
+            "itinerary",
+            "cabins",
+            "departDates",
+            "rating",
+            "reviewCount",
+            "highlights",
+            "amenities"
+          ]
+        },
+        "packageSearchFilters": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "packages": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "destination",
+            "image",
+            "duration",
+            "includes",
+            "hotel",
+            "airline",
+            "pricePerPerson",
+            "originalPrice",
+            "rating",
+            "reviewCount",
+            "departDates",
+            "highlights"
+          ]
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "facebook_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "hiddenPosts": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "outgoingFriendRequests": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "reportedPosts": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "feishu_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "meetings": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "title",
+            "status",
+            "startTime",
+            "endTime",
+            "organizerId",
+            "attendees",
+            "meetingLink",
+            "meetingNo",
+            "hasRecording",
+            "isRecurring"
+          ]
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "gmail_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "settings": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "google_ads_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "billing": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": [
+            "type",
+            "last4",
+            "expiry",
+            "name"
+          ]
+        },
+        "selectedGoal": {
+          "kind": "null",
+          "keyed_by_id": null,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "google_flights_mock": {
+      "observed_from": "localStorage:flight_search_app_v1_initial_drift",
+      "keys": {
+        "alerts": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "greenhouse_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "settings": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "gusto_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "performanceReviews": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "employeeId",
+            "employeeName",
+            "reviewerId",
+            "reviewerName",
+            "period",
+            "status",
+            "overallRating",
+            "submittedDate",
+            "categories",
+            "summary"
+          ]
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "hotjar_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "dashboards": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "feedbackWidgetConfig": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "hubspot_marketing_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "adCampaigns": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "platform",
+            "status",
+            "budget",
+            "spent",
+            "impressions",
+            "clicks",
+            "conversions",
+            "cpc",
+            "ctr",
+            "conversionRate",
+            "costPerConversion",
+            "startDate",
+            "endDate",
+            "campaignId"
+          ]
+        },
+        "formSubmissions": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "formId",
+            "contactId",
+            "data",
+            "submittedAt"
+          ]
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "hubspot_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "emails": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "instacart_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "activeOrder": {
+          "kind": "null",
+          "keyed_by_id": null,
+          "record_fields": []
+        },
+        "categories": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "icon"
+          ]
+        },
+        "notifications": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "savedAddresses": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "label",
+            "address",
+            "instructions"
+          ]
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "linkedin_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "dismissedSuggestions": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "followedCompanies": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "meta_ads_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "activeBreakdown": {
+          "kind": "null",
+          "keyed_by_id": null,
+          "record_fields": []
+        },
+        "eventsManager": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "notificationsOpen": {
+          "kind": "boolean",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "mixpanel_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "recentlyViewed": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "type",
+            "id",
+            "name",
+            "viewedAt"
+          ]
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "outlook_web_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "emails": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "folderId",
+            "from",
+            "to",
+            "subject",
+            "body",
+            "preview",
+            "timestamp",
+            "read",
+            "flagged",
+            "categories",
+            "attachments",
+            "isFocused"
+          ]
+        },
+        "quickSteps": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "actions"
+          ]
+        },
+        "rules": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "enabled"
+          ]
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "pinterest_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "exploreCategories": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "tag",
+            "icon",
+            "color"
+          ]
+        },
+        "messages": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "participants",
+            "messages",
+            "updatedAt"
+          ]
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "quickbooks_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "emailDrafts": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "robinhood_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "notifications": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "title",
+            "message",
+            "date",
+            "read",
+            "type"
+          ]
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "salesforce_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "dashboards": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "emailDrafts": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "reportSnapshots": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "tableau_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "favorites": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "groups": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "userCount",
+            "minimumSiteRole"
+          ]
+        },
+        "projects": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "description",
+            "owner",
+            "parentId",
+            "createdAt",
+            "workbookCount",
+            "datasourceCount",
+            "permissions"
+          ]
+        },
+        "recents": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "schedules": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "type",
+            "frequency",
+            "nextRun",
+            "priority",
+            "state"
+          ]
+        },
+        "sharedWithMe": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "site": {
+          "kind": "object",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "tasks": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "schedule",
+            "type",
+            "lastRun",
+            "status",
+            "duration"
+          ]
+        },
+        "users": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "email",
+            "siteRole",
+            "lastLogin",
+            "group"
+          ]
+        },
+        "workbooks": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": [
+            "id",
+            "name",
+            "project",
+            "projectId",
+            "owner",
+            "createdAt",
+            "updatedAt",
+            "viewCount",
+            "favoriteCount",
+            "isFavorite",
+            "tags",
+            "description",
+            "thumbnail",
+            "sheets"
+          ]
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "twitter_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "blockedUsers": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "mutedUsers": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        },
+        "notInterestedPostIds": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "workday_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "contactDrafts": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "zillow_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "contactMessages": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    },
+    "zoom_web_mock": {
+      "observed_from": "posted_to_server",
+      "keys": {
+        "activityLog": {
+          "kind": "array",
+          "keyed_by_id": false,
+          "record_fields": []
+        }
+      },
+      "reason": "The app keeps this key and renders it; the imported schema omits it, so seeding could not fill it and the app showed the demo records it ships with."
+    }
+  }
+}

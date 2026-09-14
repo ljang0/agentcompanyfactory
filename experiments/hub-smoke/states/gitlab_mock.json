@@ -1,0 +1,66 @@
+{
+  "currentUser": { "id": 1, "name": "Yusuf Brennan", "username": "ybrennan", "avatarUrl": "" },
+  "projects": [
+    {
+      "id": 1, "name": "tidewater-billing-portal", "description": "Customer billing portal for Tidewater Utilities (fictional).", "visibility": "private", "stars": 5, "forks": 1,
+      "updatedAt": "2026-09-05T16:20:00.000Z", "branches": ["main", "develop", "fix/invoice-rounding"],
+      "files": [
+        { "name": "src", "type": "folder", "children": [
+          { "name": "App.jsx", "type": "file", "content": "export default function App() {\n  return <div>Tidewater Billing</div>;\n}" },
+          { "name": "invoice.js", "type": "file", "content": "export const round = (n) => Math.round(n * 100) / 100;" }
+        ]},
+        { "name": "package.json", "type": "file", "content": "{\n  \"name\": \"tidewater-billing-portal\",\n  \"version\": \"2.3.0\"\n}" },
+        { "name": "README.md", "type": "file", "content": "# Tidewater Billing Portal\n\nCustomer-facing billing portal.\n\n## Getting Started\n\n1. `npm install`\n2. `npm start`" }
+      ]
+    },
+    {
+      "id": 2, "name": "meter-ingest-service", "description": "Go service ingesting smart-meter readings.", "visibility": "internal", "stars": 2, "forks": 0,
+      "updatedAt": "2026-09-03T09:10:00.000Z", "branches": ["main"],
+      "files": [
+        { "name": "main.go", "type": "file", "content": "package main\n\nfunc main() {}" },
+        { "name": "README.md", "type": "file", "content": "# Meter Ingest Service\n\nReads meter telemetry." }
+      ]
+    }
+  ],
+  "pipelines": [
+    {
+      "id": 101, "projectId": 1, "status": "success", "branch": "main", "commit": "9c4e1f2", "message": "fix: round invoice totals to cents", "duration": "3m 48s", "createdAt": "2026-09-05T16:20:00.000Z",
+      "stages": [
+        { "id": 1, "name": "build", "status": "success", "jobs": [ { "id": 1, "name": "build-app", "status": "success", "duration": "1m" } ] },
+        { "id": 2, "name": "test", "status": "success", "jobs": [ { "id": 2, "name": "unit-tests", "status": "success", "duration": "2m 10s" } ] }
+      ]
+    },
+    {
+      "id": 102, "projectId": 2, "status": "failed", "branch": "main", "commit": "b71d0aa", "message": "feat: batch meter uploads", "duration": "1m 55s", "createdAt": "2026-09-03T09:10:00.000Z",
+      "stages": [
+        { "id": 3, "name": "build", "status": "success", "jobs": [ { "id": 3, "name": "go-build", "status": "success", "duration": "40s" } ] },
+        { "id": 4, "name": "test", "status": "failed", "jobs": [ { "id": 4, "name": "go-test", "status": "failed", "duration": "1m 15s", "logs": "--- FAIL: TestBatchUpload (0.02s)\n    expected 3 readings, got 2" } ] }
+      ]
+    }
+  ],
+  "issues": [
+    { "id": 1, "projectId": 1, "title": "Invoice PDF shows wrong due date for autopay customers", "description": "Autopay customers see the statement date instead of the draft date.", "status": "open", "labels": ["bug", "high-priority"], "assignee": "Yusuf Brennan" },
+    { "id": 2, "projectId": 2, "title": "Add retry for meter upload timeouts", "description": "Uploads over 30s should retry with backoff.", "status": "in_progress", "labels": ["feature"], "assignee": null }
+  ],
+  "mergeRequests": [
+    { "id": 1, "projectId": 1, "title": "Fix invoice rounding", "sourceBranch": "fix/invoice-rounding", "targetBranch": "main", "status": "open", "author": "Yusuf Brennan", "createdAt": "2026-09-05T14:00:00.000Z", "reviewers": ["Anika Solberg"] }
+  ],
+  "registry": [
+    { "id": 1, "projectId": 1, "name": "tidewater-billing-portal/web", "tags": ["latest", "v2.3.0"], "size": "38MB", "updatedAt": "2026-09-05T16:25:00.000Z" }
+  ],
+  "snippets": [
+    { "id": 1, "title": "Cents rounding helper", "code": "export const round = (n) => Math.round(n * 100) / 100;", "language": "javascript", "author": "Yusuf Brennan" }
+  ],
+  "wiki": [
+    { "id": 1, "projectId": 1, "title": "Home", "content": "# Tidewater Billing Portal Wiki\n\nRunbooks and release notes." }
+  ],
+  "vulnerabilities": [
+    { "id": 1, "projectId": 1, "severity": "medium", "name": "Outdated Dependency: axios", "status": "detected" }
+  ],
+  "milestones": [
+    { "id": 1, "projectId": 1, "title": "Q4 billing release", "dueDate": "2026-12-15", "progress": 40 }
+  ],
+  "releases": [
+    { "id": 1, "projectId": 1, "tagName": "v2.3.0", "name": "Autopay statements", "description": "Adds autopay statement PDFs.", "createdAt": "2026-08-28T12:00:00.000Z", "author": "Yusuf Brennan" }
+  ]
+}

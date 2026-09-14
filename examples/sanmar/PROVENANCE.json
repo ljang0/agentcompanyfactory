@@ -1,0 +1,106 @@
+{
+  "archive": "company-envs-inspection-20260914-share.tar.gz",
+  "archive_sha256": "3852830a8b15ac9682f0e330fb75c5a5e3a8a5f88eed76d32c7a594a2f0d0d7a",
+  "files": {
+    "company.json": {
+      "archive_path": "experiments/pilot-sanmar/company/company.json",
+      "sha256": "e8828087d7f9f71b87bc628f52f446f143098f228e976afb2cd0b92e26e2ae0d"
+    },
+    "tasks/sanmar_account-assortment-review/assignment.json": {
+      "archive_path": "experiments/pilot-sanmar/company/tasks/sanmar_account-assortment-review/assignment.json",
+      "sha256": "79d9c1930ca287576f70bd04b2cf7018edac82e3a21ec0d0d41f43174a1a8fe1"
+    },
+    "tasks/sanmar_account-assortment-review/workflow.json": {
+      "archive_path": "experiments/pilot-sanmar/company/tasks/sanmar_account-assortment-review/workflow.json",
+      "sha256": "da1130aa6f3a6dc6071382574adf5b3d7553d2b22a963ceb45d1c04731788256"
+    },
+    "tasks/sanmar_account-assortment-review/assessment.json": {
+      "archive_path": "experiments/pilot-sanmar/company/tasks/sanmar_account-assortment-review/assessment.json",
+      "sha256": "3db1cedd35f1d43f0f456a8d1294599d8768b903723daf6c6145b007623d1a2d"
+    },
+    "tasks/sanmar_account-assortment-review/golden.json": {
+      "archive_path": "experiments/pilot-sanmar/company/tasks/sanmar_account-assortment-review/golden.json",
+      "sha256": "164975238c52bc3f683dc6fca5ed57562f52ce39272ea4de0dc9c9ada756cc36"
+    },
+    "tasks/sanmar_account-assortment-review/verifier.py": {
+      "archive_path": "experiments/pilot-sanmar/company/tasks/sanmar_account-assortment-review/verifier.py",
+      "sha256": "cc8bcf1c0247abb0b1342f3cbd0d21d8f162541209c72595abe20dcfed57cb53"
+    },
+    "tasks/sanmar_account-assortment-review/verifier.json": {
+      "archive_path": "experiments/pilot-sanmar/company/tasks/sanmar_account-assortment-review/verifier.json",
+      "sha256": "3bd9976e34829ea7aed10df6c627eca4e641aa0cea005f76305e10a694224cfa"
+    },
+    "tasks/sanmar_account-assortment-review/verifier-calibration.json": {
+      "archive_path": "experiments/pilot-sanmar/company/tasks/sanmar_account-assortment-review/verifier-calibration.json",
+      "sha256": "665fb07c235eb390de5ddfa6b8c9c21e66cc721ce510998d52e7773b72678230"
+    },
+    "tasks/sanmar_account-assortment-review/WORLD.json": {
+      "archive_path": "experiments/pilot-sanmar/company/tasks/sanmar_account-assortment-review/WORLD.json",
+      "sha256": "0068b6f8bd5d7c49afb24b31dd82d1ef5a0b8bf1c0caa8f897d5c02946ec359c"
+    },
+    "tasks/sanmar_qualified-acquisition-review/assignment.json": {
+      "archive_path": "experiments/pilot-sanmar/company/tasks/sanmar_qualified-acquisition-review/assignment.json",
+      "sha256": "d6c3c5e0882ab68de6f1ccfc1d7077b2a349339e8db30c53e060e19d9b55980b"
+    },
+    "tasks/sanmar_qualified-acquisition-review/workflow.json": {
+      "archive_path": "experiments/pilot-sanmar/company/tasks/sanmar_qualified-acquisition-review/workflow.json",
+      "sha256": "84e631f3dc0fc98f0b1f9cebe269abf9132cb60786023f4c4428b9d03c4329ed"
+    },
+    "tasks/sanmar_qualified-acquisition-review/assessment.json": {
+      "archive_path": "experiments/pilot-sanmar/company/tasks/sanmar_qualified-acquisition-review/assessment.json",
+      "sha256": "35ebc4ee19506055338d50b60eadf0edaf72ee0b257be7d5b95a869ecde9bd7b"
+    },
+    "tasks/sanmar_qualified-acquisition-review/golden.json": {
+      "archive_path": "experiments/pilot-sanmar/company/tasks/sanmar_qualified-acquisition-review/golden.json",
+      "sha256": "7ab842d28efdcbd56d16c62b5f8311fbec3b3baa7743cc1b08693f765f3d5e7b"
+    },
+    "tasks/sanmar_qualified-acquisition-review/verifier.py": {
+      "archive_path": "experiments/pilot-sanmar/company/tasks/sanmar_qualified-acquisition-review/verifier.py",
+      "sha256": "a2df1afc28f679d2e3c1b45406d9572ed48138a093d9315c56a11e14a1ecaec7"
+    },
+    "tasks/sanmar_qualified-acquisition-review/verifier.json": {
+      "archive_path": "experiments/pilot-sanmar/company/tasks/sanmar_qualified-acquisition-review/verifier.json",
+      "sha256": "18a2e996fd20143f88397fb74a262210eeca3bd0dcb78630960703f20c330d7e"
+    },
+    "tasks/sanmar_qualified-acquisition-review/verifier-calibration.json": {
+      "archive_path": "experiments/pilot-sanmar/company/tasks/sanmar_qualified-acquisition-review/verifier-calibration.json",
+      "sha256": "ce86919e7fb252b4a2463ddc4d451699926cbc7a6591baa9f67a1480bc22f1e2"
+    },
+    "tasks/sanmar_qualified-acquisition-review/WORLD.json": {
+      "archive_path": "experiments/pilot-sanmar/company/tasks/sanmar_qualified-acquisition-review/WORLD.json",
+      "sha256": "0068b6f8bd5d7c49afb24b31dd82d1ef5a0b8bf1c0caa8f897d5c02946ec359c"
+    },
+    "trials/sanmar_account-assortment-review/teacher.json": {
+      "archive_path": "experiments/pilot-sanmar/company/runtime/teacher/sanmar_account-assortment-review/TEACHER.json",
+      "sha256": "0869325d617c9e0bc310b7bd1786b1126ff80b1c93c9d39fd46f5ff3a09cbf68"
+    },
+    "trials/sanmar_qualified-acquisition-review/teacher.json": {
+      "archive_path": "experiments/pilot-sanmar/company/runtime/teacher/sanmar_qualified-acquisition-review/TEACHER.json",
+      "sha256": "c7e3dc7698d94b26c2b6dbe6ec3229c5cc50d7c7866e7ae406d1eba2a6b3072c"
+    },
+    "trials/sanmar_qualified-acquisition-review/ordinary.json": {
+      "archive_path": "experiments/pilot-sanmar/company/runtime/ordinary/sanmar_qualified-acquisition-review/TRIAL.json",
+      "sha256": "05c5970c0e4ddb0a804585080bbe72ab6d046f829391b4019a05c906f6d4a1e8"
+    },
+    "reports/COLLABORATOR-VERIFIED.json": {
+      "archive_path": "COLLABORATOR-VERIFIED.json",
+      "sha256": "0c0108ac63189b08721363585ebc686d4ac6d500c3f8b3a988d0902aeca7ed00"
+    },
+    "reports/VALIDATION.json": {
+      "archive_path": "VALIDATION.json",
+      "sha256": "321bb6fea88a7c4e1e5eb1a6a0f60b153ce5e3a14ea2510a79862f23adec4753"
+    },
+    "reports/TRIAL-ATTEMPTS.json": {
+      "archive_path": "experiments/pilot-sanmar/company/proofs/TRIAL-ATTEMPTS.json",
+      "sha256": "91953a72e703cd6a9e940f598d4b5aa053151ff1689625861c0263ad283720f9"
+    },
+    "trials/sanmar_account-assortment-review/teacher-grade.json": {
+      "archive_path": "experiments/pilot-sanmar/company/runtime/teacher/sanmar_account-assortment-review/runs/5d1bbce50b87489785190be11f6ec4b6/company/runtime/grades/sanmar_account-assortment-review/staged/report.json",
+      "sha256": "401d32011c9a8d4b2ce6bf18b21e0cd035b6654b25f1cf41ecf7c518c9df818c"
+    },
+    "trials/sanmar_qualified-acquisition-review/teacher-grade.json": {
+      "archive_path": "experiments/pilot-sanmar/company/runtime/teacher/sanmar_qualified-acquisition-review/runs/7d677360b3ad462199ba5df69d336537/company/runtime/grades/sanmar_qualified-acquisition-review/regraded/67abfcf220d404b3e03143eae728da40c89b20e4b50b3613386d07a359601368/report.json",
+      "sha256": "11590f5939884ec47c466ae99717ca406047fdcd4849c8a40b3663d4825ceb11"
+    }
+  }
+}

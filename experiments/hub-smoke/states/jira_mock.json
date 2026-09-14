@@ -1,0 +1,29 @@
+{
+  "users": [
+    {"id": "u1", "name": "Nadia Ferreira", "email": "nadia.ferreira@lanternfish-labs.example", "avatar": "https://ui-avatars.com/api/?name=Nadia+Ferreira&background=0052CC&color=fff"},
+    {"id": "u2", "name": "Callum Reid", "email": "callum.reid@lanternfish-labs.example", "avatar": "https://ui-avatars.com/api/?name=Callum+Reid&background=36B37E&color=fff"},
+    {"id": "u3", "name": "Yuki Tanaka", "email": "yuki.tanaka@lanternfish-labs.example", "avatar": "https://ui-avatars.com/api/?name=Yuki+Tanaka&background=FF5630&color=fff"}
+  ],
+  "projects": [
+    {"id": "p1", "key": "LFP", "name": "Lanternfish Sensor Platform", "leadId": "u1", "category": "Software", "icon": "https://ui-avatars.com/api/?name=LFP&background=6554C0&color=fff"}
+  ],
+  "issues": [
+    {"id": "i1", "key": "LFP-1", "projectId": "p1", "summary": "Firmware OTA fails on units below 20% battery", "description": "Field units abort the update and reboot into the old image.", "type": "Bug", "status": "In Progress", "priority": "Highest", "storyPoints": 5, "reporterId": "u2", "assigneeId": "u1", "sprintId": "s1", "epicId": null, "createdAt": "2026-08-31T09:00:00.000Z", "updatedAt": "2026-09-04T14:00:00.000Z", "labels": ["firmware"], "subtasks": [{"id": "st1", "title": "Reproduce on bench unit", "completed": true}, {"id": "st2", "title": "Add battery guard before flash", "completed": false}], "linkedIssueIds": []},
+    {"id": "i2", "key": "LFP-2", "projectId": "p1", "summary": "Export salinity readings as CSV from the dashboard", "description": "", "type": "Story", "status": "To Do", "priority": "Medium", "storyPoints": 3, "reporterId": "u1", "assigneeId": "u3", "sprintId": "s1", "epicId": null, "createdAt": "2026-09-01T10:00:00.000Z", "updatedAt": "2026-09-01T10:00:00.000Z", "labels": ["dashboard"], "subtasks": [], "linkedIssueIds": []},
+    {"id": "i3", "key": "LFP-3", "projectId": "p1", "summary": "Rotate MQTT broker certificates", "description": "Certificates expire 2026-10-01.", "type": "Task", "status": "Done", "priority": "High", "storyPoints": 2, "reporterId": "u1", "assigneeId": "u2", "sprintId": "s1", "epicId": null, "createdAt": "2026-08-25T10:00:00.000Z", "updatedAt": "2026-09-02T16:30:00.000Z", "labels": ["ops"], "subtasks": [], "linkedIssueIds": []}
+  ],
+  "sprints": [
+    {"id": "s1", "projectId": "p1", "name": "LFP Sprint 14", "goal": "Stabilise OTA updates before the coastal deployment", "startDate": "2026-08-31T12:00:00.000Z", "endDate": "2026-09-14T12:00:00.000Z", "state": "active"},
+    {"id": "s2", "projectId": "p1", "name": "LFP Sprint 15", "goal": "", "startDate": "2026-09-14T12:00:00.000Z", "endDate": "2026-09-28T12:00:00.000Z", "state": "future"}
+  ],
+  "comments": [
+    {"id": "c1", "issueId": "i1", "userId": "u2", "content": "Bench unit at 15% reproduces it every time.", "createdAt": "2026-09-02T11:20:00.000Z"}
+  ],
+  "workflows": [
+    {"id": "w1", "name": "Software Workflow", "transitions": [{"from": "To Do", "to": ["In Progress"]}, {"from": "In Progress", "to": ["In Review", "To Do", "Done"]}, {"from": "In Review", "to": ["Done", "In Progress"]}, {"from": "Done", "to": ["In Progress", "To Do"]}]}
+  ],
+  "notifications": [
+    {"id": "n1", "type": "comment", "issueId": "i1", "actorId": "u2", "message": "Callum Reid commented on LFP-1", "read": false, "createdAt": "2026-09-02T11:20:00.000Z"}
+  ],
+  "currentUser": {"id": "u1", "name": "Nadia Ferreira", "email": "nadia.ferreira@lanternfish-labs.example", "avatar": "https://ui-avatars.com/api/?name=Nadia+Ferreira&background=0052CC&color=fff"}
+}

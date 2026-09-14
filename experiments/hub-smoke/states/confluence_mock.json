@@ -1,0 +1,206 @@
+{
+ "users": [
+  {
+   "id": "user-1",
+   "username": "m.okonkwo",
+   "displayName": "Mara Okonkwo",
+   "email": "m.okonkwo@thorne-aldersey.example",
+   "avatar": "https://picsum.photos/100/100?random=user-1"
+  },
+  {
+   "id": "user-2",
+   "username": "d.ferreira",
+   "displayName": "Diogo Ferreira",
+   "email": "d.ferreira@thorne-aldersey.example",
+   "avatar": "https://picsum.photos/100/100?random=user-2"
+  },
+  {
+   "id": "user-3",
+   "username": "s.lindqvist",
+   "displayName": "Signe Lindqvist",
+   "email": "s.lindqvist@thorne-aldersey.example",
+   "avatar": "https://picsum.photos/100/100?random=user-3"
+  },
+  {
+   "id": "user-4",
+   "username": "a.barros",
+   "displayName": "Ana Barros",
+   "email": "a.barros@thorne-aldersey.example",
+   "avatar": "https://picsum.photos/100/100?random=user-4"
+  }
+ ],
+ "currentUser": {
+  "id": "user-1",
+  "username": "m.okonkwo",
+  "displayName": "Mara Okonkwo",
+  "email": "m.okonkwo@thorne-aldersey.example",
+  "avatar": "https://picsum.photos/100/100?random=user-1"
+ },
+ "spaces": [
+  {
+   "id": "space-1",
+   "key": "OPS",
+   "name": "Mill Operations",
+   "description": "Run books, shift handovers and line settings for the Aldersey mill.",
+   "icon": "Code"
+  },
+  {
+   "id": "space-2",
+   "key": "QA",
+   "name": "Quality Assurance",
+   "description": "Inspection procedures, defect codes and customer complaint handling.",
+   "icon": "Users"
+  },
+  {
+   "id": "space-3",
+   "key": "HSE",
+   "name": "Health and Safety",
+   "description": "Permits to work, incident reports and training records.",
+   "icon": "Users"
+  }
+ ],
+ "pages": [
+  {
+   "id": "page-1",
+   "spaceId": "space-1",
+   "parentId": null,
+   "title": "Mill Operations Home",
+   "content": "<h1>Mill Operations</h1><p>Line settings, shift handovers and the weekly maintenance window for the Aldersey mill.</p>",
+   "authorId": "user-1",
+   "created": "2026-08-12T09:00:00.000Z",
+   "updated": "2026-08-12T09:00:00.000Z",
+   "version": 3,
+   "labels": [
+    "home",
+    "operations"
+   ]
+  },
+  {
+   "id": "page-2",
+   "spaceId": "space-1",
+   "parentId": "page-1",
+   "title": "Loom 4 Changeover Procedure",
+   "content": "<h2>Loom 4 changeover</h2><p>Warp beam swap takes 42 minutes. Log the beam lot number in the shift sheet before restarting.</p>",
+   "authorId": "user-2",
+   "created": "2026-08-12T09:00:00.000Z",
+   "updated": "2026-08-12T09:00:00.000Z",
+   "version": 5,
+   "labels": [
+    "procedure",
+    "loom"
+   ]
+  },
+  {
+   "id": "page-3",
+   "spaceId": "space-1",
+   "parentId": "page-1",
+   "title": "Shift Handover Log Template",
+   "content": "<h2>Shift handover</h2><p>Outgoing supervisor records yardage, downtime minutes and any open permits.</p>",
+   "authorId": "user-4",
+   "created": "2026-08-12T09:00:00.000Z",
+   "updated": "2026-08-12T09:00:00.000Z",
+   "version": 2,
+   "labels": [
+    "handover"
+   ]
+  },
+  {
+   "id": "page-4",
+   "spaceId": "space-2",
+   "parentId": null,
+   "title": "Quality Assurance Home",
+   "content": "<h1>Quality Assurance</h1><p>Defect codes, inspection sampling plans and the complaint register.</p>",
+   "authorId": "user-3",
+   "created": "2026-08-12T09:00:00.000Z",
+   "updated": "2026-08-12T09:00:00.000Z",
+   "version": 4,
+   "labels": [
+    "home",
+    "quality"
+   ]
+  },
+  {
+   "id": "page-5",
+   "spaceId": "space-2",
+   "parentId": "page-4",
+   "title": "Defect Code Reference",
+   "content": "<h2>Defect codes</h2><table><tbody><tr><th>Code</th><td>Meaning</td></tr><tr><th>D-11</th><td>Slub in weft</td></tr><tr><th>D-23</th><td>Broken pick</td></tr></tbody></table>",
+   "authorId": "user-3",
+   "created": "2026-08-12T09:00:00.000Z",
+   "updated": "2026-08-12T09:00:00.000Z",
+   "version": 7,
+   "labels": [
+    "reference",
+    "defects"
+   ]
+  },
+  {
+   "id": "page-6",
+   "spaceId": "space-3",
+   "parentId": null,
+   "title": "Permit to Work",
+   "content": "<h1>Permit to work</h1><p>No hot work in the dye house without a signed permit and a fire watch.</p>",
+   "authorId": "user-1",
+   "created": "2026-08-12T09:00:00.000Z",
+   "updated": "2026-08-12T09:00:00.000Z",
+   "version": 2,
+   "labels": [
+    "safety",
+    "permit"
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "id": "comment-1",
+   "pageId": "page-2",
+   "userId": "user-4",
+   "content": "Beam lot numbers were missing on the Tuesday night sheet - please remind the crew.",
+   "created": "2026-08-12T09:00:00.000Z"
+  },
+  {
+   "id": "comment-2",
+   "pageId": "page-5",
+   "userId": "user-1",
+   "content": "D-23 is being raised for anything broken; we need a separate code for selvedge faults.",
+   "created": "2026-08-12T09:00:00.000Z"
+  },
+  {
+   "id": "comment-3",
+   "pageId": "page-6",
+   "userId": "user-2",
+   "content": "The dye house fire watch roster is pinned by the permit board.",
+   "created": "2026-08-12T09:00:00.000Z"
+  }
+ ],
+ "versions": [
+  {
+   "id": "v-1",
+   "pageId": "page-2",
+   "content": "<h2>Loom 4 changeover</h2><p>Warp beam swap takes 55 minutes.</p>",
+   "authorId": "user-2",
+   "created": "2026-07-02T09:00:00.000Z",
+   "version": 4
+  },
+  {
+   "id": "v-2",
+   "pageId": "page-5",
+   "content": "<h2>Defect codes</h2><p>Codes pending review.</p>",
+   "authorId": "user-3",
+   "created": "2026-06-18T09:00:00.000Z",
+   "version": 6
+  }
+ ],
+ "templates": [
+  {
+   "id": "t-1",
+   "name": "Shift Handover Notes",
+   "content": "<h1>Shift Handover Notes</h1><table><tbody><tr><th>Shift</th><td></td></tr><tr><th>Yardage</th><td></td></tr></tbody></table><h2>Open permits</h2><ul><li></li></ul>"
+  },
+  {
+   "id": "t-2",
+   "name": "Defect Investigation",
+   "content": "<h1>Defect Investigation</h1><h2>Observation</h2><p>What was seen on the roll...</p><h2>Containment</h2><p>Lots held...</p>"
+  }
+ ]
+}

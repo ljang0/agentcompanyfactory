@@ -1,0 +1,435 @@
+{
+  "schema_version": "1",
+  "id": "cort",
+  "name": "Hearthway Furniture Rental",
+  "real_firm": "CORT",
+  "website": "https://www.cort.com",
+  "sector": "Real Estate and Rental and Leasing",
+  "naics": "532289",
+  "location": "Fictional operating unit in the Raleigh–Durham, North Carolina metropolitan area, United States.",
+  "operations": "Hearthway Furniture Rental is a fictional analogue of CORT's residential furniture rental operation. Its modeled district serves households furnishing temporary homes, including relocating employees, students and military families. Customers select packages or individual pieces, agree rental terms and arrange delivery, setup and eventual pickup. Returned furniture passes through inspection, cleaning and, where appropriate, repair before another rental; assets retired from rental service pass to an associated outlet. This scope excludes workplace furnishings, events, apartment brokerage and destination services. The operating unit comprises one distribution warehouse with a refurbishment area, two rental showrooms and one associated outlet. Synthetic ordinary scale is 900 active household leases, 12,000 individually identified furniture pieces across customer homes and district locations, about 45 new rental orders and 40 completed lease returns per week, plus extensions, exchanges, repairs and outlet replenishment. Approximately 70 furniture pieces move into outlet stock each week. Four delivery crews and a separate warehouse and repair workforce perform physical work. The six modeled workers are recurring computer-use decision owners within that larger unit, not its entire staff. The district has five synthetic years of operating history, including multiple rental cycles, item-level repair histories, seasonal demand, customer preferences and outlet sell-through records. Routine work products include quotations, customer requirement records, availability reconciliations, asset allocations, repair instructions, dispatch manifests, retirement authorizations and outlet pricing recommendations.",
+  "evidence": [
+    {
+      "id": "e1",
+      "kind": "sourced",
+      "text": "CORT offers residential furniture packages and selection of individual pieces.",
+      "source_url": "https://blog.cort.com/moving/white-glove-service/",
+      "quote": "Choose from our pre-designed Move-In Ready packages or handpick each piece",
+      "basis": "The October 22, 2024 article explicitly describes these selection options. This establishes the customer offering, not employee delegations. [CORT service article](https://blog.cort.com/moving/white-glove-service/)."
+    },
+    {
+      "id": "e2",
+      "kind": "sourced",
+      "text": "CORT's furniture rental service includes delivery, setup, exchanges and pickup.",
+      "source_url": "https://blog.cort.com/moving/white-glove-service/",
+      "quote": "From delivery to setup, swaps to pickups",
+      "basis": "The article describes these service stages and customer coordination. It supports the operational cycle; exact notice periods, amendment rights and charges must be specified separately. [CORT service article](https://blog.cort.com/moving/white-glove-service/)."
+    },
+    {
+      "id": "e3",
+      "kind": "sourced",
+      "text": "CORT describes inspection, cleaning and maintenance between rental cycles.",
+      "source_url": "https://blog.cortfurnitureoutlet.com/inspiration/circular-sustainability-cycle/",
+      "quote": "Between rental cycles, CORT furniture undergoes a rigorous process of inspection, cleaning, and maintenance",
+      "basis": "The supplied capture of CORT's September 30, 2024 article supports recurring preparation for reuse. It does not provide condition thresholds, repair budgets or release authority."
+    },
+    {
+      "id": "e4",
+      "kind": "sourced",
+      "text": "CORT's outlet provides a sale channel for furniture after its rental life.",
+      "source_url": "https://blog.cortfurnitureoutlet.com/inspiration/circular-sustainability-cycle/",
+      "quote": "it is inspected and cleaned once again and then sold at CORT Furniture Outlet.",
+      "basis": "In the supplied capture, Fact #3 places this sentence after furniture has finished its life at CORT. This supports the disposition channel and preparation before sale, not an economic retirement formula. It replaces the inaccessible brochure."
+    },
+    {
+      "id": "e5",
+      "kind": "sourced",
+      "text": "CORT identifies local inventory control clerks and regional or divisional asset managers as inventory occupations.",
+      "source_url": "https://careers.cort.com/operations",
+      "quote": "Our inventory team is comprised of local inventory control clerks, regional or divisional asset managers, and more.",
+      "basis": "The supplied career-page capture establishes these role families. Its warehouse and transportation sections also describe receiving, product care and distribution, including repair technicians and dispatch. Exact modeled responsibilities are inferred."
+    },
+    {
+      "id": "e6",
+      "kind": "sourced",
+      "text": "CORT identifies warehouse associates, warehouse supervisors and furniture repair technicians among its warehouse positions.",
+      "source_url": "https://careers.cort.com/operations",
+      "quote": "CORT warehouse positions include warehouse associates, warehouse supervisors, and furniture repair technicians.",
+      "basis": "This exact sentence appears in the supplied operations-page capture. It supports warehouse supervision and repair role families. Cycle-count duties, detailed repair procedures and release authority are modeled responsibilities, not verified posting content."
+    },
+    {
+      "id": "e7",
+      "kind": "inferred",
+      "text": "A residential rental consultant can own requirements, rental administration and coordination of accepted customer changes.",
+      "source_url": "",
+      "quote": "",
+      "basis": "The selection and service stages in e1-e2 require customer requirements and accepted instructions to reach inventory and delivery coordination. Assigning these responsibilities to w1 is a reasonable modeled division of work. The supplied job-page capture did not establish agreement-processing duties or CORT's actual delegation."
+    },
+    {
+      "id": "e8",
+      "kind": "inferred",
+      "text": "The modeled outlet manager evaluates aging stock, transfer readiness, floor-space use and pricing for retired rental furniture.",
+      "source_url": "",
+      "quote": "",
+      "basis": "The outlet disposition channel in e4 requires decisions about which received pieces to offer and how to use selling capacity. These analytical responsibilities are inferred for Hearthway; the inaccessible job posting does not establish them as CORT duties. Pricing limits and district retirement authority are synthetic."
+    },
+    {
+      "id": "e9",
+      "kind": "sourced",
+      "text": "CORT serves residential customers including people relocating for work, military families and students.",
+      "source_url": "https://careers.cort.com/furniture",
+      "quote": "military families on the move or students moving off campus",
+      "basis": "The supplied page capture also identifies displaced families and job-related relocation. These customer groups justify the residential scope."
+    },
+    {
+      "id": "e10",
+      "kind": "sourced",
+      "text": "CORT's 2022 customer guide describes longer leases as offering better pricing.",
+      "source_url": "https://blog.cort.com/tips/the-ins-and-outs-of-furniture-rental-with-cort/",
+      "quote": "the longer your lease is, the better your price will be!",
+      "basis": "This statement appears in the May 3, 2022 guide's explanation of entering location and rental duration. It supports term-sensitive quotation analysis, not a current tariff or a verified location-price formula. [CORT rental guide](https://blog.cort.com/tips/the-ins-and-outs-of-furniture-rental-with-cort/)."
+    },
+    {
+      "id": "e11",
+      "kind": "inferred",
+      "text": "Residential rental commitments, asset availability, repair readiness, dispatch capacity and outlet disposition form one interdependent operating cycle.",
+      "source_url": "",
+      "quote": "",
+      "basis": "Derived from the sourced service stages and role families in e1-e6 and e9-e10: commitments consume reusable furniture, returns create preparation work, and retirement removes assets from future rental supply. The responsibility choices in e7-e8, two teams and six decision owners model these dependencies; they are not a claim about CORT's reporting structure."
+    },
+    {
+      "id": "e12",
+      "kind": "synthetic",
+      "text": "Hearthway is a mature Raleigh–Durham residential rental district with 900 active leases, 12,000 furniture pieces, two rental showrooms, one warehouse, one outlet and four delivery crews.",
+      "source_url": "",
+      "quote": "",
+      "basis": "Invented bounded-unit scale supports ordinary concurrent leases, returns, repair queues and outlet turnover. The weekly workload and five-year history in operations are scenario assumptions, not CORT counts."
+    },
+    {
+      "id": "e13",
+      "kind": "synthetic",
+      "text": "The modeled unit uses explicit asset states, customer acceptance records, repair release evidence and delegated spending limits.",
+      "source_url": "",
+      "quote": "",
+      "basis": "Invented operating rules make decisions reproducible. Asset identity, physical location, condition and future reservation are separate fields. A planned pickup is not a receipt, a repair estimate is not release evidence, and retirement approval is not a completed sale."
+    },
+    {
+      "id": "e14",
+      "kind": "inferred",
+      "text": "The inspected catalog supports proposed analytical and service-record workspaces, but does not establish a functioning furniture rental lifecycle system.",
+      "source_url": "",
+      "quote": "",
+      "basis": "Catalog search located Google Sheets, Zendesk, Odoo Inventory and maintenance candidates. Schema inspection documented Google Sheets workbook/cell records and Zendesk tickets/comments; Odoo Inventory returned no schema document. These findings support the retained workspace proposals but do not establish date-based rental reservations, repair-release integration or atomic rental-to-outlet transitions. The previous dossier also reported inconclusive SAP and CalemEAM inspections; those products are not relied upon to close the gap."
+    },
+    {
+      "id": "e15",
+      "kind": "inferred",
+      "text": "NAICS 532289 is used as the modeled residential furniture rental unit's classification.",
+      "source_url": "",
+      "quote": "",
+      "basis": "Assigned to the selected consumer furniture rental activity; this is not a verified corporate classification for all CORT business lines."
+    }
+  ],
+  "workers": [
+    {
+      "id": "w1",
+      "title": "Residential Rental Consultant",
+      "soc": "41-2021",
+      "responsibility": "Translate household requirements into item or package specifications, compare term-dependent quotations, document acceptable substitutions, administer extensions and pickup requests, and communicate only operationally supported commitments.",
+      "information_access": [
+        "Customer requirements, room and item dimensions, budgets and substitution preferences",
+        "Lease terms, quotation versions and customer acceptance",
+        "Shared item availability, repair readiness summaries and dispatch options",
+        "Delivery, exchange and pickup reports"
+      ],
+      "authority": "Synthetic delegation: issue standard quotations and record accepted lease changes within the supplied tariff. May not promise unavailable assets, override readiness holds or grant unlisted concessions.",
+      "evidence_ids": [
+        "e1",
+        "e2",
+        "e7",
+        "e9",
+        "e10",
+        "e11",
+        "e13"
+      ]
+    },
+    {
+      "id": "w2",
+      "title": "Inventory Controller",
+      "soc": "43-5071",
+      "responsibility": "Reconcile item identity, location, custody and reservations; investigate count differences; distinguish expected returns from usable stock; prepare allocations and reconcile warehouse, customer and outlet movements.",
+      "information_access": [
+        "Asset register, SKU families, dimensions and substitution relationships",
+        "Reservations, lease item lists and movement histories",
+        "Receiving manifests, count reports and condition findings",
+        "Repair releases, retirement approvals and outlet receipts"
+      ],
+      "authority": "Synthetic delegation: correct supported record discrepancies and reserve eligible assets within approved priorities. Cannot fabricate receipts, release repair holds or retire assets independently.",
+      "evidence_ids": [
+        "e3",
+        "e5",
+        "e6",
+        "e11",
+        "e13"
+      ]
+    },
+    {
+      "id": "w3",
+      "title": "Delivery and Pickup Dispatcher",
+      "soc": "43-5032",
+      "responsibility": "Build feasible pickup, delivery and transfer sequences using vehicle capacity, crew time, service duration and building access constraints; issue manifests and reconcile actual route reports.",
+      "information_access": [
+        "Customer delivery and pickup windows, addresses and access instructions",
+        "Truck capacities, crew calendars and fixed travel-time matrix",
+        "Item dimensions, load volumes and staged allocations",
+        "Warehouse cutoff times and external crew completion reports"
+      ],
+      "authority": "Synthetic delegation: assign available crews and revise routes within supplied work-hour and capacity limits. Customer appointment changes require recorded acceptance; overtime outside the budget requires escalation.",
+      "evidence_ids": [
+        "e1",
+        "e2",
+        "e5",
+        "e11",
+        "e13"
+      ]
+    },
+    {
+      "id": "w4",
+      "title": "Refurbishment Supervisor",
+      "soc": "51-1011",
+      "responsibility": "Interpret inspection and repair reports, distinguish cosmetic preparation from unresolved structural concerns, estimate labor and material needs, sequence the repair queue and verify completion evidence before authorizing readiness.",
+      "information_access": [
+        "Inspection findings, photographs and prior repairs",
+        "Supplied rental and resale condition standards",
+        "Repair labor capacity, material availability and estimates",
+        "Demand priorities, dispatch cutoffs and technician completion reports"
+      ],
+      "authority": "Synthetic delegation: assign work within the repair budget and release assets when the supplied standards and completion evidence support release. Cannot change physical findings or approve retirement economics.",
+      "evidence_ids": [
+        "e3",
+        "e6",
+        "e11",
+        "e13"
+      ]
+    },
+    {
+      "id": "w5",
+      "title": "District Asset Manager",
+      "soc": "11-1021",
+      "responsibility": "Balance rental service, repair investment, idle inventory and residual value; compare reuse and retirement options; set asset priorities and authorize economically justified dispositions.",
+      "information_access": [
+        "Rental utilization, expected demand and committed orders",
+        "Item age, acquisition cost, repair history and remaining value assumptions",
+        "Inventory, repair and dispatch feasibility analyses",
+        "Outlet margins, space limits and sell-through history"
+      ],
+      "authority": "Synthetic delegation: approve repair spending, rental allocation priorities and retirement within the episode's budget and reserve requirements. Larger capital commitments or concessions go to an external regional approver.",
+      "evidence_ids": [
+        "e4",
+        "e5",
+        "e8",
+        "e11",
+        "e13"
+      ]
+    },
+    {
+      "id": "w6",
+      "title": "Outlet Manager",
+      "soc": "41-1011",
+      "responsibility": "Evaluate retired furniture for outlet assortment, condition disclosure, pricing and floor-space use; compare individual and grouped sale options; monitor actual receipts, sales and aging.",
+      "information_access": [
+        "Approved retirement list and item condition evidence",
+        "Outlet stock, available floor space and current reservations",
+        "Historical transaction prices, markdowns and sell-through",
+        "Transfer receipts, approved price floors and sales reports"
+      ],
+      "authority": "Synthetic delegation: accept eligible transfers and set outlet prices within supplied margin and markdown limits. Cannot sell rental-reserved assets or clear unresolved condition holds.",
+      "evidence_ids": [
+        "e4",
+        "e8",
+        "e11",
+        "e13"
+      ]
+    }
+  ],
+  "teams": [
+    {
+      "id": "t1",
+      "name": "Rental Service and Delivery Coordination",
+      "purpose": "Convert household requirements and lease changes into feasible customer commitments, allocations and delivery or pickup instructions.",
+      "worker_ids": [
+        "w1",
+        "w2",
+        "w3"
+      ]
+    },
+    {
+      "id": "t2",
+      "name": "Asset Reuse and Outlet Operations",
+      "purpose": "Maintain reliable asset readiness and choose repair, continued rental or outlet disposition using service requirements and asset economics.",
+      "worker_ids": [
+        "w2",
+        "w4",
+        "w5",
+        "w6"
+      ]
+    }
+  ],
+  "software": [
+    {
+      "id": "s1",
+      "capability": "Shared customer requests, exception ownership, review notes and evidence handoffs",
+      "reference_product": "Zendesk",
+      "catalog_app_ids": [
+        "Zendesk_mock"
+      ],
+      "status": "substitution",
+      "rationale": "Proposed service workspace, with no claim of CORT adoption. The inspected schema documents requesters, assignees, collaborators, ticket states including pending and hold, public/internal comments and attachments. These support customer requirements and cross-worker review records. Ticket closure does not execute a lease, reserve furniture or prove physical completion. UI behavior, role enforcement, attachment persistence, reset and integration remain unverified.",
+      "evidence_ids": [
+        "e7",
+        "e11",
+        "e14"
+      ]
+    },
+    {
+      "id": "s2",
+      "capability": "Allocation analysis, repair-capacity comparison, route feasibility and rental-versus-resale economics",
+      "reference_product": "Google Sheets",
+      "catalog_app_ids": [
+        "google_sheets_mock"
+      ],
+      "status": "substitution",
+      "rationale": "Proposed analytical workbook. The inspected schema documents sheets, cells, formulas, computed values, notes, filters and named ranges. Workers can build evidence-linked comparisons and instruction schedules from supplied snapshots. Formula coverage, concurrent editing, permissions and reset require validation. There is no native business approval status or transactional asset reservation; workbook results remain analyses and authorized instructions.",
+      "evidence_ids": [
+        "e11",
+        "e13",
+        "e14"
+      ]
+    },
+    {
+      "id": "s3",
+      "capability": "Warehouse product records, stock transfers and inventory reconciliation",
+      "reference_product": "Odoo Inventory",
+      "catalog_app_ids": [
+        "odoo_inventory_env"
+      ],
+      "status": "catalog_candidate",
+      "rationale": "Catalog search describes product management, stock transfers and warehouse operations. read_app_schema returned no schema document, so serialized asset support, condition locations, movement audit, seeding, UI, permissions and reset are unresolved. This is a candidate for ordinary warehouse records only. It does not close the rental lifecycle gap in s4.",
+      "evidence_ids": [
+        "e5",
+        "e6",
+        "e14"
+      ]
+    },
+    {
+      "id": "s4",
+      "capability": "Furniture rental lifecycle: lease item history, availability by date, readiness holds, reservations, actual returns and rental-to-outlet transitions",
+      "reference_product": "Furniture rental management system; product unspecified",
+      "catalog_app_ids": [],
+      "status": "gap",
+      "rationale": "Essential behavior requires asset-level custody and condition independent of future reservations, prevention of conflicting commitments, release after documented preparation, and removal from rental supply before outlet sale. Inspected candidates did not establish this combination. Future execution must provide a validated domain environment or an explicit external system actor returning transaction acknowledgments. Generic tables must not be presented as an equivalent rental engine.",
+      "evidence_ids": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e13",
+        "e14"
+      ]
+    }
+  ],
+  "outlines": [
+    {
+      "id": "o1",
+      "title": "Allocate returned furniture between immediate reuse, repair and reserve",
+      "objective": "Convert actual returns and preparation capacity into a defensible asset allocation that supports upcoming household commitments and leaves accurate readiness and reservation records.",
+      "decision_problem": "Which returned pieces should receive scarce repair capacity, which ready pieces should be reserved, and which customer packages require an accepted alternative? Start with concurrent rental commitments, expected and actual returns, existing stock, repair histories and a constrained labor budget. w1 distinguishes mandatory household requirements from acceptable substitutions. w2 reconciles custody, condition and reservations and identifies which expected returns cannot yet support an allocation. w4 develops repair sequences with labor, materials and readiness dependencies. w3 tests whether resulting allocations can be staged and delivered within actual route and building constraints. w5 compares service consequences and incremental repair costs and authorizes a plan within budget. Workers issue customer-specific commitments, asset instructions and repair priorities. External technicians and crews then supply actual completion and movement reports; w2, w4 and w3 reconcile those reports, while w1 revises affected commitments and w5 resolves material tradeoffs. Completion requires supported final allocations or explicit unresolved shortages, not merely an approved spreadsheet.",
+      "team_ids": [
+        "t1",
+        "t2"
+      ],
+      "worker_ids": [
+        "w1",
+        "w2",
+        "w3",
+        "w4",
+        "w5"
+      ],
+      "evidence_ids": [
+        "e1",
+        "e2",
+        "e3",
+        "e5",
+        "e6",
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ]
+    },
+    {
+      "id": "o2",
+      "title": "Retire an aging furniture cohort and establish its outlet sale plan",
+      "objective": "Choose which aging assets should remain available for rental and which should enter the outlet, then reconcile the financial and inventory consequences of the selected disposition.",
+      "decision_problem": "When does an asset's expected additional rental contribution justify another repair and rental cycle instead of outlet sale, and how should approved outlet stock be priced and grouped? Use item histories, utilization, forward demand, repair estimates, outlet sale history and constrained floor space. w2 establishes the candidate population and excludes assets with active rental commitments or unresolved custody. w4 assesses the work and evidence needed for each rental or resale condition standard. w6 estimates achievable prices, time to sell and space consumption for individual pieces and compatible room groupings. w5 compares incremental rental contribution against repair cost, idle time and net resale proceeds, including uncertainty and minimum rental reserves. Retirement decisions become item-specific instructions that w2 reconciles with external transfer acknowledgments. w6 uses actual received condition and stock to finalize the permitted pricing plan and later interprets supplied sales results; w5 decides whether remaining pieces warrant a markdown, continued holding or another authorized disposition. No sale is inferred from a transfer or price approval.",
+      "team_ids": [
+        "t2"
+      ],
+      "worker_ids": [
+        "w2",
+        "w4",
+        "w5",
+        "w6"
+      ],
+      "evidence_ids": [
+        "e3",
+        "e4",
+        "e5",
+        "e8",
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ]
+    },
+    {
+      "id": "o3",
+      "title": "Resolve lease extensions and staged pickups against future commitments",
+      "objective": "Turn changing household departure needs into accepted lease and pickup instructions while preserving an accurate future supply picture.",
+      "decision_problem": "Which combination of extension, staged pickup, exchange or revised future allocation can satisfy an existing household without silently consuming furniture already expected by another customer? Start with active lease item lists, customer requests, a fixed tariff, future reservations, eligible alternatives and route capacity. w1 interprets the supplied lease rules, calculates customer options and distinguishes requested changes from accepted amendments. w2 traces the requested retained pieces into future commitments and develops feasible asset alternatives without treating tentative pickups as receipts. w3 compares combined and separate visits using building access, truck volume and crew time. Their joint comparison determines which options w1 may present and which require a different commitment. Accepted responses control the lease-change and dispatch instructions. External system and crew acknowledgments then establish what actually changed and what was collected; w2 reconciles item custody and future availability, w3 closes or reschedules incomplete stops, and w1 prepares the exact billing handoff and customer confirmation. The cycle ends with consistent lease, pickup and future-allocation facts or an explicit unresolved exception.",
+      "team_ids": [
+        "t1"
+      ],
+      "worker_ids": [
+        "w1",
+        "w2",
+        "w3"
+      ],
+      "evidence_ids": [
+        "e1",
+        "e2",
+        "e7",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ]
+    }
+  ],
+  "assumptions": [
+    "All Hearthway locations, scale, workloads, staffing levels, history and delegations are synthetic. The six worker identities describe selected recurring decision owners within a larger operating unit.",
+    "Source repair was conducted September 6, 2026. Accessible CORT blog articles replace inaccessible main-site service and pricing pages. Supplied successful captures ground inspection, outlet disposition, operations role families and customer groups. Unsupported job-posting duties are narrowed to captured role descriptions or labeled as inferences.",
+    "Real-company articles describe offerings at their publication dates. Their marketing language is not a service guarantee, current tariff, contractual entitlement or employee delegation.",
+    "The ordinary asset population extends well beyond any episode's affected items. Seeded history should include unaffected leases, stock, prior repairs, reservations and outlet transactions so local decisions have meaningful opportunity costs.",
+    "Two functional teams are an inferred organization. The inventory controller retains one identity and shared access across both teams. Other workers receive operational summaries and underlying evidence needed for their decisions.",
+    "Every outline includes at least three substantive computer-use contributors. Reviews must change feasible options, resource commitments, pricing or downstream records; participation is not satisfied by acknowledgment alone.",
+    "Rental-ready, awaiting inspection, repair hold, outlet-approved and sold are synthetic business states. Location, custody, condition and reservation remain separate attributes, with explicit transition rules.",
+    "Each episode supplies fixed tariffs, lease amendment rules, condition standards, repair limits, cost assumptions, customer responses, travel times and approval thresholds. No episode depends on live prices, real employee identities or changing website content.",
+    "Drivers, delivery assistants, receiving staff, inspectors and repair technicians are explicit external physical actors. Their reports provide observations and actual execution facts; modeled workers still reconcile evidence, calculate alternatives and make decisions.",
+    "Regional capital approval and accounting posting are external functions. Episodes requiring them must supply requests and responsive acknowledgments rather than assuming approval or posting.",
+    "The associated outlet is included only as the disposition channel for the same residential rental asset pool. Independent new-furniture purchasing and unrelated outlet business are outside scope.",
+    "Software entries are proposals, not evidence of CORT adoption. Catalog flags and schema examples do not prove deployed UI, permissions, seeding, reset or integration.",
+    "Until s4 is resolved, executable episodes must explicitly use an external rental-system actor with validated transaction acknowledgments. Spreadsheet instructions and service tickets cannot themselves establish reservations, executed leases, repair releases or completed outlet sales."
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "app_id": "amplitude_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "charts",
+    "cohorts",
+    "currentUser",
+    "dashboards",
+    "eventDefinitions",
+    "events",
+    "experiments",
+    "homeMetrics",
+    "notebooks",
+    "spaces",
+    "templates",
+    "ui",
+    "users"
+  ],
+  "observed": [
+    "askThreads",
+    "charts",
+    "cohorts",
+    "currentUser",
+    "dashboards",
+    "eventDefinitions",
+    "events",
+    "experiments",
+    "homeMetrics",
+    "notebooks",
+    "spaces",
+    "templates",
+    "ui",
+    "userPaths",
+    "users"
+  ],
+  "undocumented_so_unseedable": [
+    "askThreads",
+    "userPaths"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 9,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 20,
+      "record_fields": [
+        "id",
+        "userId",
+        "amplitudeId",
+        "displayName",
+        "avatar",
+        "firstSeen",
+        "lastSeen",
+        "country",
+        "countryFlag",
+        "platform",
+        "deviceType",
+        "os",
+        "browser",
+        "library",
+        "properties"
+      ],
+      "keyed_by_id": false
+    },
+    "events": {
+      "kind": "array",
+      "count": 1200,
+      "record_fields": [
+        "id",
+        "name",
+        "category",
+        "userId",
+        "timestamp",
+        "sessionId",
+        "properties"
+      ],
+      "keyed_by_id": false
+    },
+    "eventDefinitions": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "name",
+        "displayName",
+        "description",
+        "category",
+        "status",
+        "createdAt",
+        "createdBy",
+        "occurrencesLast30d",
+        "icon",
+        "color",
+        "properties"
+      ],
+      "keyed_by_id": false
+    },
+    "charts": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "type",
+        "status",
+        "owner",
+        "ownerEmail",
+        "createdAt",
+        "updatedAt",
+        "dashboardIds",
+        "notebookIds",
+        "config",
+        "data"
+      ],
+      "keyed_by_id": false
+    },
+    "dashboards": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "owner",
+        "ownerEmail",
+        "isOfficial",
+        "createdAt",
+        "updatedAt",
+        "chartIds",
+        "layout",
+        "space"
+      ],
+      "keyed_by_id": false
+    },
+    "cohorts": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "owner",
+        "createdAt",
+        "updatedAt",
+        "userCount",
+        "lastComputed",
+        "definition"
+      ],
+      "keyed_by_id": false
+    },
+    "notebooks": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "name",
+        "owner",
+        "space",
+        "createdAt",
+        "updatedAt",
+        "viewCount",
+        "blocks"
+      ],
+      "keyed_by_id": false
+    },
+    "experiments": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "subtype",
+        "status",
+        "owner",
+        "createdAt",
+        "variants",
+        "goals",
+        "pages",
+        "targeting",
+        "rolloutPercent",
+        "results"
+      ],
+      "keyed_by_id": false
+    },
+    "spaces": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "owner",
+        "isPersonal",
+        "contentIds"
+      ],
+      "keyed_by_id": false
+    },
+    "userPaths": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "homeMetrics": {
+      "kind": "object",
+      "count": 11,
+      "record_fields": [
+        "value",
+        "delta",
+        "deltaType"
+      ],
+      "keyed_by_id": false
+    },
+    "templates": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "chartCount"
+      ],
+      "keyed_by_id": false
+    },
+    "askThreads": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "ui": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

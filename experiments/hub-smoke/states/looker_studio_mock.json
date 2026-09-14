@@ -1,0 +1,70 @@
+{
+  "user": { "id": "user_001", "name": "Kwame Asante", "email": "kwame.asante@pinecrest-outfitters.example", "avatarUrl": null, "avatarColor": "#4285F4" },
+  "reports": [
+    {
+      "id": "rpt_001", "name": "Pinecrest Outfitters Web Traffic", "description": "Storefront traffic and conversion overview", "thumbnail": null, "thumbnailColor": "#4285F4",
+      "createdAt": "2026-06-10T10:00:00.000Z", "modifiedAt": "2026-09-05T14:20:00.000Z", "lastOpenedAt": "2026-09-06T08:00:00.000Z",
+      "ownerId": "user_001", "ownerName": "Kwame Asante", "ownerEmail": "kwame.asante@pinecrest-outfitters.example",
+      "shared": true, "starred": true, "trashed": false, "published": false, "publishedUrl": null,
+      "sharedWith": [ { "email": "leah.brandt@pinecrest-outfitters.example", "name": "Leah Brandt", "role": "viewer", "avatarColor": "#34A853" } ],
+      "dataSources": ["ds_001"], "pages": ["page_001"], "currentPageId": "page_001",
+      "components": ["comp_001", "comp_002"], "dateRange": { "start": "2026-08-07", "end": "2026-09-06", "preset": "Last 30 days" }, "filters": [], "settings": { "theme": "default" }
+    },
+    {
+      "id": "rpt_002", "name": "Wholesale Orders Q3", "description": "Wholesale channel order volume", "thumbnail": null, "thumbnailColor": "#FBBC04",
+      "createdAt": "2026-07-01T09:00:00.000Z", "modifiedAt": "2026-08-30T11:00:00.000Z", "lastOpenedAt": "2026-09-01T09:30:00.000Z",
+      "ownerId": "user_001", "ownerName": "Kwame Asante", "ownerEmail": "kwame.asante@pinecrest-outfitters.example",
+      "shared": false, "starred": false, "trashed": false, "published": false, "publishedUrl": null,
+      "sharedWith": [], "dataSources": ["ds_002"], "pages": ["page_002"], "currentPageId": "page_002",
+      "components": ["comp_003"], "dateRange": { "start": "2026-07-01", "end": "2026-09-30", "preset": "This quarter" }, "filters": [], "settings": { "theme": "default" }
+    }
+  ],
+  "dataSources": [
+    {
+      "id": "ds_001", "name": "Pinecrest Storefront Analytics", "type": "google_analytics", "connectorIcon": "analytics",
+      "createdAt": "2026-06-01T10:00:00.000Z", "modifiedAt": "2026-09-01T10:00:00.000Z", "ownerId": "user_001", "ownerName": "Kwame Asante",
+      "fields": [
+        { "id": "dim_date", "name": "Date", "type": "date", "category": "dimension", "aggregation": null },
+        { "id": "dim_source", "name": "Source", "type": "text", "category": "dimension", "aggregation": null },
+        { "id": "met_users", "name": "Users", "type": "number", "category": "metric", "aggregation": "SUM" },
+        { "id": "met_sessions", "name": "Sessions", "type": "number", "category": "metric", "aggregation": "SUM" }
+      ],
+      "data": [
+        { "dim_date": "2026-09-01", "dim_source": "google", "met_users": 412, "met_sessions": 530 },
+        { "dim_date": "2026-09-02", "dim_source": "direct", "met_users": 268, "met_sessions": 301 },
+        { "dim_date": "2026-09-03", "dim_source": "instagram", "met_users": 190, "met_sessions": 244 }
+      ]
+    },
+    {
+      "id": "ds_002", "name": "Wholesale Orders Sheet", "type": "google_sheets", "connectorIcon": "sheets",
+      "createdAt": "2026-07-01T09:00:00.000Z", "modifiedAt": "2026-08-30T11:00:00.000Z", "ownerId": "user_001", "ownerName": "Kwame Asante",
+      "fields": [
+        { "id": "dim_retailer", "name": "Retailer", "type": "text", "category": "dimension", "aggregation": null },
+        { "id": "met_amount", "name": "Order Amount", "type": "number", "category": "metric", "aggregation": "SUM" }
+      ],
+      "data": [
+        { "dim_retailer": "Summit Supply Co.", "met_amount": 12400 },
+        { "dim_retailer": "Trailhead Goods", "met_amount": 8650 }
+      ]
+    }
+  ],
+  "templates": [
+    { "id": "tmpl_001", "name": "Google Analytics Overview", "description": "Website traffic and user behavior dashboard.", "category": "Marketing", "thumbnail": null, "thumbnailColor": "#4285F4", "dataSourceType": "google_analytics", "popularity": 1200, "pages": [], "components": [] }
+  ],
+  "currentReport": null,
+  "pages": {
+    "page_001": { "id": "page_001", "name": "Overview", "reportId": "rpt_001", "width": 1160, "height": 900, "background": "#FFFFFF", "backgroundColor": "#FFFFFF", "order": 0, "components": ["comp_001", "comp_002"] },
+    "page_002": { "id": "page_002", "name": "Orders", "reportId": "rpt_002", "width": 1160, "height": 900, "background": "#FFFFFF", "backgroundColor": "#FFFFFF", "order": 0, "components": ["comp_003"] }
+  },
+  "components": {
+    "comp_001": { "id": "comp_001", "type": "chart", "chartType": "scorecard", "controlType": null, "pageId": "page_001", "x": 20, "y": 20, "width": 260, "height": 100, "dataSourceId": "ds_001", "dimensions": [], "metrics": [ { "fieldId": "met_users", "name": "Users", "type": "number", "aggregation": "SUM" } ], "sortField": "met_users", "sortDirection": "DESC", "rowLimit": 10, "filters": [], "config": {}, "style": { "title": "Total Users", "showTitle": true } },
+    "comp_002": { "id": "comp_002", "type": "chart", "chartType": "time_series", "controlType": null, "pageId": "page_001", "x": 20, "y": 140, "width": 1100, "height": 300, "dataSourceId": "ds_001", "dimensions": [ { "fieldId": "dim_date", "name": "Date", "type": "date" } ], "metrics": [ { "fieldId": "met_sessions", "name": "Sessions", "type": "number", "aggregation": "SUM" } ], "sortField": "met_sessions", "sortDirection": "DESC", "rowLimit": 10, "filters": [], "config": {}, "style": { "title": "Sessions Trend", "showTitle": true } },
+    "comp_003": { "id": "comp_003", "type": "chart", "chartType": "bar", "controlType": null, "pageId": "page_002", "x": 20, "y": 20, "width": 560, "height": 300, "dataSourceId": "ds_002", "dimensions": [ { "fieldId": "dim_retailer", "name": "Retailer", "type": "text" } ], "metrics": [ { "fieldId": "met_amount", "name": "Order Amount", "type": "number", "aggregation": "SUM" } ], "sortField": "met_amount", "sortDirection": "DESC", "rowLimit": 10, "filters": [], "config": {}, "style": { "title": "Orders by Retailer", "showTitle": true } }
+  },
+  "editor": { "mode": "edit", "selectedComponentIds": [], "clipboard": null, "zoom": 100, "showGrid": true, "snapToGrid": true, "gridSize": 10, "undoStack": [], "redoStack": [], "propertiesPanel": { "visible": true, "activeTab": "setup" }, "activeTool": "select", "activeChartType": null, "activeControlType": null, "isDrawing": false, "drawStart": null },
+  "home": { "view": "recent", "sortBy": "lastOpened", "sortDirection": "desc", "searchQuery": "", "viewMode": "grid" },
+  "dataSourcesView": { "sortBy": "lastModified", "searchQuery": "" },
+  "shareDialog": { "open": false, "reportId": null },
+  "connectorDialog": { "open": false },
+  "publishDialog": { "open": false, "reportId": null }
+}

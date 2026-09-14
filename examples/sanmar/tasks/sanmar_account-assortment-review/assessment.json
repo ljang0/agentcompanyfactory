@@ -1,0 +1,190 @@
+{
+  "criteria": [
+    {
+      "criterion": 1,
+      "weight": 30.0,
+      "must_pass": true,
+      "evidence": [
+        "google_drive_mock.items#POL-AUTH-3",
+        "hubspot_mock.deals#OPP-HARBOR-FALL",
+        "hubspot_mock.deals#OPP-JUNIPER-WINTER",
+        "hubspot_mock.deals#OPP-KESTREL-FIRST",
+        "hubspot_mock.tickets#SVC-104",
+        "hubspot_mock.tickets#SVC-105",
+        "hubspot_mock.tickets#SVC-106",
+        "slack_mock.threads#TH-H260826",
+        "slack_mock.messages#MSG-H260826-R2"
+      ],
+      "rubric": "Require a reasoned work order for all five matters. Readiness, service exposure and specialist effort must affect the chosen scope. Count Northfork once, protect recurring service work and distinguish internal follow-up from unavailable external processing.",
+      "failure_cases": [
+        "Ranks opportunities only by their entered amounts.",
+        "Counts the closed duplicate as another cancellation.",
+        "Ignores Mesa or Northfork while assigning all effort to proposals.",
+        "Changes priorities without explaining their business consequences."
+      ]
+    },
+    {
+      "criterion": 2,
+      "weight": 25.0,
+      "must_pass": true,
+      "evidence": [
+        "hubspot_mock.deals#OPP-HARBOR-FALL",
+        "hubspot_mock.deals#OPP-JUNIPER-WINTER",
+        "hubspot_mock.deals#OPP-KESTREL-FIRST",
+        "hubspot_mock.tickets#CL-SVC-019",
+        "google_drive_mock.items#PRICE-2026B",
+        "google_docs_mock.documents#DOC-SALES-POL",
+        "google_drive_mock.items#POL-QUAL-2"
+      ],
+      "rubric": "Assess each requested product family and plausible channel separately. Include commercially useful conditional options, current price bases, minimum color quantities, oversize additions and missing details. Do not infer quantities from opportunity amounts or treat account qualification as blanket product permission.",
+      "failure_cases": [
+        "Holds every product because one channel is unclear.",
+        "Approves Northhaven public retail without a written determination.",
+        "Presents Kestrel's estimate as a final accepted order.",
+        "Invents size splits, decoration plans or inventory commitments."
+      ]
+    },
+    {
+      "criterion": 3,
+      "weight": 25.0,
+      "must_pass": true,
+      "evidence": [
+        "google_drive_mock.items#WB-COMMERCIAL",
+        "google_drive_mock.items#POL-ORDER-2",
+        "hubspot_mock.tickets#SVC-104",
+        "hubspot_mock.tickets#SVC-105",
+        "hubspot_mock.tickets#SVC-106",
+        "slack_mock.threads#TH-H260826",
+        "slack_mock.messages#MSG-H260826-R1",
+        "slack_mock.messages#MSG-H260826-R2"
+      ],
+      "rubric": "Check that instructions name the accepted order, relevant variant, quantity and requested action. The Northfork reply must advance the original follow-up while preserving its unresolved status. Mesa's claim remains distinct from authorization, receipt and posted credit.",
+      "failure_cases": [
+        "Cancels ORD-260818 without consent.",
+        "Treats closure of SVC-106 as resolution of SVC-105.",
+        "Posts or promises a $79.20 credit.",
+        "Adds a content-free thread acknowledgment as proof of completion."
+      ]
+    },
+    {
+      "criterion": 4,
+      "weight": 20.0,
+      "must_pass": true,
+      "evidence": [
+        "google_drive_mock.items#POL-MEDIA-4",
+        "google_docs_mock.documents#DOC-SALES-POL",
+        "google_drive_mock.items#ASSET-TF720-2",
+        "google_drive_mock.items#ASSET-NH600-1",
+        "hubspot_mock.deals#OPP-HARBOR-FALL",
+        "hubspot_mock.deals#OPP-JUNIPER-WINTER",
+        "hubspot_mock.deals#OPP-KESTREL-FIRST"
+      ],
+      "rubric": "Check customer drafts against the selected options and service findings. The asset index must identify product, version, recipient and permitted use. Remaining customer and policy questions have owners and absolute follow-up dates. Internal analysis may explain restrictions; customer drafts must respect the representative's policy-discussion boundary.",
+      "failure_cases": [
+        "Describes TF720 as waterproof.",
+        "Uses Northhaven images for public retail or assumes product permission also grants image permission.",
+        "Promises an answer from Helen or seeks customer assurances of policy compliance.",
+        "Provides generic drafts with no actionable missing-detail requests."
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "worker_id": "sales-supervisor",
+      "inputs": [
+        "google_docs_mock.documents#DOC-WELCOME",
+        "google_drive_mock.items#POL-AUTH-3"
+      ],
+      "produces": "A priority order and coordinated scope based on specialist findings.",
+      "consumed_by": [
+        "account-representative",
+        "order-coordinator",
+        "marketing-specialist"
+      ],
+      "necessity": "The manager resolves competing demands for desk effort; without that choice, individual proposals and service work need not form a feasible combined plan.",
+      "authority_sources": [
+        "google_drive_mock.items#POL-AUTH-3",
+        "google_docs_mock.documents#DOC-WELCOME"
+      ]
+    },
+    {
+      "worker_id": "account-representative",
+      "inputs": [
+        "hubspot_mock.deals#OPP-HARBOR-FALL",
+        "hubspot_mock.deals#OPP-JUNIPER-WINTER",
+        "hubspot_mock.deals#OPP-KESTREL-FIRST",
+        "hubspot_mock.tickets#CL-SVC-019",
+        "hubspot_mock.tickets#SVC-104",
+        "hubspot_mock.tickets#SVC-105",
+        "hubspot_mock.tickets#SVC-106",
+        "google_drive_mock.items#PRICE-2026B"
+      ],
+      "produces": "Customer-specific needs, commercial options and relationship updates.",
+      "consumed_by": [
+        "sales-supervisor",
+        "order-coordinator",
+        "marketing-specialist"
+      ],
+      "necessity": "Missing sizes, channels and paperwork alter both the order of work and what the product materials may offer.",
+      "authority_sources": [
+        "google_docs_mock.documents#DOC-WELCOME",
+        "google_docs_mock.documents#DOC-SALES-POL"
+      ]
+    },
+    {
+      "worker_id": "order-coordinator",
+      "inputs": [
+        "google_drive_mock.items#WB-COMMERCIAL",
+        "google_drive_mock.items#POL-ORDER-2",
+        "slack_mock.threads#TH-H260826",
+        "slack_mock.messages#H260826",
+        "slack_mock.messages#MSG-H260826-R1",
+        "slack_mock.messages#MSG-H260826-R2",
+        "slack_mock.messages#MSG-H260826-R3"
+      ],
+      "produces": "Actual service obligations, accepted-order constraints and precise processing instructions.",
+      "consumed_by": [
+        "sales-supervisor",
+        "account-representative"
+      ],
+      "necessity": "These findings prevent a duplicate from inflating the backlog and prevent unsupported cancellation or credit claims from contaminating the priority plan.",
+      "authority_sources": [
+        "google_drive_mock.items#POL-ORDER-2",
+        "google_docs_mock.documents#DOC-WELCOME"
+      ]
+    },
+    {
+      "worker_id": "marketing-specialist",
+      "inputs": [
+        "google_drive_mock.items#POL-MEDIA-4",
+        "google_docs_mock.documents#DOC-SALES-POL",
+        "google_drive_mock.items#ASSET-TF720-2",
+        "google_drive_mock.items#ASSET-NH600-1"
+      ],
+      "produces": "Supported product wording, recipient-specific asset instructions and the effort needed to prepare them.",
+      "consumed_by": [
+        "sales-supervisor",
+        "account-representative"
+      ],
+      "necessity": "Image permissions and approved claims change which customer materials can be prepared, affecting scope and effort rather than merely formatting the sales proposal.",
+      "authority_sources": [
+        "google_drive_mock.items#POL-MEDIA-4",
+        "google_docs_mock.documents#DOC-WELCOME"
+      ]
+    }
+  ],
+  "alternative_successes": [
+    "Prioritize a ready portion of a commercial request ahead of another while preserving prompt, assigned service follow-up.",
+    "Offer narrower client-program assortments or Cedar Basics alternatives when the recorded need supports them.",
+    "Use text-only materials where the available images lack permission for the intended channel.",
+    "Leave a particular product or channel unresolved with a precise referral while completing supported portions."
+  ],
+  "prohibited_shortcuts": [
+    "Blanket deferral of all assortment work.",
+    "Invented customer answers, quantities, approvals or stock reservations.",
+    "Reopening a known duplicate to manufacture work.",
+    "Treating draft proposals as customer acceptance.",
+    "Changing screen order instead of recording priorities and obligations.",
+    "Sharing private source files by broadening existing access."
+  ]
+}

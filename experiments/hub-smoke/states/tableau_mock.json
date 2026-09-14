@@ -1,0 +1,62 @@
+{
+  "workbook": { "id": "wb-1", "name": "Glenmoor Water Utility KPIs", "sheetOrder": ["ws-1", "ws-2", "dash-1"], "activeSheetId": "ws-1" },
+  "dataSources": [
+    {
+      "id": "ds-glenmoor", "name": "Glenmoor Meter Readings", "connectionType": "excel", "isLive": false,
+      "tables": [
+        {
+          "id": "tbl-readings", "name": "Readings", "rowCount": 3,
+          "fields": [
+            { "id": "fld-district", "name": "District", "dataType": "string", "role": "dimension", "isGenerated": false },
+            { "id": "fld-month", "name": "Month", "dataType": "date", "role": "dimension", "isGenerated": false },
+            { "id": "fld-consumption", "name": "Consumption (m3)", "dataType": "number", "role": "measure", "isGenerated": false },
+            { "id": "fld-leak-events", "name": "Leak Events", "dataType": "number", "role": "measure", "isGenerated": false }
+          ],
+          "sampleRows": [
+            { "fld-district": "Northgate", "fld-month": "2026-07-01", "fld-consumption": 48210, "fld-leak-events": 3 },
+            { "fld-district": "Riverside", "fld-month": "2026-07-01", "fld-consumption": 39875, "fld-leak-events": 1 },
+            { "fld-district": "Old Town", "fld-month": "2026-07-01", "fld-consumption": 27540, "fld-leak-events": 5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "worksheets": [
+    {
+      "id": "ws-1", "type": "worksheet", "name": "Consumption by District", "dataSourceId": "ds-glenmoor",
+      "columns": [ { "fieldId": "fld-consumption", "fieldName": "Consumption (m3)", "aggregation": "SUM", "dateGranularity": null, "isDiscrete": false, "sortOrder": null } ],
+      "rows": [ { "fieldId": "fld-district", "fieldName": "District", "aggregation": null, "dateGranularity": null, "isDiscrete": true, "sortOrder": null } ],
+      "filters": [], "pages": [],
+      "marks": { "markType": "Automatic", "color": null, "size": null, "label": null, "detail": null, "tooltip": [], "path": null },
+      "showMeType": "bar",
+      "chartData": { "type": "bar", "categories": ["Northgate", "Riverside", "Old Town"], "series": [ { "name": "Consumption (m3)", "values": [48210, 39875, 27540] } ], "colorField": null }
+    },
+    {
+      "id": "ws-2", "type": "worksheet", "name": "Leak Events Trend", "dataSourceId": "ds-glenmoor",
+      "columns": [ { "fieldId": "fld-month", "fieldName": "Month", "aggregation": null, "dateGranularity": "month", "isDiscrete": true, "sortOrder": null } ],
+      "rows": [ { "fieldId": "fld-leak-events", "fieldName": "Leak Events", "aggregation": "SUM", "dateGranularity": null, "isDiscrete": false, "sortOrder": null } ],
+      "filters": [ { "fieldId": "fld-district", "fieldName": "District", "filterType": "categorical", "selectedValues": ["Northgate", "Riverside", "Old Town"], "rangeMin": null, "rangeMax": null, "showFilter": true } ],
+      "pages": [],
+      "marks": { "markType": "Line", "color": null, "size": null, "label": null, "detail": null, "tooltip": [], "path": null },
+      "showMeType": "line",
+      "chartData": { "type": "line", "categories": ["May 2026", "Jun 2026", "Jul 2026"], "series": [ { "name": "Leak Events", "values": [6, 8, 9] } ], "colorField": null }
+    }
+  ],
+  "dashboards": [
+    {
+      "id": "dash-1", "type": "dashboard", "name": "Utility Overview", "size": { "width": 1200, "height": 800, "sizing": "fixed" },
+      "objects": [
+        { "id": "dobj-1", "objectType": "worksheet", "sheetId": "ws-1", "content": null, "layout": { "x": 0, "y": 0, "width": 600, "height": 800 }, "isFloating": false },
+        { "id": "dobj-2", "objectType": "worksheet", "sheetId": "ws-2", "content": null, "layout": { "x": 600, "y": 0, "width": 600, "height": 800 }, "isFloating": false }
+      ]
+    }
+  ],
+  "calculatedFields": [
+    { "id": "calc-1", "name": "Leaks per 10k m3", "formula": "SUM([Leak Events]) / SUM([Consumption (m3)]) * 10000", "dataType": "number", "role": "measure", "dataSourceId": "ds-glenmoor" }
+  ],
+  "parameters": [
+    { "id": "param-1", "name": "Top N Districts", "dataType": "integer", "currentValue": 3, "allowableValues": { "type": "range", "min": 1, "max": 10, "step": 1 }, "displayAs": "slider" }
+  ],
+  "uiState": { "sidebarTab": "data", "sidebarCollapsed": false, "showMeOpen": false, "activeView": "worksheet", "selectedFields": [], "dragState": null, "undoStack": [], "redoStack": [] },
+  "currentUser": { "name": "Rosalind Achterberg", "role": "Analyst" }
+}

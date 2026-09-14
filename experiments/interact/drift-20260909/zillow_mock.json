@@ -1,0 +1,157 @@
+{
+  "app_id": "zillow_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "agents",
+    "filters",
+    "mortgageRates",
+    "properties",
+    "savedSearches",
+    "searchSuggestions",
+    "tours",
+    "user"
+  ],
+  "observed": [
+    "agents",
+    "contactMessages",
+    "filters",
+    "mortgageRates",
+    "properties",
+    "savedSearches",
+    "searchSuggestions",
+    "tours",
+    "user"
+  ],
+  "undocumented_so_unseedable": [
+    "contactMessages"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "user": {
+      "kind": "object",
+      "count": 9,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "filters": {
+      "kind": "object",
+      "count": 11,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "properties": {
+      "kind": "array",
+      "count": 25,
+      "record_fields": [
+        "id",
+        "zpid",
+        "address",
+        "city",
+        "state",
+        "zip",
+        "neighborhood",
+        "price",
+        "zestimate",
+        "zestimateRange",
+        "rentZestimate",
+        "beds",
+        "baths",
+        "sqft",
+        "lotSize",
+        "yearBuilt",
+        "type",
+        "propertyType",
+        "listingStatus",
+        "listingType",
+        "daysOnZillow",
+        "description",
+        "features",
+        "coordinates",
+        "images",
+        "agentId",
+        "tags",
+        "openHouse",
+        "hoaFee",
+        "propertyTax",
+        "walkScore",
+        "transitScore",
+        "bikeScore",
+        "priceHistory",
+        "taxHistory",
+        "schools",
+        "estimatedPayment"
+      ],
+      "keyed_by_id": false
+    },
+    "agents": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "name",
+        "photo",
+        "phone",
+        "email",
+        "brokerage",
+        "rating",
+        "reviewCount",
+        "recentSales",
+        "activeListings",
+        "specialties",
+        "serviceAreas",
+        "isFeatured",
+        "bio"
+      ],
+      "keyed_by_id": false
+    },
+    "savedSearches": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "location",
+        "filters",
+        "createdAt",
+        "newListings",
+        "emailAlerts"
+      ],
+      "keyed_by_id": false
+    },
+    "searchSuggestions": {
+      "kind": "array",
+      "count": 41,
+      "record_fields": [
+        "id",
+        "text",
+        "type",
+        "subtext"
+      ],
+      "keyed_by_id": false
+    },
+    "mortgageRates": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "type",
+        "rate",
+        "apr",
+        "lastUpdated"
+      ],
+      "keyed_by_id": false
+    },
+    "tours": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "contactMessages": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

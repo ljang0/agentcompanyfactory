@@ -1,0 +1,39 @@
+{
+  "currentUser": {"id": "user-1", "name": "Beatriz Okafor-Lund", "email": "beatriz@pinecrestoutfitters.example", "avatar": "https://ui-avatars.com/api/?name=Beatriz+Okafor-Lund&background=FF3C00&color=fff", "role": "Admin", "organizationId": "org-1"},
+  "organization": {"id": "org-1", "name": "Pinecrest Outfitters", "plan": "Business"},
+  "sites": [
+    {"id": "site-1", "name": "Pinecrest Outfitters Store", "url": "https://shop.pinecrestoutfitters.example", "trackingCode": "", "createdAt": "2025-11-02T10:00:00Z", "isActive": true},
+    {"id": "site-2", "name": "Pinecrest Trail Journal", "url": "https://journal.pinecrestoutfitters.example", "trackingCode": "", "createdAt": "2026-02-14T10:00:00Z", "isActive": true}
+  ],
+  "activeSiteId": "site-1",
+  "heatmaps": [
+    {"id": "heatmap-1", "siteId": "site-1", "name": "Tent category page", "pageUrl": "https://shop.pinecrestoutfitters.example/tents", "status": "recording", "createdAt": "2026-08-20T09:00:00Z", "sessionsCount": 1840, "deviceBreakdown": {"desktop": 52, "tablet": 9, "mobile": 39}, "screenshotUrl": "https://picsum.photos/1200/2400?random=41", "clickData": [{"x": 0.52, "y": 0.18, "count": 310}], "scrollData": {"averageFold": 0.62, "reachPercentages": [100, 88, 71, 55, 38, 21]}, "moveData": [], "pageStats": {"uTurns": 42, "rageClicks": 7, "dropOffRate": 31.5, "avgTimeOnPage": "1:48", "totalErrors": 3}}
+  ],
+  "recordings": [
+    {"id": "rec-1", "siteId": "site-1", "visitorId": "v-88213", "country": "United States", "countryFlag": "🇺🇸", "device": "mobile", "browser": "Safari", "os": "iOS 19", "screenSize": "390x844", "duration": 212, "pagesVisited": 4, "pagesList": ["/", "/tents", "/tents/ridgeline-2p", "/cart"], "startedAt": "2026-09-03T15:20:00Z", "frustrationScore": 3, "engagementScore": 7, "hasRageClicks": false, "hasUTurns": true, "hasErrors": false, "isStarred": true, "tags": ["cart"], "events": [{"id": "ev-1", "type": "page_change", "timestamp": 0, "page": "/", "details": "Landed", "x": 0, "y": 0}, {"id": "ev-2", "type": "u_turn", "timestamp": 95, "page": "/tents/ridgeline-2p", "details": "Returned to /tents", "x": 0, "y": 0}]},
+    {"id": "rec-2", "siteId": "site-1", "visitorId": "v-88214", "country": "Canada", "countryFlag": "🇨🇦", "device": "desktop", "browser": "Chrome", "os": "Windows 11", "screenSize": "1920x1080", "duration": 340, "pagesVisited": 6, "pagesList": ["/", "/packs", "/packs/alpine-45", "/cart", "/checkout"], "startedAt": "2026-09-03T14:05:00Z", "frustrationScore": 6, "engagementScore": 8, "hasRageClicks": true, "hasUTurns": false, "hasErrors": true, "isStarred": false, "tags": ["checkout"], "events": [{"id": "ev-3", "type": "rage_click", "timestamp": 300, "page": "/checkout", "details": "Apply promo code button", "x": 0.7, "y": 0.4}]}
+  ],
+  "surveys": [
+    {"id": "survey-1", "siteId": "site-1", "name": "Post-Purchase NPS", "status": "active", "createdAt": "2026-06-01T09:00:00Z", "responsesCount": 1, "questions": [{"id": "q-1", "type": "nps", "text": "How likely are you to recommend Pinecrest Outfitters to a friend?", "required": true, "options": [], "scaleMax": 10, "logic": null}], "appearance": {"position": "bottom_right", "color": "#2F6B3A", "widgetType": "popover"}, "behavior": {"showOnUrl": "/order-confirmation", "showAfterSeconds": 5, "showOnDevice": "all", "triggerEvent": null}, "responses": [{"id": "resp-1", "submittedAt": "2026-09-02T18:00:00Z", "answers": {"q-1": 9}, "visitorId": "v-88100", "device": "desktop", "page": "/order-confirmation"}]}
+  ],
+  "feedback": [
+    {"id": "fb-1", "siteId": "site-1", "sentiment": "negative", "emoji": "😕", "message": "Promo code field would not accept my code at checkout.", "page": "/checkout", "submittedAt": "2026-09-03T14:12:00Z", "device": "desktop", "browser": "Chrome", "screenshotUrl": null}
+  ],
+  "funnels": [
+    {"id": "funnel-1", "siteId": "site-1", "name": "Checkout Funnel", "createdAt": "2026-06-10T09:00:00Z", "steps": [{"id": "step-1", "name": "Product page", "type": "url", "value": "/tents/*", "visitors": 4200, "dropOffRate": 0, "conversionRate": 100}, {"id": "step-2", "name": "Cart", "type": "url", "value": "/cart", "visitors": 1310, "dropOffRate": 68.8, "conversionRate": 31.2}, {"id": "step-3", "name": "Order confirmation", "type": "url", "value": "/order-confirmation", "visitors": 402, "dropOffRate": 69.3, "conversionRate": 9.6}]}
+  ],
+  "trends": [
+    {"id": "trend-1", "siteId": "site-1", "name": "Sessions per day", "metric": "sessions", "period": "last_7_days", "dataPoints": [{"date": "2026-08-28", "value": 610}, {"date": "2026-08-29", "value": 720}, {"date": "2026-08-30", "value": 805}, {"date": "2026-08-31", "value": 690}, {"date": "2026-09-01", "value": 640}, {"date": "2026-09-02", "value": 655}, {"date": "2026-09-03", "value": 702}]}
+  ],
+  "highlights": [
+    {"id": "highlight-1", "siteId": "site-1", "title": "Promo code rage click at checkout", "sourceType": "recording", "sourceId": "rec-2", "startTime": 290, "endTime": 320, "createdAt": "2026-09-03T16:00:00Z", "createdBy": "user-1", "collectionId": "coll-1", "notes": "Button gives no feedback when code is invalid."}
+  ],
+  "highlightCollections": [{"id": "coll-1", "name": "Checkout friction - September", "highlightIds": ["highlight-1"]}],
+  "events": [
+    {"id": "event-1", "siteId": "site-1", "name": "add_to_cart", "type": "custom", "firstSeen": "2025-11-05T10:00:00Z", "lastSeen": "2026-09-03T15:30:00Z", "totalCount": 18420}
+  ],
+  "dashboardMetrics": {"siteId": "site-1", "period": "last_30_days", "totalSessions": 20416, "avgSessionDuration": "2:41", "avgPagesPerSession": 3.8, "sessionsSparkline": [610, 720, 805, 690, 640, 655, 702], "durationSparkline": [150, 162, 171, 158, 149, 155, 161], "pagesSparkline": [3.5, 3.7, 4.0, 3.8, 3.6, 3.7, 3.9], "topClickedElements": [{"element": "Add to cart", "clicks": 3120}], "topPages": [{"url": "/tents", "views": 9800}], "rageClicksCount": 64, "uTurnsCount": 412, "feedbackPositive": 38, "feedbackNegative": 11},
+  "sidebarExpanded": true,
+  "selectedDateRange": "last_30_days",
+  "activeFilters": []
+}

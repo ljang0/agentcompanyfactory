@@ -1,0 +1,53 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+data/embeddings/
+runs/*/calls/
+runs/*/.lock
+.env
+configs/*.local.toml
+experiments/pilot-*/company/world/calls/
+experiments/**/runtime/
+# generated at runtime; the reproducible inputs are the run/company manifests
+experiments/hub-cache/
+experiments/interact/*/shots/
+experiments/interact/*/logs/
+experiments/batch/*/work/
+experiments/batch/*/*.log
+experiments/codex-jobs/*/run.log
+companies/*/world/calls/
+companies/*/runtime/logs/
+companies/*/runtime/vms/
+# generated evidence and call caches; the reproducible inputs are the company and run manifests
+experiments/skill-evals/
+experiments/cache-replay/
+experiments/integration/
+experiments/batch/queue/
+experiments/batch/claims/
+experiments/batch/assign/
+experiments/batch/rewrite/
+experiments/batch/cohort/
+experiments/batch/thin-worlds-*/
+companies/*/tasks/_plain_brief/calls/
+companies/*/tasks/_worker_apps/calls/
+companies/*/world/bulk/
+data/person_names.lock
+
+# Local pilot build caches, probes and distribution artifacts
+dist/
+experiments/pilot-*/hub-cache/
+experiments/pilot-*/desktop-type-probes/
+experiments/pilot-*/capacity-probes/
+experiments/pilot-*/company/tasks/*/*_calls/
+experiments/pilot-sanmar/resume-20260913-*.log
+experiments/pilot-sanmar/resume-20260914-*.log
+
+# Local inspection and verification outputs
+.env.*
+!.env.example
+inspection-download/
+verification/
+*.qcow2
+*.qcow2.*

@@ -1,0 +1,36 @@
+{
+  "user": {"userId": "u_admin", "username": "Beatrix Olander", "email": "beatrix.olander@marrowfield-clinic.example", "avatar": "https://ui-avatars.com/api/?name=Beatrix+Olander&background=2D8CFF&color=fff", "pmi": "612 440 7781", "status": "available", "role": "Licensed"},
+  "meetings": [
+    {"meetingId": "318 204 5566", "title": "Marrowfield Clinic Weekly Huddle", "hostId": "u_admin", "hostName": "Beatrix Olander", "startTime": "2026-09-10T13:00:00Z", "duration": 30, "password": "", "joinUrl": "https://zoom.example/j/3182045566", "participants": ["c1", "c2"], "settings": {"video": true, "audio": true, "waitingRoom": false, "recording": "none"}, "recurring": true, "recurrence": {"type": "weekly", "interval": 1, "endDate": "2026-12-31"}, "status": "scheduled"},
+    {"meetingId": "905 118 2240", "title": "EHR Vendor Demo", "hostId": "u_admin", "hostName": "Beatrix Olander", "startTime": "2026-09-12T16:00:00Z", "duration": 60, "password": "ehr2026", "joinUrl": "https://zoom.example/j/9051182240", "participants": ["c1", "c3"], "settings": {"video": true, "audio": true, "waitingRoom": true, "recording": "cloud"}, "recurring": false, "recurrence": null, "status": "scheduled"},
+    {"meetingId": "277 601 9034", "title": "Flu Clinic Planning", "hostId": "c3", "hostName": "Osric Mbatha", "startTime": "2026-09-02T15:00:00Z", "duration": 45, "password": "", "joinUrl": "https://zoom.example/j/2776019034", "participants": ["c1", "c2", "c3"], "settings": {"video": true, "audio": true, "waitingRoom": false, "recording": "cloud"}, "recurring": false, "recurrence": null, "status": "ended"}
+  ],
+  "contacts": [
+    {"contactId": "c1", "name": "Ingrid Haugen", "email": "ingrid.haugen@marrowfield-clinic.example", "avatar": "https://ui-avatars.com/api/?name=Ingrid+Haugen&background=6C5CE7&color=fff", "status": "available", "department": "Nursing", "starred": true},
+    {"contactId": "c2", "name": "Tomasz Wrona", "email": "tomasz.wrona@marrowfield-clinic.example", "avatar": "https://ui-avatars.com/api/?name=Tomasz+Wrona&background=00B894&color=fff", "status": "busy", "department": "Front Desk", "starred": false},
+    {"contactId": "c3", "name": "Osric Mbatha", "email": "osric.mbatha@marrowfield-clinic.example", "avatar": "https://ui-avatars.com/api/?name=Osric+Mbatha&background=E17055&color=fff", "status": "away", "department": "Administration", "starred": true}
+  ],
+  "recordings": [
+    {"recordingId": "rec_001", "meetingId": "277 601 9034", "title": "Flu Clinic Planning", "url": "#", "duration": "41:12", "created": "2026-09-02T15:46:00Z", "size": "210 MB", "type": "video"},
+    {"recordingId": "rec_002", "meetingId": "277 601 9034", "title": "Flu Clinic Planning", "url": "#", "duration": "41:12", "created": "2026-09-02T15:46:00Z", "size": "18 KB", "type": "transcript"}
+  ],
+  "channels": [
+    {"channelId": "ch_general", "name": "General", "type": "channel", "members": ["u_admin", "c1", "c2", "c3"], "description": "Clinic-wide announcements", "starred": true, "unreadCount": 1, "lastMessage": {"text": "Flu vaccine shipment arrives Tuesday.", "senderId": "c3", "timestamp": "2026-09-06T17:20:00Z"}},
+    {"channelId": "dm_ingrid", "name": null, "type": "dm", "members": ["u_admin", "c1"], "description": "", "starred": false, "unreadCount": 0, "lastMessage": {"text": "Sending the huddle agenda now.", "senderId": "u_admin", "timestamp": "2026-09-05T09:00:00Z"}}
+  ],
+  "messages": {
+    "ch_general": [
+      {"messageId": "msg_001", "channelId": "ch_general", "senderId": "c3", "senderName": "Osric Mbatha", "senderAvatar": "https://ui-avatars.com/api/?name=Osric+Mbatha&background=E17055&color=fff", "text": "Flu vaccine shipment arrives Tuesday.", "timestamp": "2026-09-06T17:20:00Z", "reactions": [{"emoji": "👍", "users": ["c1"]}], "replyTo": null, "replyCount": 0, "edited": false, "pinned": true}
+    ],
+    "dm_ingrid": [
+      {"messageId": "msg_002", "channelId": "dm_ingrid", "senderId": "u_admin", "senderName": "Beatrix Olander", "senderAvatar": "https://ui-avatars.com/api/?name=Beatrix+Olander&background=2D8CFF&color=fff", "text": "Sending the huddle agenda now.", "timestamp": "2026-09-05T09:00:00Z", "reactions": [], "replyTo": null, "replyCount": 0, "edited": false, "pinned": false}
+    ]
+  },
+  "settings": {
+    "general": {"theme": "light", "startVideoOnJoin": true, "muteOnJoin": false},
+    "audio": {"speaker": "Default", "microphone": "Default", "autoAdjustMic": true},
+    "video": {"camera": "Default", "hdVideo": false, "mirrorVideo": true},
+    "notifications": {"meetingReminders": true, "chatNotifications": true, "sound": true},
+    "chat": {"showLinkPreview": true, "showCodeSnippets": true}
+  }
+}

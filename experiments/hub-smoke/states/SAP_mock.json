@@ -1,0 +1,73 @@
+{
+  "currentUser": {
+    "id": "user-001", "firstName": "Priya", "lastName": "Ramaswamy", "initials": "PR",
+    "email": "priya.ramaswamy@harborline-foods.example", "role": "Procurement Manager",
+    "avatarColor": "#0A6ED1", "department": "Procurement", "plant": "3000", "companyCode": "3000",
+    "language": "EN", "dateFormat": "MM/DD/YYYY", "timezone": "America/Chicago"
+  },
+  "companyInfo": {
+    "companyCode": "3000", "companyName": "Harborline Foods Inc.", "currency": "USD", "country": "US",
+    "fiscalYearVariant": "K4", "currentFiscalYear": 2026
+  },
+  "navigationTabs": [
+    { "id": "tab-001", "label": "My Home", "key": "my-home", "isDefault": true, "order": 0 },
+    { "id": "tab-002", "label": "Procurement", "key": "procurement", "isDefault": false, "order": 1 },
+    { "id": "tab-003", "label": "Finance", "key": "finance", "isDefault": false, "order": 2 }
+  ],
+  "tileGroups": [
+    { "id": "group-001", "title": "Harborline Procurement Desk", "tabKey": "my-home", "order": 0 },
+    { "id": "group-002", "title": "Purchase Order Processing", "tabKey": "procurement", "order": 0 },
+    { "id": "group-003", "title": "General Ledger", "tabKey": "finance", "order": 0 }
+  ],
+  "tiles": [
+    { "id": "tile-001", "groupId": "group-001", "title": "Manage Purchase Orders", "subtitle": "", "icon": "shopping-cart", "type": "static", "numericValue": null, "numericUnit": null, "kpiData": null, "appRoute": "/app/manage-purchase-orders", "order": 0, "isActive": true },
+    { "id": "tile-002", "groupId": "group-001", "title": "Manage Sales Orders", "subtitle": "", "icon": "list", "type": "numeric", "numericValue": 2, "numericUnit": "Open", "kpiData": null, "appRoute": "/app/manage-sales-orders", "order": 1, "isActive": true },
+    { "id": "tile-003", "groupId": "group-002", "title": "Monitor Purchase Order Items", "subtitle": "", "icon": "purchase-order", "type": "kpi", "numericValue": 1, "numericUnit": "Overdue", "kpiData": { "trend": "up", "status": "critical" }, "appRoute": "/app/manage-purchase-orders", "order": 0, "isActive": true },
+    { "id": "tile-004", "groupId": "group-003", "title": "Journal Entries", "subtitle": "", "icon": "document", "type": "static", "numericValue": null, "numericUnit": null, "kpiData": null, "appRoute": "/app/journal-entries", "order": 0, "isActive": true }
+  ],
+  "purchaseOrders": [
+    { "id": "po-001", "poNumber": "4500003001", "supplier": "sup-001", "supplierName": "Gulf Coast Packaging LLC", "poType": "NB", "poTypeName": "Standard PO", "purchasingOrg": "3000", "purchasingOrgName": "Harborline Purch. Org", "purchasingGroup": "P01", "purchasingGroupName": "Packaging", "companyCode": "3000", "createdDate": "2026-08-20", "createdBy": "Priya Ramaswamy", "totalNetValue": 8400.00, "currency": "USD", "status": "Ordered", "deliveryStatus": "Overdue", "plant": "3000", "plantName": "Harborline Plant Houston", "paymentTerms": "NT30", "incoterms": "FOB", "notes": "Corrugated cases for Q4 run", "lastChanged": "2026-09-01", "lastChangedBy": "Priya Ramaswamy" },
+    { "id": "po-002", "poNumber": "4500003002", "supplier": "sup-002", "supplierName": "Bayou Spice Traders", "poType": "NB", "poTypeName": "Standard PO", "purchasingOrg": "3000", "purchasingOrgName": "Harborline Purch. Org", "purchasingGroup": "P02", "purchasingGroupName": "Ingredients", "companyCode": "3000", "createdDate": "2026-09-02", "createdBy": "Priya Ramaswamy", "totalNetValue": 3150.00, "currency": "USD", "status": "Draft", "deliveryStatus": "On Time", "plant": "3000", "plantName": "Harborline Plant Houston", "paymentTerms": "NT45", "incoterms": "EXW", "notes": "", "lastChanged": "2026-09-02", "lastChangedBy": "Priya Ramaswamy" }
+  ],
+  "purchaseOrderItems": [
+    { "id": "poi-001", "poId": "po-001", "itemNumber": 10, "materialId": "mat-001", "materialName": "Corrugated Case 12ct", "materialNumber": "MAT-3001", "quantity": 4000, "unit": "PC", "netPrice": 2.10, "priceUnit": 1, "netValue": 8400.00, "currency": "USD", "deliveryDate": "2026-08-30", "plant": "3000", "storageLocation": "0001", "taxCode": "I0", "accountAssignment": "K", "costCenter": "CC-3100", "glAccount": "400000" },
+    { "id": "poi-002", "poId": "po-002", "itemNumber": 10, "materialId": "mat-002", "materialName": "Smoked Paprika 25kg", "materialNumber": "MAT-3002", "quantity": 30, "unit": "BAG", "netPrice": 105.00, "priceUnit": 1, "netValue": 3150.00, "currency": "USD", "deliveryDate": "2026-09-20", "plant": "3000", "storageLocation": "0002", "taxCode": "I0", "accountAssignment": "K", "costCenter": "CC-3200", "glAccount": "400100" }
+  ],
+  "salesOrders": [
+    { "id": "so-001", "soNumber": "2000000501", "customer": "cust-001", "customerName": "Lone Star Grocers", "orderType": "OR", "orderTypeName": "Standard Order", "salesOrg": "3000", "salesOrgName": "Harborline Sales US", "distributionChannel": "10", "division": "00", "createdDate": "2026-09-03", "createdBy": "Priya Ramaswamy", "totalNetValue": 12600.00, "currency": "USD", "status": "Open", "overallDeliveryStatus": "Not Delivered", "overallBillingStatus": "Not Invoiced", "requestedDeliveryDate": "2026-09-18", "customerReference": "LSG-PO-8891", "soldToParty": "cust-001", "shipToParty": "cust-001", "paymentTerms": "NT30", "incoterms": "DAP", "lastChanged": "2026-09-03", "lastChangedBy": "Priya Ramaswamy" }
+  ],
+  "salesOrderItems": [
+    { "id": "soi-001", "soId": "so-001", "itemNumber": 10, "materialId": "mat-003", "materialName": "Gulf Shrimp Gumbo 24oz", "materialNumber": "MAT-3003", "quantity": 1800, "unit": "PC", "netPrice": 7.00, "netValue": 12600.00, "currency": "USD", "plant": "3000", "deliveryDate": "2026-09-18", "deliveryStatus": "Not Delivered", "billingStatus": "Not Invoiced", "rejectionReason": "" }
+  ],
+  "materials": [
+    { "id": "mat-001", "materialNumber": "MAT-3001", "description": "Corrugated Case 12ct", "materialGroup": "PKG", "materialGroupName": "Packaging", "materialType": "ROH", "materialTypeName": "Raw Material", "baseUnit": "PC", "grossWeight": 0.45, "netWeight": 0.45, "weightUnit": "KG", "productCategory": "Packaging", "division": "00", "gtin": "00812345000011", "image": null, "standardPrice": 2.10, "currency": "USD", "plantData": { "3000": { "mrpType": "PD", "safetyStock": 500 } }, "stockQuantity": 1200, "lastChanged": "2026-08-15", "lastChangedBy": "Priya Ramaswamy" },
+    { "id": "mat-002", "materialNumber": "MAT-3002", "description": "Smoked Paprika 25kg", "materialGroup": "ING", "materialGroupName": "Ingredients", "materialType": "ROH", "materialTypeName": "Raw Material", "baseUnit": "BAG", "grossWeight": 25.5, "netWeight": 25.0, "weightUnit": "KG", "productCategory": "Spices", "division": "00", "gtin": "00812345000028", "image": null, "standardPrice": 105.00, "currency": "USD", "plantData": { "3000": { "mrpType": "PD", "safetyStock": 10 } }, "stockQuantity": 14, "lastChanged": "2026-08-15", "lastChangedBy": "Priya Ramaswamy" },
+    { "id": "mat-003", "materialNumber": "MAT-3003", "description": "Gulf Shrimp Gumbo 24oz", "materialGroup": "FIN", "materialGroupName": "Finished Goods", "materialType": "FERT", "materialTypeName": "Finished", "baseUnit": "PC", "grossWeight": 0.72, "netWeight": 0.68, "weightUnit": "KG", "productCategory": "Ready Meals", "division": "00", "gtin": "00812345000035", "image": null, "standardPrice": 4.20, "currency": "USD", "plantData": { "3000": { "mrpType": "PD", "safetyStock": 300 } }, "stockQuantity": 2600, "lastChanged": "2026-08-15", "lastChangedBy": "Priya Ramaswamy" }
+  ],
+  "suppliers": [
+    { "id": "sup-001", "supplierNumber": "30001001", "name": "Gulf Coast Packaging LLC", "name2": "", "country": "US", "city": "Houston", "postalCode": "77002", "street": "410 Bayport Blvd", "region": "TX", "phone": "+1 713 555 0140", "email": "orders@gulfcoastpkg.example", "taxNumber": "74-1234567", "paymentTerms": "NT30", "currency": "USD", "accountGroup": "KRED", "purchasingOrg": "3000", "isBlocked": false },
+    { "id": "sup-002", "supplierNumber": "30001002", "name": "Bayou Spice Traders", "name2": "", "country": "US", "city": "Lafayette", "postalCode": "70501", "street": "88 Vermilion St", "region": "LA", "phone": "+1 337 555 0177", "email": "sales@bayouspice.example", "taxNumber": "72-7654321", "paymentTerms": "NT45", "currency": "USD", "accountGroup": "KRED", "purchasingOrg": "3000", "isBlocked": false }
+  ],
+  "customers": [
+    { "id": "cust-001", "customerNumber": "10005001", "name": "Lone Star Grocers", "name2": "", "country": "US", "city": "Austin", "postalCode": "78701", "street": "1200 Congress Ave", "region": "TX", "phone": "+1 512 555 0199", "email": "buying@lonestargrocers.example", "salesOrg": "3000", "distributionChannel": "10", "division": "00", "paymentTerms": "NT30", "currency": "USD", "creditLimit": 250000, "accountGroup": "DEBI" }
+  ],
+  "journalEntries": [
+    { "id": "je-001", "documentNumber": "100000301", "companyCode": "3000", "fiscalYear": 2026, "fiscalPeriod": 9, "documentType": "SA", "documentTypeName": "G/L Account Document", "postingDate": "2026-09-01", "documentDate": "2026-09-01", "entryDate": "2026-09-01", "reference": "ACCR-SEP", "headerText": "Packaging accrual September", "totalDebit": 8400.00, "totalCredit": 8400.00, "currency": "USD", "status": "Posted", "createdBy": "Priya Ramaswamy", "ledgerGroup": "0L" }
+  ],
+  "journalEntryItems": [
+    { "id": "jei-001", "journalEntryId": "je-001", "itemNumber": 1, "glAccount": "400000", "glAccountName": "Raw Materials Consumed", "debitAmount": 8400.00, "creditAmount": 0, "currency": "USD", "costCenter": "CC-3100", "costCenterName": "Packaging Line", "profitCenter": "PC-3000", "taxCode": "I0", "assignment": "4500003001", "text": "Corrugated cases accrual" },
+    { "id": "jei-002", "journalEntryId": "je-001", "itemNumber": 2, "glAccount": "211000", "glAccountName": "GR/IR Clearing", "debitAmount": 0, "creditAmount": 8400.00, "currency": "USD", "costCenter": "", "costCenterName": "", "profitCenter": "PC-3000", "taxCode": "I0", "assignment": "4500003001", "text": "Corrugated cases accrual" }
+  ],
+  "notifications": [
+    { "id": "notif-001", "title": "PO 4500003001 overdue", "description": "Gulf Coast Packaging delivery is 2 days late.", "timestamp": "2026-09-02T14:30:00Z", "type": "warning", "priority": "high", "isRead": false, "category": "Procurement", "actionUrl": "/app/manage-purchase-orders", "icon": "alert" },
+    { "id": "notif-002", "title": "Journal entry 100000301 posted", "description": "Packaging accrual September posted successfully.", "timestamp": "2026-09-01T17:05:00Z", "type": "success", "priority": "low", "isRead": true, "category": "Finance", "actionUrl": "/app/journal-entries", "icon": "check" }
+  ],
+  "plants": [
+    { "id": "plant-3000", "plantCode": "3000", "name": "Harborline Plant Houston", "city": "Houston", "country": "US" }
+  ],
+  "activeTab": "my-home",
+  "searchQuery": "",
+  "notificationCount": 1,
+  "selectedVariant": "Standard",
+  "filterState": {}
+}

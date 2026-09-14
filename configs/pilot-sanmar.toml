@@ -1,0 +1,77 @@
+# Paths resolve beside this file. Copy to an ignored *.local.toml to customize.
+# This selects one firm's fresh world; stage checkpoints are manual for now.
+[generation]
+companies = 1
+tasks = 2
+workers = 4
+seed = 0
+difficulty_required = true
+review_votes = 3
+max_revisions = 2
+candidate_multiplier = 3
+discovery_batch = 8
+workflow_batch_size = 2
+research_timeout_seconds = 1500
+completion_timeout_seconds = 600
+authoring_timeout_seconds = 2700
+isolate_model_failures = true
+max_model_retries = 1
+
+[design]
+hub_root = "../../CUA-Gym/hub/websites"
+hub_revision = "1e50b797200f8afd6f11ca8e3ee04412de97b0f2"
+model_pin = "codex/gpt-6-astra"
+vm_base_image = "~/.cache/gym-anything/qemu/base_ubuntu_gnome.qcow2"
+vm_browser_dir = "~/.cache/ms-playwright/chromium-1217/chrome-linux64"
+vm_host_ip = "10.0.2.2"
+vm_guests = 4
+seed_call_budget = 500
+vm_model_calls = 450
+tasks_per_company = 2
+minimum_workers = 3
+workflow_version = "2"
+execution_mode = "digital"
+runtime_adapter = "hub"
+identity = "shared_session"
+placeholder_images = true
+feature_matrix = true
+agency = false
+read_only_tools = true
+select_outlines = true
+allow_amendment = false
+review_separate_witness = true
+standard_apps = ["gmail_mock", "slack_mock", "google_calendar_mock", "google_drive_mock", "google_docs_mock"]
+available_runtime_apps = ["gmail_mock", "google_calendar_mock", "google_docs_mock", "google_drive_mock", "google_sheets_mock", "hubspot_mock", "meta_ads_mock", "slack_mock"]
+# Retain volume headroom. History quality and actual app performance are later gates.
+bulk_max_bytes_per_app = 4500000
+seed_shards = 3
+seed_shard_min_records = 15
+
+[design.bulk_max_bytes_by_app]
+slack_mock = 8000000
+google_drive_mock = 8000000
+gmail_mock = 6000000
+google_calendar_mock = 2500000
+
+[models]
+discover = ["codex/gpt-6-astra"]
+research = ["codex/gpt-6-astra"]
+expand = ["codex/gpt-6-astra"]
+review = ["codex/gpt-6-astra"]
+world_states = ["codex/gpt-6-astra"]
+world_review = ["codex/gpt-6-astra"]
+reasoning = "high"
+service_tier = "default"
+review_policy = "fresh_session"
+codex_homes = []
+
+[diversity]
+model = "sentence-transformers/all-mpnet-base-v2"
+revision = "main"
+neighbors = 10
+cross_run = true
+
+[worker_policy]
+seconds = 1500
+actions = 150
+policies = ["own"]

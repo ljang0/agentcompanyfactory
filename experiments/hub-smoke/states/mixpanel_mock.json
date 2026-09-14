@@ -1,0 +1,39 @@
+{
+  "currentUser": {"id": "user_001", "name": "Yusuf Adeyinka-Roth", "email": "yusuf@trailheadbookings.example", "avatar": null, "role": "Admin", "orgName": "Trailhead Bookings"},
+  "project": {"id": "proj_001", "name": "Trailhead Bookings Web", "dataView": "All Project Data", "timezone": "US/Mountain", "createdAt": "2025-10-02T00:00:00Z"},
+  "events": [
+    {"id": "evt_001", "eventName": "tour_viewed", "displayName": "Tour Viewed", "distinctId": "d_1001", "time": "2026-09-03T14:02:00Z", "city": "Boulder", "country": "United States", "region": "Colorado", "operatingSystem": "Mac OS X", "browser": "Chrome", "browserVersion": "128", "currentUrl": "https://trailheadbookings.example/tours/flatirons-sunrise", "deviceId": "dev_1001", "properties": {"tour": "Flatirons Sunrise Hike", "price": 45}},
+    {"id": "evt_002", "eventName": "booking_completed", "displayName": "Booking Completed", "distinctId": "d_1001", "time": "2026-09-03T14:09:00Z", "city": "Boulder", "country": "United States", "region": "Colorado", "operatingSystem": "Mac OS X", "browser": "Chrome", "browserVersion": "128", "currentUrl": "https://trailheadbookings.example/checkout/complete", "deviceId": "dev_1001", "properties": {"tour": "Flatirons Sunrise Hike", "guests": 2, "total": 90}}
+  ],
+  "userProfiles": [
+    {"id": "profile_001", "name": "Marisol Tanaka", "email": "marisol.t@example", "distinctId": "d_1001", "avatar": null, "countryCode": "US", "region": "Colorado", "city": "Boulder", "lastSeen": "2026-09-03T14:09:00Z", "createdAt": "2026-06-11T10:00:00Z", "properties": {"Plan": "Free", "Sign Up Date": "2026-06-11", "Total Sessions": 7, "Device Type": "Desktop"}}
+  ],
+  "boards": [
+    {"id": "board_001", "name": "Trailhead Booking Funnel Board", "description": "Tour discovery to completed booking", "isPinned": true, "isFavorite": true, "isStarter": false, "createdBy": "user_001", "createdAt": "2026-06-20T10:00:00Z", "updatedAt": "2026-09-02T10:00:00Z", "items": [
+      {"id": "bitem_001", "type": "report", "reportId": "report_001", "position": {"x": 0, "y": 0, "w": 6, "h": 4}, "title": "Bookings per day"}
+    ]}
+  ],
+  "reports": [
+    {"id": "report_001", "name": "Bookings per day", "type": "insights", "boardId": "board_001", "createdBy": "user_001", "createdAt": "2026-06-20T10:00:00Z", "updatedAt": "2026-09-02T10:00:00Z", "dateRange": {"start": "2026-08-28", "end": "2026-09-03", "preset": "7D"}, "granularity": "Day", "chartType": "line", "metrics": [{"id": "metric_a", "label": "A", "name": "Total of Booking Completed", "events": [{"id": "mevt_001", "name": "booking_completed", "color": "#7B5CFF"}], "measurement": "Total"}], "filters": [], "breakdowns": [], "chartData": {"labels": ["Aug 28", "Aug 29", "Aug 30", "Aug 31", "Sep 1", "Sep 2", "Sep 3"], "series": [{"name": "A. Total of Booking Completed", "color": "#7B5CFF", "data": [12, 18, 25, 21, 9, 11, 14]}]}, "tableData": {"columns": ["Metric", "Average"], "rows": [["Booking Completed", "15.7"]]}}
+  ],
+  "lexicon": [
+    {"id": "lex_001", "category": "events", "eventName": "tour_viewed", "displayName": "Tour Viewed", "description": "A tour detail page was viewed", "thirtyDayQueries": 42, "status": "Visible", "tags": ["discovery"], "type": "custom"},
+    {"id": "lex_002", "category": "events", "eventName": "booking_completed", "displayName": "Booking Completed", "description": "Checkout finished and payment captured", "thirtyDayQueries": 88, "status": "Visible", "tags": ["revenue"], "type": "custom"}
+  ],
+  "cohorts": [
+    {"id": "cohort_001", "name": "Repeat bookers", "description": "Users with 2+ completed bookings", "userCount": 134, "createdAt": "2026-07-01T10:00:00Z"}
+  ],
+  "sessionReplays": [
+    {"id": "replay_001", "distinctId": "d_1001", "visitDuration": 412, "eventCount": 9, "timestamp": "2026-09-03T14:02:00Z", "url": "https://trailheadbookings.example/tours/flatirons-sunrise", "entryUrl": "https://trailheadbookings.example/", "exitUrl": "https://trailheadbookings.example/checkout/complete", "operatingSystem": "Mac OS X", "browser": "Chrome", "sourceSDK": "web", "avatar": null, "events": [{"time": "2026-09-03T14:02:00Z", "name": "tour_viewed", "count": 1, "country": "United States"}]}
+  ],
+  "annotations": [
+    {"id": "ann_001", "date": "2026-08-30", "text": "Labor Day weekend promo launched", "createdBy": "user_001"}
+  ],
+  "settings": {
+    "org": {"name": "Trailhead Bookings", "plan": "Growth", "monthlyEvents": "500K", "monthlyReplays": "10K"},
+    "project": {"name": "Trailhead Bookings Web", "timezone": "US/Mountain", "dataRetention": "180 days"},
+    "profile": {"id": "user_001", "name": "Yusuf Adeyinka-Roth", "email": "yusuf@trailheadbookings.example", "avatar": null},
+    "teams": [{"id": "team_001", "name": "Growth", "members": ["user_001"], "projects": [{"name": "Trailhead Bookings Web", "role": "Admin"}]}],
+    "orgMembers": [{"id": "user_001", "name": "Yusuf Adeyinka-Roth", "email": "yusuf@trailheadbookings.example", "role": "Owner", "dateJoined": "2025-10-02", "lastActive": "2026-09-03"}]
+  }
+}

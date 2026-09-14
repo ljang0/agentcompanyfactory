@@ -1,0 +1,268 @@
+{
+  "app_id": "taobao_seller_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "conversations",
+    "coupons",
+    "customers",
+    "dashboardMetrics",
+    "logisticsProviders",
+    "logisticsTemplates",
+    "notifications",
+    "orders",
+    "products",
+    "promotions",
+    "quickReplies",
+    "refunds",
+    "reviews",
+    "store"
+  ],
+  "observed": [
+    "conversations",
+    "coupons",
+    "customers",
+    "dashboardMetrics",
+    "logisticsProviders",
+    "logisticsTemplates",
+    "notifications",
+    "orders",
+    "products",
+    "promotions",
+    "quickReplies",
+    "refunds",
+    "reviews",
+    "store"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "store": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "products": {
+      "kind": "array",
+      "count": 22,
+      "record_fields": [
+        "id",
+        "title",
+        "category",
+        "subcategory",
+        "price",
+        "originalPrice",
+        "mainImage",
+        "images",
+        "description",
+        "status",
+        "stock",
+        "sales",
+        "views",
+        "favoriteCount",
+        "rating",
+        "reviewCount",
+        "shippingFee",
+        "weight",
+        "skus",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "orders": {
+      "kind": "array",
+      "count": 25,
+      "record_fields": [
+        "id",
+        "orderNo",
+        "status",
+        "buyerId",
+        "buyerName",
+        "buyerNote",
+        "shippingAddress",
+        "items",
+        "totalAmount",
+        "shippingFee",
+        "discountAmount",
+        "actualAmount",
+        "paymentMethod",
+        "createdAt",
+        "paidAt",
+        "shippedAt",
+        "completedAt",
+        "logistics",
+        "sellerNote",
+        "sellerNoteColor"
+      ],
+      "keyed_by_id": false
+    },
+    "refunds": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "refundNo",
+        "orderId",
+        "orderNo",
+        "productId",
+        "productTitle",
+        "productSku",
+        "buyerId",
+        "buyerName",
+        "amount",
+        "type",
+        "reason",
+        "reasonText",
+        "evidenceImages",
+        "status",
+        "deadline",
+        "appliedAt",
+        "processedAt",
+        "sellerResponse"
+      ],
+      "keyed_by_id": false
+    },
+    "customers": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "name",
+        "phone",
+        "province",
+        "city",
+        "orderCount",
+        "totalSpent",
+        "vipLevel",
+        "tags",
+        "lastOrderAt"
+      ],
+      "keyed_by_id": false
+    },
+    "conversations": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "buyerId",
+        "buyerName",
+        "unreadCount",
+        "lastMessage",
+        "lastMessageTime",
+        "messages"
+      ],
+      "keyed_by_id": false
+    },
+    "coupons": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "discountAmount",
+        "threshold",
+        "discountRate",
+        "startDate",
+        "endDate",
+        "totalQuantity",
+        "usedQuantity",
+        "claimedQuantity",
+        "status",
+        "scope"
+      ],
+      "keyed_by_id": false
+    },
+    "reviews": {
+      "kind": "array",
+      "count": 20,
+      "record_fields": [
+        "id",
+        "productId",
+        "productTitle",
+        "orderId",
+        "buyerName",
+        "rating",
+        "content",
+        "sellerReply",
+        "sellerReplyTime",
+        "createdAt",
+        "skuInfo"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "type",
+        "title",
+        "content",
+        "relatedId",
+        "read",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "quickReplies": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "label",
+        "content"
+      ],
+      "keyed_by_id": false
+    },
+    "logisticsTemplates": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "freeShippingThreshold",
+        "baseFee",
+        "description"
+      ],
+      "keyed_by_id": false
+    },
+    "promotions": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "discountType",
+        "discountValue",
+        "startDate",
+        "endDate",
+        "status",
+        "productIds",
+        "description"
+      ],
+      "keyed_by_id": false
+    },
+    "logisticsProviders": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "dashboardMetrics": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": [
+        "sales",
+        "orderCount",
+        "pendingShipment",
+        "pendingRefund",
+        "visitors"
+      ],
+      "keyed_by_id": false
+    }
+  }
+}

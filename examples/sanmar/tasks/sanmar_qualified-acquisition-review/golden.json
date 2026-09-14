@@ -1,0 +1,1969 @@
+[
+  {
+    "worker_id": "sales-supervisor",
+    "app_id": "gmail_mock",
+    "action": "set_current",
+    "state_patch": {
+      "emails": [
+        {
+          "id": "MAIL-SEP-ACQ-DELEGATION",
+          "threadId": "THREAD-SEP-ACQ-REVIEW",
+          "from": {
+            "name": "Mara Ellison",
+            "email": "mara.ellison@cedarlineapparel.com",
+            "avatar": ""
+          },
+          "to": [
+            {
+              "name": "Imani Brooks",
+              "email": "imani.brooks@cedarlineapparel.com"
+            },
+            {
+              "name": "Owen Delgado",
+              "email": "owen.delgado@cedarlineapparel.com"
+            },
+            {
+              "name": "Priya Nair",
+              "email": "priya.nair@cedarlineapparel.com"
+            }
+          ],
+          "cc": [],
+          "bcc": [],
+          "subject": "September acquisition decision: findings and implementation assignments",
+          "body": "<p>Decide today, September 1, using records through August 31. Imani: report distinct relationships, business fit, application barriers and useful customer support for APP-604 through APP-610 and INQ-611/612. Send your findings to Owen, Priya and me.</p><p>Owen: use Imani's findings to check the Drive commercial ledger's invoiced purchases, posted credits and unallocated commitments. Keep its coverage separate from Sheets Orders. Give us an ordering/readiness workpaper and support estimate.</p><p>Priya: incorporate both reports into May–August campaign history and the common July–August comparison. Cost maintaining all three campaigns against decorator-only support. Send the comparison and requested effective controls to us.</p><p>Preserve the application, service and catalog blocks under POL-AUTH-3. Share findings without broadening source-file access. Hold ordinary advertising changes until my written allocation. After approval, Owen must check the selected workload against accepted commitments; Priya must implement and report exact controls; Imani must record dated customer follow-ups. Return the results for my final check.</p>",
+          "snippet": "Assignments for customer findings, order checks, spending comparison and post-decision implementation.",
+          "timestamp": "2026-09-01T08:05:00-07:00",
+          "read": true,
+          "starred": false,
+          "important": true,
+          "labels": [
+            "lbl-acquisition"
+          ],
+          "category": "primary",
+          "folder": "sent",
+          "attachments": []
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "account-representative",
+    "app_id": "hubspot_mock",
+    "action": "set_current",
+    "state_patch": {
+      "contacts": [
+        {
+          "id": "CT-A001",
+          "firstName": "Nora",
+          "lastName": "Bell",
+          "email": "nora@alderprintworks.com",
+          "phone": "",
+          "jobTitle": "Owner",
+          "companyId": "A001",
+          "lifecycleStage": "customer",
+          "leadStatus": "connected",
+          "owner": "Imani Brooks",
+          "city": "Portland",
+          "state": "OR",
+          "country": "United States",
+          "createDate": "2025-03-01T16:00:00Z",
+          "lastActivityDate": "2026-09-01T08:45:00-07:00",
+          "timeline": [
+            {
+              "type": "note",
+              "timestamp": "2026-09-01T08:45:00-07:00",
+              "content": "Internal acquisition review assigned in MAIL-SEP-ACQ-DELEGATION: INQ-611 / LEAD-8174 is Alder's existing-customer catalog inquiry through CAM-RETURN. Keep the request with A001; exclude from new acquired accounts. Follow up on the resource needed and intended use without attributing earlier purchases to this inquiry."
+            }
+          ]
+        },
+        {
+          "id": "CT-P002",
+          "firstName": "Noel",
+          "lastName": "Ford",
+          "email": "noel@moonriseclubgoods.com",
+          "phone": "",
+          "jobTitle": "Founder",
+          "companyId": "P002",
+          "lifecycleStage": "lead",
+          "leadStatus": "in_progress",
+          "owner": "Imani Brooks",
+          "city": "Los Angeles",
+          "state": "CA",
+          "country": "United States",
+          "createDate": "2026-07-24T17:00:00Z",
+          "lastActivityDate": "2026-09-01T08:45:00-07:00",
+          "timeline": [
+            {
+              "type": "note",
+              "timestamp": "2026-09-01T08:45:00-07:00",
+              "content": "Internal acquisition review: APP-606 / LEAD-7246 originated with CAM-START on July 24. INQ-612 / LEAD-8188 through CAM-RETURN on August 18 repeats that relationship while Noel searched for the earlier reply. One applicant, not two acquired accounts. CL-SVC-020 remains waiting on the sales tax license; business registration alone does not establish documentary acceptance or credit release."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "id": "NOTE-ACQ-FIT-KESTREL",
+          "body": "September 1 internal review of CL-SVC-019 and OPP-KESTREL-FIRST: Kestrel is a screen-printing business with a restaurant request estimated at 240 tees across two colors. Application and sales tax license are present; Gareth identified an unsigned resale certificate. The $1,008 opportunity equals 240 × $4.20 before any larger-size additions and is not an accepted order. Obtain the signed certificate for central review and the actual color/size split before firm commercial preparation.",
+          "associatedType": "ticket",
+          "associatedId": "CL-SVC-019",
+          "createdBy": "Imani Brooks",
+          "createDate": "2026-09-01T08:45:00-07:00"
+        },
+        {
+          "id": "NOTE-ACQ-FIT-OAKLINE",
+          "body": "September 1 internal review: Oakline's embroidery business is adding resale. CL-SVC-021 records an application and submitted certificate awaiting Gareth's review. This is useful prospective business fit, not documentary acceptance. Ask central credit for the actual response and remaining requirements before moving readiness forward.",
+          "associatedType": "ticket",
+          "associatedId": "CL-SVC-021",
+          "createdBy": "Imani Brooks",
+          "createDate": "2026-09-01T08:45:00-07:00"
+        },
+        {
+          "id": "NOTE-ACQ-FIT-DOVETAIL",
+          "body": "September 1 internal review: CL-SVC-022 leaves Dovetail's decoration arrangements and selling channels unspecified. Interest in branded goods alone does not establish reseller fit. Request the business explanation, valid sales tax license and applicable resale certificate for central review. Keep qualification open.",
+          "associatedType": "ticket",
+          "associatedId": "CL-SVC-022",
+          "createdBy": "Imani Brooks",
+          "createDate": "2026-09-01T08:45:00-07:00"
+        },
+        {
+          "id": "NOTE-ACQ-FIT-HILLCREST",
+          "body": "September 1 internal review: CL-SVC-023 describes 180 shirts for Hillcrest's own volunteers and students without resale. The school purchasing letter is not evidence of a reseller business. Route Marisol to a reseller resource; do not count this inquiry as an eligible new wholesale account.",
+          "associatedType": "ticket",
+          "associatedId": "CL-SVC-023",
+          "createdBy": "Imani Brooks",
+          "createDate": "2026-09-01T08:45:00-07:00"
+        },
+        {
+          "id": "NOTE-ACQ-FIT-SLATE",
+          "body": "September 1 internal review: SVC-107 connects Felix's August 27 reply to the legal-name question. The certificate says Slate Run Promotional Services LLC and the application says Slate Run Promotions. The trade-name relationship is still being checked with his accountant. Preserve the inquiry and seek a documented explanation for Gareth; do not assume either acceptance or rejection.",
+          "associatedType": "ticket",
+          "associatedId": "SVC-107",
+          "createdBy": "Imani Brooks",
+          "createDate": "2026-09-01T08:45:00-07:00"
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "account-representative",
+    "app_id": "gmail_mock",
+    "action": "set_current",
+    "state_patch": {
+      "emails": [
+        {
+          "id": "MAIL-SEP-ACQ-FIT",
+          "threadId": "THREAD-SEP-ACQ-REVIEW",
+          "from": {
+            "name": "Imani Brooks",
+            "email": "imani.brooks@cedarlineapparel.com",
+            "avatar": ""
+          },
+          "to": [
+            {
+              "name": "Mara Ellison",
+              "email": "mara.ellison@cedarlineapparel.com"
+            },
+            {
+              "name": "Owen Delgado",
+              "email": "owen.delgado@cedarlineapparel.com"
+            },
+            {
+              "name": "Priya Nair",
+              "email": "priya.nair@cedarlineapparel.com"
+            }
+          ],
+          "cc": [],
+          "bcc": [],
+          "subject": "Re: September acquisition decision — business fit and application findings",
+          "body": "<p>In response to MAIL-SEP-ACQ-DELEGATION, I recorded the relationship distinctions on CT-A001 and CT-P002 and the application findings in NOTE-ACQ-FIT-KESTREL, NOTE-ACQ-FIT-OAKLINE, NOTE-ACQ-FIT-DOVETAIL, NOTE-ACQ-FIT-HILLCREST and NOTE-ACQ-FIT-SLATE.</p><p>The reviewed APP-604–610 plus INQ-611–612 set has nine intake records but eight distinct relationship identities. Seven are first application records, including Hillcrest, an end user. Alder is existing; Moonrise's visitor inquiry repeats its July application.</p><p>DECOR links Riverbend, Kestrel and Oakline: Riverbend documents were accepted May 19 (CL-SVC-018); Kestrel needs the resale signature despite a real 240-tee restaurant request; Oakline awaits central certificate review. START links Moonrise (license missing), Dovetail (business/channel/decoration details and documents missing), and Hillcrest (reseller referral required). RETURN adds Slate Run (legal-name explanation pending), Alder and the Moonrise repeat.</p><p>Recommend six additional representative hours weekly for the narrower option: three Kestrel commercial preparation, one Oakline discovery, one Riverbend development and one Alder resource clarification. These are estimates and conditional work, not completed calls. Routine application chases remain inside the protected ten-hour application block. Maintaining all three would add four hours of starter discovery/document guidance and two of visitor triage, totaling twelve additional hours. All unresolved inquiries retain follow-ups under either choice. Owen, use these identities and readiness barriers for your order check; Priya, carry the distinctions into the campaign comparison.</p>",
+          "snippet": "Nine intakes, eight identities; six unresolved applications retain support under either option.",
+          "timestamp": "2026-09-01T09:00:00-07:00",
+          "read": true,
+          "starred": false,
+          "important": true,
+          "labels": [
+            "lbl-acquisition",
+            "lbl-applications"
+          ],
+          "category": "primary",
+          "folder": "sent",
+          "attachments": []
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "order-coordinator",
+    "app_id": "google_sheets_mock",
+    "action": "set_current",
+    "state_patch": {
+      "sheets": [
+        {
+          "id": "SH-ACQ-ORDER-CHECK",
+          "name": "Acquisition order checks Aug 31",
+          "rowCount": 100,
+          "colCount": 26,
+          "frozenRows": 1,
+          "data": {
+            "A1": {
+              "value": "Record / scope",
+              "formula": "Record / scope"
+            },
+            "B1": {
+              "value": "Gross / commitment USD",
+              "formula": "Gross / commitment USD"
+            },
+            "C1": {
+              "value": "Posted credit USD",
+              "formula": "Posted credit USD"
+            },
+            "D1": {
+              "value": "Invoiced net USD",
+              "formula": "Invoiced net USD"
+            },
+            "E1": {
+              "value": "Treatment and source",
+              "formula": "Treatment and source"
+            },
+            "A2": {
+              "value": "A012 / APP-604 / CAM-DECOR",
+              "formula": "A012 / APP-604 / CAM-DECOR"
+            },
+            "B2": {
+              "value": "=600*4.2",
+              "formula": "=600*4.2",
+              "computed": 2520
+            },
+            "C2": {
+              "value": "0",
+              "formula": "0",
+              "computed": 0
+            },
+            "D2": {
+              "value": "=B2-C2",
+              "formula": "=B2-C2",
+              "computed": 2520
+            },
+            "E2": {
+              "value": "Drive WB-COMMERCIAL: ORD-260709, INV-260709, July 9, Forest CB100 L, shipped. No matching posted credit in that ledger. Imani's MAIL-SEP-ACQ-FIT cites CL-SVC-018 for May 19 documentary acceptance. Only invoiced purchaser among the reviewed new relationships; not profit or proof of causal advertising return.",
+              "formula": "Drive WB-COMMERCIAL: ORD-260709, INV-260709, July 9, Forest CB100 L, shipped. No matching posted credit in that ledger. Imani's MAIL-SEP-ACQ-FIT cites CL-SVC-018 for May 19 documentary acceptance. Only invoiced purchaser among the reviewed new relationships; not profit or proof of causal advertising return."
+            },
+            "A3": {
+              "value": "A001 / INQ-611 / existing customer",
+              "formula": "A001 / INQ-611 / existing customer"
+            },
+            "B3": {
+              "value": "=144*4.2",
+              "formula": "=144*4.2",
+              "computed": 604.8
+            },
+            "C3": {
+              "value": "0",
+              "formula": "0",
+              "computed": 0
+            },
+            "D3": {
+              "value": "=B3-C3",
+              "formula": "=B3-C3",
+              "computed": 604.8
+            },
+            "E3": {
+              "value": "Drive WB-COMMERCIAL: ORD-260716 / INV-260716, shipped July 16. Purchase predates August 17 visitor inquiry; exclude from new acquisition and incremental RETURN revenue.",
+              "formula": "Drive WB-COMMERCIAL: ORD-260716 / INV-260716, shipped July 16. Purchase predates August 17 visitor inquiry; exclude from new acquisition and incremental RETURN revenue."
+            },
+            "A4": {
+              "value": "A009 / older CAM-SPRINT context",
+              "formula": "A009 / older CAM-SPRINT context"
+            },
+            "B4": {
+              "value": "=120*23.5",
+              "formula": "=120*23.5",
+              "computed": 2820
+            },
+            "C4": {
+              "value": "141",
+              "formula": "141",
+              "computed": 141
+            },
+            "D4": {
+              "value": "=B4-C4",
+              "formula": "=B4-C4",
+              "computed": 2679
+            },
+            "E4": {
+              "value": "Drive WB-COMMERCIAL ORD-260611 / INV-260611; SH-CREDITS row 2: RET-701 / CRD-701 posted June 24. Excluded from the three running campaigns' acquired purchases.",
+              "formula": "Drive WB-COMMERCIAL ORD-260611 / INV-260611; SH-CREDITS row 2: RET-701 / CRD-701 posted June 24. Excluded from the three running campaigns' acquired purchases."
+            },
+            "A5": {
+              "value": "A009 / unallocated repeat commitment",
+              "formula": "A009 / unallocated repeat commitment"
+            },
+            "B5": {
+              "value": "=144*24",
+              "formula": "=144*24",
+              "computed": 3456
+            },
+            "C5": {
+              "value": "0",
+              "formula": "0",
+              "computed": 0
+            },
+            "D5": {
+              "value": "0",
+              "formula": "0",
+              "computed": 0
+            },
+            "E5": {
+              "value": "Drive WB-COMMERCIAL ORD-260827 accepted August 27; invoice blank and allocation pending. $3,456 remains a commitment, not realized invoiced purchases.",
+              "formula": "Drive WB-COMMERCIAL ORD-260827 accepted August 27; invoice blank and allocation pending. $3,456 remains a commitment, not realized invoiced purchases."
+            },
+            "A6": {
+              "value": "A006 / Northfork cancellation pending",
+              "formula": "A006 / Northfork cancellation pending"
+            },
+            "B6": {
+              "value": "=120*5.25",
+              "formula": "=120*5.25",
+              "computed": 630
+            },
+            "C6": {
+              "value": "0",
+              "formula": "0",
+              "computed": 0
+            },
+            "D6": {
+              "value": "0",
+              "formula": "0",
+              "computed": 0
+            },
+            "E6": {
+              "value": "Drive WB-COMMERCIAL ORD-260818: Khaki CB080 Adjustable, invoice blank, awaiting allocation. SVC-105 awaits Lucia's cancellation response; SVC-106 is the closed duplicate only. Preserve accepted $630 commitment, exclude from invoiced purchases.",
+              "formula": "Drive WB-COMMERCIAL ORD-260818: Khaki CB080 Adjustable, invoice blank, awaiting allocation. SVC-105 awaits Lucia's cancellation response; SVC-106 is the closed duplicate only. Preserve accepted $630 commitment, exclude from invoiced purchases."
+            },
+            "A7": {
+              "value": "A005 / Mesa disputed invoice",
+              "formula": "A005 / Mesa disputed invoice"
+            },
+            "B7": {
+              "value": "=48*13.2",
+              "formula": "=48*13.2",
+              "computed": 633.6
+            },
+            "C7": {
+              "value": "0",
+              "formula": "0",
+              "computed": 0
+            },
+            "D7": {
+              "value": "=B7-C7",
+              "formula": "=B7-C7",
+              "computed": 633.6
+            },
+            "E7": {
+              "value": "ORD-260811 / INV-260811 shipped; SVC-104 unpaid and awaiting response. SH-CREDITS row 5 RET-704 claims 6*13.2=$79.20, with no receipt or posted credit. Do not deduct the claim or imply collection. Not attributed to the reviewed campaigns.",
+              "formula": "ORD-260811 / INV-260811 shipped; SVC-104 unpaid and awaiting response. SH-CREDITS row 5 RET-704 claims 6*13.2=$79.20, with no receipt or posted credit. Do not deduct the claim or imply collection. Not attributed to the reviewed campaigns."
+            },
+            "A8": {
+              "value": "A011 / older CAM-TEAM context",
+              "formula": "A011 / older CAM-TEAM context"
+            },
+            "B8": {
+              "value": "=96*11.8",
+              "formula": "=96*11.8",
+              "computed": 1132.8
+            },
+            "C8": {
+              "value": "141.6",
+              "formula": "141.6",
+              "computed": 141.6
+            },
+            "D8": {
+              "value": "=B8-C8",
+              "formula": "=B8-C8",
+              "computed": 991.2
+            },
+            "E8": {
+              "value": "ORD-260702 / INV-260702; RET-702 / CRD-702 posted July 20 in SH-CREDITS row 3. Historical context, not current campaign attribution.",
+              "formula": "ORD-260702 / INV-260702; RET-702 / CRD-702 posted July 20 in SH-CREDITS row 3. Historical context, not current campaign attribution."
+            },
+            "A9": {
+              "value": "A002 / existing service context",
+              "formula": "A002 / existing service context"
+            },
+            "B9": {
+              "value": "=72*24",
+              "formula": "=72*24",
+              "computed": 1728
+            },
+            "C9": {
+              "value": "96",
+              "formula": "96",
+              "computed": 96
+            },
+            "D9": {
+              "value": "=B9-C9",
+              "formula": "=B9-C9",
+              "computed": 1632
+            },
+            "E9": {
+              "value": "ORD-260723 / INV-260723; RET-703 / CRD-703 posted August 5, SH-CREDITS row 4 and SVC-092. Deduct posted credit once. Not a new acquisition in this review.",
+              "formula": "ORD-260723 / INV-260723; RET-703 / CRD-703 posted August 5, SH-CREDITS row 4 and SVC-092. Deduct posted credit once. Not a new acquisition in this review."
+            },
+            "A10": {
+              "value": "P001–P006 / unresolved reviewed applications",
+              "formula": "P001–P006 / unresolved reviewed applications"
+            },
+            "D10": {
+              "value": "0",
+              "formula": "0",
+              "computed": 0
+            },
+            "E10": {
+              "value": "No invoiced orders for these six relationships in the supplied Drive ledger. This is a coverage-limited observation, not proof of no purchases anywhere. Apply Imani's signature, license, review, business-description, end-user and legal-name findings in MAIL-SEP-ACQ-FIT; do not grant acceptance.",
+              "formula": "No invoiced orders for these six relationships in the supplied Drive ledger. This is a coverage-limited observation, not proof of no purchases anywhere. Apply Imani's signature, license, review, business-description, end-user and legal-name findings in MAIL-SEP-ACQ-FIT; do not grant acceptance."
+            },
+            "A12": {
+              "value": "Method",
+              "formula": "Method"
+            },
+            "E12": {
+              "value": "Join SH-SOURCES intake to account, then Drive WB-COMMERCIAL Orders by account; identify invoice and processing status; join credits by order and use posted dates through August 31. The much larger SH-ORDERS has different coverage: do not overwrite, merge totals blindly, or infer attribution from an account match alone. No source transactions changed.",
+              "formula": "Join SH-SOURCES intake to account, then Drive WB-COMMERCIAL Orders by account; identify invoice and processing status; join credits by order and use posted dates through August 31. The much larger SH-ORDERS has different coverage: do not overwrite, merge totals blindly, or infer attribution from an account match alone. No source transactions changed."
+            },
+            "A13": {
+              "value": "Support estimates",
+              "formula": "Support estimates"
+            },
+            "E13": {
+              "value": "Decorator-only: 3 additional order-services hours/week, comprising 1 for documentary handoff/readiness and 2 for commercial/order checks. All-three option: 6 additional hours/week including starter/visitor readiness triage. Both are additional to the protected 12-hour customer-exception block and within the separate 14-hour discretionary allowance. Routine Mesa and Northfork follow-ups remain protected.",
+              "formula": "Decorator-only: 3 additional order-services hours/week, comprising 1 for documentary handoff/readiness and 2 for commercial/order checks. All-three option: 6 additional hours/week including starter/visitor readiness triage. Both are additional to the protected 12-hour customer-exception block and within the separate 14-hour discretionary allowance. Routine Mesa and Northfork follow-ups remain protected."
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "order-coordinator",
+    "app_id": "gmail_mock",
+    "action": "set_current",
+    "state_patch": {
+      "emails": [
+        {
+          "id": "MAIL-SEP-ACQ-ORDERS",
+          "threadId": "THREAD-SEP-ACQ-REVIEW",
+          "from": {
+            "name": "Owen Delgado",
+            "email": "owen.delgado@cedarlineapparel.com",
+            "avatar": ""
+          },
+          "to": [
+            {
+              "name": "Mara Ellison",
+              "email": "mara.ellison@cedarlineapparel.com"
+            },
+            {
+              "name": "Imani Brooks",
+              "email": "imani.brooks@cedarlineapparel.com"
+            },
+            {
+              "name": "Priya Nair",
+              "email": "priya.nair@cedarlineapparel.com"
+            }
+          ],
+          "cc": [],
+          "bcc": [],
+          "subject": "Re: September acquisition decision — checked ordering and readiness",
+          "body": "<p>SH-ACQ-ORDER-CHECK is ready. Using Imani's MAIL-SEP-ACQ-FIT joins and the Drive WB-COMMERCIAL coverage, Riverbend is the only invoiced new relationship in the reviewed current-campaign set: 600 Forest CB100 L × $4.20 = $2,520, no matching posted credit. Alder's $604.80 July purchase predates its visitor inquiry and cannot be called new RETURN revenue. The six unresolved applicants have no invoiced purchase in that ledger.</p><p>Older context: Summit's $2,820 less $141 posted credit is $2,679; its separate $3,456 August order awaits allocation. Orchard's $1,132.80 less $141.60 is $991.20. Northfork's $630 order still awaits allocation and cancellation consent. Mesa remains $633.60 invoiced and unpaid; $79.20 is an unposted claim. None establishes incremental revenue for the three campaigns. The larger Sheets Orders tab has different coverage.</p><p>I support 3 additional hours/week for the narrower option or 6 for all three, alongside the protected 12 exception hours. Central credit and operations retain their decisions. Priya, include the coverage and concentration limits in the comparison; Imani, preserve these readiness boundaries in follow-ups. I will check the actual selected scope after receiving your comparison and Mara's allocation.</p>",
+          "snippet": "Riverbend $2,520 invoiced; commitments and unposted claims remain separate. Support estimates 3 or 6 hours.",
+          "timestamp": "2026-09-01T09:45:00-07:00",
+          "read": true,
+          "starred": false,
+          "important": true,
+          "labels": [
+            "lbl-acquisition"
+          ],
+          "category": "primary",
+          "folder": "sent",
+          "attachments": []
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "marketing-specialist",
+    "app_id": "google_sheets_mock",
+    "action": "set_current",
+    "state_patch": {
+      "sheets": [
+        {
+          "id": "SH-ACQ-COMPARISON",
+          "name": "September acquisition comparison",
+          "rowCount": 100,
+          "colCount": 26,
+          "frozenRows": 1,
+          "data": {
+            "A1": {
+              "value": "Campaign",
+              "formula": "Campaign"
+            },
+            "B1": {
+              "value": "May–August spend",
+              "formula": "May–August spend"
+            },
+            "C1": {
+              "value": "May–August platform results",
+              "formula": "May–August platform results"
+            },
+            "D1": {
+              "value": "July–August spend",
+              "formula": "July–August spend"
+            },
+            "E1": {
+              "value": "July–August platform results",
+              "formula": "July–August platform results"
+            },
+            "F1": {
+              "value": "Common-window cost/result",
+              "formula": "Common-window cost/result"
+            },
+            "G1": {
+              "value": "Reviewed intake records May–August",
+              "formula": "Reviewed intake records May–August"
+            },
+            "H1": {
+              "value": "Distinct identities within campaign",
+              "formula": "Distinct identities within campaign"
+            },
+            "I1": {
+              "value": "First application identities",
+              "formula": "First application identities"
+            },
+            "J1": {
+              "value": "Documentary and ordering outcome",
+              "formula": "Documentary and ordering outcome"
+            },
+            "A2": {
+              "value": "CAM-DECOR",
+              "formula": "CAM-DECOR"
+            },
+            "B2": {
+              "value": "=1200+1600+1850+1950",
+              "formula": "=1200+1600+1850+1950",
+              "computed": 6600,
+              "note": "SH-SPEND rows 6,8,10,13; reconciles CAM-DECOR amountSpent."
+            },
+            "C2": {
+              "value": "=31+45+50+52",
+              "formula": "=31+45+50+52",
+              "computed": 178
+            },
+            "D2": {
+              "value": "=1850+1950",
+              "formula": "=1850+1950",
+              "computed": 3800
+            },
+            "E2": {
+              "value": "=50+52",
+              "formula": "=50+52",
+              "computed": 102
+            },
+            "F2": {
+              "value": "=ROUND(D2/E2,2)",
+              "formula": "=ROUND(D2/E2,2)",
+              "computed": 37.25
+            },
+            "G2": {
+              "value": "3",
+              "formula": "3",
+              "computed": 3
+            },
+            "H2": {
+              "value": "3",
+              "formula": "3",
+              "computed": 3
+            },
+            "I2": {
+              "value": "3",
+              "formula": "3",
+              "computed": 3
+            },
+            "J2": {
+              "value": "Riverbend accepted May 19 and $2,520 invoiced July 9; Kestrel signature missing; Oakline central review pending. Three plausible reseller businesses; one documented accepted applicant and one recorded purchaser. All linked new-customer invoiced value is concentrated in Riverbend. Sources: MAIL-SEP-ACQ-FIT and MAIL-SEP-ACQ-ORDERS.",
+              "formula": "Riverbend accepted May 19 and $2,520 invoiced July 9; Kestrel signature missing; Oakline central review pending. Three plausible reseller businesses; one documented accepted applicant and one recorded purchaser. All linked new-customer invoiced value is concentrated in Riverbend. Sources: MAIL-SEP-ACQ-FIT and MAIL-SEP-ACQ-ORDERS."
+            },
+            "A3": {
+              "value": "CAM-START",
+              "formula": "CAM-START"
+            },
+            "B3": {
+              "value": "=1000+1450+1450",
+              "formula": "=1000+1450+1450",
+              "computed": 3900,
+              "note": "SH-SPEND rows 9,11,14. Campaign started June 1; no May delivery."
+            },
+            "C3": {
+              "value": "=62+81+82",
+              "formula": "=62+81+82",
+              "computed": 225
+            },
+            "D3": {
+              "value": "=1450+1450",
+              "formula": "=1450+1450",
+              "computed": 2900
+            },
+            "E3": {
+              "value": "=81+82",
+              "formula": "=81+82",
+              "computed": 163
+            },
+            "F3": {
+              "value": "=ROUND(D3/E3,2)",
+              "formula": "=ROUND(D3/E3,2)",
+              "computed": 17.79
+            },
+            "G3": {
+              "value": "3",
+              "formula": "3",
+              "computed": 3
+            },
+            "H3": {
+              "value": "3",
+              "formula": "3",
+              "computed": 3
+            },
+            "I3": {
+              "value": "3",
+              "formula": "3",
+              "computed": 3
+            },
+            "J3": {
+              "value": "Moonrise license missing; Dovetail fit/details/documents unresolved; Hillcrest is direct end user. No documentary acceptance or invoiced purchase established for these applicants. Lowest platform cost/result does not establish lowest cost per eligible buyer.",
+              "formula": "Moonrise license missing; Dovetail fit/details/documents unresolved; Hillcrest is direct end user. No documentary acceptance or invoiced purchase established for these applicants. Lowest platform cost/result does not establish lowest cost per eligible buyer."
+            },
+            "A4": {
+              "value": "CAM-RETURN",
+              "formula": "CAM-RETURN"
+            },
+            "B4": {
+              "value": "=800+750",
+              "formula": "=800+750",
+              "computed": 1550,
+              "note": "SH-SPEND rows 12,15. Campaign started July 1; no May or June delivery."
+            },
+            "C4": {
+              "value": "=39+36",
+              "formula": "=39+36",
+              "computed": 75
+            },
+            "D4": {
+              "value": "=800+750",
+              "formula": "=800+750",
+              "computed": 1550
+            },
+            "E4": {
+              "value": "=39+36",
+              "formula": "=39+36",
+              "computed": 75
+            },
+            "F4": {
+              "value": "=ROUND(D4/E4,2)",
+              "formula": "=ROUND(D4/E4,2)",
+              "computed": 20.67
+            },
+            "G4": {
+              "value": "3",
+              "formula": "3",
+              "computed": 3
+            },
+            "H4": {
+              "value": "3",
+              "formula": "3",
+              "computed": 3
+            },
+            "I4": {
+              "value": "1",
+              "formula": "1",
+              "computed": 1
+            },
+            "J4": {
+              "value": "Slate Run legal-name explanation pending; Alder existing customer; Moonrise repeat of START application. No newly accepted applicant or new acquired purchaser established. Prior Alder purchase excluded from incremental RETURN value.",
+              "formula": "Slate Run legal-name explanation pending; Alder existing customer; Moonrise repeat of START application. No newly accepted applicant or new acquired purchaser established. Prior Alder purchase excluded from incremental RETURN value."
+            },
+            "A6": {
+              "value": "Total current-campaign history",
+              "formula": "Total current-campaign history"
+            },
+            "B6": {
+              "value": "=SUM(B2:B4)",
+              "formula": "=SUM(B2:B4)",
+              "computed": 12050
+            },
+            "C6": {
+              "value": "=SUM(C2:C4)",
+              "formula": "=SUM(C2:C4)",
+              "computed": 478
+            },
+            "D6": {
+              "value": "=SUM(D2:D4)",
+              "formula": "=SUM(D2:D4)",
+              "computed": 8250
+            },
+            "E6": {
+              "value": "=SUM(E2:E4)",
+              "formula": "=SUM(E2:E4)",
+              "computed": 340
+            },
+            "G6": {
+              "value": "=SUM(G2:G4)",
+              "formula": "=SUM(G2:G4)",
+              "computed": 9
+            },
+            "H6": {
+              "value": "8",
+              "formula": "8",
+              "computed": 8,
+              "note": "Global distinct identities: A012,P001,P002,P003,P004,P005,P006,A001. P002 occurs in two campaigns."
+            },
+            "I6": {
+              "value": "=SUM(I2:I4)",
+              "formula": "=SUM(I2:I4)",
+              "computed": 7,
+              "note": "First applications include Hillcrest; seven is not an eligible-account count."
+            },
+            "A8": {
+              "value": "Coverage and timing",
+              "formula": "Coverage and timing"
+            },
+            "J8": {
+              "value": "SH-SOURCES rows 5–13 define the reviewed set, not the complete platform funnel. Nine linked records among 478 platform results does not establish a conversion rate: linkage completeness, result uniqueness and attribution are unknown. July–August has eight reviewed intake records and seven identities because APP-604 arrived in May. Riverbend's July purchase follows a May application; do not call it a July-acquired cohort conversion. DECOR has four months of maturity, START three, RETURN two. Common-window delivery comparison controls calendar exposure but not cohort maturity or audience differences.",
+              "formula": "SH-SOURCES rows 5–13 define the reviewed set, not the complete platform funnel. Nine linked records among 478 platform results does not establish a conversion rate: linkage completeness, result uniqueness and attribution are unknown. July–August has eight reviewed intake records and seven identities because APP-604 arrived in May. Riverbend's July purchase follows a May application; do not call it a July-acquired cohort conversion. DECOR has four months of maturity, START three, RETURN two. Common-window delivery comparison controls calendar exposure but not cohort maturity or audience differences."
+            },
+            "A9": {
+              "value": "Financial interpretation",
+              "formula": "Financial interpretation"
+            },
+            "J9": {
+              "value": "Use SH-ACQ-ORDER-CHECK and Drive WB-COMMERCIAL for the coverage-limited $2,520 purchase. Removing Riverbend leaves $0 observed invoiced purchases among the reviewed new relationships. This concentration argues for bounded support, not scaling or forecasts. Merchandise value is neither profit nor advertising-attributable incremental revenue; margins, full customer history and causal attribution are absent. August $4,150 media expense includes a $650 unpaid balance; do not reduce expense to $3,500 paid or invent collection.",
+              "formula": "Use SH-ACQ-ORDER-CHECK and Drive WB-COMMERCIAL for the coverage-limited $2,520 purchase. Removing Riverbend leaves $0 observed invoiced purchases among the reviewed new relationships. This concentration argues for bounded support, not scaling or forecasts. Merchandise value is neither profit nor advertising-attributable incremental revenue; margins, full customer history and causal attribution are absent. August $4,150 media expense includes a $650 unpaid balance; do not reduce expense to $3,500 paid or invent collection."
+            },
+            "A11": {
+              "value": "Intake",
+              "formula": "Intake"
+            },
+            "B11": {
+              "value": "Relationship",
+              "formula": "Relationship"
+            },
+            "C11": {
+              "value": "Campaign / date",
+              "formula": "Campaign / date"
+            },
+            "D11": {
+              "value": "Evidence / disposition",
+              "formula": "Evidence / disposition"
+            },
+            "A12": {
+              "value": "APP-604 / LEAD-5114",
+              "formula": "APP-604 / LEAD-5114"
+            },
+            "B12": {
+              "value": "A012 Riverbend",
+              "formula": "A012 Riverbend"
+            },
+            "C12": {
+              "value": "CAM-DECOR / 2026-05-11",
+              "formula": "CAM-DECOR / 2026-05-11"
+            },
+            "D12": {
+              "value": "SH-SOURCES row 5; CL-SVC-018; SH-ACQ-ORDER-CHECK row 2. Visitor-center merchandise, tees and totes; accepted documents; one invoiced order.",
+              "formula": "SH-SOURCES row 5; CL-SVC-018; SH-ACQ-ORDER-CHECK row 2. Visitor-center merchandise, tees and totes; accepted documents; one invoiced order."
+            },
+            "A13": {
+              "value": "APP-605 / LEAD-7213",
+              "formula": "APP-605 / LEAD-7213"
+            },
+            "B13": {
+              "value": "P001 Kestrel",
+              "formula": "P001 Kestrel"
+            },
+            "C13": {
+              "value": "CAM-DECOR / 2026-07-21",
+              "formula": "CAM-DECOR / 2026-07-21"
+            },
+            "D13": {
+              "value": "SH-SOURCES row 6; CL-SVC-019; OPP-KESTREL-FIRST. Screen printer, restaurant tees, unsigned certificate; opportunity is not order.",
+              "formula": "SH-SOURCES row 6; CL-SVC-019; OPP-KESTREL-FIRST. Screen printer, restaurant tees, unsigned certificate; opportunity is not order."
+            },
+            "A14": {
+              "value": "APP-606 / LEAD-7246",
+              "formula": "APP-606 / LEAD-7246"
+            },
+            "B14": {
+              "value": "P002 Moonrise",
+              "formula": "P002 Moonrise"
+            },
+            "C14": {
+              "value": "CAM-START / 2026-07-24",
+              "formula": "CAM-START / 2026-07-24"
+            },
+            "D14": {
+              "value": "SH-SOURCES row 7; CT-P002; CL-SVC-020. License missing; original relationship for INQ-612.",
+              "formula": "SH-SOURCES row 7; CT-P002; CL-SVC-020. License missing; original relationship for INQ-612."
+            },
+            "A15": {
+              "value": "APP-607 / LEAD-8042",
+              "formula": "APP-607 / LEAD-8042"
+            },
+            "B15": {
+              "value": "P003 Oakline",
+              "formula": "P003 Oakline"
+            },
+            "C15": {
+              "value": "CAM-DECOR / 2026-08-04",
+              "formula": "CAM-DECOR / 2026-08-04"
+            },
+            "D15": {
+              "value": "SH-SOURCES row 8; CL-SVC-021. Embroidery adding resale; central certificate review pending.",
+              "formula": "SH-SOURCES row 8; CL-SVC-021. Embroidery adding resale; central certificate review pending."
+            },
+            "A16": {
+              "value": "APP-608 / LEAD-8068",
+              "formula": "APP-608 / LEAD-8068"
+            },
+            "B16": {
+              "value": "P004 Dovetail",
+              "formula": "P004 Dovetail"
+            },
+            "C16": {
+              "value": "CAM-START / 2026-08-06",
+              "formula": "CAM-START / 2026-08-06"
+            },
+            "D16": {
+              "value": "SH-SOURCES row 9; CL-SVC-022. Decoration, selling channels and reseller documents required; fit unresolved.",
+              "formula": "SH-SOURCES row 9; CL-SVC-022. Decoration, selling channels and reseller documents required; fit unresolved."
+            },
+            "A17": {
+              "value": "APP-609 / LEAD-8112",
+              "formula": "APP-609 / LEAD-8112"
+            },
+            "B17": {
+              "value": "P005 Hillcrest",
+              "formula": "P005 Hillcrest"
+            },
+            "C17": {
+              "value": "CAM-START / 2026-08-11",
+              "formula": "CAM-START / 2026-08-11"
+            },
+            "D17": {
+              "value": "SH-SOURCES row 10; CL-SVC-023. Own-use school shirts; reseller referral, not wholesale qualification.",
+              "formula": "SH-SOURCES row 10; CL-SVC-023. Own-use school shirts; reseller referral, not wholesale qualification."
+            },
+            "A18": {
+              "value": "APP-610 / LEAD-8136",
+              "formula": "APP-610 / LEAD-8136"
+            },
+            "B18": {
+              "value": "P006 Slate Run",
+              "formula": "P006 Slate Run"
+            },
+            "C18": {
+              "value": "CAM-RETURN / 2026-08-13",
+              "formula": "CAM-RETURN / 2026-08-13"
+            },
+            "D18": {
+              "value": "SH-SOURCES row 11; SVC-107. Certificate/application legal-name relationship unresolved.",
+              "formula": "SH-SOURCES row 11; SVC-107. Certificate/application legal-name relationship unresolved."
+            },
+            "A19": {
+              "value": "INQ-611 / LEAD-8174",
+              "formula": "INQ-611 / LEAD-8174"
+            },
+            "B19": {
+              "value": "A001 Alder",
+              "formula": "A001 Alder"
+            },
+            "C19": {
+              "value": "CAM-RETURN / 2026-08-17",
+              "formula": "CAM-RETURN / 2026-08-17"
+            },
+            "D19": {
+              "value": "SH-SOURCES row 12; CT-A001. Existing customer seeking resources; earlier July purchase is not a new acquisition.",
+              "formula": "SH-SOURCES row 12; CT-A001. Existing customer seeking resources; earlier July purchase is not a new acquisition."
+            },
+            "A20": {
+              "value": "INQ-612 / LEAD-8188",
+              "formula": "INQ-612 / LEAD-8188"
+            },
+            "B20": {
+              "value": "P002 Moonrise repeat",
+              "formula": "P002 Moonrise repeat"
+            },
+            "C20": {
+              "value": "CAM-RETURN / 2026-08-18",
+              "formula": "CAM-RETURN / 2026-08-18"
+            },
+            "D20": {
+              "value": "SH-SOURCES row 13; CL-SVC-020; CT-P002. One follow-up with APP-606; no duplicate account or acquisition credit.",
+              "formula": "SH-SOURCES row 13; CL-SVC-020; CT-P002. One follow-up with APP-606; no duplicate account or acquisition credit."
+            }
+          }
+        },
+        {
+          "id": "SH-ACQ-OPTIONS",
+          "name": "September support options",
+          "rowCount": 100,
+          "colCount": 26,
+          "frozenRows": 1,
+          "data": {
+            "A1": {
+              "value": "Option",
+              "formula": "Option"
+            },
+            "B1": {
+              "value": "DECOR daily USD",
+              "formula": "DECOR daily USD"
+            },
+            "C1": {
+              "value": "START daily USD",
+              "formula": "START daily USD"
+            },
+            "D1": {
+              "value": "RETURN daily USD",
+              "formula": "RETURN daily USD"
+            },
+            "E1": {
+              "value": "30-day media plan USD",
+              "formula": "30-day media plan USD"
+            },
+            "F1": {
+              "value": "Extra representative hours/week",
+              "formula": "Extra representative hours/week"
+            },
+            "G1": {
+              "value": "Extra services hours/week",
+              "formula": "Extra services hours/week"
+            },
+            "H1": {
+              "value": "Extra marketing hours/week",
+              "formula": "Extra marketing hours/week"
+            },
+            "I1": {
+              "value": "Internal support USD/week",
+              "formula": "Internal support USD/week"
+            },
+            "J1": {
+              "value": "Scope",
+              "formula": "Scope"
+            },
+            "A2": {
+              "value": "A: maintain all three",
+              "formula": "A: maintain all three"
+            },
+            "B2": {
+              "value": "65",
+              "formula": "65",
+              "computed": 65
+            },
+            "C2": {
+              "value": "45",
+              "formula": "45",
+              "computed": 45
+            },
+            "D2": {
+              "value": "25",
+              "formula": "25",
+              "computed": 25
+            },
+            "E2": {
+              "value": "=(B2+C2+D2)*30",
+              "formula": "=(B2+C2+D2)*30",
+              "computed": 4050
+            },
+            "F2": {
+              "value": "12",
+              "formula": "12",
+              "computed": 12
+            },
+            "G2": {
+              "value": "6",
+              "formula": "6",
+              "computed": 6
+            },
+            "H2": {
+              "value": "8",
+              "formula": "8",
+              "computed": 8
+            },
+            "I2": {
+              "value": "=F2*48+G2*42+H2*50",
+              "formula": "=F2*48+G2*42+H2*50",
+              "computed": 1228
+            },
+            "J2": {
+              "value": "Decorator development plus proactive starter discovery/document guidance and visitor triage. Estimated role hours by campaign: DECOR 6/3/4; START 4/2/2; RETURN 2/1/2. Preserves all application and service obligations. More learning breadth but greater low-readiness and duplicate triage burden. Uses Imani's and Owen's emailed estimates.",
+              "formula": "Decorator development plus proactive starter discovery/document guidance and visitor triage. Estimated role hours by campaign: DECOR 6/3/4; START 4/2/2; RETURN 2/1/2. Preserves all application and service obligations. More learning breadth but greater low-readiness and duplicate triage burden. Uses Imani's and Owen's emailed estimates."
+            },
+            "A3": {
+              "value": "B: decorator-only media",
+              "formula": "B: decorator-only media"
+            },
+            "B3": {
+              "value": "65",
+              "formula": "65",
+              "computed": 65
+            },
+            "C3": {
+              "value": "0",
+              "formula": "0",
+              "computed": 0
+            },
+            "D3": {
+              "value": "0",
+              "formula": "0",
+              "computed": 0
+            },
+            "E3": {
+              "value": "=(B3+C3+D3)*30",
+              "formula": "=(B3+C3+D3)*30",
+              "computed": 1950
+            },
+            "F3": {
+              "value": "6",
+              "formula": "6",
+              "computed": 6
+            },
+            "G3": {
+              "value": "3",
+              "formula": "3",
+              "computed": 3
+            },
+            "H3": {
+              "value": "4",
+              "formula": "4",
+              "computed": 4
+            },
+            "I3": {
+              "value": "=F3*48+G3*42+H3*50",
+              "formula": "=F3*48+G3*42+H3*50",
+              "computed": 614
+            },
+            "J3": {
+              "value": "Pause START and RETURN; prioritize Kestrel commercial preparation, Oakline discovery, Riverbend development and Alder's existing resource request. Routine six-application follow-ups continue in protected application time. Marketing: 2 hours approved resource reuse and 2 hours linkage/pacing checks; no new production purchase.",
+              "formula": "Pause START and RETURN; prioritize Kestrel commercial preparation, Oakline discovery, Riverbend development and Alder's existing resource request. Routine six-application follow-ups continue in protected application time. Marketing: 2 hours approved resource reuse and 2 hours linkage/pacing checks; no new production purchase."
+            },
+            "A5": {
+              "value": "Available discretionary hours/week",
+              "formula": "Available discretionary hours/week"
+            },
+            "F5": {
+              "value": "18",
+              "formula": "18",
+              "computed": 18
+            },
+            "G5": {
+              "value": "14",
+              "formula": "14",
+              "computed": 14
+            },
+            "H5": {
+              "value": "16",
+              "formula": "16",
+              "computed": 16
+            },
+            "A6": {
+              "value": "Protected recurring hours/week",
+              "formula": "Protected recurring hours/week"
+            },
+            "F6": {
+              "value": "10",
+              "formula": "10",
+              "computed": 10
+            },
+            "G6": {
+              "value": "12",
+              "formula": "12",
+              "computed": 12
+            },
+            "H6": {
+              "value": "8",
+              "formula": "8",
+              "computed": 8
+            },
+            "J6": {
+              "value": "POL-AUTH-3: applications, customer exceptions and catalog maintenance respectively. Discretionary allowances are additional; never subtract protected hours twice or use them as new capacity.",
+              "formula": "POL-AUTH-3: applications, customer exceptions and catalog maintenance respectively. Discretionary allowances are additional; never subtract protected hours twice or use them as new capacity."
+            },
+            "A7": {
+              "value": "Option B remaining discretionary",
+              "formula": "Option B remaining discretionary"
+            },
+            "F7": {
+              "value": "=F5-F3",
+              "formula": "=F5-F3",
+              "computed": 12
+            },
+            "G7": {
+              "value": "=G5-G3",
+              "formula": "=G5-G3",
+              "computed": 11
+            },
+            "H7": {
+              "value": "=H5-H3",
+              "formula": "=H5-H3",
+              "computed": 12
+            },
+            "A8": {
+              "value": "Option B reductions versus A",
+              "formula": "Option B reductions versus A"
+            },
+            "E8": {
+              "value": "=E2-E3",
+              "formula": "=E2-E3",
+              "computed": 2100
+            },
+            "I8": {
+              "value": "=I2-I3",
+              "formula": "=I2-I3",
+              "computed": 614
+            },
+            "A9": {
+              "value": "September media authority",
+              "formula": "September media authority"
+            },
+            "E9": {
+              "value": "6000",
+              "formula": "6000",
+              "computed": 6000
+            },
+            "A10": {
+              "value": "Option B media headroom",
+              "formula": "Option B media headroom"
+            },
+            "E10": {
+              "value": "=E9-E3",
+              "formula": "=E9-E3",
+              "computed": 4050
+            },
+            "A11": {
+              "value": "September-equivalent internal cost",
+              "formula": "September-equivalent internal cost"
+            },
+            "E11": {
+              "value": "=ROUND(I2*30/7,2)",
+              "formula": "=ROUND(I2*30/7,2)",
+              "computed": 5262.86,
+              "note": "Option A planning convention: weekly effort prorated by 30/7, not a payroll or vendor bill."
+            },
+            "I11": {
+              "value": "=ROUND(I3*30/7,2)",
+              "formula": "=ROUND(I3*30/7,2)",
+              "computed": 2631.43,
+              "note": "Option B same convention. Weekly limits govern; no future effort claimed as completed."
+            },
+            "A12": {
+              "value": "Production and controls",
+              "formula": "Production and controls"
+            },
+            "J12": {
+              "value": "Both options add $0 customer-resource production expense; preserve existing catalog work and vendor obligations within the separate $1,200 authority. Internal support is not media or vendor expense. CBO is false; effective budgets belong to ad sets. Matching parent budgets are not extra spend. Daily budget × 30 is planning exposure, not a native hard monthly cap. Monitor delivered/accrued September spend and pause or reduce before approved allocation is exceeded; obtain recorded approval for changes. Account spendCap is not a September cap.",
+              "formula": "Both options add $0 customer-resource production expense; preserve existing catalog work and vendor obligations within the separate $1,200 authority. Internal support is not media or vendor expense. CBO is false; effective budgets belong to ad sets. Matching parent budgets are not extra spend. Daily budget × 30 is planning exposure, not a native hard monthly cap. Monitor delivered/accrued September spend and pause or reduce before approved allocation is exceeded; obtain recorded approval for changes. Account spendCap is not a September cap."
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "marketing-specialist",
+    "app_id": "gmail_mock",
+    "action": "set_current",
+    "state_patch": {
+      "emails": [
+        {
+          "id": "MAIL-SEP-ACQ-COMPARISON",
+          "threadId": "THREAD-SEP-ACQ-REVIEW",
+          "from": {
+            "name": "Priya Nair",
+            "email": "priya.nair@cedarlineapparel.com",
+            "avatar": ""
+          },
+          "to": [
+            {
+              "name": "Mara Ellison",
+              "email": "mara.ellison@cedarlineapparel.com"
+            },
+            {
+              "name": "Imani Brooks",
+              "email": "imani.brooks@cedarlineapparel.com"
+            },
+            {
+              "name": "Owen Delgado",
+              "email": "owen.delgado@cedarlineapparel.com"
+            }
+          ],
+          "cc": [],
+          "bcc": [],
+          "subject": "Re: September acquisition decision — comparison and two support scopes",
+          "body": "<p>SH-ACQ-COMPARISON and SH-ACQ-OPTIONS incorporate MAIL-SEP-ACQ-FIT and MAIL-SEP-ACQ-ORDERS. July–August DECOR $3,800/102=$37.25 per platform result; START $2,900/163=$17.79; RETURN $1,550/75=$20.67. Across their unequal May–August operating periods: $6,600/178, $3,900/225 and $1,550/75. The reviewed set is incomplete and Riverbend alone supplies $2,520 recorded invoiced value; these are neither profit nor conversion forecasts.</p><p>Option A retains $65/$45/$25 daily, $4,050 September media plan, estimated extra role hours 12/6/8 and $1,228 weekly internal cost. The additional breadth comprises starter discovery/document guidance and visitor triage. Option B keeps DECOR $65 and pauses the other two, $1,950 plan, 6/3/4 hours and $614/week. It retains conditional Kestrel preparation, Oakline discovery, Riverbend development and Alder resource help, plus every routine application obligation. Both add $0 production expense.</p><p>I recommend B to focus on better-described reseller needs. Marketing estimates are 4 hours for B or 8 for A, separate from 8 protected catalog hours. Please record the choice before I change settings; daily budgets are pacing controls, not a hard monthly cap. Owen: use this actual comparison and the selected scope to produce your accepted-work feasibility result. Imani: use the selected scope to prioritize follow-ups without closing incomplete applications.</p>",
+          "snippet": "Two materially different scopes: all three at $4,050 or decorator-only at $1,950 planned September media.",
+          "timestamp": "2026-09-01T10:30:00-07:00",
+          "read": true,
+          "starred": false,
+          "important": true,
+          "labels": [
+            "lbl-acquisition",
+            "lbl-approvals"
+          ],
+          "category": "primary",
+          "folder": "sent",
+          "attachments": []
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "sales-supervisor",
+    "app_id": "google_docs_mock",
+    "action": "set_current",
+    "state_patch": {
+      "documents": {
+        "DOC-SEP-ACQ-DECISION": {
+          "id": "DOC-SEP-ACQ-DECISION",
+          "title": "September 2026 reseller acquisition spending and support decision",
+          "content": "<h1>September 2026 spending and support</h1><p>Mara Ellison, September 1, 2026, 11:00 America/Los_Angeles. Evidence cutoff: August 31. Under POL-AUTH-3, I approve Option B effective upon implementation today: keep CAM-DECOR and AS-DECOR active at $65 daily; pause CAM-START and AS-START and set their daily budgets to $0; pause CAM-RETURN and AS-RETURN and set their daily budgets to $0. Pause their corresponding ads as well. Preserve decorator creative and delivery, historical metrics, completed campaigns and the unlaunched fall draft.</p><h2>What informed the choice</h2><p>I considered Imani's MAIL-SEP-ACQ-FIT, Owen's MAIL-SEP-ACQ-ORDERS and Priya's MAIL-SEP-ACQ-COMPARISON. Imani separates nine intake records into eight distinct identities. Seven first applications include Hillcrest's own-use school request, so seven is not an eligible reseller count. Alder is an existing customer; Moonrise's August inquiry repeats its July application. DECOR has Riverbend's visitor-center merchandise business, Kestrel's restaurant screen-printing request and Oakline's embroidery business adding resale. START has a missing license, unclear business arrangements and an end user. RETURN mixes one legal-name issue with an existing customer and a repeated applicant.</p><p>Owen's SH-ACQ-ORDER-CHECK establishes Riverbend's $2,520 invoiced purchase and recorded May 19 document acceptance. Kestrel still needs a signature and Oakline awaits central review; neither is ready merely because its business fits. No invoice is recorded for the six unresolved applicants in the supplied Drive ledger. Alder's $604.80 July purchase predates its August visitor inquiry. Summit's older $2,679 net invoiced purchase and separate $3,456 unallocated order are not current-campaign acquisitions. Northfork's $630 accepted order remains subject to allocation and cancellation consent. Mesa's $633.60 invoice remains unpaid with a $79.20 unposted claim. Preserve these obligations and do not turn commitments or claims into realized purchases.</p><p>Priya's SH-ACQ-COMPARISON uses SH-SPEND and SH-SOURCES: July–August DECOR $3,800 and 102 platform results, START $2,900 and 163, RETURN $1,550 and 75; costs/result are $37.25, $17.79 and $20.67. May–August operating histories are $6,600/178, $3,900/225 and $1,550/75 respectively. The campaigns started in May, June and July. The common window aligns delivery dates but cannot equalize applicant maturity. Riverbend entered in May and ordered in July.</p><p>The linked intake set is not a complete funnel. There are eight July–August intake records and seven identities; adding May's Riverbend application yields nine and eight. Platform results are not distinct qualified businesses. All observed invoiced value among reviewed new relationships is concentrated in Riverbend; removing it leaves zero observed value. The Drive ledger and larger Sheets Orders tab have different coverage. Neither account matching nor low platform cost establishes causality, profit, return on advertising or future conversion.</p><h2>Two feasible choices</h2><p>Option A maintains all three at $65/$45/$25 daily: (65+45+25)×30=$4,050 media planning exposure. Estimated additional weekly role hours are 12 representative, 6 order services and 8 marketing: 12×48+6×42+8×50=$1,228. This includes decorator commercial development, proactive starter discovery/document guidance and visitor triage. It buys broader learning but commits more time to poorly established readiness and repeated relationships.</p><p>Option B keeps decorator media alone: 65×30=$1,950 planning exposure. Estimated additional weekly hours are 6 representative, 3 order services and 4 marketing: 6×48+3×42+4×50=$614. It reduces planned media by $2,100 and internal support by $614/week. Using the explicit 30/7 convention, internal September-equivalent costs are $5,262.86 for A and $2,631.43 for B; these are planning estimates, not wages paid or vendor charges. Both options add $0 production purchases and fit the $6,000 monthly media authority; existing production obligations remain under the separate $1,200 authority.</p><p>I choose B because the better-described decorator needs justify a bounded continuation, while Owen's concentration finding rules out confident expansion. I accept Priya's higher decorator platform cost because Imani identifies concrete commercial work and remediable paperwork there. Cheap starter results and mixed visitor activity do not currently justify additional proactive acquisition support. The choice sacrifices breadth of learning and may miss good unlinked starter or visitor prospects; it is reversible and does not reject their existing customers.</p><h2>Capacity and customer work</h2><p>Keep the protected weekly blocks: 10 representative hours for applications, 12 services hours for exceptions and 8 marketing hours for catalog maintenance. Discretionary allowances of 18/14/16 are additional; B uses 6/3/4 and leaves 12/11/12. Do not subtract recurring commitments twice. Existing calendar obligations remain, including the September 3 Orchard City uniform review and Priya's September 3 catalog edits. Mesa, Northfork, other open exceptions, Spanish sleeve wording and the corrected translation invoice remain in their existing workflows.</p><p>Additional representative work: estimated 3 hours Kestrel commercial preparation, 1 Oakline discovery, 1 Riverbend development and 1 Alder resource clarification. Services: 1 hour readiness/document handoffs and 2 commercial/order checks. Marketing: 2 hours approved-resource reuse and 2 linkage/pacing checks. Routine application requests remain within protected application time. These are weekly planning envelopes; do not invent completed calls or consume hours if prerequisites are absent. If demand threatens protected work, reduce acquisition activity and bring the tradeoff to me. Owen must incorporate Priya's comparison and this chosen scope into a substantive feasibility check, including the accepted unallocated commitments and the boundary between routine exception work and additional acquisition support.</p><p>Imani will record tasks and notes: Kestrel signed certificate and actual color/size split by September 2; Oakline central-review follow-up by September 2; Moonrise license request in its existing application thread by September 2; Dovetail business/channel/decoration explanation and documents by September 3; Hillcrest reseller referral by September 2; Slate Run legal-name explanation by September 3; Alder resource needs by September 3. One Moonrise task covers both intakes. No incomplete application is closed due to a media pause. Gareth retains documentary acceptance and credit decisions; Lucia retains order/amendment decisions.</p><h2>Reconsideration and spending control</h2><p>Review on September 15, with further evaluation September 30. START remains paused until the desk has clearer business/channel/decoration information, missing documents have progressed through central review, and Priya can distinguish eligible new relationships from end users and repeats. RETURN remains paused until Slate Run's name question has a central response and reporting separates new applicants, existing-customer resource demand and repeat contacts; any restart must identify useful incremental work and stronger distinct-customer evidence. Individual customers can resume useful support as their missing information arrives without automatically restarting advertising. Hillcrest receives a reseller resource; wholesale support requires evidence of a different, eligible reseller business purpose.</p><p>Continuing DECOR is also conditional: check Kestrel and Oakline progress, distinct-business quality beyond Riverbend, actual support hours and delivery pacing. If fit weakens, paperwork stagnates or existing commitments are threatened, reduce or pause and reassess. No future revenue or acceptance is promised.</p><p>With campaign budget optimization false, the ad-set budgets are effective; parent figures mirror them and are not added again. $65 daily across September's 30 days is planning exposure, not a hard monthly cap. Priya will check delivered and accrued September spend each business day, reduce or pause before the $1,950 approved allocation is exceeded, and request a recorded amendment before increasing the scope. $4,050 authority headroom is not permission to spend it. The account's $36,000 spendCap is not a September cap. Preserve the existing $650 August balance without inventing payment. Implementation must report exact campaign/ad-set states and follow-up records back to me.</p>",
+          "ownerId": "person-mara",
+          "starred": true,
+          "created": "2026-09-01T11:00:00-07:00",
+          "updated": "2026-09-01T11:00:00-07:00",
+          "sharedWith": [
+            {
+              "userId": "person-imani",
+              "permission": "viewer"
+            },
+            {
+              "userId": "person-owen",
+              "permission": "viewer"
+            },
+            {
+              "userId": "person-priya",
+              "permission": "viewer"
+            }
+          ],
+          "linkSharing": {
+            "enabled": false,
+            "permission": "viewer"
+          }
+        }
+      }
+    }
+  },
+  {
+    "worker_id": "sales-supervisor",
+    "app_id": "google_drive_mock",
+    "action": "set_current",
+    "state_patch": {
+      "items": {
+        "DOC-SEP-ACQ-DECISION": {
+          "id": "DOC-SEP-ACQ-DECISION",
+          "parentId": "F-APPROVALS",
+          "name": "September 2026 reseller acquisition spending and support decision",
+          "type": "doc",
+          "mimeType": "application/vnd.google-apps.document",
+          "size": 0,
+          "ownerId": "person-mara",
+          "sharedWith": [
+            {
+              "userId": "person-imani",
+              "role": "viewer",
+              "addedAt": "2026-09-01T11:00:00-07:00"
+            },
+            {
+              "userId": "person-owen",
+              "role": "viewer",
+              "addedAt": "2026-09-01T11:00:00-07:00"
+            },
+            {
+              "userId": "person-priya",
+              "role": "viewer",
+              "addedAt": "2026-09-01T11:00:00-07:00"
+            }
+          ],
+          "starred": true,
+          "trashed": false,
+          "color": null,
+          "createdAt": 1788285600000,
+          "modifiedAt": 1788285600000,
+          "accessedAt": 1788285600000,
+          "description": "Recorded September 1 approval under POL-AUTH-3. Google Docs DOC-SEP-ACQ-DECISION contains the decision. Specialist workpapers: SH-ACQ-ORDER-CHECK, SH-ACQ-COMPARISON and SH-ACQ-OPTIONS in WB-COMMERCIAL; source permissions remain unchanged.",
+          "content": "Approved Option B: DECOR active $65/day; START and RETURN paused $0/day at both campaign and effective ad-set controls. September media plan $1,950, not a native hard cap. Additional weekly support estimates: representative 6h/$288, order services 3h/$126, marketing 4h/$200; total $614/week. Preserve protected application/service/catalog blocks 10/12/8h. Alternative A: all three $65/$45/$25, $4,050 media plan, 12/6/8h and $1,228/week. No additional production purchases. Follow up all six unresolved applications plus Alder; Moonrise remains one relationship. Review paused channels September 15 for documentary progress, clearer business fit and stronger distinct-customer evidence. See Google Docs decision for individual actions, caveats and controls."
+        }
+      }
+    }
+  },
+  {
+    "worker_id": "sales-supervisor",
+    "app_id": "gmail_mock",
+    "action": "set_current",
+    "state_patch": {
+      "emails": [
+        {
+          "id": "MAIL-SEP-ACQ-APPROVAL",
+          "threadId": "THREAD-SEP-ACQ-REVIEW",
+          "from": {
+            "name": "Mara Ellison",
+            "email": "mara.ellison@cedarlineapparel.com",
+            "avatar": ""
+          },
+          "to": [
+            {
+              "name": "Imani Brooks",
+              "email": "imani.brooks@cedarlineapparel.com"
+            },
+            {
+              "name": "Owen Delgado",
+              "email": "owen.delgado@cedarlineapparel.com"
+            },
+            {
+              "name": "Priya Nair",
+              "email": "priya.nair@cedarlineapparel.com"
+            }
+          ],
+          "cc": [],
+          "bcc": [],
+          "subject": "September allocation approved — decorator-only media and protected follow-ups",
+          "body": "<p>Approved Option B in DOC-SEP-ACQ-DECISION, filed in Management approvals. I used all three specialist reports: the decorator needs justify bounded continuation, but Riverbend concentration does not support expansion. START's low result cost and RETURN's mixed identities do not justify their extra proactive support now.</p><p>Priya: retain DECOR $65/day, pause START and RETURN and set both parent/ad-set daily budgets to zero; pause their ads. Report effective controls without changing history or claiming a monthly hard cap. Imani: enter the seven dated follow-up tasks and associated notes in the decision; Moonrise gets one task for both intakes.</p><p>Owen: now use Priya's actual A/B comparison and this approval to finalize the 3-hour additional services envelope, test it against the 14-hour discretionary allowance and the separate 12-hour protected exception block, and specify how existing accepted commitments remain covered. Send the substantive result to all three of us. No new fulfillment or acceptance is authorized.</p><p>Approved additional weekly role estimates are 6/3/4 hours, $614/week; September media plan $1,950 and no additional production purchases. Existing exception work and all protected blocks remain. Review September 15; no unused authority is automatically released for other acquisition.</p>",
+          "snippet": "Recorded allocation and concrete implementation instructions for all three specialists.",
+          "timestamp": "2026-09-01T11:02:00-07:00",
+          "read": true,
+          "starred": true,
+          "important": true,
+          "labels": [
+            "lbl-acquisition",
+            "lbl-approvals"
+          ],
+          "category": "primary",
+          "folder": "sent",
+          "attachments": []
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "order-coordinator",
+    "app_id": "google_docs_mock",
+    "action": "set_current",
+    "state_patch": {
+      "documents": {
+        "DOC-SEP-ACQ-ORDER-FEASIBILITY": {
+          "id": "DOC-SEP-ACQ-ORDER-FEASIBILITY",
+          "title": "September selected support: order-services feasibility and accepted commitments",
+          "content": "<h1>Selected workload feasibility</h1><p>Owen Delgado, September 1, 2026, 11:10 Pacific. This work uses Priya's MAIL-SEP-ACQ-COMPARISON and SH-ACQ-OPTIONS, Mara's DOC-SEP-ACQ-DECISION and MAIL-SEP-ACQ-APPROVAL, Imani's MAIL-SEP-ACQ-FIT, and my SH-ACQ-ORDER-CHECK. The accepted scope is decorator-only paid delivery, with routine customer obligations retained across all sources.</p><p>Priya's broader option would require 6 additional services hours weekly: 3 for the retained development scope, 2 for proactive starter readiness triage and 1 for proactive visitor triage. At $42/hour this is $252/week and leaves 14−6=8 discretionary hours. The selected option removes the latter proactive work, uses 3×42=$126/week, and leaves 14−3=11 discretionary hours. The services reduction is 3 hours/$126 per week, contributing to the total role-cost reduction from $1,228 to $614. Both options fit; the narrower option is useful because the observed purchase is concentrated in Riverbend and the cheaper sources have unresolved readiness or repeated identities.</p><p>I assign the selected 3-hour additional services planning envelope as follows: 0.5 hour for Kestrel packet/readiness handoff after Imani obtains the signed certificate; 0.5 hour to consolidate Oakline's pending review question with Gareth; 1 hour to check Kestrel's actual size/color split and current price/availability once supplied; and 1 hour for Riverbend commercial/order checks if Imani identifies a next program. These are estimated maximum weekly allocations for this scope, not completed work or guaranteed response times. If a prerequisite is absent, leave that time uncommitted rather than manufacture commercial progress. Imani remains the customer contact; Gareth alone decides documentary acceptance and credit.</p><p>The 12-hour protected customer-exception block is separate from the 14-hour discretionary allowance. Selected planning uses 12 protected plus 3 additional hours, or 15 hours across these two envelopes; the broader option would use 18. Do not subtract the protected 12 from 14 or count it as newly available support. Routine application chases stay in Imani's protected application time. I will retain routine service handoffs in the existing exception block, including Mesa's pending picture review and Northfork's pending cancellation response, and avoid adding a second task for a duplicate inquiry.</p><h2>Accepted-work boundaries</h2><p>Northfork ORD-260818 remains an accepted 120-unit Khaki CB080 Adjustable commitment at $5.25, $630 total, with no invoice and allocation pending. SVC-105 continues awaiting Lucia's consent or other response; SVC-106 is only the closed duplicate. The media pause does not cancel or fulfill it. Summit ORD-260827 remains an accepted 144-unit Navy TF410 XL commitment at $24, $3,456 total, awaiting allocation; it is neither new current-campaign acquisition nor invoiced purchases. Allocation follow-ups remain services work independent of the acquisition channel.</p><p>Mesa ORD-260811 / INV-260811 remains 48 Navy XL CB210 at $13.20, $633.60 invoiced and unpaid. SVC-104 and RET-704 still concern six units/$79.20 with no posted credit. Preserve the invoice and claim separately and request Lucia's actual review response. No return receipt, credit, payment or cancellation has occurred through this planning action.</p><p>Operational feasibility is conditional on the stated estimates and existing protected blocks. Before accepting additional acquisition work, I will compare actual services workload with the 3-hour selected envelope. If it exceeds that envelope or threatens exception coverage, send Mara the affected commitments and additional hours required before accepting expanded acquisition support. The unused 11 discretionary hours are not an automatic campaign expansion. If allocation, customer documentation or central responses change, update the relevant facts and recheck effort; do not move an accepted order or applicant to a completed state solely to fit the plan.</p><p>Result: the selected support scope is feasible within the supplied capacity while preserving recorded accepted work, subject to workload monitoring. There is no operational basis to infer purchase conversion from the $1,950 media plan or from the platform result counts. At September 15 review, provide actual time and readiness changes to Priya and Mara; continue to distinguish posted credits and invoices from pending commitments.</p>",
+          "ownerId": "person-owen",
+          "starred": false,
+          "created": "2026-09-01T11:10:00-07:00",
+          "updated": "2026-09-01T11:10:00-07:00",
+          "sharedWith": [
+            {
+              "userId": "person-mara",
+              "permission": "viewer"
+            },
+            {
+              "userId": "person-imani",
+              "permission": "viewer"
+            },
+            {
+              "userId": "person-priya",
+              "permission": "viewer"
+            }
+          ],
+          "linkSharing": {
+            "enabled": false,
+            "permission": "viewer"
+          }
+        }
+      }
+    }
+  },
+  {
+    "worker_id": "order-coordinator",
+    "app_id": "gmail_mock",
+    "action": "set_current",
+    "state_patch": {
+      "emails": [
+        {
+          "id": "MAIL-SEP-ACQ-ORDER-FEASIBILITY",
+          "threadId": "THREAD-SEP-ACQ-REVIEW",
+          "from": {
+            "name": "Owen Delgado",
+            "email": "owen.delgado@cedarlineapparel.com",
+            "avatar": ""
+          },
+          "to": [
+            {
+              "name": "Mara Ellison",
+              "email": "mara.ellison@cedarlineapparel.com"
+            },
+            {
+              "name": "Imani Brooks",
+              "email": "imani.brooks@cedarlineapparel.com"
+            },
+            {
+              "name": "Priya Nair",
+              "email": "priya.nair@cedarlineapparel.com"
+            }
+          ],
+          "cc": [],
+          "bcc": [],
+          "subject": "Re: Approved scope — services feasibility and protected accepted work",
+          "body": "<p>DOC-SEP-ACQ-ORDER-FEASIBILITY now incorporates Priya's actual comparison and Mara's approval. Selected services effort is 3 hours/$126 weekly versus 6 hours/$252 for all three, leaving 11 versus 8 hours of the separate discretionary allowance. The 12-hour exception block remains protected.</p><p>The selected envelope is 0.5 hour Kestrel readiness handoff, 0.5 Oakline central-review consolidation, 1 Kestrel size/color price and availability checks, and 1 Riverbend program/order checks, all conditional on Imani's inputs. No prerequisites or completed work are invented.</p><p>Northfork's $630 and Summit's $3,456 accepted unallocated commitments remain intact; Mesa stays $633.60 invoiced/unpaid with a separate $79.20 unposted claim. These existing services obligations do not disappear with campaign pauses. I will escalate workload that exceeds the selected envelope or threatens exception coverage before accepting expanded acquisition work.</p><p>Imani: use these prerequisite and exception boundaries in customer task notes. Priya: carry this feasibility result into the implementation report and September 15 review. Mara: the chosen scope fits the supplied capacity under these estimates, with monitoring rather than any assumption of new acceptance, allocation or fulfillment.</p>",
+          "snippet": "Substantive post-decision services plan: 3 hours, 11 discretionary hours remaining, accepted commitments preserved.",
+          "timestamp": "2026-09-01T11:12:00-07:00",
+          "read": true,
+          "starred": false,
+          "important": true,
+          "labels": [
+            "lbl-acquisition",
+            "lbl-order-services"
+          ],
+          "category": "primary",
+          "folder": "sent",
+          "attachments": []
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "marketing-specialist",
+    "app_id": "meta_ads_mock",
+    "action": "set_current",
+    "state_patch": {
+      "campaigns": [
+        {
+          "id": "CAM-START",
+          "name": "Start with wholesale basics",
+          "status": "paused",
+          "objective": "Leads",
+          "buyingType": "auction",
+          "budgetOptimization": false,
+          "dailyBudget": 0,
+          "lifetimeBudget": null,
+          "bidStrategy": "lowest_cost",
+          "specialAdCategories": [],
+          "createdAt": "2026-06-01T00:00:00-07:00",
+          "updatedAt": "2026-09-01T11:15:00-07:00",
+          "startDate": "2026-06-01T00:00:00-07:00",
+          "endDate": null,
+          "results": 225,
+          "reach": null,
+          "impressions": 420000,
+          "clicks": 6200,
+          "ctr": 1.48,
+          "cpc": 0.63,
+          "cpm": 9.29,
+          "costPerResult": 17.33,
+          "amountSpent": 3900,
+          "frequency": null,
+          "roas": null,
+          "deliveryStatus": "not_delivering"
+        },
+        {
+          "id": "CAM-RETURN",
+          "name": "Return to your catalog",
+          "status": "paused",
+          "objective": "Leads",
+          "buyingType": "auction",
+          "budgetOptimization": false,
+          "dailyBudget": 0,
+          "lifetimeBudget": null,
+          "bidStrategy": "lowest_cost",
+          "specialAdCategories": [],
+          "createdAt": "2026-07-01T00:00:00-07:00",
+          "updatedAt": "2026-09-01T11:15:00-07:00",
+          "startDate": "2026-07-01T00:00:00-07:00",
+          "endDate": null,
+          "results": 75,
+          "reach": null,
+          "impressions": 95000,
+          "clicks": 1300,
+          "ctr": 1.37,
+          "cpc": 1.19,
+          "cpm": 16.32,
+          "costPerResult": 20.67,
+          "amountSpent": 1550,
+          "frequency": null,
+          "roas": null,
+          "deliveryStatus": "not_delivering"
+        }
+      ],
+      "adSets": [
+        {
+          "id": "AS-START",
+          "campaignId": "CAM-START",
+          "name": "Apparel business starters",
+          "status": "paused",
+          "dailyBudget": 0,
+          "lifetimeBudget": null,
+          "startDate": "2026-06-01T00:00:00-07:00",
+          "endDate": null,
+          "optimizationGoal": "leads",
+          "billingEvent": "impressions",
+          "bidAmount": null,
+          "targeting": {
+            "locations": [
+              "United States"
+            ],
+            "ageMin": 21,
+            "ageMax": 65,
+            "genders": [],
+            "detailedTargeting": [
+              "Apparel entrepreneurship"
+            ],
+            "customAudiences": [],
+            "lookalikeAudiences": [],
+            "excludedAudiences": []
+          },
+          "placements": {
+            "type": "automatic",
+            "platforms": []
+          },
+          "results": 225,
+          "reach": null,
+          "impressions": 420000,
+          "clicks": 6200,
+          "ctr": 1.48,
+          "cpc": 0.63,
+          "cpm": 9.29,
+          "costPerResult": 17.33,
+          "amountSpent": 3900,
+          "frequency": null,
+          "deliveryStatus": "not_delivering"
+        },
+        {
+          "id": "AS-RETURN",
+          "campaignId": "CAM-RETURN",
+          "name": "Reseller page visitors",
+          "status": "paused",
+          "dailyBudget": 0,
+          "lifetimeBudget": null,
+          "startDate": "2026-07-01T00:00:00-07:00",
+          "endDate": null,
+          "optimizationGoal": "leads",
+          "billingEvent": "impressions",
+          "bidAmount": null,
+          "targeting": {
+            "locations": [],
+            "ageMin": null,
+            "ageMax": null,
+            "genders": [],
+            "detailedTargeting": [],
+            "customAudiences": [
+              "AU-VISIT"
+            ],
+            "lookalikeAudiences": [],
+            "excludedAudiences": []
+          },
+          "placements": {
+            "type": "automatic",
+            "platforms": []
+          },
+          "results": 75,
+          "reach": null,
+          "impressions": 95000,
+          "clicks": 1300,
+          "ctr": 1.37,
+          "cpc": 1.19,
+          "cpm": 16.32,
+          "costPerResult": 20.67,
+          "amountSpent": 1550,
+          "frequency": null,
+          "deliveryStatus": "not_delivering"
+        }
+      ],
+      "ads": [
+        {
+          "id": "AD-START",
+          "adSetId": "AS-START",
+          "campaignId": "CAM-START",
+          "name": "Explore a reseller account",
+          "status": "paused",
+          "creativeId": "CR-START",
+          "results": 225,
+          "reach": null,
+          "impressions": 420000,
+          "clicks": 6200,
+          "ctr": 1.48,
+          "cpc": 0.63,
+          "cpm": 9.29,
+          "costPerResult": 17.33,
+          "amountSpent": 3900,
+          "frequency": null,
+          "deliveryStatus": "not_delivering",
+          "reviewStatus": "approved",
+          "reviewFeedback": ""
+        },
+        {
+          "id": "AD-RETURN",
+          "adSetId": "AS-RETURN",
+          "campaignId": "CAM-RETURN",
+          "name": "Find your next program",
+          "status": "paused",
+          "creativeId": "CR-RETURN",
+          "results": 75,
+          "reach": null,
+          "impressions": 95000,
+          "clicks": 1300,
+          "ctr": 1.37,
+          "cpc": 1.19,
+          "cpm": 16.32,
+          "costPerResult": 20.67,
+          "amountSpent": 1550,
+          "frequency": null,
+          "deliveryStatus": "not_delivering",
+          "reviewStatus": "approved",
+          "reviewFeedback": ""
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "marketing-specialist",
+    "app_id": "google_docs_mock",
+    "action": "set_current",
+    "state_patch": {
+      "documents": {
+        "DOC-SEP-ACQ-IMPLEMENTATION": {
+          "id": "DOC-SEP-ACQ-IMPLEMENTATION",
+          "title": "September acquisition settings implementation report",
+          "content": "<p>Priya Nair, September 1, 2026, 11:20 America/Los_Angeles. Applied Mara's 11:00 approval DOC-SEP-ACQ-DECISION, communicated in MAIL-SEP-ACQ-APPROVAL.</p><table><tr><th>Campaign / ad set</th><th>Campaign control</th><th>Effective ad-set control</th><th>Ad</th></tr><tr><td>CAM-DECOR / AS-DECOR</td><td>Active, $65 daily, delivery active; retained</td><td>Active, $65 daily, delivery active; retained</td><td>AD-DECOR active; retained</td></tr><tr><td>CAM-START / AS-START</td><td>Paused, $0 daily, not_delivering</td><td>Paused, $0 daily, not_delivering</td><td>AD-START paused, not_delivering</td></tr><tr><td>CAM-RETURN / AS-RETURN</td><td>Paused, $0 daily, not_delivering</td><td>Paused, $0 daily, not_delivering</td><td>AD-RETURN paused, not_delivering</td></tr></table><p>All three have campaign budget optimization false and null lifetime budgets. Effective planned daily delivery budget is $65, counted once at ad-set level, not $130. Full 30-day September planning exposure is $1,950, within $6,000 authority; this is not a native monthly hard cap. Actual September spend has not been asserted. I own each-business-day checks of delivered/accrued spend and support workload, with reduction or pause before the approved allocation is exceeded and a recorded amendment required for expansion.</p><p>Historical spend/results, targeting, creatives and approval statuses remain intact. Spring and teamwear completed campaigns and the fall draft remain untouched. Account spendCap remains $36,000 and August balance $650; neither is a new September allocation or payment. No new production purchase is made. Four estimated additional marketing hours/week remain separate from eight protected catalog-maintenance hours, including the September 3 Devon review and outstanding Spanish sleeve wording.</p><p>SH-ACQ-COMPARISON and SH-ACQ-OPTIONS contain reproducible arithmetic and source references. Cost/result checks: 3,800/102 rounds to 37.25; 2,900/163 to 17.79; 1,550/75 to 20.67. Support checks: 288+126+200=614 weekly; broader option 576+252+400=1,228. Only Riverbend supplies the $2,520 observed new-relationship invoiced value. These checks establish arithmetic and record consistency; no browser runtime formula-evaluation or future platform-delivery result is claimed.</p><p>I incorporated Owen's post-decision MAIL-SEP-ACQ-ORDER-FEASIBILITY and DOC-SEP-ACQ-ORDER-FEASIBILITY: the selected services envelope is 3 hours/$126 with 11 discretionary hours remaining, distinct from 12 protected exception hours. Resource preparation will follow Imani's confirmed requirements and Owen's readiness checks. Kestrel's signature and size split and Oakline's central review remain prerequisites; media continuation does not make them ready. The $630 Northfork and $3,456 Summit commitments and Mesa's separate unposted claim remain existing services obligations. No extra proactive starter or visitor triage is allocated. If services reports pressure on protected work, I will bring a reduction/pause proposal to Mara rather than use the unspent authority to expand delivery.</p><p>September 15 review: assess starter documentary and business-fit progress and visitor identity separation before proposing any restart. Assess decorator outcomes beyond Riverbend and actual role hours before any expansion. Incomplete attribution remains a limitation.</p>",
+          "ownerId": "person-priya",
+          "starred": false,
+          "created": "2026-09-01T11:20:00-07:00",
+          "updated": "2026-09-01T11:20:00-07:00",
+          "sharedWith": [
+            {
+              "userId": "person-mara",
+              "permission": "viewer"
+            },
+            {
+              "userId": "person-imani",
+              "permission": "viewer"
+            },
+            {
+              "userId": "person-owen",
+              "permission": "viewer"
+            }
+          ],
+          "linkSharing": {
+            "enabled": false,
+            "permission": "viewer"
+          }
+        }
+      }
+    }
+  },
+  {
+    "worker_id": "marketing-specialist",
+    "app_id": "gmail_mock",
+    "action": "set_current",
+    "state_patch": {
+      "emails": [
+        {
+          "id": "MAIL-SEP-ACQ-IMPLEMENTED",
+          "threadId": "THREAD-SEP-ACQ-REVIEW",
+          "from": {
+            "name": "Priya Nair",
+            "email": "priya.nair@cedarlineapparel.com",
+            "avatar": ""
+          },
+          "to": [
+            {
+              "name": "Mara Ellison",
+              "email": "mara.ellison@cedarlineapparel.com"
+            },
+            {
+              "name": "Imani Brooks",
+              "email": "imani.brooks@cedarlineapparel.com"
+            },
+            {
+              "name": "Owen Delgado",
+              "email": "owen.delgado@cedarlineapparel.com"
+            }
+          ],
+          "cc": [],
+          "bcc": [],
+          "subject": "September approved advertising settings implemented",
+          "body": "<p>DOC-SEP-ACQ-IMPLEMENTATION records the controls applied after approval: CAM-DECOR/AS-DECOR active at $65 daily, CAM-START/AS-START paused at $0, CAM-RETURN/AS-RETURN paused at $0. AD-START and AD-RETURN are paused; AD-DECOR remains active. CBO is false, so effective budget is $65 counted once. Thirty-day planning exposure is $1,950, not a monthly hard cap or actual spend.</p><p>I included Owen's selected-work feasibility and retained readiness prerequisites in the report. Four additional marketing hours remain separate from eight protected catalog hours; no production purchase or billing change. I own business-day pacing checks and will use actual workload and distinct-relationship evidence at September 15 review.</p><p>Imani: paid pauses are effective in the records; preserve the six unresolved applications and Alder's existing request in your dated tasks. Mara: please compare this report with the approved controls and Imani's follow-up report for closeout.</p>",
+          "snippet": "DECOR $65 active; START and RETURN $0 paused; implementation report includes services feasibility.",
+          "timestamp": "2026-09-01T11:22:00-07:00",
+          "read": true,
+          "starred": false,
+          "important": true,
+          "labels": [
+            "lbl-acquisition"
+          ],
+          "category": "primary",
+          "folder": "sent",
+          "attachments": []
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "account-representative",
+    "app_id": "hubspot_mock",
+    "action": "set_current",
+    "state_patch": {
+      "tasks": [
+        {
+          "id": "TASK-SEP-ACQ-KESTREL",
+          "title": "Kestrel: obtain signed certificate and restaurant size/color split",
+          "type": "email",
+          "status": "not_started",
+          "priority": "high",
+          "dueDate": "2026-09-02T16:00:00-07:00",
+          "notes": "Talia: follow CL-SVC-019 / APP-605. Request signed full resale certificate for Gareth's review. Confirm quantities within Black and White and actual size split for the estimated 240 tees; $1,008 is preliminary, with larger-size additions unresolved. Do not promise account acceptance, credit, availability or order acceptance. Routine document chase uses protected application time; conditional commercial preparation uses approved additional support. Apply Owen's DOC-SEP-ACQ-ORDER-FEASIBILITY: send the actual packet and split before the allocated readiness and price/availability checks.",
+          "owner": "Imani Brooks",
+          "contactId": "CT-P001",
+          "companyId": "P001",
+          "dealId": "OPP-KESTREL-FIRST",
+          "createDate": "2026-09-01T11:30:00-07:00",
+          "completedDate": null
+        },
+        {
+          "id": "TASK-SEP-ACQ-OAKLINE",
+          "title": "Oakline: obtain central certificate-review status and update Hazel",
+          "type": "to_do",
+          "status": "not_started",
+          "priority": "high",
+          "dueDate": "2026-09-02T16:00:00-07:00",
+          "notes": "CL-SVC-021 / APP-607. Ask Gareth for review status and any remaining requirements; preserve submitted correspondence. Coordinate readiness details with Owen within his selected half-hour review-consolidation estimate and update Hazel with the actual response, or an honest pending-status update if no response. Embroidery business fit does not establish document acceptance or credit release.",
+          "owner": "Imani Brooks",
+          "contactId": "CT-P003",
+          "companyId": "P003",
+          "dealId": null,
+          "createDate": "2026-09-01T11:30:00-07:00",
+          "completedDate": null
+        },
+        {
+          "id": "TASK-SEP-ACQ-MOONRISE",
+          "title": "Moonrise: resume original application and request sales tax license",
+          "type": "email",
+          "status": "not_started",
+          "priority": "medium",
+          "dueDate": "2026-09-02T16:00:00-07:00",
+          "notes": "Use CL-SVC-020 and original APP-606 thread for Noel. INQ-612 is a repeat and is covered by this same task. Request readable sales tax license and check remaining packet with Gareth. CAM-START and CAM-RETURN pauses do not close the application. Individual commercial support can resume when documentary and business requirements are clear; campaign restart requires Mara's review of stronger distinct-business evidence. Priya's comparison and implemented pauses remove extra proactive triage, not this protected application follow-up.",
+          "owner": "Imani Brooks",
+          "contactId": "CT-P002",
+          "companyId": "P002",
+          "dealId": null,
+          "createDate": "2026-09-01T11:30:00-07:00",
+          "completedDate": null
+        },
+        {
+          "id": "TASK-SEP-ACQ-DOVETAIL",
+          "title": "Dovetail: clarify reseller business and missing documents",
+          "type": "email",
+          "status": "not_started",
+          "priority": "medium",
+          "dueDate": "2026-09-03T16:00:00-07:00",
+          "notes": "CL-SVC-022 / APP-608: ask Isaac who buys the goods, how decoration is handled and which selling channels he plans; request valid State Sales Tax License and applicable resale certificate plus complete legal-name details. Keep fit unresolved. Defer proactive assortment work until these facts support it; retain application help despite START pause. Reconsider campaign only after improved fit/readiness and distinct-customer evidence are reviewed by Mara.",
+          "owner": "Imani Brooks",
+          "contactId": "CT-P004",
+          "companyId": "P004",
+          "dealId": null,
+          "createDate": "2026-09-01T11:30:00-07:00",
+          "completedDate": null
+        },
+        {
+          "id": "TASK-SEP-ACQ-HILLCREST",
+          "title": "Hillcrest: route Marisol's school shirt request to a reseller resource",
+          "type": "email",
+          "status": "not_started",
+          "priority": "medium",
+          "dueDate": "2026-09-02T16:00:00-07:00",
+          "notes": "CL-SVC-023 / APP-609: 180 shirts for own-use fundraiser volunteers/students, no resale. Explain Cedarline supplies reseller businesses and offer the reseller resource route; clarify location and decoration/timing needs as useful for that referral. No direct wholesale quote or qualification. Reconsider wholesale support only if a distinct eligible reseller business purpose and required documents are established; school purchasing letter alone is insufficient.",
+          "owner": "Imani Brooks",
+          "contactId": "CT-P005",
+          "companyId": "P005",
+          "dealId": null,
+          "createDate": "2026-09-01T11:30:00-07:00",
+          "completedDate": null
+        },
+        {
+          "id": "TASK-SEP-ACQ-SLATE",
+          "title": "Slate Run: obtain trade-name explanation for central review",
+          "type": "email",
+          "status": "not_started",
+          "priority": "medium",
+          "dueDate": "2026-09-03T16:00:00-07:00",
+          "notes": "SVC-107 / APP-610: ask Felix for accountant's explanation of Slate Run Promotions versus Slate Run Promotional Services LLC and supporting papers. Keep August 27 reply linked and forward the full context to Gareth. No acceptance inferred from similar names. Preserve application work despite RETURN pause; resume commercial preparation when central response supports it. Campaign restart additionally needs distinct-new-customer evidence separated from repeats and existing customers.",
+          "owner": "Imani Brooks",
+          "contactId": "CT-P006",
+          "companyId": "P006",
+          "dealId": null,
+          "createDate": "2026-09-01T11:30:00-07:00",
+          "completedDate": null
+        },
+        {
+          "id": "TASK-SEP-ACQ-ALDER",
+          "title": "Alder: clarify Nora's catalog resource request within existing account",
+          "type": "email",
+          "status": "not_started",
+          "priority": "medium",
+          "dueDate": "2026-09-03T16:00:00-07:00",
+          "notes": "INQ-611 stays with A001 / CT-A001. Confirm styles, resource format and intended placement; ask Priya for approved resources within the existing support allocation. Keep product/media permissions intact. No new account, acquisition credit or incremental attribution for the earlier July purchase. RETURN pause affects paid delivery, not this customer obligation. MAIL-SEP-ACQ-IMPLEMENTED retains this support within the narrower scope.",
+          "owner": "Imani Brooks",
+          "contactId": "CT-A001",
+          "companyId": "A001",
+          "dealId": null,
+          "createDate": "2026-09-01T11:30:00-07:00",
+          "completedDate": null
+        }
+      ],
+      "notes": [
+        {
+          "id": "NOTE-SEP-ACQ-FOLLOW-KESTREL",
+          "body": "Mara approved decorator-only media in DOC-SEP-ACQ-DECISION. Imani owns TASK-SEP-ACQ-KESTREL due September 2, 2026, 16:00 Pacific: signed certificate for Gareth plus actual color/size split. Application remains incomplete; opportunity remains prospective. I used Owen's MAIL-SEP-ACQ-ORDERS and post-decision DOC-SEP-ACQ-ORDER-FEASIBILITY to retain the prerequisite before his conditional price/availability work. No customer response or acceptance has been recorded by this review.",
+          "associatedType": "ticket",
+          "associatedId": "CL-SVC-019",
+          "createdBy": "Imani Brooks",
+          "createDate": "2026-09-01T11:30:00-07:00"
+        },
+        {
+          "id": "NOTE-SEP-ACQ-FOLLOW-OAKLINE",
+          "body": "Imani owns TASK-SEP-ACQ-OAKLINE due September 2, 2026, 16:00 Pacific. Follow central certificate review and give Hazel a truthful status update. Oakline remains awaiting central review. Additional discovery is bounded by the approved support estimate; Owen's selected services plan allows review consolidation, not presumed acceptance.",
+          "associatedType": "ticket",
+          "associatedId": "CL-SVC-021",
+          "createdBy": "Imani Brooks",
+          "createDate": "2026-09-01T11:30:00-07:00"
+        },
+        {
+          "id": "NOTE-SEP-ACQ-FOLLOW-MOONRISE",
+          "body": "APP-606 and INQ-612 remain one Moonrise relationship. Imani owns TASK-SEP-ACQ-MOONRISE due September 2, 2026, 16:00 Pacific, requesting the missing license in the original thread and checking the remaining papers with Gareth. Applying Priya's MAIL-SEP-ACQ-COMPARISON and MAIL-SEP-ACQ-IMPLEMENTED, START/RETURN paid delivery and extra proactive triage are paused, but routine application support continues. Individual readiness and stronger distinct-customer evidence are prerequisites to reconsidering broader support; no duplicate account created.",
+          "associatedType": "ticket",
+          "associatedId": "CL-SVC-020",
+          "createdBy": "Imani Brooks",
+          "createDate": "2026-09-01T11:30:00-07:00"
+        },
+        {
+          "id": "NOTE-SEP-ACQ-FOLLOW-DOVETAIL",
+          "body": "Imani owns TASK-SEP-ACQ-DOVETAIL due September 3, 2026, 16:00 Pacific. Request decoration, buyers, selling channels and reseller papers. Defer proactive assortment work while fit is unclear; application help remains protected. Review support when the missing facts and central response arrive. START restart is a separate manager decision requiring improved distinct-business evidence.",
+          "associatedType": "ticket",
+          "associatedId": "CL-SVC-022",
+          "createdBy": "Imani Brooks",
+          "createDate": "2026-09-01T11:30:00-07:00"
+        },
+        {
+          "id": "NOTE-SEP-ACQ-FOLLOW-HILLCREST",
+          "body": "Imani owns TASK-SEP-ACQ-HILLCREST due September 2, 2026, 16:00 Pacific. Route Marisol's own-use 180-shirt inquiry to a reseller resource. Wholesale acquisition support is inappropriate for the recorded school purpose. Reconsider only with evidence of an eligible reseller business and required documents. Referral is planned, not falsely marked sent or completed.",
+          "associatedType": "ticket",
+          "associatedId": "CL-SVC-023",
+          "createdBy": "Imani Brooks",
+          "createDate": "2026-09-01T11:30:00-07:00"
+        },
+        {
+          "id": "NOTE-SEP-ACQ-FOLLOW-SLATE",
+          "body": "Imani owns TASK-SEP-ACQ-SLATE due September 3, 2026, 16:00 Pacific. Obtain Felix's trade-name explanation and send the packet and linked August 27 reply to Gareth. Keep documentary status unresolved. RETURN pause does not cancel the application; central clarification can reopen commercial preparation, while any media restart requires evidence separating new applicants from repeat and existing relationships.",
+          "associatedType": "ticket",
+          "associatedId": "SVC-107",
+          "createdBy": "Imani Brooks",
+          "createDate": "2026-09-01T11:30:00-07:00"
+        },
+        {
+          "id": "NOTE-SEP-ACQ-FOLLOW-ALDER",
+          "body": "Imani owns TASK-SEP-ACQ-ALDER due September 3, 2026, 16:00 Pacific. INQ-611 is an existing-customer resource request, supported despite RETURN pause. Clarify Nora's needs and intended use before requesting approved resources from Priya. Earlier purchases do not become new campaign acquisitions. Existing account and contact retained.",
+          "associatedType": "contact",
+          "associatedId": "CT-A001",
+          "createdBy": "Imani Brooks",
+          "createDate": "2026-09-01T11:30:00-07:00"
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "account-representative",
+    "app_id": "gmail_mock",
+    "action": "set_current",
+    "state_patch": {
+      "emails": [
+        {
+          "id": "MAIL-SEP-ACQ-FOLLOWUPS",
+          "threadId": "THREAD-SEP-ACQ-REVIEW",
+          "from": {
+            "name": "Imani Brooks",
+            "email": "imani.brooks@cedarlineapparel.com",
+            "avatar": ""
+          },
+          "to": [
+            {
+              "name": "Mara Ellison",
+              "email": "mara.ellison@cedarlineapparel.com"
+            },
+            {
+              "name": "Owen Delgado",
+              "email": "owen.delgado@cedarlineapparel.com"
+            },
+            {
+              "name": "Priya Nair",
+              "email": "priya.nair@cedarlineapparel.com"
+            }
+          ],
+          "cc": [],
+          "bcc": [],
+          "subject": "September customer follow-ups recorded against the approved scope",
+          "body": "<p>I used the manager decision, Priya's comparison and implementation report, and Owen's order/readiness and selected-work feasibility reports. Seven open tasks are entered with associated notes and Imani as owner.</p><p>TASK-SEP-ACQ-KESTREL, TASK-SEP-ACQ-OAKLINE, TASK-SEP-ACQ-MOONRISE and TASK-SEP-ACQ-HILLCREST are due September 2, 2026, 16:00 Pacific. TASK-SEP-ACQ-DOVETAIL, TASK-SEP-ACQ-SLATE and TASK-SEP-ACQ-ALDER are due September 3, 2026, 16:00 Pacific.</p><p>Six unresolved applications are preserved; one Moonrise task covers APP-606 and INQ-612. Alder remains existing. Tasks request missing information, central status or the school referral, and do not claim replies, acceptance or completion. Kestrel's actual packet/split precedes Owen's conditional checks; Oakline remains pending Gareth. Routine application work stays protected; conditional development uses the six-hour additional envelope. Existing service tickets and the September 3 uniform review remain intact.</p><p>START and RETURN restarts require the recorded business-fit, documentary and distinct-relationship evidence, while individual applications can progress as their information arrives. Owen and Priya: use the actual customer inputs when received, not the current opportunity estimates, for the planned services and resource work. Mara: the task record matches your requested dates and scope.</p>",
+          "snippet": "Seven dated open tasks preserve all six applications, Alder's request and the single Moonrise relationship.",
+          "timestamp": "2026-09-01T11:35:00-07:00",
+          "read": true,
+          "starred": false,
+          "important": true,
+          "labels": [
+            "lbl-acquisition",
+            "lbl-applications"
+          ],
+          "category": "primary",
+          "folder": "sent",
+          "attachments": []
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "sales-supervisor",
+    "app_id": "google_docs_mock",
+    "action": "set_current",
+    "state_patch": {
+      "documents": {
+        "DOC-SEP-ACQ-CLOSEOUT": {
+          "id": "DOC-SEP-ACQ-CLOSEOUT",
+          "title": "September acquisition decision implementation accepted",
+          "content": "<p>Mara Ellison, September 1, 2026, 11:45 America/Los_Angeles. I accept the completed digital implementation of DOC-SEP-ACQ-DECISION based on Priya's DOC-SEP-ACQ-IMPLEMENTATION and MAIL-SEP-ACQ-IMPLEMENTED, Imani's MAIL-SEP-ACQ-FOLLOWUPS, and Owen's DOC-SEP-ACQ-ORDER-FEASIBILITY and MAIL-SEP-ACQ-ORDER-FEASIBILITY. This accepts the allocation records, not future customer outcomes.</p><p>Campaign and effective ad-set settings agree: DECOR active $65 daily, START paused $0 and RETURN paused $0, with START/RETURN ads paused. DECOR's retained setting is intentional. CBO is false, so effective total is $65/day counted once. Full-month planning exposure is $1,950, with $4,050 unused authority; no hard monthly cap or actual September spend is claimed. Priya owns daily pacing checks and the September 15 review.</p><p>Checked comparison: July–August spending totals $8,250 and platform results 340; campaign divisions produce $37.25/$17.79/$20.67. The nine-record reviewed set has eight identities and seven first applications, one of which is an end user. Riverbend's single $2,520 invoiced purchase is the concentrated observed result; Alder's existing purchase and Moonrise's repeat are excluded from new acquisition. Owen's credit and unallocated-order distinctions remain in SH-ACQ-ORDER-CHECK. Different ledger coverage and incomplete attribution remain explicit.</p><p>The accepted support estimate is 6/3/4 additional weekly role hours, costing $614, within separate 18/14/16 discretionary allowances. Protected application/exception/catalog blocks 10/12/8 remain. Both evaluated options add no production purchases. Existing service, catalog, vendor and calendar obligations are preserved.</p><p>Owen's substantive post-decision check uses Priya's actual A/B comparison and the approved scope: selected services cost is 3×42=$126/week versus 6×42=$252 for the broader scope, leaving 11 versus 8 discretionary hours. He divides the selected effort into Kestrel/Oakline readiness handoffs and conditional Kestrel/Riverbend commercial checks. I accept that workload plan because it retains the separate exception block and does not presume missing customer inputs. Northfork's $630 and Summit's $3,456 accepted unallocated commitments remain protected services work; Mesa's $633.60 unpaid invoice and $79.20 unposted claim remain separate. Acquisition work must be reduced or brought back for an explicit tradeoff if actual effort threatens those commitments. Unused discretionary capacity does not authorize expanded media or new work automatically.</p><p>Customer records checked against the decision: TASK-SEP-ACQ-KESTREL, TASK-SEP-ACQ-OAKLINE, TASK-SEP-ACQ-MOONRISE and TASK-SEP-ACQ-HILLCREST are due September 2, 16:00 Pacific; TASK-SEP-ACQ-DOVETAIL, TASK-SEP-ACQ-SLATE and TASK-SEP-ACQ-ALDER are due September 3, 16:00 Pacific. Imani owns all seven, each with an associated note and specific next action. The six unresolved applications remain open; the single Moonrise follow-up serves both intakes. No customer response, credit release, order fulfillment, payment or referral completion has been recorded by this work.</p><p>On September 15, consider START only with improved business-fit and documentary evidence and stronger distinct-customer results; consider RETURN only with separate reporting for new, existing and repeated relationships and progress on Slate Run's central review. Customer support can resume as prerequisites arrive without automatically restarting ads. Review DECOR for evidence beyond Riverbend and pause or reduce if support threatens existing commitments. Repeat the allocation review September 30. Any increased scope requires recorded approval.</p>",
+          "ownerId": "person-mara",
+          "starred": false,
+          "created": "2026-09-01T11:45:00-07:00",
+          "updated": "2026-09-01T11:45:00-07:00",
+          "sharedWith": [
+            {
+              "userId": "person-imani",
+              "permission": "viewer"
+            },
+            {
+              "userId": "person-owen",
+              "permission": "viewer"
+            },
+            {
+              "userId": "person-priya",
+              "permission": "viewer"
+            }
+          ],
+          "linkSharing": {
+            "enabled": false,
+            "permission": "viewer"
+          }
+        }
+      }
+    }
+  }
+]

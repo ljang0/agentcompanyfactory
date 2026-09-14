@@ -1,0 +1,25 @@
+{
+  "products": [
+    {"id": "p1", "title": "Pemberton Hollow Ceramic Pour-Over Coffee Set", "price": 42.5, "originalPrice": 55.0, "rating": 4.6, "reviewCount": 214, "image": "https://picsum.photos/seed/pemberton1/400/400", "images": ["https://picsum.photos/seed/pemberton1/400/400", "https://picsum.photos/seed/pemberton1b/400/400"], "description": "Hand-glazed stoneware dripper and carafe for slow-brewed coffee.", "bulletPoints": ["Stoneware dripper fits #2 filters", "600 ml carafe", "Dishwasher safe", "Made in small batches"], "specs": {"Material": "Stoneware", "Capacity": "600 ml", "Color": "Slate"}, "category": "Home & Kitchen", "brand": "Pemberton Hollow", "prime": true, "inStock": true, "stockCount": 8, "seller": "Pemberton Hollow", "badges": ["Best Seller"], "createdAt": "2026-03-12T10:00:00Z"},
+    {"id": "p2", "title": "Northwind Trail 20L Daypack", "price": 68.0, "originalPrice": null, "rating": 4.4, "reviewCount": 97, "image": "https://picsum.photos/seed/northwind2/400/400", "images": ["https://picsum.photos/seed/northwind2/400/400"], "description": "Lightweight recycled-nylon daypack with laptop sleeve.", "bulletPoints": ["20 liter capacity", "Padded 15-inch laptop sleeve", "Water-resistant shell"], "specs": {"Volume": "20 L", "Weight": "540 g"}, "category": "Fashion", "brand": "Northwind", "prime": true, "inStock": true, "stockCount": null, "seller": "Amazon.com", "badges": [], "createdAt": "2026-05-02T10:00:00Z"},
+    {"id": "p3", "title": "Field Guide to Urban Birds of the Great Lakes", "price": 18.99, "originalPrice": 24.99, "rating": 4.8, "reviewCount": 41, "image": "https://picsum.photos/seed/birds3/400/400", "images": ["https://picsum.photos/seed/birds3/400/400"], "description": "Illustrated guide covering 180 species found in Great Lakes cities.", "bulletPoints": ["180 species", "Full-color plates", "Paperback, 312 pages"], "specs": {"Format": "Paperback", "Pages": "312"}, "category": "Books", "brand": "Lakeshore Press", "prime": false, "inStock": true, "stockCount": null, "seller": "Lakeshore Press", "badges": ["Amazon's Choice"], "createdAt": "2026-01-20T10:00:00Z"}
+  ],
+  "user": {
+    "id": "u1", "name": "Tomas Okafor", "email": "tomas.okafor@mail.example",
+    "address": {"id": "addr1", "fullName": "Tomas Okafor", "street": "418 Birchwood Ave", "city": "Duluth", "state": "MN", "zip": "55802", "country": "United States", "phone": "555-0188", "isDefault": true},
+    "addresses": [{"id": "addr1", "fullName": "Tomas Okafor", "street": "418 Birchwood Ave", "city": "Duluth", "state": "MN", "zip": "55802", "country": "United States", "phone": "555-0188", "isDefault": true}],
+    "paymentMethod": {"id": "pm1", "last4": "7731", "brand": "Mastercard", "expiry": "08/28", "isDefault": true},
+    "paymentMethods": [{"id": "pm1", "last4": "7731", "brand": "Mastercard", "expiry": "08/28", "isDefault": true}]
+  },
+  "cart": [{"productId": "p2", "quantity": 1}],
+  "wishlist": ["p3"],
+  "savedForLater": [],
+  "orders": [
+    {"id": "ord-seed-1", "date": "2026-08-21T14:12:00Z", "status": "Delivered", "total": 42.5, "items": [{"productId": "p1", "quantity": 1}], "shippingAddress": {"id": "addr1", "fullName": "Tomas Okafor", "street": "418 Birchwood Ave", "city": "Duluth", "state": "MN", "zip": "55802", "country": "United States", "phone": "555-0188", "isDefault": true}, "paymentMethod": {"id": "pm1", "last4": "7731", "brand": "Mastercard", "expiry": "08/28", "isDefault": true}, "trackingNumber": "1Z884RT20312", "estimatedDelivery": null}
+  ],
+  "reviews": [
+    {"id": "rev-1", "productId": "p1", "userId": "u1", "userName": "Tomas O.", "rating": 5, "title": "Makes a great morning cup", "content": "Even extraction and the carafe pours cleanly.", "date": "2026-08-30T09:00:00Z", "helpful": 6, "verifiedPurchase": true}
+  ],
+  "recentSearches": ["pour over kettle", "daypack"],
+  "recentlyViewed": ["p1", "p3"]
+}

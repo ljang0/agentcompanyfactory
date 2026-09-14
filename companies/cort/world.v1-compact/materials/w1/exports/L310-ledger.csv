@@ -1,0 +1,4 @@
+invoice_id,lease_version,period_start,period_end,amount_usd,payment_id,paid_usd,balance_usd
+INV310-0615,L310-v1,2026-06-15,2026-07-14,255,PAY310-0615,255,0
+INV310-0715,L310-v1,2026-07-15,2026-08-14,255,PAY310-0715,255,0
+INV310-0815,L310-v2,2026-08-15,2026-09-14,180,PAY310-0815,180,0

@@ -1,0 +1,108 @@
+{
+  "skill": "company-plain-brief",
+  "provenance": {
+    "sources": [
+      {
+        "path": "companies/ust/company.json",
+        "sha256": "e7234590d4d6163ec2aeb69b830a3cf39ff8ac681b510781438df3e336c06eea"
+      },
+      {
+        "path": "companies/ust/tasks/ust_shared-cost-allocation/workflow.json",
+        "sha256": "802fa4f4b70a5d371c5cb964c720b2b98a0ad2365b3edd53f372804d6d889033"
+      },
+      {
+        "path": "data/sources/a30873dedfc9d0eccbd961c7a056eec85fbb37c3d082a63295efbbc6952879fb.json",
+        "sha256": "cd50e2acbdb2b81a50d88c53c6641c2d4860238757d2c5d8fec950f1552a3f51"
+      },
+      {
+        "path": "data/sources/a30873dedfc9d0eccbd961c7a056eec85fbb37c3d082a63295efbbc6952879fb.json",
+        "sha256": "cd50e2acbdb2b81a50d88c53c6641c2d4860238757d2c5d8fec950f1552a3f51"
+      },
+      {
+        "path": "data/sources/7f0013ceabf6c3438c3dba9482fe8fed173f996dc6d0680d7ebbf78bf62bdb93.json",
+        "sha256": "36e6aa7dd9b647f5461a56ba959ae4f508248ebf6e1c87a127658cf70dcb3320"
+      },
+      {
+        "path": "data/sources/7f0013ceabf6c3438c3dba9482fe8fed173f996dc6d0680d7ebbf78bf62bdb93.json",
+        "sha256": "36e6aa7dd9b647f5461a56ba959ae4f508248ebf6e1c87a127658cf70dcb3320"
+      },
+      {
+        "path": "data/sources/7f0013ceabf6c3438c3dba9482fe8fed173f996dc6d0680d7ebbf78bf62bdb93.json",
+        "sha256": "36e6aa7dd9b647f5461a56ba959ae4f508248ebf6e1c87a127658cf70dcb3320"
+      },
+      {
+        "path": "data/sources/ffd46df4f50e41f0ee4e306f2a363a7c2b39869a34697d4d460dfbc4533ed03b.json",
+        "sha256": "8c17c1055c2bcea0cf0082be3b1dcb4547f474404d115393aacb0dfc5cd07567"
+      },
+      {
+        "path": "data/sources/ffd46df4f50e41f0ee4e306f2a363a7c2b39869a34697d4d460dfbc4533ed03b.json",
+        "sha256": "8c17c1055c2bcea0cf0082be3b1dcb4547f474404d115393aacb0dfc5cd07567"
+      }
+    ],
+    "changes": "Trimmed to one task and a few native records. Calibration tasks are explicitly narrowed exercises derived from that task; their answers and planted defects are hand-authored test data, not accepted production outcomes."
+  },
+  "input": {
+    "company": {
+      "name": "Seacliff Technology Advisors",
+      "sector": "Professional, Scientific, and Technical Services",
+      "operations": "UST provides technology transformation services. Its captured FinOps case studies describe resource ownership mapping, pricing recommendations, cloud budgets and forecasts, and coordinated optimization. FinOps means cloud financial management connecting financial and technical decisions. Seacliff Technology Advisors is a fictional analogue modeling a bounded US advisory unit. Its three-person pod serves two continuing US enterprise technology clients whose finance and engineering organizations consume its recommendations. Synthetic scale: 16 cloud accounts, approximately 45 application services and $800,000 combined monthly cloud expenditure. Ordinary work includes weekly consumption reviews, investigation of six to ten new cost findings per week, two monthly client reporting packages, allocation maintenance, quarterly commitment assessments and follow-up on previously implemented optimizations. Eighteen months of billing and decision history establish continuing relationships beyond individual episodes. Work products include reproducible financial models, ownership mappings, technical assessments, savings reconciliations and actionable recommendations. The manager integrates financial and technical findings into internal advice; customers retain purchasing, production-change and accounting authority. This pod does not represent UST's entire business or provide round-the-clock production support."
+    },
+    "task": {
+      "id": "ust_shared-cost-allocation",
+      "title": "Recommend Alder Systems’ shared cloud cost allocation",
+      "brief": "Using records available, integrate evidence and reconcile the governing disposition. Alder Systems’ current draft puts the shared account’s costs on the platform team. Check August 2026 billing and engineering records against the service catalog’s distinctions between customer usage, reserved capacity and centrally funded recovery services. Compare supported allocation methods and recommend how each business unit should forecast these costs for the September 11 finance review. Apply the published allocation policy, check that workbook totals match the supporting records, and get the team’s acceptance of the policy recommendation. Write specific ownership follow-up records and put the most urgent items first in the ownership incident review queue. Write a customer explanation linked to the accepted supporting records, and leave it unsent. Coordinate through shared workplace apps, making clear who produced each finding and what the manager decided. Leave accounting postings and production changes to the customer.",
+      "deliverables": [
+        "Shared-cost workbook with totals checked against supporting records, alternative methods, sensitivity analysis and revised business-unit forecasts",
+        "Allocation policy accepted by the team, with reasons for choosing the method",
+        "Ownership and recovery follow-up records with clear actions, plus an incident review view ordered by urgency",
+        "Unsent customer explanation linked to the accepted supporting records"
+      ],
+      "success_criteria": [
+        {
+          "requirement": "Apply the active service catalog funding rules to every cost in scope.",
+          "observable": "All six pools and originating adjustments reconcile to the invoice. Dedicated costs follow beneficiaries, protected recovery remains central, and classifications cite applicable catalog, service and test evidence.",
+          "method": "artifact"
+        },
+        {
+          "requirement": "Choose an allocation method supported by the billing and engineering findings.",
+          "observable": "The model compares at least two materially different compliant methods, evaluates the published demand sensitivity and explains how driver quality and capacity commitments influenced the manager’s recommendation.",
+          "method": "judgment"
+        },
+        {
+          "requirement": "Use the chosen method in forecasts and ownership instructions.",
+          "observable": "Business-unit forecasts conserve the full client total and agree with the accepted allocation and beneficiaries. ServiceNow instructions preserve recovery restrictions, identify responsible follow-up roles and state evidence needed for unresolved work.",
+          "method": "artifact"
+        },
+        {
+          "requirement": "Restore complete incident coverage and leave a usable review queue.",
+          "observable": "The assessment covers all 12 focal incidents and explains INC0012101’s effect. The final incident view uses currentSortColumn='priority' and currentSortDirection='asc', with no filter excluding relevant unresolved incidents.",
+          "method": "state"
+        },
+        {
+          "requirement": "Bring the analyst’s and engineer’s work that affects the outcome into the manager’s advice, keeping decisions within the team’s advisory role.",
+          "observable": "Attributable manager planning and delegation, financial and engineering reports, and management integration are present through permitted workplace apps. Chat or email may link detailed documents or ServiceNow notes; no exclusive Slack location is required. The accepted package resolves substantive findings and preserves pending customer implementation and accounting authority.",
+          "method": "judgment"
+        }
+      ]
+    }
+  },
+  "double": {
+    "workflow_id": "ust_shared-cost-allocation",
+    "title": "Recommend Alder Systems’ shared cloud cost allocation",
+    "brief": "Alder Systems’ current draft puts the shared account’s costs on the platform team. Check August 2026 billing and engineering records against the service catalog’s distinctions between customer usage, reserved capacity and centrally funded recovery services. Compare supported allocation methods and recommend how each business unit should forecast these costs for the September 11 finance review. Apply the published allocation policy, check that workbook totals match the supporting records, and get the team’s acceptance of the policy recommendation. Write specific ownership follow-up records and put the most urgent items first in the ownership incident review queue. Write a customer explanation linked to the accepted supporting records, and leave it unsent. Coordinate through shared workplace apps, making clear who produced each finding and what the manager decided. Leave accounting postings and production changes to the customer.",
+    "deliverables": [
+      "Shared-cost workbook with totals checked against supporting records, alternative methods, sensitivity analysis and revised business-unit forecasts",
+      "Allocation policy accepted by the team, with reasons for choosing the method",
+      "Ownership and recovery follow-up records with clear actions, plus an incident review view ordered by urgency",
+      "Unsent customer explanation linked to the accepted supporting records"
+    ],
+    "requirements": [
+      "Apply the active service catalog funding rules to every cost in scope.",
+      "Choose an allocation method supported by the billing and engineering findings.",
+      "Use the chosen method in forecasts and ownership instructions.",
+      "Restore complete incident coverage and leave a usable review queue.",
+      "Bring the analyst’s and engineer’s work that affects the outcome into the manager’s advice, keeping decisions within the team’s advisory role."
+    ]
+  },
+  "oracle": {}
+}

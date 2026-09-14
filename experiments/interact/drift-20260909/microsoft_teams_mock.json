@@ -1,0 +1,224 @@
+{
+  "app_id": "microsoft_teams_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "calls",
+    "channels",
+    "chats",
+    "currentUser",
+    "files",
+    "meetings",
+    "messages",
+    "notifications",
+    "settings",
+    "teams",
+    "ui",
+    "users"
+  ],
+  "observed": [
+    "calls",
+    "channels",
+    "chats",
+    "currentUser",
+    "files",
+    "meetings",
+    "messages",
+    "notifications",
+    "settings",
+    "teams",
+    "ui",
+    "users"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 15,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "userId",
+        "displayName",
+        "firstName",
+        "lastName",
+        "email",
+        "avatar",
+        "jobTitle",
+        "department",
+        "location",
+        "phone",
+        "presence",
+        "statusMessage",
+        "statusEmoji",
+        "outOfOffice",
+        "timezone"
+      ],
+      "keyed_by_id": false
+    },
+    "teams": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "teamId",
+        "displayName",
+        "description",
+        "avatar",
+        "avatarColor",
+        "avatarInitials",
+        "visibility",
+        "isArchived",
+        "isFavorite",
+        "createdDateTime",
+        "members",
+        "owners",
+        "channels",
+        "settings"
+      ],
+      "keyed_by_id": false
+    },
+    "channels": {
+      "kind": "array",
+      "count": 14,
+      "record_fields": [
+        "channelId",
+        "teamId",
+        "displayName",
+        "description",
+        "membershipType",
+        "isFavoriteByDefault",
+        "isPinned",
+        "isMuted",
+        "unreadCount",
+        "lastMessagePreview",
+        "lastMessageTimestamp",
+        "createdDateTime",
+        "members",
+        "tabs",
+        "pinnedMessages"
+      ],
+      "keyed_by_id": false
+    },
+    "chats": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "chatId",
+        "chatType",
+        "topic",
+        "participants",
+        "isPinned",
+        "isMuted",
+        "isHidden",
+        "unreadCount",
+        "lastMessagePreview",
+        "lastMessageSenderId",
+        "lastMessageTimestamp",
+        "createdDateTime",
+        "pinnedMessages",
+        "tabs"
+      ],
+      "keyed_by_id": false
+    },
+    "messages": {
+      "kind": "object",
+      "count": 22,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "meetings": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "meetingId",
+        "subject",
+        "startDateTime",
+        "endDateTime",
+        "isAllDay",
+        "location",
+        "organizer",
+        "participants",
+        "isRecurring",
+        "recurrencePattern",
+        "chatId",
+        "channelId",
+        "teamId",
+        "bodyPreview",
+        "joinUrl",
+        "status"
+      ],
+      "keyed_by_id": false
+    },
+    "calls": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "callId",
+        "callType",
+        "direction",
+        "participants",
+        "startDateTime",
+        "endDateTime",
+        "duration",
+        "status",
+        "isVideoCall"
+      ],
+      "keyed_by_id": false
+    },
+    "files": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "fileId",
+        "name",
+        "contentType",
+        "size",
+        "containerId",
+        "containerType",
+        "sharedBy",
+        "sharedDateTime",
+        "lastModifiedDateTime",
+        "lastModifiedBy",
+        "thumbnailUrl",
+        "downloadUrl"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "notificationId",
+        "type",
+        "actorId",
+        "targetMessageId",
+        "containerId",
+        "containerType",
+        "containerName",
+        "teamName",
+        "previewText",
+        "timestamp",
+        "isRead",
+        "isActionable"
+      ],
+      "keyed_by_id": false
+    },
+    "settings": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "ui": {
+      "kind": "object",
+      "count": 9,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

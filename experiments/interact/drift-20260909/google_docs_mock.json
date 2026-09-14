@@ -1,0 +1,77 @@
+{
+  "app_id": "google_docs_mock",
+  "source": "localStorage:google_docs_mock_initial_drift",
+  "documented": [
+    "comments",
+    "currentUser",
+    "documents",
+    "ui",
+    "users"
+  ],
+  "observed": [
+    "comments",
+    "currentUser",
+    "documents",
+    "ui",
+    "users"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "email",
+        "avatar"
+      ],
+      "keyed_by_id": false
+    },
+    "documents": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "title",
+        "content",
+        "ownerId",
+        "starred",
+        "created",
+        "updated",
+        "sharedWith",
+        "linkSharing"
+      ],
+      "keyed_by_id": true
+    },
+    "comments": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "docId",
+        "userId",
+        "content",
+        "resolved",
+        "created",
+        "quotedText",
+        "replies"
+      ],
+      "keyed_by_id": false
+    },
+    "ui": {
+      "kind": "object",
+      "count": 9,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "app_id": "mixpanel_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "annotations",
+    "boards",
+    "cohorts",
+    "currentUser",
+    "events",
+    "lexicon",
+    "project",
+    "reports",
+    "sessionReplays",
+    "settings",
+    "userProfiles"
+  ],
+  "observed": [
+    "annotations",
+    "boards",
+    "cohorts",
+    "currentUser",
+    "events",
+    "lexicon",
+    "project",
+    "recentlyViewed",
+    "reports",
+    "settings",
+    "userProfiles"
+  ],
+  "undocumented_so_unseedable": [
+    "recentlyViewed"
+  ],
+  "documented_but_app_keeps_none": [
+    "sessionReplays"
+  ],
+  "agrees": false,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "project": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "events": {
+      "kind": "array",
+      "count": 1005,
+      "record_fields": [
+        "id",
+        "eventName",
+        "distinctId",
+        "time",
+        "city",
+        "country",
+        "region",
+        "operatingSystem",
+        "browser",
+        "browserVersion",
+        "currentUrl",
+        "deviceId",
+        "properties"
+      ],
+      "keyed_by_id": false
+    },
+    "userProfiles": {
+      "kind": "array",
+      "count": 25,
+      "record_fields": [
+        "id",
+        "name",
+        "email",
+        "distinctId",
+        "avatar",
+        "countryCode",
+        "region",
+        "city",
+        "lastSeen",
+        "createdAt",
+        "properties"
+      ],
+      "keyed_by_id": false
+    },
+    "boards": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "isPinned",
+        "isFavorite",
+        "isStarter",
+        "createdBy",
+        "createdAt",
+        "updatedAt",
+        "items"
+      ],
+      "keyed_by_id": false
+    },
+    "reports": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "boardId",
+        "createdBy",
+        "createdAt",
+        "updatedAt",
+        "dateRange",
+        "granularity",
+        "chartType",
+        "metrics",
+        "filters",
+        "breakdowns",
+        "chartData",
+        "tableData"
+      ],
+      "keyed_by_id": false
+    },
+    "lexicon": {
+      "kind": "array",
+      "count": 30,
+      "record_fields": [
+        "id",
+        "category",
+        "eventName",
+        "displayName",
+        "description",
+        "thirtyDayQueries",
+        "status",
+        "tags",
+        "type"
+      ],
+      "keyed_by_id": false
+    },
+    "cohorts": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "userCount",
+        "createdAt",
+        "criteria"
+      ],
+      "keyed_by_id": false
+    },
+    "annotations": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "date",
+        "text",
+        "createdBy"
+      ],
+      "keyed_by_id": false
+    },
+    "recentlyViewed": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "type",
+        "id",
+        "name",
+        "viewedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "settings": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": [
+        "name",
+        "plan",
+        "monthlyEvents",
+        "monthlyReplays"
+      ],
+      "keyed_by_id": false
+    }
+  }
+}

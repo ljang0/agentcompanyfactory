@@ -1,0 +1,66 @@
+{
+  "currentUser": { "id": "user_1", "username": "harrowgate_admin", "displayName": "Winifred Okafor", "email": "winifred@harrowgate-pantry.example", "role": "administrator", "avatarUrl": "https://placehold.co/32x32/1d2327/fff?text=WO" },
+  "store": {
+    "id": "store_1", "name": "Harrowgate Pantry", "tagline": "Small-batch preserves and honey", "email": "orders@harrowgate-pantry.example",
+    "address": { "address1": "18 Mill Lane", "address2": "", "city": "Harrogate", "state": "North Yorkshire", "country": "GB", "postcode": "HG1 2AA" },
+    "currency": "GBP", "currencySymbol": "£", "currencyPosition": "left", "thousandSeparator": ",", "decimalSeparator": ".", "decimals": 2,
+    "weightUnit": "kg", "dimensionUnit": "cm", "enableTax": true, "enableCoupons": true, "enableReviews": true, "timezone": "Europe/London", "dateFormat": "d/m/Y",
+    "sellingLocation": "all", "shippingLocation": "all", "defaultCustomerLocation": "base"
+  },
+  "products": [
+    { "id": "prod_1", "name": "Harrowgate Heather Honey 500g", "slug": "harrowgate-heather-honey-500g", "type": "simple", "status": "publish", "featured": true, "catalogVisibility": "visible", "description": "Raw heather honey from the North York Moors.", "shortDescription": "Raw moorland honey", "sku": "HP-HON-500", "price": "9.50", "regularPrice": "9.50", "salePrice": "", "onSale": false, "taxStatus": "taxable", "taxClass": "", "manageStock": true, "stockQuantity": 84, "stockStatus": "instock", "weight": "0.7", "dimensions": { "length": "8", "width": "8", "height": "10" }, "categories": [ { "id": "cat_1", "name": "Honey" } ], "tags": [ { "id": "tag_1", "name": "raw" } ], "images": [ { "id": "img_1", "src": "https://placehold.co/300x300?text=Honey", "alt": "Heather honey jar" } ], "attributes": [], "variations": [], "reviewCount": 1, "averageRating": "5.00", "totalSales": 142, "dateCreated": "2026-03-02T10:00:00.000Z", "dateModified": "2026-09-01T09:00:00.000Z" },
+    { "id": "prod_2", "name": "Damson & Sloe Jam 340g", "slug": "damson-sloe-jam-340g", "type": "simple", "status": "publish", "featured": false, "catalogVisibility": "visible", "description": "Seasonal hedgerow jam.", "shortDescription": "Hedgerow jam", "sku": "HP-JAM-340", "price": "5.25", "regularPrice": "6.00", "salePrice": "5.25", "onSale": true, "taxStatus": "taxable", "taxClass": "", "manageStock": true, "stockQuantity": 37, "stockStatus": "instock", "weight": "0.5", "dimensions": { "length": "7", "width": "7", "height": "9" }, "categories": [ { "id": "cat_2", "name": "Preserves" } ], "tags": [ { "id": "tag_2", "name": "seasonal" } ], "images": [], "attributes": [], "variations": [], "reviewCount": 0, "averageRating": "0", "totalSales": 58, "dateCreated": "2026-06-10T10:00:00.000Z", "dateModified": "2026-08-28T09:00:00.000Z" }
+  ],
+  "categories": [
+    { "id": "cat_1", "name": "Honey", "slug": "honey", "parent": null, "description": "", "count": 1 },
+    { "id": "cat_2", "name": "Preserves", "slug": "preserves", "parent": null, "description": "", "count": 1 }
+  ],
+  "tags": [
+    { "id": "tag_1", "name": "raw", "slug": "raw", "count": 1 },
+    { "id": "tag_2", "name": "seasonal", "slug": "seasonal", "count": 1 }
+  ],
+  "orders": [
+    {
+      "id": "order_1", "number": "1041", "status": "processing", "dateCreated": "2026-09-05T14:12:00.000Z", "dateModified": "2026-09-05T14:15:00.000Z", "datePaid": "2026-09-05T14:15:00.000Z", "dateCompleted": null, "customerId": "cust_1",
+      "billing": { "firstName": "Alistair", "lastName": "Penhaligon", "company": "", "address1": "4 Bramble Close", "address2": "", "city": "York", "state": "North Yorkshire", "postcode": "YO1 7HH", "country": "GB", "email": "alistair.penhaligon@mail.example", "phone": "+44 7700 900123" },
+      "shipping": { "firstName": "Alistair", "lastName": "Penhaligon", "company": "", "address1": "4 Bramble Close", "address2": "", "city": "York", "state": "North Yorkshire", "postcode": "YO1 7HH", "country": "GB" },
+      "lineItems": [ { "id": "li_1", "productId": "prod_1", "name": "Harrowgate Heather Honey 500g", "sku": "HP-HON-500", "price": "9.50", "quantity": 2, "total": "19.00" } ],
+      "subtotal": "19.00", "discountTotal": "0.00", "shippingTotal": "3.95", "totalTax": "0.00", "total": "22.95", "paymentMethod": "stripe", "paymentMethodTitle": "Credit Card (Stripe)", "customerNote": "Gift, please no invoice in the box", "shippingLines": [ { "id": "sl_1", "methodId": "flat_rate", "methodTitle": "Standard Delivery", "total": "3.95" } ],
+      "orderNotes": [ { "id": "on_1", "content": "Payment received via Stripe.", "dateCreated": "2026-09-05T14:15:00.000Z", "isCustomerNote": false, "addedBy": "system" } ]
+    }
+  ],
+  "customers": [
+    { "id": "cust_1", "firstName": "Alistair", "lastName": "Penhaligon", "email": "alistair.penhaligon@mail.example", "phone": "+44 7700 900123", "avatarUrl": "", "dateCreated": "2026-05-14T09:00:00.000Z", "ordersCount": 3, "totalSpent": "61.40", "billing": { "firstName": "Alistair", "lastName": "Penhaligon", "company": "", "address1": "4 Bramble Close", "address2": "", "city": "York", "state": "North Yorkshire", "postcode": "YO1 7HH", "country": "GB", "email": "alistair.penhaligon@mail.example", "phone": "+44 7700 900123" }, "shipping": { "firstName": "Alistair", "lastName": "Penhaligon", "company": "", "address1": "4 Bramble Close", "address2": "", "city": "York", "state": "North Yorkshire", "postcode": "YO1 7HH", "country": "GB" } }
+  ],
+  "coupons": [
+    { "id": "coup_1", "code": "HEDGEROW10", "discountType": "percent", "amount": "10", "dateExpires": "2026-12-31T00:00:00.000Z", "usageCount": 12, "usageLimit": 200, "description": "Autumn preserves promotion" }
+  ],
+  "reviews": [
+    { "id": "rev_1", "productId": "prod_1", "productName": "Harrowgate Heather Honey 500g", "reviewer": "Alistair Penhaligon", "reviewerEmail": "alistair.penhaligon@mail.example", "review": "Deep, floral and not too sweet.", "rating": 5, "status": "approved", "dateCreated": "2026-08-20T18:00:00.000Z" }
+  ],
+  "analytics": {
+    "dailyData": [
+      { "date": "2026-09-03", "ordersCount": 4, "grossRevenue": 78.40, "netRevenue": 72.10, "refunds": 0, "coupons": 2.35, "taxes": 0, "shipping": 3.95, "previousGrossRevenue": 61.00, "previousNetRevenue": 57.20, "previousOrdersCount": 3 },
+      { "date": "2026-09-04", "ordersCount": 2, "grossRevenue": 31.90, "netRevenue": 28.00, "refunds": 0, "coupons": 0, "taxes": 0, "shipping": 3.90, "previousGrossRevenue": 44.50, "previousNetRevenue": 40.20, "previousOrdersCount": 2 },
+      { "date": "2026-09-05", "ordersCount": 3, "grossRevenue": 52.45, "netRevenue": 48.50, "refunds": 0, "coupons": 0, "taxes": 0, "shipping": 3.95, "previousGrossRevenue": 39.75, "previousNetRevenue": 35.80, "previousOrdersCount": 2 }
+    ],
+    "revenueSummary": { "grossRevenue": 162.75, "refunds": 0, "coupons": 2.35, "taxes": 0, "shipping": 11.80, "netRevenue": 148.60, "ordersCount": 9, "previousPeriod": { "grossRevenue": 145.25, "netRevenue": 133.20, "ordersCount": 7 } },
+    "topProducts": [
+      { "productId": "prod_1", "name": "Harrowgate Heather Honey 500g", "itemsSold": 11, "netRevenue": 104.50, "ordersCount": 6 },
+      { "productId": "prod_2", "name": "Damson & Sloe Jam 340g", "itemsSold": 8, "netRevenue": 42.00, "ordersCount": 4 }
+    ]
+  },
+  "notifications": [
+    { "id": "notif_1", "type": "info", "title": "Low stock: Damson & Sloe Jam 340g", "content": "Only 37 units left.", "dateCreated": "2026-09-05T08:00:00.000Z", "isRead": false, "actions": [ { "label": "View product", "url": "/products/prod_2" } ] }
+  ],
+  "shippingZones": [
+    { "id": "zone_1", "name": "United Kingdom", "regions": ["GB"], "methods": [ { "id": "flat_rate", "title": "Standard Delivery", "cost": "3.95", "minAmount": null, "enabled": true }, { "id": "free_shipping", "title": "Free Delivery", "cost": "0.00", "minAmount": "40.00", "enabled": true } ] }
+  ],
+  "taxRates": [
+    { "id": "tax_1", "country": "GB", "state": "", "postcode": "", "city": "", "rate": "0.0000", "name": "Zero-rated food", "priority": 1, "compound": false, "shipping": false, "taxClass": "zero-rate" }
+  ],
+  "paymentGateways": [
+    { "id": "stripe", "title": "Credit Card (Stripe)", "description": "Pay securely by card.", "enabled": true, "order": 0 },
+    { "id": "bacs", "title": "Direct bank transfer", "description": "Pay by BACS.", "enabled": true, "order": 1 }
+  ]
+}

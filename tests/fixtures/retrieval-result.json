@@ -1,0 +1,23 @@
+{
+  "embedding": {
+    "model": "sentence-transformers/all-mpnet-base-v2",
+    "revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130"
+  },
+  "pairs": [
+    {
+      "left": "cedarspan_account_variance_resolution",
+      "right": "renamed_account_variance_control",
+      "expected": "variant",
+      "basis": "Only incidental client names changed; the decision and dependency structure are identical.",
+      "cosine": 0.9501205682754517
+    },
+    {
+      "left": "cedarspan_account_variance_resolution",
+      "right": "pinecrest_going_concern_assessment",
+      "expected": "distinct",
+      "basis": "Account-balance correction versus forward-looking liquidity/financing assessment. Shared audit occupations do not make the decision problems identical.",
+      "cosine": 0.615536630153656
+    }
+  ],
+  "interpretation": "The name-only variant ranks ahead of a genuinely different audit task. No universal cosine threshold is asserted."
+}

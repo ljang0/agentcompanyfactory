@@ -1,0 +1,283 @@
+{
+  "app_id": "github_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "actions",
+    "branches",
+    "commits",
+    "currentUser",
+    "discussions",
+    "files",
+    "issues",
+    "labels",
+    "milestones",
+    "notifications",
+    "pullRequests",
+    "releases",
+    "repos",
+    "users",
+    "wiki"
+  ],
+  "observed": [
+    "actions",
+    "branches",
+    "commits",
+    "currentUser",
+    "discussions",
+    "files",
+    "issues",
+    "labels",
+    "milestones",
+    "notifications",
+    "pullRequests",
+    "releases",
+    "repos",
+    "users",
+    "wiki"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "username",
+        "name",
+        "email",
+        "avatar",
+        "bio",
+        "location",
+        "company",
+        "website",
+        "joinedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "repos": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "ownerId",
+        "name",
+        "description",
+        "language",
+        "languages",
+        "stars",
+        "forks",
+        "watchers",
+        "isPrivate",
+        "defaultBranch",
+        "topics",
+        "license",
+        "homepage",
+        "hasWiki",
+        "hasIssues",
+        "hasProjects",
+        "updatedAt",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "branches": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "repoId",
+        "name",
+        "lastCommitId"
+      ],
+      "keyed_by_id": false
+    },
+    "files": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "repoId",
+        "branch",
+        "path",
+        "content",
+        "language"
+      ],
+      "keyed_by_id": false
+    },
+    "commits": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "repoId",
+        "branch",
+        "message",
+        "authorId",
+        "date",
+        "additions",
+        "deletions"
+      ],
+      "keyed_by_id": false
+    },
+    "issues": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "repoId",
+        "number",
+        "title",
+        "description",
+        "status",
+        "authorId",
+        "assignees",
+        "labels",
+        "milestone",
+        "column",
+        "isPinned",
+        "reactions",
+        "createdAt",
+        "closedAt",
+        "comments"
+      ],
+      "keyed_by_id": false
+    },
+    "pullRequests": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "repoId",
+        "number",
+        "title",
+        "description",
+        "baseBranch",
+        "compareBranch",
+        "status",
+        "isDraft",
+        "authorId",
+        "assignees",
+        "labels",
+        "milestone",
+        "mergeStrategy",
+        "mergedAt",
+        "mergedBy",
+        "createdAt",
+        "closedAt",
+        "reviewers",
+        "comments",
+        "checks"
+      ],
+      "keyed_by_id": false
+    },
+    "wiki": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "repoId",
+        "title",
+        "content",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "actions": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "repoId",
+        "name",
+        "status",
+        "runNumber",
+        "branch",
+        "event",
+        "duration",
+        "date",
+        "triggeredBy"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "type",
+        "repoId",
+        "issueNumber",
+        "title",
+        "isRead",
+        "date"
+      ],
+      "keyed_by_id": false
+    },
+    "labels": {
+      "kind": "array",
+      "count": 9,
+      "record_fields": [
+        "id",
+        "repoId",
+        "name",
+        "color",
+        "description"
+      ],
+      "keyed_by_id": false
+    },
+    "milestones": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "repoId",
+        "title",
+        "description",
+        "dueDate",
+        "state",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "discussions": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "repoId",
+        "title",
+        "body",
+        "category",
+        "authorId",
+        "replies",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "releases": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "repoId",
+        "tag",
+        "title",
+        "body",
+        "authorId",
+        "date",
+        "isDraft",
+        "assets"
+      ],
+      "keyed_by_id": false
+    }
+  }
+}

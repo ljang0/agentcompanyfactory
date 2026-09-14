@@ -1,0 +1,322 @@
+{
+  "app_id": "meta_ads_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "account",
+    "adSets",
+    "ads",
+    "audiences",
+    "billingTransactions",
+    "campaigns",
+    "creatives",
+    "filters",
+    "notifications",
+    "paymentMethods",
+    "savedReports",
+    "searchQuery",
+    "selectedDateRange",
+    "selectedRows",
+    "selectedTab",
+    "settings",
+    "sidebarCollapsed",
+    "user",
+    "visibleColumns"
+  ],
+  "observed": [
+    "account",
+    "activeBreakdown",
+    "adSets",
+    "ads",
+    "audiences",
+    "billingTransactions",
+    "campaigns",
+    "creatives",
+    "eventsManager",
+    "filters",
+    "notifications",
+    "notificationsOpen",
+    "paymentMethods",
+    "savedReports",
+    "searchQuery",
+    "selectedDateRange",
+    "selectedRows",
+    "selectedTab",
+    "settings",
+    "sidebarCollapsed",
+    "user",
+    "visibleColumns"
+  ],
+  "undocumented_so_unseedable": [
+    "activeBreakdown",
+    "eventsManager",
+    "notificationsOpen"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "user": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "account": {
+      "kind": "object",
+      "count": 9,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "campaigns": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "name",
+        "status",
+        "objective",
+        "buyingType",
+        "budgetOptimization",
+        "dailyBudget",
+        "lifetimeBudget",
+        "bidStrategy",
+        "specialAdCategories",
+        "createdAt",
+        "updatedAt",
+        "startDate",
+        "endDate",
+        "results",
+        "reach",
+        "impressions",
+        "clicks",
+        "ctr",
+        "cpc",
+        "cpm",
+        "costPerResult",
+        "amountSpent",
+        "frequency",
+        "roas",
+        "deliveryStatus"
+      ],
+      "keyed_by_id": false
+    },
+    "adSets": {
+      "kind": "array",
+      "count": 13,
+      "record_fields": [
+        "id",
+        "campaignId",
+        "name",
+        "status",
+        "dailyBudget",
+        "lifetimeBudget",
+        "startDate",
+        "endDate",
+        "optimizationGoal",
+        "billingEvent",
+        "bidAmount",
+        "targeting",
+        "placements",
+        "results",
+        "reach",
+        "impressions",
+        "clicks",
+        "ctr",
+        "cpc",
+        "cpm",
+        "costPerResult",
+        "amountSpent",
+        "frequency",
+        "deliveryStatus"
+      ],
+      "keyed_by_id": false
+    },
+    "ads": {
+      "kind": "array",
+      "count": 25,
+      "record_fields": [
+        "id",
+        "adSetId",
+        "campaignId",
+        "name",
+        "status",
+        "creativeId",
+        "results",
+        "reach",
+        "impressions",
+        "clicks",
+        "ctr",
+        "cpc",
+        "cpm",
+        "costPerResult",
+        "amountSpent",
+        "frequency",
+        "deliveryStatus",
+        "reviewStatus",
+        "reviewFeedback"
+      ],
+      "keyed_by_id": false
+    },
+    "creatives": {
+      "kind": "array",
+      "count": 25,
+      "record_fields": [
+        "id",
+        "name",
+        "format",
+        "thumbnailUrl",
+        "primaryText",
+        "headline",
+        "description",
+        "callToAction",
+        "websiteUrl",
+        "displayUrl",
+        "mediaItems",
+        "carouselCards"
+      ],
+      "keyed_by_id": false
+    },
+    "audiences": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "source",
+        "size",
+        "sizeRange",
+        "availability",
+        "createdAt",
+        "updatedAt",
+        "description",
+        "lookalikeSpec"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "type",
+        "title",
+        "message",
+        "timestamp",
+        "read",
+        "actionUrl",
+        "relatedEntityId"
+      ],
+      "keyed_by_id": false
+    },
+    "paymentMethods": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "type",
+        "name",
+        "isPrimary",
+        "expiresAt"
+      ],
+      "keyed_by_id": false
+    },
+    "billingTransactions": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "date",
+        "description",
+        "amount",
+        "status",
+        "paymentMethod"
+      ],
+      "keyed_by_id": false
+    },
+    "savedReports": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "columns",
+        "dateRange",
+        "filters",
+        "breakdown",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "eventsManager": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "selectedTab": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "selectedDateRange": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "visibleColumns": {
+      "kind": "array",
+      "count": 11,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "filters": {
+      "kind": "object",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "searchQuery": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": ""
+    },
+    "selectedRows": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "sidebarCollapsed": {
+      "kind": "boolean",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "activeBreakdown": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    },
+    "notificationsOpen": {
+      "kind": "boolean",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "settings": {
+      "kind": "object",
+      "count": 1,
+      "record_fields": [
+        "adApprovals",
+        "budgetAlerts",
+        "performanceAlerts",
+        "deliveryIssues"
+      ],
+      "keyed_by_id": true
+    }
+  }
+}

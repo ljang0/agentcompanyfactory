@@ -1,0 +1,50 @@
+{
+  "contacts": [
+    { "id": "c1", "firstName": "Maribel", "lastName": "Ostrowski", "email": "maribel@brightwaterdental.example", "phone": "+1 (503) 555-0141", "jobTitle": "Practice Manager", "companyId": "comp1", "lifecycleStage": "customer", "leadStatus": "connected", "owner": "Theo Lindgren", "city": "Portland", "state": "OR", "country": "United States", "createDate": "2026-05-12T10:30:00Z", "lastActivityDate": "2026-09-04T14:00:00Z", "timeline": [] },
+    { "id": "c2", "firstName": "Gideon", "lastName": "Achterberg", "email": "gideon@cascadefleet.example", "phone": "+1 (503) 555-0177", "jobTitle": "Operations Director", "companyId": "comp2", "lifecycleStage": "opportunity", "leadStatus": "open_deal", "owner": "Theo Lindgren", "city": "Beaverton", "state": "OR", "country": "United States", "createDate": "2026-07-02T09:00:00Z", "lastActivityDate": "2026-09-05T16:30:00Z", "timeline": [] }
+  ],
+  "companies": [
+    { "id": "comp1", "name": "Brightwater Dental Group", "domain": "brightwaterdental.example", "industry": "Healthcare", "phone": "+1 (503) 555-0100", "city": "Portland", "state": "OR", "country": "United States", "numberOfEmployees": 45, "annualRevenue": 6200000, "lifecycleStage": "customer", "owner": "Theo Lindgren", "description": "Three-location dental practice group", "createDate": "2026-05-12T10:00:00Z" },
+    { "id": "comp2", "name": "Cascade Fleet Services", "domain": "cascadefleet.example", "industry": "Other", "phone": "+1 (503) 555-0200", "city": "Beaverton", "state": "OR", "country": "United States", "numberOfEmployees": 120, "annualRevenue": 18000000, "lifecycleStage": "opportunity", "owner": "Theo Lindgren", "description": "Commercial vehicle maintenance", "createDate": "2026-07-02T09:00:00Z" }
+  ],
+  "deals": [
+    { "id": "d1", "name": "Brightwater Dental Annual Plan", "stage": "closed_won", "amount": 24000, "closeDate": "2026-08-30", "dealType": "new_business", "priority": "high", "owner": "Theo Lindgren", "companyId": "comp1", "contactIds": ["c1"], "probability": 100, "description": "Annual scheduling software subscription for 3 locations", "createDate": "2026-06-01T10:00:00Z", "lastActivityDate": "2026-08-30T15:00:00Z" },
+    { "id": "d2", "name": "Cascade Fleet Pilot", "stage": "presentation_scheduled", "amount": 15000, "closeDate": "2026-10-15", "dealType": "new_business", "priority": "medium", "owner": "Theo Lindgren", "companyId": "comp2", "contactIds": ["c2"], "probability": 60, "description": "Pilot for 40 vehicles", "createDate": "2026-08-10T10:00:00Z", "lastActivityDate": "2026-09-05T16:30:00Z" }
+  ],
+  "tickets": [
+    { "id": "t1", "subject": "Reminder texts not sending to Vancouver location", "description": "SMS reminders stopped on Sept 3 for one location.", "status": "in_progress", "pipeline": "support", "priority": "high", "category": "bug_report", "source": "email", "owner": "Theo Lindgren", "contactId": "c1", "companyId": "comp1", "createDate": "2026-09-03T09:30:00Z", "closeDate": null, "lastActivityDate": "2026-09-05T11:00:00Z" }
+  ],
+  "tasks": [
+    { "id": "task1", "title": "Send Cascade Fleet pilot proposal", "type": "email", "status": "not_started", "priority": "high", "dueDate": "2026-09-09T09:00:00Z", "notes": "Include 40-vehicle pricing tier", "owner": "Theo Lindgren", "contactId": "c2", "companyId": "comp2", "dealId": "d2", "createDate": "2026-09-05T17:00:00Z", "completedDate": null },
+    { "id": "task2", "title": "Onboarding call with Brightwater Dental", "type": "call", "status": "completed", "priority": "medium", "dueDate": "2026-09-02T15:00:00Z", "notes": null, "owner": "Theo Lindgren", "contactId": "c1", "companyId": "comp1", "dealId": "d1", "createDate": "2026-08-31T08:00:00Z", "completedDate": "2026-09-02T15:45:00Z" }
+  ],
+  "notes": [
+    { "id": "note1", "body": "Brightwater Dental Annual Plan signed; Maribel wants SMS reminders live at all three locations by mid-September.", "associatedType": "deal", "associatedId": "d1", "createdBy": "Theo Lindgren", "createDate": "2026-08-30T15:30:00Z" }
+  ],
+  "templates": [
+    { "id": "tmp1", "name": "Pilot Proposal Follow-Up", "subject": "Next steps on the {{their_company}} pilot", "body": "Hi {{first_name}},\n\nThanks for your time today. Attached is the pilot proposal we discussed.\n\nBest,\n{{sender_name}}", "folder": "Sales", "createdBy": "Theo Lindgren", "createDate": "2026-06-15T10:00:00Z", "timesUsed": 6 }
+  ],
+  "meetings": [
+    { "id": "m1", "title": "Cascade Fleet product demo", "date": "2026-09-11T17:00:00Z", "duration": 45, "contactId": "c2", "companyId": "comp2", "status": "scheduled", "notes": "Demo the dispatch scheduling module", "location": "Google Meet", "owner": "Theo Lindgren" }
+  ],
+  "forms": [
+    { "id": "f1", "name": "Request a Demo", "status": "active", "submissions": 23, "fields": ["email", "first_name", "last_name", "company", "phone"], "createDate": "2026-04-01T10:00:00Z", "lastSubmission": "2026-09-04T08:15:00Z" }
+  ],
+  "dealStages": {
+    "appointment_scheduled": { "id": "appointment_scheduled", "label": "Appointment Scheduled", "probability": 20, "color": "#E5F4FF", "order": 1 },
+    "qualified_to_buy": { "id": "qualified_to_buy", "label": "Qualified to Buy", "probability": 40, "color": "#FFF0E6", "order": 2 },
+    "presentation_scheduled": { "id": "presentation_scheduled", "label": "Presentation Scheduled", "probability": 60, "color": "#FFF8E6", "order": 3 },
+    "decision_maker_bought_in": { "id": "decision_maker_bought_in", "label": "Decision Maker Bought-In", "probability": 80, "color": "#E8F5E9", "order": 4 },
+    "contract_sent": { "id": "contract_sent", "label": "Contract Sent", "probability": 90, "color": "#E6FFFA", "order": 5 },
+    "closed_won": { "id": "closed_won", "label": "Closed Won", "probability": 100, "color": "#E6FFEC", "order": 6 },
+    "closed_lost": { "id": "closed_lost", "label": "Closed Lost", "probability": 0, "color": "#FFE6E6", "order": 7 }
+  },
+  "ticketStatuses": {
+    "new": { "id": "new", "label": "New", "color": "#E5F4FF", "order": 1 },
+    "waiting_on_contact": { "id": "waiting_on_contact", "label": "Waiting on Contact", "color": "#FFF8E6", "order": 2 },
+    "waiting_on_us": { "id": "waiting_on_us", "label": "Waiting on Us", "color": "#FFF0E6", "order": 3 },
+    "in_progress": { "id": "in_progress", "label": "In Progress", "color": "#E6FFFA", "order": 4 },
+    "closed": { "id": "closed", "label": "Closed", "color": "#E6FFEC", "order": 5 }
+  },
+  "appState": { "sidebarOpen": true, "currentUser": { "name": "Theo Lindgren", "email": "theo.lindgren@northwind-scheduling.example", "avatar": null } }
+}

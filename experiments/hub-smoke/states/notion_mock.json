@@ -1,0 +1,41 @@
+{
+  "user": { "id": "user-1", "name": "Ferdinand Okoye", "email": "ferdinand.okoye@copperleaf-studio.example", "avatar": "" },
+  "workspace": { "id": "ws-1", "name": "Copperleaf Studio", "icon": "🍂", "members": ["user-1", "user-2"] },
+  "pages": {
+    "page-001": {
+      "id": "page-001", "title": "Copperleaf Studio Handbook", "icon": "📘", "cover": null, "parentId": null,
+      "blockIds": ["block-001", "block-002", "block-003"], "favorite": true,
+      "createdDate": "2026-07-14T09:00:00.000Z", "lastEditedDate": "2026-09-05T16:00:00.000Z", "properties": {}
+    },
+    "page-002": {
+      "id": "page-002", "title": "Client Projects", "icon": "🗂️", "cover": null, "parentId": null, "type": "database", "viewType": "table",
+      "properties": [
+        { "id": "prop-name", "name": "Name", "type": "text" },
+        { "id": "prop-status", "name": "Status", "type": "status", "options": ["Not started", "In progress", "Done"] },
+        { "id": "prop-due", "name": "Due", "type": "date" }
+      ],
+      "views": [ { "id": "view-1", "name": "All projects", "type": "table", "filters": [], "sorts": [], "groupBy": null, "visibleProperties": ["prop-name", "prop-status", "prop-due"] } ],
+      "items": ["page-003"], "blockIds": [], "favorite": false, "createdDate": "2026-07-20T10:00:00.000Z", "lastEditedDate": "2026-09-04T12:00:00.000Z"
+    },
+    "page-003": {
+      "id": "page-003", "title": "Harbor Bakery Rebrand", "icon": "", "cover": null, "parentId": "page-002",
+      "blockIds": [], "favorite": false, "createdDate": "2026-08-01T10:00:00.000Z", "lastEditedDate": "2026-09-04T12:00:00.000Z",
+      "properties": { "prop-name": "Harbor Bakery Rebrand", "prop-status": "In progress", "prop-due": "2026-10-15" }
+    }
+  },
+  "blocks": {
+    "block-001": { "id": "block-001", "type": "heading-1", "content": "Welcome to Copperleaf", "properties": {}, "createdDate": "2026-07-14T09:00:00.000Z", "lastEditedDate": "2026-07-14T09:00:00.000Z" },
+    "block-002": { "id": "block-002", "type": "text", "content": "Copperleaf Studio is a four-person brand design studio. This handbook covers how we work with clients.", "properties": {}, "createdDate": "2026-07-14T09:05:00.000Z", "lastEditedDate": "2026-09-05T16:00:00.000Z" },
+    "block-003": { "id": "block-003", "type": "todo", "content": "Read the client onboarding checklist", "properties": { "checked": false }, "createdDate": "2026-07-14T09:10:00.000Z", "lastEditedDate": "2026-07-14T09:10:00.000Z" }
+  },
+  "trash": [],
+  "comments": {
+    "comment-1": { "id": "comment-1", "pageId": "page-001", "blockId": "block-002", "userId": "user-2", "content": "Should we add the invoicing schedule here?", "resolved": false, "createdDate": "2026-09-03T14:00:00.000Z", "replies": [] }
+  },
+  "settings": { "appearance": "light", "startWeekMonday": true, "fontSize": "default" },
+  "notifications": [
+    { "id": "notif-1", "type": "comment", "userId": "user-2", "pageTitle": "Copperleaf Studio Handbook", "pageId": "page-001", "message": "New comment on Copperleaf Studio Handbook", "timestamp": "2026-09-03T14:00:00.000Z", "read": false }
+  ],
+  "pageOrder": ["page-001", "page-002"],
+  "focusBlockId": null
+}

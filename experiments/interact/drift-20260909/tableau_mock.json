@@ -1,0 +1,200 @@
+{
+  "app_id": "tableau_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "calculatedFields",
+    "currentUser",
+    "dashboards",
+    "dataSources",
+    "parameters",
+    "uiState",
+    "workbook",
+    "worksheets"
+  ],
+  "observed": [
+    "currentUser",
+    "dataSources",
+    "favorites",
+    "groups",
+    "projects",
+    "recents",
+    "schedules",
+    "sharedWithMe",
+    "site",
+    "tasks",
+    "uiState",
+    "users",
+    "workbooks"
+  ],
+  "undocumented_so_unseedable": [
+    "favorites",
+    "groups",
+    "projects",
+    "recents",
+    "schedules",
+    "sharedWithMe",
+    "site",
+    "tasks",
+    "users",
+    "workbooks"
+  ],
+  "documented_but_app_keeps_none": [
+    "calculatedFields",
+    "dashboards",
+    "parameters",
+    "workbook",
+    "worksheets"
+  ],
+  "agrees": false,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 7,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "site": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "projects": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "owner",
+        "parentId",
+        "createdAt",
+        "workbookCount",
+        "datasourceCount",
+        "permissions"
+      ],
+      "keyed_by_id": false
+    },
+    "workbooks": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "name",
+        "project",
+        "projectId",
+        "owner",
+        "createdAt",
+        "updatedAt",
+        "viewCount",
+        "favoriteCount",
+        "isFavorite",
+        "tags",
+        "description",
+        "thumbnail",
+        "sheets"
+      ],
+      "keyed_by_id": false
+    },
+    "dataSources": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "connectionType",
+        "owner",
+        "project",
+        "projectId",
+        "updatedAt",
+        "isCertified",
+        "certifiedBy",
+        "description",
+        "fieldCount",
+        "rowCount",
+        "tags",
+        "usedByWorkbooks",
+        "fields",
+        "sampleData"
+      ],
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "email",
+        "siteRole",
+        "lastLogin",
+        "group"
+      ],
+      "keyed_by_id": false
+    },
+    "groups": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "userCount",
+        "minimumSiteRole"
+      ],
+      "keyed_by_id": false
+    },
+    "schedules": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "frequency",
+        "nextRun",
+        "priority",
+        "state"
+      ],
+      "keyed_by_id": false
+    },
+    "tasks": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "schedule",
+        "type",
+        "lastRun",
+        "status",
+        "duration"
+      ],
+      "keyed_by_id": false
+    },
+    "favorites": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "recents": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "sharedWithMe": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "uiState": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

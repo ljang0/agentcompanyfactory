@@ -1,0 +1,186 @@
+{
+  "_meta": {
+    "doc": "Canonical U.S. GDP sectors covering all NAICS 2-digit sectors. Sector keys are stable IDs used as foreign keys from companies/<id>/company.toml (`gdp_sector`) and from taxonomy/occupations_soc.json. NAICS codes are the 2-digit sector groupings; gdp_share_pct is the rounded 2025 share of U.S. value added.",
+    "source": "U.S. Bureau of Economic Analysis, GDP by Industry, Table TVA110; GDPVal (OpenAI, 2025); BLS SOC.",
+    "source_table": "TVA110 — Value added by Industry as a Percentage of Gross Domestic Product",
+    "source_release": "GDP (Third Estimate), Industries, Corporate Profits, State GDP, and State Personal Income, 4th Quarter and Year 2025, April 9, 2026",
+    "source_url": "https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-4th",
+    "table_url": "https://apps.bea.gov/iTable/?Categories=GDPxInd&isURI=1&reqid=1603&step=2",
+    "retrieved_date": "2026-09-02",
+    "reference_year": 2025,
+    "share_units": "percent of GDP, rounded to one decimal place",
+    "share_updates": {
+      "finance_and_insurance": "8.3→7.9",
+      "manufacturing": "10.3→9.4",
+      "health_care_social_assistance": "7.6→7.7",
+      "information": "5.4→5.5",
+      "wholesale_trade": "6.0→6.2",
+      "real_estate_rental_leasing": "13.4→13.7",
+      "government": "11.2→11.1",
+      "administrative_support_services": "3.2→2.8"
+    },
+    "schema_version": 1
+  },
+  "sectors": [
+    {
+      "id": "finance_and_insurance",
+      "name": "Finance and Insurance",
+      "naics": "52",
+      "gdp_share_pct": 7.9,
+      "description": "Banking, lending, securities, insurance carriers and brokers; intermediation of capital and risk.",
+      "representative_deliverables": ["loan underwriting decision", "financial model", "compliance review", "insurance claim adjudication"]
+    },
+    {
+      "id": "professional_scientific_technical",
+      "name": "Professional, Scientific, and Technical Services",
+      "naics": "54",
+      "gdp_share_pct": 8.1,
+      "description": "Legal, accounting, engineering, design, consulting, R&D, computer systems services.",
+      "representative_deliverables": ["legal brief", "tax return", "engineering drawing", "audit workpaper", "consulting deck"]
+    },
+    {
+      "id": "manufacturing",
+      "name": "Manufacturing",
+      "naics": "31-33",
+      "gdp_share_pct": 9.4,
+      "description": "Transformation of materials into goods; durable and non-durable production.",
+      "representative_deliverables": ["bill of materials", "production schedule", "quality inspection report", "ECO change order"]
+    },
+    {
+      "id": "health_care_social_assistance",
+      "name": "Health Care and Social Assistance",
+      "naics": "62",
+      "gdp_share_pct": 7.6,
+      "description": "Ambulatory care, hospitals, nursing/residential care, social assistance.",
+      "representative_deliverables": ["nursing care plan", "clinical coding", "prior-authorization packet", "discharge summary"]
+    },
+    {
+      "id": "information",
+      "name": "Information",
+      "naics": "51",
+      "gdp_share_pct": 5.5,
+      "description": "Publishing, software, telecom, data processing, media production.",
+      "representative_deliverables": ["software release", "content production schedule", "incident postmortem", "data pipeline spec"]
+    },
+    {
+      "id": "wholesale_trade",
+      "name": "Wholesale Trade",
+      "naics": "42",
+      "gdp_share_pct": 6.2,
+      "description": "Distribution of goods to retailers, businesses, and institutions.",
+      "representative_deliverables": ["purchase order reconciliation", "supplier contract", "inventory replenishment plan"]
+    },
+    {
+      "id": "retail_trade",
+      "name": "Retail Trade",
+      "naics": "44-45",
+      "gdp_share_pct": 6.2,
+      "description": "Sale of goods to final consumers; merchandising and store/e-commerce operations.",
+      "representative_deliverables": ["merchandising plan", "markdown analysis", "store P&L", "customer support resolution"]
+    },
+    {
+      "id": "real_estate_rental_leasing",
+      "name": "Real Estate and Rental and Leasing",
+      "naics": "53",
+      "gdp_share_pct": 13.7,
+      "description": "Real-estate transactions, leasing, property management, rental services.",
+      "representative_deliverables": ["lease abstract", "property valuation", "closing package", "rent roll analysis"]
+    },
+    {
+      "id": "government",
+      "name": "Government",
+      "naics": "92",
+      "gdp_share_pct": 11.1,
+      "description": "Federal, state, and local public administration and services.",
+      "representative_deliverables": ["grant award packet", "benefits determination", "procurement solicitation", "case adjudication"]
+    },
+    {
+      "id": "administrative_support_services",
+      "name": "Administrative and Support Services",
+      "naics": "56",
+      "gdp_share_pct": 2.8,
+      "description": "Office administration, employment services, facilities, call centers, business support.",
+      "representative_deliverables": ["staffing plan", "facilities work order", "claims intake batch", "back-office reconciliation"]
+    },
+    {
+      "id": "agriculture",
+      "name": "Agriculture, Forestry, Fishing, and Hunting",
+      "naics": "11",
+      "gdp_share_pct": 0.9,
+      "description": "Crop and animal production, forestry, fishing, and hunting operations and supply chains.",
+      "representative_deliverables": ["farm management plan", "crop yield forecast", "precision-agriculture map", "food-safety compliance record"]
+    },
+    {
+      "id": "mining",
+      "name": "Mining, Quarrying, and Oil and Gas Extraction",
+      "naics": "21",
+      "gdp_share_pct": 1.2,
+      "description": "Extraction of minerals, oil, and gas, including quarrying and support activities.",
+      "representative_deliverables": ["mine production plan", "geological resource model", "environmental permit report", "maintenance work order"]
+    },
+    {
+      "id": "utilities",
+      "name": "Utilities",
+      "naics": "22",
+      "gdp_share_pct": 1.5,
+      "description": "Electric power, natural gas, water, sewage, and other network utility services.",
+      "representative_deliverables": ["load forecast", "outage restoration plan", "asset maintenance schedule", "regulatory filing"]
+    },
+    {
+      "id": "construction",
+      "name": "Construction",
+      "naics": "23",
+      "gdp_share_pct": 4.4,
+      "description": "Building, heavy and civil engineering, specialty trade, and construction project delivery.",
+      "representative_deliverables": ["project schedule", "quantity takeoff", "submittal log", "change-order package", "safety inspection report"]
+    },
+    {
+      "id": "transportation_warehousing",
+      "name": "Transportation and Warehousing",
+      "naics": "48-49",
+      "gdp_share_pct": 3.3,
+      "description": "Movement of passengers and freight and storage and distribution of goods.",
+      "representative_deliverables": ["route plan", "freight tender", "fleet maintenance schedule", "warehouse pick-and-pack wave plan", "bill-of-lading reconciliation"]
+    },
+    {
+      "id": "management_of_companies",
+      "name": "Management of Companies and Enterprises",
+      "naics": "55",
+      "gdp_share_pct": 1.9,
+      "description": "Headquarters and holding-company activities that direct and coordinate affiliated enterprises.",
+      "representative_deliverables": ["corporate planning deck", "shared-services KPI report", "intercompany chargeback schedule", "board reporting package"]
+    },
+    {
+      "id": "educational_services",
+      "name": "Educational Services",
+      "naics": "61",
+      "gdp_share_pct": 1.1,
+      "description": "Instruction and training delivered by schools, colleges, universities, and other providers.",
+      "representative_deliverables": ["course schedule", "lesson plan", "student assessment report", "accreditation submission"]
+    },
+    {
+      "id": "arts_entertainment_recreation",
+      "name": "Arts, Entertainment, and Recreation",
+      "naics": "71",
+      "gdp_share_pct": 1.2,
+      "description": "Performing arts, spectator sports, museums, amusement, recreation, and creative production.",
+      "representative_deliverables": ["production budget", "event run-of-show", "rights and licensing package", "audience analytics report"]
+    },
+    {
+      "id": "accommodation_food_services",
+      "name": "Accommodation and Food Services",
+      "naics": "72",
+      "gdp_share_pct": 3.2,
+      "description": "Hotels, lodging, restaurants, caterers, bars, and other food-service operations.",
+      "representative_deliverables": ["occupancy forecast", "room-blocking plan", "menu and food-cost analysis", "guest-service case resolution"]
+    },
+    {
+      "id": "other_services",
+      "name": "Other Services (Except Government)",
+      "naics": "81",
+      "gdp_share_pct": 2.1,
+      "description": "Repair, maintenance, personal, laundry, nonprofit, and other services outside the major industry groups.",
+      "representative_deliverables": ["service appointment schedule", "work-order estimate", "customer account reconciliation", "quality and compliance checklist"]
+    }
+  ]
+}

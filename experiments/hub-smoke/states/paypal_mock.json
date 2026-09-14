@@ -1,0 +1,31 @@
+{
+  "user": {"id": "u_1", "name": "Renata Szabo-Whitcombe", "email": "renata@willowbendceramics.example", "phone": "+1 (555) 208-7741", "balance": 3180.42, "currency": "USD", "avatar": null, "address": {"street": "27 Kiln Yard Lane", "city": "Asheville", "state": "NC", "zip": "28801", "country": "US"}, "businessName": "Willowbend Ceramics Studio", "accountType": "business", "verified": true},
+  "contacts": [
+    {"id": "c_1", "name": "Blue Ridge Clay Supply", "email": "orders@blueridgeclay.example", "phone": null, "avatar": null, "initials": "BR", "initialsColor": "#3f51b5", "isFavorite": true},
+    {"id": "c_2", "name": "Priya Venkataraman", "email": "priya.v@example", "phone": "+1 (555) 318-2204", "avatar": null, "initials": "PV", "initialsColor": "#e91e63", "isFavorite": true},
+    {"id": "c_3", "name": "Grovewood Gallery", "email": "accounts@grovewoodgallery.example", "phone": null, "avatar": null, "initials": "GG", "initialsColor": "#009688", "isFavorite": false}
+  ],
+  "transactions": [
+    {"id": "t_1", "type": "payment_received", "amount": 640.00, "currency": "USD", "fee": 18.86, "netAmount": 621.14, "recipientName": null, "recipientEmail": null, "senderName": "Grovewood Gallery", "senderEmail": "accounts@grovewoodgallery.example", "destination": null, "source": null, "date": "2026-09-02T16:40:00Z", "status": "completed", "description": "Invoice INV-0042 - wholesale mug order", "category": "goods", "transactionId": "TXN-7K2M9QAZ", "relatedInvoiceId": "inv_1"},
+    {"id": "t_2", "type": "payment_sent", "amount": 212.75, "currency": "USD", "fee": 0, "netAmount": 212.75, "recipientName": "Blue Ridge Clay Supply", "recipientEmail": "orders@blueridgeclay.example", "senderName": null, "senderEmail": null, "destination": null, "source": "PayPal balance", "date": "2026-08-30T13:15:00Z", "status": "completed", "description": "50 lb stoneware clay, 2 boxes", "category": "goods", "transactionId": "TXN-3B8XQ1LD", "relatedInvoiceId": null},
+    {"id": "t_3", "type": "payment_received", "amount": 85.00, "currency": "USD", "fee": 2.77, "netAmount": 82.23, "recipientName": null, "recipientEmail": null, "senderName": "Priya Venkataraman", "senderEmail": "priya.v@example", "destination": null, "source": null, "date": "2026-08-28T19:05:00Z", "status": "completed", "description": "Wheel-throwing class deposit", "category": "services", "transactionId": "TXN-9C1FZ5RT", "relatedInvoiceId": null}
+  ],
+  "paymentMethods": [
+    {"id": "pm_1", "type": "bank", "brand": null, "bankName": "Mountain Credit Union", "last4": "5518", "expiry": null, "accountType": "checking", "verified": true, "isDefault": true, "cardholderName": "Willowbend Ceramics Studio LLC", "addedDate": "2024-05-12T10:00:00Z"},
+    {"id": "pm_2", "type": "card", "brand": "Visa", "bankName": null, "last4": "7302", "expiry": "08/28", "accountType": null, "verified": true, "isDefault": false, "cardholderName": "Renata Szabo-Whitcombe", "addedDate": "2025-01-20T10:00:00Z"}
+  ],
+  "invoices": [
+    {"id": "inv_1", "number": "INV-0042", "recipientName": "Grovewood Gallery", "recipientEmail": "accounts@grovewoodgallery.example", "amount": 640.00, "currency": "USD", "status": "paid", "createdDate": "2026-08-20T10:00:00Z", "dueDate": "2026-09-19T00:00:00Z", "paidDate": "2026-09-02T16:40:00Z", "items": [{"description": "Speckled stoneware mug, 12 oz", "quantity": 32, "price": 20.00}], "note": "Thank you for stocking Willowbend.", "terms": "Net 30", "tax": 0},
+    {"id": "inv_2", "number": "INV-0043", "recipientName": "Priya Venkataraman", "recipientEmail": "priya.v@example", "amount": 255.00, "currency": "USD", "status": "sent", "createdDate": "2026-09-01T10:00:00Z", "dueDate": "2026-09-15T00:00:00Z", "paidDate": null, "items": [{"description": "6-week wheel-throwing course (balance)", "quantity": 1, "price": 255.00}], "note": "", "terms": "Due on receipt", "tax": 0}
+  ],
+  "notifications": [
+    {"id": "n_1", "type": "invoice_paid", "title": "Invoice paid", "message": "Grovewood Gallery paid INV-0042 for $640.00.", "read": false, "date": "2026-09-02T16:41:00Z", "actionUrl": "/invoices", "relatedId": "inv_1"}
+  ],
+  "subscriptions": [
+    {"id": "sub_1", "merchantName": "KilnShare Scheduling", "merchantLogo": null, "amount": 19.00, "currency": "USD", "frequency": "monthly", "status": "active", "nextBillingDate": "2026-09-20T00:00:00Z", "startDate": "2025-03-20T00:00:00Z", "paymentMethodId": "pm_2"}
+  ],
+  "paymentLinks": [
+    {"id": "pl_1", "description": "Saturday open-studio drop-in fee", "amount": 15.00, "currency": "USD", "url": "https://paypal.example/willowbend/open-studio", "active": true, "createdDate": "2026-05-01T10:00:00Z", "timesUsed": 47, "totalCollected": 705.00}
+  ],
+  "settings": {"language": "en", "timezone": "America/New_York", "emailNotifications": true, "pushNotifications": true, "marketingEmails": false, "autoAcceptPayments": true, "defaultCurrency": "USD"}
+}

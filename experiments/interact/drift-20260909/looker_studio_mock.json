@@ -1,0 +1,198 @@
+{
+  "app_id": "looker_studio_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "components",
+    "connectorDialog",
+    "currentReport",
+    "dataSources",
+    "dataSourcesView",
+    "editor",
+    "home",
+    "pages",
+    "publishDialog",
+    "reports",
+    "shareDialog",
+    "templates",
+    "user"
+  ],
+  "observed": [
+    "components",
+    "connectorDialog",
+    "currentReport",
+    "dataSources",
+    "dataSourcesView",
+    "editor",
+    "home",
+    "pages",
+    "publishDialog",
+    "reports",
+    "shareDialog",
+    "templates",
+    "user"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "user": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "reports": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "ownerId",
+        "ownerName",
+        "ownerEmail",
+        "createdAt",
+        "modifiedAt",
+        "lastOpenedAt",
+        "thumbnailColor",
+        "starred",
+        "shared",
+        "trashed",
+        "sharedWith",
+        "dataSources",
+        "pages",
+        "currentPageId"
+      ],
+      "keyed_by_id": false
+    },
+    "dataSources": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "connectorIcon",
+        "createdAt",
+        "modifiedAt",
+        "ownerId",
+        "ownerName",
+        "fields",
+        "data"
+      ],
+      "keyed_by_id": false
+    },
+    "templates": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "name",
+        "category",
+        "description",
+        "thumbnailColor",
+        "dataSourceType",
+        "popularity"
+      ],
+      "keyed_by_id": false
+    },
+    "currentReport": {
+      "kind": "object",
+      "count": 16,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "pages": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "reportId",
+        "name",
+        "width",
+        "height",
+        "backgroundColor",
+        "components"
+      ],
+      "keyed_by_id": true
+    },
+    "components": {
+      "kind": "object",
+      "count": 53,
+      "record_fields": [
+        "id",
+        "pageId",
+        "type",
+        "chartType",
+        "controlType",
+        "x",
+        "y",
+        "width",
+        "height",
+        "dataSourceId",
+        "dimensions",
+        "metrics",
+        "sortField",
+        "sortDirection",
+        "rowLimit",
+        "filters",
+        "style",
+        "compactNumber",
+        "comparisonField",
+        "textContent",
+        "textAlign",
+        "textBold",
+        "textItalic",
+        "textSize",
+        "textColor",
+        "shapeType",
+        "lineStartX",
+        "lineStartY",
+        "lineEndX",
+        "lineEndY",
+        "strokeColor",
+        "strokeWidth",
+        "fillColor",
+        "selected",
+        "locked",
+        "dateRange"
+      ],
+      "keyed_by_id": true
+    },
+    "editor": {
+      "kind": "object",
+      "count": 15,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "home": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "dataSourcesView": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "shareDialog": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "connectorDialog": {
+      "kind": "object",
+      "count": 1,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "publishDialog": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

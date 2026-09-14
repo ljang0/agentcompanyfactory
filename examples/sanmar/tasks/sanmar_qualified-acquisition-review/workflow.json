@@ -1,0 +1,569 @@
+{
+  "schema_version": "2",
+  "difficulty": "hard",
+  "execution_mode": "digital",
+  "manager_id": "sales-supervisor",
+  "feature_cell": {
+    "collections": [
+      "google_drive_mock.items",
+      "hubspot_mock.contacts"
+    ],
+    "decision_type": "allocate-scarce-resource"
+  },
+  "id": "sanmar_qualified-acquisition-review",
+  "company_id": "sanmar",
+  "outline_id": "qualified-acquisition-review",
+  "title": "Choose September spending for reseller inquiries",
+  "brief": "Cedarline has three running advertising campaigns bringing in very different reseller inquiries. Decide their September spending and sales support by September 1, 2026. Compare at least two practical choices using recorded spending, customer needs, application papers and ordering history through August 31, 2026. Explain what the linked records can tell us and where they leave uncertainty. Keep spending within the desk's budget and protect existing application, service and catalog work. Finish with a written decision, checked calculations, matching advertising settings and named customer follow-ups. Give clear reasons and conditions for reconsidering any campaign you pause or leave unsupported.",
+  "objective": "Choose and implement a supported September allocation for Independent decorators, Start with wholesale basics and Return to your catalog, including the associated desk support.",
+  "decision_problem": "The cheapest platform results include an end-user inquiry, incomplete applications, a returning customer and a repeat inquiry. The decorator campaign has a documented ordering customer but concentrated outcomes. Select spending and support together without treating the small linked intake set as the complete advertising funnel.",
+  "canonical_description": "A wholesale apparel desk attracts reseller inquiries through paid advertising and then supports business qualification and initial product requests. Platform results, distinct businesses, accepted application papers and invoiced orders measure different things. Marketing staff connect spending to recorded inquiries, sales staff assess business fit and commercial needs, and order services distinguish documentary readiness from accepted or completed transactions. The supervisor compares spending and support choices while protecting existing customer work. Limited attribution coverage and concentrated purchasing require caution when interpreting historical results. The decision changes advertising settings and customer follow-up obligations, while credit acceptance, order execution and future conversion remain outside the desk's control.",
+  "team_ids": [
+    "reseller-development"
+  ],
+  "worker_ids": [
+    "sales-supervisor",
+    "account-representative",
+    "order-coordinator",
+    "marketing-specialist"
+  ],
+  "phases": [
+    {
+      "id": "acquisition-findings",
+      "name": "Establish the usable acquisition history",
+      "worker_ids": [
+        "sales-supervisor",
+        "account-representative",
+        "order-coordinator",
+        "marketing-specialist"
+      ],
+      "depends_on": [],
+      "inputs": [
+        "Frozen campaign, contact, application and commercial records",
+        "Desk spending and capacity policy"
+      ],
+      "outputs": [
+        "Specialist findings shared through desk correspondence",
+        "Linked intake and order workpaper"
+      ],
+      "decision": "Determine what each campaign's recorded inquiries establish about business fit, readiness and purchasing.",
+      "downstream_effect": "Changes which campaigns merit support and the obligations that any allocation must preserve.",
+      "when": "always"
+    },
+    {
+      "id": "acquisition-choice",
+      "name": "Choose spending and support together",
+      "worker_ids": [
+        "sales-supervisor",
+        "account-representative",
+        "order-coordinator",
+        "marketing-specialist"
+      ],
+      "depends_on": [
+        "acquisition-findings"
+      ],
+      "inputs": [
+        "Specialist findings",
+        "Comparable historical spending",
+        "Estimated support effort and policy limits"
+      ],
+      "outputs": [
+        "Comparison of materially different feasible scopes",
+        "Supervisor's allocation and reconsideration conditions"
+      ],
+      "decision": "Choose a supported allocation, including a reasoned full or partial pause if warranted.",
+      "downstream_effect": "Authorizes precise advertising changes and determines customer follow-up priorities.",
+      "when": "always"
+    },
+    {
+      "id": "acquisition-records",
+      "name": "Apply the decision and preserve follow-ups",
+      "worker_ids": [
+        "sales-supervisor",
+        "account-representative",
+        "marketing-specialist"
+      ],
+      "depends_on": [
+        "acquisition-choice"
+      ],
+      "inputs": [
+        "Recorded allocation",
+        "Application and service obligations"
+      ],
+      "outputs": [
+        "Matching advertising budgets and statuses",
+        "Linked customer tasks and notes",
+        "Implementation report accepted by the supervisor"
+      ],
+      "decision": "Check that implemented settings and customer obligations match the accepted scope.",
+      "downstream_effect": "Leaves a usable operating decision without waiting for advertising delivery or customer replies.",
+      "when": "always"
+    }
+  ],
+  "contributions": [
+    {
+      "worker_id": "sales-supervisor",
+      "inputs": [
+        "google_drive_mock.items#POL-AUTH-3",
+        "google_docs_mock.documents#DOC-WELCOME"
+      ],
+      "work": "Plans and delegates the review through desk chat or email, weighs specialist findings, selects spending and support, and checks implementation reports.",
+      "produces": [
+        "September decision with capacity, spending and reconsideration terms"
+      ],
+      "shares_with": [
+        "account-representative",
+        "order-coordinator",
+        "marketing-specialist"
+      ],
+      "apps": [
+        "gmail_mock",
+        "google_calendar_mock",
+        "google_docs_mock",
+        "google_drive_mock",
+        "slack_mock"
+      ]
+    },
+    {
+      "worker_id": "account-representative",
+      "inputs": [
+        "hubspot_mock.contacts#CT-A001",
+        "hubspot_mock.contacts#CT-P002",
+        "hubspot_mock.tickets#CL-SVC-018",
+        "hubspot_mock.tickets#CL-SVC-019",
+        "hubspot_mock.tickets#CL-SVC-020",
+        "hubspot_mock.tickets#CL-SVC-021",
+        "hubspot_mock.tickets#CL-SVC-022",
+        "hubspot_mock.tickets#CL-SVC-023",
+        "hubspot_mock.tickets#SVC-107",
+        "hubspot_mock.deals#OPP-KESTREL-FIRST"
+      ],
+      "work": "Tests business fit and realistic opportunities, identifies repeated and existing relationships, and estimates useful sales support. Supplies relevant application findings to Owen and Priya, then records the chosen follow-ups.",
+      "produces": [
+        "Business-fit and opportunity assessment",
+        "Customer tasks and associated notes"
+      ],
+      "shares_with": [
+        "sales-supervisor",
+        "order-coordinator",
+        "marketing-specialist"
+      ],
+      "apps": [
+        "gmail_mock",
+        "google_calendar_mock",
+        "google_docs_mock",
+        "google_drive_mock",
+        "hubspot_mock",
+        "slack_mock"
+      ]
+    },
+    {
+      "worker_id": "order-coordinator",
+      "inputs": [
+        "google_drive_mock.items#WB-COMMERCIAL",
+        "google_drive_mock.items#POL-QUAL-2",
+        "google_drive_mock.items#POL-ORDER-2"
+      ],
+      "work": "Checks intake-linked purchasing and posted credits, separates accepted unallocated orders from realized purchases, and checks documentary readiness against Imani's application findings.",
+      "produces": [
+        "Ordering and readiness assessment with support estimate"
+      ],
+      "shares_with": [
+        "sales-supervisor",
+        "account-representative",
+        "marketing-specialist"
+      ],
+      "apps": [
+        "gmail_mock",
+        "google_calendar_mock",
+        "google_docs_mock",
+        "google_drive_mock",
+        "google_sheets_mock",
+        "slack_mock"
+      ]
+    },
+    {
+      "worker_id": "marketing-specialist",
+      "inputs": [
+        "meta_ads_mock.campaigns#CAM-DECOR",
+        "meta_ads_mock.campaigns#CAM-START",
+        "meta_ads_mock.campaigns#CAM-RETURN",
+        "meta_ads_mock.adSets#AS-DECOR",
+        "meta_ads_mock.adSets#AS-START",
+        "meta_ads_mock.adSets#AS-RETURN",
+        "google_sheets_mock.sheets#SH-SPEND",
+        "google_sheets_mock.sheets#SH-SOURCES",
+        "google_drive_mock.items#POL-AUTH-3"
+      ],
+      "work": "Builds comparable spending and intake analyses, incorporates relationship and ordering findings, estimates marketing effort, and implements approved budgets and pauses.",
+      "produces": [
+        "Reproducible comparison of acquisition scopes",
+        "Advertising changes and implementation report"
+      ],
+      "shares_with": [
+        "sales-supervisor",
+        "account-representative",
+        "order-coordinator"
+      ],
+      "apps": [
+        "gmail_mock",
+        "google_calendar_mock",
+        "google_docs_mock",
+        "google_drive_mock",
+        "google_sheets_mock",
+        "meta_ads_mock",
+        "slack_mock"
+      ]
+    }
+  ],
+  "events": [],
+  "initial_materials": [
+    "google_docs_mock.documents#DOC-WELCOME",
+    "google_drive_mock.items#POL-AUTH-3",
+    "google_drive_mock.items#POL-QUAL-2",
+    "google_drive_mock.items#POL-ORDER-2",
+    "google_drive_mock.items#WB-COMMERCIAL",
+    "hubspot_mock.contacts#CT-A001",
+    "hubspot_mock.contacts#CT-P002",
+    "hubspot_mock.tickets#CL-SVC-018",
+    "hubspot_mock.tickets#CL-SVC-019",
+    "hubspot_mock.tickets#CL-SVC-020",
+    "hubspot_mock.tickets#CL-SVC-021",
+    "hubspot_mock.tickets#CL-SVC-022",
+    "hubspot_mock.tickets#CL-SVC-023",
+    "hubspot_mock.tickets#SVC-107",
+    "hubspot_mock.deals#OPP-KESTREL-FIRST",
+    "meta_ads_mock.campaigns#CAM-DECOR",
+    "meta_ads_mock.campaigns#CAM-START",
+    "meta_ads_mock.campaigns#CAM-RETURN",
+    "meta_ads_mock.adSets#AS-DECOR",
+    "meta_ads_mock.adSets#AS-START",
+    "meta_ads_mock.adSets#AS-RETURN",
+    "google_sheets_mock.sheets#SH-SPEND",
+    "google_sheets_mock.sheets#SH-SOURCES"
+  ],
+  "deliverables": [
+    "September 2026 spending and support decision in Google Docs",
+    "Campaign comparison and linked customer calculations in Google Sheets",
+    "Advertising budgets and statuses matching the decision",
+    "Customer follow-up tasks and notes in HubSpot"
+  ],
+  "success_criteria": [
+    {
+      "requirement": "Explain what the three campaigns produced in the recorded customer history.",
+      "observable": "A new comparison sheet distinguishes platform results, distinct inquiries, business fit, documentary acceptance and ordering outcomes, with traceable links and coverage limits.",
+      "method": "artifact"
+    },
+    {
+      "requirement": "Choose between at least two practical spending and support options.",
+      "observable": "The decision document compares materially different scopes, records role-specific effort and costs, respects spending and capacity limits, and explains the chosen tradeoff.",
+      "method": "judgment"
+    },
+    {
+      "requirement": "Make advertising settings match the written decision.",
+      "observable": "The three campaign and ad-set records have consistent approved budgets and active or paused statuses; the implementation report identifies the effective spending level.",
+      "method": "state"
+    },
+    {
+      "requirement": "Keep customer obligations clear even when advertising support is reduced.",
+      "observable": "HubSpot tasks and associated notes give each unresolved linked inquiry an owner, absolute follow-up date and accurate next action, including reconsideration conditions where support is declined.",
+      "method": "state"
+    }
+  ],
+  "software_requirement_ids": [
+    "account-management",
+    "paid-reseller-acquisition",
+    "commercial-analysis"
+  ],
+  "evidence_ids": [
+    "reseller-customers",
+    "application-documents",
+    "order-boundaries",
+    "synthetic-acquisition",
+    "synthetic-authority",
+    "synthetic-workspace"
+  ],
+  "calendar_days": null,
+  "estimated_human_effort": {
+    "minimum_hours": 7.0,
+    "maximum_hours": 11.0,
+    "basis": "Invented active-work estimate across four staff: linked-record analysis, competing scope calculations, management judgment and implementation; excludes waiting."
+  },
+  "assumptions": [
+    "Use the frozen September 1, 2026, 08:00 America/Los_Angeles snapshot. Compare May–August history for the three running campaigns and July–August as their common observation window. September has 30 calendar days.",
+    "All commercial fixtures and desk limits are synthetic. Apply POL-AUTH-3 effective July 1, 2026, and POL-QUAL-2 and POL-ORDER-2 effective March 1, 2025.",
+    "The reviewed intake set is APP-604 through APP-610 plus INQ-611 and INQ-612. It is not established as the complete population of platform results. Older linked orders may provide context without expanding the allocation scope.",
+    "Weekly discretionary capacity is additional to recurring commitments. Preserve the separately stated application, exception and catalog blocks; do not subtract them twice. Support estimates must be labeled estimates.",
+    "The Drive commercial ledger and the larger Sheets Orders tab have different coverage. Do not assume synchronized copies or automatic attribution.",
+    "Pinned schemas document record editing, budgeting, pause controls, document creation and messaging. Persistence, formula evaluation and effective budget ownership still need runtime verification. Campaign budget optimization is false in the inspected fixtures; do not add parent and child budgets as separate spending.",
+    "Preserve supplied identities, app grants and file access. Specialists share findings through existing workplace correspondence. No outside reply, credit release, physical fulfillment or actual September advertising spend is required."
+  ],
+  "completion": {
+    "outcomes": [
+      {
+        "id": "acquisition-decision-applied",
+        "when": "A justified allocation, including a full or partial pause, has been selected.",
+        "required_phase_ids": [
+          "acquisition-findings",
+          "acquisition-choice",
+          "acquisition-records"
+        ],
+        "observable": "The comparison, decision, advertising records and customer obligations agree. A pause still includes alternatives, protected follow-ups and concrete reconsideration conditions."
+      }
+    ],
+    "feasible_path": {
+      "outcome_id": "acquisition-decision-applied",
+      "steps": [
+        {
+          "phase_id": "acquisition-findings",
+          "action_and_result": "Imani distinguishes Alder's existing relationship and Moonrise's repeated inquiry, identifies Hillcrest as an end user, and reports the remaining application barriers. Owen establishes Riverbend's $2,520 recorded invoiced purchase and separates other accepted or credited transactions. Priya compares July–August spend and results: decorators $3,800/102, starters $2,900/163, visitors $1,550/75. The linked ordering result is concentrated and incomplete."
+        },
+        {
+          "phase_id": "acquisition-choice",
+          "action_and_result": "Compare maintaining the three budgets with a narrower decorator-only scope. As one defensible choice, Mara keeps decorators at $65 daily and pauses the other two, with estimated additional weekly support of six representative, three order-services and four marketing hours. Missing paperwork, improved business-fit information and stronger distinct-customer results become reconsideration conditions; no future return is promised."
+        },
+        {
+          "phase_id": "acquisition-records",
+          "action_and_result": "Priya applies the recorded decision to campaigns and effective ad-set controls and reports the resulting settings. Imani records dated follow-ups for the six unresolved applications and handles the catalog and repeated inquiries without creating new accounts. Mara checks the settings report and preserved obligations against the decision."
+        }
+      ],
+      "constraint_checks": [
+        "Existing three-campaign support and the narrower option both fit the monthly spending ceiling; no approval from an unavailable director is needed.",
+        "The narrower choice is an example, not a required campaign preference. Maintaining multiple campaigns or pausing all three can pass with comparable reasoning and complete obligations.",
+        "Budget calculations are planning exposure, not a promise of platform delivery or a native hard monthly cap.",
+        "The decision preserves incomplete applications, central review responsibilities and existing customer requests."
+      ],
+      "numeric_checks": [
+        {
+          "constraint": "Existing daily budgets over September",
+          "left": "(65 + 45 + 25) * 30",
+          "relation": "<=",
+          "right": "6000",
+          "unit": "USD"
+        },
+        {
+          "constraint": "Example narrower September allocation",
+          "left": "65 * 30",
+          "relation": "<=",
+          "right": "6000",
+          "unit": "USD"
+        },
+        {
+          "constraint": "Additional representative support",
+          "left": "6",
+          "relation": "<=",
+          "right": "18",
+          "unit": "hours per week"
+        },
+        {
+          "constraint": "Additional order-services support",
+          "left": "3",
+          "relation": "<=",
+          "right": "14",
+          "unit": "hours per week"
+        },
+        {
+          "constraint": "Additional marketing support",
+          "left": "4",
+          "relation": "<=",
+          "right": "16",
+          "unit": "hours per week"
+        },
+        {
+          "constraint": "Example weekly internal support cost",
+          "left": "6 * 48 + 3 * 42 + 4 * 50",
+          "relation": "==",
+          "right": "614",
+          "unit": "USD per week"
+        }
+      ]
+    }
+  },
+  "assessment": {
+    "criteria": [
+      {
+        "criterion": 1,
+        "weight": 30.0,
+        "must_pass": true,
+        "evidence": [
+          "google_drive_mock.items#WB-COMMERCIAL",
+          "google_sheets_mock.sheets#SH-SPEND",
+          "google_sheets_mock.sheets#SH-SOURCES",
+          "hubspot_mock.contacts#CT-A001",
+          "hubspot_mock.contacts#CT-P002",
+          "hubspot_mock.tickets#CL-SVC-018",
+          "hubspot_mock.tickets#CL-SVC-023",
+          "hubspot_mock.tickets#SVC-107"
+        ],
+        "rubric": "Check joins, comparison periods and distinct relationship counts. The work must accurately distinguish existing and repeated relationships using supported records; equivalent sound sources and methods are acceptable. Use documentary findings to qualify apparent opportunities, and distinguish invoiced purchases from accepted unallocated orders and unposted claims. Recognize incomplete attribution and buyer concentration.",
+        "failure_cases": [
+          "Treats all platform results as qualified businesses.",
+          "Counts Alder or Moonrise's repeat inquiry as a new acquired account.",
+          "Calls revenue profit or predicts conversions from the linked examples.",
+          "Copies ledger totals without connecting them to the decision."
+        ]
+      },
+      {
+        "criterion": 2,
+        "weight": 30.0,
+        "must_pass": true,
+        "evidence": [
+          "google_drive_mock.items#POL-AUTH-3",
+          "google_docs_mock.documents#DOC-WELCOME",
+          "hubspot_mock.deals#OPP-KESTREL-FIRST",
+          "hubspot_mock.tickets#CL-SVC-019",
+          "hubspot_mock.tickets#CL-SVC-021",
+          "meta_ads_mock.campaigns#CAM-DECOR",
+          "meta_ads_mock.campaigns#CAM-START",
+          "meta_ads_mock.campaigns#CAM-RETURN"
+        ],
+        "rubric": "Require at least two materially different feasible scopes and a reasoned manager choice informed by all three specialists. Check monthly media exposure, separately costed support, preserved recurring work and explicit estimated hours. Explain why the extra or reduced support is commercially useful.",
+        "failure_cases": [
+          "Presents the same support scope with cosmetic budget differences.",
+          "Exceeds the desk ceiling or counts recurring capacity twice.",
+          "Uses a ceremonial approval without resolving competing findings.",
+          "Pauses everything without a comparison or reconsideration terms."
+        ]
+      },
+      {
+        "criterion": 3,
+        "weight": 20.0,
+        "must_pass": true,
+        "evidence": [
+          "meta_ads_mock.campaigns#CAM-DECOR",
+          "meta_ads_mock.campaigns#CAM-START",
+          "meta_ads_mock.campaigns#CAM-RETURN",
+          "meta_ads_mock.adSets#AS-DECOR",
+          "meta_ads_mock.adSets#AS-START",
+          "meta_ads_mock.adSets#AS-RETURN",
+          "google_drive_mock.items#POL-AUTH-3"
+        ],
+        "rubric": "Compare persisted campaign and ad-set settings with the recorded approval. Effective delivery must match the chosen scope, without double-counting budgets or changing unrelated campaigns. A justified unchanged setting is acceptable when the report verifies it.",
+        "failure_cases": [
+          "Only changes a report or screen selection.",
+          "Leaves an unsupported campaign delivering.",
+          "Claims a monthly hard cap was implemented through a daily budget.",
+          "Changes budgets before the required recorded approval."
+        ]
+      },
+      {
+        "criterion": 4,
+        "weight": 20.0,
+        "must_pass": true,
+        "evidence": [
+          "hubspot_mock.tickets#CL-SVC-019",
+          "hubspot_mock.tickets#CL-SVC-020",
+          "hubspot_mock.tickets#CL-SVC-021",
+          "hubspot_mock.tickets#CL-SVC-022",
+          "hubspot_mock.tickets#CL-SVC-023",
+          "hubspot_mock.tickets#SVC-107",
+          "google_drive_mock.items#POL-QUAL-2"
+        ],
+        "rubric": "Tasks and notes must preserve signature, license, central review, business-description, end-user routing and legal-name obligations. Repeated inquiries share the existing relationship. Follow-ups have appropriate owners, absolute dates and next actions consistent with the chosen support.",
+        "failure_cases": [
+          "Closes incomplete applications because their campaigns were paused.",
+          "Grants documentary acceptance or credit without central confirmation.",
+          "Creates a duplicate Moonrise account.",
+          "Leaves unsupported campaigns without reconsideration conditions."
+        ]
+      }
+    ],
+    "dependencies": [
+      {
+        "worker_id": "sales-supervisor",
+        "inputs": [
+          "google_drive_mock.items#POL-AUTH-3",
+          "google_docs_mock.documents#DOC-WELCOME"
+        ],
+        "produces": "A spending and capacity decision resolving specialist tradeoffs.",
+        "consumed_by": [
+          "account-representative",
+          "order-coordinator",
+          "marketing-specialist"
+        ],
+        "necessity": "Without the supervisor's choice, specialists cannot commit coordinated support or implement ordinary budget changes under the supplied authority.",
+        "authority_sources": [
+          "google_drive_mock.items#POL-AUTH-3"
+        ]
+      },
+      {
+        "worker_id": "account-representative",
+        "inputs": [
+          "hubspot_mock.contacts#CT-A001",
+          "hubspot_mock.contacts#CT-P002",
+          "hubspot_mock.tickets#CL-SVC-019",
+          "hubspot_mock.tickets#CL-SVC-020",
+          "hubspot_mock.tickets#CL-SVC-021",
+          "hubspot_mock.tickets#CL-SVC-022",
+          "hubspot_mock.tickets#CL-SVC-023",
+          "hubspot_mock.tickets#SVC-107",
+          "hubspot_mock.deals#OPP-KESTREL-FIRST"
+        ],
+        "produces": "Distinct-business, commercial-fit and customer-obligation findings.",
+        "consumed_by": [
+          "sales-supervisor",
+          "order-coordinator",
+          "marketing-specialist"
+        ],
+        "necessity": "These findings change the value of apparently cheap results and identify the customer work that a pause cannot remove.",
+        "authority_sources": [
+          "google_docs_mock.documents#DOC-WELCOME",
+          "google_drive_mock.items#POL-QUAL-2"
+        ]
+      },
+      {
+        "worker_id": "order-coordinator",
+        "inputs": [
+          "google_drive_mock.items#WB-COMMERCIAL",
+          "google_drive_mock.items#POL-ORDER-2",
+          "google_drive_mock.items#POL-QUAL-2"
+        ],
+        "produces": "Checked ordering outcomes and documentary barriers using application findings supplied by Imani.",
+        "consumed_by": [
+          "sales-supervisor",
+          "account-representative",
+          "marketing-specialist"
+        ],
+        "necessity": "Without this check, accepted orders and incomplete papers can overstate usable acquisition outcomes and understate support needs.",
+        "authority_sources": [
+          "google_docs_mock.documents#DOC-WELCOME",
+          "google_drive_mock.items#POL-ORDER-2"
+        ]
+      },
+      {
+        "worker_id": "marketing-specialist",
+        "inputs": [
+          "google_sheets_mock.sheets#SH-SPEND",
+          "google_sheets_mock.sheets#SH-SOURCES",
+          "meta_ads_mock.campaigns#CAM-DECOR",
+          "meta_ads_mock.campaigns#CAM-START",
+          "meta_ads_mock.campaigns#CAM-RETURN",
+          "meta_ads_mock.adSets#AS-DECOR",
+          "meta_ads_mock.adSets#AS-START",
+          "meta_ads_mock.adSets#AS-RETURN"
+        ],
+        "produces": "Comparable campaign economics, spending alternatives and implemented settings.",
+        "consumed_by": [
+          "sales-supervisor",
+          "account-representative"
+        ],
+        "necessity": "The other participants cannot establish effective campaign spending or implement the approved advertising scope with their supplied access.",
+        "authority_sources": [
+          "google_drive_mock.items#POL-AUTH-3"
+        ]
+      }
+    ],
+    "alternative_successes": [
+      "Maintain multiple campaigns with bounded support and a justified comparison.",
+      "Reduce budgets, partially pause or fully pause the three campaigns while preserving every customer obligation.",
+      "Use a different reproducible comparison method that explicitly respects unequal campaign age and incomplete attribution."
+    ],
+    "prohibited_shortcuts": [
+      "Copy seeded historical summaries as a new decision.",
+      "Equate a platform result with reseller eligibility.",
+      "Invent credit acceptance, future conversions or additional staff capacity.",
+      "Broaden access or bypass specialist reports.",
+      "Claim implementation without matching persisted business records."
+    ]
+  }
+}

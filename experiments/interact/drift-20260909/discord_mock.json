@@ -1,0 +1,184 @@
+{
+  "app_id": "discord_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activeVoiceChannel",
+    "channels",
+    "currentUser",
+    "dmConversations",
+    "dms",
+    "messages",
+    "roles",
+    "servers",
+    "threads",
+    "ui",
+    "users"
+  ],
+  "observed": [
+    "activeVoiceChannel",
+    "channels",
+    "currentUser",
+    "dmConversations",
+    "dms",
+    "messages",
+    "roles",
+    "servers",
+    "threads",
+    "ui",
+    "users"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 12,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "servers": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "icon",
+        "ownerId",
+        "channels",
+        "roles",
+        "members",
+        "categories",
+        "description",
+        "boostCount",
+        "boostTier"
+      ],
+      "keyed_by_id": true
+    },
+    "channels": {
+      "kind": "object",
+      "count": 11,
+      "record_fields": [
+        "id",
+        "serverId",
+        "name",
+        "type",
+        "category",
+        "topic",
+        "position",
+        "isNsfw",
+        "slowMode",
+        "pinnedMessageIds",
+        "lastMessageId",
+        "unreadCount",
+        "permissions"
+      ],
+      "keyed_by_id": true
+    },
+    "messages": {
+      "kind": "object",
+      "count": 25,
+      "record_fields": [
+        "id",
+        "channelId",
+        "userId",
+        "content",
+        "timestamp",
+        "editedTimestamp",
+        "reactions",
+        "attachments",
+        "embeds",
+        "mentions",
+        "mentionEveryone",
+        "pinned",
+        "type",
+        "referencedMessageId",
+        "threadId",
+        "isEdited"
+      ],
+      "keyed_by_id": true
+    },
+    "threads": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "channelId",
+        "messageId",
+        "name",
+        "ownerId",
+        "messages",
+        "messageCount",
+        "memberCount",
+        "archived",
+        "locked",
+        "createdAt"
+      ],
+      "keyed_by_id": true
+    },
+    "users": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "username",
+        "discriminator",
+        "avatar",
+        "status",
+        "customStatus",
+        "aboutMe",
+        "roles",
+        "badges",
+        "bannerColor",
+        "joinedAt",
+        "isBot"
+      ],
+      "keyed_by_id": true
+    },
+    "roles": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "serverId",
+        "name",
+        "color",
+        "position",
+        "permissions",
+        "hoist",
+        "mentionable"
+      ],
+      "keyed_by_id": true
+    },
+    "dmConversations": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "recipientId",
+        "messages",
+        "lastMessageTimestamp",
+        "unreadCount"
+      ],
+      "keyed_by_id": true
+    },
+    "activeVoiceChannel": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    },
+    "dms": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "ui": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

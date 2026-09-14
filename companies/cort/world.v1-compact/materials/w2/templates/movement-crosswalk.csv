@@ -1,0 +1,1 @@
+instruction_id,entity_id,expected_version,acceptance_id,transaction_id,status,effective_at,before_custody,after_custody,physical_report_id,receipt_id,condition_report_id,reservation_id,exception_owner

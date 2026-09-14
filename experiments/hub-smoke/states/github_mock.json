@@ -1,0 +1,51 @@
+{
+  "currentUser": {"id": "u1", "username": "mira-haddad", "name": "Mira Haddad", "email": "mira.haddad@kestrel-transit.example", "avatar": "https://ui-avatars.com/api/?name=Mira+Haddad&background=1F6FEB&color=fff", "bio": "Platform lead at Kestrel Transit Authority", "location": "Tacoma, WA", "company": "Kestrel Transit Authority", "website": "https://kestrel-transit.example", "joinedAt": "2021-03-08T00:00:00Z"},
+  "users": [
+    {"id": "u1", "username": "mira-haddad", "name": "Mira Haddad", "email": "mira.haddad@kestrel-transit.example", "avatar": "https://ui-avatars.com/api/?name=Mira+Haddad&background=1F6FEB&color=fff", "bio": "Platform lead at Kestrel Transit Authority", "location": "Tacoma, WA", "company": "Kestrel Transit Authority", "website": "https://kestrel-transit.example", "joinedAt": "2021-03-08T00:00:00Z"},
+    {"id": "u2", "username": "jonas-berg", "name": "Jonas Berg", "email": "jonas.berg@kestrel-transit.example", "avatar": "https://ui-avatars.com/api/?name=Jonas+Berg&background=8957E5&color=fff", "bio": "Backend engineer", "location": "Tacoma, WA", "company": "Kestrel Transit Authority", "website": "", "joinedAt": "2022-07-19T00:00:00Z"}
+  ],
+  "repos": [
+    {"id": "r1", "ownerId": "u1", "name": "fare-gateway", "description": "Fare payment gateway and reconciliation jobs for Kestrel Transit", "language": "TypeScript", "languages": {"TypeScript": 82, "SQL": 12, "Shell": 6}, "stars": 4, "forks": 1, "watchers": 6, "isPrivate": true, "defaultBranch": "main", "topics": ["payments", "transit"], "license": "None", "homepage": "", "hasWiki": true, "hasIssues": true, "hasProjects": true, "updatedAt": "2026-09-05T17:20:00Z", "createdAt": "2023-02-14T10:00:00Z"},
+    {"id": "r2", "ownerId": "u1", "name": "route-timetables", "description": "GTFS timetable exports and validation", "language": "Python", "languages": {"Python": 95, "Makefile": 5}, "stars": 9, "forks": 3, "watchers": 7, "isPrivate": false, "defaultBranch": "main", "topics": ["gtfs"], "license": "MIT", "homepage": "", "hasWiki": false, "hasIssues": true, "hasProjects": false, "updatedAt": "2026-08-28T12:00:00Z", "createdAt": "2022-05-02T09:00:00Z"}
+  ],
+  "branches": [
+    {"id": "b1", "repoId": "r1", "name": "main", "lastCommitId": "c1"},
+    {"id": "b2", "repoId": "r1", "name": "fix/refund-rounding", "lastCommitId": "c2"},
+    {"id": "b3", "repoId": "r2", "name": "main", "lastCommitId": "c3"}
+  ],
+  "files": [
+    {"id": "f1", "repoId": "r1", "branch": "main", "path": "README.md", "content": "# fare-gateway\n\nFare payment gateway for Kestrel Transit Authority.", "language": "Markdown"},
+    {"id": "f2", "repoId": "r2", "branch": "main", "path": "README.md", "content": "# route-timetables\n\nGTFS exports.", "language": "Markdown"}
+  ],
+  "commits": [
+    {"id": "c1", "repoId": "r1", "branch": "main", "message": "Add nightly reconciliation job", "authorId": "u1", "date": "2026-09-05T17:20:00Z", "additions": 120, "deletions": 8},
+    {"id": "c2", "repoId": "r1", "branch": "fix/refund-rounding", "message": "Round refunds to the cent before posting", "authorId": "u2", "date": "2026-09-06T09:10:00Z", "additions": 14, "deletions": 3},
+    {"id": "c3", "repoId": "r2", "branch": "main", "message": "Validate stop_times ordering", "authorId": "u1", "date": "2026-08-28T12:00:00Z", "additions": 40, "deletions": 2}
+  ],
+  "issues": [
+    {"id": "i1", "repoId": "r1", "number": 1, "title": "Refund amounts off by one cent on split fares", "description": "Riders report refunds of 2.74 instead of 2.75 when a transfer fare is split.", "status": "open", "authorId": "u2", "assignees": ["u1"], "labels": ["l1"], "milestone": "m1", "column": "inprogress", "isPinned": true, "reactions": {}, "createdAt": "2026-09-02T08:30:00Z", "closedAt": null, "comments": [{"id": "ic1", "authorId": "u1", "content": "Reproduced with the September fare table.", "date": "2026-09-02T11:00:00Z", "reactions": {}}]},
+    {"id": "i2", "repoId": "r2", "number": 1, "title": "Export fails on routes with no weekend service", "description": "", "status": "closed", "authorId": "u1", "assignees": [], "labels": [], "milestone": null, "column": "done", "isPinned": false, "reactions": {}, "createdAt": "2026-08-20T08:30:00Z", "closedAt": "2026-08-28T12:05:00Z", "comments": []}
+  ],
+  "pullRequests": [
+    {"id": "p1", "repoId": "r1", "number": 2, "title": "Fix refund rounding on split fares", "description": "Closes #1", "baseBranch": "main", "compareBranch": "fix/refund-rounding", "status": "open", "isDraft": false, "authorId": "u2", "assignees": ["u2"], "labels": ["l1"], "milestone": "m1", "mergeStrategy": null, "mergedAt": null, "mergedBy": null, "createdAt": "2026-09-06T09:15:00Z", "closedAt": null, "comments": [], "reviewers": [{"userId": "u1", "status": "pending", "date": null, "body": ""}], "checks": [{"name": "ci/unit-tests", "status": "success", "detail": "212 passed"}]}
+  ],
+  "wiki": [
+    {"id": "w1", "repoId": "r1", "title": "Home", "content": "Operational runbook for fare-gateway.", "createdAt": "2023-03-01T10:00:00Z", "updatedAt": "2026-06-11T10:00:00Z"}
+  ],
+  "actions": [
+    {"id": "a1", "repoId": "r1", "name": "CI", "status": "success", "runNumber": 418, "branch": "fix/refund-rounding", "event": "pull_request", "duration": "3m 12s", "date": "2026-09-06T09:16:00Z", "triggeredBy": "u2"}
+  ],
+  "notifications": [
+    {"id": "n1", "type": "review_requested", "repoId": "r1", "issueNumber": 2, "title": "Fix refund rounding on split fares", "isRead": false, "date": "2026-09-06T09:15:00Z"}
+  ],
+  "labels": [
+    {"id": "l1", "repoId": "r1", "name": "bug", "color": "d73a4a", "description": "Something isn't working"}
+  ],
+  "milestones": [
+    {"id": "m1", "repoId": "r1", "title": "September fare change", "description": "Everything needed for the 2026-09-15 fare table", "dueDate": "2026-09-15", "state": "open", "createdAt": "2026-08-01T10:00:00Z"}
+  ],
+  "discussions": [],
+  "releases": [
+    {"id": "rel1", "repoId": "r2", "tag": "v2.3.0", "title": "v2.3.0", "body": "Adds stop_times validation.", "authorId": "u1", "date": "2026-08-28T13:00:00Z", "isDraft": false, "assets": []}
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "user": {
+    "id": "user_1", "name": "Farida Nwosu", "email": "farida.nwosu@lantern-ridge-hoa.example", "title": "Board Treasurer", "company": "Lantern Ridge Homeowners Association", "avatar": null,
+    "signatureDataUrl": null, "initialsDataUrl": null, "memberSince": "2025-03-14T00:00:00Z",
+    "settings": {"defaultReminderDays": 3, "defaultExpirationDays": 90, "timezone": "America/Denver"}
+  },
+  "envelopes": [
+    {
+      "id": "env_1", "subject": "Lantern Ridge Pool Maintenance Contract 2027", "message": "Please review and sign the annual pool service agreement.", "status": "sent",
+      "createdAt": "2026-09-03T15:00:00Z", "sentAt": "2026-09-03T15:20:00Z", "completedAt": null, "voidedAt": null, "declinedAt": null, "lastActivityAt": "2026-09-05T10:02:00Z", "expiresAt": "2026-12-02T15:20:00Z",
+      "senderId": "user_1", "folderId": "fld_1", "templateId": "tpl_1", "reminderEnabled": true, "reminderDays": 3, "reminderFrequency": 2,
+      "documents": [{"id": "doc_1_1", "name": "Pool Service Agreement 2027.pdf", "pageCount": 6, "order": 1, "fileUrl": "https://picsum.photos/seed/lrpool/800/1100", "fileType": "pdf"}],
+      "recipients": [
+        {"id": "rec_1_1", "name": "Gideon Park", "email": "gideon.park@clearwater-pools.example", "role": "signer", "routingOrder": 1, "status": "delivered", "signedAt": null, "viewedAt": "2026-09-05T10:02:00Z", "deliveredAt": "2026-09-03T15:21:00Z", "declinedAt": null, "declineReason": null},
+        {"id": "rec_1_2", "name": "Farida Nwosu", "email": "farida.nwosu@lantern-ridge-hoa.example", "role": "signer", "routingOrder": 2, "status": "created", "signedAt": null, "viewedAt": null, "deliveredAt": null, "declinedAt": null, "declineReason": null}
+      ],
+      "fields": [
+        {"id": "fld_sig_1", "type": "signature", "recipientId": "rec_1_1", "documentId": "doc_1_1", "pageNumber": 6, "x": 80, "y": 640, "width": 200, "height": 50, "value": null, "required": true, "label": "Sign here", "readOnly": false, "fontSize": 12, "fontColor": "#000000"},
+        {"id": "fld_date_1", "type": "dateSigned", "recipientId": "rec_1_1", "documentId": "doc_1_1", "pageNumber": 6, "x": 320, "y": 640, "width": 140, "height": 30, "value": null, "required": true, "label": "Date", "readOnly": true, "fontSize": 10, "fontColor": "#000000"}
+      ],
+      "history": [
+        {"id": "evt_1_1", "timestamp": "2026-09-03T15:00:00Z", "action": "created", "actorName": "Farida Nwosu", "actorEmail": "farida.nwosu@lantern-ridge-hoa.example", "details": "Envelope created"},
+        {"id": "evt_1_2", "timestamp": "2026-09-03T15:20:00Z", "action": "sent", "actorName": "Farida Nwosu", "actorEmail": "farida.nwosu@lantern-ridge-hoa.example", "details": "Envelope sent to Gideon Park"},
+        {"id": "evt_1_3", "timestamp": "2026-09-05T10:02:00Z", "action": "viewed", "actorName": "Gideon Park", "actorEmail": "gideon.park@clearwater-pools.example", "details": "Recipient viewed the envelope"}
+      ]
+    },
+    {
+      "id": "env_2", "subject": "Clubhouse Rental Agreement - Ortega Family", "message": "Rental terms for the October 10 reservation.", "status": "draft",
+      "createdAt": "2026-09-06T18:40:00Z", "sentAt": null, "completedAt": null, "voidedAt": null, "declinedAt": null, "lastActivityAt": "2026-09-06T18:40:00Z", "expiresAt": null,
+      "senderId": "user_1", "folderId": null, "templateId": null, "reminderEnabled": false, "reminderDays": 3, "reminderFrequency": 2,
+      "documents": [{"id": "doc_2_1", "name": "Clubhouse Rental Terms.pdf", "pageCount": 2, "order": 1, "fileUrl": "https://picsum.photos/seed/lrclub/800/1100", "fileType": "pdf"}],
+      "recipients": [{"id": "rec_2_1", "name": "Renata Ortega", "email": "renata.ortega@mail.example", "role": "signer", "routingOrder": 1, "status": "created", "signedAt": null, "viewedAt": null, "deliveredAt": null, "declinedAt": null, "declineReason": null}],
+      "fields": [],
+      "history": [{"id": "evt_2_1", "timestamp": "2026-09-06T18:40:00Z", "action": "created", "actorName": "Farida Nwosu", "actorEmail": "farida.nwosu@lantern-ridge-hoa.example", "details": "Envelope created"}]
+    }
+  ],
+  "templates": [
+    {"id": "tpl_1", "name": "Vendor Service Agreement", "description": "Annual service contract for HOA vendors", "createdAt": "2025-06-01T12:00:00Z", "lastUsedAt": "2026-09-03T15:00:00Z", "usageCount": 5, "ownerId": "user_1", "shared": true,
+     "documents": [{"id": "tdoc_1", "name": "Vendor Service Agreement.pdf", "pageCount": 6, "order": 1, "fileUrl": "https://picsum.photos/seed/lrvendor/800/1100", "fileType": "pdf"}],
+     "roles": [{"id": "role_1", "name": "Vendor", "role": "signer", "routingOrder": 1}, {"id": "role_2", "name": "Treasurer", "role": "signer", "routingOrder": 2}],
+     "fields": []}
+  ],
+  "folders": [
+    {"id": "fld_1", "name": "Vendor Contracts", "parentFolder": null, "createdAt": "2025-06-01T12:00:00Z"}
+  ],
+  "contacts": [
+    {"id": "ct_1", "name": "Gideon Park", "email": "gideon.park@clearwater-pools.example", "company": "Clearwater Pools", "title": "Owner"},
+    {"id": "ct_2", "name": "Renata Ortega", "email": "renata.ortega@mail.example", "company": "", "title": "Resident"}
+  ],
+  "auditLog": [
+    {"id": "aud_1", "timestamp": "2026-09-03T15:00:00Z", "action": "CREATE_ENVELOPE", "details": "Created Lantern Ridge Pool Maintenance Contract 2027", "envelopeId": "env_1"},
+    {"id": "aud_2", "timestamp": "2026-09-03T15:20:00Z", "action": "SEND_ENVELOPE", "details": "Sent to Gideon Park", "envelopeId": "env_1"}
+  ]
+}

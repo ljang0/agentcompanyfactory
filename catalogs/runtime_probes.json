@@ -1,0 +1,189 @@
+{
+  "gmail_mock": {
+    "collection": "drafts",
+    "marker": "Audit saved value 2026",
+    "route": "/",
+    "prepare": [
+      {
+        "op": "click",
+        "role": "button",
+        "name": "Compose"
+      }
+    ],
+    "steps": [
+      {
+        "op": "fill",
+        "placeholder": "Subject",
+        "value": "Audit saved value 2026"
+      }
+    ]
+  },
+  "slack_mock": {
+    "collection": "messages",
+    "marker": "Audit saved value 2026",
+    "route": "/",
+    "prepare": [],
+    "steps": [
+      {
+        "op": "fill",
+        "selector": "[placeholder^='Message #'], [placeholder^='Message @']",
+        "index": 0,
+        "value": "Audit saved value 2026"
+      },
+      {
+        "op": "click",
+        "selector": "button.send-btn",
+        "index": 0
+      }
+    ]
+  },
+  "google_calendar_mock": {
+    "collection": "events",
+    "marker": "Audit saved value 2026",
+    "route": "/",
+    "prepare": [
+      {
+        "op": "click",
+        "role": "button",
+        "name": "Create"
+      }
+    ],
+    "steps": [
+      {
+        "op": "fill",
+        "placeholder": "Add title",
+        "value": "Audit saved value 2026"
+      },
+      {
+        "op": "click",
+        "role": "button",
+        "name": "Save"
+      }
+    ]
+  },
+  "google_docs_mock": {
+    "collection": "documents",
+    "marker": "Audit saved value 2026",
+    "route": "/document/{document_id}",
+    "prepare": [],
+    "steps": [
+      {
+        "op": "fill",
+        "selector": ".doc-title-input",
+        "value": "Audit saved value 2026"
+      },
+      {
+        "op": "press",
+        "selector": ".doc-title-input",
+        "value": "Enter"
+      }
+    ]
+  },
+  "google_drive_mock": {
+    "collection": "items",
+    "marker": "Audit saved value 2026",
+    "route": "/",
+    "prepare": [
+      {
+        "op": "click",
+        "role": "button",
+        "name": "New"
+      },
+      {
+        "op": "click",
+        "role": "button",
+        "name": "New folder"
+      }
+    ],
+    "steps": [
+      {
+        "op": "fill",
+        "selector": "form input",
+        "value": "Audit saved value 2026",
+        "index": 1
+      },
+      {
+        "op": "click",
+        "role": "button",
+        "name": "Create"
+      }
+    ]
+  },
+  "google_sheets_mock": {
+    "collection": "sheets",
+    "marker": "Audit saved value 2026",
+    "route": "/spreadsheet",
+    "prepare": [],
+    "steps": [
+      {
+        "op": "fill",
+        "selector": "input[aria-label=\"Formula bar\"]",
+        "value": "Audit saved value 2026"
+      },
+      {
+        "op": "press",
+        "selector": "input[aria-label=\"Formula bar\"]",
+        "value": "Enter"
+      }
+    ]
+  },
+  "hubspot_mock": {
+    "collection": "tasks",
+    "marker": "Audit saved value 2026",
+    "route": "/tasks",
+    "prepare": [
+      {
+        "op": "click",
+        "role": "button",
+        "name": "Create Task"
+      }
+    ],
+    "steps": [
+      {
+        "op": "fill",
+        "placeholder": "Task title",
+        "value": "Audit saved value 2026"
+      },
+      {
+        "op": "click",
+        "role": "button",
+        "name": "Create Task",
+        "index": 1
+      }
+    ]
+  },
+  "meta_ads_mock": {
+    "collection": "adSets",
+    "marker": "Probe saved value 2026",
+    "route": "/",
+    "prepare": [
+      {
+        "op": "click",
+        "role": "button",
+        "name": "Create"
+      },
+      {
+        "op": "click",
+        "role": "button",
+        "name": "New ad set or ad"
+      }
+    ],
+    "steps": [
+      {
+        "op": "select_option",
+        "selector": "select.field-select",
+        "value": "{campaign_id}"
+      },
+      {
+        "op": "fill",
+        "placeholder": "Enter ad set name",
+        "value": "Probe saved value 2026"
+      },
+      {
+        "op": "click",
+        "role": "button",
+        "name": "Continue"
+      }
+    ]
+  }
+}

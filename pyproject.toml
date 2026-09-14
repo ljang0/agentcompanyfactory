@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "company-envs"
+version = "0.1.0"
+description = "Research-backed synthetic company and workflow generation"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.12,<3",
+    "requests>=2.32,<3",
+    "beautifulsoup4>=4.13,<5",
+    "pypdf>=6,<7",
+    "fonttools>=4,<5",
+    "sentence-transformers>=5,<6",
+    "torch>=2.6,<3",
+    "fpdf2>=2.8.8",
+    "python-docx>=1.2.0",
+    "openpyxl>=3.1.5",
+    "python-pptx>=1.0.2",
+    "pillow>=10",
+]
+
+[project.scripts]
+company-envs = "company_envs.__main__:main"
+
+[project.optional-dependencies]
+browser = ["playwright>=1.50,<2"]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.12"]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110

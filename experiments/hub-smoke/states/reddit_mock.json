@@ -1,0 +1,31 @@
+{
+  "currentUser": {"id": "u1", "username": "quiet_cartographer", "avatar": "https://picsum.photos/seed/quietcarto/64/64", "postKarma": 1240, "commentKarma": 3865, "cakeDay": "2021-04-12", "about": "Maps, transit and municipal minutiae.", "joinedSubreddits": ["s1", "s2"], "savedPosts": ["p2"], "savedComments": [], "hiddenPosts": []},
+  "users": [
+    {"id": "u1", "username": "quiet_cartographer", "avatar": "https://picsum.photos/seed/quietcarto/64/64", "postKarma": 1240, "commentKarma": 3865, "cakeDay": "2021-04-12", "about": "Maps, transit and municipal minutiae."},
+    {"id": "u2", "username": "brasswick_bakes", "avatar": "https://picsum.photos/seed/brasswick/64/64", "postKarma": 9820, "commentKarma": 2210, "cakeDay": "2019-10-03", "about": "Home baker in Brasswick."},
+    {"id": "u3", "username": "mod_terrance", "avatar": "https://picsum.photos/seed/terrance/64/64", "postKarma": 410, "commentKarma": 15400, "cakeDay": "2016-02-27", "about": "Moderator of r/Brasswick."}
+  ],
+  "subreddits": [
+    {"id": "s1", "name": "Brasswick", "description": "News and discussion for the town of Brasswick and surrounding villages.", "icon": "https://picsum.photos/seed/brasswicksub/64/64", "bannerColor": "#1F5F8B", "members": 18420, "online": 312, "created": "2013-06-01", "rules": ["Be civil", "No real estate spam", "Flair your posts"], "moderators": ["u3"], "flairs": [{"id": "f1", "text": "Local News", "color": "#FFFFFF", "bgColor": "#1F5F8B"}, {"id": "f2", "text": "Question", "color": "#000000", "bgColor": "#FFD635"}]},
+    {"id": "s2", "name": "Sourdough", "description": "Wild yeast, long ferments, open crumb.", "icon": "https://picsum.photos/seed/sourdoughsub/64/64", "bannerColor": "#8B5A2B", "members": 640000, "online": 4100, "created": "2011-03-14", "rules": ["Post crumb shots with recipe"], "moderators": ["u2"], "flairs": [{"id": "f3", "text": "Crumb Shot", "color": "#FFFFFF", "bgColor": "#8B5A2B"}]}
+  ],
+  "posts": [
+    {"id": "p1", "subredditId": "s1", "userId": "u3", "title": "Brasswick Route 9 bus detour starts Monday for canal bridge repairs", "content": "The council confirmed the Route 9 will detour via Mill Lane for six weeks while the canal bridge deck is replaced. Temporary stops at Foundry Street and the library.", "type": "text", "url": null, "flairId": "f1", "upvotes": 342, "downvotes": 12, "created": "2026-09-06T14:20:00Z", "isStickied": true, "isLocked": false, "isSpoiler": false, "isNSFW": false, "commentIds": ["c1", "c2"], "awards": [], "pollOptions": null},
+    {"id": "p2", "subredditId": "s2", "userId": "u2", "title": "First decent ear on a 78% hydration country loaf", "content": "Cold retard 14 hours, baked in a dutch oven at 250C for 20 min lid on.", "type": "image", "url": "https://picsum.photos/seed/loaf78/800/600", "flairId": "f3", "upvotes": 2210, "downvotes": 40, "created": "2026-09-05T09:05:00Z", "isStickied": false, "isLocked": false, "isSpoiler": false, "isNSFW": false, "commentIds": ["c3"], "awards": ["a1"], "pollOptions": null}
+  ],
+  "comments": [
+    {"id": "c1", "postId": "p1", "parentId": null, "userId": "u1", "content": "Will the temporary library stop have a shelter? It gets grim there in October.", "upvotes": 58, "downvotes": 1, "created": "2026-09-06T15:00:00Z", "isEdited": false, "isDistinguished": false, "awards": []},
+    {"id": "c2", "postId": "p1", "parentId": "c1", "userId": "u3", "content": "Council says a temporary shelter goes in this week.", "upvotes": 40, "downvotes": 0, "created": "2026-09-06T15:30:00Z", "isEdited": false, "isDistinguished": true, "awards": []},
+    {"id": "c3", "postId": "p2", "parentId": null, "userId": "u1", "content": "That scoring angle is perfect.", "upvotes": 120, "downvotes": 2, "created": "2026-09-05T10:00:00Z", "isEdited": false, "isDistinguished": false, "awards": []}
+  ],
+  "votes": [
+    {"id": "v1", "userId": "u1", "targetId": "p1", "targetType": "post", "value": 1},
+    {"id": "v2", "userId": "u1", "targetId": "p2", "targetType": "post", "value": 1}
+  ],
+  "notifications": [
+    {"id": "n1", "type": "reply", "fromUserId": "u3", "postId": "p1", "commentId": "c2", "content": "mod_terrance replied to your comment", "read": false, "created": "2026-09-06T15:30:00Z"}
+  ],
+  "awards": [
+    {"id": "a1", "name": "Golden Crust", "icon": "🥖", "cost": 500}
+  ]
+}

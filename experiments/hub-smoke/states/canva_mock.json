@@ -1,0 +1,107 @@
+{
+ "canvasConfig": {
+  "width": 800,
+  "height": 600,
+  "backgroundColor": "#ffffff"
+ },
+ "elements": [
+  {
+   "id": "bg-1",
+   "type": "rect",
+   "x": 0,
+   "y": 0,
+   "width": 800,
+   "height": 600,
+   "fill": "#F2E2C4"
+  },
+  {
+   "id": "band-1",
+   "type": "rect",
+   "x": 40,
+   "y": 48,
+   "width": 720,
+   "height": 120,
+   "fill": "#8C3B1B"
+  },
+  {
+   "id": "title-1",
+   "type": "text",
+   "x": 70,
+   "y": 76,
+   "text": "Marrowfield Cider Autumn Market",
+   "fontSize": 44,
+   "fontFamily": "Georgia",
+   "fontWeight": "bold",
+   "fill": "#FFFFFF"
+  },
+  {
+   "id": "sub-1",
+   "type": "text",
+   "x": 70,
+   "y": 210,
+   "text": "Saturday 17 October, Aldersey Green",
+   "fontSize": 28,
+   "fontFamily": "Georgia",
+   "fill": "#3B2A17"
+  },
+  {
+   "id": "body-1",
+   "type": "text",
+   "x": 70,
+   "y": 272,
+   "text": "Tasting flights of the 2026 pressing, orchard tours at 11 and 2, and the cellar door open until six.",
+   "fontSize": 20,
+   "fontFamily": "Arial",
+   "fill": "#3B2A17"
+  },
+  {
+   "id": "seal-1",
+   "type": "circle",
+   "x": 640,
+   "y": 430,
+   "radius": 90,
+   "fill": "#6B8E3D",
+   "opacity": 0.9,
+   "visible": true
+  },
+  {
+   "id": "seal-text-1",
+   "type": "text",
+   "x": 575,
+   "y": 420,
+   "text": "Pressed on site",
+   "fontSize": 22,
+   "fontFamily": "Arial",
+   "fontStyle": "italic",
+   "fill": "#FFFFFF"
+  },
+  {
+   "id": "footer-1",
+   "type": "text",
+   "x": 70,
+   "y": 530,
+   "text": "marrowfield-cider.example  |  stall enquiries: market@marrowfield-cider.example",
+   "fontSize": 16,
+   "fontFamily": "Arial",
+   "fill": "#5A4632"
+  }
+ ],
+ "uploads": [
+  {
+   "id": "upload-1",
+   "url": "https://picsum.photos/seed/marrowfield-orchard/640/420",
+   "name": "orchard-row-2026.png",
+   "type": "image/png",
+   "createdAt": "2026-09-01T08:30:00.000Z"
+  },
+  {
+   "id": "upload-2",
+   "url": "https://picsum.photos/seed/marrowfield-press/640/420",
+   "name": "press-house-interior.png",
+   "type": "image/png",
+   "createdAt": "2026-09-02T14:05:00.000Z"
+  }
+ ],
+ "lastShareLink": "",
+ "timestamp": "2026-09-02T14:05:00.000Z"
+}

@@ -1,0 +1,191 @@
+{
+  "app_id": "12306_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "currentSearch",
+    "notifications",
+    "orders",
+    "passengers",
+    "searchFilters",
+    "searchHistory",
+    "selectedPassengers",
+    "selectedSeatClass",
+    "selectedTrain",
+    "stations",
+    "trains",
+    "user",
+    "waitlistOrders"
+  ],
+  "observed": [
+    "currentSearch",
+    "notifications",
+    "orders",
+    "passengers",
+    "searchFilters",
+    "searchHistory",
+    "selectedPassengers",
+    "selectedSeatClass",
+    "selectedTrain",
+    "stations",
+    "trains",
+    "user",
+    "waitlistOrders"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "user": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "stations": {
+      "kind": "array",
+      "count": 39,
+      "record_fields": [
+        "code",
+        "name",
+        "city",
+        "pinyin",
+        "initial",
+        "isHot"
+      ],
+      "keyed_by_id": false
+    },
+    "trains": {
+      "kind": "array",
+      "count": 47,
+      "record_fields": [
+        "trainNo",
+        "trainType",
+        "departureStation",
+        "arrivalStation",
+        "departureTime",
+        "arrivalTime",
+        "duration",
+        "durationMinutes",
+        "stops",
+        "seatAvailability",
+        "prices"
+      ],
+      "keyed_by_id": false
+    },
+    "passengers": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "name",
+        "idType",
+        "idNumber",
+        "phone",
+        "passengerType",
+        "isDefault",
+        "seatPreference"
+      ],
+      "keyed_by_id": false
+    },
+    "orders": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "orderNo",
+        "status",
+        "trainNo",
+        "trainType",
+        "departureStation",
+        "arrivalStation",
+        "departureDate",
+        "departureTime",
+        "arrivalTime",
+        "duration",
+        "seatClass",
+        "seatNo",
+        "price",
+        "passengers",
+        "createdAt",
+        "paidAt",
+        "canChange",
+        "canRefund"
+      ],
+      "keyed_by_id": false
+    },
+    "waitlistOrders": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "trainNo",
+        "departureStation",
+        "arrivalStation",
+        "departureDate",
+        "seatClass",
+        "passengers",
+        "status",
+        "depositAmount",
+        "createdAt",
+        "deadline"
+      ],
+      "keyed_by_id": false
+    },
+    "searchHistory": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "from",
+        "to",
+        "date",
+        "timestamp"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "type",
+        "title",
+        "content",
+        "read",
+        "createdAt",
+        "relatedOrderId"
+      ],
+      "keyed_by_id": false
+    },
+    "currentSearch": {
+      "kind": "object",
+      "count": 7,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "selectedTrain": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    },
+    "selectedSeatClass": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    },
+    "selectedPassengers": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "searchFilters": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

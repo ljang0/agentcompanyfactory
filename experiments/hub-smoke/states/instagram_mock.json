@@ -1,0 +1,26 @@
+{
+  "users": {
+    "user_admin": {"id": "user_admin", "username": "foxglove_farmstand", "name": "Foxglove Farm Stand", "avatar": "https://picsum.photos/150/150?random=1", "bio": "Family farm stand in Dutchess County. Open Sat-Sun, May through November.", "website": "https://foxglovefarmstand.example", "followers": ["user_2", "user_3"], "following": ["user_2", "user_3"], "isVerified": false, "isPrivate": false},
+    "user_2": {"id": "user_2", "username": "millbrook_bakes", "name": "Millbrook Bakes", "avatar": "https://picsum.photos/150/150?random=2", "bio": "Sourdough and pies, baked in Millbrook.", "website": "", "followers": ["user_admin"], "following": ["user_admin", "user_3"], "isVerified": false, "isPrivate": false},
+    "user_3": {"id": "user_3", "username": "hudson_valley_eats", "name": "Hudson Valley Eats", "avatar": "https://picsum.photos/150/150?random=3", "bio": "Where to eat between Beacon and Hudson.", "website": "", "followers": ["user_admin", "user_2"], "following": ["user_admin"], "isVerified": true, "isPrivate": false}
+  },
+  "posts": [
+    {"id": "post_1", "userId": "user_admin", "images": ["https://picsum.photos/800/800?random=101"], "caption": "Foxglove Farm Stand harvest weekend: heirloom tomatoes, sweet corn and the first Honeycrisp of the season. #farmstand #dutchesscounty", "location": "Stanfordville, NY", "likes": ["user_2", "user_3"], "comments": [{"id": "c_1", "userId": "user_2", "text": "Saving a flat of tomatoes for pie day!", "created": "2026-09-02T14:10:00Z", "likes": ["user_admin"]}], "saved": [], "created": "2026-09-02T12:00:00Z"},
+    {"id": "post_2", "userId": "user_2", "images": ["https://picsum.photos/800/800?random=102"], "caption": "Peach galettes cooling. Made with Foxglove peaches, naturally.", "location": "Millbrook, NY", "likes": ["user_admin"], "comments": [], "saved": [], "created": "2026-09-01T16:30:00Z"},
+    {"id": "post_3", "userId": "user_3", "images": ["https://picsum.photos/800/800?random=103"], "caption": "Weekend picks: three farm stands worth the drive.", "location": "Rhinebeck, NY", "likes": [], "comments": [], "saved": [], "created": "2026-08-30T09:00:00Z"}
+  ],
+  "stories": [
+    {"id": "story_1", "userId": "user_2", "image": "https://picsum.photos/400/700?random=201", "created": "2026-09-03T08:00:00Z", "expires": "2026-09-04T08:00:00Z", "viewed": false}
+  ],
+  "notifications": [
+    {"id": "notif_1", "type": "like", "fromUserId": "user_3", "postId": "post_1", "commentId": null, "text": "liked your photo.", "read": false, "created": "2026-09-02T13:00:00Z"},
+    {"id": "notif_2", "type": "comment", "fromUserId": "user_2", "postId": "post_1", "commentId": "c_1", "text": "commented: Saving a flat of tomatoes for pie day!", "read": false, "created": "2026-09-02T14:10:00Z"}
+  ],
+  "conversations": [
+    {"id": "conv_1", "participants": ["user_admin", "user_2"], "lastMessage": "Can I pick up 20 lbs of peaches Friday?", "lastMessageTime": "2026-09-02T18:00:00Z", "unreadCount": 1}
+  ],
+  "messages": [
+    {"id": "msg_1", "conversationId": "conv_1", "senderId": "user_2", "text": "Can I pick up 20 lbs of peaches Friday?", "type": "text", "imageUrl": null, "sharedPostId": null, "created": "2026-09-02T18:00:00Z"}
+  ],
+  "savedPostIds": ["post_2"]
+}

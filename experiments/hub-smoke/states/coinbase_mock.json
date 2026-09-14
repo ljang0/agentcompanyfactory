@@ -1,0 +1,36 @@
+{
+  "currentUser": {
+    "id": "user_1", "name": "Rafael Okonkwo", "email": "rafael.okonkwo@bluefin-treasury.example",
+    "avatar": "https://picsum.photos/100/100?random=coinbase_user", "cashBalance": 12500.00, "defaultCurrency": "USD"
+  },
+  "assets": [
+    { "id": "btc", "name": "Bitcoin", "symbol": "BTC", "currentPrice": 64200.00, "priceChange24h": 1.42, "priceChange7d": -2.10, "marketCap": 1265000000000, "volume24h": 31200000000, "circulatingSupply": 19700000, "maxSupply": 21000000, "about": "Bitcoin is the first decentralized digital currency.", "category": "Store of Value", "iconColor": "#F7931A", "priceHistory": [65500, 65100, 64800, 63900, 64400, 63800, 64200] },
+    { "id": "eth", "name": "Ethereum", "symbol": "ETH", "currentPrice": 3120.00, "priceChange24h": 0.85, "priceChange7d": 3.40, "marketCap": 375000000000, "volume24h": 14800000000, "circulatingSupply": 120200000, "maxSupply": null, "about": "Ethereum is a programmable blockchain for smart contracts.", "category": "Smart Contract Platform", "iconColor": "#627EEA", "priceHistory": [3010, 3040, 3085, 3060, 3110, 3095, 3120] },
+    { "id": "mrd", "name": "Meridian Token", "symbol": "MRD", "currentPrice": 4.85, "priceChange24h": -3.20, "priceChange7d": 6.75, "marketCap": 485000000, "volume24h": 22000000, "circulatingSupply": 100000000, "maxSupply": 250000000, "about": "Meridian Token powers a fictional cross-border settlement network.", "category": "Payments", "iconColor": "#0E7C7B", "priceHistory": [4.50, 4.62, 4.71, 4.90, 5.02, 4.99, 4.85] }
+  ],
+  "holdings": [
+    { "assetId": "btc", "quantity": 0.35, "avgBuyPrice": 58900.00 },
+    { "assetId": "eth", "quantity": 4.0, "avgBuyPrice": 2950.00 },
+    { "assetId": "mrd", "quantity": 1500, "avgBuyPrice": 4.10 }
+  ],
+  "transactions": [
+    { "id": "tx_3", "type": "buy", "assetId": "mrd", "quantity": 1500, "pricePerUnit": 4.10, "totalAmount": 6150.00, "fee": 9.23, "status": "completed", "timestamp": "2026-09-03T14:20:00Z" },
+    { "id": "tx_2", "type": "send", "assetId": "eth", "quantity": 0.5, "pricePerUnit": 3005.00, "totalAmount": 1502.50, "fee": 5.00, "status": "completed", "timestamp": "2026-08-28T09:05:00Z", "toAddress": "0x9f2c...41ab" },
+    { "id": "tx_1", "type": "buy", "assetId": "btc", "quantity": 0.35, "pricePerUnit": 58900.00, "totalAmount": 20615.00, "fee": 30.92, "status": "completed", "timestamp": "2026-08-15T10:30:00Z" }
+  ],
+  "watchlist": ["btc", "mrd"],
+  "paymentMethods": [
+    { "id": "pm_1", "type": "bank", "name": "Harbor Federal Credit Union", "last4": "3310", "isDefault": true },
+    { "id": "pm_2", "type": "card", "brand": "Visa", "last4": "7721", "isDefault": false }
+  ],
+  "notifications": [
+    { "id": "notif_1", "type": "trade_completed", "message": "Your purchase of 1500 MRD was completed", "timestamp": "2026-09-03T14:20:00Z", "read": false, "assetId": "mrd" },
+    { "id": "notif_2", "type": "security", "message": "New sign-in from Chrome on Linux", "timestamp": "2026-09-01T08:00:00Z", "read": true, "assetId": null }
+  ],
+  "ui": {
+    "currentView": "home", "selectedAsset": null, "searchQuery": "",
+    "tradeModal": { "isOpen": false, "mode": "buy", "assetId": null },
+    "sendReceiveModal": { "isOpen": false, "mode": "send", "assetId": null },
+    "sortBy": "marketCap", "sortDirection": "desc", "historyFilter": "all"
+  }
+}

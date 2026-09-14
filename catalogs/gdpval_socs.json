@@ -1,0 +1,271 @@
+{
+ "_meta": {
+  "doc": "GDPVal occupations -> SOC by exact BLS OEWS title (scripts/build_gdpval_socs.py)."
+ },
+ "socs": {
+  "39-6012": {
+   "title": "Concierges",
+   "sectors": [
+    "Real Estate and Rental and Leasing"
+   ]
+  },
+  "41-2021": {
+   "title": "Counter and Rental Clerks",
+   "sectors": [
+    "Real Estate and Rental and Leasing"
+   ]
+  },
+  "11-9141": {
+   "title": "Property, Real Estate, and Community Association Managers",
+   "sectors": [
+    "Real Estate and Rental and Leasing"
+   ]
+  },
+  "41-9021": {
+   "title": "Real Estate Brokers",
+   "sectors": [
+    "Real Estate and Rental and Leasing"
+   ]
+  },
+  "41-9022": {
+   "title": "Real Estate Sales Agents",
+   "sectors": [
+    "Real Estate and Rental and Leasing"
+   ]
+  },
+  "11-3012": {
+   "title": "Administrative Services Managers",
+   "sectors": [
+    "Government"
+   ]
+  },
+  "21-1021": {
+   "title": "Child, Family, and School Social Workers",
+   "sectors": [
+    "Government"
+   ]
+  },
+  "13-1041": {
+   "title": "Compliance Officers",
+   "sectors": [
+    "Government"
+   ]
+  },
+  "33-1012": {
+   "title": "First-Line Supervisors of Police and Detectives",
+   "sectors": [
+    "Government"
+   ]
+  },
+  "39-9032": {
+   "title": "Recreation Workers",
+   "sectors": [
+    "Government"
+   ]
+  },
+  "13-1020": {
+   "title": "Buyers and Purchasing Agents",
+   "sectors": [
+    "Manufacturing"
+   ]
+  },
+  "51-1011": {
+   "title": "First-Line Supervisors of Production and Operating Workers",
+   "sectors": [
+    "Manufacturing"
+   ]
+  },
+  "17-2112": {
+   "title": "Industrial Engineers",
+   "sectors": [
+    "Manufacturing"
+   ]
+  },
+  "17-2141": {
+   "title": "Mechanical Engineers",
+   "sectors": [
+    "Manufacturing"
+   ]
+  },
+  "43-5071": {
+   "title": "Shipping, Receiving, and Inventory Clerks",
+   "sectors": [
+    "Manufacturing"
+   ]
+  },
+  "13-2011": {
+   "title": "Accountants and Auditors",
+   "sectors": [
+    "Professional, Scientific, and Technical Services"
+   ]
+  },
+  "11-3021": {
+   "title": "Computer and Information Systems Managers",
+   "sectors": [
+    "Professional, Scientific, and Technical Services"
+   ]
+  },
+  "23-1011": {
+   "title": "Lawyers",
+   "sectors": [
+    "Professional, Scientific, and Technical Services"
+   ]
+  },
+  "13-1082": {
+   "title": "Project Management Specialists",
+   "sectors": [
+    "Professional, Scientific, and Technical Services"
+   ]
+  },
+  "15-1252": {
+   "title": "Software Developers",
+   "sectors": [
+    "Professional, Scientific, and Technical Services"
+   ]
+  },
+  "43-1011": {
+   "title": "First-Line Supervisors of Office and Administrative Support Workers",
+   "sectors": [
+    "Health Care and Social Assistance"
+   ]
+  },
+  "43-6013": {
+   "title": "Medical Secretaries and Administrative Assistants",
+   "sectors": [
+    "Health Care and Social Assistance"
+   ]
+  },
+  "11-9111": {
+   "title": "Medical and Health Services Managers",
+   "sectors": [
+    "Health Care and Social Assistance"
+   ]
+  },
+  "29-1171": {
+   "title": "Nurse Practitioners",
+   "sectors": [
+    "Health Care and Social Assistance"
+   ]
+  },
+  "29-1141": {
+   "title": "Registered Nurses",
+   "sectors": [
+    "Health Care and Social Assistance"
+   ]
+  },
+  "43-4051": {
+   "title": "Customer Service Representatives",
+   "sectors": [
+    "Finance and Insurance"
+   ]
+  },
+  "11-3031": {
+   "title": "Financial Managers",
+   "sectors": [
+    "Finance and Insurance"
+   ]
+  },
+  "13-2051": {
+   "title": "Financial and Investment Analysts",
+   "sectors": [
+    "Finance and Insurance"
+   ]
+  },
+  "13-2052": {
+   "title": "Personal Financial Advisors",
+   "sectors": [
+    "Finance and Insurance"
+   ]
+  },
+  "41-3031": {
+   "title": "Securities, Commodities, and Financial Services Sales Agents",
+   "sectors": [
+    "Finance and Insurance"
+   ]
+  },
+  "41-1011": {
+   "title": "First-Line Supervisors of Retail Sales Workers",
+   "sectors": [
+    "Retail Trade"
+   ]
+  },
+  "11-1021": {
+   "title": "General and Operations Managers",
+   "sectors": [
+    "Retail Trade"
+   ]
+  },
+  "29-1051": {
+   "title": "Pharmacists",
+   "sectors": [
+    "Retail Trade"
+   ]
+  },
+  "33-9021": {
+   "title": "Private Detectives and Investigators",
+   "sectors": [
+    "Retail Trade"
+   ]
+  },
+  "41-1012": {
+   "title": "First-Line Supervisors of Non-Retail Sales Workers",
+   "sectors": [
+    "Wholesale Trade"
+   ]
+  },
+  "43-4151": {
+   "title": "Order Clerks",
+   "sectors": [
+    "Wholesale Trade"
+   ]
+  },
+  "11-2022": {
+   "title": "Sales Managers",
+   "sectors": [
+    "Wholesale Trade"
+   ]
+  },
+  "41-4012": {
+   "title": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",
+   "sectors": [
+    "Wholesale Trade"
+   ]
+  },
+  "41-4011": {
+   "title": "Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",
+   "sectors": [
+    "Wholesale Trade"
+   ]
+  },
+  "27-4011": {
+   "title": "Audio and Video Technicians",
+   "sectors": [
+    "Information"
+   ]
+  },
+  "27-3041": {
+   "title": "Editors",
+   "sectors": [
+    "Information"
+   ]
+  },
+  "27-4032": {
+   "title": "Film and Video Editors",
+   "sectors": [
+    "Information"
+   ]
+  },
+  "27-3023": {
+   "title": "News Analysts, Reporters, and Journalists",
+   "sectors": [
+    "Information"
+   ]
+  },
+  "27-2012": {
+   "title": "Producers and Directors",
+   "sectors": [
+    "Information"
+   ]
+  }
+ }
+}

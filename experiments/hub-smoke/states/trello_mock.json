@@ -1,0 +1,24 @@
+{
+  "currentUser": "u1",
+  "users": {
+    "u1": {"id": "u1", "name": "Soraya Lindqvist-Abara", "username": "soraya", "initials": "SL", "email": "soraya@brightwaterplumbing.example", "avatarUrl": ""},
+    "u2": {"id": "u2", "name": "Desmond Achterberg", "username": "desmond", "initials": "DA", "email": "desmond@brightwaterplumbing.example", "avatarUrl": ""}
+  },
+  "boards": {
+    "board-1": {"id": "board-1", "title": "Brightwater Plumbing Service Calls", "description": "Daily dispatch board", "background": "#0079BF", "listIds": ["list-1", "list-2", "list-3"], "starred": true, "visibility": "workspace", "archivedListIds": [], "archivedCardIds": [], "labels": [{"id": "label-1", "name": "Emergency", "color": "red"}, {"id": "label-2", "name": "Estimate", "color": "yellow"}], "memberIds": ["u1", "u2"], "createdAt": "2026-01-12T10:00:00.000Z"},
+    "board-2": {"id": "board-2", "title": "Van Maintenance", "description": "", "background": "#519839", "listIds": ["list-4"], "starred": false, "visibility": "private", "archivedListIds": [], "archivedCardIds": [], "labels": [], "memberIds": ["u1"], "createdAt": "2026-03-02T10:00:00.000Z"}
+  },
+  "lists": {
+    "list-1": {"id": "list-1", "title": "Scheduled", "boardId": "board-1", "cardIds": ["card-1", "card-2"], "archived": false},
+    "list-2": {"id": "list-2", "title": "On Site", "boardId": "board-1", "cardIds": ["card-3"], "archived": false},
+    "list-3": {"id": "list-3", "title": "Invoiced", "boardId": "board-1", "cardIds": [], "archived": false},
+    "list-4": {"id": "list-4", "title": "Due this month", "boardId": "board-2", "cardIds": ["card-4"], "archived": false}
+  },
+  "cards": {
+    "card-1": {"id": "card-1", "title": "Water heater replacement - 14 Alder Ct", "description": "50 gal gas unit, customer approved estimate #2261.", "listId": "list-1", "boardId": "board-1", "labelIds": ["label-2"], "memberIds": ["u2"], "dueDate": "2026-09-08T15:00:00.000Z", "startDate": null, "completed": false, "cover": null, "checklists": [{"id": "cl-1", "title": "Parts", "items": [{"id": "cli-1", "text": "Pick up heater from supplier", "completed": true, "assigneeId": "u2", "dueDate": null}, {"id": "cli-2", "text": "Flex connectors and gas valve", "completed": false, "assigneeId": null, "dueDate": null}]}], "comments": [{"id": "cm-1", "type": "comment", "userId": "u1", "text": "Customer prefers a morning slot.", "createdAt": "2026-09-03T14:00:00.000Z", "editedAt": null}], "attachments": [], "archived": false, "watching": true, "position": 0, "createdAt": "2026-09-02T10:00:00.000Z"},
+    "card-2": {"id": "card-2", "title": "Annual backflow test - Riverside Bakery", "description": "", "listId": "list-1", "boardId": "board-1", "labelIds": [], "memberIds": ["u1"], "dueDate": "2026-09-10T13:00:00.000Z", "startDate": null, "completed": false, "cover": null, "checklists": [], "comments": [], "attachments": [], "archived": false, "watching": false, "position": 1, "createdAt": "2026-09-03T09:00:00.000Z"},
+    "card-3": {"id": "card-3", "title": "Burst pipe - Maple Street duplex", "description": "Emergency call, water shut off at main.", "listId": "list-2", "boardId": "board-1", "labelIds": ["label-1"], "memberIds": ["u2"], "dueDate": "2026-09-04T18:00:00.000Z", "startDate": "2026-09-04T14:00:00.000Z", "completed": false, "cover": {"type": "color", "value": "#EB5A46"}, "checklists": [], "comments": [{"id": "cm-2", "type": "activity", "userId": "u2", "text": "moved this card from Scheduled to On Site", "createdAt": "2026-09-04T14:05:00.000Z", "editedAt": null}], "attachments": [{"id": "att-1", "name": "leak-photo.jpg", "url": "https://picsum.photos/600/400?random=77", "uploadedAt": "2026-09-04T14:10:00.000Z", "uploadedBy": "u2"}], "archived": false, "watching": true, "position": 0, "createdAt": "2026-09-04T13:50:00.000Z"},
+    "card-4": {"id": "card-4", "title": "Van 2 oil change and tire rotation", "description": "", "listId": "list-4", "boardId": "board-2", "labelIds": [], "memberIds": ["u1"], "dueDate": "2026-09-20T16:00:00.000Z", "startDate": null, "completed": false, "cover": null, "checklists": [], "comments": [], "attachments": [], "archived": false, "watching": false, "position": 0, "createdAt": "2026-09-01T10:00:00.000Z"}
+  },
+  "boardOrder": ["board-1", "board-2"]
+}

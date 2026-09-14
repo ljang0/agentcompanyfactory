@@ -1,0 +1,40 @@
+{
+  "user": {"id": "user_1", "firstName": "Delphine", "lastName": "Marchetti-Osei", "email": "delphine@copperleafnursery.example", "company": "Copperleaf Nursery & Garden Center", "timezone": "America/Chicago", "avatar": null, "plan": "Standard", "monthlyEmailLimit": 25000, "emailsSentThisMonth": 6120, "defaultFromName": "Copperleaf Nursery", "defaultFromEmail": "hello@copperleafnursery.example", "defaultReplyTo": "hello@copperleafnursery.example", "billingCycle": "monthly", "nextBillDate": "2026-10-01", "monthlyPrice": 45},
+  "audiences": [
+    {"id": "aud_1", "name": "Copperleaf Garden Club", "stats": {"totalContacts": 3, "subscribed": 2, "unsubscribed": 1, "cleaned": 0, "nonSubscribed": 0}, "defaultFromName": "Copperleaf Nursery", "defaultFromEmail": "hello@copperleafnursery.example", "createdAt": "2025-03-10T10:00:00Z", "growthHistory": [{"date": "2026-08-01", "subscribed": 1}, {"date": "2026-08-15", "subscribed": 2}, {"date": "2026-09-01", "subscribed": 2}]}
+  ],
+  "contacts": [
+    {"id": "contact_1", "email": "rosa.gutierrez@example", "firstName": "Rosa", "lastName": "Gutierrez", "phone": "", "address": "", "tags": ["perennials"], "status": "subscribed", "audienceId": "aud_1", "signupSource": "In-store signup", "signupDate": "2026-04-12T15:00:00Z", "lastChanged": "2026-04-12T15:00:00Z", "emailActivity": {"opens": 6, "clicks": 2}, "rating": 4},
+    {"id": "contact_2", "email": "hal.brennan@example", "firstName": "Hal", "lastName": "Brennan", "phone": "", "address": "", "tags": ["trees"], "status": "subscribed", "audienceId": "aud_1", "signupSource": "Website form", "signupDate": "2026-06-02T15:00:00Z", "lastChanged": "2026-06-02T15:00:00Z", "emailActivity": {"opens": 3, "clicks": 1}, "rating": 3},
+    {"id": "contact_3", "email": "june.okwu@example", "firstName": "June", "lastName": "Okwu", "phone": "", "address": "", "tags": [], "status": "unsubscribed", "audienceId": "aud_1", "signupSource": "Website form", "signupDate": "2025-09-20T15:00:00Z", "lastChanged": "2026-07-11T09:00:00Z", "emailActivity": {"opens": 1, "clicks": 0}, "rating": 1}
+  ],
+  "tags": [
+    {"id": "tag_1", "name": "perennials", "contactCount": 1, "createdAt": "2025-03-12T10:00:00Z"},
+    {"id": "tag_2", "name": "trees", "contactCount": 1, "createdAt": "2025-03-12T10:00:00Z"}
+  ],
+  "segments": [
+    {"id": "seg_1", "audienceId": "aud_1", "name": "Active gardeners (opened last 3 sends)", "conditions": [{"field": "emailActivity.opens", "op": "greater", "value": 2}], "conditionMatch": "all", "memberCount": 1, "type": "saved", "createdAt": "2026-05-01T10:00:00Z", "updatedAt": "2026-08-20T10:00:00Z"}
+  ],
+  "campaigns": [
+    {"id": "camp_1", "audienceId": "aud_1", "name": "Copperleaf Fall Planting Guide 2026", "subject": "Your fall planting guide is here", "previewText": "Bulbs, shrubs and the last of the tomatoes", "type": "regular", "status": "sent", "fromName": "Copperleaf Nursery", "fromEmail": "hello@copperleafnursery.example", "replyTo": "hello@copperleafnursery.example", "templateId": "tmpl_1", "content": "<h1>Fall planting</h1>", "settings": {"trackOpens": true, "trackClicks": true}, "recipientCount": 2, "schedule": null, "stats": {"sent": 2, "delivered": 2, "opened": 2, "clicked": 1, "bounced": 0, "unsubscribed": 0, "openRate": 1.0, "clickRate": 0.5}, "createdAt": "2026-08-28T10:00:00Z", "updatedAt": "2026-09-01T09:00:00Z", "sentAt": "2026-09-01T09:00:00Z"},
+    {"id": "camp_2", "audienceId": "aud_1", "name": "Bulb Weekend Sale", "subject": "20% off all bulbs this weekend", "previewText": "", "type": "regular", "status": "draft", "fromName": "Copperleaf Nursery", "fromEmail": "hello@copperleafnursery.example", "replyTo": "hello@copperleafnursery.example", "templateId": "tmpl_1", "content": "", "settings": {"trackOpens": true, "trackClicks": true}, "recipientCount": 0, "schedule": null, "stats": {"sent": 0, "delivered": 0, "opened": 0, "clicked": 0, "bounced": 0, "unsubscribed": 0, "openRate": 0, "clickRate": 0}, "createdAt": "2026-09-03T10:00:00Z", "updatedAt": "2026-09-03T10:00:00Z", "sentAt": null}
+  ],
+  "templates": [
+    {"id": "tmpl_1", "name": "Seasonal Newsletter", "category": "newsletter", "thumbnail": "", "html": "<h1>{{title}}</h1>", "createdAt": "2025-03-15T10:00:00Z", "updatedAt": "2026-02-01T10:00:00Z"}
+  ],
+  "automations": [
+    {"id": "auto_1", "name": "Welcome to the Garden Club", "trigger": "signup", "steps": [{"id": "step_1", "type": "email", "delayDays": 0, "subject": "Welcome to Copperleaf"}], "status": "active", "audienceId": "aud_1", "stats": {"sent": 41, "opened": 30, "clicked": 12}, "createdAt": "2025-04-01T10:00:00Z", "updatedAt": "2026-06-01T10:00:00Z"}
+  ],
+  "contentFiles": [
+    {"id": "file_1", "name": "fall-bulbs-hero.jpg", "url": "https://picsum.photos/1200/600?random=31", "type": "image/jpeg", "size": 284000, "createdAt": "2026-08-27T10:00:00Z"}
+  ],
+  "landingPages": [],
+  "signupForms": [
+    {"id": "form_1", "name": "Garden Club signup", "type": "embedded", "audienceId": "aud_1", "fields": ["email", "firstName"], "subscribers": 2, "status": "active", "createdAt": "2025-03-12T10:00:00Z"}
+  ],
+  "surveys": [],
+  "notifications": [
+    {"id": "notif_1", "type": "campaign", "title": "Campaign sent", "message": "Copperleaf Fall Planting Guide 2026 was sent to 2 subscribers.", "read": false, "createdAt": "2026-09-01T09:05:00Z", "link": "/campaigns/camp_1", "actionLabel": "View report"}
+  ],
+  "ecommerce": {"connected": false, "platform": null, "storeName": null, "totalRevenue": 0, "totalOrders": 0, "averageOrderValue": 0, "topProducts": []}
+}

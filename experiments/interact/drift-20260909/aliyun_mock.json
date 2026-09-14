@@ -1,0 +1,367 @@
+{
+  "app_id": "aliyun_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "alarms",
+    "billing",
+    "currentRegion",
+    "disks",
+    "ecsInstances",
+    "eips",
+    "favoriteProducts",
+    "messages",
+    "operationLog",
+    "ossBuckets",
+    "rdsInstances",
+    "recentProducts",
+    "regions",
+    "securityGroups",
+    "slbInstances",
+    "user",
+    "vpcs",
+    "vswitches"
+  ],
+  "observed": [
+    "alarms",
+    "billing",
+    "currentRegion",
+    "disks",
+    "ecsInstances",
+    "eips",
+    "favoriteProducts",
+    "messages",
+    "operationLog",
+    "ossBuckets",
+    "rdsInstances",
+    "recentProducts",
+    "regions",
+    "securityGroups",
+    "slbInstances",
+    "tickets",
+    "user",
+    "vpcs",
+    "vswitches"
+  ],
+  "undocumented_so_unseedable": [
+    "tickets"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "user": {
+      "kind": "object",
+      "count": 11,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "currentRegion": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "regions": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "name",
+        "zone"
+      ],
+      "keyed_by_id": false
+    },
+    "ecsInstances": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "name",
+        "status",
+        "regionId",
+        "zoneId",
+        "instanceType",
+        "vCPU",
+        "memory",
+        "osType",
+        "osName",
+        "imageId",
+        "publicIpAddress",
+        "privateIpAddress",
+        "vpcId",
+        "vswitchId",
+        "securityGroupIds",
+        "keyPairName",
+        "billingMethod",
+        "renewalStatus",
+        "creationTime",
+        "expiredTime",
+        "tags",
+        "systemDiskSize",
+        "systemDiskCategory",
+        "dataDiskCount"
+      ],
+      "keyed_by_id": false
+    },
+    "disks": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "name",
+        "status",
+        "regionId",
+        "zoneId",
+        "category",
+        "performanceLevel",
+        "size",
+        "instanceId",
+        "device",
+        "diskType",
+        "billingMethod",
+        "encrypted",
+        "creationTime",
+        "tags"
+      ],
+      "keyed_by_id": false
+    },
+    "securityGroups": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "regionId",
+        "vpcId",
+        "type",
+        "instanceCount",
+        "creationTime",
+        "rules"
+      ],
+      "keyed_by_id": false
+    },
+    "vpcs": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "status",
+        "regionId",
+        "cidrBlock",
+        "description",
+        "vswitchCount",
+        "routeTableCount",
+        "creationTime",
+        "isDefault",
+        "tags"
+      ],
+      "keyed_by_id": false
+    },
+    "vswitches": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "status",
+        "vpcId",
+        "zoneId",
+        "cidrBlock",
+        "availableIpCount",
+        "description",
+        "creationTime",
+        "isDefault"
+      ],
+      "keyed_by_id": false
+    },
+    "eips": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "status",
+        "ipAddress",
+        "bandwidth",
+        "internetChargeType",
+        "instanceId",
+        "instanceType",
+        "regionId",
+        "billingMethod",
+        "creationTime"
+      ],
+      "keyed_by_id": false
+    },
+    "ossBuckets": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "name",
+        "regionId",
+        "storageClass",
+        "acl",
+        "creationTime",
+        "objectCount",
+        "storageSize",
+        "lastModifiedTime",
+        "versioning",
+        "encryption",
+        "tags",
+        "files"
+      ],
+      "keyed_by_id": false
+    },
+    "rdsInstances": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "status",
+        "regionId",
+        "zoneId",
+        "engine",
+        "engineVersion",
+        "instanceType",
+        "vCPU",
+        "memory",
+        "storageSize",
+        "storageType",
+        "connectionString",
+        "port",
+        "vpcId",
+        "vswitchId",
+        "billingMethod",
+        "creationTime",
+        "expiredTime",
+        "category",
+        "maxConnections",
+        "maxIOPS",
+        "tags",
+        "databases",
+        "accounts",
+        "backups"
+      ],
+      "keyed_by_id": false
+    },
+    "slbInstances": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "status",
+        "regionId",
+        "addressType",
+        "address",
+        "networkType",
+        "vpcId",
+        "bandwidth",
+        "billingMethod",
+        "creationTime",
+        "listenerCount",
+        "backendServerCount",
+        "listeners",
+        "backendServers"
+      ],
+      "keyed_by_id": false
+    },
+    "billing": {
+      "kind": "object",
+      "count": 7,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "alarms": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "status",
+        "product",
+        "metricName",
+        "threshold",
+        "comparisonOperator",
+        "statistics",
+        "period",
+        "evaluationCount",
+        "instanceId",
+        "contactGroups",
+        "enabled",
+        "creationTime"
+      ],
+      "keyed_by_id": false
+    },
+    "operationLog": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "eventTime",
+        "serviceName",
+        "eventName",
+        "resourceType",
+        "resourceId",
+        "resourceName",
+        "userAgent",
+        "sourceIpAddress",
+        "result"
+      ],
+      "keyed_by_id": false
+    },
+    "messages": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "type",
+        "title",
+        "content",
+        "isRead",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "tickets": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "title",
+        "category",
+        "priority",
+        "status",
+        "createdAt",
+        "updatedAt",
+        "description",
+        "replies"
+      ],
+      "keyed_by_id": false
+    },
+    "recentProducts": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "nameZh",
+        "path",
+        "lastVisited"
+      ],
+      "keyed_by_id": false
+    },
+    "favoriteProducts": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "nameZh",
+        "path"
+      ],
+      "keyed_by_id": false
+    }
+  }
+}

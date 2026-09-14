@@ -1,0 +1,58 @@
+{
+  "identity": "per_worker_proxy",
+  "workers": [
+    "w1",
+    "w2",
+    "w3",
+    "w4",
+    "w5",
+    "w6"
+  ],
+  "identities_file": "world/identities.json",
+  "apps": [
+    {
+      "app_id": "Zendesk_mock",
+      "hub_seedable": true,
+      "schema": "catalogs/app_schemas/Zendesk_mock.md",
+      "top_level_keys": [
+        "currentUser",
+        "users",
+        "organizations",
+        "groups",
+        "tickets",
+        "comments",
+        "views",
+        "macros",
+        "tags",
+        "ui"
+      ],
+      "identity_key": "currentUser",
+      "state_file": "world/Zendesk_mock.state.json"
+    },
+    {
+      "app_id": "google_sheets_mock",
+      "hub_seedable": true,
+      "schema": "catalogs/app_schemas/google_sheets_mock.md",
+      "top_level_keys": [
+        "id",
+        "title",
+        "sheets",
+        "activeSheetId",
+        "selectedCell",
+        "selectionRange",
+        "clipboard",
+        "isDragging",
+        "undoStack",
+        "redoStack",
+        "namedRanges",
+        "conditionalFormats",
+        "charts",
+        "showGridlines",
+        "showFormulas",
+        "zoom"
+      ],
+      "identity_key": null,
+      "state_file": "world/google_sheets_mock.state.json"
+    }
+  ]
+}

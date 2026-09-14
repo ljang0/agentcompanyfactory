@@ -1,0 +1,42 @@
+{
+  "account": {"id": "acc-1", "name": "Saltmarsh Kayak Outfitters", "accountId": "482-117-3390", "currency": "USD", "timezone": "America/New_York", "optimizationScore": 81},
+  "campaigns": [
+    {"id": "camp-1", "name": "Saltmarsh Kayak Rentals - Brand Search", "status": "ENABLED", "type": "SEARCH", "budget": 40, "biddingStrategy": "MAXIMIZE_CONVERSIONS", "targetCpa": null, "startDate": "2026-04-01", "endDate": null, "networks": ["SEARCH"], "locations": ["Charleston, SC"], "languages": ["English"], "metrics": {"clicks": 1284, "impressions": 21830, "ctr": 5.88, "avgCpc": 0.92, "cost": 1181.28, "conversions": 143, "conversionRate": 11.14, "costPerConversion": 8.26}},
+    {"id": "camp-2", "name": "Guided Marsh Tours - Generic Search", "status": "PAUSED", "type": "SEARCH", "budget": 25, "biddingStrategy": "MANUAL_CPC", "targetCpa": null, "startDate": "2026-05-10", "endDate": null, "networks": ["SEARCH", "SEARCH_PARTNERS"], "locations": ["South Carolina"], "languages": ["English"], "metrics": {"clicks": 402, "impressions": 15220, "ctr": 2.64, "avgCpc": 1.35, "cost": 542.70, "conversions": 27, "conversionRate": 6.72, "costPerConversion": 20.10}}
+  ],
+  "adGroups": [
+    {"id": "ag-1", "campaignId": "camp-1", "name": "Brand terms", "status": "ENABLED", "defaultBid": 1.00, "metrics": {"clicks": 1284, "impressions": 21830, "ctr": 5.88, "avgCpc": 0.92, "cost": 1181.28, "conversions": 143, "conversionRate": 11.14, "costPerConversion": 8.26}},
+    {"id": "ag-2", "campaignId": "camp-2", "name": "Marsh tour keywords", "status": "ENABLED", "defaultBid": 1.40, "metrics": {"clicks": 402, "impressions": 15220, "ctr": 2.64, "avgCpc": 1.35, "cost": 542.70, "conversions": 27, "conversionRate": 6.72, "costPerConversion": 20.10}}
+  ],
+  "ads": [
+    {"id": "ad-1", "adGroupId": "ag-1", "campaignId": "camp-1", "type": "RESPONSIVE_SEARCH", "status": "ENABLED", "headlines": ["Saltmarsh Kayak Outfitters", "Kayak Rentals in Charleston", "Book Online in 60 Seconds"], "descriptions": ["Single and tandem kayaks by the hour or day.", "Launch from Shem Creek. Free parking."], "finalUrl": "https://saltmarshkayak.example/rentals", "displayUrl": "saltmarshkayak.example/rentals", "metrics": {"clicks": 1284, "impressions": 21830, "ctr": 5.88, "avgCpc": 0.92, "cost": 1181.28, "conversions": 143, "conversionRate": 11.14, "costPerConversion": 8.26}}
+  ],
+  "keywords": [
+    {"id": "kw-1", "adGroupId": "ag-1", "campaignId": "camp-1", "text": "saltmarsh kayak", "matchType": "EXACT", "status": "ENABLED", "bid": 1.00, "qualityScore": 9, "isNegative": false, "metrics": {"clicks": 810, "impressions": 9800, "ctr": 8.27, "avgCpc": 0.71, "cost": 575.10, "conversions": 102, "conversionRate": 12.59, "costPerConversion": 5.64}},
+    {"id": "kw-2", "adGroupId": "ag-2", "campaignId": "camp-2", "text": "kayak marsh tour charleston", "matchType": "PHRASE", "status": "ENABLED", "bid": 1.40, "qualityScore": 6, "isNegative": false, "metrics": {"clicks": 402, "impressions": 15220, "ctr": 2.64, "avgCpc": 1.35, "cost": 542.70, "conversions": 27, "conversionRate": 6.72, "costPerConversion": 20.10}},
+    {"id": "kw-neg-1", "adGroupId": "ag-2", "campaignId": "camp-2", "text": "free", "matchType": "BROAD", "status": "ENABLED", "bid": null, "qualityScore": null, "isNegative": true, "metrics": {"clicks": 0, "impressions": 0, "ctr": 0, "avgCpc": 0, "cost": 0, "conversions": 0, "conversionRate": 0, "costPerConversion": 0}}
+  ],
+  "recommendations": [
+    {"id": "rec-1", "type": "BUDGET", "title": "Raise your budget", "description": "Saltmarsh Kayak Rentals - Brand Search is limited by budget on weekends.", "impact": "HIGH", "estimatedImpact": "+18% clicks", "campaignId": "camp-1", "adGroupId": null, "status": "PENDING"}
+  ],
+  "dailyMetrics": [
+    {"date": "2026-08-29", "campaignId": "camp-1", "clicks": 44, "impressions": 760, "cost": 40.10, "conversions": 5},
+    {"date": "2026-08-30", "campaignId": "camp-1", "clicks": 51, "impressions": 820, "cost": 46.90, "conversions": 6},
+    {"date": "2026-08-31", "campaignId": "camp-1", "clicks": 39, "impressions": 700, "cost": 35.20, "conversions": 4},
+    {"date": "2026-09-01", "campaignId": "camp-1", "clicks": 47, "impressions": 790, "cost": 43.30, "conversions": 5},
+    {"date": "2026-09-02", "campaignId": "camp-1", "clicks": 42, "impressions": 730, "cost": 38.60, "conversions": 5},
+    {"date": "2026-09-03", "campaignId": "camp-1", "clicks": 45, "impressions": 750, "cost": 41.40, "conversions": 6},
+    {"date": "2026-08-29", "campaignId": "camp-2", "clicks": 12, "impressions": 480, "cost": 16.20, "conversions": 1},
+    {"date": "2026-08-30", "campaignId": "camp-2", "clicks": 15, "impressions": 520, "cost": 20.30, "conversions": 1},
+    {"date": "2026-08-31", "campaignId": "camp-2", "clicks": 9, "impressions": 410, "cost": 12.10, "conversions": 0}
+  ],
+  "notifications": [
+    {"id": "notif-1", "type": "ALERT", "title": "Campaign limited by budget", "message": "Saltmarsh Kayak Rentals - Brand Search lost impression share on Saturday.", "timestamp": "2026-09-01T09:00:00Z", "read": false, "campaignId": "camp-1"}
+  ],
+  "searchTerms": [
+    {"id": "st-1", "searchTerm": "saltmarsh kayak rental shem creek", "matchedKeywordId": "kw-1", "campaignId": "camp-1", "adGroupId": "ag-1", "clicks": 120, "impressions": 900, "cost": 84.00, "conversions": 19}
+  ],
+  "selectedDateRange": {"start": "2026-08-05", "end": "2026-09-03", "label": "Last 30 days"},
+  "selectedCampaignFilter": null,
+  "currentView": "overview"
+}

@@ -1,0 +1,35 @@
+{
+  "user": {"userId": "user_1", "nickname": "Lin Haoyu", "avatar": "https://picsum.photos/100/100?random=1", "wechatId": "linhaoyu_ferry", "signature": "Harbor Lantern Ferry ops", "region": "Xiamen Siming", "gender": "男", "coverImage": "https://picsum.photos/800/300?random=cover", "phone": "138****7702"},
+  "contacts": [
+    {"userId": "user_2", "nickname": "Chen Meiling", "avatar": "https://picsum.photos/100/100?random=2", "wechatId": "meiling_cm", "phone": "139****3310", "signature": "Ticket office lead", "region": "Xiamen Huli", "gender": "女", "tag": "同事", "isStar": true},
+    {"userId": "user_3", "nickname": "Captain Zhou", "avatar": "https://picsum.photos/100/100?random=3", "wechatId": "zhou_captain", "phone": "137****9921", "signature": "Wind and tide", "region": "Xiamen Siming", "gender": "男", "tag": "同事", "isStar": false},
+    {"userId": "user_4", "nickname": "Mom", "avatar": "https://picsum.photos/100/100?random=4", "wechatId": "lin_mother", "phone": "136****1108", "signature": "", "region": "Quanzhou", "gender": "女", "tag": "家人", "isStar": false}
+  ],
+  "conversations": [
+    {"contactId": "group_1", "lastMessage": "Harbor Lantern Ferry: 16:30 sailing delayed 20 min for fog", "lastTime": "2026-09-03T08:12:00Z", "unreadCount": 3, "isGroup": true, "isPinned": true, "isMuted": false, "draft": ""},
+    {"contactId": "user_2", "lastMessage": "Weekend ticket sales report is ready", "lastTime": "2026-09-03T07:40:00Z", "unreadCount": 1, "isGroup": false, "isPinned": false, "isMuted": false, "draft": ""},
+    {"contactId": "user_4", "lastMessage": "Come home for dinner Sunday?", "lastTime": "2026-09-02T12:00:00Z", "unreadCount": 0, "isGroup": false, "isPinned": false, "isMuted": false, "draft": ""}
+  ],
+  "messages": {
+    "group_1": [
+      {"messageId": "msg_001", "senderId": "user_3", "content": "Fog thickening at the north pier.", "type": "text", "timestamp": "2026-09-03T08:05:00Z", "isSelf": false},
+      {"messageId": "msg_002", "senderId": "user_2", "content": "Harbor Lantern Ferry: 16:30 sailing delayed 20 min for fog", "type": "text", "timestamp": "2026-09-03T08:12:00Z", "isSelf": false}
+    ],
+    "user_2": [
+      {"messageId": "msg_003", "senderId": "user_1", "content": "Can you send the weekend numbers?", "type": "text", "timestamp": "2026-09-03T07:30:00Z", "isSelf": true},
+      {"messageId": "msg_004", "senderId": "user_2", "content": "Weekend ticket sales report is ready", "type": "text", "timestamp": "2026-09-03T07:40:00Z", "isSelf": false}
+    ],
+    "user_4": [
+      {"messageId": "msg_005", "senderId": "user_4", "content": "Come home for dinner Sunday?", "type": "text", "timestamp": "2026-09-02T12:00:00Z", "isSelf": false}
+    ]
+  },
+  "moments": [
+    {"postId": "moment_1", "userId": "user_3", "content": "Sunrise from the wheelhouse this morning.", "images": ["https://picsum.photos/400/400?random=61"], "timestamp": "2026-09-03T00:10:00Z", "likes": ["user_1", "user_2"], "comments": [{"commentId": "c1", "userId": "user_1", "content": "Beautiful.", "timestamp": "2026-09-03T00:30:00Z"}], "location": "Xiamen Ferry Terminal"}
+  ],
+  "groups": [
+    {"groupId": "group_1", "name": "Harbor Lantern Ferry Ops", "avatar": "https://picsum.photos/100/100?random=9", "members": ["user_1", "user_2", "user_3"], "createdAt": "2025-04-10T09:00:00Z", "createdBy": "user_1", "description": "Daily sailing coordination", "announcement": "Post delays here first."}
+  ],
+  "favorites": [
+    {"favoriteId": "fav_1", "type": "text", "content": "Tide table link for September", "source": "Captain Zhou", "timestamp": "2026-09-01T10:00:00Z"}
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "organization": { "id": "org-1", "name": "Bramblewood Transit Authority", "slug": "bramblewood-transit", "avatar": null, "dateCreated": "2025-02-01T00:00:00Z", "teams": ["team-1", "team-2"], "members": ["user-1", "user-2", "user-3"], "projects": ["proj-1", "proj-2"] },
+  "currentUser": { "id": "user-1", "name": "Ingrid Castellanos", "email": "ingrid.castellanos@bramblewood-transit.example", "avatar": null, "role": "Admin", "teams": ["team-1", "team-2"], "dateJoined": "2025-02-01T00:00:00Z" },
+  "users": [
+    { "id": "user-1", "name": "Ingrid Castellanos", "email": "ingrid.castellanos@bramblewood-transit.example", "avatar": null, "role": "Admin", "teams": ["team-1", "team-2"], "dateJoined": "2025-02-01T00:00:00Z" },
+    { "id": "user-2", "name": "Tobias Nwachukwu", "email": "tobias.nwachukwu@bramblewood-transit.example", "avatar": null, "role": "Member", "teams": ["team-1"], "dateJoined": "2025-03-10T00:00:00Z" },
+    { "id": "user-3", "name": "Mireille Fontaine", "email": "mireille.fontaine@bramblewood-transit.example", "avatar": null, "role": "Manager", "teams": ["team-2"], "dateJoined": "2025-04-22T00:00:00Z" }
+  ],
+  "teams": [
+    { "id": "team-1", "name": "Rider App", "slug": "rider-app", "avatar": null, "memberCount": 2, "members": ["user-1", "user-2"], "projects": ["proj-1"] },
+    { "id": "team-2", "name": "Fare Backend", "slug": "fare-backend", "avatar": null, "memberCount": 2, "members": ["user-1", "user-3"], "projects": ["proj-2"] }
+  ],
+  "projects": [
+    { "id": "proj-1", "name": "rider-app", "slug": "rider-app", "platform": "javascript-react", "color": "#F5B000", "teams": ["team-1"], "dateCreated": "2025-02-15T00:00:00Z", "stats": { "crashFreeSessions": 98.4, "crashFreeUsers": 99.1, "totalErrors24h": 57, "totalTransactions24h": 8200 }, "latestRelease": "rel-1", "environments": ["production", "staging"] },
+    { "id": "proj-2", "name": "fare-service", "slug": "fare-service", "platform": "python-flask", "color": "#3E7BB6", "teams": ["team-2"], "dateCreated": "2025-02-20T00:00:00Z", "stats": { "crashFreeSessions": 99.6, "crashFreeUsers": 99.7, "totalErrors24h": 12, "totalTransactions24h": 21400 }, "latestRelease": "rel-2", "environments": ["production"] }
+  ],
+  "issues": [
+    { "id": "issue-1", "shortId": "RIDER-APP-1A", "title": "TypeError: Cannot read properties of undefined (reading 'stopId')", "subtitle": "Bramblewood route planner crashed on empty itinerary", "culprit": "src/routes/RoutePlanner.tsx in buildItinerary", "type": "error", "level": "error", "status": "unresolved", "priority": "high", "isUnhandled": true, "project": "proj-1", "assignee": "user-2", "firstSeen": "2026-09-02T07:10:00Z", "lastSeen": "2026-09-06T15:42:00Z", "count": 412, "userCount": 188, "stats14d": [0, 0, 0, 0, 0, 0, 0, 0, 0, 38, 95, 102, 88, 89], "trend": "increasing", "events": ["event-1"], "tags": [ { "key": "browser", "value": "Chrome" }, { "key": "environment", "value": "production" } ], "metadata": { "type": "TypeError", "value": "Cannot read properties of undefined (reading 'stopId')" } },
+    { "id": "issue-2", "shortId": "FARE-SERVICE-2B", "title": "TimeoutError: fare cache lookup exceeded 2s", "subtitle": "redis.get timed out", "culprit": "fare_service/cache.py in get_fare", "type": "error", "level": "warning", "status": "resolved", "priority": "medium", "isUnhandled": false, "project": "proj-2", "assignee": null, "firstSeen": "2026-08-20T11:00:00Z", "lastSeen": "2026-08-28T09:30:00Z", "count": 36, "userCount": 9, "stats14d": [4, 6, 8, 5, 7, 3, 3, 0, 0, 0, 0, 0, 0, 0], "trend": "decreasing", "events": [], "tags": [ { "key": "environment", "value": "production" } ], "metadata": { "type": "TimeoutError", "value": "fare cache lookup exceeded 2s" } }
+  ],
+  "events": {
+    "issue-1": [
+      { "id": "event-1", "title": "TypeError: Cannot read properties of undefined (reading 'stopId')", "message": "Cannot read properties of undefined (reading 'stopId')", "timestamp": "2026-09-06T15:42:00Z", "level": "error", "platform": "javascript", "tags": [ { "key": "browser", "value": "Chrome 129" }, { "key": "environment", "value": "production" } ], "user": { "id": "rider-88123", "email": "rider88123@mail.example", "ip": "198.51.100.14" }, "contexts": { "browser": { "name": "Chrome", "version": "129" }, "os": { "name": "Android", "version": "14" } }, "breadcrumbs": [ { "timestamp": "2026-09-06T15:41:58Z", "category": "ui.click", "message": "button.plan-trip", "level": "info" } ], "stackTrace": { "frames": [ { "filename": "src/routes/RoutePlanner.tsx", "function": "buildItinerary", "lineNo": 142, "colNo": 27, "inApp": true } ] } }
+    ]
+  },
+  "alertRules": [
+    { "id": "alert-1", "name": "Rider app error spike", "type": "error", "status": "triggered", "threshold": 100, "thresholdType": "above", "triggerLabel": "Critical", "dateTriggered": "2026-09-06T14:00:00Z", "dateCreated": "2026-03-01T00:00:00Z", "project": "proj-1", "team": "team-1", "history": [ { "date": "2026-09-06T14:00:00Z", "status": "triggered", "value": 102 } ] }
+  ],
+  "releases": [
+    { "id": "rel-1", "version": "rider-app@3.8.0", "shortVersion": "3.8.0", "dateCreated": "2026-09-01T18:00:00Z", "dateReleased": "2026-09-02T06:00:00Z", "projects": ["proj-1"], "newIssues": 1, "crashFreeSessions": 98.4, "crashFreeUsers": 99.1, "adoption": 82.5, "totalSessions": 41200, "commitCount": 14, "authors": ["user-2"], "lastEvent": "2026-09-06T15:42:00Z" },
+    { "id": "rel-2", "version": "fare-service@1.12.3", "shortVersion": "1.12.3", "dateCreated": "2026-08-29T10:00:00Z", "dateReleased": "2026-08-29T12:00:00Z", "projects": ["proj-2"], "newIssues": 0, "crashFreeSessions": 99.6, "crashFreeUsers": 99.7, "adoption": 100, "totalSessions": 88000, "commitCount": 5, "authors": ["user-3"], "lastEvent": "2026-08-28T09:30:00Z" }
+  ],
+  "dashboards": [
+    { "id": "dash-1", "title": "Rider App Health", "dateCreated": "2026-03-05T00:00:00Z", "createdBy": "user-1", "widgets": [ { "id": "widget-1", "title": "Errors per hour", "displayType": "line", "queries": [ { "name": "errors", "conditions": "event.type:error project:rider-app", "fields": ["count()"] } ] } ] }
+  ],
+  "transactions": [
+    { "id": "txn-1", "name": "GET /api/fares/quote", "project": "proj-2", "tpm": 240, "p50": 85, "p75": 130, "p95": 410, "p99": 900, "failureRate": 0.4, "apdex": 0.96, "totalCount": 345600, "stats24h": [230, 235, 240, 250, 245, 238, 242, 251, 249, 236, 240, 244, 239, 241, 247, 250, 243, 238, 236, 240, 245, 248, 242, 240] }
+  ],
+  "selectedProject": "all",
+  "selectedEnvironment": "all",
+  "dateRange": "14d",
+  "issueListSort": "lastSeen",
+  "issueListTab": "unresolved",
+  "issueSearchQuery": "is:unresolved",
+  "selectedIssues": [],
+  "bookmarkedIssues": []
+}

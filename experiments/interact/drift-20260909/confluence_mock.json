@@ -1,0 +1,111 @@
+{
+ "app_id": "confluence_mock",
+ "source": "posted_to_server",
+ "documented": [
+  "comments",
+  "currentUser",
+  "pages",
+  "spaces",
+  "templates",
+  "users",
+  "versions"
+ ],
+ "observed": [
+  "comments",
+  "currentUser",
+  "pages",
+  "spaces",
+  "templates",
+  "users",
+  "versions"
+ ],
+ "undocumented_so_unseedable": [],
+ "documented_but_app_keeps_none": [],
+ "agrees": true,
+ "shapes": {
+  "users": {
+   "kind": "array",
+   "count": 3,
+   "record_fields": [
+    "id",
+    "username",
+    "displayName",
+    "email",
+    "avatar"
+   ],
+   "keyed_by_id": false
+  },
+  "currentUser": {
+   "kind": "object",
+   "count": 5,
+   "record_fields": null,
+   "keyed_by_id": false
+  },
+  "spaces": {
+   "kind": "array",
+   "count": 2,
+   "record_fields": [
+    "id",
+    "key",
+    "name",
+    "description",
+    "icon"
+   ],
+   "keyed_by_id": false
+  },
+  "pages": {
+   "kind": "array",
+   "count": 3,
+   "record_fields": [
+    "id",
+    "spaceId",
+    "parentId",
+    "title",
+    "content",
+    "authorId",
+    "created",
+    "updated",
+    "version",
+    "labels"
+   ],
+   "keyed_by_id": false
+  },
+  "comments": {
+   "kind": "array",
+   "count": 1,
+   "record_fields": [
+    "id",
+    "pageId",
+    "userId",
+    "content",
+    "created"
+   ],
+   "keyed_by_id": false
+  },
+  "versions": {
+   "kind": "array",
+   "count": 1,
+   "record_fields": [
+    "id",
+    "pageId",
+    "content",
+    "authorId",
+    "created",
+    "version"
+   ],
+   "keyed_by_id": false
+  },
+  "templates": {
+   "kind": "array",
+   "count": 2,
+   "record_fields": [
+    "id",
+    "name",
+    "content"
+   ],
+   "keyed_by_id": false
+  }
+ },
+ "captured_at": "2026-09-10",
+ "note": "Observed 2026-09-10 while porting this app into the catalogue. Filed in the 2026-09-09 batch directory rather than a new dated one so it is read whether tests/test_app_schema_contract.py pins that single directory or globs every drift-* run; captured_at is the real date. Move it to experiments/interact/drift-20260910/ once the glob is the only reader."
+}

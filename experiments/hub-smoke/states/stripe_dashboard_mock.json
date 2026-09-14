@@ -1,0 +1,49 @@
+{
+  "business": {"name": "Juniper Lane Bookshop", "email": "owner@juniperlane-books.example", "url": "https://juniperlane-books.example", "support_email": "help@juniperlane-books.example", "country": "US", "currency": "usd", "timezone": "America/Chicago"},
+  "currentUser": {"id": "user_jlb01", "name": "Hollis Bergstrom", "email": "owner@juniperlane-books.example", "role": "administrator", "avatar": null},
+  "balance": {"available": 418250, "pending": 96400, "reserved": 0, "currency": "usd"},
+  "customers": [
+    {"id": "cus_jlb001", "name": "Riverbend Elementary PTA", "email": "treasurer@riverbend-pta.example", "phone": null, "description": "Bulk classroom orders", "address": {"line1": "88 Riverbend Rd", "line2": null, "city": "Madison", "state": "WI", "postal_code": "53703", "country": "US"}, "balance": 0, "currency": "usd", "default_payment_method": "pm_jlb001", "metadata": {"segment": "schools"}, "created": 1748736000, "livemode": true, "delinquent": false, "total_spent": 184500, "payments_count": 3},
+    {"id": "cus_jlb002", "name": "Dana Okonkwo", "email": "dana.okonkwo@example.com", "phone": null, "description": null, "address": null, "balance": 0, "currency": "usd", "default_payment_method": null, "metadata": {}, "created": 1756425600, "livemode": true, "delinquent": false, "total_spent": 4200, "payments_count": 1}
+  ],
+  "payments": [
+    {"id": "pi_jlb0001", "amount": 62500, "currency": "usd", "status": "succeeded", "description": "Fall reading list - 50 copies", "customer": "cus_jlb001", "customer_email": "treasurer@riverbend-pta.example", "customer_name": "Riverbend Elementary PTA", "payment_method": {"type": "card", "card": {"brand": "visa", "last4": "4417", "exp_month": 8, "exp_year": 2028, "funding": "debit"}}, "amount_received": 62500, "amount_refunded": 0, "refunded": false, "disputed": false, "captured": true, "receipt_email": "treasurer@riverbend-pta.example", "receipt_url": null, "metadata": {"order_id": "JLB-2041"}, "created": 1757001600, "livemode": true, "risk_score": 9, "risk_level": "normal", "outcome": {"type": "authorized", "risk_level": "normal", "risk_score": 9, "reason": null}, "invoice": "in_jlb0001"},
+    {"id": "pi_jlb0002", "amount": 4200, "currency": "usd", "status": "succeeded", "description": "Monthly Staff Picks subscription", "customer": "cus_jlb002", "customer_email": "dana.okonkwo@example.com", "customer_name": "Dana Okonkwo", "payment_method": {"type": "card", "card": {"brand": "mastercard", "last4": "9031", "exp_month": 2, "exp_year": 2027, "funding": "credit"}}, "amount_received": 4200, "amount_refunded": 0, "refunded": false, "disputed": false, "captured": true, "receipt_email": null, "receipt_url": null, "metadata": {}, "created": 1757088000, "livemode": true, "risk_score": 21, "risk_level": "normal", "outcome": {"type": "authorized", "risk_level": "normal", "risk_score": 21, "reason": null}, "invoice": null}
+  ],
+  "products": [
+    {"id": "prod_staffpicks", "name": "Staff Picks Box", "description": "One hardcover and one paperback chosen by our staff each month", "active": true, "images": [], "default_price": "price_staffpicks_monthly", "metadata": {}, "created": 1735689600, "updated": 1751328000, "unit_label": "box"}
+  ],
+  "prices": [
+    {"id": "price_staffpicks_monthly", "product": "prod_staffpicks", "active": true, "currency": "usd", "unit_amount": 4200, "billing_scheme": "per_unit", "type": "recurring", "recurring": {"interval": "month", "interval_count": 1, "usage_type": "licensed"}, "nickname": "Monthly", "metadata": {}, "created": 1735689600}
+  ],
+  "invoices": [
+    {"id": "in_jlb0001", "number": "JLB-0001", "customer": "cus_jlb001", "customer_name": "Riverbend Elementary PTA", "customer_email": "treasurer@riverbend-pta.example", "status": "paid", "amount_due": 62500, "amount_paid": 62500, "amount_remaining": 0, "currency": "usd", "description": "Fall reading list order", "due_date": 1758211200, "collection_method": "send_invoice", "billing_reason": "manual", "subscription": null, "lines": [{"id": "il_jlb0001", "description": "Fall reading list - 50 copies", "amount": 62500, "currency": "usd", "quantity": 50, "price": null, "period": {"start": 1756944000, "end": 1756944000}}], "subtotal": 62500, "tax": 0, "total": 62500, "period_start": 1756944000, "period_end": 1756944000, "created": 1756944000, "paid_at": 1757001600, "metadata": {}}
+  ],
+  "subscriptions": [
+    {"id": "sub_jlb001", "customer": "cus_jlb002", "customer_name": "Dana Okonkwo", "customer_email": "dana.okonkwo@example.com", "status": "active", "items": [{"id": "si_jlb001", "price": "price_staffpicks_monthly", "product": "prod_staffpicks", "product_name": "Staff Picks Box", "quantity": 1, "unit_amount": 4200, "currency": "usd", "interval": "month"}], "current_period_start": 1757088000, "current_period_end": 1759680000, "cancel_at_period_end": false, "canceled_at": null, "ended_at": null, "trial_start": null, "trial_end": null, "collection_method": "charge_automatically", "default_payment_method": null, "latest_invoice": null, "pause_collection": null, "metadata": {}, "created": 1756425600}
+  ],
+  "payouts": [
+    {"id": "po_jlb0001", "amount": 215800, "currency": "usd", "status": "paid", "arrival_date": 1756512000, "method": "standard", "type": "bank_account", "description": "STRIPE PAYOUT", "destination": {"bank_name": "Prairie Community Bank", "last4": "6620", "routing_number": "075000000"}, "created": 1756339200, "metadata": {}}
+  ],
+  "disputes": [],
+  "refunds": [],
+  "balanceTransactions": [
+    {"id": "txn_jlb0001", "amount": 62500, "currency": "usd", "type": "charge", "fee": 1843, "net": 60657, "status": "available", "available_on": 1757174400, "source": "pi_jlb0001", "description": "Fall reading list - 50 copies", "created": 1757001600},
+    {"id": "txn_jlb0002", "amount": 4200, "currency": "usd", "type": "charge", "fee": 152, "net": 4048, "status": "available", "available_on": 1757260800, "source": "pi_jlb0002", "description": "Monthly Staff Picks subscription", "created": 1757088000}
+  ],
+  "events": [
+    {"id": "evt_jlb0001", "type": "payment_intent.succeeded", "created": 1757001600, "data": {"object": {"id": "pi_jlb0001"}}, "request": null, "livemode": true},
+    {"id": "evt_jlb0002", "type": "invoice.paid", "created": 1757001600, "data": {"object": {"id": "in_jlb0001"}}, "request": null, "livemode": true}
+  ],
+  "paymentMethods": [
+    {"id": "pm_jlb001", "type": "card", "card": {"brand": "visa", "last4": "4417", "exp_month": 8, "exp_year": 2028, "funding": "debit"}, "billing_details": {"name": "Riverbend Elementary PTA"}, "created": 1748736000, "customer": "cus_jlb001"}
+  ],
+  "testMode": false,
+  "searchQuery": "",
+  "selectedDateRange": "7d",
+  "metrics": {
+    "today": {"grossVolume": 4200, "grossVolumeChart": [{"time": "00:00", "amount": 0}, {"time": "09:00", "amount": 4200}, {"time": "12:00", "amount": 4200}]},
+    "summary": {"grossVolume": {"amount": 66700, "change": 12.4, "previousAmount": 59340}, "netVolume": {"amount": 64705, "change": 12.1, "previousAmount": 57720}, "disputeActivity": {"rate": 0, "change": 0, "previousRate": 0}},
+    "chartData": {"grossVolume": [{"date": "2026-09-01", "amount": 0}, {"date": "2026-09-04", "amount": 62500}, {"date": "2026-09-05", "amount": 4200}], "netVolume": [{"date": "2026-09-01", "amount": 0}, {"date": "2026-09-04", "amount": 60657}, {"date": "2026-09-05", "amount": 4048}], "disputeRate": [{"date": "2026-09-01", "rate": 0}, {"date": "2026-09-05", "rate": 0}]}
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "currentUser": {"id": "user-1", "firstName": "Leila", "lastName": "Nassar", "email": "leila.nassar@copperleaf-outfitters.example", "avatar": null, "role": "Marketing Manager", "company": "Copperleaf Outfitters", "timezone": "America/Denver"},
+  "users": [
+    {"id": "user-1", "firstName": "Leila", "lastName": "Nassar", "email": "leila.nassar@copperleaf-outfitters.example", "role": "Marketing Manager"},
+    {"id": "user-2", "firstName": "Owen", "lastName": "Fitzgerald", "email": "owen.fitzgerald@copperleaf-outfitters.example", "role": "Content Specialist"}
+  ],
+  "contacts": [
+    {"id": "contact-1", "firstName": "Greta", "lastName": "Sandoval", "email": "greta.sandoval@ridgeline-guides.example", "phone": "+1 (720) 555-0142", "company": "Ridgeline Guides", "companyId": "company-1", "jobTitle": "Owner", "lifecycleStage": "customer", "leadStatus": "open_deal", "contactOwner": "user-1", "createDate": "2026-02-11T15:20:00Z", "lastActivityDate": "2026-09-03T17:05:00Z", "source": "referral", "marketingStatus": "marketing", "city": "Golden", "state": "CO", "country": "United States", "tags": ["wholesale"], "notes": "Reorders every spring."},
+    {"id": "contact-2", "firstName": "Marcus", "lastName": "Ellery", "email": "marcus.ellery@example.com", "phone": "+1 (303) 555-0177", "company": "", "companyId": null, "jobTitle": "", "lifecycleStage": "lead", "leadStatus": "new", "contactOwner": "user-2", "createDate": "2026-09-01T09:00:00Z", "lastActivityDate": "2026-09-01T09:00:00Z", "source": "organic_search", "marketingStatus": "marketing", "city": "Boulder", "state": "CO", "country": "United States", "tags": [], "notes": ""}
+  ],
+  "activities": {
+    "contact-1": [
+      {"id": "activity-1", "type": "note", "title": "Spring reorder call", "body": "Wants the fall catalog before October.", "timestamp": "2026-09-03T17:05:00Z", "createdBy": "user-1"}
+    ]
+  },
+  "companies": [
+    {"id": "company-1", "name": "Ridgeline Guides", "domain": "ridgeline-guides.example", "industry": "Recreation", "employeeCount": 12, "annualRevenue": 900000, "city": "Golden", "state": "CO", "country": "United States", "phone": "+1 (720) 555-0100", "owner": "user-1", "createDate": "2026-02-11T15:20:00Z", "contactCount": 1}
+  ],
+  "deals": [
+    {"id": "deal-1", "name": "Ridgeline fall wholesale order", "stage": "contractsent", "amount": 18400, "closeDate": "2026-09-30", "contactId": "contact-1", "companyId": "company-1", "owner": "user-1", "pipeline": "default", "createDate": "2026-08-15T10:00:00Z"}
+  ],
+  "emails": [
+    {"id": "email-1", "name": "Fall Catalog Announcement", "subject": "The Copperleaf fall catalog is here", "previewText": "New shells, new packs, same trail-tested build.", "status": "scheduled", "type": "regular", "fromName": "Copperleaf Outfitters", "fromEmail": "hello@copperleaf-outfitters.example", "replyTo": "hello@copperleaf-outfitters.example", "listIds": ["list-1"], "campaignId": "campaign-1", "scheduledDate": "2026-09-15T15:00:00Z", "sentDate": null, "createdDate": "2026-09-02T12:00:00Z", "updatedDate": "2026-09-05T12:00:00Z", "createdBy": "user-2", "stats": null, "content": {"blocks": [{"id": "block-1", "type": "text", "content": "The fall catalog is live."}]}}
+  ],
+  "campaigns": [
+    {"id": "campaign-1", "name": "Fall Catalog Launch", "status": "active", "goal": "Drive 400 catalog downloads", "startDate": "2026-09-01", "endDate": "2026-10-31", "owner": "user-1", "createdDate": "2026-08-20T10:00:00Z", "budget": 6000, "assets": {"emails": ["email-1"], "landingPages": ["lp-1"], "forms": ["form-1"], "socialPosts": ["social-1"], "workflows": [], "ctas": []}, "metrics": {"sessions": 1820, "newContacts": 64, "influencedContacts": 210, "closedDeals": 2, "revenue": 24100}}
+  ],
+  "forms": [
+    {"id": "form-1", "name": "Catalog Request", "type": "embedded", "status": "published", "views": 940, "submissions": 64, "submissionRate": 6.8, "createdDate": "2026-08-22T10:00:00Z", "updatedDate": "2026-08-22T10:00:00Z", "campaignId": "campaign-1", "fields": [{"id": "field-1", "type": "email", "label": "Email", "required": true, "placeholder": "you@example.com", "options": []}, {"id": "field-2", "type": "text", "label": "First name", "required": false, "placeholder": "", "options": []}], "settings": {"submitButtonText": "Send me the catalog", "redirectUrl": "", "thankYouMessage": "Thanks! The catalog is on its way.", "notifyEmails": ["leila.nassar@copperleaf-outfitters.example"], "lifecycleStage": "lead"}}
+  ],
+  "workflows": [
+    {"id": "workflow-1", "name": "Catalog Request Follow-up", "type": "contact", "status": "active", "enrolledCount": 64, "enrolledCurrently": 21, "createdDate": "2026-08-25T10:00:00Z", "updatedDate": "2026-08-25T10:00:00Z", "createdBy": "user-1", "trigger": {"type": "form_submission", "description": "Contact submits Catalog Request", "filterGroups": []}, "nodes": [{"id": "node-1", "type": "email", "actionType": "send_email", "config": {"emailId": "email-1"}, "nextNodeId": "node-2"}, {"id": "node-2", "type": "delay", "actionType": "delay", "config": {"days": 3}, "nextNodeId": null}]}
+  ],
+  "lists": [
+    {"id": "list-1", "name": "Catalog subscribers", "type": "active", "size": 1180, "createdDate": "2026-03-01T10:00:00Z", "updatedDate": "2026-09-05T10:00:00Z", "filters": [], "createdBy": "user-1"}
+  ],
+  "landingPages": [
+    {"id": "lp-1", "name": "Fall Catalog Download", "slug": "fall-catalog", "status": "published", "publishDate": "2026-09-01T12:00:00Z", "views": 1820, "submissions": 64, "conversionRate": 3.5, "newContacts": 64, "campaignId": "campaign-1", "createdDate": "2026-08-28T10:00:00Z", "updatedDate": "2026-09-01T12:00:00Z"}
+  ],
+  "ctas": [],
+  "dashboards": [
+    {"id": "dashboard-1", "name": "Copperleaf Marketing Performance", "isDefault": true, "reports": ["report-1", "report-2"]}
+  ],
+  "reports": [
+    {"id": "report-1", "name": "New Contacts", "type": "number", "dashboardId": "dashboard-1", "dateRange": "last_30_days", "metric": "new_contacts", "data": {"value": 64, "trend": 22.0, "comparisonPeriod": "vs last month", "unit": ""}, "position": {"row": 0, "col": 0, "width": 1, "height": 1}},
+    {"id": "report-2", "name": "Catalog Page Views", "type": "bar_chart", "dashboardId": "dashboard-1", "dateRange": "last_30_days", "metric": "sessions_by_source", "data": {"labels": ["Organic", "Direct", "Social", "Email"], "values": [820, 410, 360, 230]}, "position": {"row": 0, "col": 1, "width": 2, "height": 1}}
+  ],
+  "socialPosts": [
+    {"id": "social-1", "platform": "instagram", "content": "Fall catalog drops Sept 15. Link in bio.", "status": "scheduled", "scheduledDate": "2026-09-14T16:00:00Z", "publishedDate": null, "campaignId": "campaign-1", "metrics": {"likes": 0, "shares": 0, "comments": 0, "clicks": 0, "impressions": 0}}
+  ],
+  "notifications": [
+    {"id": "notification-1", "type": "form_submission", "message": "New Catalog Request submission from marcus.ellery@example.com", "timestamp": "2026-09-01T09:00:00Z", "read": false}
+  ],
+  "settings": {
+    "general": {"accountName": "Copperleaf Outfitters", "timezone": "America/Denver", "dateFormat": "MM/DD/YYYY", "currency": "USD"},
+    "email": {"defaultFromName": "Copperleaf Outfitters", "defaultFromEmail": "hello@copperleaf-outfitters.example", "footerInfo": "Copperleaf Outfitters, 410 Mill St, Golden, CO"},
+    "marketing": {"utmTracking": true, "utmSource": "hubspot", "utmMedium": "email"},
+    "forms": {"thankYouMessage": "Thanks for reaching out!", "notificationEmails": "leila.nassar@copperleaf-outfitters.example", "gdprConsent": false},
+    "social": {"autoPublish": false},
+    "integrations": {"salesforce": false, "google-analytics": true, "zapier": false, "wordpress": false, "mailchimp": false, "hubdb": false}
+  },
+  "selectedDashboardId": "dashboard-1",
+  "sidebarCollapsed": false,
+  "activeSection": "dashboard"
+}

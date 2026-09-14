@@ -1,0 +1,129 @@
+{
+  "app_id": "amazon_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "cart",
+    "orders",
+    "products",
+    "recentSearches",
+    "recentlyViewed",
+    "reviews",
+    "savedForLater",
+    "user",
+    "wishlist"
+  ],
+  "observed": [
+    "cart",
+    "orders",
+    "products",
+    "recentSearches",
+    "recentlyViewed",
+    "reviews",
+    "savedForLater",
+    "user",
+    "wishlist"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "products": {
+      "kind": "array",
+      "count": 60,
+      "record_fields": [
+        "id",
+        "category",
+        "brand",
+        "title",
+        "price",
+        "originalPrice",
+        "rating",
+        "reviewCount",
+        "prime",
+        "inStock",
+        "stockCount",
+        "seller",
+        "badges",
+        "image",
+        "images",
+        "description",
+        "bulletPoints",
+        "specs",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "user": {
+      "kind": "object",
+      "count": 7,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "cart": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "productId",
+        "quantity"
+      ],
+      "keyed_by_id": false
+    },
+    "wishlist": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "savedForLater": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "orders": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "date",
+        "status",
+        "total",
+        "items",
+        "shippingAddress",
+        "paymentMethod",
+        "trackingNumber",
+        "estimatedDelivery"
+      ],
+      "keyed_by_id": false
+    },
+    "reviews": {
+      "kind": "array",
+      "count": 20,
+      "record_fields": [
+        "id",
+        "productId",
+        "userId",
+        "userName",
+        "rating",
+        "title",
+        "content",
+        "date",
+        "helpful",
+        "verifiedPurchase"
+      ],
+      "keyed_by_id": false
+    },
+    "recentSearches": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "recentlyViewed": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

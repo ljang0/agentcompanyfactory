@@ -1,0 +1,34 @@
+{
+  "user": {"userId": "user-1", "firstName": "Marisol", "lastName": "Echevarria", "email": "marisol.echevarria@granite-peak-solar.example", "phone": "(555) 204-8810", "title": "Regional Sales Manager", "department": "Sales", "role": "Manager", "avatar": "https://ui-avatars.com/api/?name=Marisol+Echevarria&background=0176D3&color=fff", "timezone": "America/Denver", "locale": "en-US", "theme": "lightning"},
+  "users": [
+    {"userId": "user-1", "firstName": "Marisol", "lastName": "Echevarria", "email": "marisol.echevarria@granite-peak-solar.example", "phone": "(555) 204-8810", "title": "Regional Sales Manager", "department": "Sales", "role": "Manager", "avatar": "https://ui-avatars.com/api/?name=Marisol+Echevarria&background=0176D3&color=fff", "timezone": "America/Denver", "locale": "en-US", "theme": "lightning"},
+    {"userId": "user-2", "firstName": "Kofi", "lastName": "Mensah-Brooks", "email": "kofi.mensah@granite-peak-solar.example", "phone": "(555) 204-8811", "title": "Account Executive", "department": "Sales", "role": "Standard User", "avatar": "https://ui-avatars.com/api/?name=Kofi+Mensah&background=2E844A&color=fff", "timezone": "America/Denver", "locale": "en-US", "theme": "lightning"}
+  ],
+  "leads": [
+    {"leadId": "lead-1", "firstName": "Ophelia", "lastName": "Brandvold", "company": "Tidewater Orthodontics", "title": "Practice Manager", "email": "ophelia@tidewater-ortho.example", "phone": "(555) 318-2200", "mobile": "", "status": "Working", "source": "Web", "rating": "Hot", "street": "12 Quay St", "city": "Fort Collins", "state": "CO", "zip": "80521", "country": "USA", "industry": "Healthcare", "employees": 18, "revenue": 2400000, "website": "https://tidewater-ortho.example", "description": "Wants rooftop array for two clinics.", "ownerId": "user-1", "createdDate": "2026-08-28T15:00:00.000Z", "modifiedDate": "2026-09-04T17:30:00.000Z"},
+    {"leadId": "lead-2", "firstName": "Desmond", "lastName": "Ayodele", "company": "Ayodele Family Farms", "title": "Owner", "email": "desmond@ayodele-farms.example", "phone": "(555) 318-2299", "mobile": "", "status": "New", "source": "Trade Show", "rating": "Warm", "street": "", "city": "Greeley", "state": "CO", "zip": "", "country": "USA", "industry": "Agriculture", "employees": 40, "revenue": 5100000, "website": "", "description": "", "ownerId": "user-2", "createdDate": "2026-09-05T10:00:00.000Z", "modifiedDate": "2026-09-05T10:00:00.000Z"}
+  ],
+  "accounts": [
+    {"accountId": "account-1", "name": "Boulder Creek Brewing", "type": "Customer", "industry": "Food & Beverage", "revenue": 8200000, "employees": 65, "ownerId": "user-1", "phone": "(555) 771-4400", "website": "https://bouldercreek-brewing.example", "billingStreet": "400 Hop Ln", "billingCity": "Boulder", "billingState": "CO", "billingZip": "80301", "billingCountry": "USA", "shippingStreet": "400 Hop Ln", "shippingCity": "Boulder", "shippingState": "CO", "shippingZip": "80301", "shippingCountry": "USA", "description": "150 kW array installed 2025; expansion under discussion.", "createdDate": "2025-03-10T00:00:00.000Z", "modifiedDate": "2026-08-20T00:00:00.000Z"}
+  ],
+  "contacts": [
+    {"contactId": "contact-1", "accountId": "account-1", "firstName": "Renata", "lastName": "Kowalski", "title": "Operations Director", "department": "Operations", "email": "renata@bouldercreek-brewing.example", "phone": "(555) 771-4401", "mobile": "", "ownerId": "user-1", "createdDate": "2025-03-10T00:00:00.000Z", "modifiedDate": "2026-08-20T00:00:00.000Z"}
+  ],
+  "opportunities": [
+    {"opportunityId": "opp-1", "name": "Boulder Creek Brewing - Cold Storage Array", "accountId": "account-1", "contactId": "contact-1", "amount": 265000, "closeDate": "2026-10-31", "stage": "Proposal", "probability": 60, "ownerId": "user-1", "type": "Existing Customer - Upgrade", "leadSource": "Referral", "nextStep": "Send revised proposal with battery option", "description": "", "createdDate": "2026-07-15T00:00:00.000Z", "modifiedDate": "2026-09-03T00:00:00.000Z"}
+  ],
+  "cases": [
+    {"caseId": "case-1", "caseNumber": "00001042", "subject": "Inverter fault code E-31 after storm", "status": "Working", "priority": "High", "origin": "Phone", "type": "Technical", "accountId": "account-1", "contactId": "contact-1", "ownerId": "user-2", "description": "Inverter 2 tripped after Sept 2 hail storm.", "createdDate": "2026-09-03T14:00:00.000Z", "modifiedDate": "2026-09-04T09:00:00.000Z", "closedDate": null}
+  ],
+  "activities": [
+    {"activityId": "activity-1", "type": "task", "subject": "Call Ophelia Brandvold about site survey", "status": "Not Started", "priority": "High", "dueDate": "2026-09-08", "relatedToType": "Lead", "relatedToId": "lead-1", "assignedToId": "user-1", "description": "", "createdDate": "2026-09-04T17:30:00.000Z", "modifiedDate": "2026-09-04T17:30:00.000Z"},
+    {"activityId": "activity-2", "type": "event", "subject": "Proposal review with Boulder Creek Brewing", "status": "Planned", "priority": "Normal", "startDateTime": "2026-09-10T16:00:00.000Z", "endDateTime": "2026-09-10T17:00:00.000Z", "relatedToType": "Opportunity", "relatedToId": "opp-1", "assignedToId": "user-1", "description": "", "createdDate": "2026-09-03T00:00:00.000Z", "modifiedDate": "2026-09-03T00:00:00.000Z"}
+  ],
+  "chatterPosts": [
+    {"postId": "post-1", "userId": "user-2", "content": "Ayodele Family Farms stopped by our booth at the Greeley ag expo. Warm lead, 40 acres of barn roof.", "createdDate": "2026-09-05T18:00:00.000Z", "likeCount": 1, "commentCount": 0, "likes": ["user-1"], "comments": []}
+  ],
+  "files": [],
+  "following": ["user-2"],
+  "recentlyViewed": [],
+  "dismissedNotifications": []
+}

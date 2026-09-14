@@ -1,0 +1,38 @@
+{
+  "user": {"id": "user_bt01", "name": "Priyanka Rao", "email": "priyanka.rao@bluetern-bakery.example", "avatarUrl": null, "role": "Admin"},
+  "account": {"id": "act_440118223", "name": "Blue Tern Bakery Ad Account", "businessName": "Blue Tern Bakery LLC", "currency": "USD", "timezone": "America/Chicago", "status": "active", "spendCap": 12000, "amountSpent": 3184.6, "balance": 8815.4},
+  "campaigns": [
+    {"id": "camp_bt001", "name": "Blue Tern Sourdough Subscription", "status": "active", "objective": "sales", "buyingType": "auction", "budgetOptimization": true, "dailyBudget": 45.0, "lifetimeBudget": null, "bidStrategy": "lowest_cost", "specialAdCategories": [], "createdAt": "2026-08-10T10:00:00Z", "updatedAt": "2026-09-05T14:30:00Z", "startDate": "2026-08-11T00:00:00Z", "endDate": null, "results": 212, "reach": 41800, "impressions": 96500, "clicks": 2410, "ctr": 2.5, "cpc": 0.71, "cpm": 17.73, "costPerResult": 8.07, "amountSpent": 1711.2, "frequency": 2.31, "roas": 3.1, "deliveryStatus": "active"},
+    {"id": "camp_bt002", "name": "Holiday Pie Preorders", "status": "paused", "objective": "traffic", "buyingType": "auction", "budgetOptimization": false, "dailyBudget": null, "lifetimeBudget": 1500.0, "bidStrategy": "lowest_cost", "specialAdCategories": [], "createdAt": "2026-09-01T09:00:00Z", "updatedAt": "2026-09-04T09:00:00Z", "startDate": "2026-11-01T00:00:00Z", "endDate": "2026-11-24T00:00:00Z", "results": 0, "reach": 0, "impressions": 0, "clicks": 0, "ctr": 0, "cpc": 0, "cpm": 0, "costPerResult": 0, "amountSpent": 0, "frequency": 0, "roas": 0, "deliveryStatus": "not_delivering"}
+  ],
+  "adSets": [
+    {"id": "adset_bt001", "campaignId": "camp_bt001", "name": "Twin Cities bread lovers 25-54", "status": "active", "dailyBudget": 45.0, "lifetimeBudget": null, "startDate": "2026-08-11T00:00:00Z", "endDate": null, "optimizationGoal": "conversions", "billingEvent": "impressions", "bidAmount": null, "targeting": {"locations": ["Minneapolis, MN", "St. Paul, MN"], "ageMin": 25, "ageMax": 54, "genders": ["all"], "detailedTargeting": ["Baking", "Farmers markets"], "customAudiences": ["aud_bt001"], "lookalikeAudiences": [], "excludedAudiences": []}, "placements": {"type": "automatic", "platforms": ["facebook", "instagram"]}, "results": 212, "reach": 41800, "impressions": 96500, "clicks": 2410, "ctr": 2.5, "cpc": 0.71, "cpm": 17.73, "costPerResult": 8.07, "amountSpent": 1711.2, "frequency": 2.31, "deliveryStatus": "active"}
+  ],
+  "ads": [
+    {"id": "ad_bt001", "adSetId": "adset_bt001", "campaignId": "camp_bt001", "name": "Weekly loaf carousel", "status": "active", "creativeId": "cr_bt001", "results": 212, "reach": 41800, "impressions": 96500, "clicks": 2410, "ctr": 2.5, "cpc": 0.71, "cpm": 17.73, "costPerResult": 8.07, "amountSpent": 1711.2, "frequency": 2.31, "deliveryStatus": "active", "reviewStatus": "approved", "reviewFeedback": null}
+  ],
+  "creatives": [
+    {"id": "cr_bt001", "adId": "ad_bt001", "format": "carousel", "mediaUrl": "https://picsum.photos/seed/bluetern1/800/800", "primaryText": "Fresh sourdough at your door every Saturday.", "headline": "Subscribe to Blue Tern", "description": "Cancel anytime.", "displayUrl": "bluetern-bakery.example", "websiteUrl": "https://bluetern-bakery.example/subscribe", "cta": "Subscribe", "thumbnailUrl": "https://picsum.photos/seed/bluetern1/200/200"}
+  ],
+  "audiences": [
+    {"id": "aud_bt001", "name": "Website visitors 30d", "type": "custom", "source": "website", "size": 6200, "sizeRange": "5K-10K", "availability": "ready", "createdAt": "2026-07-20T10:00:00Z", "updatedAt": "2026-09-05T10:00:00Z", "description": "Anyone who visited bluetern-bakery.example in the last 30 days", "lookalikeSpec": null}
+  ],
+  "notifications": [
+    {"id": "notif_bt001", "type": "budget_alert", "title": "Campaign nearing lifetime budget", "message": "Blue Tern Sourdough Subscription has spent 85% of this month's planned budget.", "timestamp": "2026-09-05T15:00:00Z", "read": false, "actionUrl": "/campaigns", "relatedEntityId": "camp_bt001"}
+  ],
+  "paymentMethods": [
+    {"id": "pm_bt001", "type": "credit_card", "name": "Visa ending in 8831", "isPrimary": true, "expiresAt": "04/2028"}
+  ],
+  "billingTransactions": [
+    {"id": "txn_bt001", "date": "2026-09-01T00:00:00Z", "description": "Ad spend Aug 16 - Aug 31", "amount": 704.5, "status": "completed", "paymentMethod": "Visa ending in 8831"}
+  ],
+  "savedReports": [],
+  "selectedTab": "campaigns",
+  "selectedDateRange": "last_30_days",
+  "visibleColumns": ["status", "name", "delivery", "bidStrategy", "budget", "results", "reach", "impressions", "costPerResult", "amountSpent"],
+  "filters": {},
+  "searchQuery": "",
+  "selectedRows": [],
+  "sidebarCollapsed": false,
+  "settings": {"notificationPreferences": {"adApprovals": true, "budgetAlerts": true, "performanceAlerts": true, "deliveryIssues": true}}
+}

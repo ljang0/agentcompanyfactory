@@ -1,0 +1,240 @@
+{
+  "app_id": "cloudflare_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "account",
+    "analytics",
+    "cachingSettings",
+    "currentUser",
+    "dnsRecords",
+    "firewallRules",
+    "kvNamespaces",
+    "networkSettings",
+    "notifications",
+    "pageRules",
+    "scrapeShieldSettings",
+    "securitySettings",
+    "selectedZoneId",
+    "speedSettings",
+    "sslSettings",
+    "workers",
+    "zones"
+  ],
+  "observed": [
+    "account",
+    "analytics",
+    "cachingSettings",
+    "currentUser",
+    "dnsRecords",
+    "firewallRules",
+    "kvNamespaces",
+    "networkSettings",
+    "notifications",
+    "pageRules",
+    "scrapeShieldSettings",
+    "securitySettings",
+    "selectedZoneId",
+    "speedSettings",
+    "sslSettings",
+    "workers",
+    "zones"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "account": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "zones": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "account_id",
+        "status",
+        "paused",
+        "plan",
+        "name_servers",
+        "original_name_servers",
+        "created_on",
+        "modified_on",
+        "activated_on",
+        "meta",
+        "stats"
+      ],
+      "keyed_by_id": false
+    },
+    "dnsRecords": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "sslSettings": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": [
+        "zone_id",
+        "mode",
+        "certificate_status",
+        "always_use_https",
+        "min_tls_version",
+        "automatic_https_rewrites",
+        "tls_1_3",
+        "edge_certificates"
+      ],
+      "keyed_by_id": true
+    },
+    "securitySettings": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": [
+        "zone_id",
+        "security_level",
+        "challenge_ttl",
+        "browser_integrity_check",
+        "bot_fight_mode",
+        "waf_enabled",
+        "ip_access_rules"
+      ],
+      "keyed_by_id": true
+    },
+    "firewallRules": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "speedSettings": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": [
+        "zone_id",
+        "auto_minify",
+        "brotli",
+        "rocket_loader",
+        "polish",
+        "mirage",
+        "early_hints",
+        "http2_prioritization"
+      ],
+      "keyed_by_id": true
+    },
+    "cachingSettings": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": [
+        "zone_id",
+        "caching_level",
+        "browser_cache_ttl",
+        "always_online",
+        "development_mode",
+        "development_mode_expires",
+        "cache_rules"
+      ],
+      "keyed_by_id": true
+    },
+    "pageRules": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "networkSettings": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": [
+        "zone_id",
+        "http2",
+        "http3",
+        "websockets",
+        "grpc",
+        "onion_routing",
+        "ip_geolocation",
+        "pseudo_ipv4"
+      ],
+      "keyed_by_id": true
+    },
+    "scrapeShieldSettings": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": [
+        "zone_id",
+        "email_obfuscation",
+        "server_side_excludes",
+        "hotlink_protection"
+      ],
+      "keyed_by_id": true
+    },
+    "analytics": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": [
+        "zone_id",
+        "period",
+        "traffic",
+        "security",
+        "performance"
+      ],
+      "keyed_by_id": true
+    },
+    "kvNamespaces": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "title",
+        "created_on",
+        "keys_count"
+      ],
+      "keyed_by_id": false
+    },
+    "workers": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "account_id",
+        "name",
+        "script",
+        "created_on",
+        "modified_on",
+        "routes",
+        "usage"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "account_id",
+        "type",
+        "title",
+        "message",
+        "zone_name",
+        "read",
+        "created_on"
+      ],
+      "keyed_by_id": false
+    },
+    "selectedZoneId": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    },
+    "currentUser": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

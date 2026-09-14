@@ -1,0 +1,754 @@
+{
+  "at": "2026-09-14T00:26:02.112379+00:00",
+  "task_id": "sanmar_qualified-acquisition-review",
+  "score": 1.0,
+  "passed": true,
+  "complete": true,
+  "assessment": {
+    "score": 1.0,
+    "must_pass_satisfied": true,
+    "complete": true,
+    "criteria": [
+      {
+        "criterion_ref": "/success_criteria/0",
+        "weight": 30.0,
+        "must_pass": true,
+        "score": 1.0,
+        "passed": true,
+        "complete": true
+      },
+      {
+        "criterion_ref": "/success_criteria/1",
+        "weight": 30.0,
+        "must_pass": true,
+        "score": 1.0,
+        "passed": true,
+        "complete": true
+      },
+      {
+        "criterion_ref": "/success_criteria/2",
+        "weight": 20.0,
+        "must_pass": true,
+        "score": 1.0,
+        "passed": true,
+        "complete": true
+      },
+      {
+        "criterion_ref": "/success_criteria/3",
+        "weight": 20.0,
+        "must_pass": true,
+        "score": 1.0,
+        "passed": true,
+        "complete": true
+      }
+    ]
+  },
+  "checks": [
+    {
+      "id": "criterion-1",
+      "criterion_ref": "/success_criteria/0",
+      "status": "pass",
+      "reason": "3 of 3 votes: New SH-ACQ-COMPARISON and SH-ACQ-ORDER-CHECK provide traceable intake/account/order joins and correct May–August and common July–August calculations. Nine intakes resolve to eight identities, excluding existing Alder and repeated Moonrise from new acquisitions. Campaign findings distinguish business fit, documentary acceptance and purchases, preserving each applicant’s barriers. Riverbend’s $2,520 invoice is separated from preliminary opportunities, accepted unallocated orders and unposted claims; posted credits are deducted correctly. The comparison explicitly addresses incomplete attribution, unequal maturity, differing ledger coverage and dependence on Riverbend, connecting these limits to bounded decorator support rather than forecasting conversions or profit.",
+      "evidence_refs": [
+        "changes",
+        "source:4",
+        "source:5",
+        "source:6",
+        "source:9",
+        "source:10",
+        "source:11",
+        "source:12",
+        "source:13",
+        "source:14",
+        "source:15",
+        "source:16"
+      ]
+    },
+    {
+      "id": "criterion-2",
+      "criterion_ref": "/success_criteria/1",
+      "status": "pass",
+      "reason": "3 of 3 votes: New DOC-SEP-ACQ-DECISION and SH-ACQ-OPTIONS compare materially different scopes: all three campaigns with proactive starter/visitor support versus decorator-only media with bounded development. Monthly media estimates are correctly $4,050 versus $1,950; weekly representative/services/marketing hours are 12/6/8 versus 6/3/4, separately costed at $1,228 versus $614. Both respect the $6,000 media ceiling and discretionary capacity, add no production purchases, and preserve separate 10/12/8-hour recurring blocks. Mara substantively integrates all three specialists’ findings, favoring concrete decorator demand while recognizing Riverbend concentration and lost learning breadth. Owen’s detailed feasibility assessment protects accepted commitments and specifies when acquisition work must yield. Campaign-specific reconsideration conditions and dated reviews are recorded.",
+      "evidence_refs": [
+        "changes",
+        "source:1",
+        "source:4",
+        "actors"
+      ]
+    },
+    {
+      "id": "criterion-3",
+      "criterion_ref": "/success_criteria/2",
+      "status": "pass",
+      "reason": "3 of 3 votes: Persisted settings match Option B: CAM-DECOR/AS-DECOR remain active at $65/day; CAM-START/AS-START and CAM-RETURN/AS-RETURN changed to paused, $0/day and not_delivering, with corresponding ads paused. Actor events show Mara’s recorded approval before Priya’s settings changes, with no unrelated campaign changes. The new implementation report verifies the justified unchanged DECOR settings and correctly counts the effective ad-set budget once because CBO is false. It identifies $1,950 as September planning exposure, explicitly disclaims a native monthly hard cap, and assigns spending monitoring and reduction/pause responsibility.",
+      "evidence_refs": [
+        "changes",
+        "actors",
+        "source:1",
+        "source:17",
+        "source:20"
+      ]
+    },
+    {
+      "id": "criterion-4",
+      "criterion_ref": "/success_criteria/3",
+      "status": "pass",
+      "reason": "3 of 3 votes: Seven newly persisted HubSpot tasks and associated notes cover all six unresolved applications and Alder’s existing inquiry, owned by Imani Brooks with absolute deadlines of September 2 or 3, 2026, at 16:00 Pacific. They preserve Kestrel’s signature requirement, Moonrise’s missing license, Oakline’s central review, Dovetail’s business/channel/document questions, Hillcrest’s reseller referral and Slate Run’s legal-name reconciliation. One Moonrise task covers both intakes. Applications remain unresolved without granting acceptance or credit. Notes retain routine support despite campaign pauses and specify conditions for reconsidering deferred support and restarting media.",
+      "evidence_refs": [
+        "changes",
+        "source:3",
+        "source:5",
+        "source:11",
+        "source:12",
+        "source:13",
+        "source:14",
+        "source:15",
+        "source:16"
+      ]
+    }
+  ],
+  "semantic_checks": [
+    {
+      "criterion": 1,
+      "status": "pass",
+      "reason": "3 of 3 votes: New SH-ACQ-COMPARISON and SH-ACQ-ORDER-CHECK provide traceable intake/account/order joins and correct May–August and common July–August calculations. Nine intakes resolve to eight identities, excluding existing Alder and repeated Moonrise from new acquisitions. Campaign findings distinguish business fit, documentary acceptance and purchases, preserving each applicant’s barriers. Riverbend’s $2,520 invoice is separated from preliminary opportunities, accepted unallocated orders and unposted claims; posted credits are deducted correctly. The comparison explicitly addresses incomplete attribution, unequal maturity, differing ledger coverage and dependence on Riverbend, connecting these limits to bounded decorator support rather than forecasting conversions or profit."
+    },
+    {
+      "criterion": 2,
+      "status": "pass",
+      "reason": "3 of 3 votes: New DOC-SEP-ACQ-DECISION and SH-ACQ-OPTIONS compare materially different scopes: all three campaigns with proactive starter/visitor support versus decorator-only media with bounded development. Monthly media estimates are correctly $4,050 versus $1,950; weekly representative/services/marketing hours are 12/6/8 versus 6/3/4, separately costed at $1,228 versus $614. Both respect the $6,000 media ceiling and discretionary capacity, add no production purchases, and preserve separate 10/12/8-hour recurring blocks. Mara substantively integrates all three specialists’ findings, favoring concrete decorator demand while recognizing Riverbend concentration and lost learning breadth. Owen’s detailed feasibility assessment protects accepted commitments and specifies when acquisition work must yield. Campaign-specific reconsideration conditions and dated reviews are recorded."
+    },
+    {
+      "criterion": 3,
+      "status": "pass",
+      "reason": "3 of 3 votes: Persisted settings match Option B: CAM-DECOR/AS-DECOR remain active at $65/day; CAM-START/AS-START and CAM-RETURN/AS-RETURN changed to paused, $0/day and not_delivering, with corresponding ads paused. Actor events show Mara’s recorded approval before Priya’s settings changes, with no unrelated campaign changes. The new implementation report verifies the justified unchanged DECOR settings and correctly counts the effective ad-set budget once because CBO is false. It identifies $1,950 as September planning exposure, explicitly disclaims a native monthly hard cap, and assigns spending monitoring and reduction/pause responsibility."
+    },
+    {
+      "criterion": 4,
+      "status": "pass",
+      "reason": "3 of 3 votes: Seven newly persisted HubSpot tasks and associated notes cover all six unresolved applications and Alder’s existing inquiry, owned by Imani Brooks with absolute deadlines of September 2 or 3, 2026, at 16:00 Pacific. They preserve Kestrel’s signature requirement, Moonrise’s missing license, Oakline’s central review, Dovetail’s business/channel/document questions, Hillcrest’s reseller referral and Slate Run’s legal-name reconciliation. One Moonrise task covers both intakes. Applications remain unresolved without granting acceptance or credit. Notes retain routine support despite campaign pauses and specify conditions for reconsidering deferred support and restarting media."
+    }
+  ],
+  "dependencies": [
+    {
+      "worker_id": "sales-supervisor",
+      "status": "pass",
+      "reason": "3 of 3 votes: Actor records establish Mara authored DOC-SEP-ACQ-DECISION and recorded approval before implementation (sequences 18–20). The decision resolves all three specialists’ findings into decorator-only media: $1,950 planned September spending, 6/3/4 additional weekly role hours costing $614, protected recurring capacity, and explicit reconsideration conditions, consistent with DOC-WELCOME and POL-AUTH-3. Actual consumption survives in each consumer’s work: Priya changed START/RETURN campaign, ad-set and ad controls after approval (21); Owen developed the selected three-hour services plan against named accepted commitments and prerequisites (22); Imani created seven dated customer tasks and notes incorporating the approved support limits and obligations (26). Mara’s closeout preserves this allocation and incorporates those results (28). This demonstrates substantive contribution and use beyond acknowledgements.",
+      "evidence_refs": [
+        "actors",
+        "changes",
+        "source:0",
+        "source:1"
+      ]
+    },
+    {
+      "worker_id": "account-representative",
+      "status": "pass",
+      "reason": "3 of 3 votes: Actor records establish Imani authored the new fit report and CRM findings (events 9–10), supported by the cited contacts, tickets, opportunity and qualification authority. She distinguishes nine intakes/eight identities, existing Alder, repeat Moonrise, end-user Hillcrest and each documentary barrier. Actual consumption survives in Owen’s SH-ACQ-ORDER-CHECK and conditional services plan, Priya’s SH-ACQ-COMPARISON/SH-ACQ-OPTIONS and resource prerequisites, and Mara’s DOC-SEP-ACQ-DECISION, which uses these findings to choose bounded decorator support and preserve dated customer obligations. These are substantive, actor-attributed applications of her contribution, not acknowledgements alone.",
+      "evidence_refs": [
+        "actors",
+        "changes",
+        "source:0",
+        "source:3",
+        "source:5",
+        "source:7",
+        "source:8",
+        "source:9",
+        "source:10",
+        "source:11",
+        "source:12",
+        "source:13",
+        "source:14",
+        "source:15",
+        "source:16"
+      ]
+    },
+    {
+      "worker_id": "order-coordinator",
+      "status": "pass",
+      "reason": "3 of 3 votes: Actor records confirm Owen created SH-ACQ-ORDER-CHECK and DOC-SEP-ACQ-ORDER-FEASIBILITY (sequences 14 and 22), incorporating Imani’s application findings. His calculations match WB-COMMERCIAL and distinguish Riverbend’s $2,520 invoice, posted credits, accepted unallocated commitments and Mesa’s unposted claim, while preserving central authority under DOC-WELCOME, POL-ORDER-2 and POL-QUAL-2. Actual use survives in all three consumers’ work: Mara’s decision and closeout apply the ordering evidence and services capacity; Priya’s comparison and implementation incorporate concentration, readiness and 3-versus-6-hour services costs; Imani’s saved Kestrel and Oakline tasks incorporate Owen’s specific handoff prerequisites and half-hour allocations. This demonstrates substantive contribution and downstream use beyond acknowledgements.",
+      "evidence_refs": [
+        "actors",
+        "changes",
+        "source:0",
+        "source:1",
+        "source:2",
+        "source:3",
+        "source:4",
+        "source:5",
+        "source:9",
+        "source:11",
+        "source:13"
+      ]
+    },
+    {
+      "worker_id": "marketing-specialist",
+      "status": "pass",
+      "reason": "3 of 3 votes: Actor records attribute SH-ACQ-COMPARISON and SH-ACQ-OPTIONS to the marketing specialist (sequence 16), advertising changes to sequence 21, and DOC-SEP-ACQ-IMPLEMENTATION to sequence 24. The surviving work accurately compares campaign periods, distinguishes linked identities, costs materially different support scopes, and explains effective ad-set spending. Calculations and controls match the supplied inputs and POL-AUTH-3; recorded approval precedes implementation. Actual consumption is substantive: the supervisor incorporates the economics and concentration limits into DOC-SEP-ACQ-DECISION and verifies the allocation in DOC-SEP-ACQ-CLOSEOUT. The account representative incorporates the paused campaigns, bounded support, identity distinctions and restart conditions into saved customer tasks and associated notes (sequence 26).",
+      "evidence_refs": [
+        "actors",
+        "changes",
+        "source:1",
+        "source:5",
+        "source:6",
+        "source:17",
+        "source:18",
+        "source:19",
+        "source:20",
+        "source:21",
+        "source:22"
+      ]
+    }
+  ],
+  "mechanical": {
+    "checks": {
+      "3": {
+        "passed": true,
+        "reason": "All three campaign/ad-set pairs reconcile with new September written values; planned media exposure is $1950.0. Unrelated campaign controls are preserved. Approval, daily-budget risk wording and decision meaning require separate review."
+      },
+      "4": {
+        "passed": true,
+        "reason": "New dated tasks and associated obligation notes cover Kestrel, Moonrise, Oakline, Dovetail, Hillcrest, Slate Run. Original customer links and unresolved application states are retained; Moonrise has no duplicate company or email identity. Action accuracy and reconsideration conditions require separate review."
+      }
+    },
+    "input_hash": "3f4f4aa31b1ce186a903ed3bc7e846665bda31df40b4113105581a5237b5eb26",
+    "code_hash": "a2df1afc28f679d2e3c1b45406d9572ed48138a093d9315c56a11e14a1ecaec7",
+    "isolation": "bubblewrap: private network/pid/user namespaces; read-only inputs; no host home or credentials",
+    "runner_hash": "7f82877a79fb236f8fe4495c588f34fdbbd1141c80854227ee355bc643897430"
+  },
+  "errors": {},
+  "judgment_receipts": [
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:24:26.276391+00:00",
+      "prompt_hash": "96224e62894833c2760cfde40c930f172a5396058e274e9fc48889f44d79488b",
+      "call_id": "2c675ba67fdce4252ccabbb89d4cc81126486d59663c38fcfa7c43bf11e7bd95",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 14.359612715896219,
+      "usage": {
+        "input_tokens": 225840,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 223,
+        "reasoning_output_tokens": 41
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4d-08b3-74e2-b636-fe19e3ddc188"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:24:40.674308+00:00",
+      "prompt_hash": "ce420077a2c991350449e0fff5af16da6ef8f0ae08b7244ec67d230c7bd02fa9",
+      "call_id": "a57148f12665e91c3b3c8ae5f83142b67198453e424e96c8558ebc5e0b36eeba",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 13.019318924983963,
+      "usage": {
+        "input_tokens": 225846,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 182,
+        "reasoning_output_tokens": 27
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4d-408e-75a1-9785-fde2a0bfaab7"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:24:53.741444+00:00",
+      "prompt_hash": "ecb2c793bd720653fef8c9b5e8147088bdd01317e47b6ed93b0c61cadc5324d3",
+      "call_id": "847ebf32ed32642d4aa8c9b72fabf9ec241a96d30a4dc041c56faf05d99c791d",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 13.394483639858663,
+      "usage": {
+        "input_tokens": 225844,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 217,
+        "reasoning_output_tokens": 49
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4d-73c2-73a1-89c5-d0c430b53667"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:24:26.272554+00:00",
+      "prompt_hash": "644aeae603c53519d8836dd9a968618121dd35ab114a1d2e9db851838f6f6ca7",
+      "call_id": "be4bffc398801d9ad1dac02b421a16ce8ed88fdc2364e836e18c6ae153f6b045",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 14.78203221410513,
+      "usage": {
+        "input_tokens": 225855,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 230,
+        "reasoning_output_tokens": 34
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4d-08a2-7791-aac9-56beb216430d"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:24:41.104151+00:00",
+      "prompt_hash": "7cac2aada1f782a87f57ff3a4c15a43a741d19fa0feccdfb9b74723d86317e78",
+      "call_id": "2579be6dde129c4e02f82cceab4618831faa6c7262edb0c8dafdc7446170b849",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 14.400823996867985,
+      "usage": {
+        "input_tokens": 225855,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 248,
+        "reasoning_output_tokens": 42
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4d-4267-7d00-9210-a516aeed890b"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:24:55.550920+00:00",
+      "prompt_hash": "ad3a7699124b659b6c314cc71bb2f95f94accfa7567193e664a977fb6935242a",
+      "call_id": "d11bfa4fcd0e5d89ea286fa6692cde8c335d07d3ce866c487d4e2025c1a40c3e",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 14.12886898801662,
+      "usage": {
+        "input_tokens": 225867,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 255,
+        "reasoning_output_tokens": 50
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4d-7ab6-7770-994b-e78d6ba78c5a"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:24:26.268156+00:00",
+      "prompt_hash": "dcea31584b776e441e7a2162482c0b4a425125070d1723f2e79c4bec97038704",
+      "call_id": "98e2cc2e33dd1fdd641dc234bf9e79211a2fb6bf8e80f7c6a8de8dd5342c53ae",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 18.159178585978225,
+      "usage": {
+        "input_tokens": 225878,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 284,
+        "reasoning_output_tokens": 68
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4d-08a4-7c61-bdd4-e2031d431815"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:24:44.489174+00:00",
+      "prompt_hash": "720c0296b9d09063c3d04cb20a3bf2d7eb60345420007e3d33f85d3a6574233e",
+      "call_id": "f5df404a2be910eee362bd88553c3f43e324d1ebd7d9170affc5a267dc375c37",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 14.730325184063986,
+      "usage": {
+        "input_tokens": 225866,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 266,
+        "reasoning_output_tokens": 37
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4d-4f7e-7350-8949-61a39b84a73c"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:24:59.256967+00:00",
+      "prompt_hash": "47e9e89a5a4ae9f2b52668773ffecd514b56badb24b8844252c4cd0d304c87e7",
+      "call_id": "3173baa522abdf62920a555ae4809115e73bd6c5d4546b4563ecd090ad25e108",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 14.734979092841968,
+      "usage": {
+        "input_tokens": 225860,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 272,
+        "reasoning_output_tokens": 59
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4d-8930-75f2-8afd-f019439bb81d"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:24:26.280996+00:00",
+      "prompt_hash": "97d1fb832d0628bf27c2c99500e80c51b524f5bbc9bf86a307abc9028083c048",
+      "call_id": "dfaf56b4dd712dfcd5bf579410acce849be2a20b6acf8335ee934774af6d0017",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 16.558501558145508,
+      "usage": {
+        "input_tokens": 225847,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 265,
+        "reasoning_output_tokens": 48
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4d-08ae-7050-8afb-d128761f0a00"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:24:42.885981+00:00",
+      "prompt_hash": "d29512e14fa2877556d215f2fa04e6bda31223c4bf1a94ea2a9a0f8aa2834038",
+      "call_id": "50af1a048a65a15838459cb4503e72519fa1aa60cb27950329df422acceea743",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 17.184877001913264,
+      "usage": {
+        "input_tokens": 225843,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 265,
+        "reasoning_output_tokens": 52
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4d-4942-7652-9a00-1fa4e880c021"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:25:00.104549+00:00",
+      "prompt_hash": "f173370216cdd91871c76023dcf939b5c4dad1fd36404a5e89b50c9e4467d562",
+      "call_id": "fbe092622eb444495f4f5475686ddfc9034a9931d85bb6c1a16f45d073801190",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 15.18427509185858,
+      "usage": {
+        "input_tokens": 225849,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 269,
+        "reasoning_output_tokens": 50
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4d-8c74-74b3-8650-99140d9b5a92"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:25:07.185994+00:00",
+      "prompt_hash": "ca9cc3f565749411797056dc7cc9135e2dfc6a7914b883e8fcab532baf4e937c",
+      "call_id": "4b245d14803dfb651a27ebe754527823b03c07340556d85d6b4b041d6319f2c5",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 15.332728486973792,
+      "usage": {
+        "input_tokens": 225966,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 270,
+        "reasoning_output_tokens": 51
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4d-a929-7193-887a-0685920ea8b5"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:25:22.566227+00:00",
+      "prompt_hash": "bb4eb87b0af248e24d8685d69b1bae476f26588e724c976a885be1e10d6b48d0",
+      "call_id": "13aa385201c4187fbdb8550bdb5b7f1b12f8dc8677c8acbe6a303d944899265c",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 16.13744080788456,
+      "usage": {
+        "input_tokens": 225968,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 219,
+        "reasoning_output_tokens": 35
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4d-e437-7340-a6d6-ba5eb194ed67"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:25:38.754347+00:00",
+      "prompt_hash": "ccaa3564049618c3cb2eb18169776959aaf0782aedcd6da8a4b64a0ac59aa68b",
+      "call_id": "428a3f4dadfd761304d41c7f2841d8e95ca2fdaa2b6adaad6fbb60328c0623a1",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 15.776725405128673,
+      "usage": {
+        "input_tokens": 225972,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 244,
+        "reasoning_output_tokens": 41
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4e-2380-7b73-9ae9-187c8ce2a860"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:25:09.729219+00:00",
+      "prompt_hash": "4e95206e165fa1e0f2f75be704b11764e76c4d7f55343fb51b1b5fd92cd580fd",
+      "call_id": "16720f9de0c3981705c2108eecbef580015b7fc07f2b6eaff3d64f0bde633b6d",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 15.839235975872725,
+      "usage": {
+        "input_tokens": 226072,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 295,
+        "reasoning_output_tokens": 58
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4d-b213-7e53-9096-0930389bbabe"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:25:25.593882+00:00",
+      "prompt_hash": "eb0565288783230e2d9d4c4e6d5a10ab3520502b5bb4a9362c5370ecaae86990",
+      "call_id": "88b791609d6b5ec5d8011bfe160e5d94ff461acd9623a832ba9e4b9e595bb2cd",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 16.884546532994136,
+      "usage": {
+        "input_tokens": 226070,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 308,
+        "reasoning_output_tokens": 44
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4d-f007-7543-a562-6e2377b81e4e"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:25:42.519180+00:00",
+      "prompt_hash": "630a6d46375d053f233d8a5133058124b7a564695cb14a219246083cd0dc3874",
+      "call_id": "5e37c3d5f99c86c9228b246e30cbe1cb461df92de591b4c838adb95d9aa4b528",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 15.324434209847823,
+      "usage": {
+        "input_tokens": 226072,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 289,
+        "reasoning_output_tokens": 48
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4e-3231-74e2-bbb4-06892e0b1158"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:25:15.346140+00:00",
+      "prompt_hash": "c68c1f3c5477843c065c6cba77399f7800f1dc438d5d2e714f6a98c32cdecfd0",
+      "call_id": "3c39720f2c285357f68dc30fd83ec3695cd96d09bd6303dc0127dcad29e4236a",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 15.531463330145925,
+      "usage": {
+        "input_tokens": 226030,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 291,
+        "reasoning_output_tokens": 52
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4d-c80a-7f23-b0e3-0bddce78fb9d"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:25:30.904323+00:00",
+      "prompt_hash": "9ce2a77833fe05e9e12e6817f22e72d0ff5a32e5f3bfe2f219a00a159e21ae61",
+      "call_id": "6b106d8662d392c99c611e4252cb023423ea80347c8cd7968eed1739b20fbdcc",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 14.481146803125739,
+      "usage": {
+        "input_tokens": 226028,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 257,
+        "reasoning_output_tokens": 35
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4e-04cb-7530-9d86-81a59e4ad649"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:25:45.419149+00:00",
+      "prompt_hash": "6e875bcdd1ed170b905e8d2dbd4afbccd9ef2784fb7c21144adc6a7090b1e4a8",
+      "call_id": "7dcd915eb9036a15d668c5328fe6e87439bef502f6a62460af440db4a82f7079",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 16.287552858004346,
+      "usage": {
+        "input_tokens": 226030,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 308,
+        "reasoning_output_tokens": 48
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4e-3d7b-7662-974e-08c23ff1ae50"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:25:14.065994+00:00",
+      "prompt_hash": "361012c143a68b0fbec45d37d252afe356f08909ac6db25cfc3a1fa5321eb427",
+      "call_id": "ce459ae84c35117aad395f59d35e481dd4933fc552e5afd162c710aa3e91605f",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 16.904313729144633,
+      "usage": {
+        "input_tokens": 225985,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 330,
+        "reasoning_output_tokens": 79
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4d-c312-7753-b152-f1039f61e7c1"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:25:31.000161+00:00",
+      "prompt_hash": "62ffef43287d8c52da7bb58303a35ecfe05c2947a8e9149dc00fbf8c41f6a627",
+      "call_id": "737da41cbf26ce8850df99f1740981ab3ae712636e30684a2d4c5003e401e672",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 15.885676548117772,
+      "usage": {
+        "input_tokens": 225989,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 286,
+        "reasoning_output_tokens": 70
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4e-0528-75e2-990c-01f7e6c61995"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T00:25:47.023188+00:00",
+      "prompt_hash": "c7ded1cca3fe1551a01537119258593a4dc42b582e458515cfb0af464ea58988",
+      "call_id": "101a692a3947a671b991055bdc21b7f21841469b41cc0f3adfee000889431942",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 15.074701687088236,
+      "usage": {
+        "input_tokens": 225985,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 282,
+        "reasoning_output_tokens": 39
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a09d4e-43c5-75c3-a13b-7a8e405a0f8f"
+    }
+  ],
+  "proof_key": "0c2bf3d667f9aa7b701376aacb2920a407cdbb9c7391ae4db36594c868c04501",
+  "evidence_hash": "b19ebac8c20a50dcd8681a190ce49bb831bb125f0f0493a4f0ad19c4a604c674",
+  "actor_evidence_encoding": "lossless_actor_edits_v1",
+  "necessity": "requires separate worker/input ablation trials"
+}

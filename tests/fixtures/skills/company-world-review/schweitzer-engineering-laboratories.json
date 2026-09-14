@@ -1,0 +1,369 @@
+{
+  "skill": "company-world-review",
+  "provenance": {
+    "sources": [
+      {
+        "path": "companies/schweitzer-engineering-laboratories/company.json",
+        "sha256": "b2dd71879da235c507ec2146c1710631347e137402b0e70af7894347d8e44a8a"
+      },
+      {
+        "path": "companies/schweitzer-engineering-laboratories/tasks/schweitzer-engineering-laboratories_maintenance-portfolio-selection/workflow.json",
+        "sha256": "f385892a5baea4618cc3a3256e1c25f498912ad1e4bd891524e42fac13b668fa"
+      },
+      {
+        "path": "data/sources/a9e4e53dc38331d45c47e7115dcdabc4b9fee608da5dd8a32d1f5a8a29b5ab32.json",
+        "sha256": "e791453dc64f79a94687913757f2a8a1d5b74f3dd98aa2d5ebc067dde311fc8f"
+      },
+      {
+        "path": "data/sources/07c6047bbddd569f00cb913cdb6af4b86032b6fdd62f40d824a813e2335a9d71.json",
+        "sha256": "dfea7f161f709d32c59eb52854ad2fd44db8204826bcac7b5c28138fd3fed205"
+      },
+      {
+        "path": "data/sources/07c6047bbddd569f00cb913cdb6af4b86032b6fdd62f40d824a813e2335a9d71.json",
+        "sha256": "dfea7f161f709d32c59eb52854ad2fd44db8204826bcac7b5c28138fd3fed205"
+      },
+      {
+        "path": "data/sources/07c6047bbddd569f00cb913cdb6af4b86032b6fdd62f40d824a813e2335a9d71.json",
+        "sha256": "dfea7f161f709d32c59eb52854ad2fd44db8204826bcac7b5c28138fd3fed205"
+      },
+      {
+        "path": "data/sources/3feb69d00a0c68be6c51e84f1e9f6ee5a10a9a444c609e45940c9167a0a6adf0.json",
+        "sha256": "a079e754b0d41e1227ba2cf6892e103df2010569e743430df660fe431527a6cf"
+      },
+      {
+        "path": "data/sources/52d0d2d7f7882f2c9eefcf433ca641524a1051d5c2b190940225940023e5430c.json",
+        "sha256": "add8d9a2eb931a3b0ffb64cabe57b255264a16ae81a80f8d1294b76c7ce45d3f"
+      },
+      {
+        "path": "data/sources/52d0d2d7f7882f2c9eefcf433ca641524a1051d5c2b190940225940023e5430c.json",
+        "sha256": "add8d9a2eb931a3b0ffb64cabe57b255264a16ae81a80f8d1294b76c7ce45d3f"
+      },
+      {
+        "path": "experiments/batch/thin-worlds-20260907T2046/schweitzer-engineering-laboratories/github_mock.state.json",
+        "sha256": "a48de580eba24e150e23c7e2bab1972d1ef7f6e6f6767a7c638b33e8c5131047"
+      },
+      {
+        "path": "experiments/batch/thin-worlds-20260907T2046/schweitzer-engineering-laboratories/world.json",
+        "sha256": "673344dd95ad1412b9798660df0e950c77b428112226105edfdd8d64cf5894ea"
+      },
+      {
+        "path": "experiments/batch/thin-worlds-20260907T2046/schweitzer-engineering-laboratories/identities.json",
+        "sha256": "c8024613399d428703aa23e8d20b3ca877276a6d04327489fdeeaac7e12edcfa"
+      },
+      {
+        "path": "experiments/batch/thin-worlds-20260907T2046/schweitzer-engineering-laboratories/SEED.json",
+        "sha256": "2135454477ec9cd2aebb69f529254208fd1d972b61d8f9fcfeb98d1f3d90316c"
+      }
+    ],
+    "changes": "Trimmed to one task and a few native records. Calibration tasks are explicitly narrowed exercises derived from that task; their answers and planted defects are hand-authored test data, not accepted production outcomes."
+  },
+  "input": {
+    "world": {
+      "company": {
+        "id": "CPS",
+        "name": "Clearwater Protection Systems",
+        "domain": "clearwaterprotection.com",
+        "timezone": "America/Los_Angeles",
+        "apps": [
+          "github_mock",
+          "gmail_mock",
+          "google_calendar_mock",
+          "google_docs_mock",
+          "google_drive_mock",
+          "slack_mock"
+        ]
+      },
+      "issues": [
+        {
+          "id": "ISS-F401",
+          "repoId": "REP-F400",
+          "number": 401,
+          "title": "Bound parser input and define frame ownership",
+          "description": "Parser length and ownership changes require engineering preparation and review. Candidate C-PC is available for review; no completed candidate test report exists. Requirements R-PARSE-03, R-PARSE-04 and R-LIFE-02 apply. Scope includes length validation, interface and boundary harness. No window capacity has been assigned.\n\nSupport case: CS-26127. Work package: PK-SHARED. Dependencies: none.",
+          "status": "open",
+          "authorId": "CPS-IM",
+          "assignees": [
+            "CPS-IM"
+          ],
+          "labels": [
+            "scope-ready",
+            "qualification-needed"
+          ],
+          "milestone": null,
+          "column": "todo",
+          "isPinned": false,
+          "reactions": {},
+          "createdAt": "2026-08-28T17:15:00Z",
+          "closedAt": null,
+          "comments": []
+        },
+        {
+          "id": "ISS-F402",
+          "repoId": "REP-F400",
+          "number": 402,
+          "title": "Adapt F400 4.8 service to parser correction",
+          "description": "Engineering completion is required by September 14 under priority policy v2. Preserve remote event and settings functions and reject malformed frames. Review all caller and lifetime surfaces in F48-260717. Hardware D1/D2 acceptance remains required. Capacity has not been scheduled.\n\nSupport case: CS-26127. Work package: PK-MODERN. Depends on PK-SHARED, f400 #401.",
+          "status": "open",
+          "authorId": "CPS-IM",
+          "assignees": [
+            "CPS-IM"
+          ],
+          "labels": [
+            "scope-ready",
+            "qualification-needed"
+          ],
+          "milestone": null,
+          "column": "todo",
+          "isPinned": false,
+          "reactions": {},
+          "createdAt": "2026-08-28T17:25:00Z",
+          "closedAt": null,
+          "comments": []
+        },
+        {
+          "id": "ISS-F403",
+          "repoId": "REP-F400",
+          "number": 403,
+          "title": "Adapt F400 4.2 maintenance parser",
+          "description": "Assess the correction against the legacy allocator and callback requirements. B1/B2 compatibility and delayed payload consumption need acceptance evidence. Existing management-network restrictions remain in effect. No maintenance window is selected; responsible role is Embedded Firmware Developer.\n\nSupport case: CS-26129. Work package: PK-LEGACY. Depends on PK-SHARED, f400 #401.",
+          "status": "open",
+          "authorId": "CPS-IM",
+          "assignees": [
+            "CPS-IM"
+          ],
+          "labels": [
+            "scope-ready",
+            "qualification-needed"
+          ],
+          "milestone": null,
+          "column": "todo",
+          "isPinned": false,
+          "reactions": {},
+          "createdAt": "2026-08-31T18:05:00Z",
+          "closedAt": null,
+          "comments": []
+        }
+      ]
+    },
+    "states": {
+      "github_mock": {
+        "issues": [
+          {
+            "id": "ISS-F401",
+            "repoId": "REP-F400",
+            "number": 401,
+            "title": "Release parser correction without testing",
+            "description": "Parser length and ownership changes require engineering preparation and review. Candidate C-PC is available for review; no completed candidate test report exists. Requirements R-PARSE-03, R-PARSE-04 and R-LIFE-02 apply. Scope includes length validation, interface and boundary harness. No window capacity has been assigned.\n\nSupport case: CS-26127. Work package: PK-SHARED. Dependencies: none.",
+            "status": "open",
+            "authorId": "CPS-IM",
+            "assignees": [
+              "CPS-IM"
+            ],
+            "labels": [
+              "scope-ready",
+              "qualification-needed"
+            ],
+            "milestone": null,
+            "column": "todo",
+            "isPinned": false,
+            "reactions": {},
+            "createdAt": "2026-08-28T17:15:00Z",
+            "closedAt": null,
+            "comments": []
+          },
+          {
+            "id": "ISS-F402",
+            "repoId": "REP-F400",
+            "number": 402,
+            "title": "Adapt F400 4.8 service to parser correction",
+            "description": "Engineering completion is required by September 14 under priority policy v2. Preserve remote event and settings functions and reject malformed frames. Review all caller and lifetime surfaces in F48-260717. Hardware D1/D2 acceptance remains required. Capacity has not been scheduled.\n\nSupport case: CS-26127. Work package: PK-MODERN. Depends on PK-SHARED, f400 #401.",
+            "status": "open",
+            "authorId": "CPS-IM",
+            "assignees": [
+              "CPS-IM"
+            ],
+            "labels": [
+              "scope-ready",
+              "qualification-needed"
+            ],
+            "milestone": null,
+            "column": "todo",
+            "isPinned": false,
+            "reactions": {},
+            "createdAt": "2026-08-28T17:25:00Z",
+            "closedAt": null,
+            "comments": []
+          },
+          {
+            "id": "ISS-F403",
+            "repoId": "REP-F400",
+            "number": 403,
+            "title": "Adapt F400 4.2 maintenance parser",
+            "description": "Assess the correction against the legacy allocator and callback requirements. B1/B2 compatibility and delayed payload consumption need acceptance evidence. Existing management-network restrictions remain in effect. No maintenance window is selected; responsible role is Embedded Firmware Developer.\n\nSupport case: CS-26129. Work package: PK-LEGACY. Depends on PK-SHARED, f400 #401.",
+            "status": "open",
+            "authorId": "CPS-IM",
+            "assignees": [
+              "CPS-IM"
+            ],
+            "labels": [
+              "scope-ready",
+              "qualification-needed"
+            ],
+            "milestone": null,
+            "column": "todo",
+            "isPinned": false,
+            "reactions": {},
+            "createdAt": "2026-08-31T18:05:00Z",
+            "closedAt": null,
+            "comments": []
+          }
+        ],
+        "users": [
+          {
+            "id": "CPS-HW",
+            "username": "helen-ward",
+            "name": "Helen Ward",
+            "email": "helen.ward@clearwaterprotection.com",
+            "avatar": "",
+            "bio": "Sustaining Software Manager; Sustaining Firmware Engineering and Product Assurance and Application Support",
+            "location": "Pullman, WA",
+            "company": "Clearwater Protection Systems",
+            "website": "https://clearwaterprotection.com",
+            "joinedAt": "2016-02-09T16:00:00Z"
+          },
+          {
+            "id": "CPS-IM",
+            "username": "isaac-moreno",
+            "name": "Isaac Moreno",
+            "email": "isaac.moreno@clearwaterprotection.com",
+            "avatar": "",
+            "bio": "Embedded Firmware Developer; Sustaining Firmware Engineering",
+            "location": "Pullman, WA",
+            "company": "Clearwater Protection Systems",
+            "website": "https://clearwaterprotection.com",
+            "joinedAt": "2018-06-11T16:00:00Z"
+          },
+          {
+            "id": "CPS-FQ",
+            "username": "farah-qureshi",
+            "name": "Farah Qureshi",
+            "email": "farah.qureshhi@clearwaterprotection.com",
+            "avatar": "",
+            "bio": "Product Security Analyst; Product Assurance and Application Support",
+            "location": "Pullman, WA",
+            "company": "Clearwater Protection Systems",
+            "website": "https://clearwaterprotection.com",
+            "joinedAt": "2020-03-16T16:00:00Z"
+          },
+          {
+            "id": "CPS-GO",
+            "username": "grace-okafor",
+            "name": "Grace Okafor",
+            "email": "grace.okafor@clearwaterprotection.com",
+            "avatar": "",
+            "bio": "Protection Applications Engineer; Product Assurance and Application Support",
+            "location": "Pullman, WA",
+            "company": "Clearwater Protection Systems",
+            "website": "https://clearwaterprotection.com",
+            "joinedAt": "2019-04-22T16:00:00Z"
+          }
+        ],
+        "currentUser": {
+          "id": "CPS-HW",
+          "username": "helen-ward",
+          "name": "Helen Ward",
+          "email": "helen.ward@clearwaterprotection.com",
+          "avatar": "",
+          "bio": "Sustaining Software Manager; Sustaining Firmware Engineering and Product Assurance and Application Support",
+          "location": "Pullman, WA",
+          "company": "Clearwater Protection Systems",
+          "website": "https://clearwaterprotection.com",
+          "joinedAt": "2016-02-09T16:00:00Z"
+        }
+      }
+    },
+    "identities": {
+      "software-manager": {
+        "github_mock": {
+          "id": "CPS-HW",
+          "username": "helen-ward",
+          "name": "Helen Ward",
+          "email": "helen.ward@clearwaterprotection.com",
+          "avatar": "",
+          "bio": "Sustaining Software Manager; Sustaining Firmware Engineering and Product Assurance and Application Support",
+          "location": "Pullman, WA",
+          "company": "Clearwater Protection Systems",
+          "website": "https://clearwaterprotection.com",
+          "joinedAt": "2016-02-09T16:00:00Z"
+        }
+      },
+      "firmware-developer": {
+        "github_mock": {
+          "id": "CPS-IM",
+          "username": "isaac-moreno",
+          "name": "Isaac Moreno",
+          "email": "isaac.moreno@clearwaterprotection.com",
+          "avatar": "",
+          "bio": "Embedded Firmware Developer; Sustaining Firmware Engineering",
+          "location": "Pullman, WA",
+          "company": "Clearwater Protection Systems",
+          "website": "https://clearwaterprotection.com",
+          "joinedAt": "2018-06-11T16:00:00Z"
+        }
+      },
+      "security-analyst": {
+        "github_mock": {
+          "id": "CPS-FQ",
+          "username": "farah-qureshi",
+          "name": "Farah Qureshi",
+          "email": "farah.qureshhi@clearwaterprotection.com",
+          "avatar": "",
+          "bio": "Product Security Analyst; Product Assurance and Application Support",
+          "location": "Pullman, WA",
+          "company": "Clearwater Protection Systems",
+          "website": "https://clearwaterprotection.com",
+          "joinedAt": "2020-03-16T16:00:00Z"
+        }
+      },
+      "application-engineer": {
+        "github_mock": {
+          "id": "CPS-GO",
+          "username": "grace-okafor",
+          "name": "Grace Okafor",
+          "email": "grace.okafor@clearwaterprotection.com",
+          "avatar": "",
+          "bio": "Protection Applications Engineer; Product Assurance and Application Support",
+          "location": "Pullman, WA",
+          "company": "Clearwater Protection Systems",
+          "website": "https://clearwaterprotection.com",
+          "joinedAt": "2019-04-22T16:00:00Z"
+        }
+      }
+    },
+    "materials": {}
+  },
+  "double": {
+    "verdict": "revise",
+    "summary": "The app record disagrees with its canonical copy.",
+    "findings": [
+      {
+        "target": "github_mock",
+        "severity": "error",
+        "issue": "The two copies give different titles to the same record.",
+        "evidence": "/world/issues/0/title and /states/github_mock/issues/0/title"
+      }
+    ],
+    "contradictions": [
+      {
+        "left": "/world/issues/0/title",
+        "right": "/states/github_mock/issues/0/title"
+      }
+    ]
+  },
+  "oracle": {
+    "contradiction": [
+      "/world/issues/0/title",
+      "/states/github_mock/issues/0/title"
+    ]
+  }
+}

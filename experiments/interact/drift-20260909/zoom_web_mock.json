@@ -1,0 +1,97 @@
+{
+  "app_id": "zoom_web_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "channels",
+    "contacts",
+    "meetings",
+    "messages",
+    "recordings",
+    "settings",
+    "user"
+  ],
+  "observed": [
+    "activityLog",
+    "contacts",
+    "meetings",
+    "recordings",
+    "settings",
+    "user"
+  ],
+  "undocumented_so_unseedable": [
+    "activityLog"
+  ],
+  "documented_but_app_keeps_none": [
+    "channels",
+    "messages"
+  ],
+  "agrees": false,
+  "shapes": {
+    "user": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "meetings": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "meetingId",
+        "title",
+        "hostId",
+        "startTime",
+        "duration",
+        "password",
+        "joinUrl",
+        "participants",
+        "settings",
+        "recurring"
+      ],
+      "keyed_by_id": false
+    },
+    "contacts": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "contactId",
+        "name",
+        "email",
+        "avatar",
+        "status"
+      ],
+      "keyed_by_id": false
+    },
+    "recordings": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "recordingId",
+        "meetingId",
+        "title",
+        "url",
+        "duration",
+        "created",
+        "size",
+        "transcript",
+        "sharedWith"
+      ],
+      "keyed_by_id": false
+    },
+    "settings": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": [
+        "input",
+        "output"
+      ],
+      "keyed_by_id": true
+    },
+    "activityLog": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

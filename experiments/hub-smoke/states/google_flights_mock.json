@@ -1,0 +1,41 @@
+{
+  "airports": [
+    {"code": "SYD", "name": "Kingsford Smith Airport", "city": "Sydney", "country": "Australia", "lat": -33.9399, "lng": 151.1753},
+    {"code": "SIN", "name": "Changi Airport", "city": "Singapore", "country": "Singapore", "lat": 1.3644, "lng": 103.9915},
+    {"code": "LHR", "name": "Heathrow Airport", "city": "London", "country": "United Kingdom", "lat": 51.47, "lng": -0.4543}
+  ],
+  "airlines": [
+    {"id": "SQ", "name": "Singapore Airlines", "logoColor": "#F9A21B"},
+    {"id": "BA", "name": "British Airways", "logoColor": "#075AAA"}
+  ],
+  "flights": [
+    {"id": "fl_1", "origin": "SYD", "destination": "SIN", "departureTime": "2026-09-21T10:15:00+10:00", "arrivalTime": "2026-09-21T16:05:00+08:00", "totalDuration": 470, "stops": 0, "segments": ["seg_1"], "price": 640, "emissions": 410, "emissionsPercent": -6, "seatsAvailable": 12, "fareClasses": {"basicEconomy": null, "economy": 640, "premiumEconomy": 1088, "business": 2688, "first": null}, "baggage": {"personalItem": true, "carryOn": true, "checkedBag": true}, "layovers": []},
+    {"id": "fl_2", "origin": "SYD", "destination": "LHR", "departureTime": "2026-09-21T16:20:00+10:00", "arrivalTime": "2026-09-22T05:55:00+01:00", "totalDuration": 1415, "stops": 1, "segments": ["seg_2", "seg_3"], "price": 1290, "emissions": 1180, "emissionsPercent": 4, "seatsAvailable": 6, "fareClasses": {"basicEconomy": 1190, "economy": 1290, "premiumEconomy": 2193, "business": 5418, "first": 9030}, "baggage": {"personalItem": true, "carryOn": true, "checkedBag": false}, "layovers": [{"airport": "SIN", "duration": 125, "changeTerminal": false}]}
+  ],
+  "segments": {
+    "seg_1": {"id": "seg_1", "flightNumber": "SQ232", "airline": "SQ", "aircraft": "Airbus A350-900", "origin": "SYD", "destination": "SIN", "departureTime": "2026-09-21T10:15:00+10:00", "arrivalTime": "2026-09-21T16:05:00+08:00", "duration": 470, "amenities": {"wifi": true, "power": true, "streaming": true, "legroom": "32"}},
+    "seg_2": {"id": "seg_2", "flightNumber": "SQ222", "airline": "SQ", "aircraft": "Boeing 777-300ER", "origin": "SYD", "destination": "SIN", "departureTime": "2026-09-21T16:20:00+10:00", "arrivalTime": "2026-09-21T22:10:00+08:00", "duration": 470, "amenities": {"wifi": true, "power": true, "streaming": false, "legroom": "32"}},
+    "seg_3": {"id": "seg_3", "flightNumber": "BA12", "airline": "BA", "aircraft": "Boeing 787-9 Dreamliner", "origin": "SIN", "destination": "LHR", "departureTime": "2026-09-22T00:15:00+08:00", "arrivalTime": "2026-09-22T05:55:00+01:00", "duration": 820, "amenities": {"wifi": true, "power": true, "streaming": true, "legroom": "31"}}
+  },
+  "search": {"tripType": "roundtrip", "origin": "SYD", "destination": null, "departureDate": "2026-09-21", "returnDate": "2026-09-28", "passengers": {"adults": 1, "children": 0, "infantsInSeat": 0, "infantsOnLap": 0}, "cabinClass": "economy", "legs": []},
+  "filters": {"stops": "any", "airlines": [], "bags": [], "maxPrice": 2000, "departureTimeRange": [0, 1440], "arrivalTimeRange": [0, 1440], "maxDuration": 1200, "connectingAirports": [], "emissions": "any"},
+  "selectedOutboundFlight": null,
+  "selectedReturnFlight": null,
+  "bookings": [
+    {"id": "bk_1756300000000", "flightId": "fl_1", "origin": "SYD", "destination": "SIN", "departureTime": "2026-09-21T10:15:00+10:00", "arrivalTime": "2026-09-21T16:05:00+08:00", "passenger": {"firstName": "Harriet", "lastName": "Ngata-Boyle", "dob": "1984-02-17", "passportNumber": "PA7731902", "phone": "+61 2 5550 1188", "email": "harriet.ngata@wattlecreekconsulting.example", "nationality": "Australia"}, "seat": "14C", "total": 640, "bookingRef": "WCK7Q2", "status": "confirmed", "cabin": "economy", "createdAt": "2026-08-27T09:20:00Z"}
+  ],
+  "priceAlerts": [],
+  "trackedRoutes": [{"origin": "SYD", "destination": "LHR", "addedAt": "2026-08-27T09:25:00Z"}],
+  "activeTab": "best",
+  "dateViewMode": "calendar",
+  "popularDestinations": [
+    {"city": "Singapore", "country": "Singapore", "airport": "SIN", "imageUrl": "https://picsum.photos/400/300?random=11", "priceFrom": 640, "flightDuration": "7h 50m", "stops": "Nonstop"},
+    {"city": "London", "country": "United Kingdom", "airport": "LHR", "imageUrl": "https://picsum.photos/400/300?random=12", "priceFrom": 1190, "flightDuration": "23h 35m", "stops": "1 stop"}
+  ],
+  "priceCalendar": [
+    {"date": "2026-09-20", "price": 690, "isCheapest": false},
+    {"date": "2026-09-21", "price": 640, "isCheapest": true},
+    {"date": "2026-09-22", "price": 705, "isCheapest": false}
+  ],
+  "user": {"id": "u_1", "name": "Harriet Ngata-Boyle", "email": "harriet.ngata@wattlecreekconsulting.example"}
+}

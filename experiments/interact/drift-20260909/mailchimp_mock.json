@@ -1,0 +1,254 @@
+{
+  "app_id": "mailchimp_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "audiences",
+    "automations",
+    "campaigns",
+    "contacts",
+    "contentFiles",
+    "ecommerce",
+    "landingPages",
+    "notifications",
+    "segments",
+    "signupForms",
+    "surveys",
+    "tags",
+    "templates",
+    "user"
+  ],
+  "observed": [
+    "audiences",
+    "automations",
+    "campaigns",
+    "contacts",
+    "contentFiles",
+    "ecommerce",
+    "landingPages",
+    "notifications",
+    "segments",
+    "signupForms",
+    "surveys",
+    "tags",
+    "templates",
+    "user"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "user": {
+      "kind": "object",
+      "count": 16,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "audiences": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "name",
+        "stats",
+        "defaultFromName",
+        "defaultFromEmail",
+        "createdAt",
+        "growthHistory"
+      ],
+      "keyed_by_id": false
+    },
+    "contacts": {
+      "kind": "array",
+      "count": 520,
+      "record_fields": [
+        "id",
+        "audienceId",
+        "email",
+        "firstName",
+        "lastName",
+        "phone",
+        "status",
+        "tags",
+        "source",
+        "rating",
+        "location",
+        "birthday",
+        "notes",
+        "openRate",
+        "clickRate",
+        "lastOpened",
+        "lastClicked",
+        "subscribedAt",
+        "createdAt",
+        "activity"
+      ],
+      "keyed_by_id": false
+    },
+    "tags": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "name",
+        "contactCount",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "segments": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "audienceId",
+        "name",
+        "conditions",
+        "conditionMatch",
+        "memberCount",
+        "type",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "campaigns": {
+      "kind": "array",
+      "count": 11,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "status",
+        "audienceId",
+        "segmentId",
+        "recipients",
+        "fromName",
+        "fromEmail",
+        "replyTo",
+        "subject",
+        "previewText",
+        "templateId",
+        "content",
+        "scheduledAt",
+        "sentAt",
+        "report",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "templates": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "name",
+        "category",
+        "thumbnail",
+        "isPrebuilt",
+        "content",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "automations": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "status",
+        "trigger",
+        "steps",
+        "stats",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "contentFiles": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "url",
+        "size",
+        "dimensions",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "landingPages": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "status",
+        "url",
+        "views",
+        "signups",
+        "conversionRate",
+        "publishedAt",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "signupForms": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "status",
+        "views",
+        "submissions",
+        "conversionRate",
+        "audienceId",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "surveys": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "status",
+        "questions",
+        "responses",
+        "completionRate",
+        "audienceId",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "type",
+        "title",
+        "message",
+        "read",
+        "link",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "ecommerce": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

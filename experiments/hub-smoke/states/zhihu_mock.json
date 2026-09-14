@@ -1,0 +1,41 @@
+{
+  "currentUser": {"userId": "user0", "nickname": "沈砚之", "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=shenyanzhi", "headline": "青禾社区图书馆 馆长", "description": "在苏州运营一家社区图书馆，关注阅读推广与公共空间。", "gender": "female", "location": "苏州", "industry": "文化教育", "employment": [{"company": "青禾社区图书馆", "job": "馆长"}], "education": [{"school": "南京大学", "major": "图书馆学"}], "followingCount": 2, "followerCount": 1280, "voteupCount": 3400, "thankedCount": 210, "favoriteCount": 560, "answerCount": 1, "articleCount": 1, "questionCount": 1},
+  "users": [
+    {"userId": "user0", "nickname": "沈砚之", "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=shenyanzhi", "headline": "青禾社区图书馆 馆长", "description": "在苏州运营一家社区图书馆，关注阅读推广与公共空间。", "gender": "female", "location": "苏州", "industry": "文化教育", "employment": [{"company": "青禾社区图书馆", "job": "馆长"}], "education": [{"school": "南京大学", "major": "图书馆学"}], "followingCount": 2, "followerCount": 1280, "voteupCount": 3400, "thankedCount": 210, "favoriteCount": 560, "answerCount": 1, "articleCount": 1, "questionCount": 1},
+    {"userId": "user1", "nickname": "陆桐", "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=lutong", "headline": "儿童阅读推广人", "description": "", "gender": "male", "location": "上海", "industry": "文化教育", "employment": [{"company": "自由职业", "job": "阅读推广人"}], "education": [], "followingCount": 40, "followerCount": 9800, "voteupCount": 22000, "thankedCount": 1500, "favoriteCount": 3000, "answerCount": 1, "articleCount": 0, "questionCount": 0},
+    {"userId": "user2", "nickname": "顾清和", "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=guqinghe", "headline": "建筑师，关注小型公共空间", "description": "", "gender": "other", "location": "杭州", "industry": "建筑", "employment": [{"company": "清和设计", "job": "主持建筑师"}], "education": [], "followingCount": 10, "followerCount": 4200, "voteupCount": 8000, "thankedCount": 400, "favoriteCount": 900, "answerCount": 1, "articleCount": 0, "questionCount": 0}
+  ],
+  "questions": [
+    {"questionId": "q1", "title": "青禾社区图书馆如何吸引周边中学生放学后来自习？", "description": "我们馆离两所中学步行十分钟，但放学后来的学生很少。想听听大家的经验。", "topics": ["topic1"], "authorId": "user0", "createdTime": 1756900000000, "updatedTime": 1757000000000, "followerCount": 86, "viewCount": 12400, "answerCount": 2}
+  ],
+  "answers": [
+    {"answerId": "a1", "questionId": "q1", "authorId": "user1", "content": "先解决插座和照明，再考虑活动。\n\n中学生最在意的是能不能安静地坐两小时并且手机有电。", "createdTime": 1756950000000, "updatedTime": 1756950000000, "voteupCount": 143, "commentCount": 1, "favoriteCount": 30, "thankCount": 12},
+    {"answerId": "a2", "questionId": "q1", "authorId": "user2", "content": "把靠窗的一排改成高桌加高脚凳，视线开阔，学生会自然聚过去。", "createdTime": 1756980000000, "updatedTime": 1756980000000, "voteupCount": 57, "commentCount": 0, "favoriteCount": 9, "thankCount": 4}
+  ],
+  "articles": [
+    {"articleId": "art1", "title": "一家社区图书馆的三年账本", "content": "青禾社区图书馆开馆三年，我们把每一笔支出都公开在这篇文章里。", "coverImage": "https://picsum.photos/seed/qinghe/800/400", "authorId": "user0", "topics": ["topic1"], "createdTime": 1756000000000, "updatedTime": 1756000000000, "viewCount": 8600, "voteupCount": 210, "commentCount": 0, "favoriteCount": 75}
+  ],
+  "comments": {
+    "a1": [
+      {"commentId": "c1", "targetId": "a1", "targetType": "answer", "authorId": "user0", "content": "插座确实是硬伤，谢谢提醒。", "createdTime": 1756960000000, "voteupCount": 3, "replies": []}
+    ]
+  },
+  "topics": [
+    {"topicId": "topic1", "name": "公共图书馆", "icon": "https://picsum.photos/seed/library/48/48", "description": "公共图书馆与阅读空间", "followerCount": 420000, "questionCount": 18000}
+  ],
+  "collections": [
+    {"collectionId": "col1", "name": "空间改造参考", "description": "关于小型阅读空间的回答", "privacy": "private", "itemIds": ["a2"], "itemTypes": ["answer"], "createdTime": 1756990000000, "updatedTime": 1756990000000}
+  ],
+  "notifications": [
+    {"notificationId": "notif1", "type": "comment", "fromUserId": "user1", "targetId": "a1", "targetType": "answer", "content": "陆桐 回答了你的问题", "isRead": false, "createdTime": 1756950000000}
+  ],
+  "ideas": [
+    {"ideaId": "idea1", "authorId": "user0", "content": "今天馆里来了第一位带作业本的中学生。", "images": [], "topics": ["topic1"], "createdTime": 1757050000000, "voteupCount": 12, "commentCount": 0, "shareCount": 1}
+  ],
+  "userVoteups": {"a1": true},
+  "userFavorites": {"a2": true},
+  "userFollowings": {"user1": true, "user2": true},
+  "userFollowedTopics": {"topic1": true},
+  "userFollowedQuestions": {"q1": true},
+  "userCommentVoteups": {}
+}

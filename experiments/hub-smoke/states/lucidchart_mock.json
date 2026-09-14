@@ -1,0 +1,39 @@
+{
+  "currentUser": {"id": "user-1", "name": "Hana Petrova", "email": "hana.petrova@millbrook-water.example", "avatar": "HP", "avatarColor": "#4A86C8"},
+  "users": [
+    {"id": "user-2", "name": "Desmond Kariuki", "email": "desmond.kariuki@millbrook-water.example", "avatar": "DK", "avatarColor": "#D9534F"},
+    {"id": "user-3", "name": "Ines Moreau", "email": "ines.moreau@millbrook-water.example", "avatar": "IM", "avatarColor": "#5CB85C"}
+  ],
+  "folders": [
+    {"id": "folder-root", "name": "My Documents", "parentId": null, "type": "my_documents", "createdAt": "2026-01-05T00:00:00Z", "updatedAt": "2026-09-01T00:00:00Z"},
+    {"id": "folder-shared", "name": "Shared with Me", "parentId": null, "type": "shared", "createdAt": "2026-01-05T00:00:00Z", "updatedAt": "2026-09-01T00:00:00Z"},
+    {"id": "folder-team", "name": "Team Folders", "parentId": null, "type": "team", "createdAt": "2026-01-05T00:00:00Z", "updatedAt": "2026-09-01T00:00:00Z"},
+    {"id": "folder-trash", "name": "Trash", "parentId": null, "type": "trash", "createdAt": "2026-01-05T00:00:00Z", "updatedAt": "2026-09-01T00:00:00Z"},
+    {"id": "folder-1", "name": "Treatment Plant", "parentId": "folder-team", "type": "team", "createdAt": "2026-02-10T00:00:00Z", "updatedAt": "2026-08-20T00:00:00Z"}
+  ],
+  "documents": [
+    {"id": "doc-1", "title": "Millbrook Water Main Break Response Flow", "folderId": "folder-root", "ownerId": "user-1", "starred": true, "status": "draft", "thumbnailUrl": null, "createdAt": "2026-08-12T10:00:00Z", "updatedAt": "2026-09-05T16:45:00Z", "lastOpenedAt": "2026-09-07T08:00:00Z", "sharedWith": [{"userId": "user-2", "permission": "edit"}], "pageOrder": ["page-1"]},
+    {"id": "doc-2", "title": "Filtration Plant Org Chart", "folderId": "folder-1", "ownerId": "user-2", "starred": false, "status": "published", "thumbnailUrl": null, "createdAt": "2026-03-02T09:00:00Z", "updatedAt": "2026-06-14T11:00:00Z", "lastOpenedAt": "2026-09-01T09:30:00Z", "sharedWith": [{"userId": "user-1", "permission": "view"}], "pageOrder": ["page-2"]}
+  ],
+  "pages": [
+    {"id": "page-1", "documentId": "doc-1", "name": "Page 1", "order": 0, "width": 1200, "height": 900, "gridVisible": true, "gridSize": 20, "backgroundColor": "#FFFFFF"},
+    {"id": "page-2", "documentId": "doc-2", "name": "Page 1", "order": 0, "width": 1200, "height": 900, "gridVisible": true, "gridSize": 20, "backgroundColor": "#FFFFFF"}
+  ],
+  "shapes": [
+    {"id": "shape-1", "pageId": "page-1", "type": "terminator", "category": "flowchart", "x": 440, "y": 60, "width": 200, "height": 60, "rotation": 0, "text": "Break reported", "fontSize": 13, "fontFamily": "Liberation Sans", "fontWeight": "normal", "fontStyle": "normal", "textAlign": "center", "textColor": "#333333", "fillColor": "#FFFFFF", "borderColor": "#333333", "borderWidth": 2, "borderStyle": "solid", "opacity": 1, "locked": false, "visible": true, "zIndex": 1, "groupId": null},
+    {"id": "shape-2", "pageId": "page-1", "type": "decision", "category": "flowchart", "x": 440, "y": 180, "width": 200, "height": 100, "rotation": 0, "text": "Pressure loss > 20 psi?", "fontSize": 13, "fontFamily": "Liberation Sans", "fontWeight": "normal", "fontStyle": "normal", "textAlign": "center", "textColor": "#333333", "fillColor": "#FFF4CE", "borderColor": "#333333", "borderWidth": 2, "borderStyle": "solid", "opacity": 1, "locked": false, "visible": true, "zIndex": 2, "groupId": null},
+    {"id": "shape-3", "pageId": "page-1", "type": "process", "category": "flowchart", "x": 440, "y": 340, "width": 200, "height": 70, "rotation": 0, "text": "Isolate valves and notify crew", "fontSize": 13, "fontFamily": "Liberation Sans", "fontWeight": "normal", "fontStyle": "normal", "textAlign": "center", "textColor": "#333333", "fillColor": "#FFFFFF", "borderColor": "#333333", "borderWidth": 2, "borderStyle": "solid", "opacity": 1, "locked": false, "visible": true, "zIndex": 3, "groupId": null}
+  ],
+  "connectors": [
+    {"id": "conn-1", "pageId": "page-1", "sourceShapeId": "shape-1", "sourcePoint": "bottom", "targetShapeId": "shape-2", "targetPoint": "top", "waypoints": [], "lineStyle": "solid", "lineWidth": 2, "lineColor": "#333333", "sourceArrow": "none", "targetArrow": "arrow", "label": "", "labelPosition": 0.5, "routingType": "orthogonal", "zIndex": 0},
+    {"id": "conn-2", "pageId": "page-1", "sourceShapeId": "shape-2", "sourcePoint": "bottom", "targetShapeId": "shape-3", "targetPoint": "top", "waypoints": [], "lineStyle": "solid", "lineWidth": 2, "lineColor": "#333333", "sourceArrow": "none", "targetArrow": "arrow", "label": "Yes", "labelPosition": 0.5, "routingType": "orthogonal", "zIndex": 0}
+  ],
+  "comments": [
+    {"id": "comment-1", "pageId": "page-1", "shapeId": "shape-2", "x": null, "y": null, "authorId": "user-2", "authorName": "Desmond Kariuki", "text": "Should the threshold be 15 psi per the new SOP?", "resolved": false, "createdAt": "2026-09-05T10:30:00Z", "replies": [{"id": "reply-1", "authorId": "user-1", "authorName": "Hana Petrova", "text": "Checking with operations.", "createdAt": "2026-09-05T11:00:00Z"}]}
+  ],
+  "templates": [
+    {"id": "template-blank", "name": "Blank", "category": "general", "icon": "blank", "description": "Start with an empty canvas"},
+    {"id": "template-flowchart", "name": "Flowchart", "category": "general", "icon": "flowchart", "description": "Basic flowchart with start, process and decision shapes"}
+  ],
+  "ui": {"activeFolderId": "folder-root", "activeDocumentId": null, "activePageId": null, "selectedShapeIds": [], "dashboardViewMode": "grid", "dashboardSearchQuery": "", "rightPanelTab": null, "zoomLevel": 100, "shapePanelSearchQuery": "", "shapePanelSections": {"shapesInUse": true, "standard": true, "flowchart": true, "shapes": true}}
+}

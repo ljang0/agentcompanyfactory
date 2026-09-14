@@ -1,0 +1,48 @@
+{
+  "currentUser": {"id": "user_1", "name": "Wen Jialing", "englishName": "Jialing Wen", "avatar": "", "avatarColor": "#3370FF", "initials": "W", "email": "jialing.wen@meridianfreight.example", "phone": "138****2210", "department": "Dispatch Operations", "title": "Dispatch Lead", "status": "online", "statusText": "", "statusEmoji": "", "isCurrentUser": true},
+  "users": [
+    {"id": "user_1", "name": "Wen Jialing", "englishName": "Jialing Wen", "avatar": "", "avatarColor": "#3370FF", "initials": "W", "email": "jialing.wen@meridianfreight.example", "phone": "138****2210", "department": "Dispatch Operations", "title": "Dispatch Lead", "status": "online", "statusText": "", "statusEmoji": "", "isCurrentUser": true},
+    {"id": "user_2", "name": "Oskar Lindgren", "englishName": "Oskar Lindgren", "avatar": "", "avatarColor": "#FF7D00", "initials": "O", "email": "oskar.lindgren@meridianfreight.example", "phone": "139****8841", "department": "Fleet Maintenance", "title": "Fleet Coordinator", "status": "busy", "statusText": "On the yard", "statusEmoji": "🚚", "isCurrentUser": false},
+    {"id": "user_3", "name": "Adaeze Nwosu", "englishName": "Adaeze Nwosu", "avatar": "", "avatarColor": "#00B42A", "initials": "A", "email": "adaeze.nwosu@meridianfreight.example", "phone": "137****5502", "department": "Dispatch Operations", "title": "Operations Manager", "status": "away", "statusText": "", "statusEmoji": "", "isCurrentUser": false}
+  ],
+  "conversations": [
+    {"id": "conv_1", "type": "group", "name": "Meridian Freight Dispatch Desk", "avatar": "", "memberCount": 3, "members": ["user_1", "user_2", "user_3"], "lastMessage": {"content": "Truck 14 is back from the shop, cleared for the Fresno run.", "senderId": "user_2", "timestamp": 1756909200000}, "unreadCount": 1, "isPinned": true, "isMuted": false, "isDone": false, "topNotice": null, "labels": [], "createdAt": 1748736000000},
+    {"id": "conv_2", "type": "direct", "name": "Adaeze Nwosu", "avatar": "", "memberCount": 2, "members": ["user_1", "user_3"], "lastMessage": {"content": "Can you approve my leave request before Friday?", "senderId": "user_3", "timestamp": 1756905600000}, "unreadCount": 0, "isPinned": false, "isMuted": false, "isDone": false, "topNotice": null, "labels": [], "createdAt": 1748736000000}
+  ],
+  "messages": {
+    "conv_1": [
+      {"id": "msg_1", "conversationId": "conv_1", "senderId": "user_1", "content": "Morning all. Fresno run needs a second driver by 11:00.", "contentType": "text", "timestamp": 1756904400000, "isEdited": false, "reactions": [], "threadId": null, "threadCount": 0, "threadLastReply": null, "replyTo": null, "mentions": [], "isRead": true, "isPinned": false, "attachments": [], "card": null},
+      {"id": "msg_2", "conversationId": "conv_1", "senderId": "user_2", "content": "Truck 14 is back from the shop, cleared for the Fresno run.", "contentType": "text", "timestamp": 1756909200000, "isEdited": false, "reactions": [{"emoji": "👍", "userIds": ["user_1"]}], "threadId": null, "threadCount": 0, "threadLastReply": null, "replyTo": null, "mentions": [], "isRead": false, "isPinned": false, "attachments": [], "card": null}
+    ],
+    "conv_2": [
+      {"id": "msg_3", "conversationId": "conv_2", "senderId": "user_3", "content": "Can you approve my leave request before Friday?", "contentType": "text", "timestamp": 1756905600000, "isEdited": false, "reactions": [], "threadId": null, "threadCount": 0, "threadLastReply": null, "replyTo": null, "mentions": [], "isRead": true, "isPinned": false, "attachments": [], "card": null}
+    ]
+  },
+  "documents": [
+    {"id": "doc_1", "title": "September Route Plan - Central Valley", "type": "doc", "icon": "📄", "ownerId": "user_1", "collaborators": ["user_2", "user_3"], "content": "Weekly route assignments for Fresno, Modesto and Bakersfield lanes.", "spaceId": "space_1", "parentId": null, "isStar": true, "lastEditedBy": "user_1", "lastEditedAt": 1756900000000, "createdAt": 1756300000000, "viewCount": 18, "wordCount": 640}
+  ],
+  "spaces": [{"id": "space_1", "name": "Dispatch Operations", "type": "team"}],
+  "calendars": [{"id": "cal_1", "name": "Dispatch", "color": "#3370FF", "isVisible": true, "ownerId": "user_1"}],
+  "events": [
+    {"id": "event_1", "title": "Daily dispatch standup", "description": "Review overnight loads and driver availability", "startTime": 1756975200000, "endTime": 1756977000000, "isAllDay": false, "location": "Yard office", "meetingLink": "", "organizerId": "user_1", "attendees": [{"userId": "user_1", "status": "accepted"}, {"userId": "user_2", "status": "accepted"}, {"userId": "user_3", "status": "tentative"}], "color": "#3370FF", "reminder": 15, "isRecurring": true, "calendarId": "cal_1"}
+  ],
+  "departments": [
+    {"id": "dept_0", "name": "Meridian Freight Lines", "parentId": null, "memberIds": [], "headId": "user_3"},
+    {"id": "dept_1", "name": "Dispatch Operations", "parentId": "dept_0", "memberIds": ["user_1", "user_3"], "headId": "user_3"},
+    {"id": "dept_2", "name": "Fleet Maintenance", "parentId": "dept_0", "memberIds": ["user_2"], "headId": "user_2"}
+  ],
+  "tasks": [
+    {"id": "task_1", "title": "Confirm second driver for Fresno run", "description": "", "status": "todo", "priority": "high", "assigneeId": "user_1", "creatorId": "user_3", "dueDate": 1756918800000, "tags": ["dispatch"], "relatedDocId": "doc_1", "relatedConvId": "conv_1", "createdAt": 1756904400000, "completedAt": null}
+  ],
+  "approvals": [
+    {"id": "approval_1", "type": "leave", "title": "Annual leave Sep 15-17", "status": "pending", "applicantId": "user_3", "approverId": "user_1", "details": {"leaveType": "annual", "startDate": "2026-09-15", "endDate": "2026-09-17", "days": 3, "reason": "Family trip"}, "createdAt": 1756905000000, "updatedAt": 1756905000000, "comment": ""}
+  ],
+  "activeConversationId": "conv_1",
+  "activeModule": "messenger",
+  "searchQuery": "",
+  "threadPanelMessageId": null,
+  "sidebarCollapsed": false,
+  "favorites": [],
+  "activeContactId": null,
+  "settings": {"language": "en-US", "theme": "light", "fontSize": "medium", "autoStart": false, "doNotDisturb": "off", "messagePermission": "everyone", "notificationSound": true, "desktopNotification": true, "mentionNotification": true, "emailDigest": false, "showOnlineStatus": true, "readReceipt": true, "allowSearch": true}
+}

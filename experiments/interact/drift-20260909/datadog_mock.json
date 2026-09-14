@@ -1,0 +1,284 @@
+{
+  "app_id": "datadog_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activeDashboardId",
+    "currentUser",
+    "dashboards",
+    "events",
+    "hosts",
+    "logs",
+    "monitors",
+    "selectedEnv",
+    "selectedTimeRange",
+    "services",
+    "sidebarCollapsed",
+    "slos"
+  ],
+  "observed": [
+    "activeDashboardId",
+    "containers",
+    "currentUser",
+    "dashboards",
+    "events",
+    "hosts",
+    "incidents",
+    "logs",
+    "monitors",
+    "notebooks",
+    "selectedEnv",
+    "selectedTimeRange",
+    "services",
+    "sidebarCollapsed",
+    "slos",
+    "traces"
+  ],
+  "undocumented_so_unseedable": [
+    "containers",
+    "incidents",
+    "notebooks",
+    "traces"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "hosts": {
+      "kind": "array",
+      "count": 24,
+      "record_fields": [
+        "id",
+        "hostname",
+        "aliases",
+        "status",
+        "os",
+        "cloudProvider",
+        "region",
+        "instanceType",
+        "agentVersion",
+        "cpu",
+        "memory",
+        "ioWait",
+        "load15",
+        "apps",
+        "tags",
+        "createdAt",
+        "metrics"
+      ],
+      "keyed_by_id": false
+    },
+    "containers": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "name",
+        "image",
+        "status",
+        "host",
+        "cpu",
+        "memory",
+        "memoryLimit",
+        "uptime",
+        "restarts",
+        "ports",
+        "network",
+        "tags"
+      ],
+      "keyed_by_id": false
+    },
+    "services": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "language",
+        "framework",
+        "env",
+        "team",
+        "status",
+        "requestsPerSec",
+        "avgLatencyMs",
+        "p50LatencyMs",
+        "p95LatencyMs",
+        "p99LatencyMs",
+        "errorRate",
+        "apdex",
+        "dependencies",
+        "resources",
+        "latencyHistory",
+        "requestHistory",
+        "errorHistory"
+      ],
+      "keyed_by_id": false
+    },
+    "logs": {
+      "kind": "array",
+      "count": 120,
+      "record_fields": [
+        "id",
+        "timestamp",
+        "service",
+        "source",
+        "host",
+        "status",
+        "message",
+        "tags",
+        "attributes"
+      ],
+      "keyed_by_id": false
+    },
+    "monitors": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "status",
+        "query",
+        "message",
+        "tags",
+        "priority",
+        "creator",
+        "created",
+        "modified",
+        "muted",
+        "overallState",
+        "groups"
+      ],
+      "keyed_by_id": false
+    },
+    "dashboards": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "title",
+        "description",
+        "author",
+        "created",
+        "modified",
+        "isStarred",
+        "isReadOnly",
+        "tags",
+        "templateVariables",
+        "widgets"
+      ],
+      "keyed_by_id": false
+    },
+    "events": {
+      "kind": "array",
+      "count": 20,
+      "record_fields": [
+        "id",
+        "title",
+        "text",
+        "type",
+        "source",
+        "timestamp",
+        "tags",
+        "priority"
+      ],
+      "keyed_by_id": false
+    },
+    "incidents": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "title",
+        "severity",
+        "status",
+        "commander",
+        "created",
+        "updated",
+        "resolved",
+        "services",
+        "tags",
+        "timeline",
+        "impact",
+        "customerNotification"
+      ],
+      "keyed_by_id": false
+    },
+    "notebooks": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "title",
+        "author",
+        "created",
+        "modified",
+        "tags",
+        "cells"
+      ],
+      "keyed_by_id": false
+    },
+    "slos": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "type",
+        "targetSli",
+        "currentSli",
+        "timeframe",
+        "status",
+        "errorBudgetRemaining",
+        "tags",
+        "monitorIds"
+      ],
+      "keyed_by_id": false
+    },
+    "traces": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "traceId",
+        "rootService",
+        "rootResource",
+        "startTime",
+        "duration",
+        "status",
+        "spans"
+      ],
+      "keyed_by_id": false
+    },
+    "selectedTimeRange": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "selectedEnv": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "sidebarCollapsed": {
+      "kind": "boolean",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "activeDashboardId": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

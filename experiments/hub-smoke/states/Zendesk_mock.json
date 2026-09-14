@@ -1,0 +1,292 @@
+{
+ "currentUser": {
+  "id": 1,
+  "name": "Dana Whitfield",
+  "email": "dana.whitfield@cort-analogue.example",
+  "role": "agent",
+  "phone": null,
+  "photo": null,
+  "organization_id": null,
+  "group_id": 1,
+  "time_zone": "America/New_York",
+  "locale": "en-US",
+  "signature": "Dana Whitfield, CORT analogue",
+  "notes": "",
+  "suspended": false,
+  "verified": true,
+  "active": true,
+  "created_at": "2026-01-05T09:00:00Z",
+  "updated_at": "2026-09-01T09:00:00Z",
+  "last_login_at": "2026-09-08T08:00:00Z",
+  "initials": "DW"
+ },
+ "users": [
+  {
+   "id": 1,
+   "name": "Dana Whitfield",
+   "email": "dana.whitfield@cort-analogue.example",
+   "role": "agent",
+   "phone": null,
+   "photo": null,
+   "organization_id": null,
+   "group_id": 1,
+   "time_zone": "America/New_York",
+   "locale": "en-US",
+   "signature": "Dana Whitfield, CORT analogue",
+   "notes": "",
+   "suspended": false,
+   "verified": true,
+   "active": true,
+   "created_at": "2026-01-05T09:00:00Z",
+   "updated_at": "2026-09-01T09:00:00Z",
+   "last_login_at": "2026-09-08T08:00:00Z",
+   "initials": "DW"
+  },
+  {
+   "id": 2,
+   "name": "Luis Ortega",
+   "email": "luis.ortega@cort-analogue.example",
+   "role": "agent",
+   "phone": null,
+   "photo": null,
+   "organization_id": null,
+   "group_id": 1,
+   "time_zone": "America/New_York",
+   "locale": "en-US",
+   "signature": "Luis Ortega, CORT analogue",
+   "notes": "",
+   "suspended": false,
+   "verified": true,
+   "active": true,
+   "created_at": "2026-01-05T09:00:00Z",
+   "updated_at": "2026-09-01T09:00:00Z",
+   "last_login_at": "2026-09-08T08:00:00Z",
+   "initials": "LO"
+  },
+  {
+   "id": 3,
+   "name": "Priya Raman",
+   "email": "priya.raman@cort-analogue.example",
+   "role": "agent",
+   "phone": null,
+   "photo": null,
+   "organization_id": null,
+   "group_id": 2,
+   "time_zone": "America/New_York",
+   "locale": "en-US",
+   "signature": "Priya Raman, CORT analogue",
+   "notes": "",
+   "suspended": false,
+   "verified": true,
+   "active": true,
+   "created_at": "2026-01-05T09:00:00Z",
+   "updated_at": "2026-09-01T09:00:00Z",
+   "last_login_at": "2026-09-08T08:00:00Z",
+   "initials": "PR"
+  },
+  {
+   "id": 101,
+   "name": "Household H310",
+   "email": "household.h310@cort-analogue.example",
+   "role": "end-user",
+   "phone": null,
+   "photo": null,
+   "organization_id": 1,
+   "group_id": null,
+   "time_zone": "America/New_York",
+   "locale": "en-US",
+   "signature": "",
+   "notes": "",
+   "suspended": false,
+   "verified": true,
+   "active": true,
+   "created_at": "2026-01-05T09:00:00Z",
+   "updated_at": "2026-09-01T09:00:00Z",
+   "last_login_at": "2026-09-08T08:00:00Z",
+   "initials": "HH"
+  },
+  {
+   "id": 102,
+   "name": "Household F311",
+   "email": "household.f311@cort-analogue.example",
+   "role": "end-user",
+   "phone": null,
+   "photo": null,
+   "organization_id": 1,
+   "group_id": null,
+   "time_zone": "America/New_York",
+   "locale": "en-US",
+   "signature": "",
+   "notes": "",
+   "suspended": false,
+   "verified": true,
+   "active": true,
+   "created_at": "2026-01-05T09:00:00Z",
+   "updated_at": "2026-09-01T09:00:00Z",
+   "last_login_at": "2026-09-08T08:00:00Z",
+   "initials": "HF"
+  }
+ ],
+ "organizations": [
+  {
+   "id": 1,
+   "name": "Residential customers",
+   "domain_names": [],
+   "details": "Household furniture leases",
+   "notes": "",
+   "group_id": 1,
+   "shared_tickets": false,
+   "shared_comments": false,
+   "tags": [
+    "residential"
+   ],
+   "created_at": "2026-01-05T09:00:00Z",
+   "updated_at": "2026-09-01T09:00:00Z"
+  }
+ ],
+ "groups": [
+  {
+   "id": 1,
+   "name": "District service desk",
+   "description": "Lease changes, pickups, extensions",
+   "default": true,
+   "created_at": "2026-01-05T09:00:00Z",
+   "updated_at": "2026-01-05T09:00:00Z"
+  },
+  {
+   "id": 2,
+   "name": "Dispatch",
+   "description": "Routes and crews",
+   "default": false,
+   "created_at": "2026-01-05T09:00:00Z",
+   "updated_at": "2026-01-05T09:00:00Z"
+  }
+ ],
+ "tickets": [
+  {
+   "id": 1001,
+   "subject": "H310 departure change: extend or stage pickup of remaining items",
+   "description": "Customer moving out Sept 24; three items remain on lease L310-v2.",
+   "status": "open",
+   "type": "task",
+   "priority": "high",
+   "requester_id": 101,
+   "submitter_id": 1,
+   "assignee_id": 1,
+   "group_id": 1,
+   "organization_id": 1,
+   "collaborator_ids": [
+    2,
+    3
+   ],
+   "follower_ids": [],
+   "tags": [
+    "lease-change",
+    "pickup"
+   ],
+   "via": "email",
+   "satisfaction_rating": null,
+   "due_at": "2026-09-12T17:00:00Z",
+   "is_public": true,
+   "custom_fields": {},
+   "created_at": "2026-09-08T08:15:00Z",
+   "updated_at": "2026-09-08T08:15:00Z",
+   "comment_count": 1,
+   "sla": null,
+   "first_reply_at": null,
+   "next_reply_due": "2026-09-09T08:15:00Z",
+   "breached": false
+  },
+  {
+   "id": 1002,
+   "subject": "F311 delivery confirmation for Sept 16",
+   "description": "Ordinary accepted order awaiting dispatch slot.",
+   "status": "pending",
+   "type": "task",
+   "priority": "normal",
+   "requester_id": 102,
+   "submitter_id": 2,
+   "assignee_id": 3,
+   "group_id": 2,
+   "organization_id": 1,
+   "collaborator_ids": [],
+   "follower_ids": [],
+   "tags": [
+    "delivery"
+   ],
+   "via": "web",
+   "satisfaction_rating": null,
+   "due_at": "2026-09-15T17:00:00Z",
+   "is_public": true,
+   "custom_fields": {},
+   "created_at": "2026-09-05T10:00:00Z",
+   "updated_at": "2026-09-06T10:00:00Z",
+   "comment_count": 1,
+   "sla": null,
+   "first_reply_at": "2026-09-05T11:00:00Z",
+   "next_reply_due": null,
+   "breached": false
+  }
+ ],
+ "comments": {
+  "1001": [
+   {
+    "id": 1,
+    "ticket_id": 1001,
+    "author_id": 101,
+    "body": "We are leaving Sept 24. Can we keep the sofa a bit longer?",
+    "html_body": "<p>We are leaving Sept 24. Can we keep the sofa a bit longer?</p>",
+    "public": true,
+    "type": "Comment",
+    "attachments": [],
+    "created_at": "2026-09-08T08:15:00Z"
+   }
+  ],
+  "1002": [
+   {
+    "id": 2,
+    "ticket_id": 1002,
+    "author_id": 2,
+    "body": "Slot requested from dispatch.",
+    "html_body": "<p>Slot requested from dispatch.</p>",
+    "public": false,
+    "type": "Comment",
+    "attachments": [],
+    "created_at": "2026-09-05T11:00:00Z"
+   }
+  ]
+ },
+ "views": [
+  {
+   "id": 1,
+   "title": "My open tickets",
+   "description": "",
+   "active": true,
+   "position": 1,
+   "type": "personal",
+   "conditions": [
+    {
+     "field": "status",
+     "operator": "is",
+     "value": "open"
+    }
+   ]
+  }
+ ],
+ "macros": [],
+ "tags": [
+  "lease-change",
+  "pickup",
+  "delivery",
+  "residential"
+ ],
+ "ui": {
+  "activeView": 1,
+  "openTicketTabs": [],
+  "activeTicketId": null,
+  "searchQuery": "",
+  "selectedTicketIds": [],
+  "replyMode": "public",
+  "sidebarCollapsed": false
+ }
+}

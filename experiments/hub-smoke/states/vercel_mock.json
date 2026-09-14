@@ -1,0 +1,31 @@
+{
+  "currentTeam": {"id": "team_hlw01", "name": "Halloway Labs", "slug": "halloway-labs", "avatar": null, "plan": "pro", "createdAt": "2025-02-03T10:00:00Z"},
+  "currentUser": {"id": "user_01", "name": "Tobias Nkemelu", "username": "tobiasn", "email": "tobias@halloway-labs.example", "avatar": null, "role": "owner"},
+  "projects": [
+    {"id": "prj_001", "name": "halloway-patient-portal", "slug": "halloway-patient-portal", "framework": "nextjs", "gitRepo": {"provider": "github", "owner": "halloway-labs", "name": "patient-portal", "url": "https://github.example/halloway-labs/patient-portal", "branch": "main"}, "productionUrl": "portal.halloway-labs.example", "customDomains": ["portal.halloway-labs.example"], "latestDeployment": "dpl_001", "createdAt": "2025-03-11T14:30:00Z", "updatedAt": "2026-09-07T07:48:00Z", "buildCommand": "next build", "outputDirectory": ".next", "installCommand": "npm install", "rootDirectory": null, "nodeVersion": "20.x", "productionBranch": "main", "autoDeployEnabled": true, "screenshot": null, "isPaused": false},
+    {"id": "prj_002", "name": "lab-results-docs", "slug": "lab-results-docs", "framework": "astro", "gitRepo": {"provider": "github", "owner": "halloway-labs", "name": "lab-results-docs", "url": "https://github.example/halloway-labs/lab-results-docs", "branch": "main"}, "productionUrl": "lab-results-docs.vercel.app", "customDomains": [], "latestDeployment": "dpl_002", "createdAt": "2025-06-20T09:00:00Z", "updatedAt": "2026-09-04T16:10:00Z", "buildCommand": "astro build", "outputDirectory": "dist", "installCommand": "npm install", "rootDirectory": null, "nodeVersion": "20.x", "productionBranch": "main", "autoDeployEnabled": true, "screenshot": null, "isPaused": false}
+  ],
+  "deployments": [
+    {"id": "dpl_001", "projectId": "prj_001", "url": "halloway-patient-portal-7f3e2a1.vercel.app", "productionUrl": "portal.halloway-labs.example", "status": "READY", "environment": "production", "git": {"branch": "main", "commitSha": "7f3e2a1", "commitMessage": "fix: show pending lab orders on dashboard", "author": "tobiasn"}, "buildDuration": 62, "framework": "nextjs", "nodeVersion": "20.x", "regions": ["iad1"], "output": {"staticFiles": 118, "serverlessFunctions": 14, "edgeFunctions": 1, "totalSize": "18.2 MB"}, "buildLogs": [{"timestamp": "2026-09-07T07:47:00Z", "text": "Running \"next build\""}, {"timestamp": "2026-09-07T07:48:00Z", "text": "Deployment ready!"}], "createdAt": "2026-09-07T07:46:00Z", "readyAt": "2026-09-07T07:48:00Z", "creatorId": "user_01"},
+    {"id": "dpl_002", "projectId": "prj_002", "url": "lab-results-docs-c91bd04.vercel.app", "productionUrl": "lab-results-docs.vercel.app", "status": "ERROR", "environment": "production", "git": {"branch": "main", "commitSha": "c91bd04", "commitMessage": "docs: add HL7 export guide", "author": "mira.s"}, "buildDuration": 21, "framework": "astro", "nodeVersion": "20.x", "regions": ["iad1"], "output": null, "buildLogs": [{"timestamp": "2026-09-04T16:10:00Z", "text": "Error: Could not resolve ./hl7-export.md"}], "createdAt": "2026-09-04T16:09:00Z", "readyAt": null, "creatorId": "user_02"}
+  ],
+  "domains": [
+    {"id": "dom_001", "projectId": "prj_001", "name": "portal.halloway-labs.example", "apexDomain": "halloway-labs.example", "verified": true, "sslStatus": "active", "dnsRecords": [{"type": "CNAME", "name": "portal", "value": "cname.vercel-dns.com"}], "redirectTo": null, "createdAt": "2025-03-12T10:00:00Z"}
+  ],
+  "environmentVariables": [
+    {"id": "env_001", "projectId": "prj_001", "key": "DATABASE_URL", "value": "postgres://****", "target": ["production"], "type": "encrypted", "gitBranch": null, "createdAt": "2025-03-11T15:00:00Z", "updatedAt": "2026-01-20T10:00:00Z"},
+    {"id": "env_002", "projectId": "prj_001", "key": "NEXT_PUBLIC_API_URL", "value": "https://api.halloway-labs.example", "target": ["production", "preview"], "type": "plain", "gitBranch": null, "createdAt": "2025-03-11T15:01:00Z", "updatedAt": "2025-03-11T15:01:00Z"}
+  ],
+  "teamMembers": [
+    {"id": "user_01", "name": "Tobias Nkemelu", "username": "tobiasn", "email": "tobias@halloway-labs.example", "avatar": null, "role": "owner", "joinedAt": "2025-02-03T10:00:00Z"},
+    {"id": "user_02", "name": "Mira Szabo", "username": "mira.s", "email": "mira@halloway-labs.example", "avatar": null, "role": "developer", "joinedAt": "2025-06-01T10:00:00Z"}
+  ],
+  "activityEvents": [
+    {"id": "evt_001", "type": "deployment.ready", "description": "Deployment for halloway-patient-portal is ready", "userId": "user_01", "userName": "Tobias Nkemelu", "userAvatar": null, "projectId": "prj_001", "projectName": "halloway-patient-portal", "metadata": {"deploymentId": "dpl_001"}, "createdAt": "2026-09-07T07:48:00Z"},
+    {"id": "evt_002", "type": "deployment.error", "description": "Deployment for lab-results-docs failed", "userId": "user_02", "userName": "Mira Szabo", "userAvatar": null, "projectId": "prj_002", "projectName": "lab-results-docs", "metadata": {"deploymentId": "dpl_002"}, "createdAt": "2026-09-04T16:10:00Z"}
+  ],
+  "integrations": [
+    {"id": "int_001", "name": "GitHub", "slug": "github", "icon": "github", "description": "Deploy on every push", "installedAt": "2025-02-03T10:05:00Z", "status": "active", "configuredProjects": ["prj_001", "prj_002"]}
+  ],
+  "ui": {"sidebarCollapsed": false, "activeProjectId": null, "searchQuery": "", "deploymentFilter": "all", "deploymentStatusFilter": "all"}
+}

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Tiny hub</title>
+<body>
+<h1>Tiny hub</h1>
+<pre id="state">Loading state…</pre>
+<script>
+fetch('/state' + location.search)
+  .then(response => response.json())
+  .then(result => {
+    document.getElementById('state').textContent = JSON.stringify(result.stored_state, null, 2);
+  });
+</script>
+</body>
+</html>

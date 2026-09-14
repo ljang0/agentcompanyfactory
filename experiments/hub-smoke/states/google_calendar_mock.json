@@ -1,0 +1,17 @@
+{
+  "user": {"id": "u1", "username": "Theo Lindgren", "email": "theo.lindgren@pelican-bay-harbor.example", "avatar": "https://ui-avatars.com/api/?name=Theo+Lindgren&background=1A73E8&color=fff"},
+  "calendars": [
+    {"id": "c1", "name": "Personal", "color": "#039BE5", "visible": true, "userId": "u1", "isDefault": true},
+    {"id": "c2", "name": "Harbor Operations", "color": "#33B679", "visible": true, "userId": "u1", "isDefault": false},
+    {"id": "c3", "name": "Commission Meetings", "color": "#8E24AA", "visible": true, "userId": "u1", "isDefault": false}
+  ],
+  "events": [
+    {"id": "evt_pbh_001", "calendarId": "c3", "title": "Pelican Bay Harbor Commission", "start": "2026-09-08T17:00:00.000Z", "end": "2026-09-08T18:30:00.000Z", "allDay": false, "location": "Harbor District Office, Room 2", "description": "Monthly commission meeting: slip fee schedule and dredging bids.", "guests": ["ana.ribeiro@pelican-bay-harbor.example", "kwame.boateng@pelican-bay-harbor.example"], "color": "#8E24AA", "recurring": "monthly", "reminders": [{"type": "email", "minutes": 1440}, {"type": "popup", "minutes": 30}], "meetLink": "", "status": "confirmed"},
+    {"id": "evt_pbh_002", "calendarId": "c2", "title": "Dock C fuel line inspection", "start": "2026-09-09T14:00:00.000Z", "end": "2026-09-09T16:00:00.000Z", "allDay": false, "location": "Dock C", "description": "Annual inspection with the fire marshal.", "guests": ["ana.ribeiro@pelican-bay-harbor.example"], "color": "#33B679", "recurring": "none", "reminders": [{"type": "popup", "minutes": 10}], "meetLink": "", "status": "confirmed"},
+    {"id": "evt_pbh_003", "calendarId": "c1", "title": "Dentist", "start": "2026-09-11T22:30:00.000Z", "end": "2026-09-11T23:15:00.000Z", "allDay": false, "location": "", "description": "", "guests": [], "color": "#039BE5", "recurring": "none", "reminders": [{"type": "popup", "minutes": 60}], "meetLink": "", "status": "confirmed"}
+  ],
+  "view": "week",
+  "currentDate": "2026-09-09T12:00:00.000Z",
+  "sidebarOpen": true,
+  "settings": {"weekStart": 0, "defaultDuration": 60, "defaultView": "week", "defaultReminder": {"type": "popup", "minutes": 10}, "timeFormat": "12h", "showWeekNumbers": false, "showDeclinedEvents": false}
+}

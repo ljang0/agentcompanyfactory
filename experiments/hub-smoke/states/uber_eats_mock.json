@@ -1,0 +1,52 @@
+{
+  "user": {
+    "id": "user_1", "name": "Priyanka Rowley", "email": "priyanka.rowley@mail.example", "phone": "(503) 555-0188", "avatarUrl": "",
+    "addresses": [
+      { "id": "addr_1", "label": "Home", "street": "2210 SE Hawthorne Blvd", "apt": "Unit 3", "city": "Portland", "state": "OR", "zip": "97214", "instructions": "Side gate, knock twice", "isDefault": true },
+      { "id": "addr_2", "label": "Work", "street": "800 NW 6th Ave", "apt": "", "city": "Portland", "state": "OR", "zip": "97209", "instructions": "Leave at front desk", "isDefault": false }
+    ],
+    "defaultAddressId": "addr_1",
+    "paymentMethods": [
+      { "id": "pay_1", "type": "visa", "label": "Visa ••••7731", "last4": "7731", "isDefault": true },
+      { "id": "pay_2", "type": "paypal", "label": "PayPal", "last4": "", "isDefault": false }
+    ],
+    "defaultPaymentId": "pay_1", "uberOneActive": false, "favoriteRestaurantIds": ["rest_1"]
+  },
+  "categories": [
+    { "id": "cat_1", "name": "Pizza", "icon": "🍕" },
+    { "id": "cat_2", "name": "Thai", "icon": "🍜" },
+    { "id": "cat_3", "name": "Dessert", "icon": "🍰" }
+  ],
+  "restaurants": [
+    { "id": "rest_1", "name": "Hollowbrook Wood-Fired Pizza", "imageUrl": "", "cuisineType": ["Pizza", "Italian"], "rating": 4.7, "reviewCount": 2, "priceRange": "$$", "deliveryFee": 1.99, "deliveryTimeMin": 25, "deliveryTimeMax": 40, "distance": 1.1, "isOpen": true, "hours": "11:00 AM - 10:00 PM", "address": "1520 SE Division St, Portland, OR", "phone": "(503) 555-0140", "isSponsored": false, "promotions": [ { "id": "promo_rest1", "type": "spend_save", "title": "Spend $30, Save $5", "description": "$5 off orders over $30", "code": null, "minOrder": 30, "discountAmount": 5, "discountPercent": null, "expiresAt": "2026-12-31", "restaurantId": "rest_1" } ], "categories": ["Featured Items", "Pizzas", "Salads", "Desserts"], "tags": ["Popular", "Top Rated"], "supportsPickup": true, "pickupTimeMin": 15, "pickupTimeMax": 25 },
+    { "id": "rest_2", "name": "Saffron Alley Thai Kitchen", "imageUrl": "", "cuisineType": ["Thai", "Noodles"], "rating": 4.5, "reviewCount": 1, "priceRange": "$$", "deliveryFee": 2.99, "deliveryTimeMin": 30, "deliveryTimeMax": 45, "distance": 2.3, "isOpen": true, "hours": "11:30 AM - 9:30 PM", "address": "4030 N Mississippi Ave, Portland, OR", "phone": "(503) 555-0166", "isSponsored": true, "promotions": [], "categories": ["Curries", "Noodles", "Appetizers", "Drinks"], "tags": ["Quick Delivery"], "supportsPickup": true, "pickupTimeMin": 15, "pickupTimeMax": 25 }
+  ],
+  "menuItems": [
+    { "id": "item_1", "restaurantId": "rest_1", "category": "Featured Items", "name": "Fennel Sausage Pizza", "description": "House fennel sausage, roasted peppers, mozzarella", "price": 17.50, "imageUrl": "", "isPopular": true, "isAvailable": true, "dietaryTags": [], "dietary": [],
+      "customizationGroups": [ { "id": "cg_1", "name": "Choose your size", "required": true, "maxSelections": 1, "minSelections": 1, "options": [ { "id": "co_1", "name": "12 inch", "priceModifier": 0, "isDefault": true, "isAvailable": true }, { "id": "co_2", "name": "16 inch", "priceModifier": 5.00, "isDefault": false, "isAvailable": true } ] } ] },
+    { "id": "item_2", "restaurantId": "rest_1", "category": "Salads", "name": "Little Gem Caesar", "description": "Little gem lettuce, parmesan, sourdough crumbs", "price": 11.00, "imageUrl": "", "isPopular": false, "isAvailable": true, "dietaryTags": ["Vegetarian"], "dietary": ["Vegetarian"], "customizationGroups": [] },
+    { "id": "item_3", "restaurantId": "rest_2", "category": "Curries", "name": "Green Curry with Tofu", "description": "Coconut green curry, Thai basil, jasmine rice", "price": 15.00, "imageUrl": "", "isPopular": true, "isAvailable": true, "dietaryTags": ["Vegan", "Gluten-Free"], "dietary": ["Vegan", "Gluten-Free"],
+      "customizationGroups": [ { "id": "cg_2", "name": "Spice level", "required": true, "maxSelections": 1, "minSelections": 1, "options": [ { "id": "co_3", "name": "Mild", "priceModifier": 0, "isDefault": true, "isAvailable": true }, { "id": "co_4", "name": "Thai hot", "priceModifier": 0, "isDefault": false, "isAvailable": true } ] } ] }
+  ],
+  "cart": { "restaurantId": null, "restaurantName": null, "items": [], "deliveryMode": "delivery", "scheduledTime": null, "promoCode": null, "promoDiscount": 0, "tipAmount": 0, "tipPercentage": 18, "deliveryInstructions": "" },
+  "orders": [
+    {
+      "id": "ord_1", "restaurantId": "rest_1", "restaurantName": "Hollowbrook Wood-Fired Pizza", "restaurantImageUrl": "",
+      "items": [ { "menuItemId": "item_1", "name": "Fennel Sausage Pizza", "quantity": 1, "unitPrice": 22.50, "totalPrice": 22.50, "selectedOptions": ["16 inch"], "specialInstructions": "" } ],
+      "status": "delivered", "placedAt": "2026-09-03T18:05:00.000Z", "estimatedDeliveryMin": "2026-09-03T18:30:00.000Z", "estimatedDeliveryMax": "2026-09-03T18:45:00.000Z", "deliveredAt": "2026-09-03T18:41:00.000Z",
+      "deliveryAddress": { "id": "addr_1", "label": "Home", "street": "2210 SE Hawthorne Blvd", "apt": "Unit 3", "city": "Portland", "state": "OR", "zip": "97214", "instructions": "Side gate, knock twice", "isDefault": true },
+      "deliveryMode": "delivery", "subtotal": 22.50, "serviceFee": 3.38, "deliveryFee": 1.99, "tax": 2.03, "tip": 4.05, "promoDiscount": 0, "total": 33.95, "paymentMethod": "Visa ••••7731",
+      "deliveryPerson": { "id": "dp_1", "name": "Marcus O.", "photoUrl": "", "vehicleType": "bike", "rating": 4.9 }, "rating": 5, "review": "Crust was perfect."
+    }
+  ],
+  "activeOrderId": null,
+  "promotions": [
+    { "id": "promo_1", "type": "discount", "title": "$5 off $25+", "description": "Save $5 on orders over $25", "code": "SAVE5", "minOrder": 25.00, "discountAmount": 5.00, "discountPercent": null, "expiresAt": "2026-12-31", "restaurantId": null }
+  ],
+  "reviews": [
+    { "id": "rev_1", "restaurantId": "rest_1", "userId": "user_1", "userName": "Priyanka R.", "rating": 5, "comment": "Crust was perfect.", "createdAt": "2026-09-03T19:00:00.000Z", "orderId": "ord_1" },
+    { "id": "rev_2", "restaurantId": "rest_1", "userId": "user_2", "userName": "Jonah T.", "rating": 4, "comment": "Great sausage pizza, slow on Fridays.", "createdAt": "2026-08-29T20:00:00.000Z", "orderId": null },
+    { "id": "rev_3", "restaurantId": "rest_2", "userId": "user_3", "userName": "Mei L.", "rating": 5, "comment": "Best green curry in town.", "createdAt": "2026-08-25T19:30:00.000Z", "orderId": null }
+  ],
+  "ui": { "selectedAddressId": "addr_1", "deliveryMode": "delivery", "searchQuery": "", "recentSearches": ["Pizza", "Thai"], "activeFilters": { "sort": "recommended", "priceRange": [], "dietary": [], "maxDeliveryFee": null, "deals": false } }
+}

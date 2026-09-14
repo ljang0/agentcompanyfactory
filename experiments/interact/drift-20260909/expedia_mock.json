@@ -1,0 +1,328 @@
+{
+  "app_id": "expedia_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activities",
+    "bookings",
+    "carSearchFilters",
+    "cars",
+    "cart",
+    "currentView",
+    "flightResults",
+    "flightSearchFilters",
+    "flights",
+    "hotels",
+    "recentlyViewed",
+    "searchFilters",
+    "selectedFlight",
+    "selectedHotel",
+    "trendingDestinations",
+    "user"
+  ],
+  "observed": [
+    "activities",
+    "activitySearchFilters",
+    "bookings",
+    "carSearchFilters",
+    "cars",
+    "cart",
+    "cruiseSearchFilters",
+    "cruises",
+    "currentView",
+    "flightResults",
+    "flightSearchFilters",
+    "flights",
+    "hotels",
+    "packageSearchFilters",
+    "packages",
+    "recentlyViewed",
+    "searchFilters",
+    "selectedFlight",
+    "selectedHotel",
+    "trendingDestinations",
+    "user"
+  ],
+  "undocumented_so_unseedable": [
+    "activitySearchFilters",
+    "cruiseSearchFilters",
+    "cruises",
+    "packageSearchFilters",
+    "packages"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "user": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "hotels": {
+      "kind": "array",
+      "count": 16,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "starRating",
+        "guestRating",
+        "guestRatingLabel",
+        "reviewCount",
+        "address",
+        "neighborhood",
+        "latitude",
+        "longitude",
+        "images",
+        "description",
+        "amenities",
+        "highlights",
+        "distanceFromCenter",
+        "memberPrice",
+        "memberDiscount",
+        "policies",
+        "rooms",
+        "reviews"
+      ],
+      "keyed_by_id": false
+    },
+    "flights": {
+      "kind": "array",
+      "count": 21,
+      "record_fields": [
+        "id",
+        "airline",
+        "airlineCode",
+        "flightNumber",
+        "departureAirport",
+        "departureCity",
+        "departureTime",
+        "arrivalAirport",
+        "arrivalCity",
+        "arrivalTime",
+        "duration",
+        "durationMinutes",
+        "stops",
+        "stopAirports",
+        "stopDurations",
+        "aircraft",
+        "cabinClass",
+        "price",
+        "originalPrice",
+        "baggageIncluded",
+        "seatSelection",
+        "wifi",
+        "entertainment",
+        "powerOutlets",
+        "flightScore",
+        "refundable",
+        "nextDayArrival"
+      ],
+      "keyed_by_id": false
+    },
+    "flightResults": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "outbound",
+        "returnFlight",
+        "totalPrice",
+        "pricePerPerson",
+        "savings",
+        "cabinOptions"
+      ],
+      "keyed_by_id": false
+    },
+    "cars": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "company",
+        "vehicleType",
+        "vehicleName",
+        "passengers",
+        "bags",
+        "transmission",
+        "pickupLocation",
+        "dropoffLocation",
+        "pricePerDay",
+        "totalPrice",
+        "features",
+        "rating",
+        "reviewCount"
+      ],
+      "keyed_by_id": false
+    },
+    "activities": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "category",
+        "description",
+        "location",
+        "duration",
+        "price",
+        "originalPrice",
+        "rating",
+        "reviewCount",
+        "image",
+        "highlights",
+        "freeCancellation"
+      ],
+      "keyed_by_id": false
+    },
+    "bookings": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "type",
+        "status",
+        "confirmationNumber",
+        "itineraryNumber",
+        "createdAt",
+        "hotelId",
+        "flightId",
+        "carId",
+        "activityId",
+        "checkIn",
+        "checkOut",
+        "guests",
+        "rooms",
+        "roomType",
+        "totalCost",
+        "oneKeyCashEarned",
+        "paymentMethod",
+        "travelerNames",
+        "cancellationDeadline",
+        "notes"
+      ],
+      "keyed_by_id": false
+    },
+    "searchFilters": {
+      "kind": "object",
+      "count": 15,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "flightSearchFilters": {
+      "kind": "object",
+      "count": 12,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "carSearchFilters": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "trendingDestinations": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "name",
+        "country",
+        "image",
+        "averagePrice",
+        "tagline"
+      ],
+      "keyed_by_id": false
+    },
+    "packages": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "name",
+        "destination",
+        "image",
+        "duration",
+        "includes",
+        "hotel",
+        "airline",
+        "pricePerPerson",
+        "originalPrice",
+        "rating",
+        "reviewCount",
+        "departDates",
+        "highlights"
+      ],
+      "keyed_by_id": false
+    },
+    "cruises": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "cruiseLine",
+        "ship",
+        "image",
+        "duration",
+        "departure",
+        "itinerary",
+        "cabins",
+        "departDates",
+        "rating",
+        "reviewCount",
+        "highlights",
+        "amenities"
+      ],
+      "keyed_by_id": false
+    },
+    "activitySearchFilters": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "packageSearchFilters": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "cruiseSearchFilters": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "currentView": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "selectedHotel": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    },
+    "selectedFlight": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    },
+    "cart": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    },
+    "recentlyViewed": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

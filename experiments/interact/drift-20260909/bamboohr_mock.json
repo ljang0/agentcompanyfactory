@@ -1,0 +1,381 @@
+{
+  "app_id": "bamboohr_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "announcements",
+    "assets",
+    "benefitEnrollments",
+    "benefitPlans",
+    "candidates",
+    "currentUser",
+    "departments",
+    "divisions",
+    "documents",
+    "employees",
+    "goals",
+    "jobOpenings",
+    "locations",
+    "notes",
+    "notifications",
+    "performanceReviews",
+    "reports",
+    "timeOffBalances",
+    "timeOffPolicies",
+    "timeOffRequests",
+    "trainings",
+    "ui"
+  ],
+  "observed": [
+    "announcements",
+    "assets",
+    "benefitEnrollments",
+    "benefitPlans",
+    "candidates",
+    "currentUser",
+    "departments",
+    "divisions",
+    "documents",
+    "employees",
+    "goals",
+    "jobOpenings",
+    "locations",
+    "notes",
+    "notifications",
+    "performanceReviews",
+    "reports",
+    "timeOffBalances",
+    "timeOffPolicies",
+    "timeOffRequests",
+    "trainings",
+    "ui"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "departments": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "name",
+        "headId"
+      ],
+      "keyed_by_id": false
+    },
+    "locations": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "address",
+        "timezone"
+      ],
+      "keyed_by_id": false
+    },
+    "divisions": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name"
+      ],
+      "keyed_by_id": false
+    },
+    "employees": {
+      "kind": "array",
+      "count": 30,
+      "record_fields": [
+        "id",
+        "firstName",
+        "middleName",
+        "lastName",
+        "preferredName",
+        "displayName",
+        "avatar",
+        "email",
+        "homeEmail",
+        "workPhone",
+        "workPhoneExt",
+        "mobilePhone",
+        "homePhone",
+        "dateOfBirth",
+        "gender",
+        "maritalStatus",
+        "address1",
+        "address2",
+        "city",
+        "state",
+        "zipcode",
+        "country",
+        "hireDate",
+        "terminationDate",
+        "status",
+        "employmentStatus",
+        "jobTitle",
+        "departmentId",
+        "locationId",
+        "divisionId",
+        "reportsToId",
+        "employeeNumber",
+        "payRate",
+        "payType",
+        "payFrequency",
+        "standardHoursPerWeek",
+        "socialMediaLinks",
+        "emergencyContactName",
+        "emergencyContactPhone",
+        "emergencyContactRelation"
+      ],
+      "keyed_by_id": false
+    },
+    "timeOffPolicies": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "icon",
+        "unit",
+        "accrualRate",
+        "maxBalance"
+      ],
+      "keyed_by_id": false
+    },
+    "timeOffBalances": {
+      "kind": "array",
+      "count": 9,
+      "record_fields": [
+        "employeeId",
+        "policyId",
+        "available",
+        "scheduled",
+        "used"
+      ],
+      "keyed_by_id": false
+    },
+    "timeOffRequests": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "employeeId",
+        "policyId",
+        "startDate",
+        "endDate",
+        "hours",
+        "status",
+        "note",
+        "reviewedBy",
+        "reviewedAt",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "jobOpenings": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "title",
+        "departmentId",
+        "locationId",
+        "status",
+        "employmentType",
+        "description",
+        "requirements",
+        "salaryMin",
+        "salaryMax",
+        "hiringManagerId",
+        "createdAt",
+        "applicantCount"
+      ],
+      "keyed_by_id": false
+    },
+    "candidates": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "jobOpeningId",
+        "firstName",
+        "lastName",
+        "email",
+        "phone",
+        "resumeUrl",
+        "stage",
+        "rating",
+        "appliedAt",
+        "notes"
+      ],
+      "keyed_by_id": false
+    },
+    "announcements": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "title",
+        "body",
+        "authorId",
+        "createdAt",
+        "isPinned"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "type",
+        "message",
+        "timestamp",
+        "isRead",
+        "icon",
+        "linkTo",
+        "isPastDue",
+        "dueDate"
+      ],
+      "keyed_by_id": false
+    },
+    "notes": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "employeeId",
+        "authorId",
+        "content",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "documents": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "employeeId",
+        "name",
+        "category",
+        "uploadedAt",
+        "uploadedById",
+        "size"
+      ],
+      "keyed_by_id": false
+    },
+    "trainings": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "employeeId",
+        "title",
+        "status",
+        "dueDate",
+        "completedDate",
+        "category"
+      ],
+      "keyed_by_id": false
+    },
+    "assets": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "employeeId",
+        "type",
+        "description",
+        "serialNumber",
+        "assignedDate",
+        "status"
+      ],
+      "keyed_by_id": false
+    },
+    "goals": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "employeeId",
+        "title",
+        "description",
+        "progress",
+        "status",
+        "dueDate",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "performanceReviews": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "employeeId",
+        "reviewerId",
+        "type",
+        "period",
+        "rating",
+        "comments",
+        "status",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "benefitPlans": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "provider",
+        "employeeCost",
+        "employerCost"
+      ],
+      "keyed_by_id": false
+    },
+    "benefitEnrollments": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "employeeId",
+        "planId",
+        "coverageLevel",
+        "startDate",
+        "status"
+      ],
+      "keyed_by_id": false
+    },
+    "reports": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "category",
+        "type",
+        "description",
+        "lastRunAt"
+      ],
+      "keyed_by_id": false
+    },
+    "ui": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

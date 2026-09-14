@@ -1,0 +1,96 @@
+{
+  "user": {
+    "id": "user_001",
+    "name": "林晓岚",
+    "username": "linxiaolan_hq",
+    "idType": "身份证",
+    "idNumber": "310104199203150042",
+    "phone": "139****2210",
+    "email": "xiaolan.lin@qingyun-logistics.example",
+    "memberLevel": "银卡会员",
+    "memberPoints": 4120
+  },
+  "stations": [
+    { "code": "VNP", "name": "北京南", "fullName": "北京南站", "pinyin": "beijingnan", "initial": "B", "isHighSpeed": true },
+    { "code": "HOH", "name": "上海虹桥", "fullName": "上海虹桥站", "pinyin": "shanghaihongqiao", "initial": "S", "isHighSpeed": true },
+    { "code": "NJH", "name": "南京南", "fullName": "南京南站", "pinyin": "nanjingnan", "initial": "N", "isHighSpeed": true }
+  ],
+  "trains": [
+    {
+      "trainNo": "G1", "trainType": "G",
+      "departureStation": "北京南", "arrivalStation": "上海虹桥",
+      "departureTime": "09:00", "arrivalTime": "13:28",
+      "duration": "4时28分", "durationMinutes": 268, "date": "2026-09-12",
+      "stops": ["北京南", "南京南", "上海虹桥"],
+      "seatAvailability": { "businessSeat": 4, "firstClassSeat": "有", "secondClassSeat": 88, "premierSeat": "--", "softSleeper": "--", "hardSleeper": "--", "hardSeat": "--", "noSeat": "无", "deluxeSoftSleeper": "--" },
+      "prices": { "businessSeat": 1748, "firstClassSeat": 933, "secondClassSeat": 553, "premierSeat": null, "softSleeper": null, "hardSleeper": null, "hardSeat": null, "noSeat": 553, "deluxeSoftSleeper": null }
+    },
+    {
+      "trainNo": "G7", "trainType": "G",
+      "departureStation": "北京南", "arrivalStation": "上海虹桥",
+      "departureTime": "07:00", "arrivalTime": "11:40",
+      "duration": "4时40分", "durationMinutes": 280, "date": "2026-09-12",
+      "stops": ["北京南", "南京南", "上海虹桥"],
+      "seatAvailability": { "businessSeat": "无", "firstClassSeat": 12, "secondClassSeat": "候补", "premierSeat": "--", "softSleeper": "--", "hardSleeper": "--", "hardSeat": "--", "noSeat": "无", "deluxeSoftSleeper": "--" },
+      "prices": { "businessSeat": 1748, "firstClassSeat": 933, "secondClassSeat": 553, "premierSeat": null, "softSleeper": null, "hardSleeper": null, "hardSeat": null, "noSeat": 553, "deluxeSoftSleeper": null }
+    }
+  ],
+  "passengers": [
+    { "id": "psg_001", "name": "林晓岚", "idType": "身份证", "idNumber": "310104199203150042", "phone": "13911112210", "passengerType": "成人", "isDefault": true, "seatPreference": "窗口" },
+    { "id": "psg_002", "name": "周子恒", "idType": "身份证", "idNumber": "320102198811230017", "phone": "13700008831", "passengerType": "成人", "isDefault": false, "seatPreference": "过道" }
+  ],
+  "orders": [
+    {
+      "id": "E202609050001", "orderNo": "E202609050001", "status": "已支付",
+      "trainNo": "G1", "trainType": "G",
+      "departureStation": "北京南", "arrivalStation": "上海虹桥",
+      "departureDate": "2026-09-12", "departureTime": "09:00", "arrivalTime": "13:28", "duration": "4时28分",
+      "seatClass": "secondClassSeat", "seatNo": "05车12A", "price": 553,
+      "passengers": [
+        { "id": "psg_001", "name": "林晓岚", "idType": "身份证", "idNumber": "310104199203150042", "passengerType": "成人", "seatNo": "05车12A", "price": 553, "ticketStatus": "已出票" }
+      ],
+      "createdAt": "2026-09-05T10:12:00", "paidAt": "2026-09-05T10:14:30", "canChange": true, "canRefund": true
+    },
+    {
+      "id": "E202609060002", "orderNo": "E202609060002", "status": "待支付",
+      "trainNo": "G7", "trainType": "G",
+      "departureStation": "北京南", "arrivalStation": "上海虹桥",
+      "departureDate": "2026-09-14", "departureTime": "07:00", "arrivalTime": "11:40", "duration": "4时40分",
+      "seatClass": "firstClassSeat", "seatNo": null, "price": 933,
+      "passengers": [
+        { "id": "psg_002", "name": "周子恒", "idType": "身份证", "idNumber": "320102198811230017", "passengerType": "成人", "seatNo": null, "price": 933, "ticketStatus": "待支付" }
+      ],
+      "createdAt": "2026-09-06T16:40:00", "paidAt": null, "canChange": false, "canRefund": false
+    }
+  ],
+  "waitlistOrders": [
+    {
+      "id": "WL20260906001", "trainNo": "G7",
+      "departureStation": "北京南", "arrivalStation": "上海虹桥",
+      "departureDate": "2026-09-14", "seatClass": "secondClassSeat",
+      "passengers": [ { "id": "psg_001", "name": "林晓岚", "idType": "身份证", "idNumber": "310104199203150042", "passengerType": "成人" } ],
+      "status": "待兑现", "depositAmount": 553, "createdAt": "2026-09-06T16:45:00", "deadline": "2026-09-13T18:00:00"
+    }
+  ],
+  "searchHistory": [
+    { "id": "sh_001", "from": "北京南", "to": "上海虹桥", "date": "2026-09-12", "timestamp": "2026-09-05T10:05:00" },
+    { "id": "sh_002", "from": "上海虹桥", "to": "南京南", "date": "2026-09-20", "timestamp": "2026-09-04T09:30:00" }
+  ],
+  "notifications": [
+    { "id": "notif_001", "type": "order", "title": "出票成功", "content": "您预订的G1次列车（北京南→上海虹桥）车票已出票，订单号E202609050001。", "read": false, "createdAt": "2026-09-05T10:15:00", "relatedOrderId": "E202609050001" },
+    { "id": "notif_002", "type": "payment", "title": "订单待支付", "content": "订单E202609060002尚未支付，请在30分钟内完成支付。", "read": false, "createdAt": "2026-09-06T16:40:30", "relatedOrderId": "E202609060002" }
+  ],
+  "currentSearch": {
+    "from": "北京南",
+    "to": "上海虹桥",
+    "date": "2026-09-12",
+    "isStudent": false,
+    "isHighSpeedOnly": false,
+    "tripType": "oneWay",
+    "returnDate": null
+  },
+  "selectedTrain": null,
+  "selectedSeatClass": null,
+  "selectedPassengers": [],
+  "searchFilters": { "timeRanges": [], "trainTypes": [], "sortBy": "departureTime", "sortDir": "asc" }
+}

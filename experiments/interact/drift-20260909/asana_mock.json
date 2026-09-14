@@ -1,0 +1,191 @@
+{
+  "app_id": "asana_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "attachments",
+    "comments",
+    "currentUser",
+    "goals",
+    "notifications",
+    "portfolios",
+    "projects",
+    "tasks",
+    "teams",
+    "users"
+  ],
+  "observed": [
+    "attachments",
+    "comments",
+    "currentUser",
+    "goals",
+    "notifications",
+    "portfolios",
+    "projects",
+    "tasks",
+    "teams",
+    "users"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 9,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "userId",
+        "name",
+        "email",
+        "avatar",
+        "title",
+        "department",
+        "location",
+        "timezone",
+        "theme"
+      ],
+      "keyed_by_id": false
+    },
+    "teams": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "teamId",
+        "name",
+        "description",
+        "memberIds",
+        "ownerId",
+        "privacy",
+        "createdDate"
+      ],
+      "keyed_by_id": false
+    },
+    "projects": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "projectId",
+        "name",
+        "teamId",
+        "description",
+        "color",
+        "icon",
+        "ownerId",
+        "memberIds",
+        "sections",
+        "customFields",
+        "privacy",
+        "startDate",
+        "dueDate",
+        "archived",
+        "starred",
+        "createdDate",
+        "modifiedDate"
+      ],
+      "keyed_by_id": false
+    },
+    "tasks": {
+      "kind": "array",
+      "count": 24,
+      "record_fields": [
+        "taskId",
+        "name",
+        "projectId",
+        "sectionId",
+        "description",
+        "assigneeId",
+        "creatorId",
+        "dueDate",
+        "startDate",
+        "completed",
+        "dependencies",
+        "tags",
+        "attachmentIds",
+        "customFieldValues",
+        "likeCount",
+        "createdDate",
+        "modifiedDate"
+      ],
+      "keyed_by_id": false
+    },
+    "comments": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "commentId",
+        "taskId",
+        "userId",
+        "content",
+        "createdDate",
+        "likedBy"
+      ],
+      "keyed_by_id": false
+    },
+    "portfolios": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "portfolioId",
+        "name",
+        "description",
+        "ownerId",
+        "memberIds",
+        "projectIds",
+        "color"
+      ],
+      "keyed_by_id": false
+    },
+    "goals": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "goalId",
+        "name",
+        "description",
+        "ownerId",
+        "timePeriod",
+        "progress",
+        "status",
+        "supportingProjectIds",
+        "metrics"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "notificationId",
+        "userId",
+        "type",
+        "actorId",
+        "targetId",
+        "targetType",
+        "read",
+        "archived",
+        "createdDate"
+      ],
+      "keyed_by_id": false
+    },
+    "attachments": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "attachmentId",
+        "taskId",
+        "fileName",
+        "fileType",
+        "fileSize",
+        "fileUrl",
+        "uploaderId",
+        "uploadDate"
+      ],
+      "keyed_by_id": false
+    }
+  }
+}

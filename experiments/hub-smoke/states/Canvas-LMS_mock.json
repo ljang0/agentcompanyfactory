@@ -1,0 +1,72 @@
+{
+  "currentUser": {"id": 1, "name": "Priya Raman", "short_name": "Prof. Raman", "sortable_name": "Raman, Priya", "email": "priya.raman@ridgeway-cc.example", "avatar_url": null, "role": "teacher", "pronouns": "She/Her", "bio": "Instructor, Public Administration", "last_login": "2026-09-07T08:15:00Z"},
+  "users": [
+    {"id": 1, "name": "Priya Raman", "short_name": "Prof. Raman", "sortable_name": "Raman, Priya", "email": "priya.raman@ridgeway-cc.example", "avatar_url": null, "role": "teacher", "pronouns": "She/Her", "bio": "Instructor, Public Administration"},
+    {"id": 2, "name": "Marcus Bell", "short_name": "Marcus", "sortable_name": "Bell, Marcus", "email": "marcus.bell@ridgeway-cc.example", "avatar_url": null, "role": "student", "pronouns": "He/Him", "bio": ""},
+    {"id": 3, "name": "Elena Vasquez", "short_name": "Elena", "sortable_name": "Vasquez, Elena", "email": "elena.vasquez@ridgeway-cc.example", "avatar_url": null, "role": "student", "pronouns": "She/Her", "bio": ""}
+  ],
+  "courses": [
+    {"id": 1, "name": "Municipal Budgeting Fundamentals", "course_code": "PADM 210", "term": "Fall 2026", "workflow_state": "available", "start_at": "2026-08-24T00:00:00Z", "end_at": "2026-12-11T00:00:00Z", "color": "#0374B5", "default_view": "modules", "syllabus_body": "<h2>PADM 210 - Fall 2026</h2><p>How cities build, adopt and monitor annual budgets.</p>", "total_students": 2, "image_url": null},
+    {"id": 2, "name": "Grant Writing for Nonprofits", "course_code": "PADM 305", "term": "Fall 2026", "workflow_state": "available", "start_at": "2026-08-24T00:00:00Z", "end_at": "2026-12-11T00:00:00Z", "color": "#0B874B", "default_view": "syllabus", "syllabus_body": "<h2>PADM 305</h2><p>Proposal development and funder research.</p>", "total_students": 1, "image_url": null}
+  ],
+  "enrollments": [
+    {"id": 1, "user_id": 1, "course_id": 1, "type": "TeacherEnrollment", "enrollment_state": "active", "course_section_id": 1, "created_at": "2026-08-15T00:00:00Z"},
+    {"id": 2, "user_id": 1, "course_id": 2, "type": "TeacherEnrollment", "enrollment_state": "active", "course_section_id": 2, "created_at": "2026-08-15T00:00:00Z"},
+    {"id": 3, "user_id": 2, "course_id": 1, "type": "StudentEnrollment", "enrollment_state": "active", "course_section_id": 1, "created_at": "2026-08-20T00:00:00Z"},
+    {"id": 4, "user_id": 3, "course_id": 1, "type": "StudentEnrollment", "enrollment_state": "active", "course_section_id": 1, "created_at": "2026-08-20T00:00:00Z"},
+    {"id": 5, "user_id": 3, "course_id": 2, "type": "StudentEnrollment", "enrollment_state": "active", "course_section_id": 2, "created_at": "2026-08-20T00:00:00Z"}
+  ],
+  "assignmentGroups": [
+    {"id": 1, "course_id": 1, "name": "Problem Sets", "weight": 40, "position": 1},
+    {"id": 2, "course_id": 1, "name": "Budget Memo", "weight": 60, "position": 2}
+  ],
+  "assignments": [
+    {"id": 1, "course_id": 1, "assignment_group_id": 1, "name": "PS 1: Revenue Forecasting", "description": "<p>Forecast sales tax revenue for a fictional town.</p>", "due_at": "2026-09-12T23:59:00Z", "points_possible": 50, "grading_type": "points", "submission_types": ["online_upload"], "published": true, "position": 1, "needs_grading_count": 1, "allowed_extensions": ["xlsx", "pdf"], "workflow_state": "published"},
+    {"id": 2, "course_id": 1, "assignment_group_id": 2, "name": "Budget Memo Draft", "description": "<p>Two-page memo to the city council.</p>", "due_at": "2026-10-02T23:59:00Z", "points_possible": 100, "grading_type": "points", "submission_types": ["online_text_entry", "online_upload"], "published": false, "position": 1, "needs_grading_count": 0, "allowed_extensions": [], "workflow_state": "unpublished"}
+  ],
+  "submissions": [
+    {"id": 1, "assignment_id": 1, "user_id": 2, "score": null, "grade": null, "submitted_at": "2026-09-06T21:10:00Z", "graded_at": null, "workflow_state": "submitted", "submission_type": "online_upload", "late": false, "missing": false, "excused": false, "attempt": 1, "body": null}
+  ],
+  "modules": [
+    {"id": 1, "course_id": 1, "name": "Week 1: The Budget Cycle", "position": 1, "published": true, "items_count": 2, "state": "started"},
+    {"id": 2, "course_id": 1, "name": "Week 2: Revenue Sources", "position": 2, "published": true, "items_count": 1, "state": "locked"}
+  ],
+  "moduleItems": [
+    {"id": 1, "module_id": 1, "title": "Reading: GFOA Best Practices", "type": "ExternalUrl", "content_id": null, "position": 1, "indent": 0, "published": true, "external_url": "https://www.gfoa.example/best-practices"},
+    {"id": 2, "module_id": 1, "title": "PS 1: Revenue Forecasting", "type": "Assignment", "content_id": 1, "position": 2, "indent": 0, "published": true},
+    {"id": 3, "module_id": 2, "title": "Slides: Property Tax Basics", "type": "File", "content_id": 1, "position": 1, "indent": 0, "published": true}
+  ],
+  "announcements": [
+    {"id": 1, "course_id": 1, "title": "Welcome to PADM 210", "message": "<p>Please read the syllabus before Thursday.</p>", "author_id": 1, "posted_at": "2026-08-24T14:00:00Z", "read_state": "read", "published": true}
+  ],
+  "announcementReplies": [],
+  "discussionTopics": [
+    {"id": 1, "course_id": 1, "title": "Which line item would you cut first?", "message": "<p>Pick one line item from the sample budget and defend cutting it.</p>", "author_id": 1, "posted_at": "2026-09-01T15:00:00Z", "last_reply_at": "2026-09-03T10:20:00Z", "discussion_type": "threaded", "published": true, "pinned": true, "locked": false, "allow_rating": true, "require_initial_post": false, "read_state": "unread", "unread_count": 1, "discussion_subentry_count": 1, "assignment_id": null}
+  ],
+  "discussionEntries": [
+    {"id": 1, "discussion_topic_id": 1, "user_id": 3, "message": "<p>I would delay the fleet replacement line.</p>", "created_at": "2026-09-03T10:20:00Z", "parent_id": null, "read_state": "unread", "rating_count": 0, "rating_sum": 0}
+  ],
+  "conversations": [
+    {"id": 1, "subject": "Extension request for PS 1", "workflow_state": "unread", "last_message": "Could I have two extra days? I was out sick.", "last_message_at": "2026-09-06T18:30:00Z", "message_count": 1, "starred": false, "private": true, "participants": [1, 3], "context_name": "Municipal Budgeting Fundamentals", "context_id": 1}
+  ],
+  "conversationMessages": [
+    {"id": 1, "conversation_id": 1, "author_id": 3, "body": "Could I have two extra days? I was out sick.", "created_at": "2026-09-06T18:30:00Z", "generated": false, "attachments": []}
+  ],
+  "calendarEvents": [
+    {"id": 1, "title": "Office Hours", "description": "Drop in, Room 114", "start_at": "2026-09-09T14:00:00Z", "end_at": "2026-09-09T16:00:00Z", "all_day": false, "location_name": "Room 114", "context_code": "course_1", "context_name": "Municipal Budgeting Fundamentals", "workflow_state": "active"}
+  ],
+  "pages": [
+    {"id": 1, "course_id": 1, "title": "Course Resources", "url": "course-resources", "body": "<p>Links to sample budgets and templates.</p>", "published": true, "front_page": false, "created_at": "2026-08-20T00:00:00Z", "updated_at": "2026-08-20T00:00:00Z", "editing_roles": "teachers", "last_edited_by": 1}
+  ],
+  "files": [
+    {"id": 1, "course_id": 1, "display_name": "Property Tax Basics.pdf", "filename": "property_tax_basics.pdf", "content_type": "application/pdf", "size": 482113, "folder_id": 1, "created_at": "2026-08-22T00:00:00Z", "updated_at": "2026-08-22T00:00:00Z", "url": "#"}
+  ],
+  "folders": [
+    {"id": 1, "course_id": 1, "name": "course files", "parent_folder_id": null, "position": 1, "files_count": 1, "folders_count": 0}
+  ],
+  "todoItems": [
+    {"id": 1, "type": "grading", "assignment_id": 1, "course_id": 1, "title": "Grade PS 1: Revenue Forecasting", "needs_grading_count": 1, "due_at": "2026-09-12T23:59:00Z", "points_possible": 50}
+  ],
+  "dashboardView": "cards",
+  "activeCourseNav": {}
+}

@@ -1,0 +1,188 @@
+{
+  "app_id": "wandb_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activeProjectId",
+    "activeRunId",
+    "artifacts",
+    "currentUser",
+    "notifications",
+    "projects",
+    "reports",
+    "runs",
+    "selectedRunIds",
+    "sweeps",
+    "users",
+    "workspace"
+  ],
+  "observed": [
+    "activeProjectId",
+    "activeRunId",
+    "artifacts",
+    "currentUser",
+    "notifications",
+    "projects",
+    "reports",
+    "runs",
+    "selectedRunIds",
+    "sweeps",
+    "users",
+    "workspace"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 7,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "username",
+        "name",
+        "email",
+        "avatar"
+      ],
+      "keyed_by_id": false
+    },
+    "projects": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "displayName",
+        "entity",
+        "description",
+        "visibility",
+        "createdAt",
+        "updatedAt",
+        "totalRuns",
+        "totalComputeHours",
+        "tags"
+      ],
+      "keyed_by_id": false
+    },
+    "runs": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "runId",
+        "name",
+        "projectId",
+        "state",
+        "createdAt",
+        "updatedAt",
+        "duration",
+        "color",
+        "visible",
+        "user",
+        "tags",
+        "notes",
+        "config",
+        "summary",
+        "history",
+        "systemMetrics",
+        "metadata",
+        "logs",
+        "files",
+        "inputArtifacts",
+        "outputArtifacts"
+      ],
+      "keyed_by_id": false
+    },
+    "sweeps": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "sweepId",
+        "projectId",
+        "name",
+        "state",
+        "createdAt",
+        "method",
+        "metric",
+        "parameters",
+        "runCount",
+        "bestRun",
+        "sweepRuns"
+      ],
+      "keyed_by_id": false
+    },
+    "artifacts": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "projectId",
+        "description",
+        "createdAt",
+        "versions"
+      ],
+      "keyed_by_id": false
+    },
+    "reports": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "title",
+        "projectId",
+        "description",
+        "authorId",
+        "createdAt",
+        "updatedAt",
+        "viewCount",
+        "blocks"
+      ],
+      "keyed_by_id": false
+    },
+    "activeProjectId": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "activeRunId": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    },
+    "selectedRunIds": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "workspace": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "type",
+        "runName",
+        "timestamp",
+        "read"
+      ],
+      "keyed_by_id": false
+    }
+  },
+  "note": "Observed with the three proposed hub_patches.json amendments applied (see experiments/PORT-NOTES-port-five.md); the app as shipped does not reach a served state."
+}

@@ -1,0 +1,248 @@
+{
+  "app_id": "shopify_admin_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "analytics",
+    "blogPosts",
+    "collections",
+    "customers",
+    "discounts",
+    "draftOrders",
+    "giftCards",
+    "navigationMenus",
+    "orders",
+    "pages",
+    "products",
+    "settings",
+    "store"
+  ],
+  "observed": [
+    "analytics",
+    "blogPosts",
+    "collections",
+    "customers",
+    "discounts",
+    "draftOrders",
+    "giftCards",
+    "navigationMenus",
+    "orders",
+    "pages",
+    "products",
+    "settings",
+    "store"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "store": {
+      "kind": "object",
+      "count": 13,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "products": {
+      "kind": "array",
+      "count": 13,
+      "record_fields": [
+        "id",
+        "title",
+        "bodyHtml",
+        "vendor",
+        "productType",
+        "handle",
+        "status",
+        "tags",
+        "images",
+        "options",
+        "variants",
+        "collections",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "collections": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "title",
+        "bodyHtml",
+        "handle",
+        "collectionType",
+        "productIds",
+        "productsCount",
+        "sortOrder",
+        "publishedAt",
+        "updatedAt",
+        "image"
+      ],
+      "keyed_by_id": false
+    },
+    "orders": {
+      "kind": "array",
+      "count": 18,
+      "record_fields": [
+        "id",
+        "name",
+        "orderNumber",
+        "email",
+        "financialStatus",
+        "fulfillmentStatus",
+        "currency",
+        "subtotalPrice",
+        "totalShippingPrice",
+        "totalTax",
+        "totalDiscounts",
+        "totalPrice",
+        "lineItems",
+        "customer",
+        "shippingAddress",
+        "billingAddress",
+        "note",
+        "tags",
+        "discountCodes",
+        "createdAt",
+        "updatedAt",
+        "timeline"
+      ],
+      "keyed_by_id": false
+    },
+    "customers": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "firstName",
+        "lastName",
+        "email",
+        "phone",
+        "state",
+        "ordersCount",
+        "totalSpent",
+        "note",
+        "tags",
+        "taxExempt",
+        "acceptsMarketing",
+        "defaultAddress",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "discounts": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "title",
+        "code",
+        "type",
+        "value",
+        "status",
+        "appliesTo",
+        "appliesToIds",
+        "minimumRequirement",
+        "minimumValue",
+        "customerEligibility",
+        "usageLimit",
+        "usageCount",
+        "oncePerCustomer",
+        "startsAt",
+        "endsAt",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "draftOrders": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "status",
+        "customer",
+        "lineItems",
+        "subtotalPrice",
+        "totalTax",
+        "totalPrice",
+        "note",
+        "tags",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "giftCards": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "code",
+        "initialValue",
+        "balance",
+        "currency",
+        "status",
+        "customerId",
+        "note",
+        "expiresOn",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "analytics": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "pages": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "title",
+        "handle",
+        "bodyHtml",
+        "published",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "blogPosts": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "title",
+        "author",
+        "bodyHtml",
+        "handle",
+        "tags",
+        "published",
+        "publishedAt",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "navigationMenus": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "title",
+        "handle",
+        "items"
+      ],
+      "keyed_by_id": false
+    },
+    "settings": {
+      "kind": "object",
+      "count": 7,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

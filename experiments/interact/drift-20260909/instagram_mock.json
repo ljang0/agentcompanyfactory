@@ -1,0 +1,122 @@
+{
+  "app_id": "instagram_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "conversations",
+    "messages",
+    "notifications",
+    "posts",
+    "savedPostIds",
+    "stories",
+    "users"
+  ],
+  "observed": [
+    "conversations",
+    "messages",
+    "notifications",
+    "posts",
+    "savedPostIds",
+    "stories",
+    "users"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "users": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "username",
+        "name",
+        "avatar",
+        "bio",
+        "website",
+        "followers",
+        "following",
+        "isVerified",
+        "isPrivate",
+        "isOnline"
+      ],
+      "keyed_by_id": true
+    },
+    "posts": {
+      "kind": "array",
+      "count": 26,
+      "record_fields": [
+        "id",
+        "userId",
+        "images",
+        "caption",
+        "location",
+        "likes",
+        "comments",
+        "saved",
+        "created"
+      ],
+      "keyed_by_id": false
+    },
+    "stories": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "userId",
+        "image",
+        "created",
+        "expires",
+        "viewed"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "type",
+        "fromUserId",
+        "postId",
+        "commentId",
+        "text",
+        "read",
+        "created"
+      ],
+      "keyed_by_id": false
+    },
+    "conversations": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "participants",
+        "lastMessage",
+        "lastMessageTime",
+        "unreadCount"
+      ],
+      "keyed_by_id": false
+    },
+    "messages": {
+      "kind": "array",
+      "count": 30,
+      "record_fields": [
+        "id",
+        "conversationId",
+        "senderId",
+        "text",
+        "type",
+        "imageUrl",
+        "sharedPostId",
+        "created"
+      ],
+      "keyed_by_id": false
+    },
+    "savedPostIds": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

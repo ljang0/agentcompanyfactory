@@ -1,0 +1,63 @@
+{
+  "currentUser": {"sys_id": "u1", "user_name": "rosa.delgado", "first_name": "Rosa", "last_name": "Delgado", "email": "rosa.delgado@harborview-county.example", "title": "Service Desk Lead", "department": "IT Service Desk", "phone": "555-0142", "avatar": "RD", "role": "admin", "active": true, "vip": false},
+  "users": [
+    {"sys_id": "u1", "user_name": "rosa.delgado", "first_name": "Rosa", "last_name": "Delgado", "email": "rosa.delgado@harborview-county.example", "title": "Service Desk Lead", "department": "IT Service Desk", "phone": "555-0142", "avatar": "RD", "role": "admin", "active": true, "vip": false},
+    {"sys_id": "u2", "user_name": "kwame.osei", "first_name": "Kwame", "last_name": "Osei", "email": "kwame.osei@harborview-county.example", "title": "Network Engineer", "department": "IT Network", "phone": "555-0177", "avatar": "KO", "role": "itil", "active": true, "vip": false},
+    {"sys_id": "u3", "user_name": "helen.marsh", "first_name": "Helen", "last_name": "Marsh", "email": "helen.marsh@harborview-county.example", "title": "Permit Clerk", "department": "Planning", "phone": "555-0210", "avatar": "HM", "role": "user", "active": true, "vip": false}
+  ],
+  "groups": [
+    {"sys_id": "g1", "name": "Service Desk", "description": "First-line support", "manager": "u1", "members": ["u1"], "type": "itil", "active": true},
+    {"sys_id": "g2", "name": "Network", "description": "Network operations", "manager": "u2", "members": ["u2"], "type": "itil", "active": true}
+  ],
+  "incidents": [
+    {"sys_id": "inc1", "number": "INC0010001", "caller_id": "u3", "category": "Software", "subcategory": "Email", "contact_type": "Phone", "short_description": "Permit portal login loop for Planning staff", "description": "Planning clerks are redirected back to the login page after signing in to the permit portal.", "state": 2, "impact": 2, "urgency": 1, "priority": 2, "assignment_group": "g1", "assigned_to": "u1", "opened_at": "2026-09-07T08:05:00Z", "opened_by": "u1", "resolved_at": null, "resolved_by": null, "closed_at": null, "closed_by": null, "close_code": "", "close_notes": "", "updated_at": "2026-09-07T08:40:00Z", "sla_due": "2026-09-07T16:05:00Z", "cmdb_ci": "ci1", "knowledge": false},
+    {"sys_id": "inc2", "number": "INC0010002", "caller_id": "u3", "category": "Network", "subcategory": "VPN", "contact_type": "Self-service", "short_description": "VPN drops every 20 minutes from Annex building", "description": "Remote sessions from the Annex disconnect roughly every twenty minutes.", "state": 1, "impact": 3, "urgency": 2, "priority": 4, "assignment_group": "g2", "assigned_to": null, "opened_at": "2026-09-06T15:30:00Z", "opened_by": "u3", "resolved_at": null, "resolved_by": null, "closed_at": null, "closed_by": null, "close_code": "", "close_notes": "", "updated_at": "2026-09-06T15:30:00Z", "sla_due": "2026-09-09T15:30:00Z", "cmdb_ci": null, "knowledge": false}
+  ],
+  "problems": [
+    {"sys_id": "prb1", "number": "PRB0040001", "short_description": "Intermittent session expiry on permit portal", "description": "Multiple incidents report unexpected logouts.", "state": 2, "priority": 3, "impact": 2, "urgency": 2, "assignment_group": "g1", "assigned_to": "u1", "opened_at": "2026-09-05T10:00:00Z", "opened_by": "u1", "resolved_at": null, "closed_at": null, "cause_notes": "", "fix_notes": "", "known_error": false, "related_incidents": ["inc1"], "updated_at": "2026-09-05T10:00:00Z", "cmdb_ci": "ci1"}
+  ],
+  "changeRequests": [
+    {"sys_id": "chg1", "number": "CHG0030001", "type": "Normal", "short_description": "Rotate permit portal session keys", "description": "Rotate signing keys and extend session lifetime to 8 hours.", "state": -4, "priority": 3, "impact": 2, "risk": "Moderate", "category": "Software", "assignment_group": "g1", "assigned_to": "u1", "requested_by": "u1", "opened_at": "2026-09-06T09:00:00Z", "opened_by": "u1", "start_date": "2026-09-12T02:00:00Z", "end_date": "2026-09-12T04:00:00Z", "close_code": "", "close_notes": "", "updated_at": "2026-09-06T09:00:00Z", "cmdb_ci": "ci1", "approval": "Requested", "conflict_status": "Not Run"}
+  ],
+  "catalog": {"sys_id": "cat1", "title": "Service Catalog", "description": "Harborview County IT services", "active": true},
+  "catalogCategories": [
+    {"sys_id": "scc1", "title": "Hardware", "description": "Laptops and desktops", "icon": "💻", "parent": null, "catalog": "cat1", "active": true, "order": 1},
+    {"sys_id": "scc2", "title": "Software", "description": "Applications and licenses", "icon": "📦", "parent": null, "catalog": "cat1", "active": true, "order": 2}
+  ],
+  "catalogItems": [
+    {"sys_id": "sci1", "name": "Standard Laptop", "short_description": "14-inch business laptop", "description": "<p>Standard-issue laptop with docking station.</p>", "category": "scc1", "price": "$1,100", "delivery_time": "5 business days", "active": true, "order": 1, "popular": true, "picture": "💻"},
+    {"sys_id": "sci2", "name": "GIS Desktop License", "short_description": "Annual GIS mapping license", "description": "<p>Named-user GIS license.</p>", "category": "scc2", "price": "$45/mo", "delivery_time": "2 business days", "active": true, "order": 1, "popular": false, "picture": "🗺️"}
+  ],
+  "requests": [
+    {"sys_id": "req1", "number": "REQ0010001", "requested_for": "u3", "opened_at": "2026-09-02T11:00:00Z", "opened_by": "u3", "state": "Open", "stage": "Delivery", "items": ["ritm1"], "updated_at": "2026-09-03T09:00:00Z"}
+  ],
+  "requestedItems": [
+    {"sys_id": "ritm1", "number": "RITM0010001", "request": "req1", "cat_item": "sci1", "state": "Work in Progress", "assigned_to": "u1", "assignment_group": "g1", "quantity": 1, "opened_at": "2026-09-02T11:00:00Z", "updated_at": "2026-09-03T09:00:00Z", "short_description": "Standard Laptop"}
+  ],
+  "kbCategories": [
+    {"sys_id": "kbc1", "label": "Applications", "parent_id": null, "description": "County applications", "active": true, "article_count": 1}
+  ],
+  "kbArticles": [
+    {"sys_id": "kb1", "number": "KB0010001", "short_description": "Clearing permit portal cookies", "text": "<p>Clear site cookies for permits.harborview-county.example and sign in again.</p>", "category": "kbc1", "author": "u1", "published": "2026-08-15", "workflow_state": "Published", "rating": 4.2, "view_count": 38, "helpful_count": 9, "updated_at": "2026-08-15T12:00:00Z"}
+  ],
+  "cmdbItems": [
+    {"sys_id": "ci1", "name": "permit-portal-app01", "sys_class_name": "cmdb_ci_app_server", "status": "Installed", "environment": "Production", "category": "Software", "assigned_to": "u1", "department": "IT Service Desk", "location": "County Data Center", "ip_address": "10.20.4.15", "serial_number": "HV-APP-0115", "manufacturer": "Dell", "model": "PowerEdge R650"}
+  ],
+  "journal": [
+    {"sys_id": "j1", "element_id": "inc1", "element": "work_notes", "value": "Reproduced with clerk account; session cookie rejected after redirect.", "sys_created_by": "u1", "sys_created_on": "2026-09-07T08:40:00Z", "name": "incident"},
+    {"sys_id": "j2", "element_id": "inc1", "element": "comments", "value": "Thanks for the quick response, we have three permits waiting.", "sys_created_by": "u3", "sys_created_on": "2026-09-07T08:50:00Z", "name": "incident"}
+  ],
+  "notifications": [
+    {"sys_id": "notif1", "type": "comment", "target_table": "incident", "target_id": "inc1", "target_number": "INC0010001", "message": "Helen Marsh added a comment", "created_at": "2026-09-07T08:50:00Z", "read": false, "actor": "u3"},
+    {"sys_id": "notif2", "type": "approval", "target_table": "change_request", "target_id": "chg1", "target_number": "CHG0030001", "message": "Approval requested for CHG0030001", "created_at": "2026-09-06T09:00:00Z", "read": true, "actor": "u1"}
+  ],
+  "shoppingCart": [],
+  "navigatorFilter": "",
+  "navigatorExpandedSections": ["Incident"],
+  "activeModule": "dashboard",
+  "favorites": [],
+  "history": [],
+  "currentListFilters": {},
+  "currentSortColumn": null,
+  "currentSortDirection": "asc"
+}

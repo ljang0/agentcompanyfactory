@@ -1,0 +1,87 @@
+{
+  "app_id": "google_calendar_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "calendars",
+    "currentDate",
+    "events",
+    "settings",
+    "sidebarOpen",
+    "user",
+    "view"
+  ],
+  "observed": [
+    "calendars",
+    "currentDate",
+    "events",
+    "settings",
+    "sidebarOpen",
+    "user",
+    "view"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "user": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "calendars": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "color",
+        "textColor",
+        "visible",
+        "userId"
+      ],
+      "keyed_by_id": false
+    },
+    "events": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "calendarId",
+        "title",
+        "start",
+        "end",
+        "allDay",
+        "location",
+        "description",
+        "guests",
+        "color"
+      ],
+      "keyed_by_id": false
+    },
+    "view": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "currentDate": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "sidebarOpen": {
+      "kind": "boolean",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "settings": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+ "_meta": {
+  "doc": "GDPVal's 9 sectors and 44 occupations, DERIVED from the openai/gdpval gold set (sector, occupation fields of all 220 rows) via the datasets-server rows API on 2026-09-02; GDP value-added shares (%) as stated in the GDPval paper (arXiv 2510.04374, Q2 2024 BEA). Regenerate with scripts/build_gdpval_occupations.py.",
+  "source": "https://huggingface.co/datasets/openai/gdpval",
+  "selection_rule": "sectors > 5% of GDP; per sector the 5 occupations highest in total wages that are predominantly digital (>= 60% of O*NET tasks digital)"
+ },
+ "sectors": [
+  {
+   "name": "Real Estate and Rental and Leasing",
+   "gdp_share_pct": 13.8,
+   "occupations": [
+    "Concierges",
+    "Counter and Rental Clerks",
+    "Property, Real Estate, and Community Association Managers",
+    "Real Estate Brokers",
+    "Real Estate Sales Agents"
+   ]
+  },
+  {
+   "name": "Government",
+   "gdp_share_pct": 11.3,
+   "occupations": [
+    "Administrative Services Managers",
+    "Child, Family, and School Social Workers",
+    "Compliance Officers",
+    "First-Line Supervisors of Police and Detectives",
+    "Recreation Workers"
+   ]
+  },
+  {
+   "name": "Manufacturing",
+   "gdp_share_pct": 10.0,
+   "occupations": [
+    "Buyers and Purchasing Agents",
+    "First-Line Supervisors of Production and Operating Workers",
+    "Industrial Engineers",
+    "Mechanical Engineers",
+    "Shipping, Receiving, and Inventory Clerks"
+   ]
+  },
+  {
+   "name": "Professional, Scientific, and Technical Services",
+   "gdp_share_pct": 8.1,
+   "occupations": [
+    "Accountants and Auditors",
+    "Computer and Information Systems Managers",
+    "Lawyers",
+    "Project Management Specialists",
+    "Software Developers"
+   ]
+  },
+  {
+   "name": "Health Care and Social Assistance",
+   "gdp_share_pct": 7.6,
+   "occupations": [
+    "First-Line Supervisors of Office and Administrative Support Workers",
+    "Medical Secretaries and Administrative Assistants",
+    "Medical and Health Services Managers",
+    "Nurse Practitioners",
+    "Registered Nurses"
+   ]
+  },
+  {
+   "name": "Finance and Insurance",
+   "gdp_share_pct": 7.4,
+   "occupations": [
+    "Customer Service Representatives",
+    "Financial Managers",
+    "Financial and Investment Analysts",
+    "Personal Financial Advisors",
+    "Securities, Commodities, and Financial Services Sales Agents"
+   ]
+  },
+  {
+   "name": "Retail Trade",
+   "gdp_share_pct": 6.3,
+   "occupations": [
+    "First-Line Supervisors of Retail Sales Workers",
+    "General and Operations Managers",
+    "Pharmacists",
+    "Private Detectives and Investigators"
+   ]
+  },
+  {
+   "name": "Wholesale Trade",
+   "gdp_share_pct": 5.8,
+   "occupations": [
+    "First-Line Supervisors of Non-Retail Sales Workers",
+    "Order Clerks",
+    "Sales Managers",
+    "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",
+    "Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products"
+   ]
+  },
+  {
+   "name": "Information",
+   "gdp_share_pct": 5.4,
+   "occupations": [
+    "Audio and Video Technicians",
+    "Editors",
+    "Film and Video Editors",
+    "News Analysts, Reporters, and Journalists",
+    "Producers and Directors"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+{
+  "currentUser": {"id": "user_1", "name": "Rosa Delgado", "email": "rosa.delgado@harborline-coop.example", "avatar": "https://ui-avatars.com/api/?name=Rosa+Delgado&background=0D9488&color=fff"},
+  "collaborators": [
+    {"id": "user_1", "name": "Rosa Delgado", "email": "rosa.delgado@harborline-coop.example", "avatar": "https://ui-avatars.com/api/?name=Rosa+Delgado&background=0D9488&color=fff"},
+    {"id": "user_2", "name": "Tomasz Wierzbicki", "email": "tomasz.wierzbicki@harborline-coop.example", "avatar": "https://ui-avatars.com/api/?name=Tomasz+Wierzbicki&background=EC4899&color=fff"},
+    {"id": "user_3", "name": "Amara Osei", "email": "amara.osei@harborline-coop.example", "avatar": "https://ui-avatars.com/api/?name=Amara+Osei&background=2563EB&color=fff"}
+  ],
+  "bases": {
+    "base_hlc01": {"id": "base_hlc01", "name": "Harborline Co-op Grant Tracker", "color": "bg-teal-600", "tables": ["tbl_grants", "tbl_vendors"]}
+  },
+  "tables": {
+    "tbl_grants": {
+      "id": "tbl_grants",
+      "name": "Grants",
+      "baseId": "base_hlc01",
+      "fields": [
+        {"id": "fld_g_name", "name": "Grant", "type": "text", "primary": true},
+        {"id": "fld_g_status", "name": "Status", "type": "single_select", "options": [
+          {"id": "gs_draft", "name": "Drafting", "color": "bg-[#FFDCE5] text-[#B31846]"},
+          {"id": "gs_submitted", "name": "Submitted", "color": "bg-[#FFEAB6] text-[#8D6302]"},
+          {"id": "gs_awarded", "name": "Awarded", "color": "bg-[#D1F7C4] text-[#2D7514]"}
+        ]},
+        {"id": "fld_g_owner", "name": "Owner", "type": "user"},
+        {"id": "fld_g_due", "name": "Deadline", "type": "date"},
+        {"id": "fld_g_amount", "name": "Requested", "type": "currency"},
+        {"id": "fld_g_approved", "name": "Board approved", "type": "checkbox"},
+        {"id": "fld_g_notes", "name": "Notes", "type": "long_text"}
+      ],
+      "records": [
+        {"id": "rec_g001", "createdTime": "2026-07-02T14:10:00.000Z", "fields": {"fld_g_name": "Cold storage expansion", "fld_g_status": "Submitted", "fld_g_owner": {"id": "user_2", "name": "Tomasz Wierzbicki", "email": "tomasz.wierzbicki@harborline-coop.example", "avatar": "https://ui-avatars.com/api/?name=Tomasz+Wierzbicki&background=EC4899&color=fff"}, "fld_g_due": "2026-09-30", "fld_g_amount": 48000, "fld_g_approved": true, "fld_g_notes": "Regional food resilience fund, round 3."}},
+        {"id": "rec_g002", "createdTime": "2026-08-11T09:30:00.000Z", "fields": {"fld_g_name": "Dockside youth apprenticeship", "fld_g_status": "Drafting", "fld_g_owner": {"id": "user_3", "name": "Amara Osei", "email": "amara.osei@harborline-coop.example", "avatar": "https://ui-avatars.com/api/?name=Amara+Osei&background=2563EB&color=fff"}, "fld_g_due": "2026-10-15", "fld_g_amount": 12500, "fld_g_approved": false, "fld_g_notes": ""}}
+      ],
+      "views": [
+        {"id": "view_g_grid", "name": "All Grants", "type": "grid", "filters": [], "sorts": [], "groupBy": [], "hiddenFieldIds": [], "fieldWidths": {}, "rowHeight": "short"},
+        {"id": "view_g_kanban", "name": "By Status", "type": "kanban", "groupFieldId": "fld_g_status"}
+      ],
+      "activeViewId": "view_g_grid"
+    },
+    "tbl_vendors": {
+      "id": "tbl_vendors",
+      "name": "Vendors",
+      "baseId": "base_hlc01",
+      "fields": [
+        {"id": "fld_v_name", "name": "Vendor", "type": "text", "primary": true},
+        {"id": "fld_v_email", "name": "Email", "type": "email"},
+        {"id": "fld_v_active", "name": "Active", "type": "checkbox"}
+      ],
+      "records": [
+        {"id": "rec_v001", "createdTime": "2026-05-20T10:00:00.000Z", "fields": {"fld_v_name": "Northshore Ice Supply", "fld_v_email": "orders@northshore-ice.example", "fld_v_active": true}}
+      ],
+      "views": [
+        {"id": "view_v_grid", "name": "All Vendors", "type": "grid", "filters": [], "sorts": [], "groupBy": [], "hiddenFieldIds": [], "fieldWidths": {}, "rowHeight": "short"}
+      ],
+      "activeViewId": "view_v_grid"
+    }
+  },
+  "activeBaseId": "base_hlc01",
+  "activeTableId": "tbl_grants",
+  "ui": {"viewSidebarOpen": false, "expandedRecordId": null, "searchQuery": "", "isSearching": false}
+}

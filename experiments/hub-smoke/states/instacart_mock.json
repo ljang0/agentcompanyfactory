@@ -1,0 +1,49 @@
+{
+  "user": {"id": "user_1", "firstName": "Dominic", "lastName": "Abara", "email": "dominic.abara@mail.example", "phone": "(612) 555-0147", "avatar": null, "defaultAddressId": "addr_1", "instacartPlus": true, "instacartPlusExpiry": "2027-03-01", "preferredStoreId": "store_1", "createdAt": "2024-02-11T10:00:00Z"},
+  "addresses": [
+    {"id": "addr_1", "userId": "user_1", "label": "Home", "street": "2210 Larkspur Lane", "apt": "", "city": "Saint Paul", "state": "MN", "zip": "55104", "isDefault": true, "deliveryInstructions": "Side door, ring twice."}
+  ],
+  "stores": [
+    {"id": "store_1", "name": "Hollis Corner Market", "slug": "hollis-corner-market", "color": "#2E7D32", "emoji": "🥬", "description": "Neighborhood grocer with local produce and dairy", "deliveryFee": 3.99, "deliveryFeeWithPlus": 0, "serviceFeePercent": 5, "minOrder": 10, "deliveryTimeMin": 45, "deliveryTimeMax": 90, "rating": 4.8, "isInStorePricing": true, "categories": ["Groceries", "Organic", "Local"]},
+    {"id": "store_2", "name": "Northline Pharmacy", "slug": "northline-pharmacy", "color": "#C62828", "emoji": "💊", "description": "Pharmacy and everyday essentials", "deliveryFee": 5.99, "deliveryFeeWithPlus": 0, "serviceFeePercent": 5, "minOrder": 10, "deliveryTimeMin": 60, "deliveryTimeMax": 120, "rating": 4.5, "isInStorePricing": false, "categories": ["Pharmacy", "Convenience"]}
+  ],
+  "departments": [
+    {"id": "dept_produce", "storeId": "store_1", "name": "Produce", "slug": "produce", "icon": "🥕", "displayOrder": 1, "subcategories": [{"id": "sub_veg", "name": "Vegetables", "slug": "vegetables"}, {"id": "sub_fruit", "name": "Fruit", "slug": "fruit"}]},
+    {"id": "dept_dairy", "storeId": "store_1", "name": "Dairy & Eggs", "slug": "dairy-eggs", "icon": "🥛", "displayOrder": 2, "subcategories": [{"id": "sub_milk", "name": "Milk", "slug": "milk"}]}
+  ],
+  "products": [
+    {"id": "prod_1", "storeId": "store_1", "departmentId": "dept_produce", "subcategoryId": "sub_veg", "name": "Rainbow Carrots Bunch", "brand": "Hollis Farms", "description": "Locally grown mixed-color carrots.", "emoji": "🥕", "price": 3.49, "originalPrice": 3.99, "priceUnit": "each", "unitSize": "1 bunch", "unitPrice": 3.49, "unitPriceLabel": "/bunch", "isOrganic": true, "isOnSale": true, "saleEndDate": "2026-09-14", "inStock": true, "rating": 4.7, "reviewCount": 58, "nutrition": {"servingSize": "1 medium", "calories": 25, "totalFat": "0g", "sodium": "42mg", "totalCarbs": "6g", "fiber": "2g", "sugars": "3g", "protein": "1g"}, "ingredients": "Carrots", "allergens": [], "tags": ["organic", "vegetable", "local"]},
+    {"id": "prod_2", "storeId": "store_1", "departmentId": "dept_dairy", "subcategoryId": "sub_milk", "name": "Whole Milk Half Gallon", "brand": "Cedar Hollow Dairy", "description": "Pasteurized whole milk from a family dairy.", "emoji": "🥛", "price": 4.29, "originalPrice": null, "priceUnit": "each", "unitSize": "64 fl oz", "unitPrice": 0.067, "unitPriceLabel": "/fl oz", "isOrganic": false, "isOnSale": false, "saleEndDate": null, "inStock": true, "rating": 4.6, "reviewCount": 112, "nutrition": {"servingSize": "1 cup", "calories": 150, "totalFat": "8g", "sodium": "120mg", "totalCarbs": "12g", "fiber": "0g", "sugars": "12g", "protein": "8g"}, "ingredients": "Milk, vitamin D3", "allergens": ["milk"], "tags": ["dairy"]},
+    {"id": "prod_3", "storeId": "store_1", "departmentId": "dept_produce", "subcategoryId": "sub_fruit", "name": "Honeycrisp Apples", "brand": "Hollis Farms", "description": "Crisp, sweet-tart apples.", "emoji": "🍎", "price": 2.99, "originalPrice": null, "priceUnit": "lb", "unitSize": "per lb", "unitPrice": 2.99, "unitPriceLabel": "/lb", "isOrganic": false, "isOnSale": false, "saleEndDate": null, "inStock": true, "rating": 4.9, "reviewCount": 203, "nutrition": null, "ingredients": null, "allergens": [], "tags": ["fruit", "fresh"]}
+  ],
+  "cart": [
+    {"id": "cart_1", "productId": "prod_1", "storeId": "store_1", "quantity": 2, "replacementPreference": "best_match", "specificReplacementId": null, "note": "", "addedAt": "2026-09-07T08:20:00Z"}
+  ],
+  "orders": [
+    {"id": "order_1", "userId": "user_1", "storeId": "store_1", "storeName": "Hollis Corner Market", "status": "delivered", "items": [{"productId": "prod_2", "productName": "Whole Milk Half Gallon", "quantity": 1, "price": 4.29, "wasReplaced": false, "replacementProductName": null}, {"productId": "prod_3", "productName": "Honeycrisp Apples", "quantity": 3, "price": 2.99, "wasReplaced": false, "replacementProductName": null}], "subtotal": 13.26, "serviceFee": 0.66, "deliveryFee": 0, "tip": 3.0, "tax": 0.0, "total": 16.92, "itemCount": 4, "deliveryAddress": "2210 Larkspur Lane, Saint Paul, MN 55104", "deliveryDate": "2026-09-03", "deliveryWindow": "5:00 PM - 7:00 PM", "placedAt": "2026-09-03T14:02:00Z", "deliveredAt": "2026-09-03T23:10:00Z", "shopperName": "Keisha", "shopperRating": 5}
+  ],
+  "shoppingLists": [
+    {"id": "list_1", "userId": "user_1", "name": "Weeknight dinners", "items": [{"id": "li_1", "productId": "prod_1", "name": "Rainbow Carrots Bunch", "checked": false, "quantity": 1, "addedAt": "2026-09-01T12:00:00Z"}, {"id": "li_2", "productId": null, "name": "Basil", "checked": true, "quantity": 1, "addedAt": "2026-09-01T12:01:00Z"}], "createdAt": "2026-09-01T12:00:00Z", "updatedAt": "2026-09-05T12:00:00Z"}
+  ],
+  "recipes": [
+    {"id": "recipe_1", "title": "Roasted Carrot Soup", "description": "Sweet roasted carrots blended with stock and a touch of cream.", "prepTime": "10 min", "cookTime": "35 min", "totalTime": "45 min", "servings": 4, "difficulty": "Easy", "tags": ["dinner", "soup", "vegetarian"], "ingredients": [{"name": "Rainbow carrots", "quantity": "2 bunches", "productId": "prod_1"}, {"name": "Whole milk", "quantity": "1/2 cup", "productId": "prod_2"}], "instructions": ["Roast carrots at 425F for 25 minutes.", "Blend with stock and milk.", "Season and serve."], "emoji": "🍲"}
+  ],
+  "deals": [
+    {"id": "deal_1", "storeId": "store_1", "type": "percent_off", "title": "15% off produce", "description": "Save on all Hollis Farms produce this week.", "discountValue": 15, "badge": "15% OFF", "minPurchase": 0, "applicableDepartmentId": "dept_produce", "startDate": "2026-09-07", "endDate": "2026-09-13", "isClipped": false}
+  ],
+  "deliverySlots": [
+    {"id": "slot_0", "date": "2026-09-07", "dayLabel": "Today", "windows": [{"id": "win_0_1", "start": "1:00 PM", "end": "3:00 PM", "available": true, "priority": false, "fee": 0}, {"id": "win_0_2", "start": "3:00 PM", "end": "5:00 PM", "available": true, "priority": true, "fee": 2.99}]},
+    {"id": "slot_1", "date": "2026-09-08", "dayLabel": "Tomorrow", "windows": [{"id": "win_1_1", "start": "9:00 AM", "end": "11:00 AM", "available": true, "priority": false, "fee": 0}]}
+  ],
+  "selectedStoreId": "store_1",
+  "selectedDepartmentId": null,
+  "searchQuery": "",
+  "cartOpen": false,
+  "activeModal": null,
+  "activeModalData": null,
+  "deliveryAddressId": "addr_1",
+  "selectedDeliverySlot": null,
+  "shopperTip": 3,
+  "sortBy": "best_match",
+  "filters": {"onSale": false, "organic": false, "buyItAgain": false}
+}

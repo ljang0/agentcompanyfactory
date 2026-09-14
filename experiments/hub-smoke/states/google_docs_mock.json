@@ -1,0 +1,32 @@
+{
+  "currentUser": { "id": "user-1", "name": "Elena Vasquez-Moore", "email": "elena.vasquez@larkspur-parks.example", "avatar": "https://picsum.photos/100/100?random=user1" },
+  "users": [
+    { "id": "user-1", "name": "Elena Vasquez-Moore", "email": "elena.vasquez@larkspur-parks.example", "avatar": "https://picsum.photos/100/100?random=user1" },
+    { "id": "user-2", "name": "Desmond Achebe", "email": "desmond.achebe@larkspur-parks.example", "avatar": "https://picsum.photos/100/100?random=user2" },
+    { "id": "user-3", "name": "Ingrid Halvorsen", "email": "ingrid.halvorsen@larkspur-parks.example", "avatar": "https://picsum.photos/100/100?random=user3" }
+  ],
+  "documents": {
+    "doc-1": {
+      "id": "doc-1", "title": "Larkspur Trail Maintenance Plan 2027",
+      "content": "<h1>Larkspur Trail Maintenance Plan 2027</h1><p>This plan covers seasonal maintenance for the Ridgeback, Alder Creek and Lookout trails managed by the Larkspur Parks District.</p><h2>Priorities</h2><ul><li><p>Replace the Alder Creek footbridge decking before spring runoff.</p></li><li><p>Regrade the Lookout switchbacks.</p></li></ul>",
+      "ownerId": "user-1", "starred": true, "created": "2026-08-12T10:00:00Z", "updated": "2026-09-05T15:30:00Z",
+      "sharedWith": [ { "userId": "user-2", "permission": "editor" }, { "userId": "user-3", "permission": "commenter" } ],
+      "linkSharing": { "enabled": false, "permission": "viewer" }
+    },
+    "doc-2": {
+      "id": "doc-2", "title": "Board Meeting Notes - Sept 2026",
+      "content": "<h1>Board Meeting Notes</h1><p>Attendees: Elena, Desmond, Ingrid.</p><p>Approved the footbridge budget of $48,000.</p>",
+      "ownerId": "user-2", "starred": false, "created": "2026-09-02T18:00:00Z", "updated": "2026-09-02T19:10:00Z",
+      "sharedWith": [ { "userId": "user-1", "permission": "editor" } ],
+      "linkSharing": { "enabled": true, "permission": "viewer" }
+    }
+  },
+  "comments": [
+    {
+      "id": "comment-1", "docId": "doc-1", "userId": "user-3", "content": "Do we have a contractor quote for the decking yet?", "resolved": false, "created": "2026-09-04T09:20:00Z", "quotedText": "Replace the Alder Creek footbridge decking",
+      "replies": [ { "id": "reply-1", "userId": "user-1", "content": "Two quotes so far, adding them to the appendix.", "created": "2026-09-04T11:05:00Z" } ]
+    },
+    { "id": "comment-2", "docId": "doc-2", "userId": "user-1", "content": "Please add the vote tally.", "resolved": true, "created": "2026-09-02T19:00:00Z", "quotedText": "Approved the footbridge budget", "replies": [] }
+  ],
+  "ui": { "currentDocId": null, "sidebarOpen": false, "sidebarTab": "comments", "shareDialogOpen": false, "findReplaceOpen": false, "viewMode": "editing", "zoom": 100, "documentListView": "grid", "searchQuery": "" }
+}

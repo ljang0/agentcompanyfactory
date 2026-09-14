@@ -1,0 +1,75 @@
+{
+  "seller": {"id": "SELLER_001", "displayName": "Tidewater Pantry Goods", "legalName": "Tidewater Pantry Goods LLC", "email": "ops@tidewaterpantry.example", "marketplace": "Amazon.com (US)", "planType": "Professional", "storeName": "Tidewater Pantry Goods", "sellerId": "A3TWPANTRY0091", "registeredSince": "2022-02-14", "accountHealthRating": 412, "notificationCount": 1, "unreadMessages": 1},
+  "products": [
+    {"id": "PROD_001", "asin": "B0TWP00001", "sku": "TWP-SEASALT-8OZ", "title": "Tidewater Chesapeake Sea Salt Blend, 8 oz", "brand": "Tidewater Pantry", "category": "Grocery", "price": 12.99, "salePrice": null, "costOfGoods": 3.85, "fulfillmentChannel": "FBA", "status": "Active", "condition": "New", "availableQuantity": 142, "reservedQuantity": 6, "inboundQuantity": 0, "buyBoxOwner": true, "buyBoxPrice": 12.99, "lowestPrice": 12.99, "rating": 4.7, "reviewCount": 88, "bulletPoints": ["Hand-harvested", "No anti-caking agents"], "description": "Flaky finishing salt with Old Bay-style spice.", "keywords": "sea salt, finishing salt", "weight": 0.6, "dimensions": "3 x 3 x 4 in", "dateCreated": "2022-03-01", "lastUpdated": "2026-08-20T10:00:00Z"},
+    {"id": "PROD_002", "asin": "B0TWP00002", "sku": "TWP-CRABSPICE-6OZ", "title": "Tidewater Blue Crab Boil Spice, 6 oz", "brand": "Tidewater Pantry", "category": "Grocery", "price": 9.49, "salePrice": 8.49, "costOfGoods": 2.60, "fulfillmentChannel": "FBM", "status": "Active", "condition": "New", "availableQuantity": 7, "reservedQuantity": 0, "inboundQuantity": 0, "buyBoxOwner": false, "buyBoxPrice": 9.29, "lowestPrice": 9.29, "rating": 4.5, "reviewCount": 41, "bulletPoints": ["Small batch"], "description": "Classic crab boil blend.", "keywords": "crab boil, seafood seasoning", "weight": 0.45, "dimensions": "3 x 3 x 4 in", "dateCreated": "2022-05-10", "lastUpdated": "2026-08-28T10:00:00Z"}
+  ],
+  "orders": [
+    {"id": "ORDER_001", "amazonOrderId": "113-5520931-8842217", "purchaseDate": "2026-09-02T14:12:00Z", "lastUpdateDate": "2026-09-02T14:12:00Z", "status": "Unshipped", "fulfillmentChannel": "FBM", "salesChannel": "Amazon.com", "buyerName": "R. Castellanos", "buyerEmail": "rcast@marketplace.example", "shippingAddress": {"name": "Rosa Castellanos", "line1": "410 Harbor View Dr", "line2": "", "city": "Norfolk", "state": "VA", "postalCode": "23503"}, "items": [{"productId": "PROD_002", "sku": "TWP-CRABSPICE-6OZ", "title": "Tidewater Blue Crab Boil Spice, 6 oz", "quantity": 2, "itemPrice": 8.49, "itemTotal": 16.98}], "orderTotal": 21.97, "shippingFee": 4.99, "amazonFees": 3.30, "netProceeds": 18.67, "carrier": null, "trackingNumber": null, "shipByDate": "2026-09-04", "deliverByDate": "2026-09-09", "shippedDate": null},
+    {"id": "ORDER_002", "amazonOrderId": "113-7710422-1093812", "purchaseDate": "2026-08-30T09:40:00Z", "lastUpdateDate": "2026-08-31T16:00:00Z", "status": "Shipped", "fulfillmentChannel": "FBA", "salesChannel": "Amazon.com", "buyerName": "M. Achebe", "buyerEmail": "machebe@marketplace.example", "shippingAddress": {"name": "Monica Achebe", "line1": "77 Poplar St", "line2": "Apt 4", "city": "Richmond", "state": "VA", "postalCode": "23220"}, "items": [{"productId": "PROD_001", "sku": "TWP-SEASALT-8OZ", "title": "Tidewater Chesapeake Sea Salt Blend, 8 oz", "quantity": 1, "itemPrice": 12.99, "itemTotal": 12.99}], "orderTotal": 12.99, "shippingFee": 0, "amazonFees": 5.12, "netProceeds": 7.87, "carrier": "AMZN_US", "trackingNumber": "TBA31099887201", "shipByDate": "2026-08-31", "deliverByDate": "2026-09-03", "shippedDate": "2026-08-31T15:30:00Z"}
+  ],
+  "messages": [
+    {"id": "MSG_001", "threadId": "THREAD_001", "orderId": "ORDER_001", "buyerName": "R. Castellanos", "subject": "Can you ship both jars in one box?", "body": "Hi, ordering for a family cookout on the 9th. Please ship together if possible.", "sender": "buyer", "timestamp": "2026-09-02T15:00:00Z", "isRead": false, "status": "Unanswered", "responseDeadline": "2026-09-03T15:00:00Z", "attachments": []}
+  ],
+  "returns": [
+    {"id": "RET_001", "orderId": "ORDER_002", "amazonOrderId": "113-7710422-1093812", "returnRequestDate": "2026-09-03T08:00:00Z", "status": "Pending", "reason": "Arrived damaged", "buyerComments": "Lid cracked in transit.", "items": [{"productId": "PROD_001", "sku": "TWP-SEASALT-8OZ", "title": "Tidewater Chesapeake Sea Salt Blend, 8 oz", "quantity": 1}], "sellerNotes": "", "resolution": null}
+  ],
+  "campaigns": [
+    {"id": "CAMP_001", "name": "Crab Boil Season - Sponsored Products", "type": "Sponsored Products", "status": "Enabled", "dailyBudget": 15.00, "startDate": "2026-06-01", "endDate": null, "targetingType": "Manual", "bidStrategy": "Dynamic bids - down only", "metrics": {"impressions": 18420, "clicks": 512, "spend": 233.10, "sales": 1180.44, "acos": 19.7, "roas": 5.06, "orders": 121, "ctr": 2.78, "cpc": 0.46}, "adGroups": [{"id": "AG_001", "name": "Crab spice keywords", "status": "Enabled", "defaultBid": 0.55, "products": ["PROD_002"], "keywords": [{"keyword": "crab boil seasoning", "matchType": "Phrase", "bid": 0.60, "status": "Enabled", "impressions": 9100, "clicks": 260, "spend": 118.20, "sales": 640.10}]}]}
+  ],
+  "accountHealth": {
+    "overallRating": "Good", "accountHealthRating": 412,
+    "customerServicePerformance": {"orderDefectRate": {"current": 0.31, "target": 1.0, "status": "Good", "orders": 2, "totalOrders": 640}, "negativeFeedbackRate": {"current": 0.47, "target": null, "count": 3}, "aToZClaimRate": {"current": 0.0, "target": null, "count": 0}, "chargebackRate": {"current": 0.0, "count": 0}},
+    "policyCompliance": {"status": "Good", "intellectualPropertyComplaints": 0, "productAuthenticityComplaints": 0, "productConditionComplaints": 0, "listingPolicyViolations": 0, "restrictedProductViolations": 0, "foodSafetyIssues": 0, "customerProductReviews": "No issues"},
+    "shippingPerformance": {"lateShipmentRate": {"current": 0.9, "target": 4.0, "status": "Good"}, "preFulfillmentCancelRate": {"current": 0.4, "target": 2.5, "status": "Good"}, "validTrackingRate": {"current": 98.2, "target": 95.0, "status": "Good"}, "onTimeDeliveryRate": {"current": 97.4, "target": 97.0, "status": "Good"}}
+  },
+  "feedback": [
+    {"id": "FB_001", "orderId": "ORDER_002", "buyerName": "Monica A.", "rating": 5, "comment": "Best finishing salt for oysters. Fast FBA shipping.", "date": "2026-09-01T10:00:00Z", "hasResponse": false, "sellerResponse": null, "removalRequested": false}
+  ],
+  "salesData": {
+    "dailySnapshots": [
+      {"date": "2026-08-28", "orderedProductSales": 412.50, "unitsOrdered": 31, "totalOrderItems": 33, "pageViews": 620, "sessions": 505, "buyBoxPercentage": 91.2, "orderItemSessionPercentage": 6.5},
+      {"date": "2026-08-29", "orderedProductSales": 388.20, "unitsOrdered": 29, "totalOrderItems": 30, "pageViews": 588, "sessions": 470, "buyBoxPercentage": 90.8, "orderItemSessionPercentage": 6.4},
+      {"date": "2026-08-30", "orderedProductSales": 455.90, "unitsOrdered": 35, "totalOrderItems": 37, "pageViews": 701, "sessions": 560, "buyBoxPercentage": 91.5, "orderItemSessionPercentage": 6.6},
+      {"date": "2026-08-31", "orderedProductSales": 503.10, "unitsOrdered": 39, "totalOrderItems": 41, "pageViews": 744, "sessions": 602, "buyBoxPercentage": 92.0, "orderItemSessionPercentage": 6.8},
+      {"date": "2026-09-01", "orderedProductSales": 471.60, "unitsOrdered": 36, "totalOrderItems": 38, "pageViews": 690, "sessions": 551, "buyBoxPercentage": 91.9, "orderItemSessionPercentage": 6.9},
+      {"date": "2026-09-02", "orderedProductSales": 520.75, "unitsOrdered": 40, "totalOrderItems": 43, "pageViews": 760, "sessions": 615, "buyBoxPercentage": 92.3, "orderItemSessionPercentage": 7.0},
+      {"date": "2026-09-03", "orderedProductSales": 498.30, "unitsOrdered": 38, "totalOrderItems": 40, "pageViews": 722, "sessions": 580, "buyBoxPercentage": 92.1, "orderItemSessionPercentage": 6.9}
+    ],
+    "summary": {
+      "last7Days": {"orderedProductSales": 3250.35, "unitsOrdered": 248, "totalOrderItems": 262, "averageSellingPrice": 13.11},
+      "last30Days": {"orderedProductSales": 13420.80, "unitsOrdered": 1021, "totalOrderItems": 1088, "averageSellingPrice": 13.14},
+      "previousPeriod": {"orderedProductSales": 12210.45, "unitsOrdered": 930}
+    }
+  },
+  "payments": {
+    "currentBalance": 2184.33, "nextDisbursementDate": "2026-09-12", "nextDisbursementEstimate": 2184.33,
+    "recentDisbursements": [{"id": "DISB_001", "date": "2026-08-29", "amount": 2410.18, "status": "Completed"}],
+    "feeBreakdown": {"referralFees": 486.20, "fbaFees": 312.40, "storageFees": 41.75, "advertisingFees": 233.10, "otherFees": 12.00},
+    "transactions": [
+      {"id": "TXN_001", "date": "2026-09-02T14:12:00Z", "type": "Order", "description": "Order #113-5520931-8842217", "amount": 18.67, "orderId": "ORDER_001"},
+      {"id": "TXN_002", "date": "2026-08-29T00:00:00Z", "type": "Disbursement", "description": "Bank Transfer - Aug 29", "amount": -2410.18, "orderId": null}
+    ]
+  },
+  "fbaInventory": {
+    "inventoryPerformanceIndex": 612,
+    "storageLimits": {"standardSize": {"used": 210, "limit": 2500, "unit": "cubic feet"}, "oversize": {"used": 0, "limit": 200, "unit": "cubic feet"}},
+    "inventoryAge": [{"productId": "PROD_001", "asin": "B0TWP00001", "title": "Tidewater Chesapeake Sea Salt Blend, 8 oz", "daysInInventory": 34, "quantity": 142, "estimatedFee": 0.0, "ageCategory": "0-90 days"}],
+    "restockSuggestions": [{"productId": "PROD_002", "asin": "B0TWP00002", "title": "Tidewater Blue Crab Boil Spice, 6 oz", "currentStock": 7, "recommendedQuantity": 60, "daysOfSupply": 4, "alert": "Low stock"}],
+    "inboundShipments": [{"id": "SHIP_001", "shipmentName": "Fall Restock - Sea Salt", "status": "In Transit", "destination": "FBA Warehouse - RIC2", "createdDate": "2026-08-30", "estimatedArrival": "2026-09-08", "itemCount": 120, "receivedCount": 0, "items": [{"asin": "B0TWP00001", "sku": "TWP-SEASALT-8OZ", "quantity": 120, "received": 0}]}]
+  },
+  "coupons": [
+    {"id": "COUPON_001", "name": "Labor Day - $1 Off Crab Boil Spice", "type": "Money Off", "discount": 1, "budget": 150.00, "budgetUsed": 38.00, "startDate": "2026-09-01", "endDate": "2026-09-15", "status": "Active", "targetProducts": ["PROD_002"], "redemptions": 38, "clipCount": 112}
+  ],
+  "pricingRules": [
+    {"id": "RULE_001", "name": "Hold margin above cost + 35%", "target": "All Active Listings", "strategy": "Price floor - cost + 35% margin", "status": "Active", "productsCount": 2, "minPrice": null, "maxPrice": null}
+  ],
+  "notifications": [
+    {"id": "NOTIF_001", "type": "warning", "title": "Low Inventory Alert", "message": "Tidewater Blue Crab Boil Spice has only 7 units remaining. Estimated 4 days of supply.", "timestamp": "2026-09-03T08:00:00Z", "isRead": false, "actionUrl": "/inventory/planning", "category": "inventory"}
+  ],
+  "settings": {
+    "notificationPreferences": {"emailOrderConfirmation": true, "emailReturnRequest": true, "emailBuyerMessage": true, "emailInventoryAlert": true, "emailPromotions": false, "emailReports": true, "emailFeedback": true, "emailAdvertisingAlerts": true},
+    "shippingSettings": {"defaultShippingService": "USPS Priority Mail", "handlingTime": 2, "returnAddress": {"name": "Tidewater Pantry Goods", "line1": "18 Cannery Row", "city": "Cape Charles", "state": "VA", "postalCode": "23310", "country": "US"}},
+    "listingDefaults": {"defaultCondition": "New", "defaultFulfillment": "FBA"}
+  }
+}

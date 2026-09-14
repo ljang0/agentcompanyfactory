@@ -1,0 +1,58 @@
+{
+  "currentUser": {"employeeId": 1, "role": "admin", "companyName": "Larkspur Dental Partners", "companyLogo": null},
+  "departments": [
+    {"id": 1, "name": "Administration", "headId": 1},
+    {"id": 2, "name": "Clinical", "headId": 2}
+  ],
+  "locations": [
+    {"id": 1, "name": "Larkspur Main Clinic", "address": "215 Willow Ave, Larkspur, CA 94939", "timezone": "America/Los_Angeles"}
+  ],
+  "divisions": [{"id": 1, "name": "North Bay"}],
+  "employees": [
+    {"id": 1, "firstName": "Anneliese", "middleName": "", "lastName": "Okoro", "preferredName": "Anneliese", "displayName": "Anneliese Okoro", "avatar": null, "email": "anneliese.okoro@larkspur-dental.example", "homeEmail": "", "workPhone": "(415) 555-0130", "workPhoneExt": "", "mobilePhone": "", "homePhone": "", "dateOfBirth": "1985-02-14", "gender": "Female", "maritalStatus": "Married", "address1": "8 Fern Ct", "address2": "", "city": "San Rafael", "state": "CA", "zipcode": "94901", "country": "United States", "hireDate": "2016-05-02", "terminationDate": null, "terminationType": null, "terminationReason": null, "regrettable": null, "rehireEligible": null, "status": "Active", "employmentStatus": "Full-Time", "jobTitle": "Practice Administrator", "departmentId": 1, "locationId": 1, "divisionId": 1, "reportsToId": null, "employeeNumber": "1", "payRate": 92000, "payType": "Salary", "payFrequency": "Twice a month", "standardHoursPerWeek": 40, "socialMediaLinks": {}, "emergencyContactName": "Femi Okoro", "emergencyContactPhone": "(415) 555-0199", "emergencyContactRelation": "Spouse", "ssn": "***-**-4410", "payChangeHistory": []},
+    {"id": 2, "firstName": "Ruben", "middleName": "", "lastName": "Castellanos", "preferredName": "Ruben", "displayName": "Ruben Castellanos", "avatar": null, "email": "ruben.castellanos@larkspur-dental.example", "homeEmail": "", "workPhone": "(415) 555-0131", "workPhoneExt": "", "mobilePhone": "", "homePhone": "", "dateOfBirth": "1979-11-03", "gender": "Male", "maritalStatus": "Single", "address1": "", "address2": "", "city": "Novato", "state": "CA", "zipcode": "94945", "country": "United States", "hireDate": "2012-09-10", "terminationDate": null, "terminationType": null, "terminationReason": null, "regrettable": null, "rehireEligible": null, "status": "Active", "employmentStatus": "Full-Time", "jobTitle": "Lead Dentist", "departmentId": 2, "locationId": 1, "divisionId": 1, "reportsToId": 1, "employeeNumber": "2", "payRate": 210000, "payType": "Salary", "payFrequency": "Twice a month", "standardHoursPerWeek": 40, "socialMediaLinks": {}, "emergencyContactName": "", "emergencyContactPhone": "", "emergencyContactRelation": "", "ssn": "***-**-7721", "payChangeHistory": []}
+  ],
+  "timeOffPolicies": [
+    {"id": 1, "type": "Vacation", "name": "Standard Vacation", "accrualRate": 1.54, "maxBalance": 200, "carryOver": 40},
+    {"id": 2, "type": "Sick", "name": "Sick Leave", "accrualRate": 1.0, "maxBalance": 80, "carryOver": 80}
+  ],
+  "timeOffBalances": [
+    {"id": 1, "employeeId": 1, "policyId": 1, "available": 61.5, "scheduled": 16, "used": 24},
+    {"id": 2, "employeeId": 2, "policyId": 1, "available": 88.0, "scheduled": 0, "used": 40}
+  ],
+  "timeOffRequests": [
+    {"id": 1, "employeeId": 2, "policyId": 1, "startDate": "2026-10-06", "endDate": "2026-10-10", "hours": 40, "status": "pending", "note": "Conference in Denver", "reviewedBy": null, "reviewedAt": null, "createdAt": "2026-09-04T16:00:00Z"}
+  ],
+  "jobOpenings": [
+    {"id": 1, "title": "Dental Hygienist", "departmentId": 2, "locationId": 1, "status": "Open", "employmentType": "Full-Time", "description": "Provide preventive care at the Larkspur clinic.", "requirements": "RDH license in California", "salaryMin": 95000, "salaryMax": 115000, "hiringManagerId": 2, "createdAt": "2026-08-20T09:00:00Z", "applicantCount": 1}
+  ],
+  "candidates": [
+    {"id": 1, "jobOpeningId": 1, "firstName": "Sofia", "lastName": "Lindqvist", "email": "sofia.lindqvist@example.com", "phone": "(415) 555-0177", "resumeUrl": null, "stage": "Phone Interview", "rating": 4, "appliedAt": "2026-08-28T12:00:00Z", "notes": "Five years experience, available October."}
+  ],
+  "announcements": [
+    {"id": 1, "title": "Flu shot clinic for staff", "body": "Free flu shots in the break room on Sept 18.", "authorId": 1, "createdAt": "2026-09-03T10:00:00Z", "isPinned": true}
+  ],
+  "notifications": [
+    {"id": 1, "type": "time_off_request", "message": "Ruben Castellanos requested 40 hours of Vacation", "timestamp": "2026-09-04T16:00:00Z", "isRead": false, "icon": "calendar", "linkTo": "/time-off", "isPastDue": false, "dueDate": null}
+  ],
+  "notes": [],
+  "documents": [],
+  "trainings": [
+    {"id": 1, "employeeId": 2, "title": "HIPAA annual refresher", "status": "upcoming", "dueDate": "2026-11-30", "completedDate": null, "category": "Compliance"}
+  ],
+  "assets": [],
+  "goals": [
+    {"id": 1, "employeeId": null, "title": "Reduce patient wait time below 10 minutes", "description": "Company-wide goal for 2026", "progress": 60, "status": "in_progress", "dueDate": "2026-12-31", "createdAt": "2026-01-15T09:00:00Z"}
+  ],
+  "performanceReviews": [],
+  "benefitPlans": [
+    {"id": 1, "name": "Larkspur PPO Medical", "type": "Medical", "provider": "Bayline Health", "employeeCost": 180, "employerCost": 620}
+  ],
+  "benefitEnrollments": [
+    {"id": 1, "employeeId": 1, "planId": 1, "coverageLevel": "Employee + Spouse", "startDate": "2026-01-01", "status": "active"}
+  ],
+  "reports": [
+    {"id": 1, "name": "Headcount", "category": "standard", "type": "headcount", "description": "Active employees by department", "lastRunAt": "2026-09-01"}
+  ],
+  "ui": {"notificationsPanelOpen": false, "searchOpen": false, "searchQuery": ""}
+}

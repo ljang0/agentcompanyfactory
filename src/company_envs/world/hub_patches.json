@@ -1,0 +1,1348 @@
+{
+  "12306_mock": [
+    {
+      "file": "vite.config.js",
+      "old": "res.end(JSON.stringify(data.current_state || {}));",
+      "new": "res.end(JSON.stringify({ stored_state: data.current_state, has_custom_state: true, sid }));",
+      "reason": "Expose only current state through the shared /state envelope; upstream returned bare state instead of the hub contract."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "res.end(JSON.stringify({}));",
+      "new": "res.end(JSON.stringify({ stored_state: null, has_custom_state: false, sid }));",
+      "reason": "Expose only current state through the shared /state envelope; upstream returned bare state instead of the hub contract."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "return data && Object.keys(data).length > 0 ? data : null;",
+      "new": "return data?.has_custom_state ? data.stored_state : null;",
+      "reason": "Read current state from the standardized /state envelope."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "stored.current_state = stored.initial_state || {};",
+      "new": "fs.rmSync(filePath, { force: true });\n                res.writeHead(200, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ success: true })); return;",
+      "reason": "Reset must delete the stored session instead of restoring the baseline."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "res.end(JSON.stringify({ ok: true }));",
+      "new": "res.end(JSON.stringify({ success: true }));",
+      "reason": "Use the shared save acknowledgment."
+    }
+  ],
+  "Expensify_mock": [
+    {
+      "file": "vite.config.js",
+      "old": "  // GET /state?sid=xxx",
+      "new": "  server.middlewares.use('/go', (req, res, next) => {\n    if (req.method !== 'GET') return next();\n    const sid = sanitizeSid(new URL(req.url, 'http://localhost').searchParams.get('sid') || '');\n    const data = readSessionFile(sid) || {}; const initial = data.initial_state || {}; const current = data.current_state || {};\n    const diff = Object.fromEntries([...new Set([...Object.keys(initial), ...Object.keys(current)])].filter(k => JSON.stringify(initial[k]) !== JSON.stringify(current[k])).map(k => [k, { old: initial[k], new: current[k] }]));\n    res.setHeader('Content-Type', 'application/json'); res.setHeader('Cache-Control', 'no-cache');\n    res.end(JSON.stringify({ initial_state: initial, current_state: current, state_diff: diff }));\n  });\n  // GET /state?sid=xxx",
+      "reason": "Upstream has only a browser /go page; expose the existing stored baseline/current state and a top-level structural diff to the harness."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "          const existing = readSessionFile(sid);\n          if (existing && existing.initial_state) {\n            existing.current_state = JSON.parse(JSON.stringify(existing.initial_state));\n            writeSessionFile(sid, existing);\n          }",
+      "new": "          fs.rmSync(path.join(STATE_DIR, `${sid}.json`), { force: true });",
+      "reason": "Reset must clear the session; upstream reset only restored its baseline."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "res.end(JSON.stringify(data ? data.current_state : null));",
+      "new": "res.end(JSON.stringify({ stored_state: data ? data.current_state : null, has_custom_state: data !== null, sid }));",
+      "reason": "Expose only current state through the shared /state envelope; upstream returned bare state instead of the hub contract."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "writeSessionFile(sid, { initial_state: state, current_state: state });\n          res.setHeader('Content-Type', 'application/json');\n          res.end(JSON.stringify({ ok: true }));",
+      "new": "writeSessionFile(sid, { initial_state: state, current_state: state });\n          res.setHeader('Content-Type', 'application/json');\n          res.end(JSON.stringify({ success: true }));",
+      "reason": "Use the shared success acknowledgment for set, set_current and reset."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "writeSessionFile(sid, existing);\n          res.setHeader('Content-Type', 'application/json');\n          res.end(JSON.stringify({ ok: true }));",
+      "new": "writeSessionFile(sid, existing);\n          res.setHeader('Content-Type', 'application/json');\n          res.end(JSON.stringify({ success: true }));",
+      "reason": "Use the shared success acknowledgment for set, set_current and reset."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "fs.rmSync(path.join(STATE_DIR, `${sid}.json`), { force: true });\n          res.setHeader('Content-Type', 'application/json');\n          res.end(JSON.stringify({ ok: true }));",
+      "new": "fs.rmSync(path.join(STATE_DIR, `${sid}.json`), { force: true });\n          res.setHeader('Content-Type', 'application/json');\n          res.end(JSON.stringify({ success: true }));",
+      "reason": "Use the shared success acknowledgment for set, set_current and reset."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "    return data;",
+      "new": "    return data?.has_custom_state ? data.stored_state : null;",
+      "reason": "Read current state from the standardized /state envelope."
+    }
+  ],
+  "PACS-viewer_mock": [
+    {
+      "file": "vite.config.js",
+      "old": "  const sessions = new Map();",
+      "new": "  const sessions = new Map();\n  const stateMiddleware = (req, res, next) => {\n    const url = new URL(req.url, 'http://localhost'); const sid = url.searchParams.get('sid');\n    const reply = data => { res.setHeader('Content-Type', 'application/json'); res.setHeader('Cache-Control', 'no-cache'); res.end(JSON.stringify(data)); };\n    if (url.pathname === '/state' && req.method === 'GET') { const state = sessions.get(sid)?.current || null; reply({ stored_state: state, has_custom_state: state !== null, sid }); return; }\n    if (url.pathname !== '/post' || req.method !== 'POST') return next();\n    if (!sid) { res.statusCode = 400; reply({ error: 'sid required' }); return; }\n    let body = ''; req.on('data', chunk => { body += chunk; }); req.on('end', () => {\n      try { const { action, state } = JSON.parse(body);\n        if (action === 'set') sessions.set(sid, { initial: structuredClone(state), current: state });\n        else if (action === 'set_current' && sessions.has(sid)) sessions.get(sid).current = state;\n        else if (action === 'reset') sessions.delete(sid);\n        else { res.statusCode = 400; reply({ error: 'Unknown action or session' }); return; }\n        reply({ success: true });\n      } catch (e) { res.statusCode = 400; reply({ error: e.message }); }\n    });\n  };",
+      "reason": "Provide /state and whole-state set/update/reset semantics over the existing session map; upstream omitted /state, merged updates and reset only to its baseline."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "    configureServer(server) {",
+      "new": "    configureServer(server) {\n      server.middlewares.use(stateMiddleware);",
+      "reason": "Use the same hub state contract in development and preview."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "    configurePreviewServer(server) {",
+      "new": "    configurePreviewServer(server) {\n      server.middlewares.use(stateMiddleware);",
+      "reason": "Use the same hub state contract in development and preview."
+    },
+    {
+      "file": "src/context/AppContext.jsx",
+      "old": "  // Save state to localStorage on every change\n  useEffect(() => {\n    saveState(state);\n  }, [state]);",
+      "new": "  const sid = useRef(new URLSearchParams(window.location.search).get('sid'));\n  const loaded = useRef(false);\n  useEffect(() => {\n    fetch(`/state?sid=${encodeURIComponent(sid.current || '')}`).then(r => r.json()).then(data => {\n      loaded.current = true;\n      if (data.has_custom_state) { initialStateRef.current = data.stored_state; dispatch({ type: 'SET_STATE', payload: data.stored_state }); }\n    });\n  }, []);\n  useEffect(() => {\n    if (!loaded.current) return;\n    saveState(state);\n    if (sid.current) fetch(`/post?sid=${encodeURIComponent(sid.current)}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'set_current', state }) });\n  }, [state]);",
+      "reason": "Upstream never loaded or saved server state; hydrate the seeded session before allowing UI changes to persist."
+    }
+  ],
+  "TradingView_mock": [
+    {
+      "file": "package-lock.json",
+      "old": "\"vite\": \"^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0\"",
+      "new": "\"vite\": \"^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0\"",
+      "reason": "package.json pins vite ^8.0.0 and the lock resolves vite 8.0.0, but @vitejs/plugin-react@5.1.4 declares a peer range that stops at vite 7, so `npm ci` aborts with ERESOLVE and the app never builds. vite 8 with plugin-react 5.1.4 builds and serves; widening the recorded peer range is the smallest edit that lets `npm ci` install the tree the lock already pins."
+    }
+  ],
+  "Zendesk_mock": [
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "    if (res.ok) return await res.json();",
+      "new": "    if (res.ok) { const data = await res.json(); return data && typeof data === 'object' && 'stored_state' in data ? data.stored_state : data; }",
+      "reason": "Upstream first-visit loader merges the /state envelope {stored_state,...} into defaults instead of unwrapping it, so seeded sessions rendered shipped fixtures."
+    }
+  ],
+  "adp_mock": [
+    {
+      "file": "vite.config.js",
+      "old": "  server.middlewares.use('/go', (req, res, next) => {",
+      "new": "  server.middlewares.use('/state', (req, res, next) => {\n    if (req.method !== 'GET') return next();\n    const sid = parseQuery(req.url || '').sid || null; const state = readState(sid);\n    res.setHeader('Content-Type', 'application/json'); res.setHeader('Cache-Control', 'no-cache');\n    res.end(JSON.stringify({ stored_state: state, has_custom_state: state !== null, sid }));\n  });\n  server.middlewares.use('/go', (req, res, next) => {",
+      "reason": "Upstream lacks the app-facing /state route needed for readiness and worker loading."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "fetch(`/go?sid=${safeSid}`,",
+      "new": "fetch(`/state?sid=${safeSid}`,",
+      "reason": "Load current state via the worker-facing endpoint; /go is harness-only."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "    if (data && data.current_state && Object.keys(data.current_state).length > 0) {\n      return data.current_state\n    }",
+      "new": "    if (data?.has_custom_state) {\n      return data.stored_state\n    }",
+      "reason": "Unwrap current state from /state."
+    }
+  ],
+  "airtable_mock": [
+    {
+      "file": "src/components/Cell.jsx",
+      "old": "            <span className={cn(\"px-2 py-0.5 rounded-full text-xs font-medium\", selectedOption?.color || \"bg-gray-100 text-gray-800\")}>",
+      "new": "            <span\n              className={cn(\"px-2 py-0.5 rounded-full text-xs font-medium\", /^#/.test(selectedOption?.color || \"\") ? \"\" : (selectedOption?.color || \"bg-gray-100 text-gray-800\"))}\n              style={/^#/.test(selectedOption?.color || \"\") ? { backgroundColor: selectedOption?.color } : undefined}\n            >",
+      "reason": "A colour used as a CSS class name paints nothing: the same defect already fixed in google_calendar's Sidebar and MonthView, where 7 of 7 chips came back with background-color rgba(0,0,0,0). The three seeded airtable worlds carry 75 option colours, all Tailwind class names today, so a hex is what this keeps working rather than what it repairs."
+    },
+    {
+      "file": "src/components/Cell.jsx",
+      "old": "              <span key={i} className={cn(\"px-1.5 py-0.5 rounded text-[10px] whitespace-nowrap\", opt?.color || \"bg-gray-100\")}>",
+      "new": "              <span key={i}\n                className={cn(\"px-1.5 py-0.5 rounded text-[10px] whitespace-nowrap\", /^#/.test(opt?.color || \"\") ? \"\" : (opt?.color || \"bg-gray-100\"))}\n                style={/^#/.test(opt?.color || \"\") ? { backgroundColor: opt?.color } : undefined}\n              >",
+      "reason": "A colour used as a CSS class name paints nothing: the same defect already fixed in google_calendar's Sidebar and MonthView, where 7 of 7 chips came back with background-color rgba(0,0,0,0). The three seeded airtable worlds carry 75 option colours, all Tailwind class names today, so a hex is what this keeps working rather than what it repairs."
+    },
+    {
+      "file": "src/components/KanbanView.jsx",
+      "old": "                <span className={cn(\"px-2 py-0.5 rounded-full text-xs font-bold\", col.color || \"bg-white text-gray-800\")}>",
+      "new": "                <span\n                  className={cn(\"px-2 py-0.5 rounded-full text-xs font-bold\", /^#/.test(col.color || \"\") ? \"\" : (col.color || \"bg-white text-gray-800\"))}\n                  style={/^#/.test(col.color || \"\") ? { backgroundColor: col.color } : undefined}\n                >",
+      "reason": "A colour used as a CSS class name paints nothing: the same defect already fixed in google_calendar's Sidebar and MonthView, where 7 of 7 chips came back with background-color rgba(0,0,0,0). The three seeded airtable worlds carry 75 option colours, all Tailwind class names today, so a hex is what this keeps working rather than what it repairs."
+    },
+    {
+      "file": "src/components/Sidebar.jsx",
+      "old": "              <div className={cn(\"w-6 h-6 rounded flex items-center justify-center text-[10px]\", base.color || \"bg-blue-500\")}>",
+      "new": "              <div\n                className={cn(\"w-6 h-6 rounded flex items-center justify-center text-[10px]\", /^#/.test(base.color || \"\") ? \"\" : (base.color || \"bg-blue-500\"))}\n                style={/^#/.test(base.color || \"\") ? { backgroundColor: base.color } : undefined}\n              >",
+      "reason": "A colour used as a CSS class name paints nothing: the same defect already fixed in google_calendar's Sidebar and MonthView, where 7 of 7 chips came back with background-color rgba(0,0,0,0). The three seeded airtable worlds carry 75 option colours, all Tailwind class names today, so a hex is what this keeps working rather than what it repairs."
+    },
+    {
+      "file": "src/components/Sidebar.jsx",
+      "old": "<div className=\"w-6 h-6 rounded-full bg-purple-500 flex items-center justify-center text-[10px] text-white font-bold\">JD</div>\n          <span className=\"text-sm\">John Doe</span>",
+      "new": "<div className=\"w-6 h-6 rounded-full bg-purple-500 flex items-center justify-center text-[10px] text-white font-bold\">{(state.currentUser?.name || '').split(/\\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join('').toUpperCase()}</div>\n          <span className=\"text-sm\">{state.currentUser?.name || ''}</span>",
+      "reason": "The sidebar's signed-in person was the hardcoded string 'John Doe' with initials 'JD', so every company's airtable rendered it beside its own records. 'John Doe' is one of the names render_check.PLACEHOLDER_TEXT fails an app for, and it is the whole reason both companies whose render gate ran with airtable failed it: beacon-communities and lensrentals both record \"template or leaked text in the page: 'John Doe'\" with 61 of 329 and 115 of 363 seeded strings visible on the same page. The state carries currentUser, and the worker proxy substitutes the signed-in worker there, so read it."
+    },
+    {
+      "file": "src/components/Sidebar.jsx",
+      "old": "<div className=\"flex h-10 w-10 items-center justify-center rounded-full bg-purple-500 font-bold text-white\">JD</div>\n                  <div><div className=\"font-medium\">John Doe</div><div className=\"text-gray-500\">john.doe@example.com</div></div>",
+      "new": "<div className=\"flex h-10 w-10 items-center justify-center rounded-full bg-purple-500 font-bold text-white\">{(state.currentUser?.name || '').split(/\\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join('').toUpperCase()}</div>\n                  <div><div className=\"font-medium\">{state.currentUser?.name || ''}</div><div className=\"text-gray-500\">{state.currentUser?.email || ''}</div></div>",
+      "reason": "The account panel repeats the hardcoded 'John Doe' and 'john.doe@example.com'. One click from the sidebar puts both back on the page, so fixing only the collapsed row would leave the placeholder reachable."
+    },
+    {
+      "file": "src/components/Toolbar.jsx",
+      "old": "<AccessRow name=\"John Doe (you)\" email=\"john.doe@example.com\" permission=\"Owner\" />",
+      "new": "<AccessRow name={`${state.currentUser?.name || ''} (you)`} email={state.currentUser?.email || ''} permission=\"Owner\" />",
+      "reason": "The share dialog names 'John Doe (you)' as the owner of the company's base. Same placeholder, reachable from the toolbar."
+    },
+    {
+      "file": "src/store/initialData.js",
+      "old": "    const initialData = deepMergeWithDefaults(createInitialState(), customState);",
+      "new": "    const initialData = { ...createInitialState(), ...customState };",
+      "reason": "deepMergeWithDefaults recursed into bases and tables, both objects keyed by id, so the clone's demo base 'Project Tracker' and its tables were unioned into every seeded world. Measured on lensrentals: the state holds one base, 'Riverlight Camera Rentals — Memphis', and the rendered sidebar listed 'Project Tracker' above it. The shallow spread google_analytics and openreview use keeps the one thing the merge was for (a top-level key the seed omits falls back to the clone's default) and drops the nested union."
+    }
+  ],
+  "amplitude_mock": [
+    {
+      "file": "vite.config.js",
+      "old": "    if (req.method === 'GET' && (url.pathname === '/state' || url.pathname === '/go')) {",
+      "new": "      if (req.method === 'GET' && url.pathname === '/state') {\n        const state = readState(sid)?.current_state || null;\n        res.setHeader('Content-Type', 'application/json'); res.setHeader('Cache-Control', 'no-cache');\n        res.end(JSON.stringify({ stored_state: state, has_custom_state: state !== null, sid })); return;\n      }\n    if (req.method === 'GET' && url.pathname === '/go') {",
+      "reason": "Upstream /state exposed baseline/diff or a nonstandard payload. Return only current state in the hub envelope, including an explicit empty-session response."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "return data && data.current_state ? data.current_state : null",
+      "new": "return data?.has_custom_state ? data.stored_state : null",
+      "reason": "Hydrate from current state in the standardized /state envelope."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "            writeState(sid, {\n              initial_state: existing.initial_state,\n              current_state: existing.initial_state\n            })",
+      "new": "            fs.rmSync(getStatePath(sid), { force: true })",
+      "reason": "Reset must delete the session and baseline instead of restoring initial state."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "          res.end(JSON.stringify({ ok: true }))",
+      "new": "          res.end(JSON.stringify({ success: true }))",
+      "reason": "Use the shared success acknowledgment for state operations."
+    }
+  ],
+  "bamboohr_mock": [
+    {
+      "file": "vite.config.js",
+      "old": "    if (req.method === 'GET' && (url.pathname === '/state' || url.pathname === '/go')) {",
+      "new": "      if (req.method === 'GET' && url.pathname === '/state') {\n        const state = readSessionState(sid)?.current_state || null;\n        res.setHeader('Content-Type', 'application/json'); res.setHeader('Cache-Control', 'no-cache');\n        res.end(JSON.stringify({ stored_state: state, has_custom_state: state !== null, sid })); return;\n      }\n    if (req.method === 'GET' && url.pathname === '/go') {",
+      "reason": "Upstream /state exposed baseline/diff or a nonstandard payload. Return only current state in the hub envelope, including an explicit empty-session response."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "return data.initial_state || null;",
+      "new": "return data?.has_custom_state ? data.stored_state : null;",
+      "reason": "Hydrate from current state in the standardized /state envelope."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "            if (existing.initial_state) {\n              writeSessionState(sid, { initial_state: existing.initial_state, current_state: existing.initial_state });\n            }",
+      "new": "            fs.rmSync(getStatePath(sid), { force: true });",
+      "reason": "Reset must delete the session and baseline instead of restoring initial state."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "            const newState = { initial_state: payload.state, current_state: payload.state };\n            writeSessionState(sid, newState);\n            res.setHeader('Content-Type', 'application/json');\n            res.setHeader('Access-Control-Allow-Origin', '*');\n            res.end(JSON.stringify({ ok: true }));",
+      "new": "            const newState = { initial_state: payload.state, current_state: payload.state };\n            writeSessionState(sid, newState);\n            res.setHeader('Content-Type', 'application/json');\n            res.setHeader('Access-Control-Allow-Origin', '*');\n            res.end(JSON.stringify({ success: true }));",
+      "reason": "Use the shared success acknowledgment for state operations."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "            writeSessionState(sid, newState);\n            res.setHeader('Content-Type', 'application/json');\n            res.setHeader('Access-Control-Allow-Origin', '*');\n            res.end(JSON.stringify({ ok: true }));",
+      "new": "            writeSessionState(sid, newState);\n            res.setHeader('Content-Type', 'application/json');\n            res.setHeader('Access-Control-Allow-Origin', '*');\n            res.end(JSON.stringify({ success: true }));",
+      "reason": "Use the shared success acknowledgment for state operations."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "            res.end(JSON.stringify({ ok: true }));",
+      "new": "            res.end(JSON.stringify({ success: true }));",
+      "reason": "Use the shared success acknowledgment for state operations."
+    }
+  ],
+  "clio_mock": [
+    {
+      "file": "vite.config.js",
+      "old": "      if (req.method === 'GET' && url.pathname === '/state') {\n        const data = readJSON(statePath(sid))\n        res.writeHead(200, { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' })\n        res.end(JSON.stringify(data))\n        return\n      }",
+      "new": "      if (req.method === 'GET' && url.pathname === '/state') {\n        const state = readJSON(statePath(sid)) || null;\n        res.setHeader('Content-Type', 'application/json'); res.setHeader('Cache-Control', 'no-cache');\n        res.end(JSON.stringify({ stored_state: state, has_custom_state: state !== null, sid })); return;\n      }",
+      "reason": "Upstream /state exposed baseline/diff or a nonstandard payload. Return only current state in the hub envelope, including an explicit empty-session response."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "return await res.json()",
+      "new": "const data = await res.json(); return data?.has_custom_state ? data.stored_state : null",
+      "reason": "Hydrate from current state in the standardized /state envelope."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "              const initial = readJSON(ip)\n              if (initial) writeJSON(sp, initial)",
+      "new": "              fs.rmSync(sp, { force: true }); fs.rmSync(ip, { force: true })",
+      "reason": "Reset must delete the session and baseline instead of restoring initial state."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "              writeJSON(ip, state)\n              res.writeHead(200, { 'Content-Type': 'application/json' })\n              res.end(JSON.stringify({ ok: true }))",
+      "new": "              writeJSON(ip, state)\n              res.writeHead(200, { 'Content-Type': 'application/json' })\n              res.end(JSON.stringify({ success: true }))",
+      "reason": "Use the shared success acknowledgment for state operations."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "              writeJSON(sp, deepMerge(existing, state))\n              res.writeHead(200, { 'Content-Type': 'application/json' })\n              res.end(JSON.stringify({ ok: true }))",
+      "new": "              writeJSON(sp, deepMerge(existing, state))\n              res.writeHead(200, { 'Content-Type': 'application/json' })\n              res.end(JSON.stringify({ success: true }))",
+      "reason": "Use the shared success acknowledgment for state operations."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "              res.end(JSON.stringify({ ok: true }))",
+      "new": "              res.end(JSON.stringify({ success: true }))",
+      "reason": "Use the shared success acknowledgment for state operations."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "writeJSON(sp, deepMerge(existing, state))",
+      "new": "writeJSON(sp, state)",
+      "reason": "set_current replaces the whole native state; merging retained removed fields."
+    }
+  ],
+  "contractbook_mock": [
+    {
+      "file": "vite.config.js",
+      "old": "      if (req.method === 'GET' && (url.pathname === '/go' || url.pathname === '/state')) {",
+      "new": "      if (req.method === 'GET' && url.pathname === '/state') {\n        const state = readState(sid) || null;\n        res.setHeader('Content-Type', 'application/json'); res.setHeader('Cache-Control', 'no-cache');\n        res.end(JSON.stringify({ stored_state: state, has_custom_state: state !== null, sid })); return;\n      }\n      if (req.method === 'GET' && url.pathname === '/go') {",
+      "reason": "Upstream /state exposed baseline/diff or a nonstandard payload. Return only current state in the hub envelope, including an explicit empty-session response."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "return data?.current_state || null;",
+      "new": "return data?.has_custom_state ? data.stored_state : null;",
+      "reason": "Hydrate from current state in the standardized /state envelope."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "              const initial = readInitialState(sid);\n              if (initial) {\n                writeState(sid, initial);\n              }",
+      "new": "              fs.rmSync(getStatePath(sid), { force: true }); fs.rmSync(getInitialStatePath(sid), { force: true });",
+      "reason": "Reset must delete the session and baseline instead of restoring initial state."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "              writeInitialState(sid, payload.state);\n              res.setHeader('Content-Type', 'application/json');\n              res.setHeader('Access-Control-Allow-Origin', '*');\n              res.end(JSON.stringify({ ok: true }));",
+      "new": "              writeInitialState(sid, payload.state);\n              res.setHeader('Content-Type', 'application/json');\n              res.setHeader('Access-Control-Allow-Origin', '*');\n              res.end(JSON.stringify({ success: true }));",
+      "reason": "Use the shared success acknowledgment for state operations."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "              writeState(sid, payload.state);\n              res.setHeader('Content-Type', 'application/json');\n              res.setHeader('Access-Control-Allow-Origin', '*');\n              res.end(JSON.stringify({ ok: true }));",
+      "new": "              writeState(sid, payload.state);\n              res.setHeader('Content-Type', 'application/json');\n              res.setHeader('Access-Control-Allow-Origin', '*');\n              res.end(JSON.stringify({ success: true }));",
+      "reason": "Use the shared success acknowledgment for state operations."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "              res.end(JSON.stringify({ ok: true }));",
+      "new": "              res.end(JSON.stringify({ success: true }));",
+      "reason": "Use the shared success acknowledgment for state operations."
+    }
+  ],
+  "dingtalk_mock": [
+    {
+      "file": "vite.config.js",
+      "old": "        if (req.method === 'GET' && url.pathname === '/state') {\n          res.setHeader('Content-Type', 'application/json')\n          res.setHeader('Cache-Control', 'no-cache')\n          res.setHeader('Access-Control-Allow-Origin', '*')\n          if (fs.existsSync(stateFile)) {\n            res.end(fs.readFileSync(stateFile, 'utf-8'))\n          } else {\n            res.end(JSON.stringify(null))\n          }\n          return\n        }",
+      "new": "      if (req.method === 'GET' && url.pathname === '/state') {\n        const state = fs.existsSync(stateFile) ? JSON.parse(fs.readFileSync(stateFile, 'utf-8')).current : null || null;\n        res.setHeader('Content-Type', 'application/json'); res.setHeader('Cache-Control', 'no-cache');\n        res.end(JSON.stringify({ stored_state: state, has_custom_state: state !== null, sid })); return;\n      }",
+      "reason": "Upstream /state exposed baseline/diff or a nonstandard payload. Return only current state in the hub envelope, including an explicit empty-session response."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "return data?.current || null",
+      "new": "return data?.has_custom_state ? data.stored_state : null",
+      "reason": "Hydrate from current state in the standardized /state envelope."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "                if (sessionData.initial) {\n                  sessionData.current = JSON.parse(JSON.stringify(sessionData.initial))\n                  fs.writeFileSync(stateFile, JSON.stringify(sessionData))\n                }",
+      "new": "                fs.rmSync(stateFile, { force: true })",
+      "reason": "Reset must delete the session and baseline instead of restoring initial state."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "              res.end(JSON.stringify({ ok: true }))",
+      "new": "              res.end(JSON.stringify({ success: true }))",
+      "reason": "Use the shared success acknowledgment for state operations."
+    }
+  ],
+  "expedia_mock": [
+    {
+      "file": "vite.config.js",
+      "old": "      if (req.method === 'GET' && url.pathname === '/state') {\n        const statePath = getStatePath(sid)\n        if (fs.existsSync(statePath)) {\n          const state = JSON.parse(fs.readFileSync(statePath, 'utf-8'))\n          res.writeHead(200, {\n            'Content-Type': 'application/json',\n            'Cache-Control': 'no-cache'\n          })\n          res.end(JSON.stringify(state))\n        } else {\n          res.writeHead(404, { 'Content-Type': 'application/json' })\n          res.end(JSON.stringify({ error: 'No state found for sid' }))\n        }\n        return\n      }",
+      "new": "      if (req.method === 'GET' && url.pathname === '/state') {\n        const state = fs.existsSync(getStatePath(sid)) ? JSON.parse(fs.readFileSync(getStatePath(sid), 'utf-8')) : null || null;\n        res.setHeader('Content-Type', 'application/json'); res.setHeader('Cache-Control', 'no-cache');\n        res.end(JSON.stringify({ stored_state: state, has_custom_state: state !== null, sid })); return;\n      }",
+      "reason": "Upstream /state exposed baseline/diff or a nonstandard payload. Return only current state in the hub envelope, including an explicit empty-session response."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "return await res.json()",
+      "new": "const data = await res.json(); return data?.has_custom_state ? data.stored_state : null",
+      "reason": "Hydrate from current state in the standardized /state envelope."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "              if (fs.existsSync(initialPath)) {\n                const initial = fs.readFileSync(initialPath, 'utf-8')\n                fs.writeFileSync(statePath, initial)\n              }",
+      "new": "              fs.rmSync(statePath, { force: true }); fs.rmSync(initialPath, { force: true })",
+      "reason": "Reset must delete the session and baseline instead of restoring initial state."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "              res.end(JSON.stringify({ ok: true, action: 'set', sid }))",
+      "new": "              res.end(JSON.stringify({ success: true, action: 'set', sid }))",
+      "reason": "Use the shared success acknowledgment for state operations."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "              res.end(JSON.stringify({ ok: true, action: 'set_current', sid }))",
+      "new": "              res.end(JSON.stringify({ success: true, action: 'set_current', sid }))",
+      "reason": "Use the shared success acknowledgment for state operations."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "              res.end(JSON.stringify({ ok: true, action: 'reset', sid }))",
+      "new": "              res.end(JSON.stringify({ success: true, action: 'reset', sid }))",
+      "reason": "Use the shared success acknowledgment for state operations."
+    }
+  ],
+  "facebook_mock": [
+    {
+      "file": "src/components/Sidebar.jsx",
+      "old": "      {src ? (\n        <img src={src} alt=\"\" className=\"w-9 h-9 rounded-full object-cover\" />\n      ) : (\n        <Icon size={36} className={`${color}`} />\n      )}",
+      "new": "      {src ? (\n        <img src={src} alt=\"\" className=\"w-9 h-9 rounded-full object-cover\" />\n      ) : Icon ? (\n        <Icon size={36} className={`${color}`} />\n      ) : (\n        // The signed-in person and every page are drawn from their avatar with no icon to fall\n        // back on, and a seeded avatar is the empty string, so <Icon /> was undefined and React\n        // error #130 took the whole page down. An initial is what the product shows instead.\n        <div className=\"w-9 h-9 rounded-full bg-gray-300 flex items-center justify-center text-sm font-semibold text-gray-700\">\n          {(text || '?').trim().charAt(0).toUpperCase()}\n        </div>\n      )}",
+      "reason": "Sidebar renders the current user and each page with src={avatar} and no icon prop; every seeded world sets avatar to \"\", so the fallback rendered <Icon /> with Icon undefined -- React error #130, 0 visible characters, 0 clickable controls on the whole app."
+    }
+  ],
+  "feishu_mock": [
+    {
+      "file": "src/context/AppContext.jsx",
+      "old": "      fetch(`/post?sid=${encodeURIComponent(sid)}`, {\n        method: 'POST',\n        headers: { 'Content-Type': 'application/json' },\n        body: JSON.stringify({ action: 'set', state: initialRef.current }),\n      }).catch(() => {});",
+      "new": "      fetch(`/state?sid=${encodeURIComponent(sid)}`).then(r => r.json()).then(d => {\n        if (d && d.has_custom_state && d.stored_state) { initialRef.current = d.stored_state; dispatch({ type: 'SET_STATE', payload: d.stored_state }); return; }\n        return fetch(`/post?sid=${encodeURIComponent(sid)}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'set', state: initialRef.current }) });\n      }).catch(() => {});",
+      "reason": "Upstream never reads server state on first visit and instead POSTs its shipped defaults as the baseline; load /state?sid and hydrate via SET_STATE when a seeded session exists."
+    },
+    {
+      "file": "src/context/AppContext.jsx",
+      "old": "function getSid() {\n  try {\n    return new URLSearchParams(window.location.search).get('sid') || 'default';",
+      "new": "const INITIAL_SID = (() => { try { return new URLSearchParams(window.location.search).get('sid'); } catch { return null; } })();\nfunction getSid() {\n  try {\n    return new URLSearchParams(window.location.search).get('sid') || INITIAL_SID || 'default';",
+      "reason": "The index route redirects / to /messenger and drops ?sid before the provider's mount effect runs, so getSid() fell back to 'default'; remember the sid seen at module load."
+    }
+  ],
+  "github_mock": [
+    {
+      "file": "src/components/Layout.jsx",
+      "old": "import { XitHub, Bell,",
+      "new": "import { Github as XitHub, Bell,",
+      "reason": "Upstream build error: Layout.jsx imports a non-existent lucide-react icon 'XitHub' (search/replace artifact of 'Github'), so vite build fails and the app never renders."
+    }
+  ],
+  "gmail_mock": [
+    {
+      "file": "src/data/mockData.js",
+      "old": "  signature: '--\\nDemo User\\ndemo@example.com',",
+      "new": "  signature: '',",
+      "reason": "Default settings carried a demo signature with a placeholder address; a seed without a settings key received it on first load and every composed message would have carried it."
+    },
+    {
+      "file": "src/components/ComposeModal.jsx",
+      "old": "const DEFAULT_SIGNATURE = `-- \\nDemo User\\ndemo@example.com`;",
+      "new": "const DEFAULT_SIGNATURE = ``;",
+      "reason": "Composed and replied messages appended a demo signature with a placeholder address to every worker-sent email."
+    }
+  ],
+  "google_analytics_mock": [
+    {
+      "file": "vite.config.js",
+      "old": "      configurePreviewServer(server) {",
+      "new": "      configurePreviewServer(server) {\n        // Hub contract: /state answers the shared envelope; upstream returned the bare state.\n        server.middlewares.use('/state', (req, res, next) => {\n          if (req.method !== 'GET') return next()\n          const query = parseQuery(req.url || '')\n          const sid = query.sid || null\n          const state = readState(sid)\n          res.setHeader('Content-Type', 'application/json')\n          res.setHeader('Cache-Control', 'no-cache')\n          res.end(JSON.stringify({ stored_state: state || null, has_custom_state: state != null, sid }))\n        })",
+      "reason": "GET /state answered the bare stored state instead of the hub envelope {stored_state, has_custom_state, sid}, so HubClient.current() raised KeyError, golden.py's has_custom_state read died and hub_identity could not scope a world to the signed-in worker. 12 of 98 clones have this defect; ten already carry a fix and this app and wandb_mock are the two that never did, because neither was in the catalogue for anything to check them. Anchored on configurePreviewServer because the dev and preview /state handlers are byte-identical and apply_patches requires the anchor to occur exactly once; this registers the envelope handler ahead of the clone's own, and vite preview is what HubProcess runs."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "      if (data && Object.keys(data).length > 0) return data;",
+      "new": "      if (data && data.has_custom_state) return data.stored_state;",
+      "reason": "Hydrate from current state in the standardized /state envelope."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "    const merged = deepMerge(createInitialData(), customState);",
+      "new": "    const merged = { ...createInitialData(), ...customState };",
+      "reason": "initializeData deep-merged the seed into its own freshly generated defaults. dailyMetrics is an object keyed by date (90 days from 2024-09-17), so a 90-day company seed on any other dates came back as 180 days with 90 of the clone's 2024 demo rows unioned in -- and the app posts that merged state back as the current state, so the demo rows reach what a grader reads. The shallow spread openreview_mock already uses keeps the one thing the merge was for (a top-level key the seed omits falls back to the clone's default) and drops the nested union."
+    }
+  ],
+  "google_calendar_mock": [
+    {
+      "file": "src/utils/helpers.js",
+      "old": "  return {\n    id: event.id || generateId(),\n    calendarId,\n    title: event.title || '(No Title)',",
+      "new": "  return {\n    ...event,\n    id: event.id || generateId(),\n    calendarId,\n    title: event.title || '(No Title)',",
+      "reason": "normalizeEvent rebuilt every seeded event from a fixed field list, so fields the UI does not use (status, meetLink) were dropped and the first save wrote the shrunken events back to the shared store for everyone."
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "old": "        {/* Debug Button - Prominent */}\n        <a \n          href={goHref} \n          className=\"hidden md:flex items-center gap-1 px-3 py-1.5 bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded border border-gray-300 transition-colors\"\n          title=\"Debug State JSON\"\n        >\n          <Database size={14} />\n          Debug API\n        </a>\n",
+      "new": "",
+      "reason": "The top bar showed a 'Debug API' button linking to the harness state page; workers must not see debug controls. The /go route itself is untouched."
+    },
+    {
+      "file": "src/components/Sidebar.jsx",
+      "old": "            <a href={goHref} className=\"flex items-center gap-1 text-primary hover:underline\">\n              <Database size={12} />\n              Debug State (/go)\n            </a>\n",
+      "new": "",
+      "reason": "The sidebar footer linked to 'Debug State (/go)'; workers must not see debug controls."
+    },
+    {
+      "file": "src/components/Sidebar.jsx",
+      "old": "                  <div className={clsx(\n                    \"w-4 h-4 rounded border flex items-center justify-center\",\n                    cal.visible ? cal.color : \"border-text-secondary\"\n                  )}>",
+      "new": "                  <div\n                    style={cal.visible && /^#/.test(cal.color || \"\") ? { backgroundColor: cal.color, borderColor: cal.color } : undefined}\n                    className={clsx(\n                    \"w-4 h-4 rounded border flex items-center justify-center\",\n                    cal.visible ? (/^#/.test(cal.color || \"\") ? \"\" : cal.color) : \"border-text-secondary\"\n                  )}>",
+      "reason": "A calendar's colour is used as a CSS class, so a seeded hex like '#039BE5' painted nothing and every calendar in the sidebar read as unchecked while its events were on screen. A hex now colours the box through style; a class name still works as before."
+    },
+    {
+      "file": "src/components/MonthView.jsx",
+      "old": "                    className={clsx(\n                      \"text-xs px-2 py-0.5 rounded truncate cursor-pointer shadow-sm hover:opacity-80\",\n                      event.color || \"bg-blue-500\",\n                      \"text-white\",\n                      event.allDay && \"font-medium\"\n                    )}",
+      "new": "                    style={/^#/.test(event.color || \"\") ? { backgroundColor: event.color } : undefined}\n                    className={clsx(\n                      \"text-xs px-2 py-0.5 rounded truncate cursor-pointer shadow-sm hover:opacity-80\",\n                      /^#/.test(event.color || \"\") ? \"\" : (event.color || \"bg-blue-500\"),\n                      \"text-white\",\n                      event.allDay && \"font-medium\"\n                    )}",
+      "reason": "An event's colour is used as a CSS class beside text-white, so a seeded hex painted no background and the month grid showed white text on white. Measured in a guest: 7 of 7 chips had background-color rgba(0,0,0,0) and the screenshot was an empty grid, with 297 of 297 seeded events invisible; fleet-wide 11,731 of 17,465 events are hex-coloured. The same fix already landed in Sidebar.jsx and missed this view."
+    },
+    {
+      "file": "src/utils/helpers.js",
+      "old": "const calendarId = VALID_CALENDAR_IDS.has(event.calendarId) ? event.calendarId : 'c1';",
+      "new": "const calendarId = typeof event.calendarId === 'string' && event.calendarId ? event.calendarId : 'c1';",
+      "reason": "Preserve seeded calendar IDs; demo-only normalization hid every real company event and rewrote their calendar references."
+    },
+    {
+      "file": "src/utils/helpers.js",
+      "old": "    id: event.id || generateId(),\n    calendarId,",
+      "new": "    ...event,\n    id: event.id || generateId(),\n    calendarId,",
+      "reason": "Preserve seeded event metadata through normalization and ordinary saves."
+    }
+  ],
+  "google_docs_mock": [
+    {
+      "file": "src/context/DocsContext.jsx",
+      "old": "      const isRefresh = localStorage.getItem(ik) !== null;",
+      "new": "      const loadedKey = ik + '_loaded';\n      const isRefresh = sessionStorage.getItem(loadedKey) !== null;\n      sessionStorage.setItem(loadedKey, '1');",
+      "reason": "Upstream loadData() writes the per-sid initial key synchronously before the first-visit check runs, so isRefresh is always true and the app never reads /state; use a per-tab sessionStorage marker to detect a refresh instead."
+    },
+    {
+      "file": "src/store/initialData.js",
+      "old": "  const defaults = JSON.parse(JSON.stringify(initialData));\n  const data = deepMergeWithDefaults(defaults, customState);\n",
+      "new": "  const defaults = JSON.parse(JSON.stringify(initialData));\n  // Seeded collections replace the shipped demo records outright; only UI settings fall back to defaults.\n  const data = { ...defaults, ...customState, ui: deepMergeWithDefaults(defaults.ui, customState.ui || null) };\n",
+      "reason": "deepMergeWithDefaults copied every demo document the seed did not name into the seeded documents map, and the next save posted the polluted state over the shared store."
+    },
+    {
+      "file": "src/context/DocsContext.jsx",
+      "old": "  const baselineSynced = useRef(false);\n",
+      "new": "  const baselineSynced = useRef(false);\n  const hydrated = useRef(false);\n",
+      "reason": "Saves need a hydration flag: nothing may be posted before the shared store has answered."
+    },
+    {
+      "file": "src/context/DocsContext.jsx",
+      "old": "    const sid = getSessionId();\n    if (sid) {\n      const ik = `google_docs_mock_initial_${sid}`;",
+      "new": "    const sid = getSessionId();\n    // Load the shared store even without a sid (the proxy pins the session); a demo state is never saved over it.\n    {\n      const ik = `google_docs_mock_initial_${sid}`;",
+      "reason": "With no sid the app skipped /state, kept its five demo documents and saved them; the proxy appended its own sid, so the demo landed on the shared store."
+    },
+    {
+      "file": "src/context/DocsContext.jsx",
+      "old": "            initialStateRef.current = JSON.parse(JSON.stringify(data));\n          }\n          setLoading(false);\n        });\n      }\n    }\n  }, []);",
+      "new": "            initialStateRef.current = JSON.parse(JSON.stringify(data));\n          }\n          // Saves stay off until the shared store answered; no stored state means show, do not save.\n          hydrated.current = !!customState;\n          if (!customState) console.warn('No shared state loaded; saving is disabled for this tab');\n          setLoading(false);\n        });\n      } else {\n        hydrated.current = true;\n      }\n    }\n  }, []);",
+      "reason": "A tab becomes writable only once the seeded state is in; a failed or empty /state must not turn the demo data into the shared state."
+    },
+    {
+      "file": "src/context/DocsContext.jsx",
+      "old": "    if (!loading) {\n      if (!baselineSynced.current) {",
+      "new": "    if (!loading && hydrated.current) {\n      if (!baselineSynced.current) {",
+      "reason": "The save effect ran on the mount render with the demo state, before the /state fetch had settled."
+    },
+    {
+      "file": "src/pages/DocumentList.jsx",
+      "old": "  const navigate = useNavigate();\n",
+      "new": "  const routerNavigate = useNavigate();\n  // Keep the session id on in-app routes so a reload of /document/<id> still finds the shared store.\n  const navigate = (to, options) => routerNavigate({ pathname: to, search: window.location.search }, options);\n",
+      "reason": "navigate('/document/' + id) dropped ?sid; after a reload of that route the app had no session id and saved its demo state."
+    },
+    {
+      "file": "src/pages/DocumentEditor.jsx",
+      "old": "  const navigate = useNavigate();\n",
+      "new": "  const routerNavigate = useNavigate();\n  // Keep the session id on in-app routes so a reload of the list or a copy still finds the shared store.\n  const navigate = (to, options) => routerNavigate({ pathname: to, search: window.location.search }, options);\n",
+      "reason": "The editor's navigate('/') and copy/new document routes dropped ?sid the same way as the document list."
+    },
+    {
+      "file": "src/components/DocumentCard.jsx",
+      "old": "  const previewText = stripHtml(doc.content);",
+      "new": "  // The card is a six-line clamp, so only ~400 characters are ever visible -- but the whole body\n  // went into the text node and line-clamp-6 only clipped it visually. Measured on los-angeles-\n  // county-department-of-children-and-family-services, whose 648 documents make the list 2,552,627\n  // visible characters in an 8.1 MB DOM: every one of the 7 clickable targets the interact gate\n  // found timed out at its 2,500 ms click budget, and the render gate recorded the page still on\n  // 'Xoogle Docs Loading...'. Clip the preview where the clamp does.\n  const previewText = stripHtml(doc.content).slice(0, 400);",
+      "reason": "The grid card put each document's entire body into its preview text node. google_docs is in 60 of 60 worlds, so this is the one app whose list page grows with the whole corpus: LA-County's renders 2.5 MB of innerText in an 8.1 MB DOM, which is why its cards are unclickable and why the render gate caught the page still loading. Only the first ~400 characters can ever be shown through line-clamp-6."
+    },
+    {
+      "file": "src/components/DocumentCard.jsx",
+      "old": "    <div\n      onClick={() => onOpen(doc.id)}\n      onContextMenu={handleContextMenu}\n      className=\"group relative flex flex-col bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md cursor-pointer transition-all w-full\"\n    >",
+      "new": "    <div\n      onClick={() => onOpen(doc.id)}\n      onContextMenu={handleContextMenu}\n      role=\"button\"\n      tabIndex={0}\n      aria-label={doc.title}\n      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') onOpen(doc.id); }}\n      className=\"group relative flex flex-col bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md cursor-pointer transition-all w-full\"\n    >",
+      "reason": "The document card is a plain <div onClick> with no role, so the only addressable controls on the list are the clone's own six stock template cards -- 'Blank', 'Resume', 'Letter', 'Project proposal', 'Meeting notes' -- plus 'Template gallery'. Those are exactly the 7 targets the interact gate found and the 7 that timed out, which is why clicks_mostly_work fails for an app that renders 200 of 200 seeded strings. google_docs is in 60 of 60 worlds. role=button with the document's own title names every one of the company's documents and demotes the template gallery, the same fix circleci's nav needed."
+    }
+  ],
+  "google_drive_mock": [
+    {
+      "file": "src/App.tsx",
+      "old": "import { FileSystemProvider, useFileSystem } from './context/FileSystemContext';",
+      "new": "import { FileSystemProvider, useFileSystem } from './context/FileSystemContext';\nimport { ToastProvider } from './context/ToastContext';",
+      "reason": "Upstream defect: Drive/ShareModal/MoveToDialog/NewButton call useToast() but App never mounts ToastProvider, so the page crashes (blank) seeded or not."
+    },
+    {
+      "file": "src/App.tsx",
+      "old": "    <FileSystemProvider>\n      <BrowserRouter>",
+      "new": "    <FileSystemProvider>\n      <ToastProvider>\n      <BrowserRouter>",
+      "reason": "Upstream defect: Drive/ShareModal/MoveToDialog/NewButton call useToast() but App never mounts ToastProvider, so the page crashes (blank) seeded or not."
+    },
+    {
+      "file": "src/App.tsx",
+      "old": "      </BrowserRouter>\n    </FileSystemProvider>",
+      "new": "      </BrowserRouter>\n      </ToastProvider>\n    </FileSystemProvider>",
+      "reason": "Upstream defect: Drive/ShareModal/MoveToDialog/NewButton call useToast() but App never mounts ToastProvider, so the page crashes (blank) seeded or not."
+    },
+    {
+      "file": "src/lib/mockData.ts",
+      "old": "const BASE_INITIAL_KEY = 'mock_drive_initialState';",
+      "new": "const BASE_INITIAL_KEY = 'mock_drive_initialState';\n\nfunction cache(key: string, value: string): void {\n  try {\n    localStorage.setItem(key, value);\n  } catch {\n    // Quota exceeded for a large seeded state: the shared server store is authoritative.\n  }\n}",
+      "reason": "A 4-5 MB seeded state does not fit the browser's localStorage quota; upstream wrote the whole state into localStorage inside the load promise, so QuotaExceededError left the app on Loading forever (20 of 42 seeded Drive states are that large). The server store is the source of truth; the local copy is only a cache and may be skipped."
+    },
+    {
+      "file": "src/lib/mockData.ts",
+      "old": "  localStorage.setItem(storageKey(sid), JSON.stringify(state));",
+      "new": "  cache(storageKey(sid), JSON.stringify(state));",
+      "reason": "A 4-5 MB seeded state does not fit the browser's localStorage quota; upstream wrote the whole state into localStorage inside the load promise, so QuotaExceededError left the app on Loading forever (20 of 42 seeded Drive states are that large). The server store is the source of truth; the local copy is only a cache and may be skipped."
+    },
+    {
+      "file": "src/lib/mockData.ts",
+      "old": "    const data = deepMergeWithDefaults(getDefaultData(), customState);\n    localStorage.setItem(sk, JSON.stringify(data));\n    localStorage.setItem(ik, JSON.stringify(data));",
+      "new": "    const data = deepMergeWithDefaults(getDefaultData(), customState);\n    cache(sk, JSON.stringify(data));\n    cache(ik, JSON.stringify(data));",
+      "reason": "A 4-5 MB seeded state does not fit the browser's localStorage quota; upstream wrote the whole state into localStorage inside the load promise, so QuotaExceededError left the app on Loading forever (20 of 42 seeded Drive states are that large). The server store is the source of truth; the local copy is only a cache and may be skipped."
+    },
+    {
+      "file": "src/lib/mockData.ts",
+      "old": "      localStorage.setItem(ik, stored);",
+      "new": "      cache(ik, stored);",
+      "reason": "A 4-5 MB seeded state does not fit the browser's localStorage quota; upstream wrote the whole state into localStorage inside the load promise, so QuotaExceededError left the app on Loading forever (20 of 42 seeded Drive states are that large). The server store is the source of truth; the local copy is only a cache and may be skipped."
+    },
+    {
+      "file": "src/lib/mockData.ts",
+      "old": "  const data = getDefaultData();\n  localStorage.setItem(sk, JSON.stringify(data));\n  localStorage.setItem(ik, JSON.stringify(data));",
+      "new": "  const data = getDefaultData();\n  cache(sk, JSON.stringify(data));\n  cache(ik, JSON.stringify(data));",
+      "reason": "A 4-5 MB seeded state does not fit the browser's localStorage quota; upstream wrote the whole state into localStorage inside the load promise, so QuotaExceededError left the app on Loading forever (20 of 42 seeded Drive states are that large). The server store is the source of truth; the local copy is only a cache and may be skipped."
+    },
+    {
+      "file": "src/lib/mockData.ts",
+      "old": "    const data = deepMergeWithDefaults(getDefaultData(), customState);",
+      "new": "    // A company's world is the state, not an overlay on the demo drive: the deep merge folded\n    // 22 demo items ('Work Projects', 'Budget 2026'...) and 5 demo users into every seeded\n    // world, and the owner filter below was all that hid them. Keys the seed leaves out still\n    // fall back to the shipped defaults.\n    const data = { ...getDefaultData(), ...customState } as AppState;",
+      "reason": "deepMergeWithDefaults recursed into items and users, both keyed objects, so every seeded world carried the 22 shipped demo items and 5 demo users beside the company's 2,531 records."
+    },
+    {
+      "file": "src/context/FileSystemContext.tsx",
+      "old": "  const getFolderContents = (folderId: string | null) => {\n    return Object.values(state.items).filter(\n      item => item.parentId === folderId && !item.trashed && item.ownerId === state.currentUser.id\n    );\n  };",
+      "new": "  const getFolderContents = (folderId: string | null) => {\n    // My Drive is the company's drive. Every root in a seeded world belongs to one person, so\n    // filtering the whole tree by owner emptied My Drive and the sidebar for 18 of 40\n    // worker/company pairs, and hid the children of a folder a worker could open. What\n    // \"Shared with me\" already lists is still kept out of the root, so nothing is listed twice.\n    const me = state.currentUser.id;\n    return Object.values(state.items).filter(\n      item =>\n        item.parentId === folderId &&\n        !item.trashed &&\n        (folderId !== null ||\n          item.ownerId === me ||\n          !(item.sharedWith || []).some(s => s.userId === me))\n    );\n  };",
+      "reason": "My Drive listed only items the viewer owns, so the per-worker proxy's currentUser emptied it: 18 of 40 worker/company pairs saw zero top-level folders (all four prx workers, 5 of 6 schweitzer)."
+    },
+    {
+      "file": "src/context/FileSystemContext.tsx",
+      "old": "  const baselineSynced = useRef(false);",
+      "new": "  const hydrated = useRef(false);",
+      "reason": "Saves need a hydration flag instead of a baseline reset: nothing may be posted before the shared store has answered, and the baseline is the harness's to set."
+    },
+    {
+      "file": "src/context/FileSystemContext.tsx",
+      "old": "      if (isRefresh) {\n        const data = initializeData(sid);\n        dispatch({ type: 'SET_STATE', payload: data });\n        setLoading(false);\n      } else {\n        fetchCustomState(sid).then(customState => {\n          const data = initializeData(sid, customState);\n          dispatch({ type: 'SET_STATE', payload: data });\n          setLoading(false);\n        });\n      }",
+      "new": "      if (isRefresh) {\n        const data = initializeData(sid);\n        hydrated.current = true;\n        dispatch({ type: 'SET_STATE', payload: data });\n        setLoading(false);\n      } else {\n        fetchCustomState(sid).then(customState => {\n          const data = initializeData(sid, customState);\n          // Only a hydrated tab saves; a failed or empty /state means show, do not save.\n          hydrated.current = !!customState;\n          dispatch({ type: 'SET_STATE', payload: data });\n          setLoading(false);\n        });\n      }",
+      "reason": "A tab that never loaded the shared state must not write to it."
+    },
+    {
+      "file": "src/context/FileSystemContext.tsx",
+      "old": "    if (!loading && state) {\n      if (!baselineSynced.current) {\n        baselineSynced.current = true;\n        const sid = sidRef.current;\n        const url = sid ? `/post?sid=${encodeURIComponent(sid)}` : '/post';\n        fetch(url, {\n          method: 'POST',\n          headers: { 'Content-Type': 'application/json' },\n          body: JSON.stringify({ action: 'set', state, merge: false })\n        }).catch(() => {});\n        return;\n      }\n      saveState(state, sidRef.current);\n    }",
+      "new": "    if (!loading && state && hydrated.current) {\n      saveState(state, sidRef.current);\n    }",
+      "reason": "On load the app posted its own items as the session baseline with action:\"set\", which the worker proxy refuses (403, seeding is harness-only) and the app swallowed, so in a guest nine clicks, a typed submit and a folder create produced zero further requests and an empty /go diff."
+    },
+    {
+      "file": "src/lib/utils.ts",
+      "old": "export function downloadDriveItem(item: FileSystemItem) {\n  let blob: Blob;\n  let filename = item.name;\n\n  if (item.type === 'folder') {\n    filename = `${item.name.replace(/\\s+/g, '_')}-manifest.json`;\n    blob = new Blob([JSON.stringify({\n      id: item.id,\n      name: item.name,\n      type: item.type,\n      createdAt: new Date(item.createdAt).toISOString(),\n      modifiedAt: new Date(item.modifiedAt).toISOString(),\n      sharedWith: item.sharedWith,\n      starred: item.starred\n    }, null, 2)], { type: 'application/json' });\n  } else if (item.thumbnailUrl?.startsWith('data:')) {\n    const [meta, data] = item.thumbnailUrl.split(',');\n    const mime = meta.match(/data:(.*?);/)?.[1] || 'application/octet-stream';\n    const binary = atob(data || '');\n    const bytes = new Uint8Array(binary.length);\n    for (let i = 0; i < binary.length; i += 1) {\n      bytes[i] = binary.charCodeAt(i);\n    }\n    blob = new Blob([bytes], { type: mime });\n  } else {\n    const content = item.content || `${item.name}\\n\\nMock Drive local download.\\n`;\n    const type = item.type === 'pdf' ? 'application/pdf' : 'text/plain';\n    blob = new Blob([content], { type });\n  }\n\n  const url = URL.createObjectURL(blob);\n  const link = document.createElement('a');\n  link.href = url;\n  link.download = filename;\n  document.body.appendChild(link);\n  link.click();\n  document.body.removeChild(link);\n  URL.revokeObjectURL(url);\n}\n\n",
+      "new": "export async function downloadDriveItem(item: FileSystemItem) {\n  let blob: Blob;\n  const binaryUrl = item.thumbnailUrl || '';\n  const archiveUrl = item.type === 'archive' ? item.content?.match(/(?:https?:\\/\\/|\\/__company_resource\\/)[^\\s<>]+\\.zip/)?.[0] : undefined;\n  const fileUrl = archiveUrl || (binaryUrl.startsWith('data:') || binaryUrl.startsWith('/__company_resource/') ? binaryUrl : undefined);\n  if (fileUrl) {\n    const response = await fetch(fileUrl);\n    if (!response.ok) throw new Error(`Download failed (${response.status})`);\n    blob = await response.blob();\n  } else {\n    blob = new Blob([item.content || ''], { type: item.mimeType || 'text/plain' });\n  }\n  const ext = item.type === 'archive' ? '.zip' : item.type === 'pdf' ? '.pdf' : '';\n  const filename = ext && !item.name.toLowerCase().endsWith(ext) ? item.name + ext : item.name;\n  const url = URL.createObjectURL(blob);\n  const link = document.createElement('a');\n  link.href = url; link.download = filename;\n  document.body.appendChild(link); link.click(); link.remove();\n  setTimeout(() => URL.revokeObjectURL(url), 1000);\n}\n\n",
+      "reason": "Download the actual manifest-bound ZIP/PDF/Office bytes; preserve native filenames."
+    },
+    {
+      "file": "src/components/PreviewModal.tsx",
+      "old": "      case 'pdf':\n        return (\n          <div className=\"flex flex-col items-center justify-center h-[80vh] bg-gray-100 w-full rounded-lg\">\n             <img src={item.thumbnailUrl || `https://picsum.photos/800/600?random=${item.id}`} className=\"max-w-full max-h-full opacity-80\" />\n             <p className=\"mt-4 text-gray-600\">PDF Preview Mock</p>\n          </div>\n        );\n",
+      "new": "      case 'pdf':\n        return <iframe title={item.name} src={item.thumbnailUrl ?? undefined} className=\"h-[80vh] w-full bg-white rounded-lg\" />;\n",
+      "reason": "Preview the real PDF in the browser rather than a random image."
+    },
+    {
+      "file": "src/components/FileList.tsx",
+      "old": "<div className=\"col-span-2 text-sm text-gray-500\">me</div>",
+      "new": "<div className=\"col-span-2 text-sm text-gray-500\">{item.ownerId === state.currentUser.id ? \"me\" : state.users?.[item.ownerId]?.name || item.ownerId}</div>",
+      "reason": "Display the actual seeded file owner instead of claiming every shared file belongs to the viewer."
+    },
+    {
+      "file": "src/components/FileList.tsx",
+      "old": "const { dispatch } = useFileSystem();",
+      "new": "const { state, dispatch } = useFileSystem();",
+      "reason": "Use the current worker and directory when displaying file owners."
+    },
+    {
+      "file": "src/components/Header.tsx",
+      "old": "https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo_%282020%29.svg",
+      "new": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Cpath%20fill%3D%22%230F9D58%22%20d%3D%22M18%204h12L46%2032H34z%22/%3E%3Cpath%20fill%3D%22%23FFC107%22%20d%3D%22M18%204%202%2032l6%2010%2016-28z%22/%3E%3Cpath%20fill%3D%22%234285F4%22%20d%3D%22M2%2032h44l-6%2010H8z%22/%3E%3C/svg%3E",
+      "reason": "Keep the application mark available in the offline worker desktop."
+    }
+  ],
+  "google_flights_mock": [
+    {
+      "file": "src/App.jsx",
+      "old": "import { StoreProvider } from './lib/store';",
+      "new": "import { AppProvider as StoreProvider } from './context/AppContext';",
+      "reason": "The entrypoint mounted the legacy store while FlightSearchForm requires the schema-backed AppProvider."
+    },
+    {
+      "file": "src/components/Navbar.jsx",
+      "old": "import { useAppStore } from '../lib/store';",
+      "new": "import { useAppContext as useAppStore } from '../context/AppContext';",
+      "reason": "Use the same provider as the search form instead of the disconnected legacy context."
+    },
+    {
+      "file": "src/components/Navbar.jsx",
+      "old": "const { state, markAlertRead } = useAppStore();",
+      "new": "const { state: nativeState, removePriceAlert: markAlertRead } = useAppStore();\n      const state = { ...nativeState, alerts: nativeState.priceAlerts };",
+      "reason": "Navbar uses the legacy alerts name; map the native priceAlerts collection."
+    },
+    {
+      "file": "src/pages/Home.jsx",
+      "old": "import FlightSearchForm from '../components/FlightSearchForm';",
+      "new": "import FlightSearchForm from '../components/FlightSearchForm';\n    import { useAppContext } from '../context/AppContext';",
+      "reason": "Read destination cards from the same native state as the search form."
+    },
+    {
+      "file": "src/pages/Home.jsx",
+      "old": "      const destinations = [\n        { city: 'London', route: 'JFK to LHR', origin: 'JFK', destination: 'LHR', price: 299, image: 'london' },\n        { city: 'Tokyo', route: 'SFO to HND', origin: 'SFO', destination: 'HND', price: 489, image: 'tokyo' },\n        { city: 'Paris', route: 'JFK to CDG', origin: 'JFK', destination: 'CDG', price: 329, image: 'paris' },\n        { city: 'Singapore', route: 'LAX to SIN', origin: 'LAX', destination: 'SIN', price: 640, image: 'singapore' },\n        { city: 'Sydney', route: 'LAX to SYD', origin: 'LAX', destination: 'SYD', price: 710, image: 'sydney' },\n        { city: 'Dubai', route: 'LHR to DXB', origin: 'LHR', destination: 'DXB', price: 370, image: 'dubai' },\n      ];",
+      "new": "      const { state } = useAppContext();\n      const destinations = state.popularDestinations.map(d => ({ ...d, origin: state.search.origin, destination: d.airport, route: `${state.search.origin} to ${d.airport}`, price: d.priceFrom, image: d.airport }));",
+      "reason": "The homepage hardcoded destination cards and ignored the documented popularDestinations seed."
+    },
+    {
+      "file": "src/pages/Results.jsx",
+      "old": "import { useAppStore } from '../lib/store';",
+      "new": "import { useAppContext as useAppStore } from '../context/AppContext';",
+      "reason": "Use the provider mounted at the entrypoint consistently across routes."
+    },
+    {
+      "file": "src/pages/Booking.jsx",
+      "old": "import { useAppStore } from '../lib/store';",
+      "new": "import { useAppContext as useAppStore } from '../context/AppContext';",
+      "reason": "Use the provider mounted at the entrypoint consistently across routes."
+    },
+    {
+      "file": "src/pages/Results.jsx",
+      "old": "const { state, addAlert } = useAppStore();",
+      "new": "const { state, addPriceAlert: addAlert } = useAppStore();",
+      "reason": "Use the native price-alert action."
+    },
+    {
+      "file": "src/context/AppContext.jsx",
+      "old": "  const [state, setState] = useState(() => {\n    if (isRefresh) {\n      return initializeData(sid);\n    }\n    // Async load will update state; start with defaults\n    return initializeData(sid);\n  });\n",
+      "new": "  const [state, setState] = useState(null);\n",
+      "reason": "Do not render schema-backed components against incompatible legacy defaults before the server seed arrives."
+    },
+    {
+      "file": "src/context/AppContext.jsx",
+      "old": "    // Store initialState reference (from localStorage initialKey)\n    const stored = localStorage.getItem(initialKey(sid));\n    if (stored) {\n      initialStateRef.current = JSON.parse(stored);\n    } else {\n      initialStateRef.current = state;\n    }\n\n    if (!isRefresh) {\n      // First load: fetch custom state from server\n      fetchCustomState(sid).then(custom => {\n        const data = initializeData(sid, custom);\n        setState(data);\n        initialStateRef.current = JSON.parse(localStorage.getItem(initialKey(sid)) || 'null') || data;\n      });\n    }\n",
+      "new": "    fetchCustomState(sid).then(custom => {\n      const data = initializeData(sid, custom);\n      initialStateRef.current = data;\n      setState(data);\n    });\n",
+      "reason": "Load the seed before rendering or saving; upstream initialization wrote defaults before the fetch and StrictMode misclassified first visit as refresh."
+    },
+    {
+      "file": "src/context/AppContext.jsx",
+      "old": "  useEffect(() => {\n    saveState(state, sid);",
+      "new": "  useEffect(() => {\n    if (!state) return;\n    saveState(state, sid);",
+      "reason": "Do not overwrite the server seed while the initial fetch is pending."
+    },
+    {
+      "file": "src/context/AppContext.jsx",
+      "old": "  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;",
+      "new": "  if (!state) return <div>Loading...</div>;\n  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;",
+      "reason": "Mount consumers only once their native state has loaded."
+    },
+    {
+      "file": "src/lib/data.js",
+      "old": "    const getDefaultData = () => ({\n      flights: generateFlights(200),\n      bookings: [],\n      alerts: [],\n      user: {",
+      "new": "    const getDefaultData = () => ({\n      flights: generateFlights(200),\n      bookings: [],\n      alerts: [],\n      airports: [],\n      airlines: [],\n      segments: {},\n      priceAlerts: [],\n      trackedRoutes: [],\n      popularDestinations: [],\n      selectedOutboundFlight: null,\n      selectedReturnFlight: null,\n      activeTab: 'best',\n      dateViewMode: 'calendar',\n      search: {\n        tripType: 'roundtrip', origin: 'SFO', destination: null,\n        departureDate: '', returnDate: '',\n        passengers: { adults: 1, children: 0, infantsInSeat: 0, infantsOnLap: 0 },\n        cabinClass: 'economy', legs: [],\n      },\n      filters: {\n        stops: 'any', airlines: [], bags: [], maxPrice: 2000,\n        departureTimeRange: [0, 1440], arrivalTimeRange: [0, 1440],\n        maxDuration: 1200, connectingAirports: [], emissions: 'any',\n      },\n      user: {",
+      "reason": "getDefaultData supplied 4 of the 17 top-level keys the pinned schema documents. The two stores this clone runs (lib/store.js for the navbar, context/AppContext.jsx for the search form) read state.search 10 times, plus filters, airports, airlines, segments, trackedRoutes and popularDestinations, none of which existed -- so the landing page threw 'TypeError: Cannot read properties of undefined (reading map)' and rendered 0 characters. Recorded in experiments/interact/fidelity-20260910-after/google_flights_mock.json as first_screen_not_empty false with 0 clickable targets. Defaults are the ones the schema states, so a seed that omits a key now lands on the documented value instead of a crash."
+    }
+  ],
+  "google_sheets_mock": [
+    {
+      "file": "src/store/useSpreadsheet.ts",
+      "old": "  const initDone = useRef(false);\n",
+      "new": "  const initDone = useRef(false);\n  const hydrated = useRef(false);\n",
+      "reason": "Saves need a hydration flag: nothing may be posted before the shared store has answered."
+    },
+    {
+      "file": "src/store/useSpreadsheet.ts",
+      "old": "    fetchCustomState(sid).then((customState) => {\n      if (customState) {\n        const data = initializeLocalData(sid, customState);\n        setState(data);\n        setInitialStateRecord(JSON.parse(JSON.stringify(data)));\n      } else {\n",
+      "new": "    fetchCustomState(sid).then((customState) => {\n      if (customState) {\n        const data = initializeLocalData(sid, customState);\n        setState(data);\n        setInitialStateRecord(JSON.parse(JSON.stringify(data)));\n        // Only a hydrated tab saves; a failed or empty /state means show, do not save.\n        hydrated.current = true;\n      } else {\n        console.warn('No shared state loaded; saving is disabled for this tab');\n",
+      "reason": "After a slow or failed /state the demo workbook was saved and then read back as the session's own state, so the app never recovered."
+    },
+    {
+      "file": "src/store/useSpreadsheet.ts",
+      "old": "  useEffect(() => {\n    const sid = sidRef.current;\n    saveState(state, sid, initialStateRecord);\n  }, [state, initialStateRecord]);",
+      "new": "  useEffect(() => {\n    if (!hydrated.current) return;\n    const sid = sidRef.current;\n    saveState(state, sid, initialStateRecord);\n  }, [state, initialStateRecord]);",
+      "reason": "The save effect fired on the mount render with the demo workbook (debounced 300 ms), racing the /state fetch and overwriting the seed when the fetch was slower."
+    },
+    {
+      "file": "src/pages/Home.tsx",
+      "old": "  const recentFiles = [\n    { title: state.title, owner: 'me', updated: 'Opened just now', starred: false },\n    { title: 'Marketing Campaign Tracker', owner: 'Alex Johnson', updated: 'Yesterday', starred: true },\n    { title: 'Website Analytics', owner: 'me', updated: 'Apr 24, 2026', starred: false },\n  ];\n",
+      "new": "  // Only the workbook in state exists; the shipped demo entries named people from another company.\n  const recentFiles = [\n    { title: state.title, owner: 'me', updated: 'Opened just now', starred: false },\n  ];\n",
+      "reason": "'Recent spreadsheets' listed two hard-coded demo workbooks ('Marketing Campaign Tracker' by 'Alex Johnson', 'Website Analytics') beside the seeded one."
+    },
+    {
+      "file": "src/pages/Home.tsx",
+      "old": "        <img\n          src=\"https://ui-avatars.com/api/?name=Alex+Johnson&background=4285F4&color=fff&size=36\"\n          alt=\"User\"\n          className=\"w-9 h-9 rounded-full border border-gray-300 ml-auto\"\n        />\n",
+      "new": "",
+      "reason": "The header avatar was a remote image for the demo user 'Alex Johnson'; the state carries no current user or owner, so the avatar is hidden rather than shown with a wrong name."
+    },
+    {
+      "file": "src/App.tsx",
+      "old": "import { BrowserRouter, Routes, Route } from 'react-router-dom';",
+      "new": "import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';",
+      "reason": "The launcher redirect needs Navigate and the current query string."
+    },
+    {
+      "file": "src/App.tsx",
+      "old": "function App() {",
+      "new": "// Sheets opened on its launcher, whose only seeded string is the workbook title: 177-193 visible\n// characters and 1 of 45-400 seeded strings in every rendered company, with the company's grid\n// and its 37 tabs one click away. A worker opens the workbook, the way a link to a spreadsheet\n// does; the launcher is still there at /home.\nfunction OpenTheWorkbook() {\n  const { search } = useLocation();\n  return <Navigate to={`/spreadsheet${search}`} replace />;\n}\n\nfunction App() {",
+      "reason": "Land the worker on the workbook instead of the launcher."
+    },
+    {
+      "file": "src/App.tsx",
+      "old": "        <Route path=\"/\" element={<Home />} />",
+      "new": "        <Route path=\"/\" element={<OpenTheWorkbook />} />\n        <Route path=\"/home\" element={<Home />} />",
+      "reason": "Route / to the grid and keep the launcher reachable at /home."
+    },
+    {
+      "file": "src/pages/Spreadsheet.tsx",
+      "old": "            <div className=\"border border-[#DADCE0] rounded px-3 py-2 text-sm mb-4\">Alex Johnson - Owner</div>",
+      "new": "            <div className=\"border border-[#DADCE0] rounded px-3 py-2 text-sm mb-4\">You - Owner</div>",
+      "reason": "The share dialog on the grid named the demo user 'Alex Johnson' as the owner of the company's workbook. The sheets state carries no user or owner, so the dialog says 'You', the way the launcher's demo avatar was dropped rather than shown with a wrong name."
+    }
+  ],
+  "greenhouse_mock": [
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "  const stored = localStorage.getItem(key);",
+      "new": "  const stored = customState ? null : localStorage.getItem(key);",
+      "reason": "Upstream first render stores defaults under the session key before the async /state fetch resolves, so initializeData(sid, custom) returns those stored defaults and ignores the seed; only reuse stored state when no custom state is supplied."
+    }
+  ],
+  "instacart_mock": [
+    {
+      "file": "src/pages/StoreSelector.jsx",
+      "old": "            <div className={`h-24 ${store.color} flex items-center justify-center p-4`}>",
+      "new": "            <div\n              className={`h-24 ${/^#/.test(store.color || '') ? '' : store.color} flex items-center justify-center p-4`}\n              style={/^#/.test(store.color || '') ? { backgroundColor: store.color } : undefined}\n            >",
+      "reason": "store.color reaches a className on the index route (the defaults are Tailwind classes, and the app has no seeded world yet, so this keeps a hex working rather than repairing a measured blank)."
+    }
+  ],
+  "instagram_mock": [
+    {
+      "file": "src/utils/mockData.js",
+      "old": "export const CURRENT_USER_ID = 'user_admin';",
+      "new": "// The signed-in person was a module constant, so every company was browsed as the demo account\n// 'alex_morgan': 47 sites in 7 files read it, getFeed among them, which showed the demo\n// followees' posts and hid all 132 of the company's. A live binding lets the loaded state name\n// the worker once, for all 47.\nexport let CURRENT_USER_ID = 'user_admin';\n\n// Who the worker is: what the state says, else the first person in the state's own users. A\n// seeded world names 40 company people and no demo account.\nfunction pickCurrentUserId(state) {\n  const users = (state && state.users) || {};\n  const named = state && (state.currentUserId || (state.currentUser && state.currentUser.id));\n  if (named && users[named]) return named;\n  if (users[CURRENT_USER_ID]) return CURRENT_USER_ID;\n  const first = Object.keys(users)[0];\n  return first || CURRENT_USER_ID;\n}",
+      "reason": "CURRENT_USER_ID is read at 47 sites across 7 files (DataContext.getFeed, toggleFollow, Messages, PostCard, PostDetailModal, Reels), so no seed could say who the worker is."
+    },
+    {
+      "file": "src/utils/mockData.js",
+      "old": "      } else if (key === 'users' && typeof custom[key] === 'object' && !Array.isArray(custom[key])) {\n        const mergedUsers = { ...defaults[key] };",
+      "new": "      } else if (key === 'users' && typeof custom[key] === 'object' && !Array.isArray(custom[key])) {\n        // A company's people are the users, not an addition to the ten demo accounts: the union\n        // left alex_morgan and nine strangers in search, suggestions and the new-message list,\n        // and kept user_admin resolvable as the signed-in person.\n        const mergedUsers = {};",
+      "reason": "The users merge was a key-wise union, so all ten shipped demo accounts survived in every seeded world (50 users where the company has 40)."
+    },
+    {
+      "file": "src/utils/mockData.js",
+      "old": "  if (customState) {\n    const initialData = deepMergeWithDefaults(getDefaultData(), customState);\n    localStorage.setItem(sk, JSON.stringify(initialData));",
+      "new": "  if (customState) {\n    const initialData = deepMergeWithDefaults(getDefaultData(), customState);\n    CURRENT_USER_ID = pickCurrentUserId(initialData);\n    localStorage.setItem(sk, JSON.stringify(initialData));",
+      "reason": "Name the worker from the loaded world, before anything renders."
+    },
+    {
+      "file": "src/utils/mockData.js",
+      "old": "    if (!localStorage.getItem(ik)) localStorage.setItem(ik, stored);\n    return JSON.parse(stored);",
+      "new": "    if (!localStorage.getItem(ik)) localStorage.setItem(ik, stored);\n    const parsed = JSON.parse(stored);\n    CURRENT_USER_ID = pickCurrentUserId(parsed);\n    return parsed;",
+      "reason": "A refresh reads the cached state instead of /state, and must not sign the worker back in as the demo account."
+    }
+  ],
+  "meta_ads_mock": [
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "    const data = await res.json();\n    return data;\n",
+      "new": "    const data = await res.json();\n    return data && typeof data === 'object' && 'stored_state' in data ? (data.has_custom_state ? data.stored_state : null) : data;\n",
+      "reason": "Upstream first-visit loader returns the whole /state envelope {stored_state, has_custom_state, sid} and deep-merges it into defaults, so seeded sessions rendered shipped fixtures."
+    },
+    {
+      "file": "vite.config.js",
+      "old": "      if (action === 'reset') {\n        const initial = readInitialState(sid);\n        if (initial) {\n          writeState(sid, initial);\n          res.setHeader('Content-Type', 'application/json');\n          res.end(JSON.stringify({ success: true, sid, message: 'State reset to initial.' }));\n        } else {\n          clearState(sid);\n          res.setHeader('Content-Type', 'application/json');\n          res.end(JSON.stringify({ success: true, sid, message: 'State cleared.' }));\n        }\n        return;\n      }",
+      "new": "      if (action === 'reset') {\n        clearState(sid);\n        res.setHeader('Content-Type', 'application/json');\n        res.end(JSON.stringify({ success: true, sid })); return;\n      }",
+      "reason": "Reset must remove current and initial files; upstream restored the baseline and left has_custom_state true."
+    }
+  ],
+  "miro_mock": [
+    {
+      "file": "src/main.jsx",
+      "old": "import App from './App.jsx';",
+      "new": "import { BrowserRouter, Routes, Route } from 'react-router-dom';\nimport { AppProvider } from './context/AppContext.jsx';\nimport Dashboard from './pages/Dashboard.jsx';\nimport BoardView from './pages/BoardView.jsx';\nconst App = () => <BrowserRouter><AppProvider><Routes><Route path=\"/\" element={<Dashboard />} /><Route path=\"/board/:boardId\" element={<BoardView />} /></Routes></AppProvider></BrowserRouter>;",
+      "reason": "The entrypoint mounted an unrelated single-canvas prototype. Mount the existing schema-backed dashboard, board routes and provider."
+    }
+  ],
+  "mixpanel_mock": [
+    {
+      "file": "vite.config.js",
+      "old": "      if (action === 'reset') {\n        const initial = readInitialState(sid)\n        if (initial) {\n          writeState(sid, initial)\n          res.setHeader('Content-Type', 'application/json')\n          res.end(JSON.stringify({ success: true, sid, message: 'State reset to initial.' }))\n        } else {\n          clearState(sid)\n          res.setHeader('Content-Type', 'application/json')\n          res.end(JSON.stringify({ success: true, sid, message: 'State cleared.' }))\n        }\n        return\n      }",
+      "new": "      if (action === 'reset') {\n        clearState(sid);\n        res.setHeader('Content-Type', 'application/json');\n        res.end(JSON.stringify({ success: true, sid })); return;\n      }",
+      "reason": "Reset must remove current and initial files; upstream restored the baseline and left has_custom_state true."
+    }
+  ],
+  "monday_mock": [
+    {
+      "file": "src/App.jsx",
+      "old": "import Sidebar from './components/Sidebar';\nimport Board from './pages/Board';",
+      "new": "import BoardHeader from './components/BoardHeader';\nimport GroupSection from './components/board/GroupSection';\nimport { Link, useParams } from 'react-router-dom';\nfunction Sidebar() { const { state } = useAppContext(); return <aside>{Object.values(state.boards).map(b => <p key={b.id}><Link to={`/board/${b.id}${window.location.search}`}>{b.name}</Link></p>)}</aside>; }\nfunction Board() { const { state } = useAppContext(); const { boardId } = useParams(); const board = state.boards[boardId]; if (!board) return <p>Board not found</p>; const columns = board.columnIds.map(id => state.columns[id]); return <section><BoardHeader boardId={boardId} />{board.groupIds.map(id => <GroupSection key={id} group={state.groups[id]} board={board} columns={columns} items={state.groups[id].itemIds.map(i => state.items[i])} />)}</section>; }",
+      "reason": "AppProvider uses schema-defined record maps but the imported sidebar/board use an incompatible array store. Wire the existing native BoardHeader and GroupSection to their matching provider."
+    },
+    {
+      "file": "src/App.jsx",
+      "old": "                  <Route path=\"/\" element={<RedirectWithQuery to=\"/board/board-1\" />} />",
+      "new": "                  <Route path=\"/\" element={<OpenABoard />} />",
+      "reason": "'/' redirected to /board/board-1, an id no company has: the first screen read 'Board not found' in both seeded worlds (treehouse-foods has board-projects..board-office, eastman-chemical has lr-exceptions and lr-improvements), while every one of those boards renders at its real id."
+    },
+    {
+      "file": "src/App.jsx",
+      "old": "function RedirectWithQuery({ to }) {",
+      "new": "// The board the world says is open, else any board that exists. 'board-1' is the shipped\n// default's id and no seeded company has it.\nfunction OpenABoard() {\n  const { state } = useAppContext();\n  const boards = (state && state.boards) || {};\n  const wanted = (state && ((state.ui && state.ui.activeBoardId) || state.activeBoardId)) || 'board-1';\n  const id = boards[wanted] ? wanted : Object.keys(boards)[0];\n  return <RedirectWithQuery to={id ? `/board/${id}` : '/my-work'} />;\n}\n\nfunction RedirectWithQuery({ to }) {",
+      "reason": "Resolve the landing board against the seeded state instead of a shipped id."
+    }
+  ],
+  "outlook_web_mock": [
+    {
+      "file": "src/routes/MailRoute.jsx",
+      "old": "useState('inbox')",
+      "new": "useState(\n    state.selectedFolderId ||\n      (state.folders.find(folder => /inbox/i.test(folder.id)) || state.folders[0] || {}).id\n  )",
+      "reason": "The initial folder used the legacy id 'inbox', while the schema-backed EmailList filters parentFolderId against the seeded ids (folder-inbox); and 'folder-inbox' exists in every seeded world and in none of the shipped defaults, so the app's own fixtures opened on an empty folder."
+    },
+    {
+      "file": "src/components/Mail/FolderPane.jsx",
+      "old": "{folder.name}",
+      "new": "{folder.displayName || folder.name}",
+      "reason": "Show the schema-defined folder display name."
+    },
+    {
+      "file": "src/utils/mockData.js",
+      "old": "// Normalization helpers for POST custom state",
+      "new": "// A mail list that answers to both field vocabularies. EmailList (the schema-backed half of\n// the app) reads state.messages with parentFolderId/bodyPreview/receivedDateTime/flag.flagStatus,\n// while the store, FolderPane, ReadingPane and MailRoute read state.emails with\n// folderId/preview/timestamp/read, so a seeded world and the shipped defaults both rendered a\n// blank white page: state.messages.filter threw on undefined, and e.bodyPreview.toLowerCase()\n// threw on the seeded search term. This is a view over the state, never the saved state itself,\n// so the baseline the grader diffs against stays exactly what was seeded.\nexport const adaptMailState = (state) => {\n  if (!state || typeof state !== 'object') return state;\n  const source = Array.isArray(state.messages) ? state.messages : state.emails;\n  const messages = (Array.isArray(source) ? source : []).map(mail => {\n    const folderId = mail.parentFolderId || mail.folderId || 'inbox';\n    const when = mail.receivedDateTime || mail.date || mail.timestamp || '';\n    const body = typeof mail.body === 'string' ? mail.body : (mail.body && mail.body.content) || '';\n    const read = typeof mail.isRead === 'boolean' ? mail.isRead : !!mail.read;\n    const flagged = typeof mail.isFlagged === 'boolean'\n      ? mail.isFlagged\n      : mail.flag ? mail.flag.flagStatus === 'flagged' : !!mail.flagged;\n    const preview = mail.bodyPreview || mail.preview || body.slice(0, 120);\n    const to = Array.isArray(mail.toRecipients) ? mail.toRecipients : Array.isArray(mail.to) ? mail.to : [];\n    return {\n      ...mail,\n      folderId,\n      parentFolderId: folderId,\n      timestamp: when,\n      date: when,\n      receivedDateTime: when,\n      body,\n      preview,\n      bodyPreview: preview,\n      read,\n      isRead: read,\n      flagged,\n      isFlagged: flagged,\n      flag: { flagStatus: flagged ? 'flagged' : 'notFlagged' },\n      isPinned: !!mail.isPinned,\n      importance: mail.importance || 'normal',\n      hasAttachments:\n        typeof mail.hasAttachments === 'boolean'\n          ? mail.hasAttachments\n          : (mail.attachments || []).length > 0,\n      // With no classification every message fell outside both Focused and Other, so the inbox\n      // read \"Nothing here\" even when the folder held mail.\n      inferenceClassification: mail.inferenceClassification || 'focused',\n      categories: Array.isArray(mail.categories) ? mail.categories : [],\n      to,\n      toRecipients: to,\n      from: mail.from || { name: 'Unknown', email: '' }\n    };\n  });\n  const named = (list) =>\n    (Array.isArray(list) ? list : []).map(item => ({\n      ...item,\n      name: item.name || item.displayName,\n      displayName: item.displayName || item.name\n    }));\n  return { ...state, messages, emails: messages, folders: named(state.folders), categories: named(state.categories) };\n};\n\n// Normalization helpers for POST custom state",
+      "reason": "EmailList.jsx:49 reads state.messages with parentFolderId/bodyPreview/receivedDateTime while StoreContext.jsx:19 supplies emails with folderId/preview/timestamp: the page rendered 0 visible characters, seeded and on its own defaults, on TypeError: Cannot read properties of undefined."
+    },
+    {
+      "file": "src/context/StoreContext.jsx",
+      "old": "  initializeData, getStoredInitialState, fetchCustomState, getSessionId, saveState\n} from '../utils/mockData';",
+      "new": "  initializeData, getStoredInitialState, fetchCustomState, getSessionId, saveState, adaptMailState\n} from '../utils/mockData';",
+      "reason": "Import the mail adapter."
+    },
+    {
+      "file": "src/context/StoreContext.jsx",
+      "old": "  const sendEmail = (emailData) => {\n    const newEmail = {\n      id: `email-${Date.now()}`,\n      folderId: 'sent',\n      from: { name: state.user.name, email: state.user.email },\n      to: emailData.to, // Array of objects\n      subject: emailData.subject,\n      body: emailData.body,\n      preview: emailData.body.substring(0, 50) + '...',\n      timestamp: new Date().toISOString(),\n      read: true,\n      flagged: false,\n      categories: [],\n      attachments: emailData.attachments || [],\n      isFocused: false\n    };\n    setState(prev => ({ ...prev, emails: [newEmail, ...prev.emails] }));\n  };\n\n  const deleteEmail = (emailId) => {\n    setState(prev => ({\n      ...prev,\n      emails: prev.emails.map(e =>\n        e.id === emailId ? { ...e, folderId: 'deleted' } : e\n      )\n    }));\n  };\n\n  const markRead = (emailId, isRead = true) => {\n    setState(prev => ({\n      ...prev,\n      emails: prev.emails.map(e => e.id === emailId ? { ...e, read: isRead } : e)\n    }));\n  };\n\n  const toggleFlag = (emailId) => {\n    setState(prev => ({\n      ...prev,\n      emails: prev.emails.map(e => e.id === emailId ? { ...e, flagged: !e.flagged } : e)\n    }));\n  };\n\n  const moveEmail = (emailId, folderId) => {\n    setState(prev => ({\n      ...prev,\n      emails: prev.emails.map(e => e.id === emailId ? { ...e, folderId } : e)\n    }));\n  };\n\n  const addCategory = (emailId, categoryId) => {\n    setState(prev => ({\n      ...prev,\n      emails: prev.emails.map(e => {\n        if (e.id !== emailId) return e;\n        const cats = e.categories.includes(categoryId)\n          ? e.categories.filter(c => c !== categoryId)\n          : [...e.categories, categoryId];\n        return { ...e, categories: cats };\n      })\n    }));\n  };\n\n  const restoreEmails = (emails) => {\n    setState(prev => ({ ...prev, emails }));\n  };\n\n",
+      "new": "  // The shipped defaults keep the mail in state.emails with folderId/preview/timestamp/read;\n  // the schema-backed worlds keep it in state.messages, and half the app reads each one. Every\n  // action writes back to whichever key the state it was handed carries, and writes both field\n  // names, so a worker's edit lands where the grader reads it and where the list renders it.\n  const mailKey = (prev) => (Array.isArray(prev.messages) ? 'messages' : 'emails');\n  const isRead = (mail) => (typeof mail.isRead === 'boolean' ? mail.isRead : !!mail.read);\n  const isFlagged = (mail) =>\n    typeof mail.isFlagged === 'boolean'\n      ? mail.isFlagged\n      : mail.flag\n        ? mail.flag.flagStatus === 'flagged'\n        : !!mail.flagged;\n  // Seeded folders are folder-inbox/folder-deleted; the shipped ones are inbox/deleted. A delete\n  // that moves a message to an id no folder has loses it from every view.\n  const folderLike = (pattern, fallback) => {\n    const found = (state.folders || []).find(folder => pattern.test(folder.id));\n    return found ? found.id : fallback;\n  };\n\n  const updateMail = (change) => {\n    setState(prev => {\n      const key = mailKey(prev);\n      return { ...prev, [key]: change(prev[key] || []) };\n    });\n  };\n\n  const amendMail = (mailId, change) =>\n    updateMail(mail => mail.map(item => (item.id === mailId ? { ...item, ...change(item) } : item)));\n\n  const sendEmail = (emailData) => {\n    const now = new Date().toISOString();\n    const folderId = folderLike(/sent/i, 'sent');\n    const newEmail = {\n      id: `email-${Date.now()}`,\n      folderId,\n      parentFolderId: folderId,\n      from: { name: state.user.name, email: state.user.email },\n      to: emailData.to, // Array of objects\n      toRecipients: emailData.to,\n      subject: emailData.subject,\n      body: emailData.body,\n      preview: emailData.body.substring(0, 50) + '...',\n      bodyPreview: emailData.body.substring(0, 50) + '...',\n      timestamp: now,\n      date: now,\n      receivedDateTime: now,\n      read: true,\n      isRead: true,\n      flagged: false,\n      isFlagged: false,\n      categories: [],\n      attachments: emailData.attachments || [],\n      isFocused: false,\n      inferenceClassification: 'focused'\n    };\n    updateMail(mail => [newEmail, ...mail]);\n  };\n\n  const moveEmail = (emailId, folderId) =>\n    amendMail(emailId, () => ({ folderId, parentFolderId: folderId }));\n\n  const deleteEmail = (emailId) => moveEmail(emailId, folderLike(/deleted|trash/i, 'deleted'));\n\n  const markRead = (emailId, read = true) => amendMail(emailId, () => ({ read, isRead: read }));\n\n  const toggleRead = (emailId) =>\n    amendMail(emailId, item => ({ read: !isRead(item), isRead: !isRead(item) }));\n\n  const toggleFlag = (emailId) =>\n    amendMail(emailId, item => ({\n      flagged: !isFlagged(item),\n      isFlagged: !isFlagged(item),\n      flag: { flagStatus: isFlagged(item) ? 'notFlagged' : 'flagged' }\n    }));\n\n  const togglePin = (emailId) => amendMail(emailId, item => ({ isPinned: !item.isPinned }));\n\n  const archiveMessage = (emailId) => moveEmail(emailId, folderLike(/archive/i, 'archive'));\n\n  const addCategory = (emailId, category) => {\n    const known = (state.categories || []).find(\n      item => item.id === category || item.name === category || item.displayName === category\n    );\n    const value = known ? known.id : category;\n    amendMail(emailId, item => {\n      const categories = Array.isArray(item.categories) ? item.categories : [];\n      return {\n        categories: categories.includes(value)\n          ? categories.filter(entry => entry !== value)\n          : [...categories, value]\n      };\n    });\n  };\n\n  const setComposeState = (composeState) => setState(prev => ({ ...prev, composeState }));\n\n  const restoreEmails = (emails) => {\n    setState(prev => ({ ...prev, [mailKey(prev)]: emails }));\n  };\n\n",
+      "reason": "Every mail action read prev.emails, which a schema-backed world does not have, so a delete, a flag or a read marker threw instead of reaching the state; and deleteEmail moved the message to folderId 'deleted', an id no seeded world has."
+    },
+    {
+      "file": "src/context/StoreContext.jsx",
+      "old": "  // --- Diffing for /go endpoint ---",
+      "new": "  // Components read the adapted view; saveState above writes the raw state, so the session's\n  // stored records keep the shape they were seeded in.\n  const view = React.useMemo(() => adaptMailState(state), [state]);\n\n  // --- Diffing for /go endpoint ---",
+      "reason": "One mail list, both vocabularies, computed once per state change and never saved."
+    },
+    {
+      "file": "src/context/StoreContext.jsx",
+      "old": "    <StoreContext.Provider value={{\n      state,",
+      "new": "    <StoreContext.Provider value={{\n      state: view,",
+      "reason": "Hand the components the adapted view."
+    },
+    {
+      "file": "src/context/StoreContext.jsx",
+      "old": "      actions: {\n        sendEmail, deleteEmail, markRead, toggleFlag, moveEmail, addCategory,\n        restoreEmails, createFolder, createTask, toggleTaskComplete, createEvent, addContact, updateContact,\n        getStateDiff\n      }",
+      "new": "      actions: {\n        sendEmail, deleteEmail, markRead, toggleFlag, moveEmail, addCategory,\n        restoreEmails, createFolder, createTask, toggleTaskComplete, createEvent, addContact, updateContact,\n        getStateDiff,\n        // EmailList calls these names -- the hover buttons and every context-menu item -- and\n        // none of them existed, so each one threw \"actions.deleteMessage is not a function\".\n        deleteMessage: deleteEmail,\n        moveMessage: moveEmail,\n        categorizeMessage: addCategory,\n        toggleRead,\n        togglePin,\n        archiveMessage,\n        setComposeState\n      }",
+      "reason": "EmailList calls actions.deleteMessage, moveMessage, categorizeMessage, toggleRead, togglePin, archiveMessage and setComposeState; the store defined none of them."
+    }
+  ],
+  "postman_mock": [
+    {
+      "file": "vite.config.js",
+      "old": "              const newState = data.merge ? deepMerge(currentState, data.state) : data.state\n              writeState(sid, newState)\n              res.setHeader('Content-Type', 'application/json')",
+      "new": "              const newState = data.merge ? deepMerge(currentState, data.state) : data.state\n              fs.writeFileSync(getInitialStateFile(sid), JSON.stringify(newState, null, 2))\n              writeState(sid, newState)\n              res.setHeader('Content-Type', 'application/json')",
+      "reason": "Preview set never pinned a baseline, so /go used the mutated current state as initial and lost the diff."
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "old": "const UserMenu = ({ onClose, onOpenEnvModal }) => (",
+      "new": "const UserMenu = ({ onClose, onOpenEnvModal, workspace = {} }) => (",
+      "reason": "The profile menu asserted the hardcoded person 'John Doe <john.doe@example.com>'. 'John Doe' is one of the names render_check.PLACEHOLDER_TEXT fails an app for, and it sits in a rendered component where no seed can replace it -- the same defect that failed both companies whose render gate ran with airtable_mock. postman is on the runtime surface with no company yet, so this is the failure the next company to mount it would inherit. This clone's pinned schema has no user or identity key, so the menu takes the workspace the state does carry."
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "old": "        <div className=\"text-xs font-semibold text-gray-800\">John Doe</div>\n        <div className=\"text-[10px] text-gray-500 mt-0.5\">john.doe@example.com</div>",
+      "new": "        <div className=\"text-xs font-semibold text-gray-800\">{workspace.name || 'Workspace'}</div>\n        <div className=\"text-[10px] text-gray-500 mt-0.5\">{workspace.type || ''}</div>",
+      "reason": "Name the workspace the state carries instead of a person the world never had."
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "old": "            <UserMenu\n              onClose={() => setShowUserMenu(false)}\n              onOpenEnvModal={onOpenEnvModal}\n            />",
+      "new": "            <UserMenu\n              onClose={() => setShowUserMenu(false)}\n              onOpenEnvModal={onOpenEnvModal}\n              workspace={state.workspace || {}}\n            />",
+      "reason": "Hand the menu the seeded workspace; the header already holds the store."
+    }
+  ],
+  "sentry_mock": [
+    {
+      "file": "vite.config.js",
+      "old": "      if (action === 'reset') {\n        const initial = readInitialState(sid)\n        if (initial) {\n          writeState(sid, initial)\n          res.setHeader('Content-Type', 'application/json')\n          res.end(JSON.stringify({ success: true, sid, message: 'State reset to initial.' }))\n        } else {\n          clearState(sid)\n          res.setHeader('Content-Type', 'application/json')\n          res.end(JSON.stringify({ success: true, sid, message: 'State cleared.' }))\n        }\n        return\n      }",
+      "new": "      if (action === 'reset') {\n        clearState(sid);\n        res.setHeader('Content-Type', 'application/json');\n        res.end(JSON.stringify({ success: true, sid })); return;\n      }",
+      "reason": "Reset must remove current and initial files; upstream restored the baseline and left has_custom_state true."
+    }
+  ],
+  "slack_mock": [
+    {
+      "file": "src/App.jsx",
+      "old": "import { AppProvider } from './context/AppContext';\n",
+      "new": "import { AppProvider, useApp } from './context/AppContext';\n",
+      "reason": "The index redirect below reads the loaded state to pick a channel that exists."
+    },
+    {
+      "file": "src/App.jsx",
+      "old": "function RedirectWithQuery({ to }) {\n  const [searchParams] = useSearchParams();\n  const query = searchParams.toString();\n  return <Navigate to={query ? `${to}?${query}` : to} replace />;\n}\n",
+      "new": "function RedirectWithQuery({ to }) {\n  const [searchParams] = useSearchParams();\n  const { state } = useApp();\n  const query = searchParams.toString();\n  // Land on a channel the workspace actually has: the configured default when it exists,\n  // otherwise the first channel the current user belongs to (or the first channel at all).\n  if (!state || !state.channels) return null;\n  const wanted = to.startsWith('/channel/') ? to.slice('/channel/'.length) : null;\n  let target = to;\n  if (wanted && !state.channels.some(ch => ch.channelId === wanted)) {\n    const me = state.currentUser && state.currentUser.userId;\n    const first = state.channels.find(ch => (ch.members || []).includes(me)) || state.channels[0];\n    if (first) target = `/channel/${first.channelId}`;\n  }\n  return <Navigate to={query ? `${target}?${query}` : target} replace />;\n}\n",
+      "reason": "Upstream always redirects / to /channel/general; seeded workspaces name their own channels, so the first view was 'Channel not found'."
+    },
+    {
+      "file": "src/components/ChannelView.jsx",
+      "old": "import { useParams } from 'react-router-dom';\n",
+      "new": "import { useParams, Navigate } from 'react-router-dom';\n",
+      "reason": "ChannelView redirects unknown channel ids instead of dead-ending."
+    },
+    {
+      "file": "src/components/ChannelView.jsx",
+      "old": "    return <div className=\"channel-view\">Channel not found</div>;\n",
+      "new": "    // An unknown channel id (a stale link or the shipped default) goes to the first channel\n    // this workspace has instead of a dead end; a workspace with no channels keeps the notice.\n    const me = state.currentUser && state.currentUser.userId;\n    const first = state.channels.find(ch => (ch.members || []).includes(me)) || state.channels[0];\n    if (first) {\n      return <Navigate to={`/channel/${first.channelId}${window.location.search}`} replace />;\n    }\n    return <div className=\"channel-view\">Channel not found</div>;\n",
+      "reason": "A route naming a channel the seeded state does not have showed 'Channel not found' as the worker's first screen; redirect to an existing channel and keep ?sid."
+    }
+  ],
+  "tableau_mock": [
+    {
+      "file": "vite.config.js",
+      "old": "      if (action === 'reset') {\n        const initial = readInitialState(sid)\n        if (initial) {\n          writeState(sid, initial)\n          res.setHeader('Content-Type', 'application/json')\n          res.end(JSON.stringify({ success: true, sid, message: 'State reset to initial.' }))\n        } else {\n          clearState(sid)\n          res.setHeader('Content-Type', 'application/json')\n          res.end(JSON.stringify({ success: true, sid, message: 'State cleared.' }))\n        }\n        return\n      }",
+      "new": "      if (action === 'reset') {\n        clearState(sid);\n        res.setHeader('Content-Type', 'application/json');\n        res.end(JSON.stringify({ success: true, sid })); return;\n      }",
+      "reason": "Reset must remove current and initial files; upstream restored the baseline and left has_custom_state true."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "export const initializeData = (sid = null, customState = null) => {",
+      "new": "export const initializeData = (sid = null, customState = null) => {\n  if (customState?.workbook && !customState.workbooks) {\n    const CHART_TYPES = ['bar', 'stackedBar', 'line', 'area'];\n    const chartRows = (s) => {\n      const cd = s.chartData;\n      if (Array.isArray(cd)) {\n        // Row-array seeds: each row is {field: value}; the shelf pills name the category and the measures.\n        const data = cd.filter(r => r && typeof r === 'object' && !Array.isArray(r));\n        const keys = Object.keys(data[0] || {});\n        const pills = [...(s.columns || []), ...(s.rows || [])].map(p => p && p.fieldName).filter(n => keys.includes(n));\n        const isNumber = (k) => data.some(r => typeof r[k] === 'number');\n        const xKey = pills.find(n => !isNumber(n)) || keys.find(k => !isNumber(k)) || keys[0] || 'category';\n        const measures = pills.filter(n => n !== xKey && isNumber(n));\n        return { xKey, data, series: measures.length ? measures : keys.filter(k => k !== xKey && isNumber(k)) };\n      }\n      // Schema form: {type, categories[], series[{name, values[]}]}.\n      const categories = Array.isArray(cd?.categories) ? cd.categories : [];\n      const series = Array.isArray(cd?.series) ? cd.series.filter(v => v && typeof v === 'object') : [];\n      const data = categories.map((category, i) => Object.fromEntries([['category', category], ...series.map(v => [v.name, Array.isArray(v.values) ? v.values[i] : null])]));\n      return { xKey: 'category', data, series: series.map(v => v.name) };\n    };\n    // The pinned schema's filters are {fieldId, fieldName, filterType, selectedValues, rangeMin,\n    // rangeMax, showFilter}; the UI reads {id, field, values[], selected[]} and threw on every one\n    // of them -- filter.values.map in the filter panel, then selected.length in getFilteredConfig.\n    // The seed says what is selected and never what the domain is, so the domain is what is\n    // selected: the sheet renders unfiltered, and unticking a value filters it from there.\n    const sheetFilters = (s) => (s.filters || []).map(f => {\n      const selected = Array.isArray(f.selectedValues) ? f.selectedValues : Array.isArray(f.selected) ? f.selected : [];\n      const values = Array.isArray(f.values) ? f.values : selected;\n      return { ...f, id: f.fieldId || f.id || f.fieldName, field: f.fieldName || f.field || f.fieldId || '', values, selected };\n    });\n    const sheets = (customState.worksheets || []).map(s => {\n      const c = chartRows(s);\n      const wanted = (s.chartData && !Array.isArray(s.chartData) && s.chartData.type) || s.showMeType;\n      const type = CHART_TYPES.includes(wanted) ? wanted : 'bar';\n      const keys = c.series.map(key => ({ key }));\n      return { ...s, filters: sheetFilters(s), chartConfig: { type, xKey: c.xKey, data: c.data, bars: keys, lines: keys, areas: keys } };\n    });\n    const base = createInitialData();\n    // The schema's uiState is {sidebarTab, showMeOpen, activeView, selectedFields, dragState,\n    // undoStack, redoStack} and shares no key with the one this UI reads, so overlaying it left\n    // exploreFilter undefined and ExplorePage threw on exploreFilter.startsWith.\n    const openSheet = sheets.some(s => s.id === customState.workbook.activeSheetId) ? customState.workbook.activeSheetId : (sheets[0] && sheets[0].id) || null;\n    customState = { ...base, ...customState, workbooks: [{ ...customState.workbook, sheets, owner: customState.currentUser?.name || '', project: '', tags: [], viewCount: 0 }], recents: [customState.workbook.id], favorites: [], users: customState.currentUser ? [{ ...customState.currentUser, siteRole: customState.currentUser.siteRole || customState.currentUser.role || 'Viewer' }] : [], uiState: { ...base.uiState, ...customState.uiState, currentPage: 'workbook', selectedWorkbook: customState.workbook.id, selectedSheet: openSheet } };\n  }",
+      "reason": "The shipped UI expects a workbook collection and chart configs while the pinned schema defines one workbook and worksheet chartData. Adapt that seed to the existing workbook/chart view; chartData may be the schema's {type, categories, series} object or the row-array form seeds produce (a .categories.map on a row array threw inside the load promise and left the app on Loading). A seeded filter shape threw in the filter panel and in getFilteredConfig (9 of 9 worksheets in the CalHR world carry filters, so the whole world white-screened), and the seeded uiState shares no key with the one the UI reads, so Explore threw on exploreFilter.startsWith. The seeded currentUser is {name, role} and the admin page reads u.siteRole.toLowerCase(), so the one page that lists the site's people threw."
+    }
+  ],
+  "trello_mock": [
+    {
+      "file": "src/components/Navbar.jsx",
+      "old": "import { Xrello,",
+      "new": "import { Trello as Xrello,",
+      "reason": "Upstream build error: Navbar.jsx imports a non-existent lucide-react icon 'Xrello' (brand-scrub rename of 'Trello'), so vite build fails and the app never renders."
+    },
+    {
+      "file": "src/App.jsx",
+      "old": "import { StoreProvider } from './context/StoreContext';",
+      "new": "import { StoreProvider, useStore } from './context/StoreContext';",
+      "reason": "The landing redirect needs the store to know which board the company has."
+    },
+    {
+      "file": "src/App.jsx",
+      "old": "function App() {",
+      "new": "// trello's only static route is a board list. Measured on blastx-consulting's world: 127 visible\n// characters and 2 of 130 seeded values, with the company's 3 boards, 16 lists and 218 cards all\n// behind /board/:boardId -- a parameterised route no entry_path in catalogs/app_entry_routes.json\n// can name. Open the first board, the way a link to a board does; the list stays at /boards. The\n// seed arrives after mount and this store keeps no hydration flag, so render the list until a\n// board exists rather than redirecting to the demo board id.\nfunction OpenTheFirstBoard() {\n  const { state } = useStore();\n  const { search } = useLocation();\n  const first = (state && state.boardOrder ? state.boardOrder : []).find(\n    (id) => state && state.boards && state.boards[id]\n  );\n  if (!first) return <BoardList />;\n  return <Navigate to={`/board/${first}${search}`} replace />;\n}\n\nfunction App() {",
+      "reason": "Land the worker on the company's first board instead of a board list that shows 2 of 130 seeded values in 127 characters. Same shape as the google_sheets launcher fix."
+    },
+    {
+      "file": "src/App.jsx",
+      "old": "          <Route path=\"/\" element={<BoardList />} />",
+      "new": "          <Route path=\"/\" element={<OpenTheFirstBoard />} />\n          <Route path=\"/boards\" element={<BoardList />} />",
+      "reason": "Route / to the board and keep the list reachable at /boards."
+    }
+  ],
+  "uber_eats_mock": [
+    {
+      "file": "src/main.jsx",
+      "old": "import App from './App.jsx';",
+      "new": "import { BrowserRouter, Routes, Route } from 'react-router-dom';\nimport { AppProvider } from './context/AppContext';\nimport Header from './components/Header';\nimport Homepage from './pages/Homepage';\nimport StorePage from './pages/StorePage';\nimport Checkout from './pages/Checkout';\nconst App = () => <BrowserRouter><AppProvider><Header /><Routes><Route path=\"/\" element={<Homepage />} /><Route path=\"/store/:id\" element={<StorePage />} /><Route path=\"/checkout\" element={<Checkout />} /></Routes></AppProvider></BrowserRouter>;",
+      "reason": "The entrypoint mixed legacy StoreProvider with components requiring AppProvider. Mount the existing schema-backed home/store pages under their matching provider."
+    }
+  ],
+  "vercel_mock": [
+    {
+      "file": "src/context/AppContext.jsx",
+      "old": "      fetch(`/go?sid=${encodeURIComponent(sid)}`)\n        .then(r => r.json())\n        .then(data => {\n          if (data.current_state && Object.keys(data.current_state).length > 0) {\n            initialStateRef.current = data.initial_state || data.current_state;\n            dispatch({ type: 'SET_STATE', payload: data.current_state });",
+      "new": "      fetch(`/state?sid=${encodeURIComponent(sid)}`)\n        .then(r => r.json())\n        .then(data => {\n          const seeded = data && data.has_custom_state ? data.stored_state : null;\n          if (seeded && Object.keys(seeded).length > 0) {\n            initialStateRef.current = seeded;\n            dispatch({ type: 'SET_STATE', payload: seeded });",
+      "reason": "Upstream first-visit loader reads /go, which the worker proxy denies (403), so seeded sessions rendered shipped fixtures; read the seed from /state (stored_state) instead."
+    }
+  ],
+  "wandb_mock": [
+    {
+      "file": "vite.config.js",
+      "old": "        if (fs.existsSync(filePath)) {\n          const data = fs.readFileSync(filePath, 'utf-8');\n          res.writeHead(200);\n          res.end(data);\n        } else {\n          res.writeHead(200);\n          res.end('{}');\n        }\n      });\n    }\n  };\n}",
+      "new": "        if (fs.existsSync(filePath)) {\n          const data = fs.readFileSync(filePath, 'utf-8');\n          let parsed = null;\n          try { parsed = JSON.parse(data); } catch { parsed = null; }\n          res.writeHead(200);\n          res.end(JSON.stringify({ stored_state: parsed, has_custom_state: parsed !== null, sid }));\n        } else {\n          res.writeHead(200);\n          res.end(JSON.stringify({ stored_state: null, has_custom_state: false, sid }));\n        }\n      });\n    }\n  };\n}",
+      "reason": "GET /state answered the bare stored state instead of the hub envelope {stored_state, has_custom_state, sid}. hub_identity.rewrite_state reads stored_state to scope the world to the signed-in worker and write_state reads it to rebase a save, so every worker saw the unscoped world and a merged write answered 502; hub_app.smoke reads has_custom_state and raised KeyError. This is the preview server's handler, the one `vite preview` registers."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "    const data = await res.json();\n    return data && typeof data === 'object' && Object.keys(data).length > 0 ? data : null;",
+      "new": "    const data = await res.json();\n    const stored = data && typeof data === 'object' && 'stored_state' in data ? data.stored_state : data;\n    return stored && typeof stored === 'object' && Object.keys(stored).length > 0 ? stored : null;",
+      "reason": "fetchCustomState took the whole /state response as the state. With the envelope restored above it has to unwrap stored_state; it still accepts a bare state so the dev server keeps working."
+    }
+  ],
+  "weibo_mock": [
+    {
+      "file": "src/context/AppContext.jsx",
+      "old": "      fetch(`/go?sid=${sid}`)\n        .then(r => r.json())\n        .then(data => {\n          if (data.current_state) {\n            dispatch({ type: 'SET_STATE', payload: data.current_state });\n            initialStateRef.current = data.initial_state || data.current_state;\n          }\n        })\n",
+      "new": "      fetch(`/state?sid=${sid}`)\n        .then(r => r.json())\n        .then(data => {\n          if (data && data.has_custom_state && data.stored_state) {\n            dispatch({ type: 'SET_STATE', payload: data.stored_state });\n            initialStateRef.current = data.stored_state;\n          }\n        })\n",
+      "reason": "Upstream first-visit loader reads the harness-only /go route (denied to workers) instead of /state, so seeded sessions rendered shipped fixtures."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "    const params = new URLSearchParams(window.location.search);\n    const sid = params.get('sid');\n    if (!sid) return;",
+      "new": "    const sid = rememberedSid();\n    if (!sid) return;",
+      "reason": "// The sid only appears in the URL of the first page: react-router navigation drops the query (41 call sites in weibo, 29 in xiaohongshu), so every save after the first click posted nowhere and the worker's work never reached the grader. Remembered the way monday's getSessionId does, so it also survives a reload on a query-less URL."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "async function syncStateToServer(state) {",
+      "new": "// The sid of the session this tab belongs to, kept across in-app navigation and reloads.\nexport function rememberedSid() {\n  try {\n    const fromUrl = new URLSearchParams(window.location.search).get('sid');\n    if (fromUrl) {\n      sessionStorage.setItem('mock_sid', fromUrl);\n      return fromUrl;\n    }\n    return sessionStorage.getItem('mock_sid') || null;\n  } catch (e) {\n    return null;\n  }\n}\n\nasync function syncStateToServer(state) {",
+      "reason": "// The sid only appears in the URL of the first page: react-router navigation drops the query (41 call sites in weibo, 29 in xiaohongshu), so every save after the first click posted nowhere and the worker's work never reached the grader. Remembered the way monday's getSessionId does, so it also survives a reload on a query-less URL."
+    },
+    {
+      "file": "src/pages/HomePage.jsx",
+      "old": "      .filter(u => u.isFollowing || u.id === 'user_current')",
+      "new": "      .filter(u => u.isFollowing || u.id === (state.currentUser && state.currentUser.id) || u.id === 'user_current')",
+      "reason": "The escape hatch that keeps your own posts in your own feed tested the shipped demo id; a seeded world's signed-in user is one of its own people (lb-jun), so it matched nobody."
+    },
+    {
+      "file": "src/context/AppContext.jsx",
+      "old": "import { createInitialData, loadState, saveState, getStateDiff } from '../utils/dataManager';",
+      "new": "import { createInitialData, loadState, saveState, getStateDiff, rememberedSid } from '../utils/dataManager';",
+      "reason": "A reload after in-app navigation has no ?sid in the URL, so the load path fetched nothing and the app hydrated its shipped demo data -- and with the save path now remembering the sid, that demo data would have been posted over the company's session. Load and save read the same remembered sid."
+    },
+    {
+      "file": "src/context/AppContext.jsx",
+      "old": "    const params = new URLSearchParams(window.location.search);\n    const sid = params.get('sid');\n    if (sid) {",
+      "new": "    const sid = rememberedSid();\n    if (sid) {",
+      "reason": "A reload after in-app navigation has no ?sid in the URL, so the load path fetched nothing and the app hydrated its shipped demo data -- and with the save path now remembering the sid, that demo data would have been posted over the company's session. Load and save read the same remembered sid."
+    }
+  ],
+  "westlaw_mock": [
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "export function getSessionId() {\n  const params = new URLSearchParams(window.location.search);\n  return params.get('sid') || 'default';\n}",
+      "new": "export function getSessionId() {\n  // Internal navigation drops the query string, and every other hub clone remembers the sid in\n  // sessionStorage for exactly that reason. Without this, one click on a nav link moves the worker\n  // off the company's session onto the shared `default` one: every later write lands there and\n  // every later page renders the shipped demo records.\n  const params = new URLSearchParams(window.location.search);\n  const sid = params.get('sid');\n  if (sid) {\n    try { sessionStorage.setItem('westlaw_sid', sid); } catch (e) { /* ignore */ }\n    return sid;\n  }\n  try { return sessionStorage.getItem('westlaw_sid') || 'default'; } catch (e) { /* ignore */ }\n  return 'default';\n}",
+      "reason": "getSessionId() read ?sid= from the URL on every mount and remembered nothing, and react-router links carry no query string, so the first click on the Folders/History/Favorites nav moved the app onto session `default`. Measured: after one click the URL is /folders, the app posts to `default`, the seeded world stops being read and the page renders the shipped demo user. tripadvisor, wandb, TradingView and youtube all persist the sid in sessionStorage; westlaw is the only one of the five that does not."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "    const res = await fetch(`/state?sid=${sid}`);\n    if (res.ok) {\n      const data = await res.json();\n      return data;\n    }",
+      "new": "    const res = await fetch(`/state?sid=${sid}`);\n    if (res.ok) {\n      const data = await res.json();\n      if (data && data.has_custom_state && data.stored_state) return data.stored_state;\n      return null;\n    }",
+      "reason": "fetchCustomState returned the /state envelope {stored_state, has_custom_state, sid}, and initializeData's `if (custom) return custom` always took it because an envelope is always truthy. The app therefore ran with state = the envelope: no cases, no statutes, no currentUser, and a seeded world was discarded as well as the shipped demo data. Unwrap stored_state and fall through to createInitialData when there is none."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "export async function initializeData(sid) {\n  const custom = await fetchCustomState(sid);\n  if (custom) return custom;\n  const initial = createInitialData();\n  // Save initial state to server\n  try {\n    await fetch(`/post?sid=${sid}`, {\n      method: 'POST',\n      headers: { 'Content-Type': 'application/json' },\n      body: JSON.stringify({ action: 'set', state: initial })\n    });\n  } catch (e) {\n    // ignore\n  }\n  return initial;\n}",
+      "new": "export async function initializeData(sid) {\n  const custom = await fetchCustomState(sid);\n  if (custom) return custom;\n  const initial = createInitialData();\n  // Claim a baseline only when the server says this session has none. A company-sized world is\n  // megabytes and every navigation refetches it, so a read that was aborted or failed must leave\n  // the seeded world alone instead of replacing it with these demo records.\n  try {\n    const res = await fetch(`/state?sid=${sid}`);\n    const data = res.ok ? await res.json() : null;\n    if (!data || data.has_custom_state) return (data && data.stored_state) || initial;\n    await fetch(`/post?sid=${sid}`, {\n      method: 'POST',\n      headers: { 'Content-Type': 'application/json' },\n      body: JSON.stringify({ action: 'set', state: initial })\n    });\n  } catch (e) {\n    // ignore\n  }\n  return initial;\n}",
+      "reason": "With fetchCustomState fixed, the fall-through posts the shipped demo records as a new baseline whenever the /state read did not come back -- which replaces a seeded company world with Sarah Mitchell's fifteen demo cases. Observed once in a 5.24 MB volume run: the page ended up on the demo user with an empty state_diff. Only claim a baseline when the server reports has_custom_state false."
+    }
+  ],
+  "xiaohongshu_mock": [
+    {
+      "file": "src/context/AppContext.jsx",
+      "old": "          const res = await fetch(`/go?sid=${sid}`);\n          if (res.ok) {\n            const data = await res.json();\n            if (data.current_state && Object.keys(data.current_state).length > 0) {\n              serverState = data.current_state;\n            }\n          }",
+      "new": "          const res = await fetch(`/state?sid=${sid}`);\n          if (res.ok) {\n            const data = await res.json();\n            if (data.has_custom_state && data.stored_state && Object.keys(data.stored_state).length > 0) {\n              serverState = data.stored_state;\n            }\n          }",
+      "reason": "Upstream first-visit loader reads /go (harness-only, denied to workers) instead of the app-facing /state envelope; use stored_state from /state?sid."
+    },
+    {
+      "file": "src/context/AppContext.jsx",
+      "old": "export function AppProvider({ children }) {\n  const [state, dispatch] = useReducer(appReducer, null);",
+      "new": "const INITIAL_SID = (() => { try { return new URLSearchParams(window.location.search).get('sid'); } catch { return null; } })();\nexport function AppProvider({ children }) {\n  const [state, dispatch] = useReducer(appReducer, null);",
+      "reason": "The index route <Navigate to=/explore replace> drops ?sid before the provider's init effect runs; remember the sid seen at module load."
+    },
+    {
+      "file": "src/context/AppContext.jsx",
+      "old": "      const sid = new URLSearchParams(window.location.search).get('sid');\n      let serverState = null;",
+      "new": "      const sid = new URLSearchParams(window.location.search).get('sid') || INITIAL_SID || rememberedSid();\n      let serverState = null;",
+      "reason": "Fall back to the module-load sid when the redirect already stripped the query string. A genuine reload re-evaluates the module with no query, so the remembered sid is the last resort."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "    const sid = new URLSearchParams(window.location.search).get('sid');",
+      "new": "    const sid = rememberedSid();",
+      "reason": "// The sid only appears in the URL of the first page: react-router navigation drops the query (41 call sites in weibo, 29 in xiaohongshu), so every save after the first click posted nowhere and the worker's work never reached the grader. Remembered the way monday's getSessionId does, so it also survives a reload on a query-less URL."
+    },
+    {
+      "file": "src/utils/dataManager.js",
+      "old": "let _saveServerTimer = null;",
+      "new": "// The sid of the session this tab belongs to, kept across in-app navigation and reloads.\nexport function rememberedSid() {\n  try {\n    const fromUrl = new URLSearchParams(window.location.search).get('sid');\n    if (fromUrl) {\n      sessionStorage.setItem('mock_sid', fromUrl);\n      return fromUrl;\n    }\n    return sessionStorage.getItem('mock_sid') || null;\n  } catch (e) {\n    return null;\n  }\n}\n\nlet _saveServerTimer = null;",
+      "reason": "// The sid only appears in the URL of the first page: react-router navigation drops the query (41 call sites in weibo, 29 in xiaohongshu), so every save after the first click posted nowhere and the worker's work never reached the grader. Remembered the way monday's getSessionId does, so it also survives a reload on a query-less URL."
+    },
+    {
+      "file": "src/context/AppContext.jsx",
+      "old": "import { saveState, loadInitialState, createInitialData, getStateDiff, initializeState } from '../utils/dataManager.js';",
+      "new": "import { saveState, loadInitialState, createInitialData, getStateDiff, initializeState, rememberedSid } from '../utils/dataManager.js';",
+      "reason": "A reload after in-app navigation has no ?sid in the URL, so the load path fetched nothing and the app hydrated its shipped demo data -- and with the save path now remembering the sid, that demo data would have been posted over the company's session. Load and save read the same remembered sid."
+    }
+  ],
+  "zillow_mock": [
+    {
+      "file": "src/pages/SavedHomes.jsx",
+      "old": "  const savedSearches = state.user.savedSearches || [];",
+      "new": "  // user.savedSearches holds ids: that is what the schema documents and what the app's own\n  // saveSearch writes, while the search objects live in state.savedSearches. This page read the\n  // ids as objects, so search.filters.search threw on the app's own default data.\n  const savedSearchIds = state.user.savedSearches || [];\n  const savedSearches = [\n    ...(state.savedSearches || []).filter(item => savedSearchIds.includes(item.id)),\n    ...savedSearchIds.filter(item => item && typeof item === 'object'),\n  ];",
+      "reason": "Saved Homes threw TypeError: Cannot read properties of undefined (reading 'search') on the app's own defaults, where user.savedSearches is [\"search-1\", \"search-2\"]."
+    },
+    {
+      "file": "src/pages/SavedHomes.jsx",
+      "old": "    updateFilters(search.filters);",
+      "new": "    updateFilters(search.filters || {});",
+      "reason": "A saved search with no filters must not blank the results page."
+    },
+    {
+      "file": "src/pages/SavedHomes.jsx",
+      "old": "                            {search.filters.search || 'Any Location'} • {search.alertsEnabled ? 'Alerts On' : 'Alerts Off'}",
+      "new": "                            {(search.filters && search.filters.search) || search.location || 'Any Location'} • {(search.emailAlerts === undefined ? search.alertsEnabled : search.emailAlerts) ? 'Alerts On' : 'Alerts Off'}",
+      "reason": "saveSearch deletes alertsEnabled in favour of emailAlerts, so a search the worker saved read 'Alerts Off' however it was saved."
+    },
+    {
+      "file": "src/components/PropertyCard.jsx",
+      "old": "  const agentName = agent ? agent.name.split(' ')[0] + ' ' + agent.name.split(' ')[1][0] + '.' : '';",
+      "new": "  // A one-word agent name ('Compass', a brokerage listed as the agent) made [1][0] throw and\n  // took down every property card with it. AgentFinder and Sell already initial the same way.\n  const agentName = agent && agent.name\n    ? agent.name\n        .split(' ')\n        .filter(Boolean)\n        .map((part, index) => (index === 0 ? part : `${part[0]}.`))\n        .join(' ')\n    : '';",
+      "reason": "agent.name.split(' ')[1][0] throws on a one-word name, and PropertyCard is the home grid, the saved list and every search result."
+    }
+  ],
+  "zoom_web_mock": [
+    {
+      "file": "src/components/Layout.jsx",
+      "old": "    channels.filter(ch => ch.name && ch.name.toLowerCase().includes(q)).slice(0, 3).forEach(ch => {",
+      "new": "    // The store has no channels slice at all, so the global search box -- on every page, since\n    // Layout wraps the app -- threw on the first character typed.\n    (channels || []).filter(ch => ch.name && ch.name.toLowerCase().includes(q)).slice(0, 3).forEach(ch => {",
+      "reason": "useStore() supplies no channels, and Layout.getSearchResults runs on every render: typing one character into the search box threw on Home, Meetings, Contacts and everywhere else."
+    }
+  ],
+  "robinhood_mock": [
+    {
+      "file": "src/lib/mockData.js",
+      "old": "  return {\n    id: tx.id || `${Date.now()}_${index}`,",
+      "new": "  return {\n    ...tx,\n    id: tx.id || `${Date.now()}_${index}`,",
+      "reason": "normalizeTransaction rebuilt every seeded transaction from a fixed field list that omits totalAmount, name, limitPrice and stopPrice -- all four documented in the pinned schema (totalAmount: 'Total trade value', default 0) and all five of robinhood-asset-management's transactions carry them. History.jsx then formats the missing totalAmount, and Intl.NumberFormat().format(undefined) renders 'NaN', so every row of the trade history read '-$NaN'. That is one of the strings render_check.PLACEHOLDER_TEXT fails an app for, so the render gate would refuse the company for a field the author did write. Spread the record first so the defaults only fill gaps; same shape as google_calendar's normalizeEvent fix."
+    },
+    {
+      "file": "src/lib/mockData.js",
+      "old": "  const s = {\n    id: stock.id || stock.symbol || `STOCK${index}`,",
+      "new": "  const s = {\n    ...stock,\n    id: stock.id || stock.symbol || `STOCK${index}`,",
+      "reason": "normalizeStock drops every field outside its list: the seeded stocks carry tags, and StockDetail reads open, high, low, peRatio, week52High, week52Low and earnings, none of which survive. Same fixed-list truncation as normalizeTransaction."
+    },
+    {
+      "file": "src/lib/mockData.js",
+      "old": "  return {\n    id: news.id || index + 1,",
+      "new": "  return {\n    ...news,\n    id: news.id || index + 1,",
+      "reason": "normalizeNews drops relatedSymbols and url, both present on every seeded news item."
+    },
+    {
+      "file": "src/lib/mockData.js",
+      "old": "  return {\n    id: notification.id || `notif_${index}`,",
+      "new": "  return {\n    ...notification,\n    id: notification.id || `notif_${index}`,",
+      "reason": "normalizeNotification truncates the same way; keeping the record's own fields is the consistent rule for all four normalizers."
+    },
+    {
+      "file": "src/lib/utils.js",
+      "old": "export function formatCurrency(value) {\n  return new Intl.NumberFormat('en-US', {",
+      "new": "export function formatCurrency(value) {\n  const amount = Number(value);\n  return new Intl.NumberFormat('en-US', {",
+      "reason": "Belt and braces for the NaN above: formatCurrency is the one place the app turns a number into money, and Intl.NumberFormat().format(undefined) returns '$NaN'. A non-finite amount now renders as $0.00 rather than the string the render gate fails on, so a future missing field degrades instead of condemning the company."
+    },
+    {
+      "file": "src/lib/utils.js",
+      "old": "    maximumFractionDigits: 2,\n  }).format(value);",
+      "new": "    maximumFractionDigits: 2,\n  }).format(Number.isFinite(amount) ? amount : 0);",
+      "reason": "The second half of the formatCurrency guard."
+    },
+    {
+      "file": "src/lib/mockData.js",
+      "old": "  s.history = stock.history || generateHistoricalData(s.currentPrice);",
+      "new": "  // The pinned schema gives every one of these a default, which means the app supplies it when the\n  // seed does not: change 0, changePercent 0, open prevClose, peRatio 0, earnings\n  // {nextDate:'',epsEstimate:0,revenueEstimate:''}. normalizeStock filled four fields and none of\n  // these, and StockDetail reads stock.changePercent.toFixed(2) and stock.earnings.epsEstimate\n  // .toFixed(2) unguarded. robinhood-asset-management's stocks carry about, currentPrice, history,\n  // id, name, sector, symbol and tags -- a believable fund sheet -- so every click from the\n  // watchlist into a stock replaced the page with 'Something went wrong. TypeError: Cannot read\n  // properties of undefined (reading toFixed)'. Supply the documented defaults.\n  if (typeof s.change !== 'number') s.change = Number((s.currentPrice - s.prevClose).toFixed(2));\n  if (typeof s.changePercent !== 'number') {\n    s.changePercent = s.prevClose ? Number(((s.change / s.prevClose) * 100).toFixed(2)) : 0;\n  }\n  if (typeof s.open !== 'number') s.open = s.prevClose;\n  if (typeof s.peRatio !== 'number') s.peRatio = 0;\n  if (!s.earnings || typeof s.earnings !== 'object') {\n    s.earnings = { nextDate: '', epsEstimate: 0, revenueEstimate: '' };\n  } else {\n    if (typeof s.earnings.epsEstimate !== 'number') s.earnings = { ...s.earnings, epsEstimate: 0 };\n    if (typeof s.earnings.nextDate !== 'string') s.earnings = { ...s.earnings, nextDate: '' };\n    if (typeof s.earnings.revenueEstimate !== 'string') s.earnings = { ...s.earnings, revenueEstimate: '' };\n  }\n  s.history = stock.history || generateHistoricalData(s.currentPrice);",
+      "reason": "Every stock field StockDetail dereferences unguarded -- changePercent, open, peRatio and earnings.{nextDate,epsEstimate,revenueEstimate} -- has a documented default in the pinned schema that normalizeStock never supplied. robinhood-asset-management's seeded stocks carry none of them, so every click from the watchlist into a stock replaced the page with 'Something went wrong. TypeError: Cannot read properties of undefined (reading toFixed)'. Recorded in experiments/interact/fidelity-20260910-after/robinhood_mock.json as no_browser_faults false with 12 faults and no_click_shows_an_error false on three watchlist rows. change and changePercent are derived from currentPrice and prevClose, which is what the app's own price tick does."
+    },
+    {
+      "file": "src/components/Layout.jsx",
+      "old": "            <div className=\"w-8 h-8 rounded-full bg-surface-hover flex items-center justify-center text-sm font-bold border border-surface\">\n              DU\n            </div>",
+      "new": "            <div className=\"w-8 h-8 rounded-full bg-surface-hover flex items-center justify-center text-sm font-bold border border-surface\">\n              {((state.user && state.user.name) || '').split(/\\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join('').toUpperCase()}\n            </div>",
+      "reason": "The header avatar was the literal string 'DU' -- the initials of the clone's INITIAL_USER, 'Demo User' -- on every screen of every seeded world. The worker proxy substitutes the signed-in worker at state.user, so the app has the right person and was printing somebody else's initials beside the company's own records."
+    }
+  ],
+  "mailchimp_mock": [
+    {
+      "file": "src/components/Layout.jsx",
+      "old": "              {state.user.firstName[0]}{state.user.lastName[0]}",
+      "new": "              {(state.user?.firstName || '')[0] || ''}{(state.user?.lastName || '')[0] || ''}",
+      "reason": "The header avatar indexed state.user.firstName[0] with no guard, so one missing field throws out of the whole layout and the page renders nothing. Measured on rs-americas: the stored world's `user` is a list of four worker records (the schema calls it an object; the worker proxy substitutes one, so a VM worker is fine), and every gate that opens the app without that proxy -- interact_check, which is what recorded FAIL first_screen_not_empty, shows_seeded_content, clicks_mostly_work and no_browser_faults for this app -- got 0 characters and `TypeError: Cannot read properties of undefined (reading '0')`. An app must degrade on a missing presentation field, not blank."
+    }
+  ],
+  "epic-health_mock": [
+    {
+      "file": "src/pages/HealthSummary.jsx",
+      "old": "  const vitalItems = latestVitals ? [\n    { label: 'Blood Pressure', value: `${latestVitals.readings.bloodPressureSystolic.value}/${latestVitals.readings.bloodPressureDiastolic.value}`, unit: 'mmHg', icon: '♥', status: latestVitals.readings.bloodPressureSystolic.value < 120 ? 'normal' : latestVitals.readings.bloodPressureSystolic.value < 130 ? 'elevated' : 'high' },\n    { label: 'Heart Rate', value: latestVitals.readings.heartRate.value, unit: 'bpm', icon: '~', status: 'normal' },\n    { label: 'Temperature', value: latestVitals.readings.temperature.value, unit: '°F', icon: '🌡', status: 'normal' },\n    { label: 'Weight', value: latestVitals.readings.weight.value, unit: 'lbs', icon: '⚖', status: 'normal' },\n    { label: 'BMI', value: latestVitals.readings.bmi.value, unit: 'kg/m²', icon: 'B', status: latestVitals.readings.bmi.value < 25 ? 'normal' : latestVitals.readings.bmi.value < 30 ? 'elevated' : 'high' },\n    { label: 'O₂ Saturation', value: latestVitals.readings.oxygenSaturation.value, unit: '%', icon: 'O₂', status: latestVitals.readings.oxygenSaturation.value >= 95 ? 'normal' : 'high' },\n  ] : []\n",
+      "new": "  const vitalReadings = (latestVitals && latestVitals.readings) || {}\n  const reading = (name) => {\n    const r = vitalReadings[name]\n    return r && r.value !== null && r.value !== undefined ? r.value : null\n  }\n  const band = (v, normal, elevated) => (v < normal ? 'normal' : v < elevated ? 'elevated' : 'high')\n  const systolic = reading('bloodPressureSystolic')\n  const diastolic = reading('bloodPressureDiastolic')\n  const vitalItems = [\n    systolic !== null && diastolic !== null\n      ? { label: 'Blood Pressure', value: `${systolic}/${diastolic}`, unit: 'mmHg', icon: '\\u2665', status: band(systolic, 120, 130) }\n      : null,\n    reading('heartRate') !== null\n      ? { label: 'Heart Rate', value: reading('heartRate'), unit: 'bpm', icon: '~', status: 'normal' } : null,\n    reading('temperature') !== null\n      ? { label: 'Temperature', value: reading('temperature'), unit: '\\u00b0F', icon: '\\ud83c\\udf21', status: 'normal' } : null,\n    reading('weight') !== null\n      ? { label: 'Weight', value: reading('weight'), unit: 'lbs', icon: '\\u2696', status: 'normal' } : null,\n    reading('bmi') !== null\n      ? { label: 'BMI', value: reading('bmi'), unit: 'kg/m\\u00b2', icon: 'B', status: band(reading('bmi'), 25, 30) } : null,\n    reading('oxygenSaturation') !== null\n      ? { label: 'O\\u2082 Saturation', value: reading('oxygenSaturation'), unit: '%', icon: 'O\\u2082', status: reading('oxygenSaturation') >= 95 ? 'normal' : 'high' } : null,\n  ].filter(Boolean)\n",
+      "reason": "vitalItems dereferenced all nine documented reading objects -- temperature, respiratoryRate, height, bmi and oxygenSaturation among them -- without checking any of them exists. The pinned schema lists the nine but requires none, and a believable clinic record does not carry all nine: strive-health's three vitals rows carry bloodPressureSystolic, bloodPressureDiastolic, heartRate and weight. So /health-summary threw and the error boundary replaced the whole page with '\\u26a0\\ufe0f Something went wrong / Cannot read properties of undefined (reading value) / Return to Home' -- 92 visible characters that trip both of render_check's failure regexes at once (BROKEN_TEXT on 'something went wrong' and 'cannot read propert', PLACEHOLDER_TEXT on 'undefined'). Render the readings the record has."
+    },
+    {
+      "file": "src/context/AppContext.jsx",
+      "old": "    localStorage.setItem(sKey, JSON.stringify(state))\n    window.__APP_STATE__ = state",
+      "new": "    localStorage.setItem(sKey, JSON.stringify(state))\n    window.__APP_STATE__ = state\n    if (sid) {\n      clearTimeout(window.__hubStateSync)\n      window.__hubStateSync = setTimeout(() => {\n        fetch(`/post?sid=${encodeURIComponent(sid)}`, {\n          method: 'POST',\n          headers: { 'Content-Type': 'application/json' },\n          body: JSON.stringify({ action: 'set_current', state }),\n        }).catch(() => {})\n      }, 300)\n    }",
+      "reason": "The app reads its seeded world from /state and then keeps every change in localStorage and window.__APP_STATE__ only -- it never posts it back, so no UI action of any kind reaches the state a grader reads and the app can carry no graded task. It is the only clone of 98 with no /post writer, which is why a write search made 215 real submit attempts and reached the state zero times. Measured: sending a message from /messages/compose adds it to the store and leaves /state byte-identical. This is the same debounced set_current write azure_mock's dataManager.saveState does, which is the shape the other 97 clones already use."
+    }
+  ],
+  "circleci_mock": [
+    {
+      "file": "src/components/Sidebar.jsx",
+      "old": "          <div\n            key={item.path}\n            className={`nav-item${isActive(item.path) ? ' active' : ''}`}\n            onClick={() => navigate(toPath(item.path))}\n          >\n            {icons[item.icon]}\n            <span>{item.label}</span>\n          </div>",
+      "new": "          <div\n            key={item.path}\n            role=\"link\"\n            tabIndex={0}\n            aria-label={item.label}\n            className={`nav-item${isActive(item.path) ? ' active' : ''}`}\n            onClick={() => navigate(toPath(item.path))}\n            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') navigate(toPath(item.path)); }}\n          >\n            {icons[item.icon]}\n            <span>{item.label}</span>\n          </div>",
+      "reason": "The whole sidebar navigation -- Home, Pipelines, Projects, Deploys, Insights, Runners, Settings, Plan -- was a plain <div onClick>, so it carries no ARIA role and nothing that reads the page by role can address it. Every other control on the first screen is an icon-only <button> whose only name is a title attribute. Together that is why experiments/interact/fidelity-20260910-after/circleci_mock.json records clickable_found: 0 over 1,938 characters of rendered app: 16 visible, enabled buttons, none with an accessible name, and eight navigation targets with no role at all. role=link plus aria-label makes the navigation addressable and keyboard-reachable without changing how it looks or what it does."
+    }
+  ],
+  "quickbooks_mock": [
+    {
+      "file": "src/lib/initialData.js",
+      "old": "    body: JSON.stringify({ action: 'set_current', state }),\n    keepalive: true,\n  }).catch(() => {});",
+      "new": "    body: JSON.stringify({ action: 'set_current', state }),\n  }).catch(() => {});",
+      "reason": "saveState posts the whole state with `keepalive: true`, and the Fetch standard caps a keepalive request body at 64 KiB -- over that the browser never sends it, and `.catch(() => {})` swallows the rejection, so the app renders the new record and /state never changes. This is silent at exactly the size that matters: measured on the same app, same steps, same build, only the seed differing -- a 3,010-byte seed POSTs 2,783 bytes, answers 200 and the marker is in /state; a 338,130-byte seed POSTs 306,788 bytes, gets no response at all and the marker is nowhere. Every real company world for these apps is over the cap (quickbooks 199,544-442,093 bytes across 3 worlds, salesforce 388,655-525,841 across 4), so every worker action on a real world was being discarded while every protocol check passed. keepalive only matters for a POST that has to survive page unload; the other 95 clones do not set it."
+    }
+  ],
+  "salesforce_mock": [
+    {
+      "file": "src/data/initialData.ts",
+      "old": "    body: JSON.stringify({ action: 'set_current', state }),\n    keepalive: true,\n  }).catch(() => {});",
+      "new": "    body: JSON.stringify({ action: 'set_current', state }),\n  }).catch(() => {});",
+      "reason": "saveState posts the whole state with `keepalive: true`, and the Fetch standard caps a keepalive request body at 64 KiB -- over that the browser never sends it, and `.catch(() => {})` swallows the rejection, so the app renders the new record and /state never changes. This is silent at exactly the size that matters: measured on the same app, same steps, same build, only the seed differing -- a 3,010-byte seed POSTs 2,783 bytes, answers 200 and the marker is in /state; a 338,130-byte seed POSTs 306,788 bytes, gets no response at all and the marker is nowhere. Every real company world for these apps is over the cap (quickbooks 199,544-442,093 bytes across 3 worlds, salesforce 388,655-525,841 across 4), so every worker action on a real world was being discarded while every protocol check passed. keepalive only matters for a POST that has to survive page unload; the other 95 clones do not set it."
+    }
+  ],
+  "workday_mock": [
+    {
+      "file": "src/lib/mockData.js",
+      "old": "    body: JSON.stringify({ action: 'set_current', state }),\n    keepalive: true,\n  }).catch(() => {});",
+      "new": "    body: JSON.stringify({ action: 'set_current', state }),\n  }).catch(() => {});",
+      "reason": "saveState posts the whole state with `keepalive: true`, and the Fetch standard caps a keepalive request body at 64 KiB -- over that the browser never sends it, and `.catch(() => {})` swallows the rejection, so the app renders the new record and /state never changes. This is silent at exactly the size that matters: measured on the same app, same steps, same build, only the seed differing -- a 3,010-byte seed POSTs 2,783 bytes, answers 200 and the marker is in /state; a 338,130-byte seed POSTs 306,788 bytes, gets no response at all and the marker is nowhere. Every real company world for these apps is over the cap (quickbooks 199,544-442,093 bytes across 3 worlds, salesforce 388,655-525,841 across 4), so every worker action on a real world was being discarded while every protocol check passed. keepalive only matters for a POST that has to survive page unload; the other 95 clones do not set it."
+    }
+  ],
+  "hubspot_mock": [
+    {
+      "file": "src/components/Layout.jsx",
+      "old": "          <NavItem to=\"/go\" icon={Settings} label=\"State Inspector\" />",
+      "new": "",
+      "reason": "Keep the host harness inspector out of the worker navigation."
+    },
+    {
+      "file": "src/components/Layout.jsx",
+      "old": "return titles[path] || 'XubSpot Mock';",
+      "new": "return titles[path] || 'HubSpot';",
+      "reason": "Use the application name in the worker-facing UI."
+    },
+    {
+      "file": "src/components/Layout.jsx",
+      "old": "<span className=\"font-bold text-lg tracking-tight\">XubSpot Mock</span>",
+      "new": "<span className=\"font-bold text-lg tracking-tight\">HubSpot</span>",
+      "reason": "Use the application name in the worker-facing UI."
+    },
+    {
+      "file": "src/components/Layout.jsx",
+      "old": "XubSpot Mock — Version 1.0. For help, visit the State Inspector (/go).",
+      "new": "HubSpot — Manage your customer relationships, activities and follow-ups.",
+      "reason": "Remove the worker help link to the host-only inspector."
+    }
+  ]
+}

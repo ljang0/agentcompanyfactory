@@ -1,0 +1,895 @@
+{
+  "company_id": "cort",
+  "snapshot_at": "2026-09-08T12:00:00Z",
+  "timezone": "America/New_York",
+  "currency": "USD",
+  "district_totals": {
+    "active_leases": 900,
+    "current_serialized_pieces": 12000,
+    "crews": 4,
+    "archive_start": "2021-09-08",
+    "extract_scope": "Named working records plus aggregate district history; not a full serialized ledger"
+  },
+  "workers": [
+    {
+      "id": "w1",
+      "user_id": 1,
+      "name": "Maya Chen",
+      "title": "Residential Rental Consultant",
+      "team_ids": [
+        "t1"
+      ]
+    },
+    {
+      "id": "w2",
+      "user_id": 2,
+      "name": "Eli Brooks",
+      "title": "Inventory Controller",
+      "team_ids": [
+        "t1",
+        "t2"
+      ]
+    },
+    {
+      "id": "w3",
+      "user_id": 3,
+      "name": "Nora Patel",
+      "title": "Delivery and Pickup Dispatcher",
+      "team_ids": [
+        "t1"
+      ]
+    },
+    {
+      "id": "w4",
+      "user_id": 4,
+      "name": "Luis Romero",
+      "title": "Refurbishment Supervisor",
+      "team_ids": [
+        "t2"
+      ]
+    },
+    {
+      "id": "w5",
+      "user_id": 5,
+      "name": "Dana Whitfield",
+      "title": "District Asset Manager",
+      "team_ids": [
+        "t2"
+      ]
+    },
+    {
+      "id": "w6",
+      "user_id": 6,
+      "name": "Simone Price",
+      "title": "Outlet Manager",
+      "team_ids": [
+        "t2"
+      ]
+    }
+  ],
+  "locations": [
+    {
+      "id": "WH1",
+      "name": "Hearthway District Warehouse",
+      "address": "410 Furnishing Way, Durham, NC",
+      "fictional": true
+    },
+    {
+      "id": "SR1",
+      "name": "Raleigh Rental Showroom"
+    },
+    {
+      "id": "SR2",
+      "name": "Durham Rental Showroom"
+    },
+    {
+      "id": "OUT1",
+      "name": "Durham Furniture Outlet"
+    }
+  ],
+  "households": [
+    {
+      "id": "H310",
+      "user_id": 101,
+      "name": "Jordan Ellis",
+      "address": "310 Maple Landing Drive, Durham, NC, Apt 204",
+      "access": "September 14 09:00–11:00; September 24 09:00–12:00; appointments require acceptance"
+    },
+    {
+      "id": "H311",
+      "user_id": 102,
+      "name": "Priya Shah",
+      "address": "311 Oak Terrace Court, Raleigh, NC, Apt 102",
+      "access": "September 17 10:00–12:00; sofa width limit 220 cm"
+    },
+    {
+      "id": "H312",
+      "user_id": 103,
+      "name": "Mateo Rivera",
+      "address": "312 Cedar Walk, Durham, NC, Apt 3",
+      "access": "September 18 10:00–12:00"
+    },
+    {
+      "id": "H320",
+      "user_id": 104,
+      "name": "Avery Morgan"
+    },
+    {
+      "id": "H321",
+      "user_id": 105,
+      "name": "Samira Khan"
+    },
+    {
+      "id": "H322",
+      "user_id": 106,
+      "name": "Theo Grant"
+    },
+    {
+      "id": "H323",
+      "user_id": 107,
+      "name": "Lena Ortiz"
+    },
+    {
+      "id": "H324",
+      "user_id": 108,
+      "name": "Caleb Ross"
+    },
+    {
+      "id": "H325",
+      "user_id": 109,
+      "name": "Mei Tan"
+    },
+    {
+      "id": "H326",
+      "user_id": 110,
+      "name": "Owen Clark"
+    },
+    {
+      "id": "H327",
+      "user_id": 111,
+      "name": "Imani Reed"
+    },
+    {
+      "id": "H328",
+      "user_id": 112,
+      "name": "Noah Bennett"
+    }
+  ],
+  "leases": [
+    {
+      "id": "L310",
+      "version": 2,
+      "customer_id": "H310",
+      "status": "active",
+      "start": "2026-06-15",
+      "paid_through": "2026-09-14",
+      "remaining_asset_ids": [
+        "S1",
+        "B1",
+        "D1"
+      ],
+      "monthly_rates": {
+        "S1": 60,
+        "B1": 90,
+        "D1": 30
+      },
+      "original_pickup_id": "AP310-14",
+      "accepted_change_id": null,
+      "transaction_id": "TX-L310-2"
+    },
+    {
+      "id": "L322",
+      "version": 1,
+      "customer_id": "H322",
+      "status": "active",
+      "named_asset_ids": [
+        "S4",
+        "T310",
+        "C310A",
+        "C310B"
+      ],
+      "end": "2026-10-31"
+    },
+    {
+      "id": "L323",
+      "version": 1,
+      "customer_id": "H323",
+      "status": "active",
+      "named_asset_ids": [
+        "D2"
+      ],
+      "end": "2026-09-30"
+    },
+    {
+      "id": "L324",
+      "version": 1,
+      "customer_id": "H324",
+      "status": "active",
+      "named_asset_ids": [
+        "A21"
+      ],
+      "end": "2026-09-22"
+    },
+    {
+      "id": "L325",
+      "version": 1,
+      "customer_id": "H325",
+      "status": "active",
+      "end": "2026-09-30"
+    },
+    {
+      "id": "L326",
+      "version": 1,
+      "customer_id": "H326",
+      "status": "active",
+      "end": "2026-11-15"
+    },
+    {
+      "id": "L327",
+      "version": 1,
+      "customer_id": "H327",
+      "status": "active",
+      "end": "2026-09-16"
+    },
+    {
+      "id": "L328",
+      "version": 1,
+      "customer_id": "H328",
+      "status": "active",
+      "end": "2026-09-30"
+    }
+  ],
+  "assets": [
+    {
+      "id": "S1",
+      "sku": "SOFA-190",
+      "width_cm": 190,
+      "volume_m3": 3,
+      "acquired": "2022-02-10",
+      "cost": 780,
+      "custody": "H310",
+      "location": "H310",
+      "condition": "in_service",
+      "reservation": null,
+      "planned_source_for": "F311"
+    },
+    {
+      "id": "B1",
+      "sku": "QUEEN-Q",
+      "volume_m3": 2,
+      "dimensions_cm": "210x165x110",
+      "acquired": "2023-04-03",
+      "cost": 540,
+      "custody": "H310",
+      "location": "H310",
+      "condition": "in_service",
+      "reservation": null,
+      "planned_source_for": "F312"
+    },
+    {
+      "id": "D1",
+      "sku": "DRESSER-6",
+      "volume_m3": 1,
+      "acquired": "2022-08-19",
+      "cost": 360,
+      "custody": "H310",
+      "location": "H310",
+      "condition": "in_service",
+      "reservation": null
+    },
+    {
+      "id": "S2",
+      "sku": "SOFA-215",
+      "width_cm": 215,
+      "volume_m3": 3.5,
+      "acquired": "2024-01-12",
+      "cost": 860,
+      "custody": "district",
+      "location": "WH1-A03",
+      "condition": "rental_ready",
+      "reservation": null,
+      "release_id": "RC-S2-0904"
+    },
+    {
+      "id": "B2",
+      "sku": "QUEEN-Q",
+      "volume_m3": 2,
+      "dimensions_cm": "210x165x110",
+      "acquired": "2024-03-11",
+      "cost": 560,
+      "custody": "district",
+      "location": "WH1-B04",
+      "condition": "rental_ready",
+      "reservation": null,
+      "release_id": "RC-B2-0907"
+    },
+    {
+      "id": "S3",
+      "sku": "SOFA-190",
+      "width_cm": 190,
+      "volume_m3": 3,
+      "acquired": "2023-11-07",
+      "cost": 805,
+      "custody": "district",
+      "location": "WH1-A05",
+      "condition": "rental_ready",
+      "reservation": "R320-S3"
+    },
+    {
+      "id": "B3",
+      "sku": "QUEEN-Q",
+      "volume_m3": 2,
+      "acquired": "2023-06-20",
+      "cost": 550,
+      "custody": "district",
+      "location": "WH1-B05",
+      "condition": "rental_ready",
+      "reservation": "R321-B3"
+    },
+    {
+      "id": "S4",
+      "sku": "SOFA-205",
+      "width_cm": 205,
+      "volume_m3": 3.2,
+      "acquired": "2022-09-09",
+      "cost": 790,
+      "custody": "H322",
+      "location": "H322",
+      "condition": "in_service",
+      "reservation": null
+    },
+    {
+      "id": "B4",
+      "sku": "QUEEN-Q",
+      "volume_m3": 2,
+      "acquired": "2021-10-12",
+      "cost": 500,
+      "custody": "district",
+      "location": "WH1-HOLD",
+      "condition": "structural_hold",
+      "reservation": null,
+      "hold_through": "2026-09-30",
+      "evidence": "INSP-B4-0904"
+    },
+    {
+      "id": "T310",
+      "sku": "TABLE-ROUND",
+      "volume_m3": 1.2,
+      "acquired": "2023-03-10",
+      "cost": 300,
+      "custody": "H322",
+      "location": "H322",
+      "condition": "in_service",
+      "reservation": null
+    },
+    {
+      "id": "C310A",
+      "sku": "CHAIR-OAK",
+      "volume_m3": 0.3,
+      "acquired": "2023-03-10",
+      "cost": 90,
+      "custody": "H322",
+      "location": "H322",
+      "condition": "in_service",
+      "reservation": null
+    },
+    {
+      "id": "C310B",
+      "sku": "CHAIR-OAK",
+      "volume_m3": 0.3,
+      "acquired": "2023-03-10",
+      "cost": 90,
+      "custody": "H322",
+      "location": "H322",
+      "condition": "in_service",
+      "reservation": null
+    },
+    {
+      "id": "D2",
+      "sku": "DRESSER-4",
+      "volume_m3": 0.8,
+      "acquired": "2024-02-02",
+      "cost": 290,
+      "custody": "H323",
+      "location": "H323",
+      "condition": "in_service",
+      "reservation": null
+    },
+    {
+      "id": "A21",
+      "sku": "ARMCHAIR-L",
+      "volume_m3": 1.1,
+      "acquired": "2022-07-18",
+      "cost": 420,
+      "custody": "H324",
+      "location": "H324",
+      "condition": "in_service",
+      "reservation": null
+    },
+    {
+      "id": "A22",
+      "sku": "ARMCHAIR-L",
+      "volume_m3": 1.1,
+      "acquired": "2022-07-18",
+      "cost": 420,
+      "custody": "district",
+      "location": "WH1-REPAIR",
+      "condition": "cosmetic_hold",
+      "reservation": null,
+      "evidence": "INSP-A22-0903"
+    },
+    {
+      "id": "T22",
+      "sku": "TABLE-RECT",
+      "volume_m3": 1.4,
+      "acquired": "2021-11-15",
+      "cost": 340,
+      "custody": "district",
+      "location": "OUT1",
+      "condition": "outlet_ready",
+      "reservation": null,
+      "retirement_id": "RET-T22-0826",
+      "outlet_receipt_id": "OR-T22-0828",
+      "asking_price": 165
+    },
+    {
+      "id": "C22",
+      "sku": "CHAIR-OAK",
+      "volume_m3": 0.3,
+      "acquired": "2022-03-15",
+      "cost": 95,
+      "custody": "district",
+      "location": "OUT1",
+      "condition": "outlet_ready",
+      "reservation": null,
+      "retirement_id": "RET-C22-0826",
+      "outlet_receipt_id": "OR-C22-0828",
+      "asking_price": 45
+    },
+    {
+      "id": "N22",
+      "sku": "NIGHTSTAND-OAK",
+      "volume_m3": 0.25,
+      "acquired": "2024-08-16",
+      "cost": 115,
+      "custody": "district",
+      "location": "WH1-C02",
+      "condition": "rental_ready",
+      "reservation": "R325-N22"
+    },
+    {
+      "id": "L22",
+      "sku": "LAMP-FLOOR",
+      "volume_m3": 0.2,
+      "acquired": "2025-01-09",
+      "cost": 80,
+      "custody": "district",
+      "location": "SR1",
+      "condition": "display",
+      "reservation": null
+    },
+    {
+      "id": "M22",
+      "sku": "DESK-COMPACT",
+      "volume_m3": 0.7,
+      "acquired": "2024-06-24",
+      "cost": 210,
+      "custody": "district",
+      "location": "WH1-C06",
+      "condition": "rental_ready",
+      "reservation": "R326-M22"
+    }
+  ],
+  "orders": [
+    {
+      "id": "F311",
+      "version": 1,
+      "customer_id": "H311",
+      "ticket_id": 1311,
+      "status": "accepted",
+      "need": "one sofa",
+      "monthly_rate": 60,
+      "start": "2026-09-17",
+      "end": "2026-12-16",
+      "window": "10:00–12:00",
+      "tentative_source": "S1",
+      "asset_reservation": null,
+      "substitution_acceptance": null,
+      "appointment_id": "AP311-17",
+      "acceptance_id": "ACC-F311-1"
+    },
+    {
+      "id": "F312",
+      "version": 1,
+      "customer_id": "H312",
+      "ticket_id": 1312,
+      "status": "accepted",
+      "need": "one queen bed",
+      "monthly_rate": 90,
+      "start": "2026-09-18",
+      "end": "2026-12-17",
+      "window": "10:00–12:00",
+      "tentative_source": "B1",
+      "asset_reservation": null,
+      "substitution_acceptance": null,
+      "appointment_id": "AP312-18",
+      "acceptance_id": "ACC-F312-1"
+    },
+    {
+      "id": "F320",
+      "customer_id": "H320",
+      "status": "accepted",
+      "start": "2026-09-09",
+      "end": "2026-12-31",
+      "reservation_id": "R320-S3",
+      "asset_id": "S3"
+    },
+    {
+      "id": "F321",
+      "customer_id": "H321",
+      "status": "accepted",
+      "start": "2026-09-10",
+      "end": "2026-12-31",
+      "reservation_id": "R321-B3",
+      "asset_id": "B3"
+    },
+    {
+      "id": "F325",
+      "customer_id": "H325",
+      "status": "accepted",
+      "start": "2026-09-11",
+      "end": "2026-09-30",
+      "reservation_id": "R325-N22",
+      "asset_id": "N22"
+    },
+    {
+      "id": "F326",
+      "customer_id": "H326",
+      "status": "accepted",
+      "start": "2026-09-15",
+      "end": "2026-11-15",
+      "reservation_id": "R326-M22",
+      "asset_id": "M22"
+    }
+  ],
+  "request": {
+    "id": "REQ-H310-0907",
+    "ticket_id": 1310,
+    "received_at": "2026-09-07T19:10:00Z",
+    "lease_id": "L310",
+    "expected_version": 2,
+    "bedroom_needed_through": "2026-09-24",
+    "sofa_choices": "keep through September 24 or collect September 14",
+    "permitted_visit_structures": "one combined final pickup or two planned staged visits",
+    "incremental_pretax_ceiling": 70,
+    "status": "unquoted"
+  },
+  "billing": [
+    {
+      "id": "INV310-0615",
+      "lease_version": "L310-v1",
+      "period": "2026-06-15/2026-07-14",
+      "amount": 255,
+      "paid": 255,
+      "payment_id": "PAY310-0615"
+    },
+    {
+      "id": "INV310-0715",
+      "lease_version": "L310-v1",
+      "period": "2026-07-15/2026-08-14",
+      "amount": 255,
+      "paid": 255,
+      "payment_id": "PAY310-0715"
+    },
+    {
+      "id": "INV310-0815",
+      "lease_version": "L310-v2",
+      "period": "2026-08-15/2026-09-14",
+      "amount": 180,
+      "paid": 180,
+      "payment_id": "PAY310-0815"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "AP310-14",
+      "version": 1,
+      "customer_id": "H310",
+      "date": "2026-09-14",
+      "window": "09:00–11:00",
+      "asset_ids": [
+        "S1",
+        "B1",
+        "D1"
+      ],
+      "status": "booked",
+      "source": "ACC-L310-2",
+      "crew": "C1",
+      "manifest_released": false
+    },
+    {
+      "id": "AP311-17",
+      "version": 1,
+      "customer_id": "H311",
+      "date": "2026-09-17",
+      "window": "10:00–12:00",
+      "status": "booked",
+      "crew": "C1",
+      "manifest_released": false
+    },
+    {
+      "id": "AP312-18",
+      "version": 1,
+      "customer_id": "H312",
+      "date": "2026-09-18",
+      "window": "10:00–12:00",
+      "status": "booked",
+      "crew": "C1",
+      "manifest_released": false
+    }
+  ],
+  "reservation_scope": {
+    "certificate_id": "SCOPE-0908",
+    "as_of": "2026-09-08T12:00:00Z",
+    "matching_uncommitted_ready_ids": [
+      "S2",
+      "B2"
+    ],
+    "other_matching_named_ids": {
+      "S3": "R320-S3 protects September 9–December 31",
+      "B3": "R321-B3 protects September 10–December 31",
+      "S4": "customer-held through October 31",
+      "B4": "structural hold through September 30"
+    },
+    "outside_extract": "Every other matching sofa or queen bed is customer-held, reserved or on documented condition hold throughout September 8–28. No interdistrict borrowing entitlement."
+  },
+  "history": [
+    {
+      "id": "EV-OPEN",
+      "at": "2021-09-08T12:00:00Z",
+      "event": "District opened WH1 and SR1; archive begins"
+    },
+    {
+      "id": "EV-SR2",
+      "at": "2022-05-02T12:00:00Z",
+      "event": "SR2 opened"
+    },
+    {
+      "id": "EV-OUT",
+      "at": "2023-02-06T13:00:00Z",
+      "event": "OUT1 opened as district disposition channel"
+    },
+    {
+      "id": "EV-S1-2023",
+      "at": "2023-12-08T21:00:00Z",
+      "asset_id": "S1",
+      "event": "Prior rental return; seam repair and routine release completed",
+      "repair_cost": 28,
+      "evidence": "REP-S1-231208"
+    },
+    {
+      "id": "EV-B1-2024",
+      "at": "2024-07-12T20:00:00Z",
+      "asset_id": "B1",
+      "event": "Prior return; fasteners replaced and function check passed",
+      "repair_cost": 18,
+      "evidence": "REP-B1-240712"
+    },
+    {
+      "id": "EV-D1-2025",
+      "at": "2025-09-19T20:00:00Z",
+      "asset_id": "D1",
+      "event": "Prior return; drawer adjustment and cleaning completed",
+      "repair_cost": 12,
+      "evidence": "REP-D1-250919"
+    },
+    {
+      "id": "TX-L310-1",
+      "at": "2026-06-15T15:00:00Z",
+      "event": "Accepted six-item lease delivered",
+      "lease_id": "L310",
+      "version": 1,
+      "asset_ids": [
+        "S1",
+        "B1",
+        "D1",
+        "T310",
+        "C310A",
+        "C310B"
+      ]
+    },
+    {
+      "id": "RCV310-0814",
+      "at": "2026-08-14T19:20:00Z",
+      "event": "Actual partial return to WH1",
+      "asset_ids": [
+        "T310",
+        "C310A",
+        "C310B"
+      ],
+      "ticket_id": 1201
+    },
+    {
+      "id": "TX-L310-2",
+      "at": "2026-08-14T20:00:00Z",
+      "event": "Accepted partial-return amendment executed; remaining S1/B1/D1; September 14 pickup booked",
+      "acceptance_id": "ACC-L310-2",
+      "lease_id": "L310",
+      "version": 2
+    },
+    {
+      "id": "RC310-0817",
+      "at": "2026-08-17T20:00:00Z",
+      "event": "T310/C310A/C310B passed routine preparation at WH1"
+    },
+    {
+      "id": "TX-L322-0820",
+      "at": "2026-08-20T15:30:00Z",
+      "event": "Delivered T310/C310A/C310B with S4 to H322; custody acknowledged"
+    },
+    {
+      "id": "RET-0826",
+      "at": "2026-08-26T18:00:00Z",
+      "event": "Dana authorized T22 and C22 retirement; no rental reservation",
+      "asset_ids": [
+        "T22",
+        "C22"
+      ]
+    },
+    {
+      "id": "OR-0828",
+      "at": "2026-08-28T18:20:00Z",
+      "event": "OUT1 received T22/C22 after resale preparation; neither sold"
+    },
+    {
+      "id": "ACC-F311-1",
+      "at": "2026-09-02T14:00:00Z",
+      "event": "H311 accepted sofa SKU/date/rate obligation; tentative S1 source",
+      "order_id": "F311"
+    },
+    {
+      "id": "ACC-F312-1",
+      "at": "2026-09-02T15:00:00Z",
+      "event": "H312 accepted queen-bed SKU/date/rate obligation; tentative B1 source",
+      "order_id": "F312"
+    },
+    {
+      "id": "TX-R320",
+      "at": "2026-09-02T17:00:00Z",
+      "event": "R320-S3 acknowledged for F320, September 9–December 31"
+    },
+    {
+      "id": "TX-R321",
+      "at": "2026-09-02T17:10:00Z",
+      "event": "R321-B3 acknowledged for F321, September 10–December 31"
+    },
+    {
+      "id": "RCV-S2-0903",
+      "at": "2026-09-03T18:40:00Z",
+      "event": "S2 physically received at WH1 after prior lease return"
+    },
+    {
+      "id": "RC-S2-0904",
+      "at": "2026-09-04T20:00:00Z",
+      "event": "S2 inspection/cleaning/function checks passed; rental release acknowledged"
+    },
+    {
+      "id": "INSP-B4-0904",
+      "at": "2026-09-04T16:00:00Z",
+      "event": "B4 cracked rail; structural hold through September 30; no release"
+    },
+    {
+      "id": "RCV-B2-0904",
+      "at": "2026-09-04T18:10:00Z",
+      "event": "B2 physically received at WH1 after prior lease return"
+    },
+    {
+      "id": "RC-B2-0907",
+      "at": "2026-09-07T20:00:00Z",
+      "event": "B2 inspection/cleaning/function checks passed; rental release acknowledged"
+    },
+    {
+      "id": "REQ-H310-0907",
+      "at": "2026-09-07T19:10:00Z",
+      "event": "H310 requested departure change; no amendment or offer yet"
+    },
+    {
+      "id": "RV1-0908",
+      "at": "2026-09-08T12:00:00Z",
+      "event": "Dispatch residual calendar published; protected work unchanged"
+    }
+  ],
+  "recent_weeks": [
+    {
+      "ending": "2026-06-14",
+      "new_orders": 43,
+      "completed_returns": 38,
+      "outlet_receipts_pieces": 68,
+      "service_tickets": 22
+    },
+    {
+      "ending": "2026-06-21",
+      "new_orders": 46,
+      "completed_returns": 40,
+      "outlet_receipts_pieces": 72,
+      "service_tickets": 24
+    },
+    {
+      "ending": "2026-06-28",
+      "new_orders": 44,
+      "completed_returns": 37,
+      "outlet_receipts_pieces": 65,
+      "service_tickets": 21
+    },
+    {
+      "ending": "2026-07-05",
+      "new_orders": 41,
+      "completed_returns": 36,
+      "outlet_receipts_pieces": 62,
+      "service_tickets": 20
+    },
+    {
+      "ending": "2026-07-12",
+      "new_orders": 47,
+      "completed_returns": 41,
+      "outlet_receipts_pieces": 75,
+      "service_tickets": 26
+    },
+    {
+      "ending": "2026-07-19",
+      "new_orders": 45,
+      "completed_returns": 39,
+      "outlet_receipts_pieces": 70,
+      "service_tickets": 24
+    },
+    {
+      "ending": "2026-07-26",
+      "new_orders": 48,
+      "completed_returns": 42,
+      "outlet_receipts_pieces": 78,
+      "service_tickets": 27
+    },
+    {
+      "ending": "2026-08-02",
+      "new_orders": 44,
+      "completed_returns": 40,
+      "outlet_receipts_pieces": 69,
+      "service_tickets": 23
+    },
+    {
+      "ending": "2026-08-09",
+      "new_orders": 50,
+      "completed_returns": 43,
+      "outlet_receipts_pieces": 80,
+      "service_tickets": 29
+    },
+    {
+      "ending": "2026-08-16",
+      "new_orders": 49,
+      "completed_returns": 45,
+      "outlet_receipts_pieces": 76,
+      "service_tickets": 28
+    },
+    {
+      "ending": "2026-08-23",
+      "new_orders": 46,
+      "completed_returns": 42,
+      "outlet_receipts_pieces": 71,
+      "service_tickets": 25
+    },
+    {
+      "ending": "2026-08-30",
+      "new_orders": 45,
+      "completed_returns": 40,
+      "outlet_receipts_pieces": 73,
+      "service_tickets": 24
+    },
+    {
+      "ending": "2026-09-06",
+      "new_orders": 42,
+      "completed_returns": 39,
+      "outlet_receipts_pieces": 66,
+      "service_tickets": 22
+    }
+  ]
+}

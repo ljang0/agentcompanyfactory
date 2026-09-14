@@ -1,0 +1,268 @@
+{
+  "app_id": "hotjar_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activeFilters",
+    "activeSiteId",
+    "currentUser",
+    "dashboardMetrics",
+    "events",
+    "feedback",
+    "funnels",
+    "heatmaps",
+    "highlightCollections",
+    "highlights",
+    "organization",
+    "recordings",
+    "selectedDateRange",
+    "sidebarExpanded",
+    "sites",
+    "surveys",
+    "trends"
+  ],
+  "observed": [
+    "activeFilters",
+    "activeSiteId",
+    "currentUser",
+    "dashboardMetrics",
+    "dashboards",
+    "events",
+    "feedback",
+    "feedbackWidgetConfig",
+    "funnels",
+    "heatmaps",
+    "highlightCollections",
+    "highlights",
+    "organization",
+    "recordings",
+    "selectedDateRange",
+    "sidebarExpanded",
+    "sites",
+    "surveys",
+    "trends"
+  ],
+  "undocumented_so_unseedable": [
+    "dashboards",
+    "feedbackWidgetConfig"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "organization": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "sites": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "url",
+        "trackingCode",
+        "createdAt",
+        "isActive"
+      ],
+      "keyed_by_id": false
+    },
+    "activeSiteId": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "heatmaps": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "siteId",
+        "name",
+        "pageUrl",
+        "status",
+        "createdAt",
+        "sessionsCount",
+        "deviceBreakdown",
+        "screenshotUrl",
+        "clickData",
+        "scrollData",
+        "moveData",
+        "pageStats"
+      ],
+      "keyed_by_id": false
+    },
+    "recordings": {
+      "kind": "array",
+      "count": 25,
+      "record_fields": [
+        "id",
+        "siteId",
+        "visitorId",
+        "country",
+        "countryFlag",
+        "device",
+        "browser",
+        "os",
+        "screenSize",
+        "duration",
+        "pagesVisited",
+        "pagesList",
+        "startedAt",
+        "frustrationScore",
+        "engagementScore",
+        "hasRageClicks",
+        "hasUTurns",
+        "hasErrors",
+        "isStarred",
+        "tags",
+        "events"
+      ],
+      "keyed_by_id": false
+    },
+    "surveys": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "siteId",
+        "name",
+        "status",
+        "createdAt",
+        "responsesCount",
+        "questions",
+        "appearance",
+        "behavior",
+        "responses"
+      ],
+      "keyed_by_id": false
+    },
+    "feedback": {
+      "kind": "array",
+      "count": 20,
+      "record_fields": [
+        "id",
+        "siteId",
+        "sentiment",
+        "emoji",
+        "message",
+        "page",
+        "submittedAt",
+        "device",
+        "browser",
+        "screenshotUrl"
+      ],
+      "keyed_by_id": false
+    },
+    "funnels": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "siteId",
+        "name",
+        "createdAt",
+        "steps"
+      ],
+      "keyed_by_id": false
+    },
+    "trends": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "siteId",
+        "name",
+        "metric",
+        "period",
+        "dataPoints"
+      ],
+      "keyed_by_id": false
+    },
+    "highlights": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "siteId",
+        "title",
+        "sourceType",
+        "sourceId",
+        "startTime",
+        "endTime",
+        "createdAt",
+        "createdBy",
+        "collectionId",
+        "notes"
+      ],
+      "keyed_by_id": false
+    },
+    "highlightCollections": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "highlightIds"
+      ],
+      "keyed_by_id": false
+    },
+    "events": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "siteId",
+        "name",
+        "type",
+        "firstSeen",
+        "lastSeen",
+        "totalCount"
+      ],
+      "keyed_by_id": false
+    },
+    "dashboardMetrics": {
+      "kind": "object",
+      "count": 14,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "sidebarExpanded": {
+      "kind": "boolean",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "selectedDateRange": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "activeFilters": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "feedbackWidgetConfig": {
+      "kind": "object",
+      "count": 7,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "dashboards": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

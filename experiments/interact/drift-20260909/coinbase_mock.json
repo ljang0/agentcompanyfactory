@@ -1,0 +1,128 @@
+{
+  "app_id": "coinbase_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "assets",
+    "currentUser",
+    "holdings",
+    "notifications",
+    "paymentMethods",
+    "transactions",
+    "ui",
+    "watchlist"
+  ],
+  "observed": [
+    "assets",
+    "currentUser",
+    "holdings",
+    "notificationPreferences",
+    "notifications",
+    "paymentMethods",
+    "transactions",
+    "ui",
+    "watchlist"
+  ],
+  "undocumented_so_unseedable": [
+    "notificationPreferences"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 7,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "assets": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "name",
+        "symbol",
+        "currentPrice",
+        "priceChange24h",
+        "priceChange7d",
+        "marketCap",
+        "volume24h",
+        "circulatingSupply",
+        "maxSupply",
+        "about",
+        "category",
+        "iconColor",
+        "priceHistory"
+      ],
+      "keyed_by_id": false
+    },
+    "holdings": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "assetId",
+        "quantity",
+        "avgBuyPrice"
+      ],
+      "keyed_by_id": false
+    },
+    "transactions": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "type",
+        "assetId",
+        "quantity",
+        "pricePerUnit",
+        "totalAmount",
+        "fee",
+        "status",
+        "timestamp"
+      ],
+      "keyed_by_id": false
+    },
+    "watchlist": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "paymentMethods": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "type",
+        "name",
+        "last4",
+        "isDefault"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "type",
+        "message",
+        "timestamp",
+        "read",
+        "assetId"
+      ],
+      "keyed_by_id": false
+    },
+    "notificationPreferences": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "ui": {
+      "kind": "object",
+      "count": 8,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

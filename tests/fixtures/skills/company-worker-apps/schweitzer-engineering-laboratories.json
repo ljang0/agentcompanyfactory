@@ -1,0 +1,429 @@
+{
+  "skill": "company-worker-apps",
+  "provenance": {
+    "sources": [
+      {
+        "path": "companies/schweitzer-engineering-laboratories/company.json",
+        "sha256": "b2dd71879da235c507ec2146c1710631347e137402b0e70af7894347d8e44a8a"
+      },
+      {
+        "path": "companies/schweitzer-engineering-laboratories/tasks/schweitzer-engineering-laboratories_maintenance-portfolio-selection/workflow.json",
+        "sha256": "f385892a5baea4618cc3a3256e1c25f498912ad1e4bd891524e42fac13b668fa"
+      },
+      {
+        "path": "data/sources/a9e4e53dc38331d45c47e7115dcdabc4b9fee608da5dd8a32d1f5a8a29b5ab32.json",
+        "sha256": "e791453dc64f79a94687913757f2a8a1d5b74f3dd98aa2d5ebc067dde311fc8f"
+      },
+      {
+        "path": "data/sources/07c6047bbddd569f00cb913cdb6af4b86032b6fdd62f40d824a813e2335a9d71.json",
+        "sha256": "dfea7f161f709d32c59eb52854ad2fd44db8204826bcac7b5c28138fd3fed205"
+      },
+      {
+        "path": "data/sources/07c6047bbddd569f00cb913cdb6af4b86032b6fdd62f40d824a813e2335a9d71.json",
+        "sha256": "dfea7f161f709d32c59eb52854ad2fd44db8204826bcac7b5c28138fd3fed205"
+      },
+      {
+        "path": "data/sources/07c6047bbddd569f00cb913cdb6af4b86032b6fdd62f40d824a813e2335a9d71.json",
+        "sha256": "dfea7f161f709d32c59eb52854ad2fd44db8204826bcac7b5c28138fd3fed205"
+      },
+      {
+        "path": "data/sources/3feb69d00a0c68be6c51e84f1e9f6ee5a10a9a444c609e45940c9167a0a6adf0.json",
+        "sha256": "a079e754b0d41e1227ba2cf6892e103df2010569e743430df660fe431527a6cf"
+      },
+      {
+        "path": "data/sources/52d0d2d7f7882f2c9eefcf433ca641524a1051d5c2b190940225940023e5430c.json",
+        "sha256": "add8d9a2eb931a3b0ffb64cabe57b255264a16ae81a80f8d1294b76c7ce45d3f"
+      },
+      {
+        "path": "data/sources/52d0d2d7f7882f2c9eefcf433ca641524a1051d5c2b190940225940023e5430c.json",
+        "sha256": "add8d9a2eb931a3b0ffb64cabe57b255264a16ae81a80f8d1294b76c7ce45d3f"
+      }
+    ],
+    "changes": "Trimmed to one task and a few native records. Calibration tasks are explicitly narrowed exercises derived from that task; their answers and planted defects are hand-authored test data, not accepted production outcomes."
+  },
+  "input": {
+    "workflow": {
+      "schema_version": "2",
+      "execution_mode": "digital",
+      "manager_id": "software-manager",
+      "feature_cell": {
+        "collections": [
+          "github_mock.labels",
+          "github_mock.repos"
+        ],
+        "decision_type": "plan-schedule"
+      },
+      "id": "schweitzer-engineering-laboratories_maintenance-portfolio-selection",
+      "company_id": "schweitzer-engineering-laboratories",
+      "outline_id": "maintenance-portfolio-selection",
+      "title": "Approve firmware maintenance scope and schedule for the unit",
+      "brief": "The unit needs a firmware maintenance commitment for September 8–18, 2026. Work from the records available as of September 7, and check which branches can share a correction. Compare at least two feasible scopes, linking effort, exposure and effects on operations to the records that support your comparison. Choose and approve a scope and daily engineering schedule that fit capacity and dependencies while protecting existing support commitments. Explain the security exposure and protection functions left at risk on each branch when you defer work. Update engineering issues so selected and deferred work keep their actual obligations. Make repository planning labels and the shared Slack availability profile match your decision, and review the transfer of work to others. Finish with a supported comparison, an approved schedule and consistent engineering instructions; this does not mean firmware has been tested or released.",
+      "objective": "Authorize a branch-specific maintenance scope and achievable engineering schedule while retaining deferred risks and downstream qualification requirements.",
+      "decision_problem": "A preliminary plan treats a common parser correction as a universal backport and assumes all six daily engineering hours are available. The repository label definitions distinguish planning readiness from qualification, while the shared Slack profile still advertises availability before a protected support allocation. Source differences determine which work is reusable. Security and application evidence make both legacy exposure reduction and a newer protection correction worthwhile, but the remaining engineering capacity cannot accommodate both after the mandatory modern-branch correction.",
+      "canonical_description": "A protective-relay manufacturer must turn competing branch corrections into a credible maintenance commitment. Source snapshots reveal reusable parser work and a separate legacy implementation, while security evidence and application records assign different consequences to deferral. Repository label definitions describe planning eligibility without establishing tested firmware. A shared workplace profile advertises availability that must be reconciled with protected support work. The manager integrates developer, security and application findings into a dated engineering schedule, compares feasible scopes and retains obligations for deferred branches. Engineering issues and internal guidance must express the same scope, dependencies and qualification limits. Completion authorizes future maintenance work without claiming a build, laboratory result or customer installation.",
+      "team_ids": [
+        "sustaining-engineering",
+        "product-assurance-support"
+      ],
+      "worker_ids": [
+        "software-manager",
+        "firmware-developer",
+        "security-analyst",
+        "application-engineer"
+      ],
+      "phases": [
+        {
+          "id": "establish-work",
+          "name": "Establish branch work and consequences",
+          "worker_ids": [
+            "software-manager",
+            "firmware-developer",
+            "security-analyst",
+            "application-engineer"
+          ],
+          "depends_on": [],
+          "inputs": [
+            "Source and configuration snapshots",
+            "Existing effort records",
+            "Exposure and application evidence",
+            "Planning rules, labels and shared profile"
+          ],
+          "outputs": [
+            "Supported work estimates and dependencies",
+            "Security and operational consequences",
+            "Reconciled availability"
+          ],
+          "decision": "Which work is technically distinct, which deferrals are permissible, and what capacity can actually be committed?",
+          "downstream_effect": "Determines eligible scopes, sequencing and the risks attached to each alternative.",
+          "when": "always"
+        },
+        {
+          "id": "authorize-plan",
+          "name": "Select and schedule the maintenance commitment",
+          "worker_ids": [
+            "software-manager",
+            "firmware-developer",
+            "security-analyst",
+            "application-engineer"
+          ],
+          "depends_on": [
+            "establish-work"
+          ],
+          "inputs": [
+            "Supported work estimates and dependencies",
+            "Security and operational consequences",
+            "Reconciled availability"
+          ],
+          "outputs": [
+            "Approved scope and dated schedule",
+            "Comparison with another feasible scope",
+            "Deferred obligation register"
+          ],
+          "decision": "Which optional branch work best warrants the remaining capacity after the mandatory correction?",
+          "downstream_effect": "Commits engineering capacity and determines which customer applications retain exposure.",
+          "when": "always"
+        },
+        {
+          "id": "reconcile-handoff",
+          "name": "Reconcile engineering and workplace records",
+          "worker_ids": [
+            "software-manager",
+            "firmware-developer",
+            "security-analyst",
+            "application-engineer"
+          ],
+          "depends_on": [
+            "authorize-plan"
+          ],
+          "inputs": [
+            "Approved scope and dated schedule",
+            "Deferred obligation register"
+          ],
+          "outputs": [
+            "Updated issue descriptions and label assignments",
+            "Corrected shared availability profile",
+            "Reviewed maintenance handoff"
+          ],
+          "decision": "Do the working records preserve the authorized scope, capacity and unresolved qualification requirements?",
+          "downstream_effect": "Development and support receive actionable instructions without unsupported release promises.",
+          "when": "always"
+        }
+      ],
+      "contributions": [
+        {
+          "worker_id": "software-manager",
+          "inputs": [
+            "Business objective",
+            "Protected commitments and planning policy",
+            "Specialist conclusions"
+          ],
+          "work": "Develops the plan, delegates through Slack or email, compares technically supported scopes and authorizes the dated commitment. Resolves the conflict between advertised and documented availability and integrates deferred obligations.",
+          "produces": [
+            "Approved maintenance plan",
+            "Scope comparison and decision rationale",
+            "Consistent workplace commitment"
+          ],
+          "shares_with": [
+            "firmware-developer",
+            "security-analyst",
+            "application-engineer"
+          ],
+          "apps": [
+            "slack_mock"
+          ]
+        },
+        {
+          "worker_id": "firmware-developer",
+          "inputs": [
+            "Branch source snapshots and manifests",
+            "Candidate common correction",
+            "Historical work logs and estimating rules"
+          ],
+          "work": "Traces the shared parser and legacy adapter boundaries, decomposes branch-specific work, substantiates effort ranges and tests schedule dependencies. Defines correction acceptance conditions and updates engineering records to the authorized scope.",
+          "produces": [
+            "Source-linked work breakdown",
+            "Effort ranges and dependencies",
+            "Engineering handoff requirements"
+          ],
+          "shares_with": [
+            "software-manager",
+            "security-analyst",
+            "application-engineer"
+          ],
+          "apps": [
+            "github_mock"
+          ]
+        },
+        {
+          "worker_id": "security-analyst",
+          "inputs": [
+            "Recorded reproduction evidence",
+            "Compiled-feature and exposure records",
+            "Mitigation policy",
+            "Developer findings"
+          ],
+          "work": "Determines reachable exposure and residual risk for each branch, tests whether recorded controls justify deferral, and defines the security conditions that remain attached to selected and deferred work.",
+          "produces": [
+            "Branch security assessment",
+            "Deferral conditions",
+            "Security acceptance requirements"
+          ],
+          "shares_with": [
+            "software-manager",
+            "firmware-developer",
+            "application-engineer"
+          ],
+          "apps": [
+            "github_mock"
+          ]
+        },
+        {
+          "worker_id": "application-engineer",
+          "inputs": [
+            "Protection requirements",
+            "Customer configuration records",
+            "Hardware compatibility history",
+            "Proposed mitigations and source findings"
+          ],
+          "work": "Assesses whether controls preserve necessary communications and protection behavior. Compares the operational cost of retaining legacy mitigations with deferring the newer protection correction and supplies supported application boundaries.",
+          "produces": [
+            "Operational consequence comparison",
+            "Mitigation suitability findings",
+            "Application-specific handoff restrictions"
+          ],
+          "shares_with": [
+            "software-manager",
+            "firmware-developer",
+            "security-analyst"
+          ],
+          "apps": [
+            "slack_mock"
+          ]
+        }
+      ],
+      "events": [],
+      "initial_materials": [
+        "Synthetic episode reference: September 7, 2026, 17:00 America/Los_Angeles. Planning covers September 8–18: nine Monday–Friday working days, with no additional modeled closures. All historical evidence predates the reference instant. Execution does not wait for these dates; the product is a future work authorization.",
+        "Operating population: four family repositories, twelve maintained branches, 180 customer organizations and a text registry totaling 14,000 registered devices. Seed 135 support cases over June 10–September 7, including 24 escalations, nine security assessments and six candidate reviews as overlapping categories. Provide 25–40 recent engineering issues linked to those cases, plus ten annual archive indexes and 18–24 readable older compatibility or effort records. Background work concerns settings, communications, documentation and ordinary defects; the four named work packages below are the complete discretionary population for this decision.",
+        "Use github_mock.repos, branches, files, commits, issues, pullRequests and labels for engineering records; google_drive_mock.items and users for readable text exports and evidence; google_docs_mock.documents and comments for policies and working analyses; slack_mock.currentUser, users, channels, messages and threads for shared coordination; gmail_mock.emails for historical support correspondence. Preserve customer, device, branch, build and issue identifiers across records. Source and test evidence must contain actual readable content, not attachment placeholders.",
+        "Seed repository labels with explicit descriptions: scope-ready means requirements are sufficient to estimate, qualification-needed means future evidence is required, and selected-window means capacity is authorized by a linked plan. All four work packages initially have scope-ready; none has selected-window. An older planning note incorrectly interprets scope-ready as release-ready. Label definitions are authoritative planning vocabulary, not technical proof. Workers need only change issue label assignments, not edit the label catalog.",
+        "The shared Slack currentUser is the unit coordination account, with title Maintenance coordination and statusMessage 'Maintenance engineering: six hours daily available through September 18'. Seed the matching users entry and a dated August 31 profile announcement. The September 4 capacity policy reserves two of those six daily hours for continuing support, leaving four daily hours for these packages. The shared account is not an additional engineer. Its current availability statement must be replaced with an accurate statement referencing the approved plan.",
+        "Four synthetic work packages: shared parser correction, modern branch adapter, legacy branch adapter, and independent protection-timing correction. Seed 12–18 relevant source files across maintained and candidate snapshots, with complete call paths and manifests. Modern and legacy parser work require the shared correction first; the timing correction does not. The candidate changes the parser interface used directly by the modern branch, but the legacy branch uses a different allocator and callback signature. Do not seed a completed applicability analysis.",
+        "Pinned estimating policy v3, effective September 1: reserve the upper end of evidence-supported ranges; count shared work once; do not split optional branch packages into an implied finished commitment. Seed historical work-unit rates and raw counts supporting these ranges: shared correction 4–6 hours, modern adapter 10–12, legacy adapter 14–18, timing correction 12–16. Upper estimates comprise respectively 3 units at 2 hours, 6 units at 2 hours, 6 adapter units at 2 hours plus 2 compatibility units at 3 hours, and 5 logic units at 2 hours plus 2 boundary units at 3 hours. Files and prior records must substantiate those unit counts. No overtime or borrowed capacity is authorized.",
+        "Pinned prioritization policy v2 requires the shared and modern work to finish engineering by September 14 because the modern deployment has a confirmed reachable parser path and no documented suitable mitigation. Legacy parser work and the timing correction are discretionary. Seed 600 modern devices at 12 organizations, 2,400 legacy devices at 30 other organizations, and 120 timing-affected devices at four further organizations as disjoint subsets of the registry. Remaining devices and organizations have ordinary linked histories and are outside this window's decision population.",
+        "Security evidence documents the triggering parser input and network prerequisites. Legacy deployments have existing management-network restrictions that limit access but require local maintenance visits; modern deployments use the same channel for required remote functions. Timing records show a separate delayed reset affecting a required automation sequence at the smaller cohort. Seed configuration exports, completed observations and historical compatibility requirements sufficient for specialists to evaluate these consequences independently.",
+        "The engineering window funds code preparation and documented review only. Firmware compilation, laboratory qualification, signing and distribution have no committed capacity in this authorization. Every selected package must retain qualification-needed and explicit acceptance conditions. Deferred packages remain open with a named responsible role, interim restrictions and a September 21 reassessment requirement. The September 21 date is a recorded future obligation, not an event required to occur.",
+        "Build contract: seed every documented native key for each mounted app. All four participants receive the same required app URLs and shared-session data. Pinned schemas were read for GitHub, Slack, Drive, Docs and Gmail; documented interactions include issue label assignment, profile editing, issue comments and document editing. Runtime behavior remains untested. Builder verification must establish readable source content and those interactions before deployment; no Git transport, automated integration, executable checks or enforced reviewer identity is assumed."
+      ],
+      "deliverables": [
+        "Approved maintenance scope and daily engineering schedule",
+        "Comparison of effort, exposure and effects on operations for at least two feasible scopes, with links to supporting records",
+        "Updated engineering issues showing selected and deferred obligations",
+        "Corrected shared availability statement and reviewed transfer of work to the next team"
+      ],
+      "success_criteria": [
+        {
+          "requirement": "The manager brings work from other experts that affects the decision into the maintenance commitment.",
+          "observable": "Worker-attributed workplace exchanges contain source-based development, security and application findings that affect the comparison or final commitment.",
+          "method": "judgment"
+        },
+        {
+          "requirement": "The schedule fits actual capacity and dependencies.",
+          "observable": "Daily discretionary work is at most four hours, shared work precedes both adapters, the modern package finishes by September 14, and upper estimates fit the nine-day window.",
+          "method": "artifact"
+        },
+        {
+          "requirement": "The choice accounts for each branch’s risks and effects on operations.",
+          "observable": "At least two feasible scopes are compared using supported reachability, compatibility, mitigation costs and protection effects; the chosen tradeoff is reasoned.",
+          "method": "judgment"
+        },
+        {
+          "requirement": "Working records accurately tell people what the manager authorized.",
+          "observable": "Issue labels and descriptions agree with the approved schedule; the Slack currentUser availability statement accounts for protected support and does not imply an additional worker.",
+          "method": "state"
+        },
+        {
+          "requirement": "Selected and deferred work keep their actual obligations.",
+          "observable": "Selected packages retain qualification requirements; every deferred package has interim treatment, a responsible role and September 21 reassessment instructions. No record claims testing or release completion.",
+          "method": "artifact"
+        }
+      ],
+      "software_requirement_ids": [
+        "firmware-review"
+      ],
+      "evidence_ids": [
+        "security-assessment",
+        "functional-impact",
+        "code-assurance",
+        "modeled-scale",
+        "scenario-authority",
+        "workspace-model",
+        "digital-boundary"
+      ],
+      "calendar_days": null,
+      "estimated_human_effort": {
+        "minimum_hours": 24.0,
+        "maximum_hours": 36.0,
+        "basis": "Synthetic active effort for source decomposition, security and application assessment, alternative scheduling and record reconciliation across four workers. Excludes future engineering implementation and waiting."
+      },
+      "assumptions": [
+        "All products, packages, quantities, policies, dates and effort rules in this episode are synthetic.",
+        "Hardware-specific boundaries are scenario fixtures, not verified claims about a real manufacturer's products.",
+        "In-app author identity is shared; worker VM evidence and explicit worker identifiers attribute substantive conclusions.",
+        "The manager chooses the plan and delegation approach. Private phases and the worked example are not seeded instructions.",
+        "Google Calendar is not required for this cycle: the dated schedule is a reviewed planning document, not a meeting reservation."
+      ],
+      "completion": {
+        "outcomes": [
+          {
+            "id": "maintenance-authorized",
+            "when": "A technically supported maintenance scope and feasible schedule are authorized, with all remaining work explicitly retained.",
+            "required_phase_ids": [
+              "establish-work",
+              "authorize-plan",
+              "reconcile-handoff"
+            ],
+            "observable": "Approved plan, substantive specialist evidence, consistent issue labels and shared profile, and actionable deferred and qualification obligations."
+          }
+        ],
+        "feasible_path": {
+          "outcome_id": "maintenance-authorized",
+          "steps": [
+            {
+              "phase_id": "establish-work",
+              "action_and_result": "Developer establishes the common dependency and separate legacy adaptation. Security confirms mandatory modern treatment and bounded legacy mitigation; applications substantiates the competing timing impact. The manager reconciles six gross hours with two protected hours daily."
+            },
+            {
+              "phase_id": "authorize-plan",
+              "action_and_result": "One permissible choice schedules shared work for four hours September 8 and two September 9; modern work for two hours September 9, four September 10, four September 11 and two September 14; legacy work for two hours September 14 and four each September 15–18. The manager explains why reducing legacy residual exposure outweighs the timing correction this window."
+            },
+            {
+              "phase_id": "reconcile-handoff",
+              "action_and_result": "Selected issues receive selected-window and retain qualification-needed. The timing issue remains open with application restrictions and September 21 reassessment. The shared profile reports four discretionary hours daily and links the plan. No firmware readiness claim is made."
+            }
+          ],
+          "constraint_checks": [
+            "The witness uses all 36 discretionary hours and never exceeds four on a working day; mandatory modern work finishes September 14.",
+            "A materially different permissible scope selects shared, modern and timing work for 34 hours. After the same mandatory sequence, timing can use two hours September 14, four each September 15–17 and two September 18; legacy obligations remain open.",
+            "Selecting all four packages requires 52 hours and violates capacity. Selecting only mandatory work is permissible if the manager specifically justifies the unused capacity and retains both optional obligations.",
+            "Qualification remains downstream under every selection; a planning label or shared-account message cannot discharge it."
+          ],
+          "numeric_checks": [
+            {
+              "constraint": "Discretionary engineering capacity",
+              "left": "9 * (6 - 2)",
+              "relation": "==",
+              "right": "36",
+              "unit": "engineering hours"
+            },
+            {
+              "constraint": "Witness scope fits available capacity",
+              "left": "6 + 12 + 18",
+              "relation": "<=",
+              "right": "36",
+              "unit": "engineering hours"
+            },
+            {
+              "constraint": "Alternative scope fits available capacity",
+              "left": "6 + 12 + 16",
+              "relation": "<=",
+              "right": "36",
+              "unit": "engineering hours"
+            },
+            {
+              "constraint": "Four packages exceed available capacity",
+              "left": "6 + 12 + 18 + 16",
+              "relation": ">=",
+              "right": "36 + 1",
+              "unit": "engineering hours"
+            }
+          ]
+        }
+      }
+    },
+    "apps": {
+      "github_mock": [
+        "labels",
+        "repos",
+        "issues"
+      ],
+      "slack_mock": [
+        "messages"
+      ]
+    }
+  },
+  "double": {
+    "workflow_id": "schweitzer-engineering-laboratories_maintenance-portfolio-selection",
+    "decisive_collections": [
+      "github_mock.labels",
+      "github_mock.repos"
+    ],
+    "contributions": [
+      {
+        "worker_id": "software-manager",
+        "apps": [
+          "slack_mock"
+        ]
+      },
+      {
+        "worker_id": "firmware-developer",
+        "apps": [
+          "github_mock"
+        ]
+      },
+      {
+        "worker_id": "security-analyst",
+        "apps": [
+          "github_mock"
+        ]
+      },
+      {
+        "worker_id": "application-engineer",
+        "apps": [
+          "slack_mock"
+        ]
+      }
+    ]
+  },
+  "oracle": {}
+}

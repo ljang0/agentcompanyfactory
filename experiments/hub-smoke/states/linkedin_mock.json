@@ -1,0 +1,34 @@
+{
+  "currentUser": {
+    "id": "user_admin", "name": "Yusuf Adeyemi-Okonkwo", "headline": "Operations Director at Saltmarsh Logistics", "location": "Savannah, Georgia", "about": "Fifteen years moving refrigerated freight through the Southeast.", "avatar": "https://ui-avatars.com/api/?name=Yusuf+Adeyemi&background=0A66C2&color=fff", "banner": "https://picsum.photos/seed/saltmarsh/1200/400",
+    "connections": ["user_2", "user_3"],
+    "experience": [{"id": "exp_1", "title": "Operations Director", "company": "Saltmarsh Logistics", "companyId": "company_1", "location": "Savannah, GA", "startDate": "2021-04", "endDate": null, "current": true, "description": "Run the cold-chain network."}],
+    "education": [{"id": "edu_1", "school": "Georgia Southern University", "degree": "BBA", "field": "Logistics", "startYear": "2006", "endYear": "2010"}],
+    "skills": ["Cold chain", "Fleet management", "Supply chain planning"]
+  },
+  "users": {
+    "user_2": {"id": "user_2", "name": "Ingrid Solberg", "headline": "Dispatch Manager at Saltmarsh Logistics", "location": "Savannah, Georgia", "about": "", "avatar": "https://ui-avatars.com/api/?name=Ingrid+Solberg&background=5E8E3E&color=fff", "banner": "", "connections": ["user_admin"], "experience": [], "education": [], "skills": ["Dispatch"]},
+    "user_3": {"id": "user_3", "name": "Devon Castellanos", "headline": "Procurement Lead at Lowcountry Fresh Foods", "location": "Charleston, South Carolina", "about": "", "avatar": "https://ui-avatars.com/api/?name=Devon+Castellanos&background=B24020&color=fff", "banner": "", "connections": ["user_admin"], "experience": [], "education": [], "skills": ["Procurement"]},
+    "user_4": {"id": "user_4", "name": "Hana Yoshida", "headline": "Recruiter at Port City Staffing", "location": "Savannah, Georgia", "about": "", "avatar": "https://ui-avatars.com/api/?name=Hana+Yoshida&background=7A3E9D&color=fff", "banner": "", "connections": [], "experience": [], "education": [], "skills": []}
+  },
+  "companies": {
+    "company_1": {"id": "company_1", "name": "Saltmarsh Logistics", "logo": "https://ui-avatars.com/api/?name=SL&background=0A66C2&color=fff", "industry": "Transportation", "size": "51-200 employees", "headquarters": "Savannah, GA", "description": "Refrigerated freight across the Southeast."},
+    "company_2": {"id": "company_2", "name": "Lowcountry Fresh Foods", "logo": "https://ui-avatars.com/api/?name=LF&background=5E8E3E&color=fff", "industry": "Food Distribution", "size": "201-500 employees", "headquarters": "Charleston, SC", "description": "Regional produce distributor."}
+  },
+  "posts": [
+    {"id": "post_1", "userId": "user_2", "content": "Our new reefer trailers passed inspection today. Savannah to Atlanta cold-chain runs start Monday.", "image": null, "reactions": {"like": ["user_admin"], "celebrate": ["user_3"], "love": [], "insightful": [], "funny": [], "curious": []}, "comments": [{"id": "cmt_1", "userId": "user_admin", "content": "Great work by the whole yard team.", "created": "2026-09-05T15:10:00Z", "likes": []}], "created": "2026-09-05T14:00:00Z", "repostedBy": null, "repostOf": null},
+    {"id": "post_2", "userId": "user_3", "content": "Looking for carriers with overnight capacity between Charleston and Jacksonville this fall.", "image": null, "reactions": {"like": [], "celebrate": [], "love": [], "insightful": ["user_admin"], "funny": [], "curious": []}, "comments": [], "created": "2026-09-04T09:30:00Z", "repostedBy": null, "repostOf": null}
+  ],
+  "jobs": [
+    {"id": "job_1", "title": "Fleet Maintenance Supervisor", "company": "Saltmarsh Logistics", "companyId": "company_1", "location": "Savannah, GA", "type": "Full-time", "level": "Mid-Senior level", "logo": "https://ui-avatars.com/api/?name=SL&background=0A66C2&color=fff", "description": "Lead preventive maintenance for 40 refrigerated trailers.", "requirements": ["5+ years fleet maintenance", "Reefer unit experience"], "salary": "$72,000 - $85,000", "posted": "2026-09-02T12:00:00Z", "applicants": 14, "saved": false, "applied": false}
+  ],
+  "chats": [
+    {"id": "chat_1", "participants": ["user_admin", "user_2"], "messages": [{"id": "msg_1", "senderId": "user_2", "content": "Inspection report is in the shared drive.", "created": "2026-09-05T16:00:00Z", "read": true}, {"id": "msg_2", "senderId": "user_admin", "content": "Thanks, reviewing tonight.", "created": "2026-09-05T16:05:00Z", "read": true}]}
+  ],
+  "notifications": [
+    {"id": "notif_1", "type": "comment", "actorId": "user_3", "targetId": "post_1", "content": "Devon Castellanos reacted to a post you commented on", "read": false, "created": "2026-09-05T17:00:00Z"}
+  ],
+  "connectionRequests": [
+    {"id": "req_1", "fromUserId": "user_4", "toUserId": "user_admin", "note": "Hi Yusuf, I recruit for logistics roles in Savannah and would love to connect.", "status": "pending", "created": "2026-09-06T08:00:00Z"}
+  ]
+}

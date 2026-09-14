@@ -1,0 +1,38 @@
+{
+  "currentUserId": "user-1",
+  "users": [
+    {"id": "user-1", "name": "Ingrid Thornbury", "email": "ingrid.thornbury@thornburyadeyemi.example", "role": "Attorney", "isAdmin": true, "subscriberType": "Attorney", "initials": "IT", "avatarColor": "#1A73E8", "hourlyRate": 375, "phone": "555-0301", "jobTitle": "Managing Partner", "groups": ["Real Estate", "Estate Planning"], "permissions": {"administrator": true, "accounts": true, "reports": true, "billing": true}},
+    {"id": "user-2", "name": "Femi Adeyemi", "email": "femi.adeyemi@thornburyadeyemi.example", "role": "Attorney", "isAdmin": false, "subscriberType": "Attorney", "initials": "FA", "avatarColor": "#34A853", "hourlyRate": 325, "phone": "555-0302", "jobTitle": "Partner", "groups": ["Real Estate"], "permissions": {"administrator": false, "accounts": true, "reports": true, "billing": true}}
+  ],
+  "contacts": [
+    {"id": "contact-1", "type": "Person", "prefix": "Ms.", "firstName": "Halima", "lastName": "Rostami", "displayName": "Halima Rostami", "companyId": null, "companyName": "", "jobTitle": "", "email": "halima.rostami@example", "emailSecondary": "", "phone": "555-0188", "phoneType": "Mobile", "website": "", "address": {"street": "88 Larchmont Ave", "city": "Duluth", "state": "MN", "zip": "55802", "country": "United States"}, "dateOfBirth": "1979-06-21", "maritalStatus": "Married", "tags": ["Client"], "customFields": {}, "billingInfo": {"ledesClientId": "", "paymentProfile": "Default (30 days)"}, "createdAt": "2026-02-10T15:00:00Z", "updatedAt": "2026-08-30T10:00:00Z"},
+    {"id": "contact-2", "type": "Company", "prefix": "", "firstName": "", "lastName": "", "displayName": "Lakeshore Grain Cooperative", "companyId": null, "companyName": "Lakeshore Grain Cooperative", "jobTitle": "", "email": "office@lakeshoregrain.example", "emailSecondary": "", "phone": "555-0420", "phoneType": "Work", "website": "", "address": {"street": "1 Elevator Rd", "city": "Two Harbors", "state": "MN", "zip": "55616", "country": "United States"}, "dateOfBirth": null, "maritalStatus": "", "tags": ["Client"], "customFields": {}, "billingInfo": {"ledesClientId": "LGC-01", "paymentProfile": "Default (30 days)"}, "createdAt": "2025-11-03T15:00:00Z", "updatedAt": "2026-08-12T10:00:00Z"}
+  ],
+  "matters": [
+    {"id": "matter-1", "matterNumber": "00212-Rostami-03.2026", "description": "Rostami - Lakefront Parcel Purchase", "status": "Open", "clientId": "contact-1", "clientName": "Halima Rostami", "practiceArea": "Real Estate", "responsibleAttorneyId": "user-1", "responsibleAttorneyName": "Ingrid Thornbury", "originatingAttorneyId": "user-1", "billingMethod": "Flat Fee", "hourlyRate": 0, "budget": 4500, "openDate": "2026-03-02", "closeDate": null, "pendingDate": null, "statuteOfLimitations": null, "courtName": "", "caseNumber": "", "stage": "Title Review", "tags": ["Residential"], "relatedContacts": [], "notes": "", "createdAt": "2026-03-02T09:00:00Z", "updatedAt": "2026-08-30T10:00:00Z"},
+    {"id": "matter-2", "matterNumber": "00198-Lakeshore-11.2025", "description": "Lakeshore Grain - Elevator Lease Renewal", "status": "Open", "clientId": "contact-2", "clientName": "Lakeshore Grain Cooperative", "practiceArea": "Commercial", "responsibleAttorneyId": "user-2", "responsibleAttorneyName": "Femi Adeyemi", "originatingAttorneyId": "user-2", "billingMethod": "Hourly", "hourlyRate": 325, "budget": 12000, "openDate": "2025-11-10", "closeDate": null, "pendingDate": null, "statuteOfLimitations": null, "courtName": "", "caseNumber": "", "stage": "Negotiation", "tags": [], "relatedContacts": [], "notes": "", "createdAt": "2025-11-10T09:00:00Z", "updatedAt": "2026-08-12T10:00:00Z"}
+  ],
+  "activities": [
+    {"id": "activity-1", "type": "TimeEntry", "matterId": "matter-2", "matterDescription": "Lakeshore Grain - Elevator Lease Renewal", "userId": "user-2", "userName": "Femi Adeyemi", "date": "2026-09-02", "description": "Redline of lease renewal draft", "duration": 2.5, "rate": 325, "total": 812.5, "billable": true, "billed": false, "billId": null, "category": "Drafting", "createdAt": "2026-09-02T18:00:00Z"}
+  ],
+  "tasks": [
+    {"id": "task-1", "name": "Order title commitment for lakefront parcel", "description": "", "matterId": "matter-1", "matterDescription": "Rostami - Lakefront Parcel Purchase", "assigneeId": "user-1", "assigneeName": "Ingrid Thornbury", "assignerId": "user-1", "priority": "High", "status": "Outstanding", "dueDate": "2026-09-10", "completedDate": null, "taskListId": null, "taskListName": "", "isPrivate": false, "createdAt": "2026-09-01T09:00:00Z", "updatedAt": "2026-09-01T09:00:00Z"}
+  ],
+  "calendarEvents": [
+    {"id": "event-1", "title": "Closing call - Rostami parcel", "description": "", "matterId": "matter-1", "matterDescription": "Rostami - Lakefront Parcel Purchase", "location": "Conference Room B", "startDate": "2026-09-15T15:00:00Z", "endDate": "2026-09-15T16:00:00Z", "allDay": false, "attendees": ["user-1"], "reminderMinutes": 30, "color": "#1A73E8", "recurrence": null, "createdAt": "2026-09-01T09:00:00Z"}
+  ],
+  "bills": [
+    {"id": "bill-1", "billNumber": "INV-2026-041", "matterId": "matter-2", "matterDescription": "Lakeshore Grain - Elevator Lease Renewal", "clientId": "contact-2", "clientName": "Lakeshore Grain Cooperative", "status": "Sent", "issuedDate": "2026-08-15", "dueDate": "2026-09-14", "paidDate": null, "subtotal": 1950, "taxRate": 0, "taxAmount": 0, "totalDue": 1950, "amountPaid": 0, "balance": 1950, "lineItems": [{"activityId": "activity-0", "description": "Lease review, July", "hours": 6, "rate": 325, "amount": 1950}], "memo": "", "createdAt": "2026-08-15T09:00:00Z", "updatedAt": "2026-08-15T09:00:00Z"}
+  ],
+  "documents": [],
+  "notes": [],
+  "communications": [],
+  "notifications": [
+    {"id": "notif-1", "type": "task_due", "title": "Task due soon", "message": "Order title commitment for lakefront parcel is due Sept 10", "referenceType": "task", "referenceId": "task-1", "read": false, "createdAt": "2026-09-03T08:00:00Z"}
+  ],
+  "timer": {"isRunning": false, "startTime": null, "elapsed": 0, "matterId": null, "description": "", "billable": true},
+  "firmSettings": {"firmName": "Thornbury & Adeyemi LLP", "address": {"street": "310 Superior Street, Suite 700", "city": "Duluth", "state": "MN", "zip": "55802", "country": "United States"}, "phone": "555-0300", "website": "", "defaultBillingRate": 325, "defaultPaymentTerms": 30, "currency": "USD", "dateFormat": "MM/DD/YYYY", "timezone": "America/Chicago", "practiceAreas": ["Real Estate", "Commercial", "Estate Planning"], "activityCategories": ["Document Review", "Research", "Drafting", "Client Meeting"]},
+  "folders": [{"id": "folder-1", "name": "Correspondence"}, {"id": "folder-2", "name": "Closing Documents"}],
+  "recentMatters": ["matter-1"],
+  "recentContacts": ["contact-1"]
+}

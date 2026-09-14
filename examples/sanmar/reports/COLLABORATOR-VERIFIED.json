@@ -1,0 +1,53 @@
+{
+  "at": "2026-09-14T03:56:46.249728+00:00",
+  "status": "inspection_verified_not_published",
+  "mode": "inspection",
+  "certified": false,
+  "payload_hash": "793835eebc0f437218755ec98b4fe9cbe83190f200692a5a8ce98ce82ba3c78e",
+  "model_calls": 0,
+  "tasks": {
+    "sanmar_account-assortment-review": {
+      "status": "replayed_verified_and_reset",
+      "data_hash": "df974252fe1d79fbacd32d2c99edc90acba9d42dd8b4f2be3b8f7c804215def3",
+      "mechanical": {
+        "checks": {
+          "3": {
+            "passed": true,
+            "reason": "New service notes and assigned, dated open tasks cover Mesa and Northfork. A new reply advances Northfork in its original thread. The accepted 120-cap order remains $630 pending allocation; Mesa retains its $633.60 shipped invoice and separate six-unit $79.20 claim with no recorded receipt or posted credit. SVC-104 and SVC-105 remain open; SVC-106 remains the closed duplicate."
+          }
+        },
+        "input_hash": "df974252fe1d79fbacd32d2c99edc90acba9d42dd8b4f2be3b8f7c804215def3",
+        "code_hash": "cc8bcf1c0247abb0b1342f3cbd0d21d8f162541209c72595abe20dcfed57cb53",
+        "isolation": "bubblewrap: private network/pid/user namespaces; read-only inputs; no host home or credentials",
+        "runner_hash": "7f82877a79fb236f8fe4495c588f34fdbbd1141c80854227ee355bc643897430"
+      }
+    },
+    "sanmar_qualified-acquisition-review": {
+      "status": "replayed_verified_and_reset",
+      "data_hash": "2ac05ed4e6c23b0d373e9ccf9b9e2433d37ab1fdef4461ed2b3cbd34ebc36899",
+      "mechanical": {
+        "checks": {
+          "3": {
+            "passed": true,
+            "reason": "All three campaign/ad-set pairs reconcile with new September written values; planned media exposure is $1950.0. Unrelated campaign controls are preserved. Approval, daily-budget risk wording and decision meaning require separate review."
+          },
+          "4": {
+            "passed": true,
+            "reason": "New dated tasks and associated obligation notes cover Kestrel, Moonrise, Oakline, Dovetail, Hillcrest, Slate Run. Original customer links and unresolved application states are retained; Moonrise has no duplicate company or email identity. Action accuracy and reconsideration conditions require separate review."
+          }
+        },
+        "input_hash": "2ac05ed4e6c23b0d373e9ccf9b9e2433d37ab1fdef4461ed2b3cbd34ebc36899",
+        "code_hash": "a2df1afc28f679d2e3c1b45406d9572ed48138a093d9315c56a11e14a1ecaec7",
+        "isolation": "bubblewrap: private network/pid/user namespaces; read-only inputs; no host home or credentials",
+        "runner_hash": "7f82877a79fb236f8fe4495c588f34fdbbd1141c80854227ee355bc643897430"
+      }
+    }
+  },
+  "proof_files": {
+    "verification/7ff031aa68824699acfc979350cbcfdb/sanmar_account-assortment-review/REFERENCE.json": "9d92a7deeed890b8f968e8fcd9ffd3f089c714cf32702d7cff2860a9b92d396e",
+    "verification/7ff031aa68824699acfc979350cbcfdb/sanmar_account-assortment-review/data.json": "759490b20a04e1bf3787ae487253adb53da6520634bcaa661054e49505043e8b",
+    "verification/7ff031aa68824699acfc979350cbcfdb/sanmar_qualified-acquisition-review/REFERENCE.json": "37a35c4a20e1ab708151e4b0c5679d14822cba9f2834d0d7da44cd8633d39664",
+    "verification/7ff031aa68824699acfc979350cbcfdb/sanmar_qualified-acquisition-review/data.json": "0316af172273fe4ad2c25501fdac18a354ef92129b6e1ea0df4492fd949c9622"
+  },
+  "scope": "Inspection payload, accepted world/tasks/calibration and retained trial records checked; fresh native reference replay, isolated mechanics and reset passed. Ordinary-team and ablation acceptance is not established. No models or desktop trials were run."
+}

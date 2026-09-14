@@ -1,0 +1,176 @@
+{
+  "app_id": "uber_eats_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activeOrderId",
+    "cart",
+    "categories",
+    "menuItems",
+    "orders",
+    "promotions",
+    "restaurants",
+    "reviews",
+    "ui",
+    "user"
+  ],
+  "observed": [
+    "activeOrderId",
+    "cart",
+    "categories",
+    "menuItems",
+    "orders",
+    "promotions",
+    "restaurants",
+    "reviews",
+    "ui",
+    "user"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "user": {
+      "kind": "object",
+      "count": 11,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "categories": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "name",
+        "icon"
+      ],
+      "keyed_by_id": false
+    },
+    "restaurants": {
+      "kind": "array",
+      "count": 16,
+      "record_fields": [
+        "id",
+        "name",
+        "imageUrl",
+        "cuisineType",
+        "rating",
+        "reviewCount",
+        "priceRange",
+        "deliveryFee",
+        "deliveryTimeMin",
+        "deliveryTimeMax",
+        "distance",
+        "isOpen",
+        "hours",
+        "address",
+        "phone",
+        "isSponsored",
+        "promotions",
+        "categories",
+        "tags",
+        "supportsPickup",
+        "pickupTimeMin",
+        "pickupTimeMax"
+      ],
+      "keyed_by_id": false
+    },
+    "menuItems": {
+      "kind": "array",
+      "count": 96,
+      "record_fields": [
+        "id",
+        "restaurantId",
+        "category",
+        "name",
+        "description",
+        "price",
+        "imageUrl",
+        "isPopular",
+        "isAvailable",
+        "dietaryTags",
+        "customizationGroups"
+      ],
+      "keyed_by_id": false
+    },
+    "cart": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "orders": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "restaurantId",
+        "restaurantName",
+        "restaurantImageUrl",
+        "items",
+        "status",
+        "placedAt",
+        "estimatedDeliveryMin",
+        "estimatedDeliveryMax",
+        "deliveredAt",
+        "deliveryAddress",
+        "deliveryMode",
+        "subtotal",
+        "serviceFee",
+        "deliveryFee",
+        "tax",
+        "tip",
+        "promoDiscount",
+        "total",
+        "paymentMethod",
+        "deliveryPerson",
+        "rating",
+        "review"
+      ],
+      "keyed_by_id": false
+    },
+    "activeOrderId": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    },
+    "promotions": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "type",
+        "title",
+        "description",
+        "code",
+        "minOrder",
+        "discountAmount",
+        "discountPercent",
+        "expiresAt",
+        "restaurantId"
+      ],
+      "keyed_by_id": false
+    },
+    "reviews": {
+      "kind": "array",
+      "count": 28,
+      "record_fields": [
+        "id",
+        "restaurantId",
+        "userId",
+        "userName",
+        "rating",
+        "comment",
+        "createdAt",
+        "orderId"
+      ],
+      "keyed_by_id": false
+    },
+    "ui": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

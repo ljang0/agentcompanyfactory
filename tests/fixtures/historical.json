@@ -1,0 +1,255 @@
+{
+  "purpose": "Retrieval/calibration controls, not accepted new-corpus designs.",
+  "examples": [
+    {
+      "id": "cedarspan_account_variance_resolution",
+      "origin": "<user-home>/agent-company-factory/archive/2026-09-04-pre-firm-first/companies/cedarspan/company.toml",
+      "origin_sha256": "01fc42d56f7cb3ac23a366a369db12aab459dec98a8f73e63de8490261ce8ba8",
+      "company": {
+        "id": "cedarspan",
+        "name": "Cedarspan Assurance Group",
+        "team_type": "financial_statement_audit_engagement_team",
+        "modeled_on": "BDO USA assurance practice",
+        "sector": "Professional, Scientific, and Technical Services",
+        "industry_naics": "5412",
+        "domain": "financial statement audit, tax, and valuation services for business clients",
+        "size": "multi-office professional-services practice",
+        "location": "United States",
+        "sources": [
+          "https://www.bdo.com/careers/labor-conditions-applications",
+          "https://www.bdo.com/careers/experienced-candidates",
+          "https://www.bdo.com/insights/different-paths-at-bdo",
+          "https://www.bdo.com/insights/industries/auto-dealerships/a-value-perspective-on-the-auto-dealership-industry"
+        ]
+      },
+      "task": {
+        "id": "account_variance_resolution",
+        "roles": [
+          "audit_staff_b",
+          "audit_senior",
+          "valuation_specialist",
+          "audit_manager"
+        ],
+        "surfaces": {
+          "audit_staff_b": [
+            "client_erp",
+            "ledger",
+            "spreadsheets",
+            "workpapers"
+          ],
+          "audit_senior": [
+            "client_erp",
+            "workpapers",
+            "documents"
+          ],
+          "valuation_specialist": [
+            "spreadsheets",
+            "documents"
+          ],
+          "audit_manager": [
+            "client_erp",
+            "workpapers",
+            "documents",
+            "mail"
+          ]
+        },
+        "situation": "At Larkspur Fleet Services, the deferred-revenue balance for multi-year maintenance plans does not tie between the QuickBooks detail, the customer contract rollforward, and the valuation group's standalone schedule. The senior's review note asks for a clean variance file before the account section returns to manager review.",
+        "deliverable": "Prepare an account-testing workbook and variance disposition memorandum that trace the balance, show the independent analysis, and recommend a correction, further support, or carry-forward conclusion for manager review.",
+        "holds": {
+          "audit_staff_b": "the QuickBooks transaction detail, maintenance-plan invoice register, and customer contract rollforward for Larkspur's deferred-revenue account",
+          "audit_senior": "the review-note thread, account lead schedule, and request log that frame the open deferred-revenue question",
+          "valuation_specialist": "the standalone revenue-allocation model, renewal assumptions, and memo on the maintenance-plan performance obligation",
+          "audit_manager": "the engagement correspondence, accounting-policy library notes, and review checklist for significant account conclusions"
+        },
+        "policy_home": "documents",
+        "rubric": [
+          "source-to-schedule traceability for each conclusion",
+          "separation of client evidence, independent work, and unresolved questions",
+          "clear treatment of the valuation model's assumptions",
+          "practical recommendation with review points and cross-references"
+        ],
+        "files": [
+          "account testing and variance workbook (xlsx)",
+          "variance disposition memorandum (docx)"
+        ],
+        "window": "2 to 5 business days",
+        "hardness": {
+          "conflict": "The QuickBooks detail and contract rollforward describe the revenue-release pattern differently; the revenue-recognition memo in the documents library sets the basis for the write-up.",
+          "compute": "Combine transaction detail, contract terms, and the valuation model into an independently supported balance, difference, and projection that another reviewer can reproduce.",
+          "judgment": "Recommend whether the evidence calls for an adjusting entry, targeted follow-up, or a documented conclusion, and explain the choice in language the engagement manager can challenge."
+        }
+      }
+    },
+    {
+      "id": "pinecrest_going_concern_assessment",
+      "origin": "<user-home>/agent-company-factory/archive/2026-09-04-pre-firm-first/companies/pinecrest/company.toml",
+      "origin_sha256": "3a9efcc7db5f32f207ef5627bc7dbfb800b9bc23de84cbb2a84909ee32fdc16f",
+      "company": {
+        "id": "pinecrest",
+        "name": "Pinecrest Assurance Group",
+        "team_type": "financial_statement_audit_engagement_team",
+        "modeled_on": "PwC US assurance practice",
+        "sector": "Professional, Scientific, and Technical Services",
+        "industry_naics": "5412",
+        "domain": "financial statement audit, tax, and valuation services for privately owned companies",
+        "size": "large professional-services practice",
+        "location": "New York, New York",
+        "sources": [
+          "https://www.pwc.com/us/en/careers.html",
+          "https://jobs.us.pwc.com/job/new-york/private-company-services-assurance-senior-associate/932/15796783",
+          "https://jobs-us.pwc.com/us/en/careers-in-assurance",
+          "https://www.pwc.com/us/en/careers/entry-level/recruiting.html"
+        ]
+      },
+      "task": {
+        "id": "going_concern_assessment",
+        "roles": [
+          "audit_staff_b",
+          "audit_senior",
+          "valuation_specialist",
+          "audit_manager"
+        ],
+        "surfaces": {
+          "audit_staff_b": [
+            "client_erp",
+            "workpapers",
+            "documents"
+          ],
+          "audit_senior": [
+            "client_erp",
+            "workpapers",
+            "documents"
+          ],
+          "valuation_specialist": [
+            "spreadsheets",
+            "documents"
+          ],
+          "audit_manager": [
+            "client_erp",
+            "workpapers",
+            "documents",
+            "mail"
+          ]
+        },
+        "situation": "At Alderline Medical Supply, a privately held distributor's lender covenant discussion, rolling cash-flow forecast, and customer-concentration notes are spread across the client workspace and working-paper file. During the review, management sends a revised financing plan that changes the scenarios the team needs to evaluate, so build the evidence trail for senior review and manager discussion.",
+        "deliverable": "Prepare a going-concern assessment memorandum and audit committee briefing deck that connect liquidity evidence, forecast assumptions, financing plans, specialist analysis, open requests, and manager review points.",
+        "holds": {
+          "audit_staff_b": "the client-ERP cash activity, debt-service schedule, and working-paper tie-out for Alderline's liquidity review",
+          "audit_senior": "the going-concern request log, risk notes, and review comments linking management evidence to the assessment",
+          "valuation_specialist": "the cash-flow forecast model, customer-concentration scenarios, and valuation assumptions for the financing plan",
+          "audit_manager": "the lender correspondence, reporting-framework guidance, and consultation notes used to frame the assessment"
+        },
+        "rubric": [
+          "clear linkage from liquidity evidence to each scenario considered",
+          "transparent treatment of forecast assumptions and specialist analysis",
+          "focused open requests that address gaps without assuming missing support",
+          "concise briefing narrative that gives leadership usable review points"
+        ],
+        "files": [
+          "going-concern assessment memorandum (pdf)",
+          "audit committee briefing deck (pptx)"
+        ],
+        "window": "4 to 8 business days",
+        "hardness": {
+          "synthesis": "Bring the cash activity, forecast model, financing plan, customer-concentration analysis, and management explanations into one narrative that a reviewer can test from its source trail.",
+          "constraint": "Keep the assessment aligned with financial-reporting disclosure requirements while limiting each scenario to evidence present in the engagement file.",
+          "event": "A lender correspondence update or revised financing plan arrives during drafting and requires the scenario comparison and open evidence requests to be recast."
+        }
+      }
+    },
+    {
+      "id": "renamed_account_variance_control",
+      "origin": "<user-home>/agent-company-factory/archive/2026-09-04-pre-firm-first/companies/cedarspan/company.toml",
+      "origin_sha256": "01fc42d56f7cb3ac23a366a369db12aab459dec98a8f73e63de8490261ce8ba8",
+      "company": {
+        "id": "cedarspan",
+        "name": "Cedarspan Assurance Group",
+        "team_type": "financial_statement_audit_engagement_team",
+        "modeled_on": "BDO USA assurance practice",
+        "sector": "Professional, Scientific, and Technical Services",
+        "industry_naics": "5412",
+        "domain": "financial statement audit, tax, and valuation services for business clients",
+        "size": "multi-office professional-services practice",
+        "location": "United States",
+        "sources": [
+          "https://www.bdo.com/careers/labor-conditions-applications",
+          "https://www.bdo.com/careers/experienced-candidates",
+          "https://www.bdo.com/insights/different-paths-at-bdo",
+          "https://www.bdo.com/insights/industries/auto-dealerships/a-value-perspective-on-the-auto-dealership-industry"
+        ]
+      },
+      "task": {
+        "id": "account_variance_resolution",
+        "roles": [
+          "audit_staff_b",
+          "audit_senior",
+          "valuation_specialist",
+          "audit_manager"
+        ],
+        "surfaces": {
+          "audit_staff_b": [
+            "client_erp",
+            "ledger",
+            "spreadsheets",
+            "workpapers"
+          ],
+          "audit_senior": [
+            "client_erp",
+            "workpapers",
+            "documents"
+          ],
+          "valuation_specialist": [
+            "spreadsheets",
+            "documents"
+          ],
+          "audit_manager": [
+            "client_erp",
+            "workpapers",
+            "documents",
+            "mail"
+          ]
+        },
+        "situation": "At Juniper Fleet Services, the deferred-revenue balance for multi-year maintenance plans does not tie between the QuickBooks detail, the customer contract rollforward, and the valuation group's standalone schedule. The senior's review note asks for a clean variance file before the account section returns to manager review.",
+        "deliverable": "Prepare an account-testing workbook and variance disposition memorandum that trace the balance, show the independent analysis, and recommend a correction, further support, or carry-forward conclusion for manager review.",
+        "holds": {
+          "audit_staff_b": "the QuickBooks transaction detail, maintenance-plan invoice register, and customer contract rollforward for Larkspur's deferred-revenue account",
+          "audit_senior": "the review-note thread, account lead schedule, and request log that frame the open deferred-revenue question",
+          "valuation_specialist": "the standalone revenue-allocation model, renewal assumptions, and memo on the maintenance-plan performance obligation",
+          "audit_manager": "the engagement correspondence, accounting-policy library notes, and review checklist for significant account conclusions"
+        },
+        "policy_home": "documents",
+        "rubric": [
+          "source-to-schedule traceability for each conclusion",
+          "separation of client evidence, independent work, and unresolved questions",
+          "clear treatment of the valuation model's assumptions",
+          "practical recommendation with review points and cross-references"
+        ],
+        "files": [
+          "account testing and variance workbook (xlsx)",
+          "variance disposition memorandum (docx)"
+        ],
+        "window": "2 to 5 business days",
+        "hardness": {
+          "conflict": "The QuickBooks detail and contract rollforward describe the revenue-release pattern differently; the revenue-recognition memo in the documents library sets the basis for the write-up.",
+          "compute": "Combine transaction detail, contract terms, and the valuation model into an independently supported balance, difference, and projection that another reviewer can reproduce.",
+          "judgment": "Recommend whether the evidence calls for an adjusting entry, targeted follow-up, or a documented conclusion, and explain the choice in language the engagement manager can challenge."
+        }
+      },
+      "derived_control": "Synthetic rename of the first historical design; not an independently generated archived company."
+    }
+  ],
+  "pairs": [
+    {
+      "left": "cedarspan_account_variance_resolution",
+      "right": "renamed_account_variance_control",
+      "expected": "variant",
+      "basis": "Only incidental client names changed; the decision and dependency structure are identical."
+    },
+    {
+      "left": "cedarspan_account_variance_resolution",
+      "right": "pinecrest_going_concern_assessment",
+      "expected": "distinct",
+      "basis": "Account-balance correction versus forward-looking liquidity/financing assessment. Shared audit occupations do not make the decision problems identical."
+    }
+  ]
+}

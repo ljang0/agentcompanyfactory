@@ -1,0 +1,310 @@
+{
+  "captured_at": "2026-09-10",
+  "how": "Suffix demand counted over the 2,026 materials on disk under companies/*/world/materials; launch lines, window titles and settle times measured on a live guest booted from /mnt/storage/desktop-images/base_ubuntu_desktop.qcow2 by scripts/desktop_check.py.",
+  "contract": "One entry per desktop application the `desktop` runtime adapter may open a seeded material in. `launch` is a shell template with a {path} placeholder -- or, for an application whose `opens` is empty because it opens a folder rather than a file, a {home} placeholder -- run inside the guest's own X session (never with a hard-coded DISPLAY: this image's session is :1, not :0), with `launch_by_suffix` overriding it for a format that needs different arguments. `opens` is the set of material suffixes routed to this app, and no two apps may claim the same suffix. `reader` names the reader in src/company_envs/world/desktop_app.py that reads the file back for grading, with `reader_by_suffix` overriding it per format. `window_match` is a fragment of this app's own window title, used only when the document's filename does not appear in it. `ready_seconds` bounds the wait for that window to appear; `settle_seconds` is the further wait after it does, before a screenshot shows the document rather than a half-painted frame. `cua_gym_type` names the CUA-Gym application type this entry answers, or null for an entry outside their set, so coverage is a query over this file rather than a claim in a document. `kill` is the pkill -f pattern that ends this application the way an episode does -- the controller stops the VM rather than closing windows -- so a check can prove the next launch opens the work and not a recovery dialog. It is a path fragment rather than a bare name where a bare name would also match the checker's own process. `typing` is present on an application a worker types into: `focus` is what puts a caret where typing lands (a deck has none waiting), `commit` is the keystroke that ends an entry, `save` the keystrokes that put it on disk, including the answer to any format dialog the save raises. An entry without `typing` is one where a worker's work is not typed text -- a viewer, a file manager, a media player -- and the check does not pretend otherwise.",
+  "requires": [
+    "xdotool",
+    "wmctrl"
+  ],
+  "requires_note": "The launcher's dependencies, not any one app's. xdotool reads and closes windows: readiness, the window list and the covering-modal check all go through it, and it is already required by world/backends/mypcbench.py for click and type actions. wmctrl maximises the document window; this image's xdotool has no windowstate command, and sizing by pixels is wrong because _NET_WORKAREA reports the whole screen while the dock and top bar take 70 and 27 pixels of it. Both were present in the base image on 2026-09-10; a missing wmctrl leaves a window at its own size rather than failing the launch.",
+  "apps": {
+    "libreoffice_calc": {
+      "name": "LibreOffice Calc",
+      "packages": [
+        "libreoffice-calc"
+      ],
+      "launch": "libreoffice --calc --norestore {path}",
+      "launch_by_suffix": {
+        ".csv": "libreoffice --calc --norestore --infilter=CSV:44,34,76,1 {path}"
+      },
+      "launch_note": "--norestore suppresses the Document Recovery dialog that a killed LibreOffice leaves behind; without it the next launch opens a modal instead of the work. The .csv line pins the Text Import dialog's answer (comma, double quote, UTF-8, first row) so a worker sees the 183 seeded CSVs as a grid rather than an import wizard.",
+      "opens": [
+        ".xlsx",
+        ".xlsm",
+        ".ods",
+        ".csv"
+      ],
+      "reader": "sheets",
+      "reader_by_suffix": {
+        ".csv": "delimited"
+      },
+      "reader_note": "A .csv routed to Calc is still a text file on disk: 183 of the materials are, and openpyxl cannot open one. The delimited reader returns the same {kind: sheets} shape, so a grader writes one assertion for a workbook and a CSV alike.",
+      "window_match": "LibreOffice Calc",
+      "ready_seconds": 90,
+      "settle_seconds": 4,
+      "cua_gym_type": "libreoffice_calc",
+      "kill": "soffice",
+      "typing": {
+        "commit": [
+          "Return"
+        ],
+        "save": [
+          "ctrl+s",
+          "Return"
+        ],
+        "note": "Return commits the cell first, and the second Return answers Keep current format, which LibreOffice raises for every non-ODF save."
+      }
+    },
+    "libreoffice_writer": {
+      "name": "LibreOffice Writer",
+      "packages": [
+        "libreoffice-writer"
+      ],
+      "launch": "libreoffice --writer --norestore {path}",
+      "opens": [
+        ".docx",
+        ".doc",
+        ".odt",
+        ".rtf"
+      ],
+      "reader": "document",
+      "window_match": "LibreOffice Writer",
+      "ready_seconds": 90,
+      "settle_seconds": 4,
+      "cua_gym_type": "libreoffice_writer",
+      "kill": "soffice",
+      "typing": {
+        "save": [
+          "ctrl+s",
+          "Return"
+        ],
+        "note": "The second Return answers Keep current format."
+      }
+    },
+    "libreoffice_impress": {
+      "name": "LibreOffice Impress",
+      "packages": [
+        "libreoffice-impress"
+      ],
+      "launch": "libreoffice --impress --norestore {path}",
+      "opens": [
+        ".pptx",
+        ".ppt",
+        ".odp"
+      ],
+      "reader": "slides",
+      "window_match": "LibreOffice Impress",
+      "ready_seconds": 90,
+      "settle_seconds": 4,
+      "cua_gym_type": "libreoffice_impress",
+      "kill": "soffice",
+      "typing": {
+        "focus": [
+          "Escape",
+          "Tab",
+          "Return"
+        ],
+        "save": [
+          "Escape",
+          "Escape",
+          "ctrl+s",
+          "Return"
+        ],
+        "note": "A deck has no cursor waiting in it. Tab selects the first text placeholder on the slide and Return enters it; without that, typing goes nowhere and the save still rewrites the file, so the check failed against a deck that had been saved and not edited. The two Escapes leave the text box and then the object before the save."
+      }
+    },
+    "evince": {
+      "name": "Document Viewer",
+      "packages": [
+        "evince"
+      ],
+      "launch": "evince {path}",
+      "opens": [
+        ".pdf"
+      ],
+      "reader": "pdf",
+      "window_match": "",
+      "ready_seconds": 60,
+      "settle_seconds": 3,
+      "cua_gym_type": "pdf",
+      "kill": "evince"
+    },
+    "text_editor": {
+      "name": "Text Editor",
+      "packages": [
+        "gedit"
+      ],
+      "launch": "gedit {path}",
+      "opens": [
+        ".txt",
+        ".md",
+        ".log",
+        ".json",
+        ".html",
+        ".eml"
+      ],
+      "reader": "text",
+      "window_match": "",
+      "ready_seconds": 60,
+      "settle_seconds": 2,
+      "cua_gym_type": null,
+      "opens_note": "Prose, data and mail. Source files moved to VS Code when it landed in the image: a developer role's router.py belongs in an editor with a file tree, and 7 real materials (4 .py, 2 .mjs, 1 .c) are exactly that. No suffix may be claimed twice, so this is a move, not a copy.",
+      "kill": "gedit",
+      "typing": {
+        "save": [
+          "ctrl+s"
+        ],
+        "note": "gedit writes in place with no dialog."
+      }
+    },
+    "image_viewer": {
+      "name": "Image Viewer",
+      "packages": [
+        "eog"
+      ],
+      "launch": "eog {path}",
+      "opens": [
+        ".svg",
+        ".gif",
+        ".webp"
+      ],
+      "reader": "image",
+      "window_match": "Image Viewer",
+      "window_match_note": "Measured on a live guest: eog's WM_NAME is 'Image Viewer' and never the file name, which lives in a client-side header bar the window manager cannot see. Every other application here titles its window after the document, so this is the only entry that needs the fallback.",
+      "ready_seconds": 60,
+      "settle_seconds": 2,
+      "cua_gym_type": null,
+      "opens_note": "Vector and animation only, once GIMP landed. A .png material is something a worker is asked to change, so it routes to the editor; an .svg is not, because GIMP rasterises one on import and destroys it. All 6 real image materials are .svg and stay here. Measured: 5 of those 6 point at a remote image URL and render an empty canvas on a guest with restrict=on.",
+      "kill": "eog"
+    },
+    "files": {
+      "name": "Files",
+      "packages": [
+        "nautilus"
+      ],
+      "launch": "nautilus {home}/Documents",
+      "opens": [],
+      "reader": "none",
+      "window_match": "",
+      "ready_seconds": 60,
+      "settle_seconds": 3,
+      "cua_gym_type": "os",
+      "launch_note": "A folder, not a file, so the template carries {home} and no {path}: an application whose `opens` is empty is checked for {home} instead. This is the CUA-Gym `os` type's application -- how a worker finds what was seeded under Desktop/, Documents/ and Downloads/.",
+      "kill": "nautilus"
+    },
+    "vs_code": {
+      "name": "Visual Studio Code",
+      "cua_gym_type": "vscode",
+      "packages": [
+        "code"
+      ],
+      "launch": "code {home}/Documents {path}",
+      "launch_note": "The folder first and then the file, which is what puts an explorer beside the editor rather than a lone tab. Version 1.137.0 in the image; the base image suppresses the welcome page, Copilot sign-in, workspace trust, telemetry and hot exit.",
+      "opens": [
+        ".py",
+        ".js",
+        ".mjs",
+        ".ts",
+        ".tsx",
+        ".c",
+        ".h",
+        ".cpp",
+        ".go",
+        ".rs",
+        ".sh",
+        ".sql",
+        ".yaml",
+        ".yml",
+        ".toml"
+      ],
+      "reader": "text",
+      "window_match": "Visual Studio Code",
+      "ready_seconds": 90,
+      "settle_seconds": 6,
+      "kill": "/usr/share/code/code",
+      "typing": {
+        "save": [
+          "ctrl+s"
+        ],
+        "note": "VS Code writes in place; hot exit is suppressed in the image."
+      }
+    },
+    "gimp": {
+      "name": "GIMP",
+      "cua_gym_type": "gimp",
+      "packages": [
+        "gimp"
+      ],
+      "launch": "gimp {path}",
+      "opens": [
+        ".png",
+        ".jpg",
+        ".jpeg",
+        ".tif",
+        ".tiff",
+        ".bmp",
+        ".xcf",
+        ".psd"
+      ],
+      "reader": "image",
+      "reader_note": "Size and format, never content: nothing here can assert what a worker painted. GIMP is openable and gradeable only on image properties, which is the honest limit.",
+      "window_match": "GIMP",
+      "ready_seconds": 90,
+      "settle_seconds": 6,
+      "kill": "gimp",
+      "window_match_note": "Measured: GIMP titles its window '[company proof] (imported)-1.0 (RGB color 8-bit ...) 1080x720 - GIMP', so the document's stem appears but its full filename never does, and the application's own name is the only fixed fragment."
+    },
+    "vlc": {
+      "name": "VLC media player",
+      "cua_gym_type": "vlc",
+      "packages": [
+        "vlc"
+      ],
+      "launch": "vlc {path}",
+      "opens": [
+        ".mp4",
+        ".mkv",
+        ".webm",
+        ".mov",
+        ".avi",
+        ".m4v",
+        ".mp3",
+        ".wav",
+        ".flac",
+        ".m4a",
+        ".ogg",
+        ".opus"
+      ],
+      "reader": "none",
+      "reader_note": "Openable, not gradeable. A playing session leaves nothing on disk to read back, and a half-working container parser would answer 'not there' for every format it did not understand -- a silent miss dressed as a verdict. A task needing a media check needs a real media reader first.",
+      "window_match": "VLC media player",
+      "ready_seconds": 60,
+      "settle_seconds": 4,
+      "kill": "vlc"
+    },
+    "blender": {
+      "name": "Blender",
+      "cua_gym_type": "blender",
+      "packages": [
+        "blender"
+      ],
+      "launch": "blender {path}",
+      "opens": [
+        ".blend"
+      ],
+      "reader": "none",
+      "reader_note": "Openable, not gradeable. A .blend is a binary scene graph and this repo has no reader for one; the same rule as VLC applies rather than a parser that guesses.",
+      "window_match": "Blender",
+      "ready_seconds": 120,
+      "settle_seconds": 8,
+      "kill": "blender"
+    },
+    "openshot": {
+      "name": "OpenShot Video Editor",
+      "cua_gym_type": "openshot",
+      "packages": [
+        "openshot-qt"
+      ],
+      "launch": "openshot-qt {path}",
+      "opens": [
+        ".osp"
+      ],
+      "reader": "text",
+      "reader_note": "An OpenShot project is JSON, so the text reader is a real content reader here: a check can name a clip's file, its position or the project's title. The .mp4 it edits belongs to VLC, because a suffix routes to one application and a video is watched more often than it is edited.",
+      "window_match": "OpenShot",
+      "ready_seconds": 120,
+      "settle_seconds": 8,
+      "kill": "bin/openshot-qt"
+    }
+  }
+}

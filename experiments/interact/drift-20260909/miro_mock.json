@@ -1,0 +1,87 @@
+{
+  "app_id": "miro_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "boardItems",
+    "boards",
+    "comments",
+    "currentUser",
+    "projects",
+    "tags",
+    "team"
+  ],
+  "observed": [
+    "boardItems",
+    "boards",
+    "comments",
+    "currentUser",
+    "projects",
+    "tags",
+    "team"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 8,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "team": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "projects": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "teamId",
+        "boardIds",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "boards": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "projectId",
+        "teamId",
+        "createdBy",
+        "createdAt",
+        "modifiedAt",
+        "starred",
+        "thumbnailColor",
+        "viewedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "boardItems": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "comments": {
+      "kind": "object",
+      "count": 1,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "tags": {
+      "kind": "object",
+      "count": 1,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

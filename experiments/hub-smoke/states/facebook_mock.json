@@ -1,0 +1,45 @@
+{
+  "currentUser": {"id": "user_1", "name": "Owen Castellano", "avatar": "https://picsum.photos/100/100?random=owen", "cover": "https://picsum.photos/1200/400?random=owencover", "bio": "Owner, Riverbend Bakehouse | Sourdough obsessive", "friends": ["user_2", "user_3"], "location": "Riverbend, OR", "workplace": "Riverbend Bakehouse", "education": "Linn-Benton Community College", "joinedDate": "2019-06-02", "relationship": "Married", "online": true},
+  "users": {
+    "user_1": {"id": "user_1", "name": "Owen Castellano", "avatar": "https://picsum.photos/100/100?random=owen", "cover": "https://picsum.photos/1200/400?random=owencover", "bio": "Owner, Riverbend Bakehouse | Sourdough obsessive", "friends": ["user_2", "user_3"], "location": "Riverbend, OR", "workplace": "Riverbend Bakehouse", "education": "Linn-Benton Community College", "joinedDate": "2019-06-02", "relationship": "Married", "online": true},
+    "user_2": {"id": "user_2", "name": "Maya Thibodeaux", "avatar": "https://picsum.photos/100/100?random=maya", "cover": "https://picsum.photos/1200/400?random=mayacover", "bio": "Market coordinator, Riverbend Farmers Market", "friends": ["user_1", "user_3"], "location": "Riverbend, OR", "workplace": "Riverbend Farmers Market", "education": "Oregon State University", "joinedDate": "2017-03-20", "relationship": "Single", "online": true},
+    "user_3": {"id": "user_3", "name": "Henrik Dahl", "avatar": "https://picsum.photos/100/100?random=henrik", "cover": "https://picsum.photos/1200/400?random=henrikcover", "bio": "Cheesemaker at Dahl Creamery", "friends": ["user_1", "user_2"], "location": "Sweet Home, OR", "workplace": "Dahl Creamery", "education": "", "joinedDate": "2020-11-11", "relationship": "In a Relationship", "online": false}
+  },
+  "friendRequests": [
+    {"id": "user_3", "timestamp": 1757200000000, "mutualFriends": 1}
+  ],
+  "groups": [
+    {"id": "group_1", "name": "Riverbend Small Business Owners", "cover": "https://picsum.photos/1200/400?random=group_rb", "members": ["user_1", "user_2", "user_3"], "description": "Shop talk for Riverbend's independent businesses.", "posts": ["post_g1"], "privacy": "private", "category": "Business", "createdBy": "user_2"}
+  ],
+  "pages": [
+    {"id": "page_1", "name": "Riverbend Bakehouse", "avatar": "https://picsum.photos/100/100?random=page_rb", "cover": "https://picsum.photos/1200/400?random=page_rbcover", "description": "Naturally leavened bread and pastry, baked daily on Mill Street.", "followers": ["user_2", "user_3"], "reviews": [{"id": "r1", "userId": "user_3", "rating": 5, "content": "Best rye in the valley.", "timestamp": 1756900000000}], "posts": ["post_p1"], "category": "Bakery", "website": "https://riverbend-bakehouse.example", "phone": "+1 (541) 555-0134", "address": "212 Mill Street, Riverbend, OR 97300", "isLiked": true}
+  ],
+  "posts": [
+    {"id": "post_1", "userId": "user_2", "content": "Riverbend Farmers Market opens Saturday at the old mill lot", "image": "https://picsum.photos/800/400?random=market", "likes": ["user_1"], "reactions": [{"userId": "user_1", "type": "love"}], "comments": [{"id": "c1", "userId": "user_1", "content": "We will have the seeded rye ready by 8.", "timestamp": 1757230000000, "replies": [], "likes": ["user_2"]}], "timestamp": 1757226000000, "type": "photo", "privacy": "public", "shares": 3, "edited": false},
+    {"id": "post_2", "userId": "user_1", "content": "New oven installed. Croissant lamination test tomorrow morning.", "image": null, "likes": ["user_2", "user_3"], "reactions": [{"userId": "user_2", "type": "like"}, {"userId": "user_3", "type": "wow"}], "comments": [], "timestamp": 1757140000000, "type": "status", "privacy": "friends", "shares": 0, "edited": false},
+    {"id": "post_g1", "userId": "user_3", "groupId": "group_1", "content": "Anyone have a spare chest freezer to lend for the festival weekend?", "image": null, "likes": [], "reactions": [], "comments": [], "timestamp": 1757050000000, "type": "status", "privacy": "public", "shares": 0, "edited": false},
+    {"id": "post_p1", "userId": "user_1", "pageId": "page_1", "content": "Saturday special: fig and walnut levain.", "image": "https://picsum.photos/800/400?random=levain", "likes": ["user_2"], "reactions": [{"userId": "user_2", "type": "love"}], "comments": [], "timestamp": 1757000000000, "type": "photo", "privacy": "public", "shares": 1, "edited": false}
+  ],
+  "notifications": [
+    {"id": "n1", "type": "like", "userId": "user_2", "content": "liked your post", "read": false, "timestamp": 1757150000000, "postId": "post_2"},
+    {"id": "n2", "type": "friend_request", "userId": "user_3", "content": "sent you a friend request", "read": false, "timestamp": 1757200000000}
+  ],
+  "marketplace": [
+    {"id": "listing_1", "sellerId": "user_3", "title": "Commercial Cheese Press - Stainless", "description": "Lightly used 20 L press, all parts included.", "price": 340, "currency": "USD", "category": "home_goods", "condition": "Used - Good", "images": ["https://picsum.photos/600/600?random=press"], "location": "Sweet Home, OR", "listed": 1757000000000, "saved": false}
+  ],
+  "events": [
+    {"id": "event_1", "name": "Riverbend Harvest Festival 2026", "description": "Food stalls, live music and the giant pumpkin weigh-off.", "cover": "https://picsum.photos/1200/400?random=harvest", "hostId": "user_2", "date": "2026-10-03T16:00:00Z", "endDate": "2026-10-03T23:00:00Z", "location": "Mill Street Commons, Riverbend, OR", "interested": ["user_3"], "going": ["user_1", "user_2"], "category": "social"}
+  ],
+  "stories": [
+    {"id": "story_1", "userId": "user_2", "image": "https://picsum.photos/420/740?random=story_market", "timestamp": 1757240000000, "viewed": false}
+  ],
+  "savedItems": [
+    {"id": "saved_1", "type": "event", "referenceId": "event_1", "savedAt": 1757100000000, "collection": null}
+  ],
+  "messages": {
+    "conv_user_2": [
+      {"id": "msg_1", "senderId": "user_2", "content": "Can you bring 40 baguettes for the market opening?", "timestamp": 1757210000000, "read": true},
+      {"id": "msg_2", "senderId": "user_1", "content": "Yes, and a tray of morning buns.", "timestamp": 1757211000000, "read": true}
+    ]
+  }
+}

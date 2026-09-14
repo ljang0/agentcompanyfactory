@@ -1,0 +1,259 @@
+{
+  "app_id": "booking_com_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "bookings",
+    "destinations",
+    "notifications",
+    "properties",
+    "recentSearches",
+    "recentlyViewed",
+    "reviewCategories",
+    "reviews",
+    "rooms",
+    "searchFilters",
+    "searchParams",
+    "searchResults",
+    "selectedPropertyId",
+    "user",
+    "viewedProperties"
+  ],
+  "observed": [
+    "bookings",
+    "destinations",
+    "notifications",
+    "properties",
+    "recentSearches",
+    "recentlyViewed",
+    "reviewCategories",
+    "reviews",
+    "rooms",
+    "searchFilters",
+    "searchParams",
+    "searchResults",
+    "selectedPropertyId",
+    "user",
+    "viewedProperties"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "user": {
+      "kind": "object",
+      "count": 14,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "destinations": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "name",
+        "country",
+        "countryCode",
+        "type",
+        "propertyCount",
+        "trending",
+        "description"
+      ],
+      "keyed_by_id": false
+    },
+    "properties": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "stars",
+        "destinationId",
+        "city",
+        "country",
+        "address",
+        "distanceFromCenter",
+        "coordinates",
+        "description",
+        "shortDescription",
+        "reviewScore",
+        "reviewScoreWord",
+        "reviewCount",
+        "pricePerNight",
+        "originalPrice",
+        "currency",
+        "taxesAndFees",
+        "genius",
+        "geniusDiscountPercent",
+        "freeCancellation",
+        "freeCancellationUntil",
+        "prepayment",
+        "breakfastIncluded",
+        "thumbnailUrl",
+        "photos",
+        "facilities",
+        "popularFacilities",
+        "rooms",
+        "checkInTime",
+        "checkOutTime",
+        "petsAllowed",
+        "smokingAllowed",
+        "sustainability",
+        "sustainabilityLevel",
+        "limitedTimeDeal",
+        "newToBooking"
+      ],
+      "keyed_by_id": false
+    },
+    "rooms": {
+      "kind": "array",
+      "count": 29,
+      "record_fields": [
+        "id",
+        "propertyId",
+        "name",
+        "type",
+        "maxGuests",
+        "bedType",
+        "size",
+        "pricePerNight",
+        "originalPrice",
+        "amenities",
+        "view",
+        "breakfastIncluded",
+        "breakfastPrice",
+        "freeCancellation",
+        "cancellationDeadline",
+        "prepayment",
+        "availableCount",
+        "smokingAllowed",
+        "imageUrl"
+      ],
+      "keyed_by_id": false
+    },
+    "reviews": {
+      "kind": "array",
+      "count": 31,
+      "record_fields": [
+        "id",
+        "propertyId",
+        "authorName",
+        "authorCountry",
+        "authorCountryCode",
+        "date",
+        "score",
+        "title",
+        "positive",
+        "negative",
+        "roomType",
+        "nightsStayed",
+        "travellerType"
+      ],
+      "keyed_by_id": false
+    },
+    "reviewCategories": {
+      "kind": "object",
+      "count": 12,
+      "record_fields": [
+        "staff",
+        "facilities",
+        "cleanliness",
+        "comfort",
+        "valueForMoney",
+        "location",
+        "freeWifi"
+      ],
+      "keyed_by_id": true
+    },
+    "bookings": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "confirmationNumber",
+        "pinCode",
+        "userId",
+        "propertyId",
+        "propertyName",
+        "propertyImage",
+        "propertyCity",
+        "propertyAddress",
+        "roomId",
+        "roomName",
+        "checkIn",
+        "checkOut",
+        "nights",
+        "guests",
+        "rooms",
+        "pricePerNight",
+        "totalPrice",
+        "taxesAndFees",
+        "grandTotal",
+        "status",
+        "guestFirstName",
+        "guestLastName",
+        "guestEmail",
+        "guestPhone",
+        "specialRequests",
+        "arrivalTime",
+        "freeCancellation",
+        "cancellationDeadline",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "searchParams": {
+      "kind": "object",
+      "count": 9,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "searchFilters": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "searchResults": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "selectedPropertyId": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    },
+    "recentSearches": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "destination",
+        "destinationId",
+        "dates",
+        "guests"
+      ],
+      "keyed_by_id": false
+    },
+    "recentlyViewed": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "viewedProperties": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

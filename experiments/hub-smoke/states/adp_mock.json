@@ -1,0 +1,66 @@
+{
+  "employee": {
+    "id": "emp-001", "firstName": "Teodora", "lastName": "Vasquez-Lindqvist", "email": "teodora.vasquez@willowmere-parks.example",
+    "phone": "(555) 410-2287", "employeeId": "WPD-0318", "hireDate": "2019-08-12", "jobTitle": "Parks Maintenance Supervisor",
+    "department": "Parks Operations", "division": "Public Works", "manager": "Rashid Okonjo", "managerId": "emp-010",
+    "workLocation": "Willowmere, OR", "employmentStatus": "Full-Time", "payRate": 68400, "payFrequency": "Bi-Weekly",
+    "avatar": "TV", "dateOfBirth": "1987-11-02"
+  },
+  "address": {"street1": "1480 Alder Loop", "street2": "", "city": "Willowmere", "state": "OR", "zip": "97404", "country": "United States"},
+  "emergencyContacts": [
+    {"id": "ec-001", "name": "Mateo Vasquez", "relationship": "Spouse", "phone": "(555) 410-9931", "email": "mateo.v@example", "isPrimary": true}
+  ],
+  "payStatements": [
+    {"id": "pay-001", "payDate": "2026-08-28", "periodStart": "2026-08-09", "periodEnd": "2026-08-22", "grossPay": 2630.77, "netPay": 1948.12,
+     "earnings": [{"type": "Regular", "hours": 80, "rate": 32.88, "current": 2630.77, "ytd": 44723.09}],
+     "deductions": [{"type": "Medical", "current": 142.50, "ytd": 2422.50}, {"type": "PERS Retirement", "current": 157.85, "ytd": 2683.39}],
+     "taxes": [{"type": "Federal Income Tax", "current": 236.30, "ytd": 4017.10}, {"type": "Social Security", "current": 163.11, "ytd": 2772.83}, {"type": "Medicare", "current": 38.15, "ytd": 648.48}],
+     "ytdGross": 44723.09, "ytdNet": 33118.04}
+  ],
+  "taxDocuments": [
+    {"id": "tax-001", "year": 2025, "type": "W-2", "employerName": "City of Willowmere Parks Department", "availableDate": "2026-01-28", "downloaded": false, "wages": 66120.00, "federalTaxWithheld": 6104.00, "stateTaxWithheld": 5210.00, "socialSecurityWages": 66120.00, "medicareWages": 66120.00}
+  ],
+  "directDeposits": [
+    {"id": "dd-001", "bankName": "Cascade Community Credit Union", "accountType": "Checking", "routingNumber": "323075880", "accountNumber": "****4471", "depositType": "Percentage", "amount": 100, "isPrimary": true}
+  ],
+  "timeEntries": [
+    {"id": "te-001", "date": "2026-09-01", "clockIn": "06:58", "clockOut": "15:31", "breakMinutes": 30, "totalHours": 8.05, "status": "Not Submitted", "note": "Riverside Park irrigation repair"},
+    {"id": "te-002", "date": "2026-09-02", "clockIn": "07:02", "clockOut": "15:30", "breakMinutes": 30, "totalHours": 7.97, "status": "Not Submitted", "note": ""}
+  ],
+  "timeOffBalances": [
+    {"type": "Vacation", "totalDays": 18, "usedDays": 7, "pendingDays": 2, "availableDays": 9, "accrualRate": "5.54 hrs/pay period"},
+    {"type": "Sick", "totalDays": 12, "usedDays": 3, "pendingDays": 0, "availableDays": 9, "accrualRate": "3.69 hrs/pay period"},
+    {"type": "Personal", "totalDays": 2, "usedDays": 0, "pendingDays": 0, "availableDays": 2, "accrualRate": "N/A"}
+  ],
+  "timeOffRequests": [
+    {"id": "tor-001", "type": "Vacation", "startDate": "2026-09-21", "endDate": "2026-09-22", "totalHours": 16, "status": "Pending", "notes": "Family visit", "submittedDate": "2026-09-03", "reviewedBy": null, "reviewedDate": null}
+  ],
+  "holidays": [
+    {"id": "hol-001", "name": "Labor Day", "date": "2026-09-07", "dayOfWeek": "Monday"},
+    {"id": "hol-002", "name": "Veterans Day", "date": "2026-11-11", "dayOfWeek": "Wednesday"}
+  ],
+  "benefitPlans": [
+    {"id": "ben-001", "category": "Medical", "planName": "Willowmere Employee Health PPO", "coverageLevel": "Employee + Spouse", "employeeCostPerPeriod": 142.50, "employerContribution": 612.00, "effectiveDate": "2026-01-01", "status": "Active", "dependentsCovered": ["dep-001"], "details": "PPO, $500 deductible"}
+  ],
+  "dependents": [
+    {"id": "dep-001", "firstName": "Mateo", "lastName": "Vasquez", "relationship": "Spouse", "dateOfBirth": "1985-04-19", "ssn": "***-**-5522", "coveredPlans": ["ben-001"]}
+  ],
+  "directReports": [
+    {"id": "emp-002", "firstName": "Kelsey", "lastName": "Brandt", "jobTitle": "Groundskeeper II", "department": "Parks Operations", "email": "kelsey.brandt@willowmere-parks.example", "phone": "(555) 410-3350", "avatar": "KB", "status": "Active"},
+    {"id": "emp-003", "firstName": "Duc", "lastName": "Phan", "jobTitle": "Irrigation Technician", "department": "Parks Operations", "email": "duc.phan@willowmere-parks.example", "phone": "(555) 410-3361", "avatar": "DP", "status": "Active"}
+  ],
+  "announcements": [
+    {"id": "ann-001", "title": "Riverside Park splash pad closes for the season Sept 14", "content": "Crews will winterize the splash pad the week of September 14. Submit timecards for that week by Friday noon.", "date": "2026-09-02", "category": "Company", "isRead": false, "priority": "Normal"}
+  ],
+  "todoItems": [
+    {"id": "todo-001", "title": "Submit timecard for week of Aug 31", "description": "Two entries still Not Submitted", "dueDate": "2026-09-04", "type": "timecard", "isCompleted": false, "link": "/timecard"}
+  ],
+  "notifications": [
+    {"id": "notif-001", "title": "Time off request received", "message": "Your vacation request for Sept 21-22 is pending review by Rashid Okonjo.", "date": "2026-09-03T10:12:00Z", "isRead": false, "type": "timeoff", "actionUrl": "/time-off"}
+  ],
+  "companyInfo": {"name": "City of Willowmere Parks Department", "ein": "93-6002251", "address": "200 Civic Center Way, Willowmere, OR 97404", "industry": "Local Government"},
+  "clockStatus": {"isClockedIn": false, "lastClockIn": "2026-09-02T14:02:00Z", "lastClockOut": "2026-09-02T22:30:00Z"},
+  "pendingApprovals": [
+    {"id": "approval-001", "type": "timeoff", "employeeId": "emp-002", "employeeName": "Kelsey Brandt", "employeeAvatar": "KB", "request": "Vacation: Sept 28 - Sept 30", "status": "Pending", "submittedDate": "2026-09-01", "startDate": "2026-09-28", "endDate": "2026-09-30", "totalHours": 24}
+  ]
+}

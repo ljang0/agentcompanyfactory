@@ -1,0 +1,108 @@
+{
+  "skill": "company-plain-brief",
+  "provenance": {
+    "sources": [
+      {
+        "path": "companies/schweitzer-engineering-laboratories/company.json",
+        "sha256": "b2dd71879da235c507ec2146c1710631347e137402b0e70af7894347d8e44a8a"
+      },
+      {
+        "path": "companies/schweitzer-engineering-laboratories/tasks/schweitzer-engineering-laboratories_maintenance-portfolio-selection/workflow.json",
+        "sha256": "f385892a5baea4618cc3a3256e1c25f498912ad1e4bd891524e42fac13b668fa"
+      },
+      {
+        "path": "data/sources/a9e4e53dc38331d45c47e7115dcdabc4b9fee608da5dd8a32d1f5a8a29b5ab32.json",
+        "sha256": "e791453dc64f79a94687913757f2a8a1d5b74f3dd98aa2d5ebc067dde311fc8f"
+      },
+      {
+        "path": "data/sources/07c6047bbddd569f00cb913cdb6af4b86032b6fdd62f40d824a813e2335a9d71.json",
+        "sha256": "dfea7f161f709d32c59eb52854ad2fd44db8204826bcac7b5c28138fd3fed205"
+      },
+      {
+        "path": "data/sources/07c6047bbddd569f00cb913cdb6af4b86032b6fdd62f40d824a813e2335a9d71.json",
+        "sha256": "dfea7f161f709d32c59eb52854ad2fd44db8204826bcac7b5c28138fd3fed205"
+      },
+      {
+        "path": "data/sources/07c6047bbddd569f00cb913cdb6af4b86032b6fdd62f40d824a813e2335a9d71.json",
+        "sha256": "dfea7f161f709d32c59eb52854ad2fd44db8204826bcac7b5c28138fd3fed205"
+      },
+      {
+        "path": "data/sources/3feb69d00a0c68be6c51e84f1e9f6ee5a10a9a444c609e45940c9167a0a6adf0.json",
+        "sha256": "a079e754b0d41e1227ba2cf6892e103df2010569e743430df660fe431527a6cf"
+      },
+      {
+        "path": "data/sources/52d0d2d7f7882f2c9eefcf433ca641524a1051d5c2b190940225940023e5430c.json",
+        "sha256": "add8d9a2eb931a3b0ffb64cabe57b255264a16ae81a80f8d1294b76c7ce45d3f"
+      },
+      {
+        "path": "data/sources/52d0d2d7f7882f2c9eefcf433ca641524a1051d5c2b190940225940023e5430c.json",
+        "sha256": "add8d9a2eb931a3b0ffb64cabe57b255264a16ae81a80f8d1294b76c7ce45d3f"
+      }
+    ],
+    "changes": "Trimmed to one task and a few native records. Calibration tasks are explicitly narrowed exercises derived from that task; their answers and planted defects are hand-authored test data, not accepted production outcomes."
+  },
+  "input": {
+    "company": {
+      "name": "Clearwater Protection Systems — fictional analogue",
+      "sector": "Manufacturing",
+      "operations": "SEL designs and manufactures digital protection, automation and control equipment. Its captured About page identifies Pullman headquarters and US manufacturing since 1984. Captured support materials establish product-security assessment, code review and testing, continuing security updates and application engineering support. Clearwater models a bounded US sustaining-firmware and product-assurance unit within an established protective-relay manufacturer. It maintains shipped firmware, investigates defects, reviews remedies and prepares guidance for customers operating installed equipment. Synthetic scale: 24 employees support four relay families, twelve maintained firmware branches, approximately 180 US customer organizations and 14,000 registered devices. Ordinary monthly work includes 45 firmware/application support cases, eight escalated engineering investigations, three security assessments and two maintenance-candidate reviews; these categories overlap. A ten-year archive contains release notes, compatibility decisions, completed test reports and customer cases. The six listed workers are recurring decision participants, not the whole workforce. Their outputs include source analyses, verification assessments, remediation priorities, maintenance commitments and internally approved customer guidance. Manufacturing, laboratory execution, firmware signing and customer installation remain outside the selected digital cycles."
+    },
+    "task": {
+      "id": "schweitzer-engineering-laboratories_maintenance-portfolio-selection",
+      "title": "Approve firmware maintenance scope and schedule for the unit",
+      "brief": "Using records available, integrate evidence and reconcile the governing disposition. The unit needs a firmware maintenance commitment for September 8–18, 2026. Work from the records available as of September 7, and check which branches can share a correction. Compare at least two feasible scopes, linking effort, exposure and effects on operations to the records that support your comparison. Choose and approve a scope and daily engineering schedule that fit capacity and dependencies while protecting existing support commitments. Explain the security exposure and protection functions left at risk on each branch when you defer work. Update engineering issues so selected and deferred work keep their actual obligations. Make repository planning labels and the shared Slack availability profile match your decision, and review the transfer of work to others. Finish with a supported comparison, an approved schedule and consistent engineering instructions; this does not mean firmware has been tested or released.",
+      "deliverables": [
+        "Approved maintenance scope and daily engineering schedule",
+        "Comparison of effort, exposure and effects on operations for at least two feasible scopes, with links to supporting records",
+        "Updated engineering issues showing selected and deferred obligations",
+        "Corrected shared availability statement and reviewed transfer of work to the next team"
+      ],
+      "success_criteria": [
+        {
+          "requirement": "The manager brings work from other experts that affects the decision into the maintenance commitment.",
+          "observable": "Worker-attributed workplace exchanges contain source-based development, security and application findings that affect the comparison or final commitment.",
+          "method": "judgment"
+        },
+        {
+          "requirement": "The schedule fits actual capacity and dependencies.",
+          "observable": "Daily discretionary work is at most four hours, shared work precedes both adapters, the modern package finishes by September 14, and upper estimates fit the nine-day window.",
+          "method": "artifact"
+        },
+        {
+          "requirement": "The choice accounts for each branch’s risks and effects on operations.",
+          "observable": "At least two feasible scopes are compared using supported reachability, compatibility, mitigation costs and protection effects; the chosen tradeoff is reasoned.",
+          "method": "judgment"
+        },
+        {
+          "requirement": "Working records accurately tell people what the manager authorized.",
+          "observable": "Issue labels and descriptions agree with the approved schedule; the Slack currentUser availability statement accounts for protected support and does not imply an additional worker.",
+          "method": "state"
+        },
+        {
+          "requirement": "Selected and deferred work keep their actual obligations.",
+          "observable": "Selected packages retain qualification requirements; every deferred package has interim treatment, a responsible role and September 21 reassessment instructions. No record claims testing or release completion.",
+          "method": "artifact"
+        }
+      ]
+    }
+  },
+  "double": {
+    "workflow_id": "schweitzer-engineering-laboratories_maintenance-portfolio-selection",
+    "title": "Approve firmware maintenance scope and schedule for the unit",
+    "brief": "The unit needs a firmware maintenance commitment for September 8–18, 2026. Work from the records available as of September 7, and check which branches can share a correction. Compare at least two feasible scopes, linking effort, exposure and effects on operations to the records that support your comparison. Choose and approve a scope and daily engineering schedule that fit capacity and dependencies while protecting existing support commitments. Explain the security exposure and protection functions left at risk on each branch when you defer work. Update engineering issues so selected and deferred work keep their actual obligations. Make repository planning labels and the shared Slack availability profile match your decision, and review the transfer of work to others. Finish with a supported comparison, an approved schedule and consistent engineering instructions; this does not mean firmware has been tested or released.",
+    "deliverables": [
+      "Approved maintenance scope and daily engineering schedule",
+      "Comparison of effort, exposure and effects on operations for at least two feasible scopes, with links to supporting records",
+      "Updated engineering issues showing selected and deferred obligations",
+      "Corrected shared availability statement and reviewed transfer of work to the next team"
+    ],
+    "requirements": [
+      "The manager brings work from other experts that affects the decision into the maintenance commitment.",
+      "The schedule fits actual capacity and dependencies.",
+      "The choice accounts for each branch’s risks and effects on operations.",
+      "Working records accurately tell people what the manager authorized.",
+      "Selected and deferred work keep their actual obligations."
+    ]
+  },
+  "oracle": {}
+}

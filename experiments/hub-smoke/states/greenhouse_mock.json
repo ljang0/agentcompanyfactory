@@ -1,0 +1,63 @@
+{
+  "currentUser": { "id": "user-1", "firstName": "Jules", "lastName": "Park", "name": "Jules Park", "email": "jules.park@saltmarsh-biotech.example", "role": "recruiter", "avatarUrl": null, "department": "People Operations", "title": "Senior Recruiter" },
+  "users": [
+    { "id": "user-1", "firstName": "Jules", "lastName": "Park", "name": "Jules Park", "email": "jules.park@saltmarsh-biotech.example", "role": "recruiter", "avatarUrl": null, "department": "People Operations", "title": "Senior Recruiter" },
+    { "id": "user-2", "firstName": "Ronan", "lastName": "Delacroix", "name": "Ronan Delacroix", "email": "ronan.delacroix@saltmarsh-biotech.example", "role": "hiring_manager", "avatarUrl": null, "department": "Research", "title": "Director of Assay Development" },
+    { "id": "user-3", "firstName": "Amara", "lastName": "Osei", "name": "Amara Osei", "email": "amara.osei@saltmarsh-biotech.example", "role": "interviewer", "avatarUrl": null, "department": "Research", "title": "Senior Scientist" }
+  ],
+  "departments": [
+    { "id": "dept-1", "name": "Research", "parentId": null },
+    { "id": "dept-2", "name": "People Operations", "parentId": null }
+  ],
+  "offices": [
+    { "id": "office-1", "name": "Saltmarsh Cambridge Lab", "location": "Cambridge, MA" },
+    { "id": "office-2", "name": "Remote", "location": "Remote" }
+  ],
+  "sources": [ { "id": "src-1", "name": "Applied" }, { "id": "src-2", "name": "Referral" } ],
+  "rejectionReasons": [ { "id": "rr-1", "name": "Lacking technical skills" }, { "id": "rr-2", "name": "Compensation mismatch" } ],
+  "jobs": [
+    {
+      "id": "job-1", "title": "Senior Assay Development Scientist", "status": "open", "departmentId": "dept-1", "officeId": "office-1",
+      "hiringManagerId": "user-2", "recruiterId": "user-1", "coordinatorId": null, "openings": 1, "openDate": "2026-08-01", "closeDate": null,
+      "description": "Lead development of immunoassays for the Saltmarsh diagnostics platform.", "requirements": ["PhD in biochemistry or related field", "5+ years assay development"],
+      "stages": ["stage-job-1-1", "stage-job-1-2", "stage-job-1-3"], "candidateCount": 2, "createdAt": "2026-08-01T09:00:00Z", "updatedAt": "2026-09-05T12:00:00Z"
+    },
+    {
+      "id": "job-2", "title": "Lab Operations Coordinator", "status": "draft", "departmentId": "dept-1", "officeId": "office-1",
+      "hiringManagerId": "user-2", "recruiterId": "user-1", "coordinatorId": null, "openings": 1, "openDate": "2026-09-15", "closeDate": null,
+      "description": "Keep the Cambridge lab running.", "requirements": [], "stages": ["stage-job-2-1"], "candidateCount": 0, "createdAt": "2026-09-04T09:00:00Z", "updatedAt": "2026-09-04T09:00:00Z"
+    }
+  ],
+  "jobStages": [
+    { "id": "stage-job-1-1", "jobId": "job-1", "name": "Application Review", "orderIndex": 0, "stageType": "application_review" },
+    { "id": "stage-job-1-2", "jobId": "job-1", "name": "Recruiter Phone Screen", "orderIndex": 1, "stageType": "phone_screen" },
+    { "id": "stage-job-1-3", "jobId": "job-1", "name": "Onsite", "orderIndex": 2, "stageType": "onsite" },
+    { "id": "stage-job-2-1", "jobId": "job-2", "name": "Application Review", "orderIndex": 0, "stageType": "application_review" }
+  ],
+  "candidates": [
+    { "id": "cand-1", "firstName": "Oluwaseun", "lastName": "Bankole", "name": "Oluwaseun Bankole", "email": "seun.bankole@mail.example", "phone": "+1 617 555 0182", "location": "Boston, MA", "currentCompany": "Harbor Diagnostics", "currentTitle": "Scientist II", "resumeUrl": null, "linkedinUrl": null, "source": "applied", "referrerId": null, "tags": ["immunoassay"], "createdAt": "2026-08-20T10:00:00Z", "updatedAt": "2026-09-05T12:00:00Z" },
+    { "id": "cand-2", "firstName": "Hannelore", "lastName": "Vogt", "name": "Hannelore Vogt", "email": "h.vogt@mail.example", "phone": "+1 857 555 0119", "location": "Somerville, MA", "currentCompany": "Beacon Biolabs", "currentTitle": "Senior Scientist", "resumeUrl": null, "linkedinUrl": null, "source": "referral", "referrerId": "user-3", "tags": [], "createdAt": "2026-08-28T10:00:00Z", "updatedAt": "2026-09-03T10:00:00Z" }
+  ],
+  "applications": [
+    { "id": "app-1", "candidateId": "cand-1", "jobId": "job-1", "currentStageId": "stage-job-1-3", "status": "active", "appliedAt": "2026-08-20T10:00:00Z", "rejectedAt": null, "rejectionReason": null, "hiredAt": null, "lastActivityAt": "2026-09-05T12:00:00Z", "source": "applied", "creditedTo": null, "recruiterId": "user-1", "coordinatorId": null, "actionRequired": "needs_scorecard", "daysInCurrentStage": 2 },
+    { "id": "app-2", "candidateId": "cand-2", "jobId": "job-1", "currentStageId": "stage-job-1-1", "status": "active", "appliedAt": "2026-08-28T10:00:00Z", "rejectedAt": null, "rejectionReason": null, "hiredAt": null, "lastActivityAt": "2026-09-03T10:00:00Z", "source": "referral", "creditedTo": "user-3", "recruiterId": "user-1", "coordinatorId": null, "actionRequired": "needs_decision", "daysInCurrentStage": 4 }
+  ],
+  "scorecards": [
+    { "id": "sc-1", "applicationId": "app-1", "interviewerId": "user-3", "stageId": "stage-job-1-3", "overallRecommendation": null, "attributes": [ { "name": "Assay design", "rating": 0, "note": "" } ], "submittedAt": null, "createdAt": "2026-09-05T12:00:00Z", "notes": "" }
+  ],
+  "interviews": [
+    { "id": "int-1", "applicationId": "app-1", "stageId": "stage-job-1-3", "interviewerIds": ["user-2", "user-3"], "scheduledAt": "2026-09-10T15:00:00Z", "duration": 60, "location": "Saltmarsh Cambridge Lab - Room 2B", "status": "scheduled", "meetingUrl": null, "notes": "Onsite technical presentation" }
+  ],
+  "offers": [],
+  "notes": [
+    { "id": "note-1", "candidateId": "cand-1", "authorId": "user-1", "body": "Strong phone screen, very familiar with ELISA optimization.", "visibility": "public", "isPinned": true, "createdAt": "2026-08-26T16:00:00Z", "updatedAt": "2026-08-26T16:00:00Z" }
+  ],
+  "activityFeed": [
+    { "id": "act-1", "candidateId": "cand-1", "applicationId": "app-1", "type": "stage_change", "actorId": "user-1", "description": "Moved to Onsite", "metadata": { "from": "stage-job-1-2", "to": "stage-job-1-3" }, "createdAt": "2026-09-05T12:00:00Z" },
+    { "id": "act-2", "candidateId": "cand-2", "applicationId": "app-2", "type": "application_submitted", "actorId": "user-3", "description": "Referred by Amara Osei", "metadata": {}, "createdAt": "2026-08-28T10:00:00Z" }
+  ],
+  "notifications": [
+    { "id": "notif-1", "type": "interview_reminder", "title": "Onsite tomorrow", "message": "Oluwaseun Bankole onsite at 11:00 AM in Room 2B.", "isRead": false, "link": "/interviews", "createdAt": "2026-09-09T13:00:00Z" }
+  ],
+  "ui": { "searchQuery": "", "activeJobId": null, "activeCandidateId": null, "modals": { "addCandidate": false, "createJob": false, "scheduleInterview": false, "rejectCandidate": false, "moveStage": false, "search": false, "notifications": false } }
+}

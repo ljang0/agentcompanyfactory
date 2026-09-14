@@ -1,0 +1,37 @@
+{
+  "at": "2026-09-14T03:57:58.379761+00:00",
+  "status": "inspection_handoff_verified",
+  "certified_team_benchmark": false,
+  "source_tests": {
+    "passed": 3130,
+    "xfailed": 3,
+    "seconds": 247.57,
+    "working_directory": "<inspection-checkout>",
+    "imported_source": "<inspection-checkout>/src/company_envs/__init__.py",
+    "log": "VALIDATION-TESTS.log"
+  },
+  "lint": "pass",
+  "native_replay": {
+    "sanmar_account-assortment-review": "replayed_verified_and_reset",
+    "sanmar_qualified-acquisition-review": "replayed_verified_and_reset"
+  },
+  "model_calls": 0,
+  "payload_files_verified": 4552,
+  "native_baseline_files_unchanged": [
+    "google_drive_mock.state.json",
+    "google_docs_mock.state.json",
+    "meta_ads_mock.state.json",
+    "google_sheets_mock.state.json",
+    "slack_mock.state.json",
+    "gmail_mock.state.json",
+    "google_calendar_mock.state.json",
+    "hubspot_mock.state.json"
+  ],
+  "canonical_and_effective_world_bytes_unchanged": true,
+  "formatting_files_applied": 19,
+  "formatting_files_deferred_to_preserve_freeze": 4,
+  "broken_entry_links": [],
+  "license": "Apache-2.0",
+  "published": false,
+  "scope": "Curated source, saved trial outputs and fresh native reference replay/reset verified from a clean extraction. Ordinary-team and ablation acceptance remains incomplete."
+}

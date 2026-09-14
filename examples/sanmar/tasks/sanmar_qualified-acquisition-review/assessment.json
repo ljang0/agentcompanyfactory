@@ -1,0 +1,187 @@
+{
+  "criteria": [
+    {
+      "criterion": 1,
+      "weight": 30.0,
+      "must_pass": true,
+      "evidence": [
+        "google_drive_mock.items#WB-COMMERCIAL",
+        "google_sheets_mock.sheets#SH-SPEND",
+        "google_sheets_mock.sheets#SH-SOURCES",
+        "hubspot_mock.contacts#CT-A001",
+        "hubspot_mock.contacts#CT-P002",
+        "hubspot_mock.tickets#CL-SVC-018",
+        "hubspot_mock.tickets#CL-SVC-023",
+        "hubspot_mock.tickets#SVC-107"
+      ],
+      "rubric": "Check joins, comparison periods and distinct relationship counts. The work must accurately distinguish existing and repeated relationships using supported records; equivalent sound sources and methods are acceptable. Use documentary findings to qualify apparent opportunities, and distinguish invoiced purchases from accepted unallocated orders and unposted claims. Recognize incomplete attribution and buyer concentration.",
+      "failure_cases": [
+        "Treats all platform results as qualified businesses.",
+        "Counts Alder or Moonrise's repeat inquiry as a new acquired account.",
+        "Calls revenue profit or predicts conversions from the linked examples.",
+        "Copies ledger totals without connecting them to the decision."
+      ]
+    },
+    {
+      "criterion": 2,
+      "weight": 30.0,
+      "must_pass": true,
+      "evidence": [
+        "google_drive_mock.items#POL-AUTH-3",
+        "google_docs_mock.documents#DOC-WELCOME",
+        "hubspot_mock.deals#OPP-KESTREL-FIRST",
+        "hubspot_mock.tickets#CL-SVC-019",
+        "hubspot_mock.tickets#CL-SVC-021",
+        "meta_ads_mock.campaigns#CAM-DECOR",
+        "meta_ads_mock.campaigns#CAM-START",
+        "meta_ads_mock.campaigns#CAM-RETURN"
+      ],
+      "rubric": "Require at least two materially different feasible scopes and a reasoned manager choice informed by all three specialists. Check monthly media exposure, separately costed support, preserved recurring work and explicit estimated hours. Explain why the extra or reduced support is commercially useful.",
+      "failure_cases": [
+        "Presents the same support scope with cosmetic budget differences.",
+        "Exceeds the desk ceiling or counts recurring capacity twice.",
+        "Uses a ceremonial approval without resolving competing findings.",
+        "Pauses everything without a comparison or reconsideration terms."
+      ]
+    },
+    {
+      "criterion": 3,
+      "weight": 20.0,
+      "must_pass": true,
+      "evidence": [
+        "meta_ads_mock.campaigns#CAM-DECOR",
+        "meta_ads_mock.campaigns#CAM-START",
+        "meta_ads_mock.campaigns#CAM-RETURN",
+        "meta_ads_mock.adSets#AS-DECOR",
+        "meta_ads_mock.adSets#AS-START",
+        "meta_ads_mock.adSets#AS-RETURN",
+        "google_drive_mock.items#POL-AUTH-3"
+      ],
+      "rubric": "Compare persisted campaign and ad-set settings with the recorded approval. Effective delivery must match the chosen scope, without double-counting budgets or changing unrelated campaigns. A justified unchanged setting is acceptable when the report verifies it.",
+      "failure_cases": [
+        "Only changes a report or screen selection.",
+        "Leaves an unsupported campaign delivering.",
+        "Claims a monthly hard cap was implemented through a daily budget.",
+        "Changes budgets before the required recorded approval."
+      ]
+    },
+    {
+      "criterion": 4,
+      "weight": 20.0,
+      "must_pass": true,
+      "evidence": [
+        "hubspot_mock.tickets#CL-SVC-019",
+        "hubspot_mock.tickets#CL-SVC-020",
+        "hubspot_mock.tickets#CL-SVC-021",
+        "hubspot_mock.tickets#CL-SVC-022",
+        "hubspot_mock.tickets#CL-SVC-023",
+        "hubspot_mock.tickets#SVC-107",
+        "google_drive_mock.items#POL-QUAL-2"
+      ],
+      "rubric": "Tasks and notes must preserve signature, license, central review, business-description, end-user routing and legal-name obligations. Repeated inquiries share the existing relationship. Follow-ups have appropriate owners, absolute dates and next actions consistent with the chosen support.",
+      "failure_cases": [
+        "Closes incomplete applications because their campaigns were paused.",
+        "Grants documentary acceptance or credit without central confirmation.",
+        "Creates a duplicate Moonrise account.",
+        "Leaves unsupported campaigns without reconsideration conditions."
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "worker_id": "sales-supervisor",
+      "inputs": [
+        "google_drive_mock.items#POL-AUTH-3",
+        "google_docs_mock.documents#DOC-WELCOME"
+      ],
+      "produces": "A spending and capacity decision resolving specialist tradeoffs.",
+      "consumed_by": [
+        "account-representative",
+        "order-coordinator",
+        "marketing-specialist"
+      ],
+      "necessity": "Without the supervisor's choice, specialists cannot commit coordinated support or implement ordinary budget changes under the supplied authority.",
+      "authority_sources": [
+        "google_drive_mock.items#POL-AUTH-3"
+      ]
+    },
+    {
+      "worker_id": "account-representative",
+      "inputs": [
+        "hubspot_mock.contacts#CT-A001",
+        "hubspot_mock.contacts#CT-P002",
+        "hubspot_mock.tickets#CL-SVC-019",
+        "hubspot_mock.tickets#CL-SVC-020",
+        "hubspot_mock.tickets#CL-SVC-021",
+        "hubspot_mock.tickets#CL-SVC-022",
+        "hubspot_mock.tickets#CL-SVC-023",
+        "hubspot_mock.tickets#SVC-107",
+        "hubspot_mock.deals#OPP-KESTREL-FIRST"
+      ],
+      "produces": "Distinct-business, commercial-fit and customer-obligation findings.",
+      "consumed_by": [
+        "sales-supervisor",
+        "order-coordinator",
+        "marketing-specialist"
+      ],
+      "necessity": "These findings change the value of apparently cheap results and identify the customer work that a pause cannot remove.",
+      "authority_sources": [
+        "google_docs_mock.documents#DOC-WELCOME",
+        "google_drive_mock.items#POL-QUAL-2"
+      ]
+    },
+    {
+      "worker_id": "order-coordinator",
+      "inputs": [
+        "google_drive_mock.items#WB-COMMERCIAL",
+        "google_drive_mock.items#POL-ORDER-2",
+        "google_drive_mock.items#POL-QUAL-2"
+      ],
+      "produces": "Checked ordering outcomes and documentary barriers using application findings supplied by Imani.",
+      "consumed_by": [
+        "sales-supervisor",
+        "account-representative",
+        "marketing-specialist"
+      ],
+      "necessity": "Without this check, accepted orders and incomplete papers can overstate usable acquisition outcomes and understate support needs.",
+      "authority_sources": [
+        "google_docs_mock.documents#DOC-WELCOME",
+        "google_drive_mock.items#POL-ORDER-2"
+      ]
+    },
+    {
+      "worker_id": "marketing-specialist",
+      "inputs": [
+        "google_sheets_mock.sheets#SH-SPEND",
+        "google_sheets_mock.sheets#SH-SOURCES",
+        "meta_ads_mock.campaigns#CAM-DECOR",
+        "meta_ads_mock.campaigns#CAM-START",
+        "meta_ads_mock.campaigns#CAM-RETURN",
+        "meta_ads_mock.adSets#AS-DECOR",
+        "meta_ads_mock.adSets#AS-START",
+        "meta_ads_mock.adSets#AS-RETURN"
+      ],
+      "produces": "Comparable campaign economics, spending alternatives and implemented settings.",
+      "consumed_by": [
+        "sales-supervisor",
+        "account-representative"
+      ],
+      "necessity": "The other participants cannot establish effective campaign spending or implement the approved advertising scope with their supplied access.",
+      "authority_sources": [
+        "google_drive_mock.items#POL-AUTH-3"
+      ]
+    }
+  ],
+  "alternative_successes": [
+    "Maintain multiple campaigns with bounded support and a justified comparison.",
+    "Reduce budgets, partially pause or fully pause the three campaigns while preserving every customer obligation.",
+    "Use a different reproducible comparison method that explicitly respects unequal campaign age and incomplete attribution."
+  ],
+  "prohibited_shortcuts": [
+    "Copy seeded historical summaries as a new decision.",
+    "Equate a platform result with reseller eligibility.",
+    "Invent credit acceptance, future conversions or additional staff capacity.",
+    "Broaden access or bypass specialist reports.",
+    "Claim implementation without matching persisted business records."
+  ]
+}

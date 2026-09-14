@@ -1,0 +1,299 @@
+{
+  "app_id": "Expensify_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "categories",
+    "comments",
+    "currentUser",
+    "distanceRates",
+    "expenses",
+    "inboxItems",
+    "members",
+    "policies",
+    "reportFields",
+    "reports",
+    "tags",
+    "taxRates",
+    "ui",
+    "users"
+  ],
+  "observed": [
+    "categories",
+    "comments",
+    "currentUser",
+    "distanceRates",
+    "expenses",
+    "exportSettings",
+    "inboxItems",
+    "members",
+    "policies",
+    "reportFields",
+    "reports",
+    "tags",
+    "taxRates",
+    "ui",
+    "users"
+  ],
+  "undocumented_so_unseedable": [
+    "exportSettings"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 13,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "email",
+        "firstName",
+        "lastName",
+        "displayName",
+        "avatar",
+        "role",
+        "managerId",
+        "employeeId",
+        "department",
+        "defaultPolicy",
+        "reimbursementMethod",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "policies": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "outputCurrency",
+        "owner",
+        "autoReporting",
+        "autoReportingFrequency",
+        "autoReportingOffset",
+        "requiresCategory",
+        "requiresTag",
+        "requiresComment",
+        "maxExpenseAge",
+        "maxExpenseAmount",
+        "preventSelfApproval",
+        "approvalMode",
+        "reimbursementChoice",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "categories": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "policyId",
+        "name",
+        "enabled",
+        "glCode",
+        "payrollCode",
+        "maxExpenseAmount",
+        "requiresComment",
+        "commentHint",
+        "externalId"
+      ],
+      "keyed_by_id": false
+    },
+    "tags": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "policyId",
+        "name",
+        "enabled",
+        "glCode",
+        "required"
+      ],
+      "keyed_by_id": false
+    },
+    "expenses": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "type",
+        "policyId",
+        "reportId",
+        "createdBy",
+        "merchant",
+        "amount",
+        "currency",
+        "date",
+        "categoryId",
+        "category",
+        "tagId",
+        "tag",
+        "description",
+        "comment",
+        "receiptUrl",
+        "hasReceipt",
+        "billable",
+        "reimbursable",
+        "taxAmount",
+        "taxRate",
+        "distance",
+        "distanceUnit",
+        "distanceRate",
+        "hours",
+        "hourlyRate",
+        "status",
+        "violations",
+        "createdAt",
+        "modifiedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "reports": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "title",
+        "reportNumber",
+        "policyId",
+        "policyName",
+        "createdBy",
+        "createdByName",
+        "createdByEmail",
+        "status",
+        "total",
+        "currency",
+        "submittedTo",
+        "submittedToEmail",
+        "submittedDate",
+        "approvedDate",
+        "reimbursedDate",
+        "startDate",
+        "endDate",
+        "expenseCount",
+        "starred",
+        "exported",
+        "exportedDate",
+        "isRetracted",
+        "createdAt",
+        "modifiedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "comments": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "reportId",
+        "authorId",
+        "authorName",
+        "authorEmail",
+        "type",
+        "text",
+        "timestamp"
+      ],
+      "keyed_by_id": false
+    },
+    "inboxItems": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "type",
+        "title",
+        "description",
+        "relatedId",
+        "fromUserId",
+        "fromUserName",
+        "read",
+        "hidden",
+        "actionRequired",
+        "actionType",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "members": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "userId",
+        "policyId",
+        "email",
+        "name",
+        "role",
+        "managerId",
+        "managerEmail",
+        "employeeId",
+        "submitsTo",
+        "approvesTo",
+        "isApprover",
+        "addedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "reportFields": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "policyId",
+        "name",
+        "type",
+        "values",
+        "required",
+        "defaultValue"
+      ],
+      "keyed_by_id": false
+    },
+    "distanceRates": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "policyId",
+        "unit",
+        "rate",
+        "currency",
+        "enabled"
+      ],
+      "keyed_by_id": false
+    },
+    "taxRates": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "policyId",
+        "name",
+        "rate",
+        "isDefault",
+        "enabled"
+      ],
+      "keyed_by_id": false
+    },
+    "ui": {
+      "kind": "object",
+      "count": 15,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "exportSettings": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

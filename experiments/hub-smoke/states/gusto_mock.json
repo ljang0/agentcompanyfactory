@@ -1,0 +1,58 @@
+{
+  "company": {
+    "id": "comp_1", "name": "Tanager Street Coffee Roasters", "legalName": "Tanager Street Coffee Roasters, LLC", "ein": "47-8812093", "industry": "Food & Beverage", "entityType": "LLC", "phone": "(503) 555-0166", "email": "payroll@tanagerstreet.example", "website": "www.tanagerstreet.example", "foundedDate": "2018-05-01",
+    "address": {"street1": "1180 Tanager Street", "street2": "", "city": "Portland", "state": "OR", "zip": "97214", "country": "US"},
+    "locations": [{"id": "loc_1", "name": "Roastery - Portland", "address": {"street1": "1180 Tanager Street", "street2": "", "city": "Portland", "state": "OR", "zip": "97214"}, "isMain": true}],
+    "departments": [{"id": "dept_1", "name": "Roasting", "headcount": 1}, {"id": "dept_2", "name": "Cafe", "headcount": 1}, {"id": "dept_3", "name": "Administration", "headcount": 1}],
+    "paySchedule": {"frequency": "Every other week", "nextPayday": "2026-09-18", "nextDeadline": "2026-09-15T16:00:00-07:00"},
+    "bankAccount": {"bankName": "Cascade Community Bank", "accountType": "Checking", "routingNumber": "****2210", "accountNumber": "****7754", "status": "verified"},
+    "settings": {"notifications": {"payrollReminders": true, "timeOffRequests": true, "newHireOnboarding": true}, "timezone": "America/Los_Angeles"}
+  },
+  "currentUser": {"id": "emp_1", "firstName": "Renee", "lastName": "Okonkwo", "email": "renee.okonkwo@tanagerstreet.example", "role": "Admin", "avatar": null, "title": "General Manager"},
+  "employees": [
+    {"id": "emp_1", "firstName": "Renee", "lastName": "Okonkwo", "middleName": "", "email": "renee.okonkwo@tanagerstreet.example", "personalEmail": "renee.o@mail.example", "phone": "(503) 555-0101", "dateOfBirth": "1985-02-11", "ssn": "***-**-4410", "address": {"street1": "77 SE Alder St", "street2": "", "city": "Portland", "state": "OR", "zip": "97214"}, "department": "Administration", "departmentId": "dept_3", "jobTitle": "General Manager", "managerId": null, "managerName": null, "employmentType": "Full-time", "compensation": {"type": "Salary", "amount": 78000, "per": "Year"}, "startDate": "2018-05-01", "status": "Active", "location": "Roastery - Portland", "locationId": "loc_1", "payMethod": "Direct deposit", "federalFilingStatus": "Single", "stateFilingStatus": "Single", "allowances": 1, "benefits": ["medical", "dental"], "pto": {"vacationBalance": 64, "sickBalance": 40, "vacationAccrualRate": 6.67, "sickAccrualRate": 3.33}, "avatar": null},
+    {"id": "emp_2", "firstName": "Jonah", "lastName": "Petrakis", "middleName": "", "email": "jonah.petrakis@tanagerstreet.example", "personalEmail": "jonahp@mail.example", "phone": "(503) 555-0122", "dateOfBirth": "1991-09-30", "ssn": "***-**-8821", "address": {"street1": "412 N Killingsworth", "street2": "Apt 2", "city": "Portland", "state": "OR", "zip": "97217"}, "department": "Roasting", "departmentId": "dept_1", "jobTitle": "Head Roaster", "managerId": "emp_1", "managerName": "Renee Okonkwo", "employmentType": "Full-time", "compensation": {"type": "Salary", "amount": 62000, "per": "Year"}, "startDate": "2019-08-12", "status": "Active", "location": "Roastery - Portland", "locationId": "loc_1", "payMethod": "Direct deposit", "federalFilingStatus": "Married", "stateFilingStatus": "Married", "allowances": 2, "benefits": ["medical"], "pto": {"vacationBalance": 32, "sickBalance": 24, "vacationAccrualRate": 6.67, "sickAccrualRate": 3.33}, "avatar": null},
+    {"id": "emp_3", "firstName": "Alma", "lastName": "Reyes", "middleName": "", "email": "alma.reyes@tanagerstreet.example", "personalEmail": "alma.reyes@mail.example", "phone": "(503) 555-0139", "dateOfBirth": "2001-04-18", "ssn": "***-**-3390", "address": {"street1": "1901 SE Division St", "street2": "", "city": "Portland", "state": "OR", "zip": "97202"}, "department": "Cafe", "departmentId": "dept_2", "jobTitle": "Barista", "managerId": "emp_1", "managerName": "Renee Okonkwo", "employmentType": "Part-time", "compensation": {"type": "Hourly", "amount": 19.5, "per": "Hour"}, "startDate": "2026-08-24", "status": "Onboarding", "location": "Roastery - Portland", "locationId": "loc_1", "payMethod": "Check", "federalFilingStatus": "Single", "stateFilingStatus": "Single", "allowances": 0, "benefits": [], "pto": {"vacationBalance": 0, "sickBalance": 4, "vacationAccrualRate": 3.33, "sickAccrualRate": 3.33}, "avatar": null}
+  ],
+  "contractors": [
+    {"id": "contr_1", "firstName": "Bo", "lastName": "Lindqvist", "email": "bo@lindqvist-design.example", "phone": "(971) 555-0180", "businessName": "Lindqvist Label Design", "type": "Business", "compensation": {"type": "Fixed", "amount": 1500, "per": "Month"}, "address": {"street1": "88 NW 13th Ave", "street2": "", "city": "Portland", "state": "OR", "zip": "97209"}, "startDate": "2025-01-15", "status": "Active", "payMethod": "Direct deposit", "totalPaidYTD": 12000}
+  ],
+  "payrolls": [
+    {"id": "pay_current", "status": "Draft", "payPeriod": {"startDate": "2026-08-31", "endDate": "2026-09-13"}, "checkDate": "2026-09-18", "deadline": "2026-09-15T16:00:00", "totalGrossPay": 0, "totalTaxes": 0, "totalBenefits": 0, "totalNetPay": 0, "totalReimbursements": 0, "employeeCount": 3, "debitDate": "2026-09-16", "employeeCompensations": []},
+    {"id": "pay_1", "status": "Complete", "payPeriod": {"startDate": "2026-08-17", "endDate": "2026-08-30"}, "checkDate": "2026-09-04", "deadline": "2026-09-01T16:00:00", "totalGrossPay": 6153.85, "totalTaxes": 1476.92, "totalBenefits": 410.0, "totalNetPay": 4266.93, "totalReimbursements": 0, "employeeCount": 2, "debitDate": "2026-09-02", "employeeCompensations": [{"employeeId": "emp_1", "grossPay": 3000.0, "taxes": 720.0, "benefits": 250.0, "netPay": 2030.0}, {"employeeId": "emp_2", "grossPay": 2384.62, "taxes": 572.31, "benefits": 160.0, "netPay": 1652.31}]}
+  ],
+  "timeEntries": [
+    {"id": "te_1", "employeeId": "emp_3", "weekStartDate": "2026-08-31", "status": "Pending", "totalHours": 22.5, "regularHours": 22.5, "overtimeHours": 0, "entries": [{"date": "2026-08-31", "clockIn": "06:30", "clockOut": "14:00", "breakMinutes": 30, "totalHours": 7.0, "notes": ""}, {"date": "2026-09-02", "clockIn": "06:30", "clockOut": "14:30", "breakMinutes": 30, "totalHours": 7.5, "notes": ""}, {"date": "2026-09-04", "clockIn": "07:00", "clockOut": "15:30", "breakMinutes": 30, "totalHours": 8.0, "notes": "Covered closing"}]}
+  ],
+  "timeOffRequests": [
+    {"id": "tor_1", "employeeId": "emp_2", "employeeName": "Jonah Petrakis", "type": "Vacation", "status": "Pending", "startDate": "2026-09-28", "endDate": "2026-10-02", "totalHours": 40, "reason": "Family trip", "requestedAt": "2026-09-05T17:12:00Z", "reviewedBy": null, "reviewedAt": null}
+  ],
+  "benefitPlans": [
+    {"id": "ben_1", "type": "Medical", "planName": "Cascade Silver PPO", "provider": "Cascade Health", "monthlyCostEmployee": 145.0, "monthlyCostEmployer": 410.0, "coverage": "Employee", "enrolledCount": 2, "description": "Silver-tier PPO with $2,500 deductible."},
+    {"id": "ben_2", "type": "Dental", "planName": "BrightSmile Basic", "provider": "BrightSmile Dental", "monthlyCostEmployee": 18.0, "monthlyCostEmployer": 30.0, "coverage": "Employee", "enrolledCount": 1, "description": "Preventive and basic restorative coverage."}
+  ],
+  "taxForms": [
+    {"id": "tax_1", "name": "Form 941 - Q2 2026", "type": "941", "jurisdiction": "Federal", "period": "Q2 2026", "dueDate": "2026-07-31", "status": "Filed", "filedDate": "2026-07-20"}
+  ],
+  "documents": [
+    {"id": "doc_1", "name": "Employee Handbook 2026.pdf", "type": "pdf", "category": "Policies", "uploadedDate": "2026-01-10", "uploadedBy": "Renee Okonkwo", "size": "1.2 MB"},
+    {"id": "doc_2", "name": "Alma Reyes - Offer Letter.pdf", "type": "pdf", "category": "Hiring", "employeeId": "emp_3", "uploadedDate": "2026-08-18", "uploadedBy": "Renee Okonkwo", "size": "210 KB"}
+  ],
+  "todoItems": [
+    {"id": "todo_1", "title": "Run payroll for Aug 31 - Sep 13 at Tanager Street", "description": "Deadline Sep 15, 4:00 PM PT for a Sep 18 payday.", "type": "payroll", "priority": "high", "dueDate": "2026-09-15", "status": "pending", "actionUrl": "/payroll/run", "relatedId": "pay_current"},
+    {"id": "todo_2", "title": "Finish onboarding Alma Reyes", "description": "I-9 verification and direct deposit form outstanding.", "type": "onboarding", "priority": "medium", "dueDate": "2026-09-10", "status": "pending", "actionUrl": "/people/team-members/emp_3", "relatedId": "emp_3"}
+  ],
+  "onboardingChecklists": [
+    {"id": "onb_1", "employeeId": "emp_3", "employeeName": "Alma Reyes", "startDate": "2026-08-24", "items": [{"id": "onb_1_1", "task": "Sign offer letter", "completed": true}, {"id": "onb_1_2", "task": "Complete I-9", "completed": false}, {"id": "onb_1_3", "task": "Set up direct deposit", "completed": false}]}
+  ],
+  "companyHolidays": [
+    {"id": "hol_1", "name": "Labor Day", "date": "2026-09-07"},
+    {"id": "hol_2", "name": "Thanksgiving Day", "date": "2026-11-26"}
+  ],
+  "notifications": [
+    {"id": "notif_1", "message": "Jonah Petrakis requested 40 hours of vacation", "type": "timeoff", "read": false, "timestamp": "2026-09-05T17:12:00Z", "actionUrl": "/time-off"},
+    {"id": "notif_2", "message": "Payroll for Aug 17 - Aug 30 is complete", "type": "payroll", "read": true, "timestamp": "2026-09-02T18:00:00Z", "actionUrl": "/payroll/history"}
+  ],
+  "reportHistory": [],
+  "referrals": []
+}

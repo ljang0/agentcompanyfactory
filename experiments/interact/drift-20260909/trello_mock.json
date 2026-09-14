@@ -1,0 +1,106 @@
+{
+  "app_id": "trello_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "boardOrder",
+    "boards",
+    "cards",
+    "currentUser",
+    "lists",
+    "users"
+  ],
+  "observed": [
+    "boardOrder",
+    "boards",
+    "cards",
+    "currentUser",
+    "lists",
+    "users"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "username",
+        "initials",
+        "avatarUrl",
+        "email"
+      ],
+      "keyed_by_id": true
+    },
+    "boards": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "title",
+        "description",
+        "background",
+        "listIds",
+        "starred",
+        "visibility",
+        "archivedListIds",
+        "archivedCardIds",
+        "labels",
+        "memberIds",
+        "createdAt"
+      ],
+      "keyed_by_id": true
+    },
+    "lists": {
+      "kind": "object",
+      "count": 9,
+      "record_fields": [
+        "id",
+        "title",
+        "boardId",
+        "cardIds",
+        "archived"
+      ],
+      "keyed_by_id": true
+    },
+    "cards": {
+      "kind": "object",
+      "count": 14,
+      "record_fields": [
+        "id",
+        "title",
+        "description",
+        "listId",
+        "boardId",
+        "labelIds",
+        "memberIds",
+        "dueDate",
+        "startDate",
+        "completed",
+        "cover",
+        "checklists",
+        "comments",
+        "attachments",
+        "archived",
+        "watching",
+        "position",
+        "createdAt"
+      ],
+      "keyed_by_id": true
+    },
+    "boardOrder": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

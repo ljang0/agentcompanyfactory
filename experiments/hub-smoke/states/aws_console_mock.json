@@ -1,0 +1,307 @@
+{
+  "user": {
+    "name": "Yusuf Adeyemi",
+    "email": "yusuf.adeyemi@blueheron-logistics.example",
+    "accountId": "4471-0928-3365",
+    "region": "us-east-2",
+    "accountAlias": "blueheron-logistics-prod"
+  },
+  "recentServices": [
+    {
+      "id": "ec2",
+      "name": "EC2",
+      "path": "/ec2",
+      "lastVisited": "2026-09-07T07:50:00Z"
+    },
+    {
+      "id": "s3",
+      "name": "S3",
+      "path": "/s3",
+      "lastVisited": "2026-09-06T16:20:00Z"
+    },
+    {
+      "id": "billing",
+      "name": "Billing",
+      "path": "/billing",
+      "lastVisited": "2026-09-05T09:00:00Z"
+    }
+  ],
+  "favorites": [],
+  "ec2": [
+    {
+      "id": "i-0b7e3f21a9c4d5e60",
+      "name": "dispatch-api-01",
+      "type": "t3.medium",
+      "state": "running",
+      "publicIp": "3.144.21.90",
+      "privateIp": "10.40.1.17",
+      "az": "us-east-2a",
+      "vpcId": "vpc-0fa31c88e2b7d9e41",
+      "subnetId": "subnet-04b9d2f6a1c3e7d80",
+      "ami": "ami-0c2f9a6b1e8d4c370",
+      "amiName": "Amazon Linux 2023 AMI",
+      "platform": "Linux/UNIX",
+      "keyPair": "blueheron-ops",
+      "securityGroups": [
+        "sg-dispatch-api"
+      ],
+      "launchTime": "2026-06-14T12:00:00Z",
+      "monitoring": "enabled",
+      "tags": [
+        {
+          "Key": "Environment",
+          "Value": "Production"
+        },
+        {
+          "Key": "Service",
+          "Value": "dispatch"
+        }
+      ]
+    },
+    {
+      "id": "i-09d1a4e77b3c2f518",
+      "name": "reports-worker-01",
+      "type": "t3.small",
+      "state": "stopped",
+      "publicIp": "-",
+      "privateIp": "10.40.2.31",
+      "az": "us-east-2b",
+      "vpcId": "vpc-0fa31c88e2b7d9e41",
+      "subnetId": "subnet-0a71e3c9d5b2f4610",
+      "ami": "ami-0c2f9a6b1e8d4c370",
+      "amiName": "Amazon Linux 2023 AMI",
+      "platform": "Linux/UNIX",
+      "keyPair": "blueheron-ops",
+      "securityGroups": [
+        "sg-internal"
+      ],
+      "launchTime": "2026-07-02T09:30:00Z",
+      "monitoring": "disabled",
+      "tags": [
+        {
+          "Key": "Environment",
+          "Value": "Staging"
+        }
+      ]
+    }
+  ],
+  "s3": [
+    {
+      "name": "blueheron-shipment-manifests",
+      "region": "us-east-2",
+      "created": "2026-02-11T10:00:00Z",
+      "access": "Bucket and objects not public",
+      "versioning": "Enabled",
+      "encryption": "SSE-S3",
+      "objects": [
+        {
+          "key": "2026/09/manifest-0906.csv",
+          "size": 184320,
+          "lastModified": "2026-09-06T23:10:00Z",
+          "storageClass": "Standard",
+          "type": "text/csv"
+        }
+      ]
+    }
+  ],
+  "lambda": [
+    {
+      "name": "manifest-ingest",
+      "description": "Parses uploaded shipment manifests",
+      "runtime": "python3.12",
+      "handler": "app.handler",
+      "memorySize": 512,
+      "timeout": 60,
+      "lastModified": "2026-08-28T14:05:00Z",
+      "codeSize": 20480,
+      "code": "def handler(event, context):\n    return {'ok': True}\n",
+      "environment": {
+        "MANIFEST_BUCKET": "blueheron-shipment-manifests"
+      },
+      "layers": [],
+      "role": "arn:aws:iam::447109283365:role/manifest-ingest-role",
+      "tags": {
+        "Service": "dispatch"
+      }
+    }
+  ],
+  "rds": [
+    {
+      "id": "dispatch-db-primary",
+      "engine": "postgres",
+      "engineVersion": "16.3",
+      "class": "db.t3.medium",
+      "status": "available",
+      "role": "Primary",
+      "endpoint": "dispatch-db-primary.c9x1abcd.us-east-2.rds.amazonaws.com",
+      "port": 5432,
+      "az": "us-east-2a",
+      "multiAZ": false,
+      "storage": 100,
+      "storageType": "gp3",
+      "vpcId": "vpc-0fa31c88e2b7d9e41",
+      "created": "2026-02-12T08:00:00Z",
+      "tags": [
+        {
+          "Key": "Environment",
+          "Value": "Production"
+        }
+      ]
+    }
+  ],
+  "iam": {
+    "users": [
+      {
+        "name": "yusuf.adeyemi",
+        "arn": "arn:aws:iam::447109283365:user/yusuf.adeyemi",
+        "created": "2026-01-15T09:00:00Z",
+        "lastActivity": "2026-09-07T07:50:00Z",
+        "groups": [
+          "Operators"
+        ],
+        "policies": [],
+        "mfaEnabled": true,
+        "accessKeyAge": 44,
+        "passwordLastUsed": "2026-09-07T07:50:00Z",
+        "path": "/",
+        "tags": []
+      }
+    ],
+    "roles": [
+      {
+        "name": "manifest-ingest-role",
+        "arn": "arn:aws:iam::447109283365:role/manifest-ingest-role",
+        "created": "2026-02-11T10:30:00Z",
+        "lastActivity": "2026-09-06T23:11:00Z",
+        "trustedEntities": "lambda.amazonaws.com",
+        "description": "Execution role for manifest-ingest",
+        "policies": [
+          "AWSLambdaBasicExecutionRole"
+        ],
+        "path": "/",
+        "maxSessionDuration": 3600
+      }
+    ],
+    "policies": [
+      {
+        "name": "AWSLambdaBasicExecutionRole",
+        "arn": "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+        "type": "AWS managed",
+        "description": "Provides write permissions to CloudWatch Logs",
+        "attachedEntities": 1,
+        "created": "2015-04-09T15:03:43Z",
+        "updated": "2015-04-09T15:03:43Z"
+      }
+    ],
+    "groups": [
+      {
+        "name": "Operators",
+        "arn": "arn:aws:iam::447109283365:group/Operators",
+        "created": "2026-01-15T08:45:00Z",
+        "users": [
+          "yusuf.adeyemi"
+        ],
+        "policies": [
+          "AdministratorAccess"
+        ],
+        "path": "/"
+      }
+    ]
+  },
+  "billing": {
+    "currentMonth": 312.4,
+    "forecast": 1290.0,
+    "lastMonth": 1184.22,
+    "currency": "USD",
+    "history": [
+      {
+        "month": "Jun 2026",
+        "amount": 1020.15
+      },
+      {
+        "month": "Jul 2026",
+        "amount": 1105.6
+      },
+      {
+        "month": "Aug 2026",
+        "amount": 1184.22
+      }
+    ],
+    "byService": [
+      {
+        "name": "Amazon EC2",
+        "amount": 160.2,
+        "percentage": 51.3,
+        "color": "#FF9900"
+      },
+      {
+        "name": "Amazon RDS",
+        "amount": 98.7,
+        "percentage": 31.6,
+        "color": "#3B48CC"
+      },
+      {
+        "name": "Amazon S3",
+        "amount": 53.5,
+        "percentage": 17.1,
+        "color": "#3ECF8E"
+      }
+    ],
+    "freeTier": [
+      {
+        "service": "AWS Lambda",
+        "usageType": "1M free requests per month",
+        "limit": "1,000,000",
+        "used": 61200,
+        "percentage": 6.12
+      }
+    ]
+  },
+  "securityGroups": [
+    {
+      "id": "sg-dispatch-api",
+      "name": "dispatch-api",
+      "description": "HTTPS from load balancer",
+      "vpcId": "vpc-0fa31c88e2b7d9e41",
+      "inboundRules": [
+        {
+          "type": "HTTPS",
+          "protocol": "TCP",
+          "portRange": "443",
+          "source": "10.40.0.0/16",
+          "description": "ALB"
+        }
+      ],
+      "outboundRules": [
+        {
+          "type": "All traffic",
+          "protocol": "All",
+          "portRange": "All",
+          "destination": "0.0.0.0/0",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "keyPairs": [
+    {
+      "name": "blueheron-ops",
+      "id": "key-0f3a8c1d2e4b5a697",
+      "type": "ed25519",
+      "fingerprint": "SHA256:Qm9x2Lk8vTq1Zr4WnP7aE3cYd6HfJ0sKuBgN5tXoV8I",
+      "created": "2026-01-20T11:00:00Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-001",
+      "title": "Instance state change",
+      "message": "i-09d1a4e77b3c2f518 (reports-worker-01) is now stopped",
+      "type": "info",
+      "timestamp": "2026-09-06T20:00:00Z",
+      "read": false,
+      "service": "EC2"
+    }
+  ],
+  "flash": []
+}

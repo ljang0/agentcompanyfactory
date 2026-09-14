@@ -1,0 +1,48 @@
+{
+  "currentUserId": "u1",
+  "workspace": {"id": "w1", "name": "Larkspur Robotics", "urlKey": "larkspur"},
+  "users": [
+    {"id": "u1", "name": "Ines Baptista-Kwan", "email": "ines@larkspurrobotics.example", "avatarUrl": "https://i.pravatar.cc/150?u=u1", "displayName": "Ines", "role": "Admin", "active": true},
+    {"id": "u2", "name": "Tobias Mwangi", "email": "tobias@larkspurrobotics.example", "avatarUrl": "https://i.pravatar.cc/150?u=u2", "displayName": "Tobias", "role": "Member", "active": true}
+  ],
+  "teams": [
+    {"id": "t1", "name": "Firmware", "key": "FW", "icon": "⚙️", "color": "#5e6ad2", "memberIds": ["u1", "u2"], "workflowStates": [
+      {"id": "ws_fw_backlog", "name": "Backlog", "category": "backlog", "color": "#8a8f98", "position": 1, "teamId": "t1"},
+      {"id": "ws_fw_todo", "name": "Todo", "category": "unstarted", "color": "#e2e2e3", "position": 2, "teamId": "t1"},
+      {"id": "ws_fw_in_progress", "name": "In Progress", "category": "started", "color": "#f2c94c", "position": 3, "teamId": "t1"},
+      {"id": "ws_fw_done", "name": "Done", "category": "completed", "color": "#27a644", "position": 5, "teamId": "t1"},
+      {"id": "ws_fw_canceled", "name": "Canceled", "category": "canceled", "color": "#95a2b3", "position": 6, "teamId": "t1"}
+    ], "triageEnabled": false, "cycleEnabled": true, "cycleDuration": 2, "activeCycleId": "c1"}
+  ],
+  "issues": [
+    {"id": "i1", "identifier": "FW-1", "number": 1, "title": "Larkspur gripper firmware v3 drops torque under load", "description": "Torque falls 18% after 40s of continuous grip on the G3 arm.", "stateId": "ws_fw_in_progress", "priority": 1, "estimate": 5, "assigneeId": "u1", "creatorId": "u2", "teamId": "t1", "projectId": "p1", "cycleId": "c1", "labelIds": ["l1"], "parentId": null, "dueDate": "2026-09-12", "subscriberIds": ["u1", "u2"], "relationIds": [], "createdAt": "2026-09-01T10:00:00Z", "updatedAt": "2026-09-03T08:30:00Z", "completedAt": null, "sortOrder": 100},
+    {"id": "i2", "identifier": "FW-2", "number": 2, "title": "Add CAN bus heartbeat watchdog", "description": "", "stateId": "ws_fw_todo", "priority": 3, "estimate": 2, "assigneeId": "u2", "creatorId": "u1", "teamId": "t1", "projectId": "p1", "cycleId": "c1", "labelIds": ["l2"], "parentId": null, "dueDate": null, "subscriberIds": ["u1"], "relationIds": [], "createdAt": "2026-09-02T11:00:00Z", "updatedAt": "2026-09-02T11:00:00Z", "completedAt": null, "sortOrder": 200}
+  ],
+  "labels": [
+    {"id": "l1", "name": "Bug", "color": "#eb5757", "teamId": null},
+    {"id": "l2", "name": "Feature", "color": "#4ea7fc", "teamId": null}
+  ],
+  "projects": [
+    {"id": "p1", "name": "G3 Arm Firmware 3.1", "description": "Stability release for the G3 gripper arm", "icon": "🦾", "color": "#5e6ad2", "status": "started", "health": "atRisk", "leadId": "u1", "memberIds": ["u1", "u2"], "teamIds": ["t1"], "targetDate": "2026-09-30", "startDate": "2026-08-18", "progress": 0.35, "createdAt": "2026-08-18T09:00:00Z", "updatedAt": "2026-09-03T08:30:00Z"}
+  ],
+  "cycles": [
+    {"id": "c1", "number": 7, "name": "Cycle 7", "teamId": "t1", "startsAt": "2026-08-31", "endsAt": "2026-09-13", "isActive": true, "isCompleted": false, "progress": 0.2}
+  ],
+  "comments": [
+    {"id": "cm1", "body": "Reproduced on bench rig B; logs attached in the shared drive.", "issueId": "i1", "userId": "u2", "createdAt": "2026-09-03T08:30:00Z", "updatedAt": "2026-09-03T08:30:00Z", "parentId": null}
+  ],
+  "notifications": [
+    {"id": "n1", "type": "issue_assigned", "actorId": "u2", "issueId": "i1", "projectId": "p1", "title": "Tobias assigned you FW-1", "body": "Larkspur gripper firmware v3 drops torque under load", "isRead": false, "isSnoozed": false, "isArchived": false, "createdAt": "2026-09-01T10:05:00Z"},
+    {"id": "n2", "type": "comment", "actorId": "u2", "issueId": "i1", "projectId": "p1", "title": "Tobias commented on FW-1", "body": "Reproduced on bench rig B; logs attached in the shared drive.", "isRead": false, "isSnoozed": false, "isArchived": false, "createdAt": "2026-09-03T08:30:00Z"}
+  ],
+  "views": [
+    {"id": "v1", "name": "Urgent firmware bugs", "icon": "🔥", "filters": {"priority": [1], "labelIds": ["l1"]}, "groupBy": "state", "sortBy": "priority", "layout": "list", "teamId": "t1", "creatorId": "u1"}
+  ],
+  "favorites": [
+    {"id": "f1", "type": "project", "targetId": "p1", "userId": "u1", "sortOrder": 1}
+  ],
+  "issueRelations": [],
+  "issueCounters": {"t1": 3},
+  "sidebarCollapsed": false,
+  "teamSectionsExpanded": {"t1": true}
+}

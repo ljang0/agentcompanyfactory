@@ -1,0 +1,398 @@
+{
+  "app_id": "hubspot_marketing_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activeSection",
+    "activities",
+    "campaigns",
+    "companies",
+    "contacts",
+    "ctas",
+    "currentUser",
+    "dashboards",
+    "deals",
+    "emails",
+    "forms",
+    "landingPages",
+    "lists",
+    "notifications",
+    "reports",
+    "selectedDashboardId",
+    "settings",
+    "sidebarCollapsed",
+    "socialPosts",
+    "users",
+    "workflows"
+  ],
+  "observed": [
+    "activeSection",
+    "activities",
+    "adCampaigns",
+    "campaigns",
+    "companies",
+    "contacts",
+    "ctas",
+    "currentUser",
+    "dashboards",
+    "deals",
+    "emails",
+    "formSubmissions",
+    "forms",
+    "landingPages",
+    "lists",
+    "notifications",
+    "reports",
+    "selectedDashboardId",
+    "settings",
+    "sidebarCollapsed",
+    "socialPosts",
+    "users",
+    "workflows"
+  ],
+  "undocumented_so_unseedable": [
+    "adCampaigns",
+    "formSubmissions"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 8,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "firstName",
+        "lastName",
+        "email",
+        "role"
+      ],
+      "keyed_by_id": false
+    },
+    "contacts": {
+      "kind": "array",
+      "count": 18,
+      "record_fields": [
+        "id",
+        "firstName",
+        "lastName",
+        "email",
+        "phone",
+        "company",
+        "companyId",
+        "jobTitle",
+        "lifecycleStage",
+        "leadStatus",
+        "contactOwner",
+        "createDate",
+        "lastActivityDate",
+        "source",
+        "marketingStatus",
+        "city",
+        "state",
+        "country",
+        "tags",
+        "notes"
+      ],
+      "keyed_by_id": false
+    },
+    "activities": {
+      "kind": "object",
+      "count": 8,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "companies": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "domain",
+        "industry",
+        "employeeCount",
+        "annualRevenue",
+        "city",
+        "state",
+        "country",
+        "phone",
+        "owner",
+        "createDate",
+        "contactCount"
+      ],
+      "keyed_by_id": false
+    },
+    "deals": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "name",
+        "stage",
+        "amount",
+        "closeDate",
+        "contactId",
+        "companyId",
+        "owner",
+        "pipeline",
+        "createDate"
+      ],
+      "keyed_by_id": false
+    },
+    "emails": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "name",
+        "subject",
+        "previewText",
+        "status",
+        "type",
+        "fromName",
+        "fromEmail",
+        "replyTo",
+        "listIds",
+        "campaignId",
+        "scheduledDate",
+        "sentDate",
+        "createdDate",
+        "updatedDate",
+        "createdBy",
+        "stats",
+        "content"
+      ],
+      "keyed_by_id": false
+    },
+    "campaigns": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "status",
+        "goal",
+        "startDate",
+        "endDate",
+        "owner",
+        "createdDate",
+        "budget",
+        "assets",
+        "metrics"
+      ],
+      "keyed_by_id": false
+    },
+    "forms": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "status",
+        "views",
+        "submissions",
+        "submissionRate",
+        "createdDate",
+        "updatedDate",
+        "campaignId",
+        "fields",
+        "settings"
+      ],
+      "keyed_by_id": false
+    },
+    "workflows": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "status",
+        "enrolledCount",
+        "enrolledCurrently",
+        "createdDate",
+        "updatedDate",
+        "createdBy",
+        "trigger",
+        "nodes"
+      ],
+      "keyed_by_id": false
+    },
+    "lists": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "size",
+        "createdDate",
+        "updatedDate",
+        "filters",
+        "createdBy"
+      ],
+      "keyed_by_id": false
+    },
+    "landingPages": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "slug",
+        "status",
+        "publishDate",
+        "views",
+        "submissions",
+        "conversionRate",
+        "newContacts",
+        "campaignId",
+        "createdDate",
+        "updatedDate"
+      ],
+      "keyed_by_id": false
+    },
+    "ctas": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "text",
+        "url",
+        "color",
+        "views",
+        "clicks",
+        "clickRate",
+        "status",
+        "createdDate",
+        "campaignId"
+      ],
+      "keyed_by_id": false
+    },
+    "dashboards": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "isDefault",
+        "reports"
+      ],
+      "keyed_by_id": false
+    },
+    "reports": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "dashboardId",
+        "dateRange",
+        "metric",
+        "data",
+        "position"
+      ],
+      "keyed_by_id": false
+    },
+    "socialPosts": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "platform",
+        "content",
+        "status",
+        "scheduledDate",
+        "publishedDate",
+        "campaignId",
+        "metrics"
+      ],
+      "keyed_by_id": false
+    },
+    "formSubmissions": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "formId",
+        "contactId",
+        "data",
+        "submittedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "adCampaigns": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "platform",
+        "status",
+        "budget",
+        "spent",
+        "impressions",
+        "clicks",
+        "conversions",
+        "cpc",
+        "ctr",
+        "conversionRate",
+        "costPerConversion",
+        "startDate",
+        "endDate",
+        "campaignId"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "type",
+        "message",
+        "timestamp",
+        "read"
+      ],
+      "keyed_by_id": false
+    },
+    "settings": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": [
+        "accountName",
+        "timezone",
+        "dateFormat",
+        "currency"
+      ],
+      "keyed_by_id": true
+    },
+    "selectedDashboardId": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "sidebarCollapsed": {
+      "kind": "boolean",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "activeSection": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

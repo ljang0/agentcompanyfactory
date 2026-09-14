@@ -1,0 +1,68 @@
+{
+  "currentUser": {
+    "id": "usr_001", "email": "marta.oyelaran@kestrelridge.example",
+    "firstName": "Marta", "lastName": "Oyelaran", "displayName": "Marta Oyelaran",
+    "avatar": null, "role": "admin", "managerId": null,
+    "employeeId": "KR-0107", "department": "Finance",
+    "defaultPolicy": "pol_001", "reimbursementMethod": "ach",
+    "createdAt": "2024-03-04T09:00:00Z"
+  },
+  "users": [
+    {"id": "usr_001", "email": "marta.oyelaran@kestrelridge.example", "firstName": "Marta", "lastName": "Oyelaran", "displayName": "Marta Oyelaran", "avatar": null, "role": "admin", "managerId": null, "employeeId": "KR-0107", "department": "Finance", "defaultPolicy": "pol_001", "reimbursementMethod": "ach", "createdAt": "2024-03-04T09:00:00Z"},
+    {"id": "usr_002", "email": "priya.nandakumar@kestrelridge.example", "firstName": "Priya", "lastName": "Nandakumar", "displayName": "Priya Nandakumar", "avatar": null, "role": "employee", "managerId": "usr_001", "employeeId": "KR-0142", "department": "Field Operations", "defaultPolicy": "pol_001", "reimbursementMethod": "ach", "createdAt": "2024-06-17T09:00:00Z"}
+  ],
+  "policies": [
+    {"id": "pol_001", "name": "Kestrel Ridge Surveying Expenses", "type": "corporate", "outputCurrency": "USD", "owner": "usr_001", "autoReporting": true, "autoReportingFrequency": "weekly", "autoReportingOffset": 1, "requiresCategory": true, "requiresTag": false, "requiresComment": false, "maxExpenseAge": 90, "maxExpenseAmount": 2500, "preventSelfApproval": true, "approvalMode": "basic", "reimbursementChoice": "reimburseManual", "createdAt": "2024-03-01T09:00:00Z"}
+  ],
+  "categories": [
+    {"id": "cat_001", "policyId": "pol_001", "name": "Travel: Lodging", "enabled": true, "glCode": "6020", "payrollCode": "", "maxExpenseAmount": 400, "requiresComment": false, "commentHint": "", "externalId": ""},
+    {"id": "cat_002", "policyId": "pol_001", "name": "Field Equipment", "enabled": true, "glCode": "6700", "payrollCode": "", "maxExpenseAmount": 0, "requiresComment": true, "commentHint": "Job number", "externalId": ""}
+  ],
+  "tags": [
+    {"id": "tag_001", "policyId": "pol_001", "name": "Job 2026-118 Bend Subdivision", "enabled": true, "glCode": "J118", "required": false}
+  ],
+  "expenses": [
+    {"id": "exp_001", "type": "expense", "policyId": "pol_001", "reportId": "rpt_001", "createdBy": "usr_002", "merchant": "Riverbend Motor Lodge", "amount": 18900, "currency": "USD", "date": "2026-08-25", "categoryId": "cat_001", "category": "Travel: Lodging", "tagId": "tag_001", "tag": "Job 2026-118 Bend Subdivision", "description": "Two nights, site survey crew", "comment": "", "receiptUrl": null, "hasReceipt": true, "billable": true, "reimbursable": true, "taxAmount": 0, "taxRate": "", "distance": null, "distanceUnit": null, "distanceRate": null, "hours": null, "hourlyRate": null, "status": "open", "violations": [], "createdAt": "2026-08-27T16:10:00Z", "modifiedAt": "2026-08-27T16:10:00Z"},
+    {"id": "exp_002", "type": "expense", "policyId": "pol_001", "reportId": "rpt_001", "createdBy": "usr_002", "merchant": "Cascade Survey Supply", "amount": 7450, "currency": "USD", "date": "2026-08-26", "categoryId": "cat_002", "category": "Field Equipment", "tagId": "tag_001", "tag": "Job 2026-118 Bend Subdivision", "description": "Replacement prism pole tips", "comment": "Job 2026-118", "receiptUrl": null, "hasReceipt": true, "billable": true, "reimbursable": true, "taxAmount": 0, "taxRate": "", "distance": null, "distanceUnit": null, "distanceRate": null, "hours": null, "hourlyRate": null, "status": "open", "violations": [], "createdAt": "2026-08-27T16:12:00Z", "modifiedAt": "2026-08-27T16:12:00Z"}
+  ],
+  "reports": [
+    {"id": "rpt_001", "title": "Bend Subdivision Site Survey - August 2026", "reportNumber": 51203377, "policyId": "pol_001", "policyName": "Kestrel Ridge Surveying Expenses", "createdBy": "usr_002", "createdByName": "Priya Nandakumar", "createdByEmail": "priya.nandakumar@kestrelridge.example", "status": "submitted", "total": 26350, "currency": "USD", "submittedTo": "usr_001", "submittedToEmail": "marta.oyelaran@kestrelridge.example", "submittedDate": "2026-08-28T09:30:00Z", "approvedDate": null, "reimbursedDate": null, "startDate": "2026-08-25", "endDate": "2026-08-26", "expenseCount": 2, "starred": false, "exported": false, "exportedDate": null, "isRetracted": false, "createdAt": "2026-08-27T16:00:00Z", "modifiedAt": "2026-08-28T09:30:00Z"}
+  ],
+  "comments": [
+    {"id": "cmt_001", "reportId": "rpt_001", "authorId": "usr_002", "authorName": "Priya Nandakumar", "authorEmail": "priya.nandakumar@kestrelridge.example", "type": "system", "text": "You created this report", "timestamp": "2026-08-27T16:00:00Z"},
+    {"id": "cmt_002", "reportId": "rpt_001", "authorId": "usr_002", "authorName": "Priya Nandakumar", "authorEmail": "priya.nandakumar@kestrelridge.example", "type": "status_change", "text": "Submitted to Marta Oyelaran", "timestamp": "2026-08-28T09:30:00Z"}
+  ],
+  "inboxItems": [
+    {"id": "inb_001", "type": "report_submitted", "title": "Report Submitted", "description": "Priya Nandakumar submitted 'Bend Subdivision Site Survey - August 2026' for approval", "relatedId": "rpt_001", "fromUserId": "usr_002", "fromUserName": "Priya Nandakumar", "read": false, "hidden": false, "actionRequired": true, "actionType": "approve_report", "createdAt": "2026-08-28T09:31:00Z"}
+  ],
+  "members": [
+    {"id": "mem_001", "userId": "usr_001", "policyId": "pol_001", "email": "marta.oyelaran@kestrelridge.example", "name": "Marta Oyelaran", "role": "admin", "managerId": null, "managerEmail": null, "employeeId": "KR-0107", "submitsTo": null, "approvesTo": null, "isApprover": true, "addedAt": "2024-03-04T09:00:00Z"},
+    {"id": "mem_002", "userId": "usr_002", "policyId": "pol_001", "email": "priya.nandakumar@kestrelridge.example", "name": "Priya Nandakumar", "role": "member", "managerId": "usr_001", "managerEmail": "marta.oyelaran@kestrelridge.example", "employeeId": "KR-0142", "submitsTo": "usr_001", "approvesTo": null, "isApprover": false, "addedAt": "2024-06-17T09:00:00Z"}
+  ],
+  "reportFields": [
+    {"id": "rf_001", "policyId": "pol_001", "name": "Job Number", "type": "text", "values": [], "required": true, "defaultValue": ""}
+  ],
+  "distanceRates": [
+    {"id": "dr_001", "policyId": "pol_001", "unit": "mi", "rate": 70, "currency": "USD", "enabled": true}
+  ],
+  "taxRates": [
+    {"id": "tax_001", "policyId": "pol_001", "name": "No Tax", "rate": 0, "isDefault": true, "enabled": true}
+  ],
+  "ui": {
+    "activeView": "inbox",
+    "expenseViewMode": "list",
+    "expenseFiltersVisible": false,
+    "reportFiltersVisible": false,
+    "selectedExpenseIds": [],
+    "selectedReportIds": [],
+    "activeSettingsTab": "basics",
+    "modalOpen": null,
+    "modalData": null,
+    "expenseFilters": {"merchant": "", "dateFrom": "", "dateTo": "", "categories": [], "tags": [], "policies": [], "statuses": [], "billableFilter": "all"},
+    "reportFilters": {"dateFrom": "", "dateTo": "", "policies": [], "statuses": []},
+    "expenseSortBy": "date",
+    "expenseSortDir": "desc",
+    "reportSortBy": "name",
+    "reportSortDir": "desc"
+  }
+}

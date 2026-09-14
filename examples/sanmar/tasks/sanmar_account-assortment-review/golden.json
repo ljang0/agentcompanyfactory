@@ -1,0 +1,748 @@
+[
+  {
+    "worker_id": "sales-supervisor",
+    "app_id": "google_docs_mock",
+    "action": "set_current",
+    "state_patch": {
+      "documents": {
+        "DOC-DELEGATION-ASSORTMENT-0901": {
+          "id": "DOC-DELEGATION-ASSORTMENT-0901",
+          "title": "September 1 desk review assignments",
+          "content": "<h1>Desk review assignments</h1><p>Imani: prepare conditional options and missing-detail findings for the three opportunities. Owen: reconcile Mesa and the original Northfork case, preserving accepted commitments, and supply instructions for Imani to record in HubSpot. Priya: use Imani&#x27;s findings to prepare approved copy and a recipient-specific asset index. Bring role effort estimates for the September 1 work decision; retain existing application, service and catalog commitments.</p>",
+          "ownerId": "person-mara",
+          "starred": false,
+          "created": "2026-09-01T08:00:00-07:00",
+          "updated": "2026-09-01T08:00:00-07:00",
+          "sharedWith": [
+            {
+              "userId": "person-imani",
+              "permission": "viewer"
+            },
+            {
+              "userId": "person-owen",
+              "permission": "viewer"
+            },
+            {
+              "userId": "person-priya",
+              "permission": "viewer"
+            }
+          ],
+          "linkSharing": {
+            "enabled": false,
+            "permission": "viewer"
+          }
+        }
+      }
+    }
+  },
+  {
+    "worker_id": "account-representative",
+    "app_id": "google_docs_mock",
+    "action": "set_current",
+    "state_patch": {
+      "documents": {
+        "DOC-ASSORTMENT-OPTIONS-0901": {
+          "id": "DOC-ASSORTMENT-OPTIONS-0901",
+          "title": "September 1 customer options and outstanding details",
+          "content": "<h1>Customer options — September 1, 2026</h1><p>Working from the September 1, 08:00 Pacific snapshot. These are conditional planning options, not accepted orders or final quotations. Sources: OPP-HARBOR-FALL, OPP-JUNIPER-WINTER, OPP-KESTREL-FIRST, CL-SVC-019, PRICE-2026B and DOC-SALES-POL. Opportunity amounts and close dates remain pipeline estimates; they do not establish quantities, delivery commitments or acceptance.</p><h2>Price basis</h2><p>PRICE-2026B, effective July 1, 2026: USD merchandise prices for a single-color quantity of at least 24, base apparel sizes S–XL. Each 2XL garment adds $2. Confirm the minimum separately for each proposed style/color. Below-minimum combinations require a separate price check. Decoration, freight and tax are not priced in this comparison. Final quantities, applicable charges and availability need verification before commercial commitment.</p><h2>Harbor Thread — OPP-HARBOR-FALL</h2><p>Ben is considering embroidered hospitality layers for hotel teams and a possible public shop. Keep three families visible, with each destination separate. Prepare a bounded comparison now; do not wait for every branch to clear.</p><ul><li>Cedar Basics Fleece Crew CB210: $13.20 S–XL; $15.20 2XL. A basic fleece option for hotel teams and a potential public assortment. Qualified reseller sales may be blank or embellished through own stores, client portals or marketplaces. Confirm colors, count by size/color, decoration arrangements and exact destination. Use text-only fleece material until a current matching asset is identified.</li><li>Trailforge Soft Shell TF720: $46 S–XL; $48 2XL. Describe as water-resistant. Conditional embellished own-store or client-portal option; embellishment before resale is required and third-party marketplaces are excluded. The public-shop branch requires a factual distinction between Harbor's own store and a marketplace. Images have narrower permission than product selling: use version 2 only for reseller catalogs or client portals; keep an own-store comparison text-only unless separate image permission is obtained. Do not make a waterproof claim.</li><li>Northhaven Packable Vest NH600: $39 S–XL; $41 2XL. Light insulated vest for embellished customer programs. Prepare a conditional hotel employee-program option; confirm client, intended wearers, decoration and closed-program structure. Product scope is embellished client-specific employee or event programs. Keep the possible public retail branch unresolved and draft the exact product/decoration/channel question for Helen Cho. Version 1 images are only for client proposals and closed employee programs. No public retail images or offer.</li></ul><p>Imani owns the request to Ben for style/color/size counts, budget, decorator and embellishment for each family, garment-needed date, delivery destination, hotel client/program and exact public selling destinations. Draft September 1; follow up September 2, 2026. Helen referral owner: Imani, drafted September 1, follow-up checkpoint September 3; no promised policy answer. Estimated representative effort: 2 hours.</p><h2>Kestrel Print Garage — OPP-KESTREL-FIRST</h2><p>Talia estimates 240 restaurant tees across two colors; Black and White remain questions, not settled choices. CB100 Cedar Basics Cotton Tee is a 5.4 oz cotton tee. Conditional price: $4.20 S–XL, $6.20 2XL, subject to at least 24 in each color. 240 × $4.20 = $1,008 only if all units use base sizes and both color quantities qualify. At an unchanged total of 240 qualifying units, add $2 for each 2XL unit. Do not invent a 120/120 split. Confirm restaurant use, exact colors and size/color quantities, decoration process and provider, selling route, budget, delivery address and decorator-needed date.</p><p>Application and sales tax license were supplied; Gareth found the resale certificate unsigned on July 27. Request a readable signed full certificate and matching legal business details. Central credit alone determines document acceptance and credit release. Product comparison can proceed while order release and account acceptance remain blocked. Cedar Basics permits qualified reseller blank or embellished sales through own stores, client portals and marketplaces; this does not qualify the applicant. Imani drafts the combined request September 1 and follows up September 2, 2026, then forwards returned documents and customer explanations to Gareth for review. Estimated representative effort: 1.25 hours.</p><h2>Juniper Teamwear — OPP-JUNIPER-WINTER</h2><p>Prepare a text-only CB210 Fleece Crew comparison for Navy, Ash or a mix, without choosing the mix. Price is $13.20 S–XL and $15.20 2XL, with at least 24 in each color. Conditional merchandise calculation is $13.20 × base-size units plus $15.20 × 2XL units. The $3,168 pipeline amount is not evidence of a 240-unit request. Cedar Basics permits qualified reseller blank or embellished sales through own stores, client portals and marketplaces; collect the actual club selling route and decoration arrangements.</p><p>Imani asks Jade for approximate and final quantities by color and size, required size range, decoration/provider, budget, club use and sales route, delivery destination, decorator-needed date and when rosters will settle. Draft September 1; follow up September 3, 2026. Final quantity pricing waits on the count, but useful product information proceeds now. Estimated representative effort: 0.75 hour.</p><h2>Cross-desk handoff</h2><p>Owen should check availability only against actual variants once supplied; missing rows establish neither availability nor a stockout. Priya should index permitted imagery separately by product, version, recipient and destination, and keep unresolved public branches text-only. Reserve another 1 representative hour for the two open service matters, for 5 representative hours total. Send service findings to Imani for HubSpot updates; Owen does not hold that app.</p>",
+          "ownerId": "person-imani",
+          "starred": false,
+          "created": "2026-09-01T08:30:00-07:00",
+          "updated": "2026-09-01T08:30:00-07:00",
+          "sharedWith": [
+            {
+              "userId": "person-mara",
+              "permission": "viewer"
+            },
+            {
+              "userId": "person-owen",
+              "permission": "viewer"
+            },
+            {
+              "userId": "person-priya",
+              "permission": "viewer"
+            }
+          ],
+          "linkSharing": {
+            "enabled": false,
+            "permission": "viewer"
+          }
+        }
+      }
+    }
+  },
+  {
+    "worker_id": "order-coordinator",
+    "app_id": "google_docs_mock",
+    "action": "set_current",
+    "state_patch": {
+      "documents": {
+        "DOC-SERVICE-0901": {
+          "id": "DOC-SERVICE-0901",
+          "title": "September 1 service obligations and processing instructions",
+          "content": "<h1>Service findings for Mara and Imani</h1><p>Sources: WB-COMMERCIAL, POL-ORDER-2, POL-QUAL-2 and TH-H260826. Two open service obligations; the closed Northfork form duplicate is not a third case.</p><h2>1. Mesa — SVC-104</h2><p>ORD-260811 was accepted August 11 and shipped: 48 CB210 Navy XL at $13.20, invoice INV-260811 for $633.60 merchandise. Rosa disputes six units: 6 × $13.20 = $79.20. She is holding payment on the invoice. $554.40 is only the arithmetic portion outside the six-unit claim, not a revised invoice balance or evidence of payment. RET-704 was requested August 19. No return authorization, receipt or credit posting is evidenced; posted amount remains $0.</p><p>The carton photograph received August 28 was forwarded with earlier garment pictures. Owen's next action is to ask Lucia whether those pictures suffice to assess the labels on the six Navy XL units, and request the disposition or precise additional evidence needed. Draft the request September 1; check again September 2, 2026. Imani keeps SVC-104 waiting_on_us, provides a status draft, and follows up with Rosa after the operations check. Do not ask Rosa to resend existing pictures unless Lucia identifies a gap. No credit, revised payment terms or return instructions may be promised without the appropriate recorded authorization.</p><h2>2. Northfork — SVC-105</h2><p>ORD-260818 was accepted August 18: 120 CB080 Khaki Adjustable at $5.25, total $630. Processing remains accepted, awaiting allocation. Tom requested cancellation of this cap line. No central-operations consent or authorized amendment is evidenced. Keep all 120 units and the accepted price/value intact. The August 31 snapshot shows 60 Khaki Adjustable caps at Auburn and 240 at Reno; these are observations, not reservations, allocation instructions or cancellation consent.</p><p>Owen prepares a follow-up to Lucia identifying that exact line and requested cancellation, asking for the consent decision and current processing state. Follow up September 2, 2026; if unanswered, report that the check remains open. Record the substantive update in TH-H260826. Imani records the findings and dated task in SVC-105 and continues the original customer email conversation after the internal check. SVC-106 stays closed as the linked duplicate; its closure did not cancel the order.</p><h2>Commercial dependencies and effort</h2><p>Kestrel's signed certificate remains missing; Gareth must review the returned papers and any credit release. No account acceptance is inferred. For Harbor, Juniper and Kestrel, obtain exact variants before checking supply. CB210 Navy XL had 216 units and CB100 Black M had 1,840 at Auburn on August 31 at 15:00 Pacific; these do not cover unknown size/color splits. No matching TF720 or NH600 availability rows are supplied, which establishes neither stock nor stockout. Central operations records acceptance and reserves inventory.</p><p>Additional order-services estimate: Mesa 1.5 hours, Northfork 1.5 hours, Harbor 0.5 hour, Kestrel 0.25 hour and Juniper 0.25 hour, totaling 4 hours. This covers desk analysis, handoffs and follow-up allowance; external decisions, waiting and physical processing are excluded. Preserve the existing 12-hour customer-exception block and other accepted commitments, including ORD-260827, 144 Navy XL TF410 at $24, $3,456, awaiting allocation.</p><p>Delegation to Imani: use these findings to update SVC-104, SVC-105, CL-SVC-019 and the linked CRM tasks. Keep both service cases unresolved.</p>",
+          "ownerId": "person-owen",
+          "starred": false,
+          "created": "2026-09-01T09:00:00-07:00",
+          "updated": "2026-09-01T09:00:00-07:00",
+          "sharedWith": [
+            {
+              "userId": "person-mara",
+              "permission": "viewer"
+            },
+            {
+              "userId": "person-imani",
+              "permission": "viewer"
+            },
+            {
+              "userId": "person-priya",
+              "permission": "viewer"
+            }
+          ],
+          "linkSharing": {
+            "enabled": false,
+            "permission": "viewer"
+          }
+        }
+      }
+    }
+  },
+  {
+    "worker_id": "marketing-specialist",
+    "app_id": "google_drive_mock",
+    "action": "set_current",
+    "state_patch": {
+      "items": {
+        "INDEX-ASSORTMENT-0901": {
+          "id": "INDEX-ASSORTMENT-0901",
+          "parentId": "F-MARKETING",
+          "name": "September 1 product copy and recipient asset index",
+          "type": "text",
+          "mimeType": "text/plain",
+          "size": 0,
+          "ownerId": "person-priya",
+          "sharedWith": [
+            {
+              "userId": "person-mara",
+              "role": "viewer",
+              "addedAt": "2026-09-01T10:00:00-07:00"
+            },
+            {
+              "userId": "person-imani",
+              "role": "viewer",
+              "addedAt": "2026-09-01T10:00:00-07:00"
+            },
+            {
+              "userId": "person-owen",
+              "role": "viewer",
+              "addedAt": "2026-09-01T10:00:00-07:00"
+            }
+          ],
+          "starred": false,
+          "trashed": false,
+          "color": null,
+          "createdAt": 1788282000000,
+          "modifiedAt": 1788282000000,
+          "accessedAt": 1788282000000,
+          "description": "Prepared copy and asset-use plan, based on Imani's customer options; no asset delivery or customer access verification claimed.",
+          "content": "September 1, 2026 — prepared by Priya Nair. Input: DOC-ASSORTMENT-OPTIONS-0901. Authority: POL-MEDIA-4, DOC-SALES-POL, ASSET-TF720-2, ASSET-NH600-1 and DOC-TEE-VIEWS-HANDOFF.\n\nHARBOR / Ben Okafor, ben@harborthreadstudio.com\nCB210: copy 'Cedar Basics Fleece Crew'. Use text-only comparison. No matching current fleece image version has been identified; do not invent one. Cedar Basics photo permission covers reseller catalogs, own-store listings and marketplace listings, but an actual matching approved asset still needs identification.\nTF720: copy 'Trailforge Soft Shell — water-resistant.' ASSET-TF720-2, version 2, published July 9, 2026; 1,794,045 bytes; https://resources.cedarlineapparel.com/products/TF720/views-v2.zip. Intended recipient Ben, for a qualified reseller catalog or client portal only once the destination is established. Product resale requires embellishment and an own store or client portal; marketplaces excluded. Own-store selling permission does not establish image permission. Prepare the own-store branch text-only; paid social requires asset-specific permission. No waterproof claim.\nNH600: copy 'Northhaven Packable Vest — a light insulated vest for embellished customer programs.' ASSET-NH600-1, version 1, published June 3, 2026; 1,879,920 bytes; https://resources.cedarlineapparel.com/products/NH600/presentation-v1.zip. Intended recipient Ben, only for the hotel client proposal or closed employee program. Keep public retail branch out of this asset handoff and unresolved with Helen. Product scope requires embellishment and a client-specific employee or event program; image scope is specifically client proposals and closed employee programs.\nThe two outerwear bundles total 3,673,965 bytes, below the 20,000,000-byte email limit. They may be supplied together only for their separately identified permitted destinations. This index is not evidence that they were attached, sent or downloaded.\n\nJUNIPER / Jade Hsu, jade@juniperteamwear.com\nCB210: copy 'Cedar Basics Fleece Crew — Navy and Ash options for your club review.' Colors and quantities remain unselected. Text-only now; fleece asset version unresolved. Confirm intended destination with Imani before any later image handoff.\n\nKESTREL / Talia West, talia@kestrelprintgarage.com\nCB100: copy 'Cedar Basics Cotton Tee — 5.4 oz cotton tee.' Reference sizes S–2XL and colors White, Black, Navy and Forest. Black/White are proposed choices awaiting confirmation. Do not substitute heather copy. Cotton tee product views version 5, published May 5, 2026, per DOC-TEE-VIEWS-HANDOFF: https://resources.cedarlineapparel.com/products/CB100/views-v5.zip. Permitted uses include reseller catalogs, own-store pages, marketplace listings and paid social under that asset reference. Current customer reply remains text-only; after actual destination and colors are supplied, select matching views, verify crop/neckline and file size, and document the handoff to Talia. Asset access or permission does not constitute account acceptance.\n\nAll copy retains brand marks and approved claims. No new performance or decoration-compatibility claims. No private source-folder access has been widened. If a later package exceeds 20 MB, create an indexed recipient-specific folder and verify access before handoff; do not share the private source folders.\n\nOpen actions: Priya and Imani check Harbor's destinations and Kestrel's colors/destination on September 2, 2026. Priya checks for a current CB210 asset and exact permitted use with Devon on September 3; Harbor and Juniper text-only materials remain usable meanwhile. Priya verifies any eventual files, sizes and recipient access before delivery. Existing September 3 catalog session and unresolved Spanish sleeve wording stay on the maintenance agenda.\n\nAdditional marketing effort estimate: Harbor 2 hours, Kestrel 0.5 hour, Juniper 0.5 hour = 3 hours, including permission review, index preparation and conditional handoff checks. No new paid acquisition or vendor production expense is proposed."
+        }
+      }
+    }
+  },
+  {
+    "worker_id": "sales-supervisor",
+    "app_id": "google_docs_mock",
+    "action": "set_current",
+    "state_patch": {
+      "documents": {
+        "DOC-DESK-PLAN-0901": {
+          "id": "DOC-DESK-PLAN-0901",
+          "title": "Customer work priorities and effort plan — September 1, 2026",
+          "content": "<h1>September 1 desk work order</h1><p>Mara Ellison accepts the bounded desk scope below using Imani's DOC-ASSORTMENT-OPTIONS-0901, Owen's DOC-SERVICE-0901 and Priya's INDEX-ASSORTMENT-0901. This is an internal work allocation, not a customer, credit, policy or operations approval. Deliver the options, index, drafts and matching records by September 1, 2026. External questions remain open on the dates below.</p><ol><li><strong>Mesa first.</strong> The six-unit $79.20 dispute is holding payment on the $633.60 invoice. Owen prepares the precise photo/disposition follow-up to Lucia today. Imani records the unresolved state and customer status draft. Check again September 2. Advancing the review protects service trust and payment resolution without treating a claim as a credit.</li><li><strong>Northfork second, with prompt same-day preparation.</strong> Owen prepares the original cancellation follow-up and substantive thread reply. The accepted 120-cap, $630 commitment remains intact pending consent. Imani updates SVC-105 and owns the customer relationship follow-up after the September 2 operations check. Count one cancellation; SVC-106 stays closed as a duplicate.</li><li><strong>Harbor third.</strong> Prepare the three-family comparison today because useful basic fleece and conditional embellished client-program options can progress independently. Limit marketing effort to approved copy and indexed permitted images; keep TF720 own-store material text-only and NH600 public retail unresolved. Imani drafts discovery questions and Helen's written referral today. Customer details checkpoint September 2; Helen follow-up September 3 without promising a determination.</li><li><strong>Kestrel fourth.</strong> Prepare a useful CB100 option and combined signature/size/color request today. The September 15 expected close makes document collection timely, but it does not override Gareth's review. Keep $1,008 illustrative, not final or accepted. Imani follows up September 2, then forwards returned papers and explanations to Gareth. No order release.</li><li><strong>Juniper fifth.</strong> Provide a short Navy/Ash CB210 comparison now and ask when rosters will settle. Defer final quantity pricing and more elaborate image work until counts and destination are known. Imani follows up September 3. This preserves progress at low effort while avoiding repeated speculative work.</li></ol><h2>Additional effort allocation</h2><table><tr><th>Matter</th><th>Representative hours</th><th>Order-services hours</th><th>Marketing hours</th></tr><tr><td>Mesa</td><td>0.5</td><td>1.5</td><td>0</td></tr><tr><td>Northfork</td><td>0.5</td><td>1.5</td><td>0</td></tr><tr><td>Harbor</td><td>2</td><td>0.5</td><td>2</td></tr><tr><td>Kestrel</td><td>1.25</td><td>0.25</td><td>0.5</td></tr><tr><td>Juniper</td><td>0.75</td><td>0.25</td><td>0.5</td></tr><tr><td>Total</td><td>5</td><td>4</td><td>3</td></tr></table><p>Under POL-AUTH-3 these fit additional weekly capacity of 18 representative, 14 order-services and 16 marketing hours, leaving 13, 10 and 13 hours respectively before other discretionary assignments. Estimates cover preparation and follow-up allowance, not hours already worked or external processing time. At $48/$42/$50 per hour, internal support cost is $240 + $168 + $150 = $558. These are planning costs, separate from vendor expense and media spend.</p><p>Retain the protected 10 representative hours for applications, 12 order-services hours for customer exceptions and 8 marketing hours for catalog maintenance; do not subtract this assignment from those blocks. Preserve existing accepted orders, normal service callbacks, application reviews, the September 3 catalog session and Orchard City uniform review, and the September 2 lighting-access commitment. No calendar commitments are moved. Mara handles any coverage conflict before discretionary work expands.</p><p>No incremental media spend or vendor production purchase is allocated. Existing obligations and advertising remain unchanged. Monthly authority remains $6,000 paid acquisition and $1,200 customer-resource production; any increase above a ceiling requires Tessa's written approval. This assignment creates no advertising work.</p><h2>Packaging and ownership</h2><p>Imani alone makes the HubSpot writes: all three opportunities, Mesa and Northfork original tickets, Kestrel's document ticket, linked notes and dated tasks. Owen supplies operations findings, drafts the Lucia requests and updates TH-H260826. Priya owns the index and the September 3 fleece-asset check with Devon. Imani owns all customer questions and the September 3 Helen checkpoint. Mara checks final consistency September 1. Follow-up dates are desk checkpoints, not promised dates for customer answers, policy determinations or shipments.</p><p>Keep existing deal amounts and expected close dates as historical pipeline estimates, with their limits explicit. No inferred size splits or inventories; no stock reservation, cancellation, posted credit, physical return, documentary acceptance or customer acceptance is recorded.</p>",
+          "ownerId": "person-mara",
+          "starred": true,
+          "created": "2026-09-01T10:30:00-07:00",
+          "updated": "2026-09-01T10:30:00-07:00",
+          "sharedWith": [
+            {
+              "userId": "person-imani",
+              "permission": "viewer"
+            },
+            {
+              "userId": "person-owen",
+              "permission": "viewer"
+            },
+            {
+              "userId": "person-priya",
+              "permission": "viewer"
+            }
+          ],
+          "linkSharing": {
+            "enabled": false,
+            "permission": "viewer"
+          }
+        }
+      }
+    }
+  },
+  {
+    "worker_id": "marketing-specialist",
+    "app_id": "google_drive_mock",
+    "action": "set_current",
+    "state_patch": {
+      "items": {
+        "INDEX-ASSORTMENT-0901": {
+          "id": "INDEX-ASSORTMENT-0901",
+          "parentId": "F-MARKETING",
+          "name": "September 1 product copy and recipient asset index",
+          "type": "text",
+          "mimeType": "text/plain",
+          "size": 0,
+          "ownerId": "person-priya",
+          "sharedWith": [
+            {
+              "userId": "person-mara",
+              "role": "viewer",
+              "addedAt": "2026-09-01T10:00:00-07:00"
+            },
+            {
+              "userId": "person-imani",
+              "role": "viewer",
+              "addedAt": "2026-09-01T10:00:00-07:00"
+            },
+            {
+              "userId": "person-owen",
+              "role": "viewer",
+              "addedAt": "2026-09-01T10:00:00-07:00"
+            }
+          ],
+          "starred": false,
+          "trashed": false,
+          "color": null,
+          "createdAt": 1788282000000,
+          "modifiedAt": 1788282000000,
+          "accessedAt": 1788282000000,
+          "description": "Prepared copy and asset-use plan, based on Imani's customer options; no asset delivery or customer access verification claimed.",
+          "content": "September 1, 2026 — prepared by Priya Nair. Input: DOC-ASSORTMENT-OPTIONS-0901. Authority: POL-MEDIA-4, DOC-SALES-POL, ASSET-TF720-2, ASSET-NH600-1 and DOC-TEE-VIEWS-HANDOFF.\n\nHARBOR / Ben Okafor, ben@harborthreadstudio.com\nCB210: copy 'Cedar Basics Fleece Crew'. Use text-only comparison. No matching current fleece image version has been identified; do not invent one. Cedar Basics photo permission covers reseller catalogs, own-store listings and marketplace listings, but an actual matching approved asset still needs identification.\nTF720: copy 'Trailforge Soft Shell — water-resistant.' ASSET-TF720-2, version 2, published July 9, 2026; 1,794,045 bytes; https://resources.cedarlineapparel.com/products/TF720/views-v2.zip. Intended recipient Ben, for a qualified reseller catalog or client portal only once the destination is established. Product resale requires embellishment and an own store or client portal; marketplaces excluded. Own-store selling permission does not establish image permission. Prepare the own-store branch text-only; paid social requires asset-specific permission. No waterproof claim.\nNH600: copy 'Northhaven Packable Vest — a light insulated vest for embellished customer programs.' ASSET-NH600-1, version 1, published June 3, 2026; 1,879,920 bytes; https://resources.cedarlineapparel.com/products/NH600/presentation-v1.zip. Intended recipient Ben, only for the hotel client proposal or closed employee program. Keep public retail branch out of this asset handoff and unresolved with Helen. Product scope requires embellishment and a client-specific employee or event program; image scope is specifically client proposals and closed employee programs.\nThe two outerwear bundles total 3,673,965 bytes, below the 20,000,000-byte email limit. They may be supplied together only for their separately identified permitted destinations. This index is not evidence that they were attached, sent or downloaded.\n\nJUNIPER / Jade Hsu, jade@juniperteamwear.com\nCB210: copy 'Cedar Basics Fleece Crew — Navy and Ash options for your club review.' Colors and quantities remain unselected. Text-only now; fleece asset version unresolved. Confirm intended destination with Imani before any later image handoff.\n\nKESTREL / Talia West, talia@kestrelprintgarage.com\nCB100: copy 'Cedar Basics Cotton Tee — 5.4 oz cotton tee.' Reference sizes S–2XL and colors White, Black, Navy and Forest. Black/White are proposed choices awaiting confirmation. Do not substitute heather copy. Cotton tee product views version 5, published May 5, 2026, per DOC-TEE-VIEWS-HANDOFF: https://resources.cedarlineapparel.com/products/CB100/views-v5.zip. Permitted uses include reseller catalogs, own-store pages, marketplace listings and paid social under that asset reference. Current customer reply remains text-only; after actual destination and colors are supplied, select matching views, verify crop/neckline and file size, and document the handoff to Talia. Asset access or permission does not constitute account acceptance.\n\nAll copy retains brand marks and approved claims. No new performance or decoration-compatibility claims. No private source-folder access has been widened. If a later package exceeds 20 MB, create an indexed recipient-specific folder and verify access before handoff; do not share the private source folders.\n\nOpen actions: Priya and Imani check Harbor's destinations and Kestrel's colors/destination on September 2, 2026. Priya checks for a current CB210 asset and exact permitted use with Devon on September 3; Harbor and Juniper text-only materials remain usable meanwhile. Priya verifies any eventual files, sizes and recipient access before delivery. Existing September 3 catalog session and unresolved Spanish sleeve wording stay on the maintenance agenda.\n\nAdditional marketing effort estimate: Harbor 2 hours, Kestrel 0.5 hour, Juniper 0.5 hour = 3 hours, including permission review, index preparation and conditional handoff checks. No new paid acquisition or vendor production expense is proposed.<h2>Marketing work sequence after Mara’s desk decision</h2><p>Apply the September 1 service-first scope in DOC-DESK-PLAN-0901: protect the existing eight-hour catalog correction block, then spend two additional hours on Harbor’s conditional layers and Helen question, half an hour on Kestrel’s tee/document handoff, and half an hour on Juniper’s text-only fleece comparison. Mesa and Northfork remain the desk’s first two priorities and receive no extra marketing work. This sequence uses Imani’s actual customer needs; it keeps Harbor’s NH600 public-retail and image permissions unresolved and avoids preparing unusable public imagery. Final assets still depend on the actual requested variants and recipient destination. September 3 is our follow-up checkpoint.</p>",
+          "updated": "2026-09-01T12:30:00-07:00"
+        }
+      }
+    }
+  },
+  {
+    "worker_id": "account-representative",
+    "app_id": "hubspot_mock",
+    "action": "set_current",
+    "state_patch": {
+      "deals": [
+        {
+          "id": "OPP-HARBOR-FALL",
+          "name": "Hospitality layers and web shop",
+          "stage": "qualified_to_buy",
+          "amount": 4200,
+          "closeDate": "2026-09-18",
+          "dealType": "existing_business",
+          "priority": "high",
+          "owner": "Imani Brooks",
+          "companyId": "A004",
+          "contactIds": [
+            "CT-A004"
+          ],
+          "probability": 40,
+          "description": "September 1 work order: third after Mesa and the original Northfork service request; bounded comparison proceeds now. Ben is considering embroidered hotel-team layers and a possible public shop, with quantities and channels unresolved. PRICE-2026B effective July 1: minimum 24 per single color, S–XL base, USD; CB210 $13.20/$15.20 for 2XL, TF720 $46/$48, NH600 $39/$41. Merchandise only; decoration, freight and tax require separate confirmation. CB210 supports qualified reseller blank/embellished own-store, portal or marketplace sales. TF720 requires embellishment before resale, own store or client portal only; no marketplace. Describe as water-resistant; version 2 images only for reseller catalogs/client portals, so own-store material stays text-only. NH600 is a light insulated vest for embellished client-specific employee/event programs; prepare the hotel-program option conditionally. Public retail branch remains a written Helen question, not an offer; version 1 images only for client proposals/closed employee programs. Imani requests exact family/color/size counts, decoration/provider, hotel program, each selling destination, budget, delivery details and garment-needed date; follow up September 2. Helen checkpoint September 3, with no promised determination. Fleece copy stays text-only pending a verified asset. $4,200 and September 18 are pipeline expectations, not quantity evidence or acceptance. No inventory reserved. See DOC-ASSORTMENT-OPTIONS-0901, DOC-DESK-PLAN-0901 and INDEX-ASSORTMENT-0901.",
+          "createDate": "2026-08-24T10:35:00-07:00",
+          "lastActivityDate": "2026-09-01T13:00:00-07:00"
+        },
+        {
+          "id": "OPP-JUNIPER-WINTER",
+          "name": "Winter club fleece",
+          "stage": "appointment_scheduled",
+          "amount": 3168,
+          "closeDate": "2026-09-25",
+          "dealType": "existing_business",
+          "priority": "medium",
+          "owner": "Imani Brooks",
+          "companyId": "A003",
+          "contactIds": [
+            "CT-A003"
+          ],
+          "probability": 20,
+          "description": "September 1 work order: fifth; prepare useful text-only CB210 Navy/Ash comparison now, while final pricing waits on club rosters. PRICE-2026B effective July 1: USD $13.20 S–XL and $15.20 2XL, minimum 24 per color. Total depends on actual size/color counts; $3,168 does not establish quantity. Decoration, freight and tax are not included. Cedar Basics permits qualified reseller blank/embellished own-store, client-portal and marketplace sales; actual route and decoration remain to be described. Imani asks Jade for color choice/mix, estimated and final size/color counts, size range, budget, decoration/provider, club use and channel, delivery destination, decorator-needed date and roster completion timing. Follow up September 3, 2026. Priya checks a current fleece asset September 3; no asset version is invented. No order acceptance or inventory commitment. September 25 remains an expected close only. See DOC-ASSORTMENT-OPTIONS-0901 and INDEX-ASSORTMENT-0901.",
+          "createDate": "2026-08-20T13:10:00-07:00",
+          "lastActivityDate": "2026-09-01T13:00:00-07:00"
+        },
+        {
+          "id": "OPP-KESTREL-FIRST",
+          "name": "First restaurant tee run",
+          "stage": "appointment_scheduled",
+          "amount": 1008,
+          "closeDate": "2026-09-15",
+          "dealType": "new_business",
+          "priority": "high",
+          "owner": "Imani Brooks",
+          "companyId": "P001",
+          "contactIds": [
+            "CT-P001"
+          ],
+          "probability": 20,
+          "description": "September 1 work order: fourth; advance paperwork and a conditional CB100 restaurant-tee comparison. Talia estimates 240 tees across two colors; Black and White and their split remain unconfirmed. CB100 approved description: 5.4 oz cotton tee. PRICE-2026B effective July 1: USD $4.20 S–XL, $6.20 2XL, minimum 24 per color. $1,008 = 240 × $4.20 only for all base sizes and qualifying color quantities; add $2 per 2XL at unchanged qualifying total. Decoration, freight and tax are unpriced. Cedar Basics supports qualified reseller blank/embellished own-store, client-portal and marketplace sales, but the applicant is not yet accepted. Application and sales tax license supplied; signed resale certificate still missing under CL-SVC-019. Gareth alone confirms document acceptance and credit release. Imani follows up September 2 for signed full certificate, matching legal details, actual size/color counts, restaurant use, decoration/provider, selling destination, budget, delivery address and decorator-needed date. Forward returned papers and explanations to Gareth. Text-only reply now; CB100 version 5 views can be selected after colors/destination and file size are checked. No final quotation, accepted order or stock reservation. September 15 remains expected close. See DOC-ASSORTMENT-OPTIONS-0901 and INDEX-ASSORTMENT-0901.",
+          "createDate": "2026-08-10T09:00:00-07:00",
+          "lastActivityDate": "2026-09-01T13:00:00-07:00"
+        }
+      ],
+      "tickets": [
+        {
+          "id": "SVC-104",
+          "subject": "Fleece labels and invoice balance",
+          "description": "Priority 1 in DOC-DESK-PLAN-0901. Rosa disputes six CB210 Navy XL on shipped ORD-260811, accepted August 11: 48 units at $13.20, INV-260811 $633.60. Six-unit claim is $79.20; the invoice remains unpaid. RET-704 is a requested return only, with no evidenced authorization, receipt or posted credit; posted amount remains $0. Owen forwarded the August 28 carton photo with earlier garment pictures. His September 1 draft asks Lucia whether those pictures suffice and requests disposition or exact additional evidence. Owen checks September 2; Imani owns the customer status follow-up and records the response. Do not promise a credit, revised invoice or return instructions. $554.40 is merely the arithmetic portion outside the claim. Findings: DOC-SERVICE-0901; task TASK-0901-MESA.",
+          "status": "waiting_on_us",
+          "pipeline": "support",
+          "priority": "high",
+          "category": "billing",
+          "source": "email",
+          "owner": "Imani Brooks",
+          "contactId": "CT-A005",
+          "companyId": "A005",
+          "createDate": "2026-08-19T11:10:00-07:00",
+          "closeDate": null,
+          "lastActivityDate": "2026-09-01T13:00:00-07:00"
+        },
+        {
+          "id": "SVC-105",
+          "subject": "Tourism cap cancellation request",
+          "description": "Priority 2 in DOC-DESK-PLAN-0901. Tom requests cancellation of accepted ORD-260818: CB080 Khaki Adjustable, 120 units at $5.25, $630 merchandise, accepted August 18 and awaiting allocation. No central-operations consent or authorized amendment is evidenced. Preserve the accepted line and value. Owen prepares the September 1 follow-up asking Lucia for consent decision and current processing state; check September 2. Imani owns the original customer conversation and records the response here. SVC-106 remains closed as a duplicate, not a completed cancellation; count only this obligation. Availability observations do not reserve inventory or authorize cancellation. See DOC-SERVICE-0901, TH-H260826 and TASK-0901-NORTHFORK.",
+          "status": "waiting_on_us",
+          "pipeline": "support",
+          "priority": "high",
+          "category": "general_inquiry",
+          "source": "email",
+          "owner": "Imani Brooks",
+          "contactId": "CT-A006",
+          "companyId": "A006",
+          "createDate": "2026-08-25T08:55:00-07:00",
+          "closeDate": null,
+          "lastActivityDate": "2026-09-01T13:00:00-07:00"
+        },
+        {
+          "id": "CL-SVC-019",
+          "subject": "Kestrel signature page",
+          "description": "Talia supplied the screen-printing application and sales tax license. Gareth found the resale certificate unsigned July 27; the signed full certificate remains outstanding. September 1 plan advances a conditional CB100 comparison and combined document/quantity request, without account acceptance or order release. Imani follows up September 2 for readable signed certificate and matching legal business details, then forwards returned papers and customer explanations to Gareth. Central credit alone determines documentary acceptance and any credit release. Linked opportunity OPP-KESTREL-FIRST; task TASK-0901-KESTREL. Expected opportunity close is not an authorization.",
+          "status": "waiting_on_contact",
+          "pipeline": "support",
+          "priority": "high",
+          "category": "general_inquiry",
+          "source": "email",
+          "owner": "Imani Brooks",
+          "contactId": "CT-P001",
+          "companyId": "P001",
+          "createDate": "2026-07-21T10:05:00-07:00",
+          "closeDate": null,
+          "lastActivityDate": "2026-09-01T13:00:00-07:00"
+        }
+      ],
+      "notes": [
+        {
+          "id": "NOTE-0901-MESA",
+          "body": "Recorded Owen's DOC-SERVICE-0901 findings: $79.20 six-unit claim against $633.60 unpaid invoice; no posted credit. Existing photo trail is with Lucia. Owen owns the September 2 operations checkpoint; Imani owns the customer status follow-up. Preparation does not mean the draft was sent or that Lucia answered.",
+          "associatedType": "ticket",
+          "associatedId": "SVC-104",
+          "createdBy": "Imani Brooks",
+          "createDate": "2026-09-01T13:00:00-07:00"
+        },
+        {
+          "id": "NOTE-0901-NORTHFORK",
+          "body": "Recorded Owen's findings and Mara's priority 2 decision. Original SVC-105 remains open for cancellation consent on 120 Khaki Adjustable CB080, ORD-260818, $630. SVC-106 remains closed solely as a duplicate. One service obligation. Follow-up September 2; accepted line unchanged. No operations response has been invented.",
+          "associatedType": "ticket",
+          "associatedId": "SVC-105",
+          "createdBy": "Imani Brooks",
+          "createDate": "2026-09-01T13:00:00-07:00"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "TASK-0901-MESA",
+          "title": "Check Lucia's Mesa label review and disposition",
+          "type": "email",
+          "status": "not_started",
+          "priority": "high",
+          "dueDate": "2026-09-02T10:00:00-07:00",
+          "notes": "SVC-104; use draft-mesa-review and DOC-SERVICE-0901. Ask if August 28 carton and earlier garment pictures suffice for six CB210 Navy XL on ORD-260811. Request disposition or specific missing evidence. Claim $79.20, invoice $633.60 unpaid, posted credit $0. Return findings to Imani for the customer status update; if no answer, retain waiting_on_us and state that review remains open.",
+          "owner": "Owen Delgado",
+          "contactId": "CT-A005",
+          "companyId": "A005",
+          "dealId": null,
+          "createDate": "2026-09-01T13:00:00-07:00",
+          "completedDate": null
+        },
+        {
+          "id": "TASK-0901-NORTHFORK",
+          "title": "Check consent for original Northfork cap cancellation",
+          "type": "email",
+          "status": "not_started",
+          "priority": "high",
+          "dueDate": "2026-09-02T10:30:00-07:00",
+          "notes": "SVC-105 and TH-H260826; use draft-northfork-consent. Request Lucia's cancellation decision and processing state for accepted ORD-260818, 120 CB080 Khaki Adjustable at $5.25, $630. Preserve acceptance until authorized amendment. SVC-106 stays closed duplicate. Return findings to Imani; no answer means unresolved, not cancelled.",
+          "owner": "Owen Delgado",
+          "contactId": "CT-A006",
+          "companyId": "A006",
+          "dealId": null,
+          "createDate": "2026-09-01T13:00:00-07:00",
+          "completedDate": null
+        },
+        {
+          "id": "TASK-0901-SERVICE-REPLIES",
+          "title": "Prepare original-case customer updates after operations checkpoints",
+          "type": "to_do",
+          "status": "not_started",
+          "priority": "high",
+          "dueDate": "2026-09-02T12:00:00-07:00",
+          "notes": "Imani checks Owen's Mesa and Northfork findings and updates the original customer conversations and tickets. If operations has not answered, report the unresolved review and set the next desk checkpoint for September 3. Mesa: do not promise credit or return authorization. Northfork: 120 caps remain accepted; duplicate closure did not cancel them. Customer recipients must come from their existing original conversations.",
+          "owner": "Imani Brooks",
+          "contactId": null,
+          "companyId": null,
+          "dealId": null,
+          "createDate": "2026-09-01T13:00:00-07:00",
+          "completedDate": null
+        },
+        {
+          "id": "TASK-0901-HARBOR",
+          "title": "Follow up on Harbor counts, decoration and destinations",
+          "type": "email",
+          "status": "not_started",
+          "priority": "high",
+          "dueDate": "2026-09-02T14:00:00-07:00",
+          "notes": "Use draft-harbor-options-0901. Collect each product's color/size counts, minimum color quantities, decoration/provider, hotel client and program, own-store versus other public destination, budget, delivery address and garment-needed date. Carry returned facts to Owen and Priya. CB210 comparison proceeds; TF720 embellished option and NH600 client-program option stay conditional. Public NH600 branch belongs in Helen's written referral; do not seek compliance assurances.",
+          "owner": "Imani Brooks",
+          "contactId": "CT-A004",
+          "companyId": "A004",
+          "dealId": "OPP-HARBOR-FALL",
+          "createDate": "2026-09-01T13:00:00-07:00",
+          "completedDate": null
+        },
+        {
+          "id": "TASK-0901-HELEN",
+          "title": "Follow up on written NH600 public-retail question",
+          "type": "email",
+          "status": "not_started",
+          "priority": "high",
+          "dueDate": "2026-09-03T10:00:00-07:00",
+          "notes": "Use draft-helen-harbor-0901. Describe NH600, the proposed embroidered hospitality context and possible public online shop; list decoration and channel details still missing. Add Ben's factual answers when received. Ask Helen for a written determination or the additional facts she needs. This date is Imani's checkpoint, not Helen's promised answer. No public retail offer or image handoff while unresolved.",
+          "owner": "Imani Brooks",
+          "contactId": "CT-A004",
+          "companyId": "A004",
+          "dealId": "OPP-HARBOR-FALL",
+          "createDate": "2026-09-01T13:00:00-07:00",
+          "completedDate": null
+        },
+        {
+          "id": "TASK-0901-KESTREL",
+          "title": "Follow up on Kestrel certificate and tee breakdown",
+          "type": "email",
+          "status": "not_started",
+          "priority": "high",
+          "dueDate": "2026-09-02T14:30:00-07:00",
+          "notes": "Use draft-kestrel-signature. Request readable signed full certificate and matching legal details, Black/White confirmation, 240 estimate confirmation and actual counts by color/size, restaurant use, decoration/provider, selling destination, budget, delivery address and garment-needed date. Forward returned papers and explanations to Gareth. Keep CL-SVC-019 waiting_on_contact until evidence changes; no documentary acceptance or credit release inferred. $1,008 is illustrative only.",
+          "owner": "Imani Brooks",
+          "contactId": "CT-P001",
+          "companyId": "P001",
+          "dealId": "OPP-KESTREL-FIRST",
+          "createDate": "2026-09-01T13:00:00-07:00",
+          "completedDate": null
+        },
+        {
+          "id": "TASK-0901-JUNIPER",
+          "title": "Follow up on Juniper roster timing and fleece quantities",
+          "type": "email",
+          "status": "not_started",
+          "priority": "medium",
+          "dueDate": "2026-09-03T09:30:00-07:00",
+          "notes": "Use draft-juniper-fleece. Ask Navy/Ash choice or mix, approximate and final size/color counts including 2XL and required range, budget, decoration/provider, club sales route, delivery destination, decorator-needed date and roster completion timing. Do not infer quantity from $3,168. Text-only CB210 option remains useful while counts are pending.",
+          "owner": "Imani Brooks",
+          "contactId": "CT-A003",
+          "companyId": "A003",
+          "dealId": "OPP-JUNIPER-WINTER",
+          "createDate": "2026-09-01T13:00:00-07:00",
+          "completedDate": null
+        },
+        {
+          "id": "TASK-0901-ASSETS",
+          "title": "Check recipient destinations and unresolved fleece asset",
+          "type": "to_do",
+          "status": "not_started",
+          "priority": "medium",
+          "dueDate": "2026-09-03T11:00:00-07:00",
+          "notes": "Priya uses INDEX-ASSORTMENT-0901. Check returned Harbor/Kestrel facts with Imani September 2. At the existing September 3 Devon session, check current CB210 asset/version/use while preserving Spanish catalog work. Until identified, Harbor and Juniper fleece remain text-only. TF720 v2 catalog/portal only; NH600 v1 proposal/closed employee only. Verify CB100 v5 selected colors/crop/file size before handoff to Talia. No private source sharing or unverified delivery claim.",
+          "owner": "Priya Nair",
+          "contactId": null,
+          "companyId": null,
+          "dealId": null,
+          "createDate": "2026-09-01T13:00:00-07:00",
+          "completedDate": null
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "account-representative",
+    "app_id": "gmail_mock",
+    "action": "set_current",
+    "state_patch": {
+      "drafts": [
+        {
+          "id": "draft-harbor-options-0901",
+          "threadId": "thread-harbor-options-0901",
+          "from": {
+            "name": "Imani Brooks",
+            "email": "imani.brooks@cedarlineapparel.com",
+            "avatar": ""
+          },
+          "to": [
+            {
+              "name": "Ben Okafor",
+              "email": "ben@harborthreadstudio.com"
+            }
+          ],
+          "cc": [],
+          "bcc": [],
+          "subject": "Harbor hospitality layers — options and details for the next comparison",
+          "body": "<p>Hi Ben,</p><p>Here are three starting points for the hospitality-layer discussion: Cedar Basics Fleece Crew CB210 at $13.20 in S–XL or $15.20 in 2XL; Trailforge Soft Shell TF720, described as water-resistant, at $46 or $48 in 2XL; and Northhaven Packable Vest NH600, a light insulated vest for an embellished hotel employee-program proposal, at $39 or $41 in 2XL.</p><p>These July 1 reference prices are USD merchandise prices for at least 24 in each color. They are conditional planning figures; decoration, freight and tax still need to be worked out. Availability will need checking against the actual size/color counts before an order can be accepted.</p><p>Could you separate the hotel-team and public-shop portions and give the styles, colors, quantities by size, intended decoration and decorator for each? Please describe who will buy or receive each item, the hotel program, and the website or other selling destination you have in mind. Your garment budget, delivery address and date the decorator needs the garments will help us narrow the choices.</p><p>I can prepare the basic fleece comparison and the proposed embellished hotel-program options while those details come together. The Northhaven public-shop question needs a written review by Helen Cho and remains open; I do not have a determination to offer. I will check our outstanding questions on September 2, 2026.</p><p>Thanks,<br>Imani</p>",
+          "snippet": "Conditional hospitality-layer options and the details needed for each program.",
+          "timestamp": "2026-09-01T14:00:00-07:00",
+          "read": true,
+          "starred": false,
+          "important": false,
+          "labels": [
+            "lbl-customer-plans"
+          ],
+          "category": "primary",
+          "folder": "drafts",
+          "attachments": []
+        },
+        {
+          "id": "draft-juniper-fleece",
+          "threadId": "thread-juniper-fleece",
+          "from": {
+            "name": "Imani Brooks",
+            "email": "imani.brooks@cedarlineapparel.com",
+            "avatar": ""
+          },
+          "to": [
+            {
+              "name": "Jade Hsu",
+              "email": "jade@juniperteamwear.com"
+            }
+          ],
+          "cc": [],
+          "bcc": [],
+          "subject": "Winter club fleece counts and a starting price",
+          "body": "<p>Hi Jade,</p><p>Cedar Basics Fleece Crew CB210 is a starting point for your Navy and Ash comparison. The July 1 reference price is $13.20 each in S–XL and $15.20 in 2XL, in USD, for at least 24 in each color. These are conditional merchandise figures; decoration, freight and tax are separate and the final total needs your actual counts.</p><p>Are you considering Navy, Ash or a mix? Please send approximate quantities by color now if that is easier, then the final size/color breakdown including any 2XL or other required sizes. When do you expect the club rosters to settle?</p><p>Please also describe the intended club use and selling route, decoration and provider, target garment budget, delivery address and when the decorator needs the garments. We can keep the product comparison moving while final counts are pending. Availability will need checking against that breakdown before an order is accepted.</p><p>I will follow up on September 3, 2026.</p><p>Thanks,<br>Imani</p>",
+          "snippet": "Navy/Ash fleece comparison; final counts and roster timing remain open.",
+          "timestamp": "2026-09-01T14:00:00-07:00",
+          "read": true,
+          "starred": false,
+          "important": false,
+          "labels": [
+            "lbl-customer-plans"
+          ],
+          "category": "primary",
+          "folder": "drafts",
+          "attachments": []
+        },
+        {
+          "id": "draft-kestrel-signature",
+          "threadId": "thread-kestrel-signature",
+          "from": {
+            "name": "Imani Brooks",
+            "email": "imani.brooks@cedarlineapparel.com",
+            "avatar": ""
+          },
+          "to": [
+            {
+              "name": "Talia West",
+              "email": "talia@kestrelprintgarage.com"
+            }
+          ],
+          "cc": [],
+          "bcc": [],
+          "subject": "Kestrel certificate and restaurant tee options",
+          "body": "<p>Hi Talia,</p><p>We have your application and sales tax license; the resale certificate still needs its signature. Please return a readable copy of the full signed certificate and check that its legal business name matches the application. If you trade under a different name, please explain the relationship. I can then forward the papers and your answers to central credit for review. Central credit confirms document acceptance and any credit release.</p><p>For the restaurant job, Cedar Basics Cotton Tee CB100 is a 5.4 oz cotton tee. The July 1 reference price is $4.20 in S–XL and $6.20 in 2XL, in USD, for at least 24 per color. Your estimated 240 tees would be $1,008 only if all use S–XL and each color meets the minimum. At the same qualifying 240-unit total, each 2XL adds $2. Decoration, freight and tax are not included; this is a planning estimate, not a final quotation or accepted order.</p><p>Are Black and White still the two colors, and is 240 still the estimate? Please send the actual quantities by color and size, intended restaurant use, decoration method and provider, selling destination, budget, delivery address and date the decorator needs the garments. We can refine the comparison while your documents are being completed. Availability and account requirements need checking before order acceptance.</p><p>I will follow up on September 2, 2026.</p><p>Thanks,<br>Imani</p>",
+          "snippet": "Signed certificate and actual tee breakdown needed; $1,008 remains illustrative.",
+          "timestamp": "2026-09-01T14:00:00-07:00",
+          "read": true,
+          "starred": false,
+          "important": false,
+          "labels": [
+            "lbl-applications",
+            "lbl-credit-documents",
+            "lbl-customer-plans"
+          ],
+          "category": "primary",
+          "folder": "drafts",
+          "attachments": []
+        },
+        {
+          "id": "draft-helen-harbor-0901",
+          "threadId": "thread-helen-harbor-0901",
+          "from": {
+            "name": "Imani Brooks",
+            "email": "imani.brooks@cedarlineapparel.com",
+            "avatar": ""
+          },
+          "to": [
+            {
+              "name": "Helen Cho",
+              "email": "helen.cho@cedarlineapparel.com"
+            }
+          ],
+          "cc": [],
+          "bcc": [],
+          "subject": "Written channel question — Harbor NH600 public online retail branch",
+          "body": "<p>Helen,</p><p>Harbor Thread Studio, Ben Okafor, is exploring hotel-team layers and a possible public online shop under OPP-HARBOR-FALL. The exact product at issue is Northhaven Packable Vest NH600. The surrounding request is for embroidered hospitality apparel, but the vest's exact decoration, provider and public destination have not yet been specified. We have asked Ben to identify these facts separately for each product and to distinguish his own store from any marketplace or other destination.</p><p>Our internal comparison retains NH600 only as a conditional embellished client-specific hotel employee-program option. Proposed copy for that branch is: 'Northhaven Packable Vest — a light insulated vest for embellished customer programs.' The candidate imagery is ASSET-NH600-1, presentation version 1: https://resources.cedarlineapparel.com/products/NH600/presentation-v1.zip, licensed for client proposals and closed employee programs. No public retail copy or image use is being offered.</p><p>Please provide the written determination for the proposed public retail branch once the facts are sufficient, or identify the additional facts you need. I will supplement this question with Ben's factual answers and check its status on September 3, 2026. That is my follow-up checkpoint, not a promised response date from you. No exception or approval has been represented to the customer.</p><p>Imani</p>",
+          "snippet": "NH600 public retail branch unresolved; exact decoration and destination still needed.",
+          "timestamp": "2026-09-01T14:00:00-07:00",
+          "read": true,
+          "starred": false,
+          "important": true,
+          "labels": [
+            "lbl-policy",
+            "lbl-customer-plans"
+          ],
+          "category": "primary",
+          "folder": "drafts",
+          "attachments": []
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "order-coordinator",
+    "app_id": "gmail_mock",
+    "action": "set_current",
+    "state_patch": {
+      "drafts": [
+        {
+          "id": "draft-mesa-review",
+          "threadId": "thread-mesa-review",
+          "from": {
+            "name": "Owen Delgado",
+            "email": "owen.delgado@cedarlineapparel.com",
+            "avatar": ""
+          },
+          "to": [
+            {
+              "name": "Lucia Moreno",
+              "email": "lucia.moreno@cedarlineapparel.com"
+            }
+          ],
+          "cc": [],
+          "bcc": [],
+          "subject": "Mesa label review — six Navy XL CB210, ORD-260811",
+          "body": "<p>Lucia,</p><p>Please review the garment pictures and the carton photo received and forwarded on August 28 for Mesa's SVC-104. Accepted and shipped ORD-260811 contains 48 CB210 Navy XL at $13.20, invoice INV-260811 for $633.60. Rosa disputes six of those units, a $79.20 claim, and is holding invoice payment.</p><p>Does the existing photo set give you enough detail to assess the labels? Please send the disposition or identify exactly what additional evidence is needed. RET-704 remains a return request: we have no evidenced authorization, receipt or posted credit, and the posted amount remains $0. We will keep those stages separate in the customer update.</p><p>I will check the status on September 2, 2026 and give Imani the findings for the original customer conversation. If a decision is still pending, please identify the next review step; we have not promised a credit or a decision date.</p><p>Owen</p>",
+          "snippet": "Request disposition or precise missing evidence; $79.20 is a claim, not posted credit.",
+          "timestamp": "2026-09-01T14:30:00-07:00",
+          "read": true,
+          "starred": false,
+          "important": true,
+          "labels": [
+            "lbl-order-services",
+            "lbl-returns-credits"
+          ],
+          "category": "primary",
+          "folder": "drafts",
+          "attachments": []
+        },
+        {
+          "id": "draft-northfork-consent",
+          "threadId": "thread-northfork-consent",
+          "from": {
+            "name": "Owen Delgado",
+            "email": "owen.delgado@cedarlineapparel.com",
+            "avatar": ""
+          },
+          "to": [
+            {
+              "name": "Lucia Moreno",
+              "email": "lucia.moreno@cedarlineapparel.com"
+            }
+          ],
+          "cc": [],
+          "bcc": [],
+          "subject": "Northfork consent check — 120 Khaki CB080, ORD-260818",
+          "body": "<p>Hi Lucia,</p><p>Please provide the cancellation-consent decision and current processing state for Tom's original request in SVC-105. ORD-260818 was accepted August 18 for 120 Cedar Basics Twill Caps CB080, Khaki, Adjustable, at $5.25 each, $630 merchandise. The requested action is cancellation of that cap line after his tourism customer reduced its event order.</p><p>The recorded order remains accepted and awaiting allocation. We have no consent or authorized amendment, so the accepted quantity and value remain in place. The August 31 location availability observations are not reservations or evidence of cancellation.</p><p>Imani linked and closed SVC-106 only as the duplicate contact form. Please return the decision against SVC-105 and the original request. I will check the status on September 2, 2026 and pass your response to Imani for that customer conversation. We have not told Tom that the cancellation is complete.</p><p>Thanks,<br>Owen</p>",
+          "snippet": "Original cancellation remains unresolved; accepted 120-cap line is preserved.",
+          "timestamp": "2026-09-01T14:30:00-07:00",
+          "read": true,
+          "starred": false,
+          "important": true,
+          "labels": [
+            "lbl-order-services"
+          ],
+          "category": "primary",
+          "folder": "drafts",
+          "attachments": []
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "order-coordinator",
+    "app_id": "slack_mock",
+    "action": "set_current",
+    "state_patch": {
+      "threads": {
+        "TH-H260826": {
+          "threadId": "TH-H260826",
+          "parentMessageId": "H260826",
+          "channelId": "CH-SERVICE",
+          "dmId": null,
+          "replies": [
+            "MSG-H260826-R1",
+            "MSG-H260826-R2",
+            "MSG-H260826-R3",
+            "MSG-H260826-0901-OWEN"
+          ],
+          "followers": [
+            "person-owen",
+            "person-imani"
+          ]
+        }
+      },
+      "messages": {
+        "CH-SERVICE": {
+          "$append": [
+            {
+              "messageId": "MSG-H260826-0901-OWEN",
+              "senderId": "person-owen",
+              "content": "September 1 review: keep the original SVC-105 open. ORD-260818 was accepted August 18 for 120 CB080 Khaki Adjustable at $5.25, $630, and remains awaiting allocation. Tom requested cancellation of that line; no central-operations consent or authorized amendment is evidenced. SVC-106 remains closed solely as the duplicate form, so this is one cancellation obligation. I prepared draft-northfork-consent asking Lucia for the consent decision and current processing state; the draft is not a sent request or a received answer. My next checkpoint is September 2 at 10:30 Pacific under TASK-0901-NORTHFORK. Imani has recorded these findings in SVC-105 and will handle the original customer conversation after the check. If no answer arrives, retain the unresolved status and accepted quantity/value. The August 31 Auburn/Reno counts are observations, not allocation or consent. See DOC-SERVICE-0901 and DOC-DESK-PLAN-0901.",
+              "timestamp": "2026-09-01T15:00:00-07:00",
+              "threadId": "TH-H260826",
+              "reactions": [],
+              "attachments": [],
+              "isEdited": false
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "worker_id": "sales-supervisor",
+    "app_id": "google_docs_mock",
+    "action": "set_current",
+    "state_patch": {
+      "comments": [
+        {
+          "id": "CMT-DESK-0901-FINAL",
+          "docId": "DOC-DESK-PLAN-0901",
+          "userId": "person-mara",
+          "content": "September 1 package review complete. The three opportunity descriptions and customer drafts agree with the conditional options and PRICE-2026B minimum/color and 2XL conditions. The index retains TF720 water-resistant wording and limits NH600 imagery to client proposals/closed employee programs; fleece remains text-only. Mesa and original Northfork tickets remain waiting_on_us with Owen's precise instructions and September 2 checkpoints; the closed duplicate stays closed. The Northfork thread records the same accepted 120-cap/$630 constraint. Kestrel's signed certificate and central credit review remain outstanding. Helen's referral is a draft and makes no response promise. Follow-up tasks cover customer details, policy review, service updates and asset questions. Accept the 5/4/3-hour additional allocation while preserving protected work and existing calendar commitments. Customer and specialist drafts are prepared, not sent; no external decisions or processing are claimed. Imani should use the dated checkpoints and record actual replies when they arrive.",
+          "resolved": false,
+          "created": "2026-09-01T16:00:00-07:00",
+          "quotedText": "Deliver the options, index, drafts and matching records by September 1, 2026.",
+          "replies": []
+        }
+      ]
+    }
+  }
+]

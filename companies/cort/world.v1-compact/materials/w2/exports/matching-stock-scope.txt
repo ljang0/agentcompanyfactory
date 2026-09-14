@@ -1,0 +1,14 @@
+SCOPE-0908
+External inventory census timestamp: 2026-09-08 08:00 America/New_York.
+Scope: sofa and Queen-Q requirements for the coming September 8–28 interval.
+
+Complete uncommitted warehouse-held rental-ready alternatives: S2, B2.
+S2: SOFA-215, width 215 cm, volume 3.5 m3; WH1-A03; RC-S2-0904 release September 4 16:00.
+B2: QUEEN-Q, assembled 210x165x110 cm, volume 2 m3; WH1-B04; RC-B2-0907 release September 7 16:00.
+S3: SOFA-190, WH1-A05, ready but R320-S3 protects F320 September 9–December 31.
+B3: QUEEN-Q, WH1-B05, ready but R321-B3 protects F321 September 10–December 31.
+S4: H322 custody under L322 through October 31.
+B4: WH1-HOLD, cracked rail, INSP-B4-0904, hold through September 30.
+Every other matching piece outside this named extract is customer-held, reserved or condition-held throughout September 8–28. No interdistrict borrowing rights exist.
+
+S1/B1/D1 are physically in H310 custody. Tentative expected-return source fields on F311/F312 are not asset reservations. This certificate describes the source population and does not authorize allocation changes.

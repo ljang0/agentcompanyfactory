@@ -1,0 +1,55 @@
+{
+ "app_id": "canva_mock",
+ "source": "posted_to_server",
+ "documented": [
+  "canvasConfig",
+  "elements",
+  "lastShareLink",
+  "timestamp",
+  "uploads"
+ ],
+ "observed": [
+  "canvasConfig",
+  "elements",
+  "lastShareLink",
+  "timestamp",
+  "uploads"
+ ],
+ "undocumented_so_unseedable": [],
+ "documented_but_app_keeps_none": [],
+ "agrees": true,
+ "shapes": {
+  "canvasConfig": {
+   "kind": "object",
+   "count": 3,
+   "record_fields": null,
+   "keyed_by_id": false
+  },
+  "elements": {
+   "kind": "array",
+   "count": 0,
+   "record_fields": null,
+   "keyed_by_id": false
+  },
+  "uploads": {
+   "kind": "array",
+   "count": 0,
+   "record_fields": null,
+   "keyed_by_id": false
+  },
+  "lastShareLink": {
+   "kind": "string",
+   "count": null,
+   "record_fields": null,
+   "keyed_by_id": ""
+  },
+  "timestamp": {
+   "kind": "string",
+   "count": null,
+   "record_fields": null,
+   "keyed_by_id": false
+  }
+ },
+ "captured_at": "2026-09-10",
+ "note": "Observed 2026-09-10 while porting this app into the catalogue. Filed in the 2026-09-09 batch directory rather than a new dated one so it is read whether tests/test_app_schema_contract.py pins that single directory or globs every drift-* run; captured_at is the real date. Move it to experiments/interact/drift-20260910/ once the glob is the only reader."
+}

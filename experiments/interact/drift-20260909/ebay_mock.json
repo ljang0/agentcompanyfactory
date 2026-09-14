@@ -1,0 +1,112 @@
+{
+  "app_id": "ebay_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "currentUser",
+    "feedbacks",
+    "listings",
+    "messages",
+    "notifications",
+    "orders",
+    "users"
+  ],
+  "observed": [
+    "cart",
+    "currentUser",
+    "feedbacks",
+    "listings",
+    "messages",
+    "notifications",
+    "orders",
+    "users"
+  ],
+  "undocumented_so_unseedable": [
+    "cart"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "username",
+        "email",
+        "avatar",
+        "feedbackScore",
+        "feedbackRating"
+      ],
+      "keyed_by_id": false
+    },
+    "listings": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "sellerId",
+        "title",
+        "description",
+        "images",
+        "type",
+        "startingBid",
+        "currentBid",
+        "buyItNowPrice",
+        "bids",
+        "watchers",
+        "views",
+        "endTime",
+        "condition",
+        "shipping",
+        "category",
+        "status"
+      ],
+      "keyed_by_id": false
+    },
+    "orders": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "messages": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "fromId",
+        "toId",
+        "listingId",
+        "subject",
+        "content",
+        "read",
+        "timestamp"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "feedbacks": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "cart": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

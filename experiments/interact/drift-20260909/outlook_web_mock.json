@@ -1,0 +1,161 @@
+{
+  "app_id": "outlook_web_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "calendarDate",
+    "calendarView",
+    "calendars",
+    "categories",
+    "composeState",
+    "contacts",
+    "events",
+    "folderPaneCollapsed",
+    "folders",
+    "messages",
+    "searchQuery",
+    "selectedFolderId",
+    "selectedMessageId",
+    "selectedModule",
+    "settings",
+    "settingsOpen",
+    "settingsSection",
+    "tasks",
+    "user"
+  ],
+  "observed": [
+    "categories",
+    "contacts",
+    "emails",
+    "events",
+    "folders",
+    "quickSteps",
+    "rules",
+    "tasks",
+    "user"
+  ],
+  "undocumented_so_unseedable": [
+    "emails",
+    "quickSteps",
+    "rules"
+  ],
+  "documented_but_app_keeps_none": [
+    "calendarDate",
+    "calendarView",
+    "calendars",
+    "composeState",
+    "folderPaneCollapsed",
+    "messages",
+    "searchQuery",
+    "selectedFolderId",
+    "selectedMessageId",
+    "selectedModule",
+    "settings",
+    "settingsOpen",
+    "settingsSection"
+  ],
+  "agrees": false,
+  "shapes": {
+    "user": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "folders": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "icon",
+        "type"
+      ],
+      "keyed_by_id": false
+    },
+    "emails": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "folderId",
+        "from",
+        "to",
+        "subject",
+        "body",
+        "preview",
+        "timestamp",
+        "read",
+        "flagged",
+        "categories",
+        "attachments",
+        "isFocused"
+      ],
+      "keyed_by_id": false
+    },
+    "contacts": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "email",
+        "phone",
+        "avatar"
+      ],
+      "keyed_by_id": false
+    },
+    "tasks": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "title",
+        "dueDate",
+        "completed"
+      ],
+      "keyed_by_id": false
+    },
+    "events": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "title",
+        "start",
+        "end",
+        "attendees"
+      ],
+      "keyed_by_id": false
+    },
+    "categories": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "color"
+      ],
+      "keyed_by_id": false
+    },
+    "rules": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "name",
+        "enabled"
+      ],
+      "keyed_by_id": false
+    },
+    "quickSteps": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "actions"
+      ],
+      "keyed_by_id": false
+    }
+  }
+}

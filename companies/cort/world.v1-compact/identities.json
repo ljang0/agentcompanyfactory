@@ -1,0 +1,140 @@
+{
+  "w1": {
+    "Zendesk_mock": {
+      "id": 1,
+      "name": "Maya Chen",
+      "email": "maya.chen@hearthway.example",
+      "role": "agent",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": 1,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "Maya Chen | Residential Rental Consultant",
+      "notes": "w1; t1. Standard tariff quotations and accepted lease administration; no readiness overrides or unlisted concessions.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2021-09-08T12:00:00Z",
+      "updated_at": "2026-09-08T12:00:00Z",
+      "last_login_at": "2026-09-08T12:00:00Z",
+      "initials": "MC"
+    }
+  },
+  "w2": {
+    "Zendesk_mock": {
+      "id": 2,
+      "name": "Eli Brooks",
+      "email": "eli.brooks@hearthway.example",
+      "role": "agent",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": 1,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "Eli Brooks | Inventory Controller",
+      "notes": "w2; t1 and t2. Primary group 1; shared Asset Reuse and Outlet Operations responsibilities. Supported inventory corrections and eligible reservations; no invented receipts, repair releases or retirement approvals.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2021-09-08T12:00:00Z",
+      "updated_at": "2026-09-08T12:00:00Z",
+      "last_login_at": "2026-09-08T12:00:00Z",
+      "initials": "EB"
+    }
+  },
+  "w3": {
+    "Zendesk_mock": {
+      "id": 3,
+      "name": "Nora Patel",
+      "email": "nora.patel@hearthway.example",
+      "role": "agent",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": 1,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "Nora Patel | Delivery and Pickup Dispatcher",
+      "notes": "w3; t1. Assign available crews within calendar and capacity limits. Appointment changes need recorded customer acceptance; no overtime under RV-1.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2021-09-08T12:00:00Z",
+      "updated_at": "2026-09-08T12:00:00Z",
+      "last_login_at": "2026-09-08T12:00:00Z",
+      "initials": "NP"
+    }
+  },
+  "w4": {
+    "Zendesk_mock": {
+      "id": 4,
+      "name": "Luis Romero",
+      "email": "luis.romero@hearthway.example",
+      "role": "agent",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": 2,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "Luis Romero | Refurbishment Supervisor",
+      "notes": "w4; t2. Sequence approved repair work and validate condition evidence. No structural-hold waiver or retirement-economic approval.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2021-09-08T12:00:00Z",
+      "updated_at": "2026-09-08T12:00:00Z",
+      "last_login_at": "2026-09-08T12:00:00Z",
+      "initials": "LR"
+    }
+  },
+  "w5": {
+    "Zendesk_mock": {
+      "id": 5,
+      "name": "Dana Whitfield",
+      "email": "dana.whitfield@hearthway.example",
+      "role": "agent",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": 2,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "Dana Whitfield | District Asset Manager",
+      "notes": "w5; t2. Approve district repair spending, allocation priorities and retirement within documented limits; capital commitments require regional approval.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2021-09-08T12:00:00Z",
+      "updated_at": "2026-09-08T12:00:00Z",
+      "last_login_at": "2026-09-08T12:00:00Z",
+      "initials": "DW"
+    }
+  },
+  "w6": {
+    "Zendesk_mock": {
+      "id": 6,
+      "name": "Simone Price",
+      "email": "simone.price@hearthway.example",
+      "role": "agent",
+      "phone": null,
+      "photo": null,
+      "organization_id": null,
+      "group_id": 2,
+      "time_zone": "America/New_York",
+      "locale": "en-US",
+      "signature": "Simone Price | Outlet Manager",
+      "notes": "w6; t2. Accept authorized eligible transfers and price within district floors. No sale of rental-reserved assets or clearance of condition holds.",
+      "suspended": false,
+      "verified": true,
+      "active": true,
+      "created_at": "2021-09-08T12:00:00Z",
+      "updated_at": "2026-09-08T12:00:00Z",
+      "last_login_at": "2026-09-08T12:00:00Z",
+      "initials": "SP"
+    }
+  }
+}

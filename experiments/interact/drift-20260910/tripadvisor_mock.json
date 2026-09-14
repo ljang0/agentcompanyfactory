@@ -1,0 +1,251 @@
+{
+  "app_id": "tripadvisor_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activeCategory",
+    "attractions",
+    "currentUser",
+    "destinations",
+    "filters",
+    "forumThreads",
+    "hotels",
+    "restaurants",
+    "reviews",
+    "savedEntities",
+    "searchHistory",
+    "sort",
+    "trips",
+    "users",
+    "votedHelpful"
+  ],
+  "observed": [
+    "activeCategory",
+    "attractions",
+    "currentUser",
+    "destinations",
+    "filters",
+    "forumThreads",
+    "hotels",
+    "restaurants",
+    "reviews",
+    "savedEntities",
+    "searchHistory",
+    "sort",
+    "trips",
+    "users",
+    "votedHelpful"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 21,
+      "record_fields": [
+        "id",
+        "name",
+        "location",
+        "avatar",
+        "reviewCount",
+        "helpfulVotes",
+        "photoCount",
+        "level",
+        "memberSince",
+        "bio"
+      ],
+      "keyed_by_id": false
+    },
+    "destinations": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "country",
+        "description",
+        "hotelCount",
+        "restaurantCount",
+        "attractionCount",
+        "image"
+      ],
+      "keyed_by_id": false
+    },
+    "hotels": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "name",
+        "destinationId",
+        "address",
+        "rating",
+        "reviewCount",
+        "starClass",
+        "pricePerNight",
+        "travelersChoice",
+        "rank",
+        "totalHotelsInCity",
+        "description",
+        "amenities",
+        "images",
+        "partnerPrices",
+        "subRatings",
+        "propertyType",
+        "neighborhood"
+      ],
+      "keyed_by_id": false
+    },
+    "restaurants": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "name",
+        "destinationId",
+        "address",
+        "rating",
+        "reviewCount",
+        "priceLevel",
+        "cuisines",
+        "meals",
+        "dietaryOptions",
+        "features",
+        "hours",
+        "phone",
+        "description",
+        "images",
+        "subRatings",
+        "travelersChoice",
+        "rank",
+        "totalRestaurantsInCity"
+      ],
+      "keyed_by_id": false
+    },
+    "attractions": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "name",
+        "destinationId",
+        "address",
+        "rating",
+        "reviewCount",
+        "category",
+        "price",
+        "duration",
+        "description",
+        "images",
+        "hours",
+        "bestTimeToVisit",
+        "bookingOptions",
+        "whatsIncluded",
+        "travelersChoice",
+        "rank",
+        "totalAttractionsInCity"
+      ],
+      "keyed_by_id": false
+    },
+    "reviews": {
+      "kind": "array",
+      "count": 187,
+      "record_fields": [
+        "id",
+        "entityId",
+        "entityType",
+        "entityName",
+        "userId",
+        "userName",
+        "userLocation",
+        "rating",
+        "title",
+        "text",
+        "tripType",
+        "travelDate",
+        "createdAt",
+        "helpfulVotes",
+        "photos",
+        "managementResponse"
+      ],
+      "keyed_by_id": false
+    },
+    "trips": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "userId",
+        "createdAt",
+        "items"
+      ],
+      "keyed_by_id": false
+    },
+    "forumThreads": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "destinationId",
+        "title",
+        "authorId",
+        "createdAt",
+        "views",
+        "replies"
+      ],
+      "keyed_by_id": false
+    },
+    "searchHistory": {
+      "kind": "object",
+      "count": 1,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "filters": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": [
+        "amenities",
+        "priceMin",
+        "priceMax",
+        "starClass",
+        "rating",
+        "propertyType",
+        "destination"
+      ],
+      "keyed_by_id": true
+    },
+    "sort": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "activeCategory": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "votedHelpful": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "savedEntities": {
+      "kind": "object",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

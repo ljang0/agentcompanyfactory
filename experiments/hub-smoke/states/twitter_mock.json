@@ -1,0 +1,34 @@
+{
+  "users": [
+    {"id": "u1", "name": "Oriel Vasquez-Thorne", "handle": "orielvt", "bio": "Communications lead, Millbrook Township Library", "avatar": "https://ui-avatars.com/api/?name=Oriel+Vasquez&background=1D9BF0&color=fff", "banner": "https://picsum.photos/seed/millbrook/1200/400", "location": "Millbrook, NY", "website": "https://millbrook-library.example", "joinedDate": "2019-05-01T00:00:00Z", "verified": false, "followers": ["u2", "u3"], "following": ["u2", "u3"], "pinnedPostId": "p1"},
+    {"id": "u2", "name": "Millbrook Township Library", "handle": "millbrooklib", "bio": "Books, programs, and a very good reading room.", "avatar": "https://ui-avatars.com/api/?name=ML&background=00BA7C&color=fff", "banner": "", "location": "Millbrook, NY", "website": "https://millbrook-library.example", "joinedDate": "2015-02-10T00:00:00Z", "verified": true, "followers": ["u1", "u3"], "following": ["u1"], "pinnedPostId": null},
+    {"id": "u3", "name": "Priya Sundaram", "handle": "priyareads", "bio": "Children's librarian", "avatar": "https://ui-avatars.com/api/?name=Priya+Sundaram&background=7856FF&color=fff", "banner": "", "location": "Millbrook, NY", "website": "", "joinedDate": "2021-09-14T00:00:00Z", "verified": false, "followers": ["u1"], "following": ["u1", "u2"], "pinnedPostId": null}
+  ],
+  "tweets": [
+    {"id": "p1", "userId": "u1", "content": "The Millbrook Library seed swap is back on Saturday Sept 13. Bring envelopes, take home tomatoes.", "images": [], "createdAt": "2026-09-05T14:00:00Z", "likes": ["u2", "u3"], "reposts": ["u2"], "retweets": ["u2"], "replies": ["r1"], "bookmarks": [], "quotedPostId": null, "inReplyToPostId": null, "inReplyToUserId": null, "views": 1840},
+    {"id": "p2", "userId": "u3", "content": "Story hour moves to the garden room this week while the carpet dries.", "images": [], "createdAt": "2026-09-06T09:30:00Z", "likes": ["u1"], "reposts": [], "retweets": [], "replies": [], "bookmarks": ["u1"], "quotedPostId": null, "inReplyToPostId": null, "inReplyToUserId": null, "views": 420}
+  ],
+  "replies": [
+    {"id": "r1", "tweetId": "p1", "postId": "p1", "userId": "u3", "content": "Saving my heirloom bean seeds for this!", "createdAt": "2026-09-05T15:10:00Z", "likes": ["u1"]}
+  ],
+  "notifications": [
+    {"id": "n1", "type": "reply", "userId": "u3", "postId": "p1", "tweetId": "p1", "content": "replied to your post", "createdAt": "2026-09-05T15:10:00Z", "read": false},
+    {"id": "n2", "type": "repost", "userId": "u2", "postId": "p1", "tweetId": "p1", "content": "reposted your post", "createdAt": "2026-09-05T16:00:00Z", "read": true}
+  ],
+  "conversations": [
+    {"id": "conv1", "participants": ["u1", "u3"], "lastMessageId": "dm2", "lastMessageAt": "2026-09-06T10:00:00Z", "isPinned": false, "unreadCount": 1}
+  ],
+  "directMessages": [
+    {"id": "dm1", "conversationId": "conv1", "senderId": "u1", "content": "Can you post the garden room photos?", "createdAt": "2026-09-06T09:45:00Z", "read": true},
+    {"id": "dm2", "conversationId": "conv1", "senderId": "u3", "content": "Uploading them now.", "createdAt": "2026-09-06T10:00:00Z", "read": false}
+  ],
+  "lists": [
+    {"id": "list1", "name": "Library staff", "description": "Millbrook Township Library team", "ownerId": "u1", "memberIds": ["u2", "u3"], "followerIds": [], "isPrivate": true, "createdAt": "2024-01-10T00:00:00Z", "bannerUrl": ""}
+  ],
+  "trends": [
+    {"id": "t1", "category": "Local", "name": "#MillbrookSeedSwap", "postCount": "312"},
+    {"id": "t2", "category": "Books", "name": "#BannedBooksWeek", "postCount": "48.2K"}
+  ],
+  "bookmarkedPostIds": ["p2"],
+  "currentUser": {"id": "u1", "name": "Oriel Vasquez-Thorne", "handle": "orielvt", "bio": "Communications lead, Millbrook Township Library", "avatar": "https://ui-avatars.com/api/?name=Oriel+Vasquez&background=1D9BF0&color=fff", "banner": "https://picsum.photos/seed/millbrook/1200/400", "location": "Millbrook, NY", "website": "https://millbrook-library.example", "joinedDate": "2019-05-01T00:00:00Z", "verified": false, "followers": ["u2", "u3"], "following": ["u2", "u3"], "pinnedPostId": "p1"}
+}

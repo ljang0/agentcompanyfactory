@@ -1,0 +1,261 @@
+{
+  "app_id": "sentry_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "alertRules",
+    "bookmarkedIssues",
+    "currentUser",
+    "dashboards",
+    "dateRange",
+    "events",
+    "issueListSort",
+    "issueListTab",
+    "issueSearchQuery",
+    "issues",
+    "organization",
+    "projects",
+    "releases",
+    "selectedEnvironment",
+    "selectedIssues",
+    "selectedProject",
+    "teams",
+    "transactions",
+    "users"
+  ],
+  "observed": [
+    "alertRules",
+    "bookmarkedIssues",
+    "currentUser",
+    "dashboards",
+    "dateRange",
+    "events",
+    "issueListSort",
+    "issueListTab",
+    "issueSearchQuery",
+    "issues",
+    "organization",
+    "projects",
+    "releases",
+    "selectedEnvironment",
+    "selectedIssues",
+    "selectedProject",
+    "teams",
+    "transactions",
+    "users"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "organization": {
+      "kind": "object",
+      "count": 8,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "currentUser": {
+      "kind": "object",
+      "count": 7,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "email",
+        "avatar",
+        "role",
+        "teams",
+        "dateJoined"
+      ],
+      "keyed_by_id": false
+    },
+    "teams": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "slug",
+        "avatar",
+        "memberCount",
+        "members",
+        "projects"
+      ],
+      "keyed_by_id": false
+    },
+    "projects": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "slug",
+        "platform",
+        "color",
+        "teams",
+        "dateCreated",
+        "stats",
+        "latestRelease",
+        "environments"
+      ],
+      "keyed_by_id": false
+    },
+    "issues": {
+      "kind": "array",
+      "count": 13,
+      "record_fields": [
+        "id",
+        "shortId",
+        "title",
+        "subtitle",
+        "culprit",
+        "type",
+        "level",
+        "status",
+        "priority",
+        "isUnhandled",
+        "project",
+        "assignee",
+        "firstSeen",
+        "lastSeen",
+        "count",
+        "userCount",
+        "stats14d",
+        "trend",
+        "events",
+        "tags",
+        "metadata"
+      ],
+      "keyed_by_id": false
+    },
+    "events": {
+      "kind": "object",
+      "count": 13,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "alertRules": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "status",
+        "threshold",
+        "thresholdType",
+        "triggerLabel",
+        "dateTriggered",
+        "dateCreated",
+        "project",
+        "team",
+        "history"
+      ],
+      "keyed_by_id": false
+    },
+    "releases": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "version",
+        "shortVersion",
+        "dateCreated",
+        "dateReleased",
+        "projects",
+        "newIssues",
+        "crashFreeSessions",
+        "crashFreeUsers",
+        "adoption",
+        "totalSessions",
+        "commitCount",
+        "authors",
+        "lastEvent"
+      ],
+      "keyed_by_id": false
+    },
+    "dashboards": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "title",
+        "dateCreated",
+        "createdBy",
+        "widgets"
+      ],
+      "keyed_by_id": false
+    },
+    "transactions": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "name",
+        "project",
+        "tpm",
+        "p50",
+        "p75",
+        "p95",
+        "p99",
+        "failureRate",
+        "apdex",
+        "totalCount",
+        "stats24h"
+      ],
+      "keyed_by_id": false
+    },
+    "selectedProject": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "selectedEnvironment": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "dateRange": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "issueListSort": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "issueListTab": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "issueSearchQuery": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "selectedIssues": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "bookmarkedIssues": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

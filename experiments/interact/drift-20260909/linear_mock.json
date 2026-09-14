@@ -1,0 +1,256 @@
+{
+  "app_id": "linear_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "comments",
+    "currentUserId",
+    "cycles",
+    "favorites",
+    "issueCounters",
+    "issueRelations",
+    "issues",
+    "labels",
+    "notifications",
+    "projects",
+    "sidebarCollapsed",
+    "teamSectionsExpanded",
+    "teams",
+    "users",
+    "views",
+    "workspace"
+  ],
+  "observed": [
+    "comments",
+    "currentUserId",
+    "cycles",
+    "favorites",
+    "issueCounters",
+    "issueRelations",
+    "issues",
+    "labels",
+    "notifications",
+    "projects",
+    "sidebarCollapsed",
+    "teamSectionsExpanded",
+    "teams",
+    "users",
+    "views",
+    "workspace"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUserId": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "workspace": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "name",
+        "email",
+        "avatarUrl",
+        "displayName",
+        "role",
+        "active"
+      ],
+      "keyed_by_id": false
+    },
+    "teams": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "key",
+        "icon",
+        "color",
+        "memberIds",
+        "workflowStates",
+        "triageEnabled",
+        "cycleEnabled",
+        "cycleDuration",
+        "activeCycleId"
+      ],
+      "keyed_by_id": false
+    },
+    "issues": {
+      "kind": "array",
+      "count": 32,
+      "record_fields": [
+        "id",
+        "identifier",
+        "number",
+        "title",
+        "description",
+        "stateId",
+        "priority",
+        "estimate",
+        "assigneeId",
+        "creatorId",
+        "teamId",
+        "projectId",
+        "cycleId",
+        "labelIds",
+        "parentId",
+        "dueDate",
+        "subscriberIds",
+        "relationIds",
+        "createdAt",
+        "updatedAt",
+        "completedAt",
+        "sortOrder"
+      ],
+      "keyed_by_id": false
+    },
+    "labels": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "color",
+        "teamId"
+      ],
+      "keyed_by_id": false
+    },
+    "projects": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "icon",
+        "color",
+        "status",
+        "health",
+        "leadId",
+        "memberIds",
+        "teamIds",
+        "targetDate",
+        "startDate",
+        "progress",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "cycles": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "number",
+        "name",
+        "teamId",
+        "startsAt",
+        "endsAt",
+        "isActive",
+        "isCompleted",
+        "progress"
+      ],
+      "keyed_by_id": false
+    },
+    "comments": {
+      "kind": "array",
+      "count": 17,
+      "record_fields": [
+        "id",
+        "body",
+        "issueId",
+        "userId",
+        "createdAt",
+        "updatedAt",
+        "parentId"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "type",
+        "actorId",
+        "issueId",
+        "projectId",
+        "title",
+        "body",
+        "isRead",
+        "isSnoozed",
+        "isArchived",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "views": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "icon",
+        "filters",
+        "groupBy",
+        "sortBy",
+        "layout",
+        "teamId",
+        "creatorId"
+      ],
+      "keyed_by_id": false
+    },
+    "favorites": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "type",
+        "targetId",
+        "userId",
+        "sortOrder"
+      ],
+      "keyed_by_id": false
+    },
+    "issueRelations": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "issueId",
+        "relatedIssueId",
+        "type"
+      ],
+      "keyed_by_id": false
+    },
+    "issueCounters": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "sidebarCollapsed": {
+      "kind": "boolean",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "teamSectionsExpanded": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

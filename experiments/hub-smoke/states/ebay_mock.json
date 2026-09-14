@@ -1,0 +1,28 @@
+{
+  "currentUser": {"id": "user_1", "username": "bramblewood_pottery", "email": "shop@bramblewoodpottery.example", "avatar": "https://picsum.photos/100/100?random=user1", "feedbackScore": 312, "feedbackRating": 99.4},
+  "users": [
+    {"id": "user_1", "username": "bramblewood_pottery", "email": "shop@bramblewoodpottery.example", "avatar": "https://picsum.photos/100/100?random=user1", "feedbackScore": 312, "feedbackRating": 99.4},
+    {"id": "user_2", "username": "teatime_collector", "email": "teatime@buyer.example", "avatar": "https://picsum.photos/100/100?random=user2", "feedbackScore": 67, "feedbackRating": 100},
+    {"id": "user_3", "username": "kiln_and_wheel", "email": "kiln@buyer.example", "avatar": "https://picsum.photos/100/100?random=user3", "feedbackScore": 145, "feedbackRating": 98.9}
+  ],
+  "listings": [
+    {"id": "item_1", "sellerId": "user_1", "title": "Bramblewood Pottery Hand-Thrown Stoneware Teapot, Ash Glaze", "description": "Wheel-thrown stoneware teapot with a wood-ash glaze, 32 oz. Fired in our Vermont studio.", "images": ["https://picsum.photos/400/400?random=item1"], "type": "auction", "startingBid": 45.00, "currentBid": 62.00, "price": null, "buyItNowPrice": 140.00, "bids": [
+      {"id": "bid_2", "userId": "user_2", "amount": 62.00, "autoBidMax": 75.00, "timestamp": 1756900800000},
+      {"id": "bid_1", "userId": "user_3", "amount": 45.00, "autoBidMax": 60.00, "timestamp": 1756814400000}
+    ], "watchers": ["user_3"], "views": 88, "endTime": 1757520000000, "condition": "New", "shipping": 12.00, "category": "Home", "status": "active"},
+    {"id": "item_2", "sellerId": "user_1", "title": "Set of 4 Bramblewood Stoneware Mugs, Tenmoku", "description": "Four 12 oz mugs, dishwasher safe.", "images": ["https://picsum.photos/400/400?random=item2"], "type": "fixed", "startingBid": null, "currentBid": null, "price": 96.00, "buyItNowPrice": 96.00, "bids": [], "watchers": ["user_2"], "views": 41, "endTime": 1758124800000, "condition": "New", "shipping": 14.50, "category": "Home", "status": "active"},
+    {"id": "item_3", "sellerId": "user_3", "title": "Vintage Shimpo RK-2 Pottery Wheel, Working", "description": "Well-used studio wheel, new belt.", "images": ["https://picsum.photos/400/400?random=item3"], "type": "auction", "startingBid": 250.00, "currentBid": 250.00, "price": null, "buyItNowPrice": null, "bids": [], "watchers": ["user_1"], "views": 210, "endTime": 1757606400000, "condition": "Used", "shipping": 0, "category": "Other", "status": "active"}
+  ],
+  "orders": [
+    {"id": "order_1756728000000", "listingId": "item_2", "buyerId": "user_2", "sellerId": "user_1", "amount": 96.00, "date": 1756728000000, "status": "paid"}
+  ],
+  "messages": [
+    {"id": "msg_1", "fromId": "user_2", "toId": "user_1", "listingId": "item_1", "subject": "Teapot lid fit", "content": "Does the lid have a locking tab? Buying for daily use.", "read": false, "timestamp": 1756904400000}
+  ],
+  "notifications": [
+    {"id": "notif_1756900800000", "userId": "user_3", "message": "You have been outbid on Bramblewood Pottery Hand-Thrown Stoneware Teapot, Ash Glaze", "read": false}
+  ],
+  "feedbacks": [
+    {"id": "fb_1756814400000", "orderId": "order_1756728000000", "fromUserId": "user_2", "toUserId": "user_1", "rating": "positive", "comment": "Beautifully packed, mugs arrived intact.", "created": 1756814400000}
+  ]
+}

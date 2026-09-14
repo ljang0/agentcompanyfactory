@@ -1,0 +1,493 @@
+{
+  "app_id": "aws_console_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "billing",
+    "ec2",
+    "favorites",
+    "flash",
+    "iam",
+    "keyPairs",
+    "lambda",
+    "notifications",
+    "rds",
+    "recentServices",
+    "s3",
+    "securityGroups",
+    "user"
+  ],
+  "observed": [
+    "amis",
+    "autoScalingGroups",
+    "billing",
+    "cloudfront",
+    "cloudwatch",
+    "dynamodb",
+    "ec2",
+    "elasticIps",
+    "favorites",
+    "flash",
+    "iam",
+    "keyPairs",
+    "lambda",
+    "lambdaLayers",
+    "launchTemplates",
+    "loadBalancers",
+    "notifications",
+    "rds",
+    "rdsParameterGroups",
+    "rdsSnapshots",
+    "rdsSubnetGroups",
+    "recentServices",
+    "route53",
+    "s3",
+    "securityGroups",
+    "snapshots",
+    "sns",
+    "sqs",
+    "targetGroups",
+    "user",
+    "volumes",
+    "vpc"
+  ],
+  "undocumented_so_unseedable": [
+    "amis",
+    "autoScalingGroups",
+    "cloudfront",
+    "cloudwatch",
+    "dynamodb",
+    "elasticIps",
+    "lambdaLayers",
+    "launchTemplates",
+    "loadBalancers",
+    "rdsParameterGroups",
+    "rdsSnapshots",
+    "rdsSubnetGroups",
+    "route53",
+    "snapshots",
+    "sns",
+    "sqs",
+    "targetGroups",
+    "volumes",
+    "vpc"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "user": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "recentServices": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "path",
+        "lastVisited"
+      ],
+      "keyed_by_id": false
+    },
+    "favorites": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "ec2": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "state",
+        "publicIp",
+        "privateIp",
+        "az",
+        "vpcId",
+        "subnetId",
+        "ami",
+        "amiName",
+        "platform",
+        "keyPair",
+        "securityGroups",
+        "launchTime",
+        "monitoring",
+        "iamRole",
+        "rootDeviceType",
+        "rootDeviceName",
+        "volumes",
+        "tags"
+      ],
+      "keyed_by_id": false
+    },
+    "volumes": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "name",
+        "size",
+        "volumeType",
+        "state",
+        "iops",
+        "throughput",
+        "az",
+        "attachedTo",
+        "device",
+        "created",
+        "encrypted",
+        "snapshotId"
+      ],
+      "keyed_by_id": false
+    },
+    "snapshots": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "volumeId",
+        "volumeSize",
+        "status",
+        "started",
+        "progress",
+        "encrypted",
+        "ownerId"
+      ],
+      "keyed_by_id": false
+    },
+    "amis": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "owner",
+        "state",
+        "architecture",
+        "platform",
+        "rootDeviceType",
+        "virtualization",
+        "created",
+        "public"
+      ],
+      "keyed_by_id": false
+    },
+    "elasticIps": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "allocationId",
+        "publicIp",
+        "associationId",
+        "instanceId",
+        "privateIp",
+        "networkInterfaceId",
+        "domain",
+        "tags"
+      ],
+      "keyed_by_id": false
+    },
+    "loadBalancers": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "name",
+        "arn",
+        "type",
+        "scheme",
+        "state",
+        "dnsName",
+        "vpcId",
+        "az",
+        "securityGroups",
+        "listeners",
+        "created",
+        "tags"
+      ],
+      "keyed_by_id": false
+    },
+    "targetGroups": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "name",
+        "arn",
+        "protocol",
+        "port",
+        "targetType",
+        "vpcId",
+        "healthCheck",
+        "targets",
+        "loadBalancer"
+      ],
+      "keyed_by_id": false
+    },
+    "autoScalingGroups": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "name",
+        "minSize",
+        "maxSize",
+        "desiredCapacity",
+        "launchTemplate",
+        "launchTemplateVersion",
+        "az",
+        "vpcZoneIdentifier",
+        "targetGroupARNs",
+        "healthCheckType",
+        "healthCheckGracePeriod",
+        "instances",
+        "created",
+        "tags",
+        "policies"
+      ],
+      "keyed_by_id": false
+    },
+    "launchTemplates": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "version",
+        "defaultVersion",
+        "latestVersion",
+        "ami",
+        "instanceType",
+        "keyPair",
+        "securityGroups",
+        "userData",
+        "iamInstanceProfile",
+        "monitoring",
+        "created",
+        "createdBy",
+        "tags"
+      ],
+      "keyed_by_id": false
+    },
+    "securityGroups": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "vpcId",
+        "inboundRules",
+        "outboundRules"
+      ],
+      "keyed_by_id": false
+    },
+    "keyPairs": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "name",
+        "id",
+        "type",
+        "fingerprint",
+        "created"
+      ],
+      "keyed_by_id": false
+    },
+    "s3": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "name",
+        "region",
+        "created",
+        "access",
+        "versioning",
+        "encryption",
+        "objects"
+      ],
+      "keyed_by_id": false
+    },
+    "lambda": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "name",
+        "description",
+        "runtime",
+        "handler",
+        "memorySize",
+        "timeout",
+        "lastModified",
+        "codeSize",
+        "code",
+        "environment",
+        "layers",
+        "role",
+        "tags",
+        "triggers",
+        "lastInvocation",
+        "invocations"
+      ],
+      "keyed_by_id": false
+    },
+    "lambdaLayers": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "name",
+        "arn",
+        "version",
+        "runtime",
+        "description",
+        "size",
+        "created"
+      ],
+      "keyed_by_id": false
+    },
+    "rds": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "engine",
+        "engineVersion",
+        "class",
+        "status",
+        "role",
+        "endpoint",
+        "port",
+        "az",
+        "multiAZ",
+        "storage",
+        "storageType",
+        "vpcId",
+        "created",
+        "backupRetention",
+        "backupWindow",
+        "maintenanceWindow",
+        "masterUsername",
+        "publiclyAccessible",
+        "tags"
+      ],
+      "keyed_by_id": false
+    },
+    "rdsSnapshots": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "dbInstanceId",
+        "engine",
+        "status",
+        "snapshotType",
+        "created",
+        "allocatedStorage",
+        "encrypted"
+      ],
+      "keyed_by_id": false
+    },
+    "rdsSubnetGroups": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "name",
+        "description",
+        "vpcId",
+        "status",
+        "subnets"
+      ],
+      "keyed_by_id": false
+    },
+    "rdsParameterGroups": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "name",
+        "family",
+        "description",
+        "type"
+      ],
+      "keyed_by_id": false
+    },
+    "iam": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "vpc": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "cloudwatch": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "dynamodb": {
+      "kind": "object",
+      "count": 1,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "sns": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "sqs": {
+      "kind": "object",
+      "count": 1,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "cloudfront": {
+      "kind": "object",
+      "count": 1,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "route53": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "billing": {
+      "kind": "object",
+      "count": 11,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "title",
+        "message",
+        "type",
+        "timestamp",
+        "read",
+        "service"
+      ],
+      "keyed_by_id": false
+    },
+    "flash": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

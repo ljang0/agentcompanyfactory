@@ -1,0 +1,165 @@
+{
+ "app_id": "openreview_mock",
+ "source": "localStorage:openreviewState_drift",
+ "documented": [
+  "edgeBrowserConfig",
+  "edges",
+  "groups",
+  "invitations",
+  "notes",
+  "profiles",
+  "reviews",
+  "user",
+  "venue"
+ ],
+ "observed": [
+  "edgeBrowserConfig",
+  "edges",
+  "groups",
+  "invitations",
+  "notes",
+  "profiles",
+  "reviews",
+  "user",
+  "venue"
+ ],
+ "undocumented_so_unseedable": [],
+ "documented_but_app_keeps_none": [],
+ "agrees": true,
+ "shapes": {
+  "user": {
+   "kind": "object",
+   "count": 2,
+   "record_fields": null,
+   "keyed_by_id": false
+  },
+  "venue": {
+   "kind": "object",
+   "count": 13,
+   "record_fields": null,
+   "keyed_by_id": false
+  },
+  "profiles": {
+   "kind": "object",
+   "count": 17,
+   "record_fields": [
+    "id",
+    "active",
+    "content"
+   ],
+   "keyed_by_id": true
+  },
+  "groups": {
+   "kind": "object",
+   "count": 19,
+   "record_fields": [
+    "id",
+    "members",
+    "readers",
+    "writers",
+    "signatories",
+    "domain",
+    "cdate",
+    "ddate"
+   ],
+   "keyed_by_id": true
+  },
+  "notes": {
+   "kind": "object",
+   "count": 5,
+   "record_fields": [
+    "id",
+    "forum",
+    "invitations",
+    "domain",
+    "number",
+    "cdate",
+    "tcdate",
+    "mdate",
+    "tmdate",
+    "ddate",
+    "pdate",
+    "odate",
+    "replyto",
+    "signatures",
+    "readers",
+    "writers",
+    "nonreaders",
+    "license",
+    "content",
+    "details"
+   ],
+   "keyed_by_id": true
+  },
+  "reviews": {
+   "kind": "object",
+   "count": 3,
+   "record_fields": [
+    "id",
+    "forum",
+    "invitations",
+    "domain",
+    "number",
+    "cdate",
+    "tcdate",
+    "mdate",
+    "tmdate",
+    "ddate",
+    "pdate",
+    "odate",
+    "replyto",
+    "signatures",
+    "readers",
+    "writers",
+    "nonreaders",
+    "license",
+    "content",
+    "details"
+   ],
+   "keyed_by_id": true
+  },
+  "edges": {
+   "kind": "array",
+   "count": 42,
+   "record_fields": [
+    "id",
+    "invitation",
+    "head",
+    "tail",
+    "label",
+    "weight",
+    "readers",
+    "writers",
+    "nonreaders",
+    "signatures",
+    "cdate",
+    "tcdate",
+    "mdate",
+    "tmdate",
+    "ddate"
+   ],
+   "keyed_by_id": false
+  },
+  "invitations": {
+   "kind": "object",
+   "count": 7,
+   "record_fields": [
+    "id",
+    "domain",
+    "cdate",
+    "duedate",
+    "expdate",
+    "edit"
+   ],
+   "keyed_by_id": true
+  },
+  "edgeBrowserConfig": {
+   "kind": "object",
+   "count": 2,
+   "record_fields": null,
+   "keyed_by_id": false
+  }
+ },
+ "captured_at": "2026-09-10",
+ "note": "Observed 2026-09-10 while porting this app into the catalogue. Filed in the 2026-09-09 batch directory rather than a new dated one so it is read whether tests/test_app_schema_contract.py pins that single directory or globs every drift-* run; captured_at is the real date. Move it to experiments/interact/drift-20260910/ once the glob is the only reader."
+}

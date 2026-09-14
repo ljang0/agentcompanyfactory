@@ -1,0 +1,190 @@
+{
+  "app_id": "weibo_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "comments",
+    "conversations",
+    "currentUser",
+    "followedTopics",
+    "hotSearches",
+    "messages",
+    "notifications",
+    "posts",
+    "settings",
+    "topics",
+    "ui",
+    "users"
+  ],
+  "observed": [
+    "comments",
+    "conversations",
+    "currentUser",
+    "followedTopics",
+    "hotSearches",
+    "messages",
+    "notifications",
+    "posts",
+    "settings",
+    "topics",
+    "ui",
+    "users"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 14,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "object",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "screenName",
+        "handle",
+        "avatar",
+        "coverImage",
+        "bio",
+        "location",
+        "verified",
+        "verifiedType",
+        "followingCount",
+        "followersCount",
+        "postsCount",
+        "isFollowing",
+        "createdAt"
+      ],
+      "keyed_by_id": true
+    },
+    "posts": {
+      "kind": "object",
+      "count": 27,
+      "record_fields": [
+        "id",
+        "userId",
+        "text",
+        "images",
+        "video",
+        "createdAt",
+        "source",
+        "repostCount",
+        "commentCount",
+        "likeCount",
+        "isLiked",
+        "isReposted",
+        "repostOf",
+        "repostText",
+        "isLongText",
+        "topicIds"
+      ],
+      "keyed_by_id": true
+    },
+    "comments": {
+      "kind": "object",
+      "count": 53,
+      "record_fields": [
+        "id",
+        "postId",
+        "userId",
+        "text",
+        "createdAt",
+        "likeCount",
+        "isLiked",
+        "replyToId",
+        "replyToUserId"
+      ],
+      "keyed_by_id": true
+    },
+    "hotSearches": {
+      "kind": "array",
+      "count": 50,
+      "record_fields": [
+        "id",
+        "rank",
+        "title",
+        "searchCount",
+        "category",
+        "badge",
+        "url"
+      ],
+      "keyed_by_id": false
+    },
+    "topics": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "name",
+        "readCount",
+        "discussionCount",
+        "description",
+        "hostUserId",
+        "isSuperTopic"
+      ],
+      "keyed_by_id": true
+    },
+    "followedTopics": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "conversations": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "participantIds",
+        "lastMessageId",
+        "lastMessageAt",
+        "unreadCount"
+      ],
+      "keyed_by_id": true
+    },
+    "messages": {
+      "kind": "object",
+      "count": 17,
+      "record_fields": [
+        "id",
+        "conversationId",
+        "senderId",
+        "receiverId",
+        "text",
+        "createdAt",
+        "isRead"
+      ],
+      "keyed_by_id": true
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "type",
+        "fromUserId",
+        "postId",
+        "commentId",
+        "text",
+        "createdAt",
+        "isRead"
+      ],
+      "keyed_by_id": false
+    },
+    "settings": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "ui": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

@@ -1,0 +1,547 @@
+{
+  "schema_version": "2",
+  "id": "cort_o3",
+  "company_id": "cort",
+  "outline_id": "o3",
+  "title": "Handle H310’s extension and protect upcoming deliveries",
+  "brief": "Household H310 has changed its departure plans, affecting two upcoming deliveries. Compare extending the rental for every item with picking items up in stages, and offer only terms we can support. Put the option the customer accepts into effect. Track actual pickups and future allocations through September 28, including any stop where the pickup is incomplete. Finish with lease, custody, dispatch and billing records for accounting that all agree.",
+  "objective": "Accommodate a changing household departure while preserving supported future deliveries and charging accurately for actual retained items.",
+  "decision_problem": "Should H310 retain its entire set through September 24 or return the sofa earlier and retain only the bedroom pieces? The options have different visit charges, backup inventory needs and route loads. Customer acceptance must precede amendment execution, expected returns must not become ready stock by inference, and an actual incomplete pickup can change the final billing and availability facts.",
+  "canonical_description": "A rental consultant translates a household's changing departure needs into permissible extension and staged-pickup options. An inventory controller traces retained furniture into upcoming deliveries, distinguishes expected returns from usable stock, and develops supported substitutions. A dispatcher compares visits against residual crew time, vehicle capacity and building access. Their joint analysis determines the terms that can be offered. Accepted customer choices control versioned lease and reservation instructions. External transaction, cleaning and crew reports establish what changed and what physically moved. Workers reconcile incomplete pickups, preserve future deliveries and calculate charges from actual custody dates. Completion requires consistent customer confirmation, billing instructions and asset availability rather than a closed service ticket.",
+  "team_ids": [
+    "t1"
+  ],
+  "worker_ids": [
+    "w1",
+    "w2",
+    "w3"
+  ],
+  "phases": [
+    {
+      "id": "o3_p1",
+      "name": "Trace the requested change through leases and future supply",
+      "worker_ids": [
+        "w1",
+        "w2",
+        "w3"
+      ],
+      "depends_on": [],
+      "inputs": [
+        "H310 request and L310-v2",
+        "Future orders F311 and F312",
+        "Asset and readiness snapshots",
+        "Tariff LT-1",
+        "Route and access calendar"
+      ],
+      "outputs": [
+        "Reconciled customer requirements",
+        "Item-to-future-order dependency map",
+        "Applicable tariff and access constraints"
+      ],
+      "decision": "Determine what the household needs, which original future supply assumptions are affected and which actual alternatives are available.",
+      "downstream_effect": "Retained items cannot remain assumed supply for future deliveries; mandatory access and tariff terms constrain the options constructed next.",
+      "when": "always"
+    },
+    {
+      "id": "o3_p2",
+      "name": "Construct supported options and request customer choices",
+      "worker_ids": [
+        "w1",
+        "w2",
+        "w3"
+      ],
+      "depends_on": [
+        "o3_p1"
+      ],
+      "inputs": [
+        "Requirements and dependency map",
+        "Available alternatives",
+        "Residual route capacity",
+        "LT-1"
+      ],
+      "outputs": [
+        "Two-option cost, asset and route comparison",
+        "Versioned household offer",
+        "F311 and F312 substitution confirmation requests",
+        "Proposed conditional allocation instructions"
+      ],
+      "decision": "Compare all-item extension and staged pickup, select which supported options to offer, and specify the backup allocation protecting each future delivery.",
+      "downstream_effect": "Actual customer responses select the amendment path; no requested extension or tentative return changes authoritative lease or reservation state yet.",
+      "when": "always"
+    },
+    {
+      "id": "o3_p3",
+      "name": "Reconcile acceptance and request the operative transactions",
+      "worker_ids": [
+        "w1",
+        "w2",
+        "w3"
+      ],
+      "depends_on": [
+        "o3_p2"
+      ],
+      "inputs": [
+        "o3_e1 customer responses",
+        "Offered versions",
+        "Proposed allocations and route schedules"
+      ],
+      "outputs": [
+        "Accepted option and substitution records",
+        "Lease amendment and reservation transaction requests",
+        "Visit booking requests",
+        "Superseded-instruction register"
+      ],
+      "decision": "Translate the accepted version into item-specific retention, pickup, substitution and reservation instructions without broadening the customer's acceptance.",
+      "downstream_effect": "Only the accepted option may produce charges and visits. The system must acknowledge replacement reservations before the future deliveries are treated as secured.",
+      "when": "always"
+    },
+    {
+      "id": "o3_p4",
+      "name": "Validate execution acknowledgments and release dispatch",
+      "worker_ids": [
+        "w1",
+        "w2",
+        "w3"
+      ],
+      "depends_on": [
+        "o3_p3"
+      ],
+      "inputs": [
+        "o3_e2 transaction and booking responses",
+        "Accepted option",
+        "Asset readiness and route constraints"
+      ],
+      "outputs": [
+        "Operative lease and reservation crosswalk",
+        "Released manifests",
+        "Readiness-gated substitution instructions",
+        "Customer appointment confirmation"
+      ],
+      "decision": "Verify the executed amendment and protected future allocations, then release feasible manifests with explicit readiness conditions and backups.",
+      "downstream_effect": "Crew and cleaning events follow these manifests. Conditional use of a returned sofa can execute only after actual receipt and routine readiness evidence; otherwise the reserved ready backup remains assigned.",
+      "when": "always"
+    },
+    {
+      "id": "o3_p5",
+      "name": "Reconcile deliveries and the incomplete final pickup",
+      "worker_ids": [
+        "w1",
+        "w2",
+        "w3"
+      ],
+      "depends_on": [
+        "o3_p4"
+      ],
+      "inputs": [
+        "o3_e3 chronological execution reports",
+        "Operative manifests",
+        "Actual custody and readiness acknowledgments"
+      ],
+      "outputs": [
+        "Delivered-order and pickup reconciliation",
+        "Open dresser obligation",
+        "Recovery visit and lease-update requests",
+        "Revised charge explanation and customer response request"
+      ],
+      "decision": "Determine which assets actually moved, identify the remaining dresser obligation, and construct a feasible September 25 recovery with the correct rental consequence.",
+      "downstream_effect": "The dresser remains in customer custody and unavailable for rental until actual recovery. Its additional retained day changes the billing handoff, and the recovery visit consumes the remaining route slot.",
+      "when": "always"
+    },
+    {
+      "id": "o3_p6",
+      "name": "Verify recovery and prepare exact billing instructions",
+      "worker_ids": [
+        "w1",
+        "w2",
+        "w3"
+      ],
+      "depends_on": [
+        "o3_p5"
+      ],
+      "inputs": [
+        "o3_e4 recovery acceptance and execution",
+        "LT-1",
+        "Actual movement and readiness records"
+      ],
+      "outputs": [
+        "Final item custody and availability reconciliation",
+        "Exact incremental billing handoff",
+        "Final customer confirmation draft",
+        "Billing receipt request"
+      ],
+      "decision": "Verify completion of the recovery visit and determine final item-specific rental days and visit charges from actual execution.",
+      "downstream_effect": "Billing receives one complete versioned handoff; an estimated quote or planned pickup date cannot override the actual retained-day calculation.",
+      "when": "always"
+    },
+    {
+      "id": "o3_p7",
+      "name": "Close the service cycle against the billing receipt",
+      "worker_ids": [
+        "w1",
+        "w2",
+        "w3"
+      ],
+      "depends_on": [
+        "o3_p6"
+      ],
+      "inputs": [
+        "o3_e5 billing validation receipt",
+        "Final lease, custody, readiness and dispatch facts",
+        "Customer confirmation draft"
+      ],
+      "outputs": [
+        "Final customer confirmation",
+        "Reconciled lease-change case",
+        "Accepted billing handoff and posting ownership"
+      ],
+      "decision": "Confirm that the accepted billing handoff and all operational records agree before closing the service case.",
+      "downstream_effect": "Accounting retains responsibility for later posting; the customer receives the final supported amount and pickup facts, while future planning uses actual item readiness.",
+      "when": "always"
+    }
+  ],
+  "contributions": [
+    {
+      "worker_id": "w1",
+      "inputs": [
+        "Household request",
+        "Lease and tariff",
+        "Substitution preferences",
+        "Feasible asset and route options",
+        "Actual pickup reports"
+      ],
+      "work": "Interpret permissible lease changes, calculate and present alternatives, obtain exact acceptance, and reconcile actual retention into customer confirmation and billing instructions.",
+      "produces": [
+        "Requirements and option quotations",
+        "Accepted amendment records",
+        "Final charge calculation and billing handoff"
+      ],
+      "shares_with": [
+        "w2",
+        "w3"
+      ]
+    },
+    {
+      "worker_id": "w2",
+      "inputs": [
+        "Item-level lease lists",
+        "Reservations and expected returns",
+        "Alternative-stock readiness",
+        "System, crew and cleaning reports"
+      ],
+      "work": "Trace extension effects into future demand, construct backup and conditional allocations, and reconcile custody and readiness after each relevant movement.",
+      "produces": [
+        "Future-supply dependency map",
+        "Supported allocation instructions",
+        "Final asset and reservation reconciliation"
+      ],
+      "shares_with": [
+        "w1",
+        "w3"
+      ]
+    },
+    {
+      "worker_id": "w3",
+      "inputs": [
+        "Access windows",
+        "Residual crew calendar",
+        "Travel and service times",
+        "Item volumes",
+        "Accepted appointments and actual reports"
+      ],
+      "work": "Compare combined and staged visits, calculate feasible manifests, and rebuild the recovery stop after an incomplete pickup without consuming protected route commitments.",
+      "produces": [
+        "Route alternatives and capacity calculations",
+        "Released manifests",
+        "Recovery booking and actual route reconciliation"
+      ],
+      "shares_with": [
+        "w1",
+        "w2"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "o3_e1",
+      "after_phase": "o3_p2",
+      "trigger": "Versioned offers and substitution requests submitted by September 9 at 16:00.",
+      "recipients": [
+        "w1",
+        "w2",
+        "w3"
+      ],
+      "effect": "By September 10 at 10:00, H310 accepts the lowest-total-charge offered option meeting its stated dates and $70 ceiling; either supported option is acceptable if offered alone. F311 confirms S1 or S2 at the existing rate and September 17 window when exact dimensions are supplied; F312 confirms B2 at its existing rate and September 18 window. Invalid dates, extra concessions or unspecified substitutions are rejected with the violated requirement. Responses identify the exact offered version."
+    },
+    {
+      "id": "o3_e2",
+      "after_phase": "o3_p3",
+      "trigger": "Accepted-version transaction and booking requests submitted by September 10 at 15:00.",
+      "recipients": [
+        "w1",
+        "w2",
+        "w3"
+      ],
+      "effect": "The external rental-system actor validates versions, customer acceptance, item intervals, rate calculations and alternative availability. It returns the executed lease amendment and reservation changes or explicit rejection, plus appointment acknowledgments for valid route requests. No crew work or pickup is inferred from acceptance."
+    },
+    {
+      "id": "o3_e3",
+      "after_phase": "o3_p4",
+      "trigger": "Valid readiness-gated manifests released by September 11 at 16:00; advance chronologically through September 24.",
+      "recipients": [
+        "w1",
+        "w2",
+        "w3"
+      ],
+      "effect": "On the staged path, crews collect S1 September 14 and routine preparation produces its September 15 readiness report; the preauthorized allocation rule may then replace reserved S2 with S1. Future deliveries occur September 17 and 18 using the acknowledged eligible assignments. September 24 crews collect B1 and, on the all-item path, S1. D1 cannot be removed because H310 has not emptied it. Reports list each loaded and uncollected ID, actual times and custody transitions. Completed collections reach the warehouse that day. The actor does not invent a recovery appointment or charge calculation."
+    },
+    {
+      "id": "o3_e4",
+      "after_phase": "o3_p5",
+      "trigger": "Recovery offer and requests submitted September 24 by 16:00.",
+      "recipients": [
+        "w1",
+        "w2",
+        "w3"
+      ],
+      "effect": "H310 accepts a September 25 09:00–10:00 recovery and the tariff's one additional dresser rental day, with no extra recovery visit fee. Valid requests receive booking and lease-version acknowledgments. Crews collect D1 within that window and return it to the warehouse September 25; routine preparation reports it ready September 28 at 16:00. Other dates or unsupported charges receive a rejection rather than assumed consent."
+    },
+    {
+      "id": "o3_e5",
+      "after_phase": "o3_p6",
+      "trigger": "Exact billing handoff submitted September 28 by 16:15.",
+      "recipients": [
+        "w1"
+      ],
+      "effect": "The external accounting intake actor validates the handoff against accepted terms and actual pickups and returns an accepted receipt with the amount, source version and September 29 posting owner, or a discrepancy response. This establishes accepted handoff, not a posted customer ledger."
+    }
+  ],
+  "initial_materials": [
+    "Synthetic episode clock: September 8, 2026 at 08:00 America/New_York; completion September 28 at 17:00. Operations run Monday–Friday, 08:00–17:00, with no modeled holiday closure in the interval. Freeze tariff LT-1, routine condition standard RC-1, travel matrix TM-1 and route calendar RV-1. Five years of history end at the reference clock; the latest 13 weeks have detailed service and dispatch evidence. Re-dating must preserve business-day preparation lags, access windows, retained-day counts and future commitments.",
+    "Operating-world seed: retain the dossier's 900 active leases, 12,000 current pieces, warehouse, two showrooms, outlet and four crews. Generate linked five-year histories with acquisition and retirement boundaries. Recent weeks contain 40–50 new orders and 35–45 completed returns; 60–80 pieces enter outlet stock weekly. Active leases contain 6–12 pieces on average across the full population, while L310's remaining three pieces reflect earlier partial returns. Lease histories, route manifests, repair records and outlet receipts share persistent IDs. Generate service tickets for 20–35% of recent service events and 25–40 currently open requests, including ordinary extensions, exchanges, pickup coordination and repair queries.",
+    "Task placement and complete decision population: H310's existing ticket concerns lease L310-v2, with only S1 sofa, B1 queen bed and D1 dresser still rented. Earlier items have matched pickup and billing history. Future orders F311 and F312 are ordinary accepted orders visible in the district's coming two-week dispatch view. The complete uncommitted alternatives matching these two needs are S2 and B2. Similar S3 and B3 records exist but are reserved to unrelated accepted leases throughout the affected interval. All other matching stock is customer-held, reserved or on documented condition hold through September 28; there are no hidden eligible substitutes or interdistrict borrowing rights.",
+    "L310-v2 and customer request: existing charges cover all three items through September 14 inclusive, with an originally booked September 14 pickup. H310 now needs B1 and D1 through September 24. It can either keep S1 until then or have S1 collected September 14. It accepts one combined final pickup or the two planned staged visits, and has a $70 incremental pre-tax ceiling. The request is not an amendment. Access windows are September 14 09:00–11:00 and September 24 09:00–12:00. Historical invoices and payments balance through September 14; no arrears or refund issue is present.",
+    "LT-1 synthetic tariff: monthly rates are S1 $60, B1 $90 and D1 $30. Extension days use rate/30, begin September 15 and include the actual pickup date. One final pickup is included; voluntarily splitting the originally included pickup adds one $25 visit charge. A failed pickup caused by an unemptied item continues item rent through actual collection; one recovery attempt is included with no additional visit charge. Rate changes, unlisted concessions and tax calculations are outside this pre-tax handoff. Each quote must explain the actual-pickup rule. H310 has no cancellation or early-return penalty in this episode.",
+    "Future demand and item facts: F311 requires one sofa September 17, 10:00–12:00; its planned supply was S1's expected September 14 return. F312 requires one queen bed September 18, 10:00–12:00; its planned supply was B1's expected return. These are accepted SKU/date obligations with tentative asset sourcing, not claims that customer-held pieces are already ready. S1 is 190 cm wide and 3 cubic metres; S2 is 215 cm wide and 3.5 cubic metres. F311's verified access limit is 220 cm and its room fits either, subject to recorded customer confirmation. B1 and B2 are identical-size queen beds, each 2 cubic metres. D1 is 1 cubic metre. S2 and B2 are actually warehouse-held, unreserved and rental-ready as of September 8.",
+    "RC-1 routine processing: returned S1, B1 and D1 receive inspection, cleaning and function checks, requiring one person-hour each and completing at 16:00 on the next business day after actual warehouse receipt. A residual three-hour routine station is available on September 15, September 25 and September 28; other work is already deducted. External inspection findings in this episode contain no structural or repair issue, and completed RC-1 checklists support the external system's preauthorized routine release. No modeled worker may waive a failed check or invent release evidence. Reservations can protect a ready backup while a returned item is assessed; returned-item substitution executes only against actual receipt and release.",
+    "RV-1 residual dispatch calendar: four crews exist, but only crew C1 has capacity for these additional stops. Protected unrelated manifests occupy the other crews and the rest of C1's day. On September 14, 17, 18, 24 and 25, C1 has a warehouse-to-warehouse 08:00–12:00 block and an 8-cubic-metre vehicle. Its other daily work is 240 minutes, giving a 480-minute daily limit. No overtime is allowed. TM-1 one-way warehouse travel is 35 minutes to H310 and 40 minutes to either future customer. A visit requires 30 minutes loading or unloading at departure and 30 at return. H310 service takes 25 minutes for S1 alone, 45 for B1+D1, 60 for all three, or 20 for D1 alone. An unsuccessful D1 removal consumes 15 minutes; successful September 24 service without D1 takes 35 minutes for B1 alone or 45 for B1+S1. Each future delivery takes 45 minutes onsite. Waiting for an access window counts against crew time. No multi-customer route is necessary, but any proposed combination must use the same travel and time limits.",
+    "Private physical-response fixtures: on September 24, D1 remains full and cannot be collected. All other instructed movements succeed within listed service times. H310 can empty D1 for September 25 09:00–10:00 and accepts the resulting one-day dresser charge under LT-1. All returned items pass RC-1 after the prescribed routine work. Do not expose the future failed stop as an initial answer or allow the actor to propose the recovery plan.",
+    "Cross-app seed: s1 contains linked household and future-order requests, offered versions, responses and execution messages; s2 contains source extracts and worker-created cost, route and allocation comparisons. Use stable customer_id, lease_id, asset_id, order_id, ticket_id, appointment_id, instruction_id, version and transaction_id. Workers have the dossier's shared operational access; household-facing messages contain only that household's facts. Background leases and manifests consume the exact resources reflected in the residual calendar.",
+    "External s4 contract: lease amendments and reservations require expected versions and exact customer acceptance. The actor validates asset/date conflicts, routine release evidence and authorizing instructions, then returns accepted or rejected status, reason, effective time, before/after state and immutable transaction ID. Requests are idempotent. Custody, condition and future reservation are separate; planned pickups are not receipts. On the staged path, w2 may instruct the actor in advance to replace reserved S2 with S1 only after S1's actual RC-1 release, retaining S2 if that condition fails. This is a worker-authored conditional instruction, not an actor-selected allocation. Crew, receiving, cleaning and billing actors return their own evidence linked to the same IDs."
+  ],
+  "deliverables": [
+    "Two-option comparison showing customer charges, future allocations, what readiness depends on and whether the routes will work.",
+    "Offers with each version identified, customer acceptance, executed lease amendment and acknowledged replacement reservations.",
+    "Released manifests and a check that actual deliveries, pickups, readiness and recovery match the records.",
+    "Exact additional pre-tax billing details for accounting, accounting’s receipt confirming accepted intake and final customer confirmation."
+  ],
+  "success_criteria": [
+    {
+      "requirement": "Compare the actual operating choices before making a commitment.",
+      "observable": "Both all-item and staged options are calculated from LT-1 and tested against future orders, alternative readiness, crew limits and access windows. The offered option or options have a reasoned service and inventory rationale.",
+      "method": "judgment"
+    },
+    {
+      "requirement": "Keep requests, customer acceptance and execution separate.",
+      "observable": "The operative lease version and substitutions match exact customer responses and accepted transaction acknowledgments; superseded pickup and tentative sourcing instructions cannot remain active.",
+      "method": "state"
+    },
+    {
+      "requirement": "Protect future commitments without counting stock as returned when it has not been.",
+      "observable": "F311 and F312 receive eligible acknowledged assets on their accepted dates. Any use of returned S1 follows actual receipt and RC-1 release, with S2 protected until the conditional reassignment is supported.",
+      "method": "state"
+    },
+    {
+      "requirement": "Account for the incomplete pickup and every remaining obligation.",
+      "observable": "September 24 reports leave D1 in customer custody; a separately accepted and feasible September 25 visit collects it. Final availability follows September 28 routine release rather than the planned collection date.",
+      "method": "state"
+    },
+    {
+      "requirement": "Calculate accurate final charges and support closing the case with records.",
+      "observable": "Billing uses item-specific actual pickup dates and the selected visit structure, includes the extra dresser day, contains no invented fees or concessions, and has an accepted intake receipt. Customer confirmation distinguishes the accepted billing handoff from later accounting posting.",
+      "method": "artifact"
+    }
+  ],
+  "software_requirement_ids": [
+    "s1",
+    "s2",
+    "s4"
+  ],
+  "evidence_ids": [
+    "e1",
+    "e2",
+    "e7",
+    "e10",
+    "e11",
+    "e12",
+    "e13",
+    "e14"
+  ],
+  "calendar_days": 21,
+  "estimated_human_effort": {
+    "minimum_hours": 18.0,
+    "maximum_hours": 26.0,
+    "basis": "Synthetic aggregate active computer-use estimate: requirements and dependency reconstruction 3–5 hours, option and route construction 5–7, accepted transaction and dispatch work 4–5, and execution recovery, billing and closure 6–9. Excludes driving, physical preparation and elapsed waits."
+  },
+  "assumptions": [
+    "All episode terms, prices, dimensions, dates, capacity limits and external responses are synthetic rules, not current CORT contractual facts. Sourced evidence establishes the service context; the supplied inferred responsibility of w1 is retained without amendment.",
+    "Pinned Zendesk_mock and google_sheets_mock schemas were inspected. Ticket comments and workbook records are documented, but runtime editing, retrieval, role behavior, persistence, reset and formula correctness still require validation.",
+    "Material build gap: a validated external rental-system actor implementing the specified lease, reservation, custody and readiness acknowledgments is essential. s1 and s2 are communication and analysis workspaces, not rental transaction engines; s3 is not relied upon.",
+    "The two permitted outcomes correspond to genuinely different accepted visit and allocation structures. The fixtures support completion on either path, so unsupported abandonment or unresolved closure is not an alternative success outcome.",
+    "Accounting posting remains an external September 29 obligation. The assigned endpoint is an accepted exact billing handoff, with posting owner and date recorded; it does not require or imply completed posting."
+  ],
+  "completion": {
+    "outcomes": [
+      {
+        "id": "o3_all_item",
+        "when": "H310 accepts the all-item extension and the resulting deliveries, pickups, recovery and billing handoff are reconciled.",
+        "required_phase_ids": [
+          "o3_p1",
+          "o3_p2",
+          "o3_p3",
+          "o3_p4",
+          "o3_p5",
+          "o3_p6",
+          "o3_p7"
+        ],
+        "observable": "S2 and B2 fulfill the future orders; S1 and B1 are collected September 24, D1 September 25, and the accepted incremental pre-tax handoff is $61. Returned-item readiness and the September 29 posting obligation are recorded."
+      },
+      {
+        "id": "o3_staged",
+        "when": "H310 accepts staged pickup and the resulting deliveries, pickups, recovery and billing handoff are reconciled.",
+        "required_phase_ids": [
+          "o3_p1",
+          "o3_p2",
+          "o3_p3",
+          "o3_p4",
+          "o3_p5",
+          "o3_p6",
+          "o3_p7"
+        ],
+        "observable": "S1 is collected September 14; F311 receives an acknowledged ready S1 or S2, and F312 receives B2. B1 is collected September 24 and D1 September 25. The accepted incremental pre-tax handoff is $66, including the one voluntary additional visit."
+      }
+    ],
+    "feasible_path": {
+      "outcome_id": "o3_all_item",
+      "steps": [
+        {
+          "phase_id": "o3_p1",
+          "action_and_result": "Trace L310's requested retention into F311 and F312, establish that S2 and B2 are the complete ready alternatives, and retain the distinction between tentative sourcing and actual stock."
+        },
+        {
+          "phase_id": "o3_p2",
+          "action_and_result": "Construct the all-item quote of $60 and staged quote of $65, each with the actual-pickup provision. Test future substitution and route feasibility, offer both, and request the two future customers' exact substitution confirmations."
+        },
+        {
+          "phase_id": "o3_p3",
+          "action_and_result": "H310 accepts the lower-charge all-item option; future customers accept S2 and B2. Submit the exact amendment, cancel the original September 14 pickup and request replacement reservations and visits."
+        },
+        {
+          "phase_id": "o3_p4",
+          "action_and_result": "Validate the accepted transactions. Release F311's September 17 S2 delivery, F312's September 18 B2 delivery and H310's September 24 combined pickup. A future-delivery route leaves at 08:50 after loading, arrives 09:30, waits until 10:00, completes service at 10:45 and finishes return unloading at 11:55."
+        },
+        {
+          "phase_id": "o3_p5",
+          "action_and_result": "Reconcile successful future deliveries and September 24 collection of S1 and B1, leaving D1 in customer custody. Construct the September 25 recovery, explain the additional $1 dresser day and request the accepted lease and appointment update."
+        },
+        {
+          "phase_id": "o3_p6",
+          "action_and_result": "Verify D1's September 25 collection and September 28 routine readiness. Calculate ten extension days for S1 and B1 and eleven for D1, producing a $61 handoff with no extra visit fee."
+        },
+        {
+          "phase_id": "o3_p7",
+          "action_and_result": "Match the accepted $61 accounting intake receipt to final pickup and lease versions, send the supported customer confirmation, and retain the September 29 posting owner."
+        }
+      ],
+      "constraint_checks": [
+        "The all-item path uses ready S2 and B2, so neither future delivery depends on receipt of customer-held furniture.",
+        "The September 24 pickup fits the eight-cubic-metre truck and its access window. The actual failed dresser attempt consumes service time but leaves both room and time for return to the warehouse.",
+        "The September 25 recovery reaches H310 at 09:05 after 08:00 loading and travel; twenty minutes onsite and return travel/unloading finish at 10:30, within the residual block.",
+        "Routine processing of S1 and B1 consumes two hours September 25; D1 consumes one hour September 28. Neither uses more than the three-hour residual station.",
+        "The materially different staged path has a $65 initial quote and $66 actual handoff. Its September 14 sofa pickup fits the same block; S1 becomes ready September 15, allowing a worker-instructed reassignment before September 17. S2 remains protected until that release and transaction are acknowledged.",
+        "Both outcomes collect D1 before closure and record actual readiness. Neither can close successfully merely by accepting an extension or marking a ticket solved."
+      ],
+      "numeric_checks": [
+        {
+          "constraint": "All-item actual charge",
+          "left": "(60+90+30)/30*10+30/30",
+          "relation": "==",
+          "right": "61",
+          "unit": "USD"
+        },
+        {
+          "constraint": "Staged actual charge",
+          "left": "(90+30)/30*10+25+30/30",
+          "relation": "==",
+          "right": "66",
+          "unit": "USD"
+        },
+        {
+          "constraint": "Both outcomes remain within customer ceiling",
+          "left": "66",
+          "relation": "<=",
+          "right": "70",
+          "unit": "USD"
+        },
+        {
+          "constraint": "September 24 planned full pickup volume",
+          "left": "3+2+1",
+          "relation": "<=",
+          "right": "8",
+          "unit": "cubic metres"
+        },
+        {
+          "constraint": "Future delivery crew time including access-window wait",
+          "left": "30+40+30+45+40+30",
+          "relation": "<=",
+          "right": "240",
+          "unit": "minutes"
+        },
+        {
+          "constraint": "Future delivery plus protected daily work",
+          "left": "30+40+30+45+40+30+240",
+          "relation": "<=",
+          "right": "480",
+          "unit": "minutes"
+        },
+        {
+          "constraint": "Actual September 24 full-path pickup with failed dresser attempt",
+          "left": "30+35+45+15+35+30",
+          "relation": "<=",
+          "right": "240",
+          "unit": "minutes"
+        },
+        {
+          "constraint": "September 25 routine preparation",
+          "left": "1+1",
+          "relation": "<=",
+          "right": "3",
+          "unit": "person-hours"
+        }
+      ]
+    }
+  },
+  "plain_brief": {
+    "rewritten_at": "2026-09-07T22:16:39.793868+00:00",
+    "skill": {
+      "path": ".agents/skills/company-plain-brief/SKILL.md",
+      "hash": "c8953b218a65872955137b74d82b4514269537f6d4d07dd33ac3c484b5da20eb"
+    },
+    "before": {
+      "title": "Resolve a household extension with staged pickup and future-demand consequences",
+      "brief": "Resolve household H310's departure change against two upcoming deliveries. Compare an all-item extension with a staged pickup, present only supported terms, and implement the accepted option. Track actual pickups and future allocations through September 28, including any incomplete stop, and finish with consistent lease, custody, dispatch and billing-handoff records.",
+      "deliverables": [
+        "Two-option comparison covering customer charges, future allocation, readiness dependencies and route feasibility.",
+        "Versioned offers, customer acceptance, executed lease amendment and acknowledged replacement reservations.",
+        "Released manifests and actual delivery, pickup, readiness and recovery reconciliation.",
+        "Exact incremental pre-tax billing handoff, accepted accounting intake receipt and final customer confirmation."
+      ],
+      "requirements": [
+        "Compare the actual operational choices before committing.",
+        "Separate requests, customer acceptance and execution.",
+        "Protect future commitments without fabricating returned stock.",
+        "Reconcile the incomplete pickup and all remaining obligations.",
+        "Produce accurate final charges and a supported closure."
+      ]
+    }
+  }
+}

@@ -1,0 +1,1 @@
+manifest_id,version,date,crew_id,truck_capacity_m3,appointment_id,acceptance_id,booking_transaction_id,asset_ids,warehouse_handling_start,depart_wh1,arrive_customer,access_start,service_start,service_end,return_wh1,handling_complete,load_m3,protected_minutes,readiness_evidence,actual_report_id,uncollected_asset_ids

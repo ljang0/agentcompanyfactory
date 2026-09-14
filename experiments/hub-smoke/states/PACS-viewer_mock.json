@@ -1,0 +1,25 @@
+{
+  "currentUser": {"name": "Dr. Helena Marsh", "role": "radiologist", "institution": "Cedar Hollow Community Hospital"},
+  "settings": {"language": "en", "layoutColumns": 1, "layoutRows": 1, "showOverlays": true, "showOrientationMarkers": true, "interpolation": "bilinear", "cineFrameRate": 24},
+  "patients": {
+    "PAT-101": {"id": "PAT-101", "name": "OKAFOR^DANIEL^T", "displayName": "Okafor, Daniel T.", "mrn": "MRN-5510231", "dateOfBirth": "1961-04-09", "sex": "M", "age": "65Y"},
+    "PAT-102": {"id": "PAT-102", "name": "LINDQVIST^MAJA^E", "displayName": "Lindqvist, Maja E.", "mrn": "MRN-8820477", "dateOfBirth": "1978-10-21", "sex": "F", "age": "47Y"}
+  },
+  "studies": {
+    "STU-101": {"id": "STU-101", "studyInstanceUID": "1.2.826.0.1.3680043.9.7133.101", "patientId": "PAT-101", "studyDate": "2026-09-04", "studyTime": "08:12:40", "studyDescription": "CT CHEST W CONTRAST", "accessionNumber": "ACC-CH-30411", "institution": "Cedar Hollow Community Hospital", "referringPhysician": "Dr. Priya Venkataraman", "modalities": ["CT"], "numberOfSeries": 2, "numberOfInstances": 311, "status": "unread"},
+    "STU-102": {"id": "STU-102", "studyInstanceUID": "1.2.826.0.1.3680043.9.7133.102", "patientId": "PAT-102", "studyDate": "2026-09-03", "studyTime": "15:47:02", "studyDescription": "XR CHEST PA AND LATERAL", "accessionNumber": "ACC-CH-30398", "institution": "Cedar Hollow Community Hospital", "referringPhysician": "Dr. Samuel Achebe", "modalities": ["CR"], "numberOfSeries": 1, "numberOfInstances": 1, "status": "in_progress"}
+  },
+  "series": {
+    "SER-101": {"id": "SER-101", "seriesInstanceUID": "1.2.826.0.1.3680043.9.7133.101.1", "studyId": "STU-101", "seriesNumber": 1, "seriesDescription": "Scout AP", "modality": "CT", "numberOfInstances": 1, "thumbnailType": "xr_chest_pa", "bodyPart": "CHEST", "sliceThickness": 10.0, "pixelSpacing": [0.7, 0.7], "rows": 512, "columns": 512, "windowCenter": 40, "windowWidth": 400, "isTracked": false},
+    "SER-102": {"id": "SER-102", "seriesInstanceUID": "1.2.826.0.1.3680043.9.7133.101.2", "studyId": "STU-101", "seriesNumber": 2, "seriesDescription": "Axial 1.0 Lung", "modality": "CT", "numberOfInstances": 310, "thumbnailType": "ct_axial_chest", "bodyPart": "CHEST", "sliceThickness": 1.0, "pixelSpacing": [0.7, 0.7], "rows": 512, "columns": 512, "windowCenter": -600, "windowWidth": 1500, "isTracked": true},
+    "SER-103": {"id": "SER-103", "seriesInstanceUID": "1.2.826.0.1.3680043.9.7133.102.1", "studyId": "STU-102", "seriesNumber": 1, "seriesDescription": "PA", "modality": "CR", "numberOfInstances": 1, "thumbnailType": "xr_chest_pa", "bodyPart": "CHEST", "sliceThickness": null, "pixelSpacing": [0.139, 0.139], "rows": 3072, "columns": 2560, "windowCenter": 2048, "windowWidth": 4096, "isTracked": false}
+  },
+  "measurements": {
+    "MEAS-101": {"id": "MEAS-101", "type": "bidirectional", "label": "RUL nodule", "studyId": "STU-101", "seriesId": "SER-102", "instanceNumber": 118, "points": [{"x": 0.41, "y": 0.36}, {"x": 0.47, "y": 0.39}, {"x": 0.45, "y": 0.34}, {"x": 0.43, "y": 0.41}], "value": 12.6, "secondaryValue": 9.1, "unit": "mm", "text": null, "huMean": null, "huStd": null, "color": "#ffeb3b", "isTarget": true, "targetCategory": "target", "createdAt": "2026-09-04T09:02:00Z", "createdBy": "Dr. Helena Marsh"}
+  },
+  "viewports": {
+    "VP-0": {"id": "VP-0", "seriesId": null, "currentInstanceNumber": 1, "windowCenter": 40, "windowWidth": 400, "zoom": 1.0, "panX": 0, "panY": 0, "rotation": 0, "flipH": false, "flipV": false, "invert": false, "isActive": true}
+  },
+  "toolState": {"activeTool": "windowLevel", "activeLeftClick": "windowLevel", "activeRightClick": "zoom", "activeMiddleClick": "pan", "windowLevelPreset": "softTissue"},
+  "uiState": {"currentView": "studyList", "activeStudyId": null, "leftPanelOpen": true, "rightPanelOpen": true, "leftPanelTab": "primary", "cineIsPlaying": false, "cineFrameRate": 24, "showPreferencesDialog": false, "studyListFilters": {"patientName": "", "mrn": "", "studyDate": "", "description": "", "modality": "", "accession": ""}, "studyListSort": {"field": "studyDate", "direction": "desc"}, "studyListPage": 1, "studyListPageSize": 25}
+}

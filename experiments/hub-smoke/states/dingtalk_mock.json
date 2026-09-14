@@ -1,0 +1,52 @@
+{
+  "currentUser": {"id": "user_001", "name": "林海燕", "avatar": "#2A83F0", "title": "运营主管", "department": "运营部", "departmentId": "dept_ops", "phone": "139****2210", "email": "linhaiyan@qingfeng-logistics.example", "status": "online", "isCurrentUser": true},
+  "users": [
+    {"id": "user_001", "name": "林海燕", "avatar": "#2A83F0", "title": "运营主管", "department": "运营部", "departmentId": "dept_ops", "phone": "139****2210", "email": "linhaiyan@qingfeng-logistics.example", "status": "online", "isCurrentUser": true},
+    {"id": "user_002", "name": "郭子昂", "avatar": "#F5A623", "title": "调度专员", "department": "运营部", "departmentId": "dept_ops", "phone": "137****8812", "email": "guoziang@qingfeng-logistics.example", "status": "busy", "isCurrentUser": false},
+    {"id": "user_003", "name": "沈文清", "avatar": "#00B578", "title": "财务经理", "department": "财务部", "departmentId": "dept_finance", "phone": "136****3301", "email": "shenwenqing@qingfeng-logistics.example", "status": "away", "isCurrentUser": false}
+  ],
+  "departments": [
+    {"id": "dept_root", "name": "清风冷链物流", "parentId": null, "memberCount": 3, "order": 0, "expanded": true},
+    {"id": "dept_ops", "name": "运营部", "parentId": "dept_root", "memberCount": 2, "order": 1, "expanded": true},
+    {"id": "dept_finance", "name": "财务部", "parentId": "dept_root", "memberCount": 1, "order": 2, "expanded": false}
+  ],
+  "conversations": [
+    {"id": "conv_001", "type": "group", "name": "清风冷链调度群", "avatar": "#2A83F0", "memberIds": ["user_001", "user_002", "user_003"], "lastMessage": {"text": "明早六点的冷藏车已经安排好了", "senderId": "user_002", "timestamp": "2026-09-06T10:20:00Z"}, "unreadCount": 1, "isPinned": true, "isMuted": false, "isGroup": true, "announcement": "每日调度信息请在本群同步", "createdAt": "2026-01-05T00:00:00Z"},
+    {"id": "conv_002", "type": "dm", "name": "沈文清", "avatar": "#00B578", "memberIds": ["user_001", "user_003"], "lastMessage": {"text": "八月油费报销单请今天提交", "senderId": "user_003", "timestamp": "2026-09-06T08:00:00Z"}, "unreadCount": 0, "isPinned": false, "isMuted": false, "isGroup": false, "announcement": "", "createdAt": "2026-02-10T00:00:00Z"}
+  ],
+  "messages": [
+    {"id": "msg_001", "conversationId": "conv_001", "senderId": "user_001", "type": "text", "content": "明天苏州线路需要两台冷藏车，谁来安排？", "timestamp": "2026-09-06T10:00:00Z", "readBy": ["user_001", "user_002"], "isRecalled": false, "replyTo": null},
+    {"id": "msg_002", "conversationId": "conv_001", "senderId": "user_002", "type": "text", "content": "明早六点的冷藏车已经安排好了", "timestamp": "2026-09-06T10:20:00Z", "readBy": ["user_002"], "isRecalled": false, "replyTo": "msg_001"},
+    {"id": "msg_003", "conversationId": "conv_002", "senderId": "user_003", "type": "text", "content": "八月油费报销单请今天提交", "timestamp": "2026-09-06T08:00:00Z", "readBy": ["user_001", "user_003"], "isRecalled": false, "replyTo": null}
+  ],
+  "dingMessages": [
+    {"id": "ding_001", "senderId": "user_003", "recipientIds": ["user_001", "user_002"], "content": "请今天17点前提交八月报销单", "method": "app", "timestamp": "2026-09-06T08:05:00Z", "confirmedBy": ["user_002"], "type": "received"}
+  ],
+  "approvalForms": [
+    {"id": "appr_001", "type": "费用报销", "title": "八月油费报销", "submitterId": "user_002", "status": "pending", "createdAt": "2026-09-05T15:00:00Z", "approverIds": ["user_001", "user_003"], "currentApproverId": "user_001", "fields": {"金额": "3860.00", "事由": "八月冷藏车油费"}, "comments": []}
+  ],
+  "calendarEvents": [
+    {"id": "evt_001", "title": "苏州线路发车", "startTime": "2026-09-07T06:00:00+08:00", "endTime": "2026-09-07T07:00:00+08:00", "location": "清风冷链一号仓", "creatorId": "user_002", "participantIds": ["user_001", "user_002"], "color": "#2A83F0", "isAllDay": false, "reminder": 30, "recurrence": "none", "description": "两台冷藏车"}
+  ],
+  "todoItems": [
+    {"id": "todo_001", "title": "审批郭子昂的油费报销", "description": "", "completed": false, "dueDate": "2026-09-06", "creatorId": "user_001", "assigneeId": "user_001", "priority": "high", "conversationId": null, "createdAt": "2026-09-05T15:10:00Z"}
+  ],
+  "workbenchApps": [
+    {"id": "app_approval", "name": "审批", "icon": "check", "route": "/approval", "color": "#2A83F0", "category": "办公", "badge": 1},
+    {"id": "app_attendance", "name": "考勤打卡", "icon": "clock", "route": "/attendance", "color": "#00B578", "category": "办公", "badge": 0}
+  ],
+  "announcements": [
+    {"id": "ann_001", "title": "国庆假期冷链排班", "content": "国庆期间调度组轮班，请查看排班表。", "authorId": "user_001", "publishedAt": "2026-09-04T09:00:00Z", "readBy": ["user_001"], "isTop": true}
+  ],
+  "attendanceRecords": {"checkIn": null, "checkOut": null, "history": {"2026-09-05": {"checkIn": "08:52", "checkOut": "18:10"}}},
+  "activeTab": "messages",
+  "activeConversationId": "conv_001",
+  "searchQuery": "",
+  "dingActiveTab": "received",
+  "approvalActiveTab": "pending",
+  "contactsActiveTab": "org",
+  "calendarView": "week",
+  "calendarDate": "2026-09-06T00:00:00Z",
+  "settings": {"notificationSound": true, "messagePreview": true, "dndEnabled": false, "dndStart": "22:00", "dndEnd": "08:00", "language": "中文", "fontSize": 14},
+  "drive": {"folders": [{"id": "folder_001", "name": "运输合同", "modifiedAt": "2026-08-30T10:00:00Z", "uploaderId": "user_001"}], "files": [{"id": "file_001", "name": "九月排班表.xlsx", "size": 24576, "modifiedAt": "2026-09-04T09:00:00Z", "uploaderId": "user_001"}]}
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "task": "sanmar_account-assortment-review",
+    "kind": "teacher",
+    "attempt": 1,
+    "original_class": "verification_incomplete",
+    "checkpoint": "runtime/trials/sanmar_account-assortment-review/teacher/01/RESULT.json",
+    "regraded_receipts": [
+      "runtime/teacher/sanmar_account-assortment-review/runs/16054620a5ce48ecba589c2e788ecaec/company/runtime/grades/sanmar_account-assortment-review/regraded/29b3f2fce16734c8711801d81c859cedff15752af366e18b542ed8a21a8d2b70/RESULT.json"
+    ]
+  },
+  {
+    "task": "sanmar_account-assortment-review",
+    "kind": "teacher",
+    "attempt": 2,
+    "original_class": "teacher_failed",
+    "checkpoint": "runtime/trials/sanmar_account-assortment-review/teacher/02/RESULT.json",
+    "regraded_receipts": []
+  },
+  {
+    "task": "sanmar_account-assortment-review",
+    "kind": "teacher",
+    "attempt": 3,
+    "original_class": "model_unavailable",
+    "checkpoint": "runtime/trials/sanmar_account-assortment-review/teacher/03/RESULT.json",
+    "regraded_receipts": []
+  },
+  {
+    "task": "sanmar_account-assortment-review",
+    "kind": "teacher",
+    "attempt": 4,
+    "original_class": "teacher_failed",
+    "checkpoint": "runtime/trials/sanmar_account-assortment-review/teacher/04/RESULT.json",
+    "regraded_receipts": []
+  },
+  {
+    "task": "sanmar_qualified-acquisition-review",
+    "kind": "ordinary",
+    "attempt": 1,
+    "original_class": "model_unavailable",
+    "checkpoint": "runtime/trials/sanmar_qualified-acquisition-review/ordinary/01/RESULT.json",
+    "regraded_receipts": []
+  },
+  {
+    "task": "sanmar_qualified-acquisition-review",
+    "kind": "teacher",
+    "attempt": 1,
+    "original_class": "environment_error",
+    "checkpoint": "runtime/trials/sanmar_qualified-acquisition-review/teacher/01/RESULT.json",
+    "regraded_receipts": []
+  },
+  {
+    "task": "sanmar_qualified-acquisition-review",
+    "kind": "teacher",
+    "attempt": 2,
+    "original_class": "environment_error",
+    "checkpoint": "runtime/trials/sanmar_qualified-acquisition-review/teacher/02/RESULT.json",
+    "regraded_receipts": []
+  },
+  {
+    "task": "sanmar_qualified-acquisition-review",
+    "kind": "teacher",
+    "attempt": 3,
+    "original_class": "environment_error",
+    "checkpoint": "runtime/trials/sanmar_qualified-acquisition-review/teacher/03/RESULT.json",
+    "regraded_receipts": []
+  },
+  {
+    "task": "sanmar_qualified-acquisition-review",
+    "kind": "teacher",
+    "attempt": 4,
+    "original_class": "teacher_passed",
+    "checkpoint": "runtime/trials/sanmar_qualified-acquisition-review/teacher/04/RESULT.json",
+    "regraded_receipts": [
+      "runtime/teacher/sanmar_qualified-acquisition-review/runs/7d677360b3ad462199ba5df69d336537/company/runtime/grades/sanmar_qualified-acquisition-review/regraded/67abfcf220d404b3e03143eae728da40c89b20e4b50b3613386d07a359601368/RESULT.json"
+    ]
+  }
+]

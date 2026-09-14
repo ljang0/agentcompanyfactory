@@ -1,0 +1,59 @@
+{
+  "user": {
+    "id": "user_1", "firstName": "Delphine", "lastName": "Marchetti", "email": "delphine.marchetti@northgate-advisory.example", "phone": "+1 (415) 555-0142",
+    "oneKeyTier": "Silver", "oneKeyCash": 62.40, "savedProperties": ["hotel_1"],
+    "recentSearches": [
+      { "id": "search_1", "type": "stays", "destination": "New York, NY", "checkIn": "2026-10-06", "checkOut": "2026-10-09", "guests": 1, "rooms": 1, "searchedAt": "2026-09-04T18:20:00Z" }
+    ],
+    "travelers": [
+      { "id": "traveler_1", "firstName": "Delphine", "lastName": "Marchetti", "dateOfBirth": "1985-07-22", "gender": "Female", "email": "delphine.marchetti@northgate-advisory.example", "phone": "+1 (415) 555-0142", "knownTravelerNumber": "", "frequentFlyerPrograms": [] }
+    ]
+  },
+  "hotels": [
+    {
+      "id": "hotel_1", "name": "The Northgate Residence Hotel", "type": "Hotel", "starRating": 4, "guestRating": 8.9, "guestRatingLabel": "Excellent", "reviewCount": 2,
+      "address": "310 W 44th St, New York, NY 10036", "neighborhood": "Theater District", "latitude": 40.7590, "longitude": -73.9905,
+      "images": ["https://picsum.photos/seed/ngh1a/800/500", "https://picsum.photos/seed/ngh1b/800/500"],
+      "description": "A quiet business hotel two blocks from Times Square with a rooftop lounge.",
+      "amenities": ["Free WiFi", "Fitness center", "Restaurant", "Business center"], "highlights": ["Fully refundable", "Reserve now, pay later"],
+      "distanceFromCenter": "0.4 mi from center", "memberPrice": true, "memberDiscount": 10,
+      "policies": { "checkIn": "3:00 PM", "checkOut": "11:00 AM", "cancellation": "Free cancellation before 48 hours of check-in" },
+      "rooms": [
+        { "id": "room_1_1", "name": "Executive King Room", "description": "1 King bed, City view, 320 sq ft", "bedType": "1 King Bed", "maxGuests": 2, "sqFt": 320, "pricePerNight": 229, "originalPrice": 259, "totalPrice": 687, "memberPrice": 206, "amenities": ["Free WiFi", "Air conditioning", "Desk", "Safe"], "freeCancellation": true, "breakfastIncluded": false, "payLater": true, "availability": "available" },
+        { "id": "room_1_2", "name": "Corner Suite", "description": "1 King bed, Separate living area, 520 sq ft", "bedType": "1 King Bed", "maxGuests": 3, "sqFt": 520, "pricePerNight": 389, "originalPrice": 429, "totalPrice": 1167, "memberPrice": 350, "amenities": ["Free WiFi", "Air conditioning", "Sofa bed", "Mini-bar"], "freeCancellation": true, "breakfastIncluded": true, "payLater": false, "availability": "2 left" }
+      ],
+      "reviews": [
+        { "id": "review_1_1", "author": "Priya S.", "rating": 9.0, "date": "2026-08-18", "title": "Great for work trips", "text": "Fast wifi and a real desk. Rooftop lounge is a bonus.", "travelerType": "Business traveler" },
+        { "id": "review_1_2", "author": "Marcus L.", "rating": 8.8, "date": "2026-07-30", "title": "Well located", "text": "Steps from the theaters, rooms are quiet despite the location.", "travelerType": "Couple" }
+      ]
+    }
+  ],
+  "flights": [
+    { "id": "flight_1", "airline": "Pacific Meridian Air", "airlineCode": "PM", "flightNumber": "PM 412", "departureAirport": "SFO", "departureCity": "San Francisco", "departureTime": "07:15", "arrivalAirport": "JFK", "arrivalCity": "New York", "arrivalTime": "15:50", "duration": "5h 35m", "durationMinutes": 335, "stops": 0, "stopAirports": [], "stopDurations": [], "aircraft": "Airbus A321neo", "cabinClass": "Economy", "price": 214, "originalPrice": 259, "baggageIncluded": "Personal item", "seatSelection": "Fee", "wifi": true, "power": true, "entertainment": true, "refundable": false, "changeFee": 0 },
+    { "id": "flight_2", "airline": "Pacific Meridian Air", "airlineCode": "PM", "flightNumber": "PM 419", "departureAirport": "JFK", "departureCity": "New York", "departureTime": "18:10", "arrivalAirport": "SFO", "arrivalCity": "San Francisco", "arrivalTime": "21:45", "duration": "6h 35m", "durationMinutes": 395, "stops": 0, "stopAirports": [], "stopDurations": [], "aircraft": "Airbus A321neo", "cabinClass": "Economy", "price": 226, "originalPrice": 270, "baggageIncluded": "Personal item", "seatSelection": "Fee", "wifi": true, "power": true, "entertainment": true, "refundable": false, "changeFee": 0 }
+  ],
+  "flightResults": [
+    { "id": "flightresult_1", "outbound": "flight_1", "returnFlight": "flight_2", "totalPrice": 440, "pricePerPerson": 440, "savings": 89, "cabinOptions": [ { "class": "Economy", "price": 440, "pricePerPerson": 440 }, { "class": "Premium Economy", "price": 720, "pricePerPerson": 720 } ] }
+  ],
+  "cars": [
+    { "id": "car_1", "company": "Harbor Rentals", "vehicleType": "Midsize", "vehicleName": "Honda Accord or similar", "passengers": 5, "bags": 3, "transmission": "Automatic", "pickupLocation": "JFK International Airport", "dropoffLocation": "JFK International Airport", "pricePerDay": 58, "totalPrice": 174, "features": ["Unlimited mileage", "Free cancellation"], "rating": 8.4, "reviewCount": 118 }
+  ],
+  "activities": [
+    { "id": "activity_1", "name": "Hudson River Architecture Cruise", "category": "Tours", "description": "Ninety-minute narrated cruise along the Manhattan skyline.", "location": "New York, NY", "duration": "1.5 hours", "price": 42, "originalPrice": 48, "rating": 4.7, "reviewCount": 1320, "image": "https://picsum.photos/seed/hudsoncruise/400/250", "highlights": ["Expert guide", "Free cancellation"], "freeCancellation": true }
+  ],
+  "bookings": [
+    { "id": "booking_1", "type": "hotel", "status": "upcoming", "confirmationNumber": "EXP-55120983", "itineraryNumber": "7401228817", "createdAt": "2026-09-04T18:30:00Z", "hotelId": "hotel_1", "flightId": null, "carId": null, "activityId": null, "checkIn": "2026-10-06", "checkOut": "2026-10-09", "guests": 1, "rooms": 1, "roomType": "Executive King Room", "totalCost": 687, "oneKeyCashEarned": 13.74, "paymentMethod": "Visa ending in 8821", "travelerNames": ["Delphine Marchetti"], "cancellationDeadline": "2026-10-04T23:59:00Z", "notes": "Late arrival, after 10 PM" }
+  ],
+  "searchFilters": { "destination": "New York, NY", "checkIn": "2026-10-06", "checkOut": "2026-10-09", "guests": 1, "rooms": 1, "priceMin": 0, "priceMax": 1000, "starRatings": [], "guestRatingMin": 0, "amenities": [], "propertyTypes": [], "neighborhoods": [], "sortBy": "recommended" },
+  "flightSearchFilters": { "from": "San Francisco (SFO)", "to": "New York (JFK)", "departDate": "2026-10-06", "returnDate": "2026-10-09", "tripType": "roundtrip", "travelers": 1, "cabinClass": "Economy", "stops": "any", "airlines": [], "departTimeRange": "any", "priceMax": 1000, "sortBy": "recommended" },
+  "carSearchFilters": { "pickupLocation": "JFK International Airport", "pickupDate": "2026-10-06", "dropoffDate": "2026-10-09", "pickupTime": "10:00", "dropoffTime": "10:00", "vehicleTypes": [], "companies": [], "transmission": "any", "priceMax": 200, "sortBy": "recommended" },
+  "trendingDestinations": [
+    { "id": "dest_1", "name": "Port Selwyn", "country": "United States", "image": "https://picsum.photos/seed/portselwyn/400/250", "averagePrice": 172, "tagline": "Harbor town weekends" },
+    { "id": "dest_2", "name": "New York City", "country": "United States", "image": "https://picsum.photos/seed/nyc/400/250", "averagePrice": 229, "tagline": "The city that never sleeps" }
+  ],
+  "currentView": "home",
+  "selectedHotel": null,
+  "selectedFlight": null,
+  "cart": null,
+  "recentlyViewed": ["hotel_1"]
+}

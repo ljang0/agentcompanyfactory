@@ -1,0 +1,292 @@
+{
+  "app_id": "feishu_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activeContactId",
+    "activeConversationId",
+    "activeModule",
+    "approvals",
+    "calendars",
+    "conversations",
+    "currentUser",
+    "departments",
+    "documents",
+    "events",
+    "favorites",
+    "messages",
+    "searchQuery",
+    "settings",
+    "sidebarCollapsed",
+    "spaces",
+    "tasks",
+    "threadPanelMessageId",
+    "users"
+  ],
+  "observed": [
+    "activeContactId",
+    "activeConversationId",
+    "activeModule",
+    "approvals",
+    "calendars",
+    "conversations",
+    "currentUser",
+    "departments",
+    "documents",
+    "events",
+    "favorites",
+    "meetings",
+    "messages",
+    "searchQuery",
+    "settings",
+    "sidebarCollapsed",
+    "spaces",
+    "tasks",
+    "threadPanelMessageId",
+    "users"
+  ],
+  "undocumented_so_unseedable": [
+    "meetings"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 14,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 13,
+      "record_fields": [
+        "id",
+        "name",
+        "englishName",
+        "avatar",
+        "avatarColor",
+        "initials",
+        "email",
+        "phone",
+        "department",
+        "title",
+        "status",
+        "statusText",
+        "statusEmoji",
+        "isCurrentUser"
+      ],
+      "keyed_by_id": false
+    },
+    "conversations": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "type",
+        "name",
+        "avatar",
+        "memberCount",
+        "members",
+        "lastMessage",
+        "unreadCount",
+        "isPinned",
+        "isMuted",
+        "isDone",
+        "topNotice",
+        "labels",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "messages": {
+      "kind": "object",
+      "count": 12,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "documents": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "title",
+        "type",
+        "icon",
+        "ownerId",
+        "collaborators",
+        "content",
+        "spaceId",
+        "parentId",
+        "isStar",
+        "lastEditedBy",
+        "lastEditedAt",
+        "createdAt",
+        "viewCount",
+        "wordCount"
+      ],
+      "keyed_by_id": false
+    },
+    "spaces": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "ownerId",
+        "documents",
+        "icon"
+      ],
+      "keyed_by_id": false
+    },
+    "calendars": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "color",
+        "isDefault",
+        "isVisible",
+        "ownerId"
+      ],
+      "keyed_by_id": false
+    },
+    "events": {
+      "kind": "array",
+      "count": 11,
+      "record_fields": [
+        "id",
+        "title",
+        "description",
+        "startTime",
+        "endTime",
+        "isAllDay",
+        "location",
+        "meetingLink",
+        "organizerId",
+        "attendees",
+        "color",
+        "reminder",
+        "isRecurring",
+        "calendarId"
+      ],
+      "keyed_by_id": false
+    },
+    "meetings": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "title",
+        "status",
+        "startTime",
+        "endTime",
+        "organizerId",
+        "attendees",
+        "meetingLink",
+        "meetingNo",
+        "hasRecording",
+        "isRecurring"
+      ],
+      "keyed_by_id": false
+    },
+    "departments": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "name",
+        "parentId",
+        "memberIds",
+        "headId"
+      ],
+      "keyed_by_id": false
+    },
+    "tasks": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "title",
+        "description",
+        "status",
+        "priority",
+        "assigneeId",
+        "creatorId",
+        "dueDate",
+        "tags",
+        "relatedDocId",
+        "relatedConvId",
+        "createdAt",
+        "completedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "approvals": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "type",
+        "title",
+        "status",
+        "applicantId",
+        "approverId",
+        "details",
+        "createdAt",
+        "updatedAt",
+        "comment"
+      ],
+      "keyed_by_id": false
+    },
+    "activeConversationId": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "activeModule": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "searchQuery": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": ""
+    },
+    "threadPanelMessageId": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    },
+    "sidebarCollapsed": {
+      "kind": "boolean",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "favorites": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "activeContactId": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    },
+    "settings": {
+      "kind": "object",
+      "count": 13,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

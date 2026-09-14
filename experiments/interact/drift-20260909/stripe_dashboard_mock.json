@@ -1,0 +1,333 @@
+{
+  "app_id": "stripe_dashboard_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "balance",
+    "balanceTransactions",
+    "business",
+    "currentUser",
+    "customers",
+    "disputes",
+    "events",
+    "invoices",
+    "metrics",
+    "paymentMethods",
+    "payments",
+    "payouts",
+    "prices",
+    "products",
+    "refunds",
+    "searchQuery",
+    "selectedDateRange",
+    "subscriptions",
+    "testMode"
+  ],
+  "observed": [
+    "balance",
+    "balanceTransactions",
+    "business",
+    "currentUser",
+    "customers",
+    "disputes",
+    "events",
+    "invoices",
+    "metrics",
+    "paymentMethods",
+    "payments",
+    "payouts",
+    "prices",
+    "products",
+    "refunds",
+    "searchQuery",
+    "selectedDateRange",
+    "subscriptions",
+    "testMode"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "business": {
+      "kind": "object",
+      "count": 7,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "currentUser": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "balance": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "customers": {
+      "kind": "array",
+      "count": 18,
+      "record_fields": [
+        "id",
+        "name",
+        "email",
+        "phone",
+        "description",
+        "address",
+        "balance",
+        "currency",
+        "default_payment_method",
+        "metadata",
+        "created",
+        "livemode",
+        "delinquent",
+        "total_spent",
+        "payments_count"
+      ],
+      "keyed_by_id": false
+    },
+    "payments": {
+      "kind": "array",
+      "count": 45,
+      "record_fields": [
+        "id",
+        "amount",
+        "currency",
+        "status",
+        "description",
+        "customer",
+        "customer_email",
+        "customer_name",
+        "payment_method",
+        "amount_received",
+        "amount_refunded",
+        "refunded",
+        "disputed",
+        "captured",
+        "receipt_email",
+        "receipt_url",
+        "metadata",
+        "created",
+        "livemode",
+        "risk_score",
+        "risk_level",
+        "outcome",
+        "invoice"
+      ],
+      "keyed_by_id": false
+    },
+    "products": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "active",
+        "images",
+        "default_price",
+        "metadata",
+        "created",
+        "updated",
+        "unit_label"
+      ],
+      "keyed_by_id": false
+    },
+    "prices": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "product",
+        "active",
+        "currency",
+        "unit_amount",
+        "billing_scheme",
+        "type",
+        "recurring",
+        "nickname",
+        "metadata",
+        "created"
+      ],
+      "keyed_by_id": false
+    },
+    "invoices": {
+      "kind": "array",
+      "count": 22,
+      "record_fields": [
+        "id",
+        "number",
+        "customer",
+        "customer_name",
+        "customer_email",
+        "status",
+        "amount_due",
+        "amount_paid",
+        "amount_remaining",
+        "currency",
+        "description",
+        "due_date",
+        "collection_method",
+        "billing_reason",
+        "subscription",
+        "lines",
+        "subtotal",
+        "tax",
+        "total",
+        "period_start",
+        "period_end",
+        "created",
+        "paid_at",
+        "metadata"
+      ],
+      "keyed_by_id": false
+    },
+    "subscriptions": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "customer",
+        "customer_name",
+        "customer_email",
+        "status",
+        "items",
+        "current_period_start",
+        "current_period_end",
+        "cancel_at_period_end",
+        "canceled_at",
+        "ended_at",
+        "trial_start",
+        "trial_end",
+        "collection_method",
+        "default_payment_method",
+        "latest_invoice",
+        "created",
+        "metadata"
+      ],
+      "keyed_by_id": false
+    },
+    "payouts": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "amount",
+        "currency",
+        "status",
+        "arrival_date",
+        "method",
+        "type",
+        "description",
+        "destination",
+        "created",
+        "metadata"
+      ],
+      "keyed_by_id": false
+    },
+    "disputes": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "amount",
+        "currency",
+        "charge",
+        "customer",
+        "reason",
+        "status",
+        "evidence_due_by",
+        "created",
+        "metadata"
+      ],
+      "keyed_by_id": false
+    },
+    "refunds": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "amount",
+        "currency",
+        "charge",
+        "reason",
+        "status",
+        "created",
+        "metadata"
+      ],
+      "keyed_by_id": false
+    },
+    "balanceTransactions": {
+      "kind": "array",
+      "count": 52,
+      "record_fields": [
+        "id",
+        "amount",
+        "currency",
+        "type",
+        "fee",
+        "net",
+        "status",
+        "available_on",
+        "source",
+        "description",
+        "created"
+      ],
+      "keyed_by_id": false
+    },
+    "events": {
+      "kind": "array",
+      "count": 35,
+      "record_fields": [
+        "id",
+        "type",
+        "created",
+        "data",
+        "request",
+        "livemode"
+      ],
+      "keyed_by_id": false
+    },
+    "paymentMethods": {
+      "kind": "array",
+      "count": 16,
+      "record_fields": [
+        "id",
+        "type",
+        "card",
+        "billing_details",
+        "created",
+        "customer"
+      ],
+      "keyed_by_id": false
+    },
+    "testMode": {
+      "kind": "boolean",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "searchQuery": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": ""
+    },
+    "selectedDateRange": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "metrics": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": [
+        "grossVolume",
+        "grossVolumeChart"
+      ],
+      "keyed_by_id": true
+    }
+  }
+}

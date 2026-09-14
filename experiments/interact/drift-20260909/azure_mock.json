@@ -1,0 +1,281 @@
+{
+  "app_id": "azure_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activityLog",
+    "allServicesCategories",
+    "appServices",
+    "costManagement",
+    "currentUser",
+    "favorites",
+    "networkSecurityGroups",
+    "notifications",
+    "portalSettings",
+    "recentResources",
+    "resourceGroups",
+    "sqlDatabases",
+    "storageAccounts",
+    "subscriptions",
+    "tenant",
+    "virtualMachines",
+    "virtualNetworks"
+  ],
+  "observed": [
+    "activityLog",
+    "allServicesCategories",
+    "appServices",
+    "costManagement",
+    "currentUser",
+    "favorites",
+    "networkSecurityGroups",
+    "notifications",
+    "portalSettings",
+    "recentResources",
+    "resourceGroups",
+    "sqlDatabases",
+    "storageAccounts",
+    "subscriptions",
+    "tenant",
+    "virtualMachines",
+    "virtualNetworks"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "tenant": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "subscriptions": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "subscriptionId",
+        "displayName",
+        "state",
+        "tenantId",
+        "spendingLimit"
+      ],
+      "keyed_by_id": false
+    },
+    "resourceGroups": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "subscriptionId",
+        "location",
+        "tags",
+        "provisioningState",
+        "createdDate"
+      ],
+      "keyed_by_id": false
+    },
+    "virtualMachines": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "resourceGroup",
+        "subscriptionId",
+        "location",
+        "status",
+        "powerState",
+        "size",
+        "osType",
+        "osImage",
+        "publicIpAddress",
+        "privateIpAddress",
+        "virtualNetwork",
+        "subnet",
+        "networkSecurityGroup",
+        "osDiskSizeGb",
+        "osDiskType",
+        "computerName",
+        "adminUsername",
+        "tags",
+        "createdDate"
+      ],
+      "keyed_by_id": false
+    },
+    "storageAccounts": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "resourceGroup",
+        "subscriptionId",
+        "location",
+        "kind",
+        "performance",
+        "replication",
+        "accessTier",
+        "status",
+        "primaryEndpoint",
+        "createdDate",
+        "tags",
+        "containers"
+      ],
+      "keyed_by_id": false
+    },
+    "virtualNetworks": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "resourceGroup",
+        "subscriptionId",
+        "location",
+        "addressSpace",
+        "status",
+        "subnets",
+        "tags",
+        "createdDate"
+      ],
+      "keyed_by_id": false
+    },
+    "networkSecurityGroups": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "resourceGroup",
+        "subscriptionId",
+        "location",
+        "inboundRules",
+        "outboundRules",
+        "tags",
+        "createdDate"
+      ],
+      "keyed_by_id": false
+    },
+    "appServices": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "resourceGroup",
+        "subscriptionId",
+        "location",
+        "status",
+        "kind",
+        "defaultHostName",
+        "appServicePlan",
+        "runtime",
+        "httpsOnly",
+        "tags",
+        "createdDate"
+      ],
+      "keyed_by_id": false
+    },
+    "sqlDatabases": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "name",
+        "resourceGroup",
+        "subscriptionId",
+        "location",
+        "serverName",
+        "status",
+        "pricingTier",
+        "maxSizeGb",
+        "collation",
+        "tags",
+        "createdDate"
+      ],
+      "keyed_by_id": false
+    },
+    "costManagement": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "activityLog": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "timestamp",
+        "operation",
+        "operationName",
+        "status",
+        "level",
+        "resourceGroup",
+        "resourceName",
+        "resourceType",
+        "initiatedBy"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "title",
+        "message",
+        "level",
+        "timestamp",
+        "read",
+        "resourceName"
+      ],
+      "keyed_by_id": false
+    },
+    "favorites": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "icon",
+        "path"
+      ],
+      "keyed_by_id": false
+    },
+    "allServicesCategories": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "category",
+        "services"
+      ],
+      "keyed_by_id": false
+    },
+    "recentResources": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "name",
+        "type",
+        "resourceGroup",
+        "lastViewed"
+      ],
+      "keyed_by_id": false
+    },
+    "portalSettings": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

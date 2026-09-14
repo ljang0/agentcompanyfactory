@@ -1,0 +1,175 @@
+{
+ "company": {
+  "name": "Northside Association Management",
+  "address": "400 Harbor St, Baltimore, MD 21230",
+  "phone": "(410) 555-0100",
+  "email": "accounting@northside-analogue.example",
+  "website": "www.northside-analogue.example",
+  "industry": "Property Management",
+  "taxId": "52-1234567",
+  "fiscalYearStart": "January",
+  "accountingMethod": "Accrual"
+ },
+ "customers": [
+  {
+   "id": "c1",
+   "name": "Harbor View Condominium Association",
+   "company": "Harbor View COA",
+   "email": "board@harborview.example",
+   "phone": "(410) 555-0111",
+   "address": "12 Pier Rd",
+   "balance": 18400.0,
+   "notes": "Monthly management fee",
+   "isActive": true,
+   "createdAt": "2024-02-01"
+  }
+ ],
+ "vendors": [
+  {
+   "id": "v1",
+   "name": "Chesapeake Elevator Service",
+   "company": "Chesapeake Elevator",
+   "email": "ar@chesapeake-elev.example",
+   "phone": "(410) 555-0122",
+   "address": "9 Lift Way",
+   "balance": 3200.0,
+   "isActive": true,
+   "createdAt": "2024-03-01"
+  }
+ ],
+ "products": [
+  {
+   "id": "p1",
+   "name": "Management fee",
+   "description": "Monthly association management",
+   "type": "Service",
+   "price": 6500.0,
+   "cost": 0,
+   "category": "Services",
+   "sku": "MGMT-01",
+   "isActive": true,
+   "isTaxable": false,
+   "quantityOnHand": 0
+  }
+ ],
+ "invoices": [
+  {
+   "id": "inv1",
+   "number": "1041",
+   "customerId": "c1",
+   "date": "2026-09-01",
+   "dueDate": "2026-09-30",
+   "items": [
+    {
+     "id": "li1",
+     "productId": "p1",
+     "description": "September management fee",
+     "qty": 1,
+     "rate": 6500.0,
+     "amount": 6500.0
+    }
+   ],
+   "subtotal": 6500.0,
+   "tax": 0,
+   "total": 6500.0,
+   "status": "Open",
+   "paidAmount": 0,
+   "paidDate": null,
+   "terms": "Net 30",
+   "message": "",
+   "createdAt": "2026-09-01"
+  }
+ ],
+ "estimates": [],
+ "expenses": [
+  {
+   "id": "exp1",
+   "date": "2026-09-03",
+   "payee": "Chesapeake Elevator Service",
+   "vendorId": "v1",
+   "category": "Repairs",
+   "amount": 1450.0,
+   "description": "Elevator quarterly inspection",
+   "accountId": "acc1",
+   "receipt": null,
+   "isBillable": true,
+   "customerId": "c1",
+   "status": "Unbilled"
+  }
+ ],
+ "bills": [
+  {
+   "id": "bill1",
+   "vendorId": "v1",
+   "number": "CE-7781",
+   "date": "2026-09-03",
+   "dueDate": "2026-10-03",
+   "items": [
+    {
+     "id": "bi1",
+     "productId": null,
+     "description": "Quarterly inspection",
+     "qty": 1,
+     "rate": 1450.0,
+     "amount": 1450.0
+    }
+   ],
+   "total": 1450.0,
+   "status": "Open",
+   "paidDate": null
+  }
+ ],
+ "accounts": [
+  {
+   "id": "acc1",
+   "number": "1000",
+   "name": "Operating Checking",
+   "type": "Bank",
+   "detailType": "Checking",
+   "balance": 92340.55,
+   "bankBalance": 92340.55,
+   "isActive": true
+  }
+ ],
+ "transactions": [
+  {
+   "id": "tx1",
+   "accountId": "acc1",
+   "date": "2026-09-02",
+   "description": "HARBOR VIEW COA ACH",
+   "payee": "Harbor View COA",
+   "amount": 6500.0,
+   "type": "Deposit",
+   "category": "Income",
+   "matchedTo": null,
+   "status": "For review",
+   "isReconciled": false
+  }
+ ],
+ "employees": [
+  {
+   "id": "emp1",
+   "name": "Marcus Bell",
+   "email": "marcus@northside-analogue.example",
+   "role": "Association Accountant",
+   "department": "Accounting",
+   "salary": 68000,
+   "payFrequency": "Biweekly",
+   "startDate": "2023-05-15",
+   "isActive": true
+  }
+ ],
+ "projects": [],
+ "reportCategories": [
+  {
+   "name": "Business overview",
+   "reports": [
+    {
+     "id": "r1",
+     "name": "Profit and Loss",
+     "starred": true
+    }
+   ]
+  }
+ ]
+}

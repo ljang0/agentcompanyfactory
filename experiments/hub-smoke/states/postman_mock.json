@@ -1,0 +1,70 @@
+{
+  "workspace": { "id": "ws_larkwood", "name": "Larkwood Logistics Workspace", "type": "team" },
+  "collections": [
+    {
+      "id": "col_1", "name": "Larkwood Parcel Tracking API", "description": "Public tracking endpoints for Larkwood Logistics (fictional).",
+      "auth": { "type": "apikey", "apikey": { "key": "X-Api-Key", "value": "{{apiKey}}", "addTo": "header" } }, "variables": [],
+      "folders": [
+        {
+          "id": "folder_1", "name": "Shipments", "description": "", "auth": { "type": "inherit" },
+          "requests": [
+            {
+              "id": "req_1", "name": "Get Shipment Status", "description": "Returns the latest scan for a tracking number.", "method": "GET", "url": "{{baseUrl}}/v1/shipments/{{trackingNumber}}",
+              "params": [], "auth": { "type": "inherit" },
+              "headers": [ { "id": "h1", "key": "Accept", "value": "application/json", "description": "", "enabled": true } ],
+              "body": { "type": "none", "content": "", "formData": [], "urlencoded": [], "graphql": { "query": "", "variables": "" } },
+              "preRequest": "", "tests": "pm.test('Status is 200', function() {\n    pm.response.to.have.status(200);\n});"
+            },
+            {
+              "id": "req_2", "name": "Create Pickup Request", "description": "", "method": "POST", "url": "{{baseUrl}}/v1/pickups",
+              "params": [], "auth": { "type": "inherit" },
+              "headers": [ { "id": "h1", "key": "Content-Type", "value": "application/json", "description": "", "enabled": true } ],
+              "body": { "type": "json", "content": "{\n  \"address\": \"14 Quay Street, Larkwood\",\n  \"window\": \"09:00-12:00\"\n}", "formData": [], "urlencoded": [], "graphql": { "query": "", "variables": "" } },
+              "preRequest": "", "tests": "pm.test('Status is 201', function() {\n    pm.response.to.have.status(201);\n});"
+            }
+          ]
+        }
+      ],
+      "requests": [],
+      "createdAt": "2026-06-02T09:00:00Z", "updatedAt": "2026-09-05T15:30:00Z"
+    }
+  ],
+  "environments": [
+    { "id": "env_1", "name": "Staging", "color": "#00AA55", "variables": [
+      { "id": "v1", "key": "baseUrl", "value": "https://api.staging.larkwood-logistics.example", "description": "Base URL", "enabled": true },
+      { "id": "v2", "key": "apiKey", "value": "stg-key-7f3a2c", "description": "API key", "enabled": true },
+      { "id": "v3", "key": "trackingNumber", "value": "LW-2026-000418", "description": "Sample tracking number", "enabled": true }
+    ], "createdAt": "2026-06-02T09:10:00Z" }
+  ],
+  "activeEnvironmentId": "env_1",
+  "tabs": [
+    {
+      "id": "tab_1", "type": "request", "name": "Get Shipment Status", "method": "GET", "requestId": "req_1", "collectionId": "col_1", "isDirty": false,
+      "request": {
+        "method": "GET", "url": "{{baseUrl}}/v1/shipments/{{trackingNumber}}", "params": [], "auth": { "type": "inherit" },
+        "headers": [ { "id": "h1", "key": "Accept", "value": "application/json", "description": "", "enabled": true } ],
+        "body": { "type": "none", "content": "", "formData": [], "urlencoded": [], "graphql": { "query": "", "variables": "" } },
+        "preRequest": "", "tests": "pm.test('Status is 200', function() {\n    pm.response.to.have.status(200);\n});"
+      },
+      "response": null
+    }
+  ],
+  "activeTabId": "tab_1",
+  "currentRequest": {
+    "method": "GET", "url": "{{baseUrl}}/v1/shipments/{{trackingNumber}}", "params": [], "auth": { "type": "inherit" },
+    "headers": [ { "id": "h1", "key": "Accept", "value": "application/json", "description": "", "enabled": true } ],
+    "body": { "type": "none", "content": "", "formData": [], "urlencoded": [], "graphql": { "query": "", "variables": "" } },
+    "preRequest": "", "tests": "pm.test('Status is 200', function() {\n    pm.response.to.have.status(200);\n});"
+  },
+  "activeRequestId": "req_1",
+  "response": null,
+  "history": [
+    { "id": "hist_1", "timestamp": 1788780000000, "method": "GET", "url": "https://api.staging.larkwood-logistics.example/v1/shipments/LW-2026-000418", "statusCode": 200, "responseTime": 188 },
+    { "id": "hist_2", "timestamp": 1788776400000, "method": "POST", "url": "https://api.staging.larkwood-logistics.example/v1/pickups", "statusCode": 201, "responseTime": 264 }
+  ],
+  "globalVariables": [
+    { "id": "gv1", "key": "clientVersion", "value": "1.4.2", "description": "Tracking client version", "enabled": true }
+  ],
+  "sidebarPanel": "collections",
+  "splitRatio": 50
+}

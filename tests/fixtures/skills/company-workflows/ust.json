@@ -1,0 +1,766 @@
+{
+  "skill": "company-workflows",
+  "provenance": {
+    "sources": [
+      {
+        "path": "companies/ust/company.json",
+        "sha256": "e7234590d4d6163ec2aeb69b830a3cf39ff8ac681b510781438df3e336c06eea"
+      },
+      {
+        "path": "companies/ust/tasks/ust_shared-cost-allocation/workflow.json",
+        "sha256": "802fa4f4b70a5d371c5cb964c720b2b98a0ad2365b3edd53f372804d6d889033"
+      },
+      {
+        "path": "data/sources/a30873dedfc9d0eccbd961c7a056eec85fbb37c3d082a63295efbbc6952879fb.json",
+        "sha256": "cd50e2acbdb2b81a50d88c53c6641c2d4860238757d2c5d8fec950f1552a3f51"
+      },
+      {
+        "path": "data/sources/a30873dedfc9d0eccbd961c7a056eec85fbb37c3d082a63295efbbc6952879fb.json",
+        "sha256": "cd50e2acbdb2b81a50d88c53c6641c2d4860238757d2c5d8fec950f1552a3f51"
+      },
+      {
+        "path": "data/sources/7f0013ceabf6c3438c3dba9482fe8fed173f996dc6d0680d7ebbf78bf62bdb93.json",
+        "sha256": "36e6aa7dd9b647f5461a56ba959ae4f508248ebf6e1c87a127658cf70dcb3320"
+      },
+      {
+        "path": "data/sources/7f0013ceabf6c3438c3dba9482fe8fed173f996dc6d0680d7ebbf78bf62bdb93.json",
+        "sha256": "36e6aa7dd9b647f5461a56ba959ae4f508248ebf6e1c87a127658cf70dcb3320"
+      },
+      {
+        "path": "data/sources/7f0013ceabf6c3438c3dba9482fe8fed173f996dc6d0680d7ebbf78bf62bdb93.json",
+        "sha256": "36e6aa7dd9b647f5461a56ba959ae4f508248ebf6e1c87a127658cf70dcb3320"
+      },
+      {
+        "path": "data/sources/ffd46df4f50e41f0ee4e306f2a363a7c2b39869a34697d4d460dfbc4533ed03b.json",
+        "sha256": "8c17c1055c2bcea0cf0082be3b1dcb4547f474404d115393aacb0dfc5cd07567"
+      },
+      {
+        "path": "data/sources/ffd46df4f50e41f0ee4e306f2a363a7c2b39869a34697d4d460dfbc4533ed03b.json",
+        "sha256": "8c17c1055c2bcea0cf0082be3b1dcb4547f474404d115393aacb0dfc5cd07567"
+      }
+    ],
+    "changes": "Trimmed to one task and a few native records. Calibration tasks are explicitly narrowed exercises derived from that task; their answers and planted defects are hand-authored test data, not accepted production outcomes."
+  },
+  "input": {
+    "company": {
+      "schema_version": "1",
+      "id": "ust",
+      "name": "Seacliff Technology Advisors",
+      "real_firm": "UST",
+      "website": "https://www.ust.com/",
+      "sector": "Professional, Scientific, and Technical Services",
+      "naics": "541512",
+      "location": "Modeled US advisory unit: Aliso Viejo, California, serving US enterprise clients remotely. UST's headquarters location is sourced; the fictional unit's location and remit are synthetic.",
+      "operations": "UST provides technology transformation services. Its captured FinOps case studies describe resource ownership mapping, pricing recommendations, cloud budgets and forecasts, and coordinated optimization. FinOps means cloud financial management connecting financial and technical decisions. Seacliff Technology Advisors is a fictional analogue modeling a bounded US advisory unit. Its three-person pod serves two continuing US enterprise technology clients whose finance and engineering organizations consume its recommendations. Synthetic scale: 16 cloud accounts, approximately 45 application services and $800,000 combined monthly cloud expenditure. Ordinary work includes weekly consumption reviews, investigation of six to ten new cost findings per week, two monthly client reporting packages, allocation maintenance, quarterly commitment assessments and follow-up on previously implemented optimizations. Eighteen months of billing and decision history establish continuing relationships beyond individual episodes. Work products include reproducible financial models, ownership mappings, technical assessments, savings reconciliations and actionable recommendations. The manager integrates financial and technical findings into internal advice; customers retain purchasing, production-change and accounting authority. This pod does not represent UST's entire business or provide round-the-clock production support.",
+      "evidence": [
+        {
+          "id": "core-identity",
+          "kind": "sourced",
+          "text": "UST identifies itself as an AI and technology transformation solutions company.",
+          "source_url": "https://www.prnewswire.com/news-releases/ust-opens-new-global-headquarters-in-aliso-viejo-california-302837637.html",
+          "quote": "a leading AI and technology transformation solutions company",
+          "basis": "Read in the supplied full captured text of the UST-issued announcement dated July 30, 2026. This supports the firm's stated service identity. The supplied sector is retained as an analytical classification, not a classification quoted by UST. No new web research was conducted."
+        },
+        {
+          "id": "us-location",
+          "kind": "sourced",
+          "text": "UST announced a global headquarters in Aliso Viejo, California, US.",
+          "source_url": "https://www.prnewswire.com/news-releases/ust-opens-new-global-headquarters-in-aliso-viejo-california-302837637.html",
+          "quote": "global headquarters in Aliso Viejo, California, US",
+          "basis": "The supplied captured July 30, 2026 announcement supports this US location. It does not locate the case-study delivery teams or establish a FinOps reporting line."
+        },
+        {
+          "id": "resource-ownership",
+          "kind": "sourced",
+          "text": "UST's consultants designed resource tagging and business-unit mapping for a technology-company engagement.",
+          "source_url": "https://www.ust.com/en/insights/ust-helped-global-tech-company-streamline-cloud-management-saved-one-point-five-million-dollar-per-year",
+          "quote": "tag cloud assets and map cloud instances to business units",
+          "basis": "Read in the transformation section of the supplied captured case study. This supports ownership-allocation advisory capability, not a particular staffing structure."
+        },
+        {
+          "id": "cloud-budgeting",
+          "kind": "sourced",
+          "text": "UST reports that the technology-company engagement enabled customer cloud forecasting and budgeting.",
+          "source_url": "https://www.ust.com/en/insights/ust-helped-global-tech-company-streamline-cloud-management-saved-one-point-five-million-dollar-per-year",
+          "quote": "forecast costs and create budgets for cloud usage",
+          "basis": "The supplied captured impact section describes a resulting customer capability. It does not establish UST employees' authority to approve customer budgets."
+        },
+        {
+          "id": "pricing-options",
+          "kind": "sourced",
+          "text": "UST recommended lower-cost reserved-instance pricing among the engagement's cost-efficiency strategies.",
+          "source_url": "https://www.ust.com/en/insights/ust-helped-global-tech-company-streamline-cloud-management-saved-one-point-five-million-dollar-per-year",
+          "quote": "lower cost reserve instances",
+          "basis": "The supplied captured cost-efficiencies paragraph places these instances among UST's recommendations. It does not establish specific rates, purchase mechanics or purchasing authority."
+        },
+        {
+          "id": "cross-functional-finops",
+          "kind": "sourced",
+          "text": "UST describes PACE FinOps supporting coordinated engineering, finance and CloudOps work in a healthcare federation's AWS environment.",
+          "source_url": "https://www.ust.com/en/insights/ust-pace-finops-delivers-dollar2m-in-annualized-aws-savings-for-a-leading-healthcare-federation",
+          "quote": "engineering, finance, and CloudOps teams act on cloud spend in real time",
+          "basis": "Read in the solutions section of the supplied captured case study. These are functions involved in a client engagement, not evidence of three UST departments or individual job titles."
+        },
+        {
+          "id": "prioritized-optimization",
+          "kind": "sourced",
+          "text": "UST reports converting AWS consumption information into prioritized actions in that engagement.",
+          "source_url": "https://www.ust.com/en/insights/ust-pace-finops-delivers-dollar2m-in-annualized-aws-savings-for-a-leading-healthcare-federation",
+          "quote": "AWS consumption data was converted into prioritized actions",
+          "basis": "The supplied captured solutions section supports an analysis-to-action cycle. It does not establish a particular task tracker, approval sequence or savings-verification method."
+        },
+        {
+          "id": "operating-model",
+          "kind": "inferred",
+          "text": "A recurring cloud financial management advisory service plausibly combines financial modeling, technical interpretation and managerial judgment.",
+          "source_url": "",
+          "quote": "",
+          "basis": "Ownership allocation, budgets, pricing recommendations and optimization depend on one another. Financial recommendations require technically eligible demand; engineering recommendations require financial consequences; managerial judgment resolves competing constraints. The organizational structure and occupational mappings are modeling choices rather than a verified UST organization chart. NAICS 541512 classifies the modeled systems-advisory scope."
+        },
+        {
+          "id": "synthetic-unit",
+          "kind": "synthetic",
+          "text": "Seacliff's US advisory pod comprises a service manager, a cloud financial analyst and a cloud operations engineer serving two continuing enterprise clients.",
+          "source_url": "",
+          "quote": "",
+          "basis": "The fictional name, location, staffing, 16 accounts, approximately 45 services, $800,000 monthly spend, routine workload and eighteen-month history are retained scenario assumptions. They describe a continuing bounded unit and are not real-company counts."
+        },
+        {
+          "id": "synthetic-authority",
+          "kind": "synthetic",
+          "text": "The pod approves internal advisory positions; customers retain purchasing, production-change and accounting-posting authority.",
+          "source_url": "",
+          "quote": "",
+          "basis": "This establishes the retained digital advisory boundary. Necessary customer instructions, commercial terms, prior approvals and completed-change evidence exist initially. The manager receives an objective and creates the working plan without a prescribed delegation sequence."
+        },
+        {
+          "id": "workspace-design",
+          "kind": "synthetic",
+          "text": "The analogue uses the five mandatory collaboration applications plus proposed Google Sheets, ServiceNow and AWS Console substitutions.",
+          "source_url": "",
+          "quote": "",
+          "basis": "Frozen search_catalog and read_app_schema tools were used during this repair to inspect relevant documentation for the eight applications. Documented records support the proposed workspace design, not UST adoption or deployed behavior. Calendar remains required in every episode. The shared-cost-allocation episode requires seven applications; savings-realization and commitment-economics require eight. UST PACE remains an unimplemented reference capability."
+        },
+        {
+          "id": "scenario-cycles",
+          "kind": "synthetic",
+          "text": "Complementary episodes examine shared-cost allocation, savings realization and commitment economics using populated historical workspaces.",
+          "source_url": "",
+          "quote": "",
+          "basis": "These retained cycles extend the sourced operating model. Allocation rules, comparison methods, demand scenarios and evidence thresholds are stable episode records rather than disclosed UST procedures. Shared-cost allocation chooses distribution of an incurred pool; savings realization attributes historical changes and qualifies future benefits; commitment economics compares prospective contractual exposure."
+        },
+        {
+          "id": "execution-contract",
+          "kind": "synthetic",
+          "text": "Accessible onboarding defines execution terminology and permits attributable collaboration through the episode's available applications.",
+          "source_url": "",
+          "quote": "",
+          "basis": "The repair removes an undisclosed Slack-only reporting requirement. Managerial planning, specialist findings and integrated decisions remain required, but equivalent attributable collaboration is accepted through permitted applications. Onboarding must explain computer-use automation, virtual machines, Bash and Coordinated Universal Time before using their abbreviations."
+        }
+      ],
+      "workers": [
+        {
+          "id": "finops-manager",
+          "title": "Cloud Financial Management Service Manager",
+          "soc": "11-3021",
+          "responsibility": "Receive the advisory objective, create the working plan and coordinate specialist contributions. Decide the firm's recommended allocation policy, treatment of disputed savings and commitment exposure. Integrate accepted findings into forecasts, customer advice and continuing follow-up obligations.",
+          "information_access": [
+            "Engagement scope, customer objectives, decision limits and service history",
+            "Shared billing exports, commercial terms and financial models",
+            "Architecture, utilization and completed-change evidence",
+            "ServiceNow records and specialist work notes",
+            "Shared correspondence, chat, calendars and advisory documents",
+            "Focal AWS inventory and billing summaries when AWS Console is included"
+          ],
+          "authority": "Approve internal recommendations and allocate pod effort within the engagement remit. Resolve competing proposals while preserving material limitations. Cannot purchase customer commitments, authorize customer production changes or post customer charges.",
+          "evidence_ids": [
+            "operating-model",
+            "synthetic-unit",
+            "synthetic-authority",
+            "execution-contract"
+          ]
+        },
+        {
+          "id": "cloud-financial-analyst",
+          "title": "Cloud Financial Analyst",
+          "soc": "13-2051",
+          "responsibility": "Reconcile cloud expenditure, compare allocation alternatives, model commitment economics and downside exposure, and separate recurring savings from demand changes and billing adjustments. Explain how engineering findings change economic conclusions and revise downstream forecasts.",
+          "information_access": [
+            "Historical billing exports, invoices, credits and cost definitions",
+            "Commitment terms, eligible-use rules and frozen rate schedules",
+            "Business-unit budgets, demand scenarios and allocation policies",
+            "Resource identifiers and engineering assessments",
+            "ServiceNow change histories",
+            "Shared workbooks, documents, correspondence, calendars and chat"
+          ],
+          "authority": "Own analytical methods and recommend financial treatments within supplied policy. Challenge unsupported allocation and savings claims. Update working models and advisory records without committing customer funds or authorizing postings.",
+          "evidence_ids": [
+            "cloud-budgeting",
+            "pricing-options",
+            "operating-model",
+            "synthetic-authority"
+          ]
+        },
+        {
+          "id": "cloud-operations-engineer",
+          "title": "Cloud Operations Engineer",
+          "soc": "15-1244",
+          "responsibility": "Interpret resource configuration, utilization and service dependencies. Establish protected capacity and suitable allocation drivers, identify technically eligible optimization scopes, assess migration and resilience implications, and determine what completed-change evidence supports. Convert accepted recommendations into precise prerequisites and verification requirements.",
+          "information_access": [
+            "Resource configurations and resource-to-service mappings",
+            "Existing utilization exports, capacity tests and architecture records",
+            "Service requirements, migration plans and recovery constraints",
+            "ServiceNow configuration items, incidents, problems, changes and catalog descriptions",
+            "Financial alternatives and shared collaboration records",
+            "Focal AWS configuration records when AWS Console is included"
+          ],
+          "authority": "Determine what technical evidence supports and preserve unresolved constraints. Recommend changes and verification work; update advisory operational records. Production mutation and customer implementation authorization remain outside the pod's remit.",
+          "evidence_ids": [
+            "resource-ownership",
+            "cross-functional-finops",
+            "prioritized-optimization",
+            "operating-model",
+            "synthetic-authority"
+          ]
+        }
+      ],
+      "teams": [
+        {
+          "id": "us-finops-pod",
+          "name": "US Cloud Financial Management Advisory",
+          "purpose": "Provide continuing cloud-cost advice that reconciles financial consequences with technical feasibility and carries decisions into forecasts, ownership guidance and usable follow-up records.",
+          "worker_ids": [
+            "finops-manager",
+            "cloud-financial-analyst",
+            "cloud-operations-engineer"
+          ]
+        }
+      ],
+      "software": [
+        {
+          "id": "email",
+          "capability": "Customer and internal email correspondence covering objectives, commercial terms, clarifications and proposed advisory responses.",
+          "reference_product": "Gmail",
+          "catalog_app_ids": [
+            "gmail_mock"
+          ],
+          "status": "substitution",
+          "rationale": "Mandatory synthetic workplace infrastructure in every episode; UST adoption is not established. The inspected schema documents emails, thread identifiers, attachments, labels and drafts. Customer-facing outputs may remain drafts. Attachment access, editing and shared persistence require runtime verification.",
+          "evidence_ids": [
+            "workspace-design",
+            "execution-contract"
+          ]
+        },
+        {
+          "id": "team-chat",
+          "capability": "Team chat for working plans, specialist questions, challenges and links to durable work products.",
+          "reference_product": "Slack",
+          "catalog_app_ids": [
+            "slack_mock"
+          ],
+          "status": "substitution",
+          "rationale": "Mandatory synthetic workplace infrastructure; UST adoption is not established. The schema documents channels, messages, threads and direct messages. Slack is an available collaboration location, not an exclusive reporting requirement. Shared-session sender names require explicit worker attribution and virtual-machine action records; persistence remains unverified.",
+          "evidence_ids": [
+            "workspace-design",
+            "execution-contract"
+          ]
+        },
+        {
+          "id": "scheduling",
+          "capability": "Scheduling for standing customer reviews, existing commitments and advisory follow-up reservations; historical calendar evidence where relevant.",
+          "reference_product": "Google Calendar",
+          "catalog_app_ids": [
+            "google_calendar_mock"
+          ],
+          "status": "substitution",
+          "rationale": "Mandatory synthetic workplace infrastructure in every episode, including shared-cost-allocation. UST adoption is not established. The schema documents calendars, visibility, events, start/end times, descriptions, guests and date navigation. Historical navigation and shared persistence remain unverified. Completion does not require a meeting to occur, an invitation to be accepted or time to advance.",
+          "evidence_ids": [
+            "workspace-design",
+            "execution-contract"
+          ]
+        },
+        {
+          "id": "shared-storage",
+          "capability": "Shared drive storage for billing and utilization exports, architecture evidence, commercial terms, onboarding and reviewed deliverable indexes.",
+          "reference_product": "Google Drive",
+          "catalog_app_ids": [
+            "google_drive_mock"
+          ],
+          "status": "substitution",
+          "rationale": "Mandatory synthetic workplace infrastructure; UST adoption is not established. The schema documents folder/file items and optional text content. Metadata does not establish readable binary contents or automatic Docs and Sheets integration. Construction must supply readable evidence and explicit cross-application references, with access and persistence verified separately.",
+          "evidence_ids": [
+            "workspace-design",
+            "execution-contract"
+          ]
+        },
+        {
+          "id": "collaborative-documents",
+          "capability": "Collaborative advisory documents, technical assessments, allocation policies, onboarding instructions and substantive review comments.",
+          "reference_product": "Google Docs",
+          "catalog_app_ids": [
+            "google_docs_mock"
+          ],
+          "status": "substitution",
+          "rationale": "Mandatory synthetic workplace infrastructure; UST adoption is not established. The inspected schema documents document content, comments and replies. Internal acceptance is expressed in content and attributable decision records; there is no admitted native approval-status field. Editing, comment visibility and shared persistence require runtime verification.",
+          "evidence_ids": [
+            "workspace-design",
+            "execution-contract"
+          ]
+        },
+        {
+          "id": "financial-modeling",
+          "capability": "Cloud-cost reconciliation, allocation comparisons, commitment economics, sensitivity analysis and savings-to-forecast bridges.",
+          "reference_product": "Google Sheets",
+          "catalog_app_ids": [
+            "google_sheets_mock"
+          ],
+          "status": "substitution",
+          "rationale": "Proposed analytical workspace required for all three outlines, without a claim of UST adoption. The inspected schema documents workbook tabs, cell inputs, formulas, computed values and notes. Advanced calculations, imports, concurrent editing and persistence remain unverified. Cells support explicit financial models, not native workflow approvals or automated FinOps ingestion.",
+          "evidence_ids": [
+            "cloud-budgeting",
+            "workspace-design"
+          ]
+        },
+        {
+          "id": "cloud-inventory",
+          "capability": "Inspect a focal customer's AWS resource configurations and billing summaries and connect resource identifiers to historical evidence.",
+          "reference_product": "AWS Management Console",
+          "catalog_app_ids": [
+            "aws_console_mock"
+          ],
+          "status": "substitution",
+          "rationale": "AWS is present in the sourced engagement; this console is a synthetic implementation substitute. Required for savings-realization and commitment-economics. The schema documents EC2, RDS, S3, Lambda, tags, billing summaries and favorites. It does not establish granular cost exports, utilization histories, commitment purchasing or automatic execution. One focal account is represented in the console; other accounts remain in existing exports. Visibility, favorites interaction and persistence remain unverified.",
+          "evidence_ids": [
+            "cross-functional-finops",
+            "workspace-design"
+          ]
+        },
+        {
+          "id": "service-management",
+          "capability": "Maintain optimization recommendations, recurring cost problems, configuration references, service descriptions, technical objections and implementation conditions.",
+          "reference_product": "ServiceNow",
+          "catalog_app_ids": [
+            "ServiceNow_mock"
+          ],
+          "status": "substitution",
+          "rationale": "Proposed domain application required for all three outlines; UST adoption is not established. The inspected schema documents changeRequests, problems, incidents, cmdbItems, catalog descriptions and journal work notes. Change approval values are Not Yet Requested, Requested and Approved; problem and change states have separate documented domains. These fields do not establish customer authority. Catalog-description visibility, incident sorting, record edits, favorites and shared persistence remain consequential build uncertainties. No complete dependency graph or automatic AWS synchronization is documented.",
+          "evidence_ids": [
+            "prioritized-optimization",
+            "workspace-design"
+          ]
+        },
+        {
+          "id": "automated-finops-platform",
+          "capability": "Continuous cloud ingestion, automated optimization recommendations and platform-driven execution.",
+          "reference_product": "UST PACE FinOps",
+          "catalog_app_ids": [],
+          "status": "gap",
+          "rationale": "The captured case study establishes the platform's role in its engagement. No supplied application is established as an equivalent. The retained human advisory cycles use existing exports and completed operational evidence; generic tables do not replace automated ingestion or execution.",
+          "evidence_ids": [
+            "cross-functional-finops",
+            "prioritized-optimization",
+            "workspace-design"
+          ]
+        }
+      ],
+      "outlines": [
+        {
+          "id": "shared-cost-allocation",
+          "title": "Adopt a defensible allocation policy for shared cloud services",
+          "objective": "Produce a reconciled showback model and internally approved allocation recommendation with consistent finance and engineering ownership instructions. Showback reports allocated costs without posting customer charges.",
+          "decision_problem": "Resource tags identify nominal owners, while shared services support several business units and retain capacity for resilience. Assigning costs solely to tagged owners can concentrate shared costs on the platform team; allocating everything by transaction volume can charge consumers for capacity they do not drive. The engineer establishes service relationships, protected capacity and the applicability of usage or entitlement drivers. The analyst reconciles the incurred pool, attributes adjustments and compares supported distributions, including central funding where policy permits. The manager develops the plan, weighs accountability, predictability and driver quality, and chooses the firm's allocation position. The selected rule must reconcile to the same cost pool and change business-unit forecasts and ownership instructions. Outputs include the cost bridge, comparative calculations, allocation policy, revised forecasts and actionable ServiceNow follow-up. All necessary evidence exists initially; customer posting or agreement is not required. Required applications are gmail_mock, slack_mock, google_calendar_mock, google_drive_mock, google_docs_mock, google_sheets_mock and ServiceNow_mock. Attributable planning and specialist collaboration may use any permitted collaboration application rather than an exclusive Slack location.",
+          "team_ids": [
+            "us-finops-pod"
+          ],
+          "worker_ids": [
+            "finops-manager",
+            "cloud-financial-analyst",
+            "cloud-operations-engineer"
+          ],
+          "evidence_ids": [
+            "resource-ownership",
+            "cloud-budgeting",
+            "cross-functional-finops",
+            "synthetic-authority",
+            "scenario-cycles",
+            "execution-contract"
+          ]
+        }
+      ],
+      "assumptions": [
+        "This is a bounded repair of the supplied dossier. The fictional analogue, staffing, workload, customer population, expenditure and history remain synthetic; no new real-firm facts are introduced.",
+        "All sourced quotes were checked against the supplied full captured texts. Those supplied captures establish the evidence available for this repair and supersede the prior dossier's statements that the pages were absent from its frozen packet.",
+        "The case studies ground capabilities, not the location of delivery staff, UST reporting lines or professional delegations. The modeled US advisory operation is a scenario choice anchored to UST's sourced US presence.",
+        "All three workers contribute substantive analysis or decisions in every outline. Worker identities and membership remain stable. The manager receives the objective and creates the plan, including the working sequence.",
+        "Accessible onboarding must state: computer-use automation (CUA) means operating applications through their on-screen interface; a virtual machine (VM) is each worker's separate computer environment; Bash is a command-line shell for local digital work. Each participant uses CUA and Bash in a separate personal VM while collaborating through shared applications.",
+        "Accessible onboarding and savings-realization initial materials must define Coordinated Universal Time (UTC) before referring to UTC offsets. Historical implementation and performance timestamps retain explicit offsets so workers can compare times correctly.",
+        "Every episode includes Gmail, Slack, Google Calendar, Google Drive and Google Docs as mandatory company infrastructure. The corrected shared-cost-allocation construction list contains seven apps: gmail_mock, slack_mock, google_calendar_mock, google_drive_mock, google_docs_mock, google_sheets_mock and ServiceNow_mock. Calendar must also appear in its initial materials and required-app manifest.",
+        "Savings-realization and commitment-economics require those seven applications plus aws_console_mock. Required applications must not be silently dropped or substituted. Infrastructure availability does not require an artificial task action in every application.",
+        "Discoverable onboarding and episode instructions must permit attributable managerial planning, specialist reports and review through available Slack, Gmail, Google Docs, or linked ServiceNow work notes. Success criteria must accept equivalent attributable collaboration across these permitted locations. They must not require Slack exclusively or prescribe the manager's delegation sequence.",
+        "Applications run on separate origins with shared in-app session identity. Access is provided through each virtual machine's application URLs. Do not require server-enforced individual permissions; use explicit worker and role labels plus virtual-machine action attribution. A shared app username alone does not establish authorship or approval.",
+        "Frozen schemas were inspected during repair, but no deployed run manifest or runtime interaction evidence was supplied. This dossier establishes a proposed record contract and textual consistency, not verified interface behavior, deployment readiness or demonstrated multi-agent advantage.",
+        "Construction must include every documented top-level application state key and no unsupported additions. Before relying on an interaction, verify readable source content, relevant editing, shared persistence and reset behavior on the actual surface. In particular, ServiceNow catalog descriptions and incident sorting, AWS favorites, and historical Calendar navigation remain unverified.",
+        "The continuing portfolio remains visible through historical exports, prior recommendations and unresolved obligations. Each episode selects a bounded focal decision from that larger workload rather than presenting its task inventory as the whole company.",
+        "Granular billing, utilization, ownership, architecture, demand, commercial terms and completed-change evidence must exist initially. Sparse AWS billing summaries cannot replace the evidence needed for allocation, commitment modeling or savings attribution.",
+        "Frozen scenario rates, eligibility rules, cost definitions and demand cases govern each episode. Dated public evidence grounds the business model; episodes do not depend on changing live prices, real staff identities, new web facts or later customer responses.",
+        "Internal acceptance of advice is distinct from customer authorization. Operational records preserve pending implementation and existing obligations. No outline requires purchasing, production mutation, accounting posting, a physical event or clock acceleration.",
+        "Workers explicitly link and reconcile references across applications. Automatic synchronization, a complete cloud dependency graph and continuous FinOps ingestion are not assumed. UST PACE automation remains a declared gap outside the retained advisory scope."
+      ]
+    },
+    "outline_id": "shared-cost-allocation",
+    "required_count": 1,
+    "feature_matrix": [
+      {
+        "outline_id": "shared-cost-allocation",
+        "feature_cell": {
+          "collections": [
+            "ServiceNow_mock.incidents",
+            "google_sheets_mock.sheets"
+          ],
+          "decision_type": "comply-with-policy"
+        }
+      }
+    ],
+    "allowed_collections": [
+      "ServiceNow_mock.incidents",
+      "google_sheets_mock.sheets"
+    ],
+    "captures": {
+      "https://www.prnewswire.com/news-releases/ust-opens-new-global-headquarters-in-aliso-viejo-california-302837637.html": "\nng-edge research facilities and collaborative spaces to serve as a global hub for ust's ai and digital innovation efforts aliso viejo, calif. , july 30, 2026 /prnewswire/ -- ust , a leading ai and technology transformation solutions company, has unveiled its new state-of-the-art global headquarters in aliso viejo, california, us, establishing a strategic innovation hub that will accelerate the company's ai, engineeri\nal innovation efforts aliso viejo, calif. , july 30, 2026 /prnewswire/ -- ust , a leading ai and technology transformation solutions company, has unveiled its new state-of-the-art global headquarters in aliso viejo, california, us, establishing a strategic innovation hub that will accelerate the company's ai, engineering, and digital transformation capabilities for clients worldwide. the new office at 101 e",
+      "https://www.ust.com/en/insights/ust-helped-global-tech-company-streamline-cloud-management-saved-one-point-five-million-dollar-per-year": "\normed the high-tech company's cloud asset management capabilities in these three key areas: continuous improvement - our consultants designed a comprehensive, standardized plan to tag cloud assets and map cloud instances to business units. the plan also included visibility capabilities to track who was accessing cloud resources. cost avoidance - the cloud finops framework also provided functionality to help the com\ncompany the visibility and governance strategies it needed to monitor and manage cloud assets and consumption, optimize utilization and control cloud costs. the company can easily forecast costs and create budgets for cloud usage. the cloud management team can also charge back costs to business units, set alerts for usage limits and receive recommendations for cost savings. \"the company has saved over $20 \nlso recommended strategies to fully utilize cloud vendor enterprise pricing plans, avoid expensive on-demand pricing, take advantage of less expensive storage options and leverage lower cost reserve instances. the impact reduced cloud spend by $20 million the ust cloud finops framework gave the company the visibility and governance strategies it needed to monitor and manage cloud asset",
+      "https://www.ust.com/en/insights/ust-pace-finops-delivers-dollar2m-in-annualized-aws-savings-for-a-leading-healthcare-federation": "\n directly into the client's aws cloudops workflows. rather than treating finops as a separate reporting function, pace finops served as an insights and execution layer that helped engineering, finance, and cloudops teams act on cloud spend in real time. the solution focused on embedding finops into daily operations: cost ownership was mapped to teams, products, and environments, giving stakeholders clearer responsibility for the\nrated. continuous optimization was integrated into cloudops, replacing periodic cost reviews with day-to-day operating practices across production and pre-production environments. aws consumption data was converted into prioritized actions, helping teams focus their effort on areas with the highest financial impact. cloud and data platform spend was brought under one finops operating model, extending governance from"
+    }
+  },
+  "double": {
+    "schema_version": "2",
+    "execution_mode": "digital",
+    "manager_id": "finops-manager",
+    "feature_cell": {
+      "collections": [
+        "ServiceNow_mock.incidents",
+        "google_sheets_mock.sheets"
+      ],
+      "decision_type": "comply-with-policy"
+    },
+    "id": "ust_shared-cost-allocation",
+    "company_id": "ust",
+    "outline_id": "shared-cost-allocation",
+    "title": "Recommend Alder Systems’ shared cloud cost allocation",
+    "brief": "Alder Systems’ current draft puts the shared account’s costs on the platform team. Check August 2026 billing and engineering records against the service catalog’s distinctions between customer usage, reserved capacity and centrally funded recovery services. Compare supported allocation methods and recommend how each business unit should forecast these costs for the September 11 finance review. Apply the published allocation policy, check that workbook totals match the supporting records, and get the team’s acceptance of the policy recommendation. Write specific ownership follow-up records and put the most urgent items first in the ownership incident review queue. Write a customer explanation linked to the accepted supporting records, and leave it unsent. Coordinate through shared workplace apps, making clear who produced each finding and what the manager decided. Leave accounting postings and production changes to the customer.",
+    "objective": "Adopt a supportable allocation recommendation that reconciles the full shared-account cost population, preserves required recovery capacity and gives finance and engineering consistent instructions.",
+    "decision_problem": "Nominal platform tags obscure dedicated consumption and shared capacity. The active service catalog requires central funding for minimum recovery capacity but permits competing drivers for other shared costs. A preliminary review followed an incident list sorted from low to high urgency and omitted a recovery-capacity concern. Engineering must determine which capacity the incident and historical test protect. Finance must attribute discounts and credits before comparing distributions. The manager must balance consumption accountability, predictable entitlements and driver quality, then carry the selected policy into forecasts and ownership instructions.",
+    "canonical_description": "A cloud advisory pod must turn a disputed shared-account bill into a usable allocation recommendation. The service catalog distinguishes dedicated services, shared consumption, subscribed headroom and centrally funded recovery capacity. An incident queue ordered from low to high urgency has contributed to an incomplete technical review. The engineer reconstructs dependencies and capacity requirements from existing tests and incident records. The analyst reconciles charges, discounts and credits and compares consumption and entitlement methods. The manager chooses a policy-compliant allocation and integrates the resulting business-unit forecasts, ownership instructions and customer explanation. The work ends with accepted internal advice and actionable follow-up, while accounting postings and production changes remain subject to customer authority.",
+    "team_ids": [
+      "us-finops-pod"
+    ],
+    "worker_ids": [
+      "finops-manager",
+      "cloud-financial-analyst",
+      "cloud-operations-engineer"
+    ],
+    "phases": [
+      {
+        "id": "allocation-evidence",
+        "name": "Establish cost and service boundaries",
+        "worker_ids": [
+          "finops-manager",
+          "cloud-financial-analyst",
+          "cloud-operations-engineer"
+        ],
+        "depends_on": [],
+        "inputs": [
+          "Active catalog and funding policy",
+          "August billing lines and adjustments",
+          "Service relationships, utilization and recovery test",
+          "Complete focal incident population"
+        ],
+        "outputs": [
+          "Reconciled cost populations",
+          "Supported capacity classifications and driver assessment",
+          "Consequential ownership and recovery concerns"
+        ],
+        "decision": "Which costs and capacities belong to each policy category, and which drivers can support allocation?",
+        "downstream_effect": "Determines eligible distributions, amounts that must remain central and ownership defects requiring follow-up.",
+        "when": "always"
+      },
+      {
+        "id": "allocation-choice",
+        "name": "Choose the allocation recommendation",
+        "worker_ids": [
+          "finops-manager",
+          "cloud-financial-analyst",
+          "cloud-operations-engineer"
+        ],
+        "depends_on": [
+          "allocation-evidence"
+        ],
+        "inputs": [
+          "Supported cost and capacity classifications",
+          "Consumption and entitlement evidence",
+          "Business-unit forecast baselines"
+        ],
+        "outputs": [
+          "Comparison of compliant alternatives and sensitivity",
+          "Manager’s accepted recommendation",
+          "Revised business-unit forecasts"
+        ],
+        "decision": "Which supported method best balances accountability, predictability and evidence quality?",
+        "downstream_effect": "Sets forecast distribution, beneficiary instructions and the explanation of differences from the preliminary draft.",
+        "when": "always"
+      },
+      {
+        "id": "allocation-handoff",
+        "name": "Reconcile the advisory handoff",
+        "worker_ids": [
+          "finops-manager",
+          "cloud-financial-analyst",
+          "cloud-operations-engineer"
+        ],
+        "depends_on": [
+          "allocation-choice"
+        ],
+        "inputs": [
+          "Accepted allocation and forecasts",
+          "Open ownership and recovery concerns"
+        ],
+        "outputs": [
+          "Final workbook and policy document",
+          "Updated advisory problems and incident notes",
+          "Incident review view ordered by urgency",
+          "Unsent customer explanation"
+        ],
+        "decision": "Do financial and operational records express the same allocation and remaining obligations?",
+        "downstream_effect": "Finance can assess the recommendation and engineering can address ownership defects without mistaking internal acceptance for customer authorization.",
+        "when": "always"
+      }
+    ],
+    "contributions": [
+      {
+        "worker_id": "finops-manager",
+        "inputs": [
+          "Customer objective and funding rules",
+          "Analyst’s alternatives",
+          "Engineer’s capacity and driver findings"
+        ],
+        "work": "Develop the working plan and delegate through workplace chat or email. Resolve the tradeoff between consumption accountability and predictable entitlements, address substantive objections and accept a consistent recommendation within advisory authority.",
+        "produces": [
+          "Reasoned allocation decision",
+          "Accepted forecast and policy package",
+          "Customer explanation draft"
+        ],
+        "shares_with": [
+          "cloud-financial-analyst",
+          "cloud-operations-engineer"
+        ],
+        "apps": [
+          "google_sheets_mock"
+        ]
+      },
+      {
+        "worker_id": "cloud-financial-analyst",
+        "inputs": [
+          "Billing, discount and credit records",
+          "Business-unit forecast baselines",
+          "Supported capacity classifications and drivers"
+        ],
+        "work": "Reconstruct the net pool, preserve adjustment attribution, compare compliant distributions and sensitivity, and propagate the manager’s selected method into every business-unit forecast. Report findings through chat or email with links to the model.",
+        "produces": [
+          "Reproducible cost bridge",
+          "Allocation alternatives and sensitivity",
+          "Revised cost reporting and forecasts"
+        ],
+        "shares_with": [
+          "finops-manager",
+          "cloud-operations-engineer"
+        ],
+        "apps": [
+          "google_sheets_mock"
+        ]
+      },
+      {
+        "worker_id": "cloud-operations-engineer",
+        "inputs": [
+          "Catalog service definitions",
+          "Service mappings and capacity exports",
+          "Recovery test and incident histories",
+          "Proposed allocation methods"
+        ],
+        "work": "Determine dedicated, shared and protected capacity; assess whether transactions or entitlements explain demand; reconcile the omitted recovery concern; and translate the selected policy into precise ownership corrections and continuing safeguards. Report the consequences through chat or email with supporting evidence.",
+        "produces": [
+          "Technical classification and driver assessment",
+          "Capacity restrictions consumed by the financial model",
+          "Ownership and recovery follow-up instructions"
+        ],
+        "shares_with": [
+          "finops-manager",
+          "cloud-financial-analyst"
+        ],
+        "apps": [
+          "ServiceNow_mock"
+        ]
+      }
+    ],
+    "events": [],
+    "initial_materials": [
+      "Synthetic episode reference: September 8, 2026, 09:00 America/Los_Angeles. August covers August 1–31; evidence is available through September 7. Preserve March 2025–August 2026 history. The September 11 finance review is an existing handoff deadline, not a meeting that must occur during execution. Monthly calculations use calendar months; no elapsed waiting, holiday adjustment or machine-date dependency is required.",
+      "Required-app manifest: gmail_mock, slack_mock, google_calendar_mock, google_drive_mock, google_docs_mock, google_sheets_mock and ServiceNow_mock. Each receives complete native state containing every documented top-level key and no unsupported keys. All three workers receive these seven app URLs in separate personal virtual machines. Apps use separate origins and shared in-app identity; access does not depend on individual app logins or hidden user views.",
+      "Accessible onboarding in google_docs_mock.documents, indexed in google_drive_mock.items: computer-use automation (CUA) means operating applications through their on-screen interface; a virtual machine (VM) is each worker’s separate computer environment; Bash is a command-line shell for local digital work; Coordinated Universal Time (UTC) is the common time reference used in timestamp offsets. Workers use CUA and Bash in personal VMs. The manager develops the plan and delegates through Slack or Gmail; specialists report there and may link substantive Docs assessments or ServiceNow work notes. Equivalent attributable planning, findings and review across permitted apps are accepted; Slack is not exclusive. Role labels and worker VM traces establish attribution, not the shared username.",
+      "Operating population: two continuing clients with eight accounts each, 23 Alder services and 22 Beacon services. August net expenditure is $400,000 per client. Alder’s focal shared account contributes $100,000 and its other accounts $300,000. Seed 288 account-month and 810 service-month summaries, with stable account/service identifiers and exact service-to-account reconciliation. Nonfocal monthly changes remain within 12% unless a linked historical migration explains the difference. These are synthetic workload rules.",
+      "Complete focal decision population in google_sheets_mock.sheets: six August gross pools keyed to account, service and invoice line—dedicated Retail $18,000; dedicated Enterprise $12,000; shared compute $30,000; shared storage $12,000; shared observability $8,000; standby capacity $40,000. Separate adjustment records establish a $6,000 dedicated-service commitment benefit distributed proportionally across the two dedicated gross charges, an $8,000 shared-service benefit distributed proportionally across compute/storage/observability, and a $6,000 credit attributable only to shared compute. Standby has no adjustment. Seed invoice evidence and uncompleted working tabs, not accepted allocation formulas.",
+      "ServiceNow_mock.catalog contains active cat1, titled 'Alder shared cloud services — August 2026'. Its description identifies funding standard version 3, effective August 1, and distinguishes centrally funded minimum recovery from optional subscribed headroom. ServiceNow_mock.catalogCategories references cat1; ServiceNow_mock.catalogItems links offerings to categories and gives beneficiaries, entitlement terms and source references in descriptions. Catalog prices are descriptive and do not replace invoices. The full matching funding policy exists in ServiceNow_mock.kbArticles and google_docs_mock.documents.",
+      "Synthetic funding standard version 3: dedicated net cost follows its beneficiary; adjustments remain with their originating pool; minimum recovery is centrally funded. Remaining active shared cost may use validated transactions or subscribed entitlements with reasons. Optional headroom may use entitlements or central funding with a business reason. Transaction allocation requires at least 98% attributed coverage without duplicates; material unattributed cost remains disclosed centrally. Compare at least two materially different compliant methods and a 20% Retail transaction increase with other transactions and the cost pool unchanged. Round final display values to cents and reconcile the remainder. Internal acceptance authorizes neither accounting postings nor capacity removal.",
+      "Technical source tabs and documents contain August transactions totaling 1,000,000: Retail 600,000, Enterprise 300,000 and Research 100,000. Audit coverage is 99.4%; separately supplied reconciliation evidence attributes the omitted 0.6% within those final counts. Entitlements are 50%, 25% and 25%. Generate 31 daily rows per consumer totaling these quantities; eight Retail peak days carry 45% of its activity. Existing service descriptions and utilization narratives establish Research’s persistent reserved access despite low traffic.",
+      "A completed July 20 recovery test covers 100 equal-cost standby units at $400 each for August. Sixty units were needed to meet the contracted recovery target; forty were subscribed headroom. A low-priority incident attachment calls all standby capacity idle. Priority-1 incident INC0012101 records unresolved failure of a smaller recovery configuration, with the test and configuration references needed to establish the protected minimum. It does not establish that every optional unit is mandatory.",
+      "ServiceNow_mock.incidents includes all 12 focal-account incidents from the eight weeks ending September 7 and 12–20 incidents from other services. Link configuration references through cmdbItems and commentary through journal.element_id; use problems and changeRequests for existing follow-up. Seed currentSortColumn='priority', currentSortDirection='desc' and a list with no task-hiding filter. The preliminary assessment cites only low-priority records and omits INC0012101. Published handoff instructions require assessment of all 12 focal incidents and a final review list showing priority 1 before priority 5, without excluding relevant unresolved incidents.",
+      "Surrounding workload: generate six to ten new cost findings in each of the last eight weeks, totaling 48–80, with linked ServiceNow problems or changes for actionable findings. Mix open analysis, pending customer implementation and completed historical work. Earlier findings remain in readable monthly archives. All 45 services participate in linked account history; there are no additional eligible pools outside the six-pool decision scope.",
+      "Forecast inputs outside the shared account are Retail $100,000, Enterprise $80,000, Research $60,000 and Central $60,000 monthly. The preliminary shared-account draft assigns all net cost to Central using platform tags. Existing customer correspondence requests explainable accountability and predictable forecasts without choosing a method. Preserve the preliminary draft as history.",
+      "Shared workplace: slack_mock.channels, messages and threads hold ongoing client work and the objective addressed to the manager, with no prewritten delegation. gmail_mock.emails contains customer instructions and draft history; gmail_mock.drafts has no completed focal response. google_docs_mock.documents contains policies, raw technical narratives, previous reports and editable working documents; comments retains existing substantive discussion. google_drive_mock.items contains client folders and an index with explicit app origins, document IDs, workbook/tab references and ServiceNow IDs. Decisive evidence is readable in native Docs, Sheets or ServiceNow records, rather than depending on binary attachments.",
+      "Calendar is included as mandatory infrastructure. google_calendar_mock.calendars uses c1 for pod administration, c2 for Alder and c3 for Beacon. google_calendar_mock.events contains expanded historical weekly consumption reviews and monthly customer reviews linked to the corresponding reports, plus the September 11 Alder finance review. Seed currentDate to the episode reference and normal visible calendars; attendance, invitations and calendar mutation are unnecessary. Across the 18-month workspace retain two monthly reporting packages per month, one weekly review thread and event per client, and two to five substantive correspondence items per reporting cycle, with consistent dates and references."
+    ],
+    "deliverables": [
+      "Shared-cost workbook with totals checked against supporting records, alternative methods, sensitivity analysis and revised business-unit forecasts",
+      "Allocation policy accepted by the team, with reasons for choosing the method",
+      "Ownership and recovery follow-up records with clear actions, plus an incident review view ordered by urgency",
+      "Unsent customer explanation linked to the accepted supporting records"
+    ],
+    "success_criteria": [
+      {
+        "requirement": "Apply the active service catalog funding rules to every cost in scope.",
+        "observable": "All six pools and originating adjustments reconcile to the invoice. Dedicated costs follow beneficiaries, protected recovery remains central, and classifications cite applicable catalog, service and test evidence.",
+        "method": "artifact"
+      },
+      {
+        "requirement": "Choose an allocation method supported by the billing and engineering findings.",
+        "observable": "The model compares at least two materially different compliant methods, evaluates the published demand sensitivity and explains how driver quality and capacity commitments influenced the manager’s recommendation.",
+        "method": "judgment"
+      },
+      {
+        "requirement": "Use the chosen method in forecasts and ownership instructions.",
+        "observable": "Business-unit forecasts conserve the full client total and agree with the accepted allocation and beneficiaries. ServiceNow instructions preserve recovery restrictions, identify responsible follow-up roles and state evidence needed for unresolved work.",
+        "method": "artifact"
+      },
+      {
+        "requirement": "Restore complete incident coverage and leave a usable review queue.",
+        "observable": "The assessment covers all 12 focal incidents and explains INC0012101’s effect. The final incident view uses currentSortColumn='priority' and currentSortDirection='asc', with no filter excluding relevant unresolved incidents.",
+        "method": "state"
+      },
+      {
+        "requirement": "Bring the analyst’s and engineer’s work that affects the outcome into the manager’s advice, keeping decisions within the team’s advisory role.",
+        "observable": "Attributable manager planning and delegation, financial and engineering reports, and management integration are present through permitted workplace apps. Chat or email may link detailed documents or ServiceNow notes; no exclusive Slack location is required. The accepted package resolves substantive findings and preserves pending customer implementation and accounting authority.",
+        "method": "judgment"
+      }
+    ],
+    "software_requirement_ids": [
+      "financial-modeling",
+      "service-management"
+    ],
+    "evidence_ids": [
+      "resource-ownership",
+      "cloud-budgeting",
+      "cross-functional-finops",
+      "synthetic-authority",
+      "scenario-cycles",
+      "workspace-design",
+      "execution-contract"
+    ],
+    "calendar_days": null,
+    "estimated_human_effort": {
+      "minimum_hours": 22.0,
+      "maximum_hours": 32.0,
+      "basis": "Synthetic active-work estimate: finance 8–12 hours, engineering 8–11 hours and managerial integration 6–9 hours. Waiting and future customer implementation are excluded."
+    },
+    "assumptions": [
+      "Scenario clients, amounts, rules, incidents and capacity fixtures are synthetic. No roster, team, authority or software amendment is proposed.",
+      "Pinned schemas were read for all seven required apps. ServiceNow documents catalog.description, catalog relationships, incident priority, currentSortColumn and currentSortDirection, plus incident-list sorting and record-edit routes. The documentation does not prove catalog-description visibility or persistent sort interaction on the deployed interface; both remain material build gaps.",
+      "Before launch, demonstrate the required catalog reading, incident sorting, advisory record and journal editing, workbook arithmetic, document editing, chat/email collaboration and draft saving across worker VMs, including shared persistence and reset. Failure of a decisive interaction leaves this task unready; it does not authorize substitution or weakening the assigned cell.",
+      "Calendar schema supports calendars and events; this episode requires seeded scheduling context without an artificial calendar action. Mount origins from the actual run manifest rather than assuming documentation example ports are unique.",
+      "Use the native Sheets workbook with tabs for sources, history and working models. Advanced imports, automatic app synchronization, binary attachment access and continuous cloud ingestion are unnecessary and remain unsupported assumptions.",
+      "Phases and the feasible path are private design evidence, never worker assignments or app records. The manager chooses the working sequence.",
+      "Other compliant allocations are legitimate, including centrally funded optional headroom with reasons. A blanket refusal is unsupported because the complete billing and capacity evidence exists initially."
+    ],
+    "completion": {
+      "outcomes": [
+        {
+          "id": "allocation-adopted",
+          "when": "The manager accepts a supported allocation recommendation with explicit treatment of any genuinely unresolved amount.",
+          "required_phase_ids": [
+            "allocation-evidence",
+            "allocation-choice",
+            "allocation-handoff"
+          ],
+          "observable": "The full cost bridge, selected method, forecasts, operational follow-up and unsent explanation agree. Any unresolved amount has quantified central treatment and a specific evidence obligation."
+        }
+      ],
+      "feasible_path": {
+        "outcome_id": "allocation-adopted",
+        "steps": [
+          {
+            "phase_id": "allocation-evidence",
+            "action_and_result": "The engineer reconciles the recovery incident and test, identifying 60 required recovery units and 40 optional headroom units. Finance reconstructs $24,000 dedicated net cost, $36,000 active shared net cost and $40,000 standby cost, preserving adjustment origins."
+          },
+          {
+            "phase_id": "allocation-choice",
+            "action_and_result": "One supported choice allocates active shared cost by transactions, optional headroom by entitlements and required recovery centrally. Retail, Enterprise, Research and Central receive $44,000, $24,400, $7,600 and $24,000. An entitlement alternative for all nonprotected shared capacity gives $40,400, $22,600, $13,000 and $24,000. The manager supports the first choice; full-client forecasts become $144,000, $104,400, $67,600 and $84,000. The sensitivity uses transaction shares 720,000/1,120,000, 300,000/1,120,000 and 100,000/1,120,000 while conserving the same active shared bill."
+          },
+          {
+            "phase_id": "allocation-handoff",
+            "action_and_result": "The engineer records proposed beneficiary-tag corrections and recovery safeguards without changing production. The manager accepts the policy and unsent customer explanation. The final incident review view orders priority ascending, and the written coverage assessment includes all focal incidents."
+          }
+        ],
+        "constraint_checks": [
+          "The dedicated benefit remains proportional to dedicated gross cost; active shared benefits and compute credit do not migrate to dedicated services or standby.",
+          "The recovery concern determines funding classification without authorizing capacity removal or claiming incident resolution.",
+          "Central funding of optional headroom is also permitted with reasons. Combined with transaction allocation of active shared services, it gives $36,000, $20,400, $3,600 and $40,000; forecasts and ownership instructions must change accordingly.",
+          "Final rounding must conserve the fixed bill in the demand sensitivity. Changes in transaction shares do not constitute cost savings.",
+          "Changing sort direction alone cannot pass: the technical assessment and downstream allocation must incorporate the relevant evidence.",
+          "All terminal variants require complete reconciliation, a supported policy choice and consistent follow-up; no customer posting, new test or advancing business time is needed."
+        ],
+        "numeric_checks": [
+          {
+            "constraint": "Net shared-account bill",
+            "left": "18000 + 12000 + 30000 + 12000 + 8000 + 40000 - 6000 - 8000 - 6000",
+            "relation": "==",
+            "right": "100000",
+            "unit": "USD/month"
+          },
+          {
+            "constraint": "Protected recovery funding",
+            "left": "60 * 400",
+            "relation": "==",
+            "right": "24000",
+            "unit": "USD/month"
+          },
+          {
+            "constraint": "Retail allocation in the example",
+            "left": "18000 - 6000 * 18000 / 30000 + 36000 * 600000 / 1000000 + 40 * 400 * 0.5",
+            "relation": "==",
+            "right": "44000",
+            "unit": "USD/month"
+          },
+          {
+            "constraint": "Allocation conservation",
+            "left": "44000 + 24400 + 7600 + 24000",
+            "relation": "==",
+            "right": "100000",
+            "unit": "USD/month"
+          },
+          {
+            "constraint": "Full-client forecast conservation",
+            "left": "144000 + 104400 + 67600 + 84000",
+            "relation": "==",
+            "right": "400000",
+            "unit": "USD/month"
+          },
+          {
+            "constraint": "Transaction evidence satisfies coverage threshold",
+            "left": "99.4",
+            "relation": ">=",
+            "right": "98",
+            "unit": "percent"
+          }
+        ]
+      }
+    }
+  },
+  "oracle": {}
+}

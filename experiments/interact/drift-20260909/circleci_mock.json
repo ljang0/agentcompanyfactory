@@ -1,0 +1,289 @@
+{
+  "app_id": "circleci_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "artifacts",
+    "contexts",
+    "currentUser",
+    "deployEnvironments",
+    "environmentVariables",
+    "insights",
+    "jobs",
+    "organization",
+    "pipelineFilters",
+    "pipelines",
+    "projects",
+    "resourceClasses",
+    "runnerInstances",
+    "searchQuery",
+    "sshKeys",
+    "testResults",
+    "users",
+    "webhooks",
+    "workflows"
+  ],
+  "observed": [
+    "artifacts",
+    "contexts",
+    "currentUser",
+    "deployEnvironments",
+    "environmentVariables",
+    "insights",
+    "jobs",
+    "organization",
+    "pipelineFilters",
+    "pipelines",
+    "projects",
+    "resourceClasses",
+    "runnerInstances",
+    "searchQuery",
+    "sshKeys",
+    "testResults",
+    "users",
+    "webhooks",
+    "workflows"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "organization": {
+      "kind": "object",
+      "count": 8,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "currentUser": {
+      "kind": "object",
+      "count": 7,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "username",
+        "email",
+        "avatarUrl",
+        "role",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "projects": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "slug",
+        "vcsProvider",
+        "vcsUrl",
+        "defaultBranch",
+        "isFollowed",
+        "lastBuildStatus",
+        "lastBuildAt",
+        "createdAt",
+        "settings"
+      ],
+      "keyed_by_id": false
+    },
+    "pipelines": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "projectId",
+        "number",
+        "state",
+        "trigger",
+        "vcs",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "workflows": {
+      "kind": "array",
+      "count": 17,
+      "record_fields": [
+        "id",
+        "pipelineId",
+        "projectId",
+        "name",
+        "status",
+        "startedAt",
+        "stoppedAt",
+        "duration",
+        "creditsUsed",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "jobs": {
+      "kind": "array",
+      "count": 34,
+      "record_fields": [
+        "id",
+        "workflowId",
+        "pipelineId",
+        "projectId",
+        "name",
+        "type",
+        "status",
+        "jobNumber",
+        "executor",
+        "parallelism",
+        "dependencies",
+        "startedAt",
+        "stoppedAt",
+        "duration",
+        "creditsUsed",
+        "createdAt",
+        "steps"
+      ],
+      "keyed_by_id": false
+    },
+    "testResults": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "jobId",
+        "suiteName",
+        "totalTests",
+        "passed",
+        "failed",
+        "skipped",
+        "duration",
+        "failures"
+      ],
+      "keyed_by_id": false
+    },
+    "artifacts": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "jobId",
+        "path",
+        "url",
+        "size"
+      ],
+      "keyed_by_id": false
+    },
+    "contexts": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "orgId",
+        "createdAt",
+        "envVars"
+      ],
+      "keyed_by_id": false
+    },
+    "environmentVariables": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "projectId",
+        "name",
+        "value",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "sshKeys": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "projectId",
+        "type",
+        "fingerprint",
+        "hostname",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "webhooks": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "projectId",
+        "name",
+        "url",
+        "events",
+        "signingSecret",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "insights": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "pipelineFilters": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "resourceClasses": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "runnerInstances": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "resourceClassId",
+        "resourceClassName",
+        "version",
+        "platform",
+        "status",
+        "ip",
+        "lastContactAt"
+      ],
+      "keyed_by_id": false
+    },
+    "deployEnvironments": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "status",
+        "version",
+        "commit",
+        "deployedAt",
+        "url"
+      ],
+      "keyed_by_id": false
+    },
+    "searchQuery": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": ""
+    }
+  }
+}

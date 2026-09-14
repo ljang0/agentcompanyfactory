@@ -1,0 +1,38 @@
+{
+  "rewritten_at": "2026-09-07T22:16:39.801442+00:00",
+  "skill": {
+    "path": ".agents/skills/company-plain-brief/SKILL.md",
+    "hash": "c8953b218a65872955137b74d82b4514269537f6d4d07dd33ac3c484b5da20eb"
+  },
+  "receipt": {
+    "job": "expand",
+    "model": "codex/gpt-6-astra",
+    "started_at": "2026-09-07T22:16:24.740052+00:00",
+    "prompt_hash": "b0e37ab91365f6bd735889fd3792396212863008d1a15956b0ea4d1a1f78fff9",
+    "call_id": "bdbe224a4b003d5ce4c808ebc1ba38c9b329fbbd7a91413bcf793213d2f9a3e8",
+    "attempt": 1,
+    "status": "complete",
+    "seconds": 15.041053588036448,
+    "usage": {
+      "input_tokens": 9132,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 370,
+      "reasoning_output_tokens": 110
+    },
+    "cost_usd": null,
+    "tool_context_hash": null,
+    "tool_calls": [],
+    "codex_home": "<user-home>/.codex",
+    "session_id": "01a07df1-aa7c-72c0-9246-d7a870b1d142"
+  },
+  "attempts": 1,
+  "register": {
+    "cort_o3": {
+      "sentences": 5,
+      "mean_words": 13.6,
+      "long_word_share": 0.0,
+      "register_terms": []
+    }
+  }
+}

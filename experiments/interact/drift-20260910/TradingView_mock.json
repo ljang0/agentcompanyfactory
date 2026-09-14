@@ -1,0 +1,225 @@
+{
+  "app_id": "TradingView_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "alerts",
+    "candleData",
+    "chartState",
+    "currentUser",
+    "drawings",
+    "economicEvents",
+    "indicators",
+    "layouts",
+    "news",
+    "screenerSymbols",
+    "symbols",
+    "uiState",
+    "watchlists"
+  ],
+  "observed": [
+    "alerts",
+    "candleData",
+    "chartState",
+    "currentUser",
+    "drawings",
+    "economicEvents",
+    "indicators",
+    "layouts",
+    "news",
+    "screenerSymbols",
+    "symbols",
+    "uiState",
+    "watchlists"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 8,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "symbols": {
+      "kind": "object",
+      "count": 28,
+      "record_fields": [
+        "id",
+        "name",
+        "exchange",
+        "type",
+        "currency",
+        "sector",
+        "industry",
+        "description",
+        "price",
+        "open",
+        "high",
+        "low",
+        "close",
+        "previousClose",
+        "change",
+        "changePercent",
+        "volume",
+        "marketCap",
+        "pe",
+        "eps",
+        "dividend",
+        "dividendYield",
+        "week52High",
+        "week52Low",
+        "avgVolume",
+        "beta",
+        "weeklyPerf",
+        "monthlyPerf",
+        "threeMonthPerf",
+        "sixMonthPerf",
+        "ytdPerf",
+        "yearlyPerf",
+        "grossMargin",
+        "operatingMargin",
+        "debtToEquity",
+        "roe",
+        "rsi14",
+        "recommendation"
+      ],
+      "keyed_by_id": true
+    },
+    "candleData": {
+      "kind": "object",
+      "count": 28,
+      "record_fields": [
+        "60",
+        "D"
+      ],
+      "keyed_by_id": true
+    },
+    "watchlists": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "isDefault",
+        "sections",
+        "columns"
+      ],
+      "keyed_by_id": false
+    },
+    "alerts": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "symbolId",
+        "name",
+        "condition",
+        "value",
+        "value2",
+        "source",
+        "status",
+        "createdAt",
+        "triggeredAt",
+        "expiresAt",
+        "message",
+        "notifications",
+        "frequency"
+      ],
+      "keyed_by_id": false
+    },
+    "indicators": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "type",
+        "name",
+        "visible",
+        "paneIndex",
+        "inputs",
+        "style"
+      ],
+      "keyed_by_id": false
+    },
+    "drawings": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "symbolId",
+        "timeframe",
+        "type",
+        "points",
+        "style",
+        "text",
+        "locked",
+        "visible"
+      ],
+      "keyed_by_id": false
+    },
+    "chartState": {
+      "kind": "object",
+      "count": 8,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "layouts": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "name",
+        "isDefault",
+        "gridConfig",
+        "charts",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "screenerSymbols": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "news": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "title",
+        "source",
+        "timestamp",
+        "relatedSymbols",
+        "category"
+      ],
+      "keyed_by_id": false
+    },
+    "economicEvents": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "date",
+        "time",
+        "country",
+        "countryFlag",
+        "event",
+        "impact",
+        "forecast",
+        "previous",
+        "actual"
+      ],
+      "keyed_by_id": false
+    },
+    "uiState": {
+      "kind": "object",
+      "count": 11,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  },
+  "note": "Observed with the three proposed hub_patches.json amendments applied (see experiments/PORT-NOTES-port-five.md); the app as shipped does not reach a served state."
+}

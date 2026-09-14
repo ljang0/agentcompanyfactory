@@ -1,0 +1,261 @@
+{
+  "currentUser": {
+    "id": "ampuser_001",
+    "name": "Tobias Nkemelu",
+    "email": "tobias@harborlight-fitness.example",
+    "avatar": null,
+    "organization": "Harborlight Fitness App",
+    "role": "Admin",
+    "plan": "Plus",
+    "mtuUsed": 18400,
+    "mtuLimit": 50000
+  },
+  "users": [
+    {
+      "id": "user_001",
+      "userId": "member_10442",
+      "amplitudeId": 900000001,
+      "displayName": "member_10442",
+      "avatar": null,
+      "firstSeen": "2026-08-01T10:00:00",
+      "lastSeen": "2026-09-06T07:30:00",
+      "country": "United States",
+      "countryFlag": "US",
+      "platform": "iOS",
+      "deviceType": "Mobile",
+      "os": "iOS 19",
+      "browser": null,
+      "library": "amplitude-swift",
+      "properties": {
+        "plan": "premium",
+        "company": null,
+        "role": "member",
+        "signupSource": "app_store"
+      }
+    }
+  ],
+  "eventDefinitions": [
+    {
+      "id": "evtdef_001",
+      "name": "Workout Completed",
+      "displayName": "Workout Completed",
+      "description": "Member finishes a guided workout",
+      "category": "engagement",
+      "status": "live",
+      "createdAt": "2026-01-10T09:00:00",
+      "createdBy": "Tobias Nkemelu",
+      "occurrencesLast30d": 48200,
+      "icon": "activity",
+      "color": "#1E61F0",
+      "properties": [
+        "duration_minutes",
+        "workout_type"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "evt_001",
+      "name": "Workout Completed",
+      "userId": "member_10442",
+      "timestamp": "2026-09-06T07:30:00",
+      "sessionId": 1757143800000,
+      "properties": {
+        "duration_minutes": 32,
+        "workout_type": "strength"
+      }
+    }
+  ],
+  "charts": [
+    {
+      "id": "chart_001",
+      "name": "Harborlight Workouts Completed (Last 30 Days)",
+      "description": "Unique members completing at least one workout per day",
+      "type": "segmentation",
+      "status": "saved",
+      "owner": "Tobias Nkemelu",
+      "ownerEmail": "tobias@harborlight-fitness.example",
+      "createdAt": "2026-08-12T09:00:00",
+      "updatedAt": "2026-09-05T14:30:00",
+      "dashboardIds": [
+        "dash_001"
+      ],
+      "notebookIds": [],
+      "config": {
+        "events": [
+          {
+            "letter": "A",
+            "eventName": "Workout Completed",
+            "filters": [],
+            "groupBy": null
+          }
+        ],
+        "measuredAs": "uniques",
+        "segments": [
+          {
+            "id": "seg_1",
+            "name": "All Users",
+            "filters": [],
+            "cohortId": null
+          }
+        ],
+        "chartVisualization": "line",
+        "timeRange": "30d",
+        "interval": "daily",
+        "groupSegmentBy": null,
+        "formula": null
+      },
+      "data": {
+        "series": [
+          {
+            "name": "All Users",
+            "color": "#1E61F0",
+            "dataPoints": [
+              {
+                "date": "2026-09-04",
+                "value": 1410
+              },
+              {
+                "date": "2026-09-05",
+                "value": 1522
+              },
+              {
+                "date": "2026-09-06",
+                "value": 980
+              }
+            ]
+          }
+        ],
+        "breakdownTable": []
+      }
+    }
+  ],
+  "dashboards": [
+    {
+      "id": "dash_001",
+      "name": "Harborlight Member Engagement",
+      "description": "Core engagement KPIs",
+      "owner": "Tobias Nkemelu",
+      "ownerEmail": "tobias@harborlight-fitness.example",
+      "isOfficial": true,
+      "createdAt": "2026-08-12T09:10:00",
+      "updatedAt": "2026-09-05T14:30:00",
+      "chartIds": [
+        "chart_001"
+      ],
+      "layout": [],
+      "space": "space_001"
+    }
+  ],
+  "cohorts": [
+    {
+      "id": "cohort_001",
+      "name": "Premium members",
+      "description": "Members on the premium plan",
+      "owner": "Tobias Nkemelu",
+      "createdAt": "2026-08-15T09:00:00",
+      "updatedAt": "2026-09-01T09:00:00",
+      "userCount": 6210,
+      "lastComputed": "2026-09-06T06:00:00",
+      "definition": {
+        "conditions": [
+          {
+            "property": "plan",
+            "operator": "is",
+            "value": "premium"
+          }
+        ],
+        "combinator": "and"
+      }
+    }
+  ],
+  "notebooks": [],
+  "experiments": [],
+  "spaces": [
+    {
+      "id": "space_001",
+      "name": "Harborlight Product Team",
+      "owner": "Tobias Nkemelu",
+      "isPersonal": false,
+      "contentIds": [
+        "chart_001",
+        "dash_001"
+      ]
+    }
+  ],
+  "homeMetrics": {
+    "visitors": {
+      "value": 18400,
+      "delta": 6.2,
+      "deltaType": "up"
+    },
+    "pageViews": {
+      "value": 212000,
+      "delta": 4.1,
+      "deltaType": "up"
+    },
+    "bounceRate": {
+      "value": 21.5,
+      "delta": -1.2,
+      "deltaType": "down"
+    },
+    "pageViewsPerSession": {
+      "value": 5.8,
+      "delta": 0.3,
+      "deltaType": "up"
+    },
+    "currentLiveUsers": 342,
+    "newUsersToday": 96,
+    "avgSessionDuration": "9m 12s",
+    "topPages": [
+      {
+        "title": "Today's Workout",
+        "volume": 64000
+      },
+      {
+        "title": "Progress",
+        "volume": 38000
+      }
+    ],
+    "usersByCountry": [
+      {
+        "country": "United States",
+        "flag": "US",
+        "users": 15100
+      },
+      {
+        "country": "Canada",
+        "flag": "CA",
+        "users": 2100
+      }
+    ],
+    "webEngagementSeries": [
+      {
+        "date": "2026-09-04",
+        "value": 6100
+      },
+      {
+        "date": "2026-09-05",
+        "value": 6400
+      },
+      {
+        "date": "2026-09-06",
+        "value": 5900
+      }
+    ]
+  },
+  "templates": [
+    {
+      "id": "tpl_001",
+      "name": "Retention starter",
+      "type": "dashboard",
+      "chartCount": 4
+    }
+  ],
+  "ui": {
+    "sidebarExpanded": true,
+    "activeSidebarItem": "home",
+    "expandedSections": [],
+    "currentProject": "Harborlight Fitness App"
+  }
+}

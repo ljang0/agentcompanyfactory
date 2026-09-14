@@ -1,0 +1,30 @@
+{
+  "app_id": "PACS-viewer_mock",
+  "source": "error: HTTPError: HTTP Error 404: Not Found",
+  "documented": [
+    "currentUser",
+    "measurements",
+    "patients",
+    "series",
+    "settings",
+    "studies",
+    "toolState",
+    "uiState",
+    "viewports"
+  ],
+  "observed": [],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [
+    "currentUser",
+    "measurements",
+    "patients",
+    "series",
+    "settings",
+    "studies",
+    "toolState",
+    "uiState",
+    "viewports"
+  ],
+  "agrees": false,
+  "shapes": {}
+}

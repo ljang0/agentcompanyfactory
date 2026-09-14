@@ -1,0 +1,78 @@
+{
+  "skill": "company-discovery",
+  "provenance": {
+    "sources": [
+      {
+        "path": "companies/schweitzer-engineering-laboratories/company.json",
+        "sha256": "b2dd71879da235c507ec2146c1710631347e137402b0e70af7894347d8e44a8a"
+      },
+      {
+        "path": "companies/schweitzer-engineering-laboratories/tasks/schweitzer-engineering-laboratories_maintenance-portfolio-selection/workflow.json",
+        "sha256": "f385892a5baea4618cc3a3256e1c25f498912ad1e4bd891524e42fac13b668fa"
+      },
+      {
+        "path": "data/sources/a9e4e53dc38331d45c47e7115dcdabc4b9fee608da5dd8a32d1f5a8a29b5ab32.json",
+        "sha256": "e791453dc64f79a94687913757f2a8a1d5b74f3dd98aa2d5ebc067dde311fc8f"
+      },
+      {
+        "path": "data/sources/07c6047bbddd569f00cb913cdb6af4b86032b6fdd62f40d824a813e2335a9d71.json",
+        "sha256": "dfea7f161f709d32c59eb52854ad2fd44db8204826bcac7b5c28138fd3fed205"
+      },
+      {
+        "path": "data/sources/07c6047bbddd569f00cb913cdb6af4b86032b6fdd62f40d824a813e2335a9d71.json",
+        "sha256": "dfea7f161f709d32c59eb52854ad2fd44db8204826bcac7b5c28138fd3fed205"
+      },
+      {
+        "path": "data/sources/07c6047bbddd569f00cb913cdb6af4b86032b6fdd62f40d824a813e2335a9d71.json",
+        "sha256": "dfea7f161f709d32c59eb52854ad2fd44db8204826bcac7b5c28138fd3fed205"
+      },
+      {
+        "path": "data/sources/3feb69d00a0c68be6c51e84f1e9f6ee5a10a9a444c609e45940c9167a0a6adf0.json",
+        "sha256": "a079e754b0d41e1227ba2cf6892e103df2010569e743430df660fe431527a6cf"
+      },
+      {
+        "path": "data/sources/52d0d2d7f7882f2c9eefcf433ca641524a1051d5c2b190940225940023e5430c.json",
+        "sha256": "add8d9a2eb931a3b0ffb64cabe57b255264a16ae81a80f8d1294b76c7ce45d3f"
+      },
+      {
+        "path": "data/sources/52d0d2d7f7882f2c9eefcf433ca641524a1051d5c2b190940225940023e5430c.json",
+        "sha256": "add8d9a2eb931a3b0ffb64cabe57b255264a16ae81a80f8d1294b76c7ce45d3f"
+      }
+    ],
+    "changes": "Trimmed to one task and a few native records. Calibration tasks are explicitly narrowed exercises derived from that task; their answers and planted defects are hand-authored test data, not accepted production outcomes."
+  },
+  "input": {
+    "sector": "Manufacturing",
+    "candidate_count": 1,
+    "excluded": [
+      {
+        "id": "excluded-vendor",
+        "real_firm": "Excluded Vendor LLC",
+        "website": "https://excludedvendor.invalid"
+      }
+    ],
+    "coverage": {
+      "under_used_apps": [
+        "github_mock"
+      ]
+    },
+    "source_excerpts": {
+      "https://selinc.com/company/about/": "\nabout | schweitzer engineering laboratories company about sel making electric power safer, more reliable, and more economical sel invents, designs, and builds digital products and systems that protect, automate, and control critical infrastructure around the world. this technology prevents blackouts and enables customers to improve power system reliability, safety, and cost. sel, a 100 percent employee-owned company that is headquartered in ",
+      "https://selinc.com/support/security-notifications/": "\n, and we will always provide a disclosure to customers in advance of any other dissemination. how we assess vulnerabilities the sel product security incident response team (psirt) assesses every report of an sel product security issue, regardless of whether the report comes from within sel as a function of our continuous improvement processes or from an external reporter. the psirt considers several factors to \nources devoted to remediation, including: type of access required for exploitation (i.e., physical, network, privileged, etc.). complexity of an attack. need for user interaction. impact on core product functionality. likelihood of active exploitation. presence in multiple products. how we disclose vulnerabilities vulnerabilities are disclosed to customers in three ways: for high-risk vulnerabi\nsecurity support | schweitzer engineering laboratories security support security updates for sel products security updates are disclosed to customers in three ways: for high-risk vulnerabilities-through a service bulletin for other vulnerabilities-through a revision to appendix a of the affected product's instruction manual for software products-through an addition to the latest software versions p",
+      "https://cms-cdn.selinc.com/assets/Literature/Product%20Literature/SELect%20Input%20Output%20Card%20Installation%20Instructions/710_IS-CardOption_20190508.pdf?v=20190614-194941": "\nr. 9. reinstall the eight screws that secure the rear cover to the case i. select 8 dib    select 4 aci  a refer to the sel -710 mot for power supply and cpu board variants. b the fast, high-current interrupting output option and the 8 di card option require r300 or higher firmware revisions. c requires r201 or higher firmware revisions. d requires r306, r402, or higher firmware revisions. danger disconnect or de-energize all external connections before opening this de",
+      "https://selinc.com/industries/utilities/distribution/": "\n we provide. we also practice secure supply chain management and help our customers comply with applicable supply chain and cybersecurity standards. security bulletins and updates we thoroughly review and test the code in our products, which allows us greater control over their quality, security, and functionality. security-related software and firmware updates are provided for the entire service life of every \nt. lifetime product support lifetime product support cybersecurity support cybersecurity support training and education training and education after your systems are commissioned, our application engineers provide technical support for sel products at no cost. as long as your sel products remain in service, you have access to direct technical support from sel engineers-not just a handful of customer-facing product engineers,"
+    }
+  },
+  "double": {
+    "candidates": [
+      {
+        "id": "schweitzer-engineering-laboratories",
+        "real_firm": "Schweitzer Engineering Laboratories, Inc.",
+        "sector": "Manufacturing",
+        "website": "https://selinc.com",
+        "reason": "SEL designs and manufactures digital protection, automation and control equipment. Its captured About page identifies Pullman headquarters and US manufacturing since 1984. Captured support materials establish product-security assessment, code review and testing, continuing security updates and application engineering support. Clearwater models a bounded US sustaining-firmware and product-assurance unit within an established protective-relay manufacturer. It maintains shipped firmware, investigates defects, reviews remedies and prepares guidance for customers operating installed equipment. Synthetic scale: 24 employees support four relay families, twelve maintained firmware branches, approximately 180 US customer organizations and 14,000 registered devices. Ordinary monthly work includes 45 firmware/application support cases, eight escalated engineering investigations, three security assessments and two maintenance-candidate reviews; these categories overlap. A ten-year archive contains release notes, compatibility decisions, completed test reports and customer cases. The six listed workers are recurring decision participants, not the whole workforce. Their outputs include source analyses, verification assessments, remediation priorities, maintenance commitments and internally approved customer guidance. Manufacturing, laboratory execution, firmware signing and customer installation remain outside the selected digital cycles."
+      }
+    ]
+  },
+  "oracle": {}
+}

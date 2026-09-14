@@ -1,0 +1,233 @@
+{
+  "at": "2026-09-14T00:16:40.230075+00:00",
+  "status": "accepted",
+  "proof_key": "c869296d18ddce52e83cf8e0f8beb8a0c6958cc8280e3133d756ceb9e1e2b421",
+  "cases": [
+    {
+      "case": "noop",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "f697f47459f1cb3f6d85a5747fe80636f1773ad9a9504f9a80ec43d68afa974a"
+    },
+    {
+      "case": "noop",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "f6b4beb03019c2720f9cd97652cec43532b7c8a37daf0c4202251e679d09cb9e"
+    },
+    {
+      "case": "reference",
+      "evidence_mode": "expanded",
+      "expected": "pass",
+      "observed": "pass",
+      "ok": true,
+      "report_hash": "2729565d2a06968526e186548878c9a3a835c35bc3631cd58e4003acb994ec8d"
+    },
+    {
+      "case": "reference",
+      "evidence_mode": "encoded",
+      "expected": "pass",
+      "observed": "pass",
+      "ok": true,
+      "report_hash": "488f6814818b7392def1fa927987f9ba93f4c8155cf12c722e1b3a8078ae0787"
+    },
+    {
+      "case": "alternative",
+      "evidence_mode": "expanded",
+      "expected": "pass",
+      "observed": "pass",
+      "ok": true,
+      "report_hash": "e61509f565597943e6c32d7d5a7b37cce10748bd0e41702461a71294dad912ea"
+    },
+    {
+      "case": "alternative",
+      "evidence_mode": "encoded",
+      "expected": "pass",
+      "observed": "pass",
+      "ok": true,
+      "report_hash": "50557f2eebc7fd0ee382aa1dee63b2c7188b52426eee7321aa0ba50fe0f78234"
+    },
+    {
+      "case": "forged_claim",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "6dc6abf8e49a104bc92fe05c407e5127853f57498f36621ac58ca17de20be195"
+    },
+    {
+      "case": "forged_claim",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "7d452fdc77fdcb543030486b5a3ef60a385661ab1c184282aa4e540f1fd16cdf"
+    },
+    {
+      "case": "irrelevant_contribution",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "4d6254f23f72df2e62ae773ab8025181a4bcb26b6e5e6c4de5b61e451a068c65"
+    },
+    {
+      "case": "irrelevant_contribution",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "b09d2dc3326ea85716c2ba66d80826efc10fd7ecfb2841267cd7c46bd90e659f"
+    },
+    {
+      "case": "missing_authority",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "4a840a03fef6002d4d11ecb117a0a77102c0fa51108f8a57d4e3b077b2a2717d"
+    },
+    {
+      "case": "missing_authority",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "9777b960b845e2cb6ceb8b5fdfba3394c649312f864b202aa06a0b6a812b7ab8"
+    },
+    {
+      "case": "missing_evidence",
+      "evidence_mode": "expanded",
+      "expected": "unavailable",
+      "observed": "unavailable",
+      "ok": true,
+      "error": "Final evidence must contain every app snapshot"
+    },
+    {
+      "case": "missing_evidence",
+      "evidence_mode": "encoded",
+      "expected": "unavailable",
+      "observed": "unavailable",
+      "ok": true,
+      "error": "Final evidence must contain every app snapshot"
+    },
+    {
+      "case": "partial",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "e3c42f5fd7ad666bc24605c5eaae1a8e8f1828bc237a2d607b3a683a00394fc8"
+    },
+    {
+      "case": "partial",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "7e4eb9d3e24256ad1d0623499a06b29713bf4593df1fe41c5661413ec3009d04"
+    },
+    {
+      "case": "wrong_record",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "17bbf44666ff049fdce34bf36ac9e0911de4bb2a07c1c7e9b2f7426319ecb553"
+    },
+    {
+      "case": "wrong_record",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "6c9634696266ec8bb5bcc0048e7d9ba3241055ecfa3602691e0d81a5e7d3f354"
+    },
+    {
+      "case": "wrong_total",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "1f35ef7554756c5d95775ea0b8b8c8b752060720d0e668bb353ebe15b730cf65"
+    },
+    {
+      "case": "wrong_total",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "7e01de056bd6d896c421290891c353910cce11b40f91d9ae7771f491a86474d9"
+    }
+  ],
+  "reference_hash": "5dfa799db5405300414bafe1c9ea6e948a9ebcfaf4f3bdd278de048e05445c21",
+  "golden_hash": "d5caefe41fec53967159e098245b8556ffe0b0b1c1cc8365f5a960453710e4a9",
+  "fixtures_hash": "87ccc350b89c56ca34bd5d99b809b9399a47db704349ac995f4c3851dcd3a5c6",
+  "failure_targets": {
+    "alternative": {
+      "kind": "alternative",
+      "criteria": [],
+      "workers": [],
+      "reason": "The changed service sequence preserves prompt follow-up, coordinated scope and all required contributions and deliverables."
+    },
+    "forged_claim": {
+      "kind": "forged_claim",
+      "criteria": [],
+      "workers": [
+        "order-coordinator"
+      ],
+      "reason": "A supervisor's assertion cannot replace trusted evidence of the order coordinator's required reconciliation and handoffs."
+    },
+    "irrelevant_contribution": {
+      "kind": "irrelevant_contribution",
+      "criteria": [],
+      "workers": [
+        "marketing-specialist"
+      ],
+      "reason": "Office-organizing activity does not establish the required specialist contribution of approved claims, recipient-specific permissions and effort findings."
+    },
+    "missing_authority": {
+      "kind": "missing_authority",
+      "criteria": [],
+      "workers": [
+        "sales-supervisor"
+      ],
+      "reason": "Complete artifacts and named attribution do not establish that the authorized supervisor contributed the priority and coordinated-scope decision."
+    },
+    "missing_evidence": {
+      "kind": "missing_evidence",
+      "criteria": [],
+      "workers": [],
+      "reason": "Missing final snapshots prevent assessment of the final state; they do not establish a specific task failure."
+    },
+    "partial": {
+      "kind": "partial",
+      "criteria": [
+        4
+      ],
+      "workers": [],
+      "reason": "The unfinished Juniper customer draft lacks usable conditional pricing and actionable missing-detail requests; internal analysis does not complete that deliverable."
+    },
+    "wrong_record": {
+      "kind": "wrong_record",
+      "criteria": [
+        3
+      ],
+      "workers": [],
+      "reason": "The processing draft identifies the wrong accepted order, product and quantity, violating the requirement for precise service instructions."
+    },
+    "wrong_total": {
+      "kind": "wrong_total",
+      "criteria": [
+        2
+      ],
+      "workers": [],
+      "reason": "The customer-facing commercial calculation is inaccurate: $4.20 × 240 is $1,008, not $1,080."
+    }
+  },
+  "scope": "isolated mechanics and semantic calibration in expanded and losslessly encoded evidence modes; no real-team necessity proof"
+}

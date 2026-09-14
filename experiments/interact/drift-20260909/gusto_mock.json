@@ -1,0 +1,291 @@
+{
+  "app_id": "gusto_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "benefitPlans",
+    "company",
+    "companyHolidays",
+    "contractors",
+    "currentUser",
+    "documents",
+    "employees",
+    "notifications",
+    "onboardingChecklists",
+    "payrolls",
+    "referrals",
+    "reportHistory",
+    "taxForms",
+    "timeEntries",
+    "timeOffRequests",
+    "todoItems"
+  ],
+  "observed": [
+    "benefitPlans",
+    "company",
+    "companyHolidays",
+    "contractors",
+    "currentUser",
+    "documents",
+    "employees",
+    "notifications",
+    "onboardingChecklists",
+    "payrolls",
+    "performanceReviews",
+    "referrals",
+    "reportHistory",
+    "taxForms",
+    "timeEntries",
+    "timeOffRequests",
+    "todoItems"
+  ],
+  "undocumented_so_unseedable": [
+    "performanceReviews"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "company": {
+      "kind": "object",
+      "count": 16,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "currentUser": {
+      "kind": "object",
+      "count": 7,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "employees": {
+      "kind": "array",
+      "count": 16,
+      "record_fields": [
+        "id",
+        "firstName",
+        "lastName",
+        "middleName",
+        "email",
+        "personalEmail",
+        "phone",
+        "dateOfBirth",
+        "ssn",
+        "address",
+        "department",
+        "departmentId",
+        "jobTitle",
+        "managerId",
+        "managerName",
+        "employmentType",
+        "compensation",
+        "startDate",
+        "status",
+        "location",
+        "locationId",
+        "payMethod",
+        "federalFilingStatus",
+        "stateFilingStatus",
+        "allowances",
+        "benefits",
+        "pto",
+        "avatar"
+      ],
+      "keyed_by_id": false
+    },
+    "contractors": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "firstName",
+        "lastName",
+        "email",
+        "phone",
+        "businessName",
+        "type",
+        "compensation",
+        "address",
+        "startDate",
+        "status",
+        "payMethod",
+        "totalPaidYTD"
+      ],
+      "keyed_by_id": false
+    },
+    "payrolls": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "status",
+        "payPeriod",
+        "checkDate",
+        "deadline",
+        "totalGrossPay",
+        "totalTaxes",
+        "totalBenefits",
+        "totalNetPay",
+        "totalReimbursements",
+        "employeeCompensations"
+      ],
+      "keyed_by_id": false
+    },
+    "timeEntries": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "employeeId",
+        "weekStartDate",
+        "status",
+        "totalHours",
+        "regularHours",
+        "overtimeHours",
+        "entries"
+      ],
+      "keyed_by_id": false
+    },
+    "timeOffRequests": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "employeeId",
+        "employeeName",
+        "type",
+        "startDate",
+        "endDate",
+        "totalHours",
+        "status",
+        "reason",
+        "requestedAt",
+        "reviewedBy",
+        "reviewedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "benefitPlans": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "type",
+        "planName",
+        "provider",
+        "monthlyCostEmployee",
+        "monthlyCostEmployer",
+        "coverage",
+        "enrolledCount",
+        "description"
+      ],
+      "keyed_by_id": false
+    },
+    "taxForms": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "type",
+        "year",
+        "status",
+        "filedDate",
+        "description"
+      ],
+      "keyed_by_id": false
+    },
+    "documents": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "category",
+        "uploadedDate",
+        "uploadedBy",
+        "size"
+      ],
+      "keyed_by_id": false
+    },
+    "todoItems": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "title",
+        "description",
+        "type",
+        "priority",
+        "dueDate",
+        "status",
+        "actionUrl",
+        "relatedId"
+      ],
+      "keyed_by_id": false
+    },
+    "onboardingChecklists": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "employeeId",
+        "employeeName",
+        "startDate",
+        "tasks"
+      ],
+      "keyed_by_id": false
+    },
+    "performanceReviews": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "employeeId",
+        "employeeName",
+        "reviewerId",
+        "reviewerName",
+        "period",
+        "status",
+        "overallRating",
+        "submittedDate",
+        "categories",
+        "summary"
+      ],
+      "keyed_by_id": false
+    },
+    "companyHolidays": {
+      "kind": "array",
+      "count": 9,
+      "record_fields": [
+        "id",
+        "name",
+        "date"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "message",
+        "type",
+        "read",
+        "timestamp",
+        "actionUrl"
+      ],
+      "keyed_by_id": false
+    },
+    "reportHistory": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "referrals": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

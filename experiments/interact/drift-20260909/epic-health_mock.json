@@ -1,0 +1,322 @@
+{
+  "app_id": "epic-health_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "allergies",
+    "appointments",
+    "billingStatements",
+    "conditions",
+    "currentUser",
+    "immunizations",
+    "insurance",
+    "medications",
+    "messages",
+    "preventiveCare",
+    "providers",
+    "testResults",
+    "ui",
+    "vitals"
+  ],
+  "observed": [
+    "allergies",
+    "appointments",
+    "billingStatements",
+    "conditions",
+    "currentUser",
+    "drafts",
+    "familyHistory",
+    "immunizations",
+    "insurance",
+    "letters",
+    "medicalHistory",
+    "medications",
+    "messages",
+    "preventiveCare",
+    "providers",
+    "testResults",
+    "ui",
+    "vitals"
+  ],
+  "undocumented_so_unseedable": [
+    "drafts",
+    "familyHistory",
+    "letters",
+    "medicalHistory"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 15,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "providers": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "firstName",
+        "lastName",
+        "fullName",
+        "title",
+        "specialty",
+        "role",
+        "department",
+        "phone",
+        "email",
+        "location",
+        "address",
+        "avatarInitials",
+        "avatarColor",
+        "imageUrl"
+      ],
+      "keyed_by_id": false
+    },
+    "appointments": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "patientId",
+        "providerId",
+        "providerName",
+        "type",
+        "status",
+        "dateTime",
+        "duration",
+        "location",
+        "address",
+        "department",
+        "reason",
+        "instructions",
+        "isUpcoming",
+        "canCheckIn",
+        "canCancel",
+        "canReschedule",
+        "afterVisitSummary",
+        "questionnairesRequired",
+        "notes"
+      ],
+      "keyed_by_id": false
+    },
+    "messages": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "threadId",
+        "parentId",
+        "from",
+        "to",
+        "subject",
+        "body",
+        "date",
+        "isRead",
+        "isStarred",
+        "folder",
+        "hasAttachment",
+        "attachments",
+        "isUrgent"
+      ],
+      "keyed_by_id": false
+    },
+    "testResults": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "patientId",
+        "orderedBy",
+        "orderedById",
+        "testName",
+        "category",
+        "orderedDate",
+        "collectedDate",
+        "resultDate",
+        "status",
+        "isReviewed",
+        "providerComment",
+        "observations"
+      ],
+      "keyed_by_id": false
+    },
+    "medications": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "patientId",
+        "name",
+        "genericName",
+        "dosage",
+        "form",
+        "frequency",
+        "route",
+        "instructions",
+        "prescriber",
+        "prescriberId",
+        "pharmacy",
+        "status",
+        "startDate",
+        "endDate",
+        "lastFilledDate",
+        "refillsRemaining",
+        "totalRefills",
+        "isRefillable",
+        "daysSupply",
+        "quantity",
+        "reason"
+      ],
+      "keyed_by_id": false
+    },
+    "conditions": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "patientId",
+        "name",
+        "icdCode",
+        "clinicalStatus",
+        "severity",
+        "onsetDate",
+        "diagnosedBy",
+        "notes"
+      ],
+      "keyed_by_id": false
+    },
+    "allergies": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "patientId",
+        "allergen",
+        "type",
+        "reaction",
+        "severity",
+        "status",
+        "onsetDate",
+        "notes"
+      ],
+      "keyed_by_id": false
+    },
+    "immunizations": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "patientId",
+        "vaccineName",
+        "vaccineCode",
+        "administrationDate",
+        "site",
+        "administrator",
+        "lotNumber",
+        "status",
+        "nextDueDate"
+      ],
+      "keyed_by_id": false
+    },
+    "vitals": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "patientId",
+        "date",
+        "readings",
+        "recordedBy",
+        "location"
+      ],
+      "keyed_by_id": false
+    },
+    "billingStatements": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "patientId",
+        "statementDate",
+        "dueDate",
+        "totalAmount",
+        "insurancePaid",
+        "patientResponsibility",
+        "amountPaid",
+        "balanceDue",
+        "status",
+        "lineItems"
+      ],
+      "keyed_by_id": false
+    },
+    "insurance": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "patientId",
+        "planName",
+        "planType",
+        "memberId",
+        "groupNumber",
+        "subscriberName",
+        "relationship",
+        "effectiveDate",
+        "copay",
+        "deductible",
+        "outOfPocketMax",
+        "contactPhone",
+        "isActive"
+      ],
+      "keyed_by_id": false
+    },
+    "preventiveCare": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "patientId",
+        "name",
+        "category",
+        "status",
+        "lastCompleted",
+        "nextDue",
+        "frequency",
+        "notes"
+      ],
+      "keyed_by_id": false
+    },
+    "drafts": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "letters": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "familyHistory": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "medicalHistory": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "ui": {
+      "kind": "object",
+      "count": 13,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

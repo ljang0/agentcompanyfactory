@@ -1,0 +1,494 @@
+{
+  "skill": "company-research",
+  "provenance": {
+    "sources": [
+      {
+        "path": "companies/schweitzer-engineering-laboratories/company.json",
+        "sha256": "b2dd71879da235c507ec2146c1710631347e137402b0e70af7894347d8e44a8a"
+      },
+      {
+        "path": "companies/schweitzer-engineering-laboratories/tasks/schweitzer-engineering-laboratories_maintenance-portfolio-selection/workflow.json",
+        "sha256": "f385892a5baea4618cc3a3256e1c25f498912ad1e4bd891524e42fac13b668fa"
+      },
+      {
+        "path": "data/sources/a9e4e53dc38331d45c47e7115dcdabc4b9fee608da5dd8a32d1f5a8a29b5ab32.json",
+        "sha256": "e791453dc64f79a94687913757f2a8a1d5b74f3dd98aa2d5ebc067dde311fc8f"
+      },
+      {
+        "path": "data/sources/07c6047bbddd569f00cb913cdb6af4b86032b6fdd62f40d824a813e2335a9d71.json",
+        "sha256": "dfea7f161f709d32c59eb52854ad2fd44db8204826bcac7b5c28138fd3fed205"
+      },
+      {
+        "path": "data/sources/07c6047bbddd569f00cb913cdb6af4b86032b6fdd62f40d824a813e2335a9d71.json",
+        "sha256": "dfea7f161f709d32c59eb52854ad2fd44db8204826bcac7b5c28138fd3fed205"
+      },
+      {
+        "path": "data/sources/07c6047bbddd569f00cb913cdb6af4b86032b6fdd62f40d824a813e2335a9d71.json",
+        "sha256": "dfea7f161f709d32c59eb52854ad2fd44db8204826bcac7b5c28138fd3fed205"
+      },
+      {
+        "path": "data/sources/3feb69d00a0c68be6c51e84f1e9f6ee5a10a9a444c609e45940c9167a0a6adf0.json",
+        "sha256": "a079e754b0d41e1227ba2cf6892e103df2010569e743430df660fe431527a6cf"
+      },
+      {
+        "path": "data/sources/52d0d2d7f7882f2c9eefcf433ca641524a1051d5c2b190940225940023e5430c.json",
+        "sha256": "add8d9a2eb931a3b0ffb64cabe57b255264a16ae81a80f8d1294b76c7ce45d3f"
+      },
+      {
+        "path": "data/sources/52d0d2d7f7882f2c9eefcf433ca641524a1051d5c2b190940225940023e5430c.json",
+        "sha256": "add8d9a2eb931a3b0ffb64cabe57b255264a16ae81a80f8d1294b76c7ce45d3f"
+      }
+    ],
+    "changes": "Trimmed to one task and a few native records. Calibration tasks are explicitly narrowed exercises derived from that task; their answers and planted defects are hand-authored test data, not accepted production outcomes."
+  },
+  "input": {
+    "candidate": {
+      "id": "schweitzer-engineering-laboratories",
+      "real_firm": "Schweitzer Engineering Laboratories, Inc.",
+      "sector": "Manufacturing",
+      "website": "https://selinc.com",
+      "reason": "SEL designs and manufactures digital protection, automation and control equipment. Its captured About page identifies Pullman headquarters and US manufacturing since 1984. Captured support materials establish product-security assessment, code review and testing, continuing security updates and application engineering support. Clearwater models a bounded US sustaining-firmware and product-assurance unit within an established protective-relay manufacturer. It maintains shipped firmware, investigates defects, reviews remedies and prepares guidance for customers operating installed equipment. Synthetic scale: 24 employees support four relay families, twelve maintained firmware branches, approximately 180 US customer organizations and 14,000 registered devices. Ordinary monthly work includes 45 firmware/application support cases, eight escalated engineering investigations, three security assessments and two maintenance-candidate reviews; these categories overlap. A ten-year archive contains release notes, compatibility decisions, completed test reports and customer cases. The six listed workers are recurring decision participants, not the whole workforce. Their outputs include source analyses, verification assessments, remediation priorities, maintenance commitments and internally approved customer guidance. Manufacturing, laboratory execution, firmware signing and customer installation remain outside the selected digital cycles."
+    },
+    "assigned_apps": [
+      "github_mock"
+    ],
+    "captures": {
+      "https://selinc.com/company/about/": "\nabout | schweitzer engineering laboratories company about sel making electric power safer, more reliable, and more economical sel invents, designs, and builds digital products and systems that protect, automate, and control critical infrastructure around the world. this technology prevents blackouts and enables customers to improve power system reliability, safety, and cost. sel, a 100 percent employee-owned company that is headquartered in ",
+      "https://selinc.com/support/security-notifications/": "\n, and we will always provide a disclosure to customers in advance of any other dissemination. how we assess vulnerabilities the sel product security incident response team (psirt) assesses every report of an sel product security issue, regardless of whether the report comes from within sel as a function of our continuous improvement processes or from an external reporter. the psirt considers several factors to \nources devoted to remediation, including: type of access required for exploitation (i.e., physical, network, privileged, etc.). complexity of an attack. need for user interaction. impact on core product functionality. likelihood of active exploitation. presence in multiple products. how we disclose vulnerabilities vulnerabilities are disclosed to customers in three ways: for high-risk vulnerabi\nsecurity support | schweitzer engineering laboratories security support security updates for sel products security updates are disclosed to customers in three ways: for high-risk vulnerabilities-through a service bulletin for other vulnerabilities-through a revision to appendix a of the affected product's instruction manual for software products-through an addition to the latest software versions p",
+      "https://cms-cdn.selinc.com/assets/Literature/Product%20Literature/SELect%20Input%20Output%20Card%20Installation%20Instructions/710_IS-CardOption_20190508.pdf?v=20190614-194941": "\nr. 9. reinstall the eight screws that secure the rear cover to the case i. select 8 dib    select 4 aci  a refer to the sel -710 mot for power supply and cpu board variants. b the fast, high-current interrupting output option and the 8 di card option require r300 or higher firmware revisions. c requires r201 or higher firmware revisions. d requires r306, r402, or higher firmware revisions. danger disconnect or de-energize all external connections before opening this de",
+      "https://selinc.com/industries/utilities/distribution/": "\n we provide. we also practice secure supply chain management and help our customers comply with applicable supply chain and cybersecurity standards. security bulletins and updates we thoroughly review and test the code in our products, which allows us greater control over their quality, security, and functionality. security-related software and firmware updates are provided for the entire service life of every \nt. lifetime product support lifetime product support cybersecurity support cybersecurity support training and education training and education after your systems are commissioned, our application engineers provide technical support for sel products at no cost. as long as your sel products remain in service, you have access to direct technical support from sel engineers-not just a handful of customer-facing product engineers,"
+    },
+    "scope": "SEL designs and manufactures digital protection, automation and control equipment. Its captured About page identifies Pullman headquarters and US manufacturing since 1984. Captured support materials establish product-security assessment, code review and testing, continuing security updates and application engineering support. Clearwater models a bounded US sustaining-firmware and product-assurance unit within an established protective-relay manufacturer. It maintains shipped firmware, investigates defects, reviews remedies and prepares guidance for customers operating installed equipment. Synthetic scale: 24 employees support four relay families, twelve maintained firmware branches, approximately 180 US customer organizations and 14,000 registered devices. Ordinary monthly work includes 45 firmware/application support cases, eight escalated engineering investigations, three security assessments and two maintenance-candidate reviews; these categories overlap. A ten-year archive contains release notes, compatibility decisions, completed test reports and customer cases. The six listed workers are recurring decision participants, not the whole workforce. Their outputs include source analyses, verification assessments, remediation priorities, maintenance commitments and internally approved customer guidance. Manufacturing, laboratory execution, firmware signing and customer installation remain outside the selected digital cycles.",
+    "available_runtime_apps": [
+      "gmail_mock",
+      "slack_mock",
+      "google_calendar_mock",
+      "google_drive_mock",
+      "google_docs_mock",
+      "github_mock"
+    ],
+    "minimum_workers_per_workflow": 3
+  },
+  "double": {
+    "schema_version": "1",
+    "id": "schweitzer-engineering-laboratories",
+    "name": "Clearwater Protection Systems — fictional analogue",
+    "real_firm": "Schweitzer Engineering Laboratories, Inc.",
+    "website": "https://selinc.com",
+    "sector": "Manufacturing",
+    "naics": "335314",
+    "location": "Modeled operation: Pullman, Washington, serving US electric utilities and industrial power-system operators.",
+    "operations": "SEL designs and manufactures digital protection, automation and control equipment. Its captured About page identifies Pullman headquarters and US manufacturing since 1984. Captured support materials establish product-security assessment, code review and testing, continuing security updates and application engineering support. Clearwater models a bounded US sustaining-firmware and product-assurance unit within an established protective-relay manufacturer. It maintains shipped firmware, investigates defects, reviews remedies and prepares guidance for customers operating installed equipment. Synthetic scale: 24 employees support four relay families, twelve maintained firmware branches, approximately 180 US customer organizations and 14,000 registered devices. Ordinary monthly work includes 45 firmware/application support cases, eight escalated engineering investigations, three security assessments and two maintenance-candidate reviews; these categories overlap. A ten-year archive contains release notes, compatibility decisions, completed test reports and customer cases. The six listed workers are recurring decision participants, not the whole workforce. Their outputs include source analyses, verification assessments, remediation priorities, maintenance commitments and internally approved customer guidance. Manufacturing, laboratory execution, firmware signing and customer installation remain outside the selected digital cycles.",
+    "evidence": [
+      {
+        "id": "core-identity",
+        "kind": "sourced",
+        "text": "Schweitzer Engineering Laboratories designs and builds digital products that protect, automate and control critical infrastructure. Its captured About page identifies Pullman headquarters and US manufacturing since 1984.",
+        "source_url": "https://selinc.com/company/about/",
+        "quote": "SEL invents, designs, and builds digital products and systems that protect, automate, and control critical infrastructure around the world.",
+        "basis": "Captured About page reread through read_source. The quotation establishes product design and construction; the same captured page explicitly supplies headquarters and manufacturing history. These ground identity, Manufacturing sector and the relevant US operation, without establishing the fictional unit."
+      },
+      {
+        "id": "security-assessment",
+        "kind": "sourced",
+        "text": "SEL's Product Security Incident Response Team assesses reports of product-security issues.",
+        "source_url": "https://selinc.com/support/security-notifications/",
+        "quote": "assesses every report of an SEL product security issue",
+        "basis": "Read in the supplied full captured text; the surrounding sentence identifies the responsible team. This establishes an assessment function, not individual reporting lines or approval authority."
+      },
+      {
+        "id": "functional-impact",
+        "kind": "sourced",
+        "text": "SEL considers effects on core product functionality in vulnerability assessment.",
+        "source_url": "https://selinc.com/support/security-notifications/",
+        "quote": "Impact on core product functionality.",
+        "basis": "Literal item in the captured vulnerability-assessment factors. It supports considering operational consequences alongside security exposure."
+      },
+      {
+        "id": "security-disclosure",
+        "kind": "sourced",
+        "text": "SEL identifies Service Bulletins as its disclosure vehicle for high-risk vulnerabilities.",
+        "source_url": "https://selinc.com/support/security-notifications/",
+        "quote": "For high-risk vulnerabilities—through a Service Bulletin",
+        "basis": "Literal text in the supplied captured security page. This supports differentiated disclosure, without establishing the analogue's approval process."
+      },
+      {
+        "id": "hardware-applicability",
+        "kind": "sourced",
+        "text": "SEL's dated SEL-710 card-options document specifies minimum firmware revisions for particular hardware options.",
+        "source_url": "https://cms-cdn.selinc.com/assets/Literature/Product%20Literature/SELect%20Input%20Output%20Card%20Installation%20Instructions/710_IS-CardOption_20190508.pdf?v=20190614-194941",
+        "quote": "The fast, high-current interrupting output option and the 8 DI card option require R300 or higher firmware revisions.",
+        "basis": "Successfully opened and read the four-page SEL-710 Card Options PDF, date code 20190508. Page 2 contains this card-table footnote. It establishes a concrete hardware/firmware dependency for this product, supporting scoped applicability review. It does not establish current SEL-710-5 guidance, universal compatibility rules, rollback eligibility or fictional qualification results."
+      },
+      {
+        "id": "failed-product-capture",
+        "kind": "inferred",
+        "text": "No factual hardware-applicability claim is retained from the failed SEL-710-5 page.",
+        "source_url": "https://selinc.com/products/710-5/",
+        "quote": "",
+        "basis": "Evidence-repair disposition, not an operational inference: supplied capture status is unreadable; capture error is 'ValueError: empty page or access challenge'. The failed URL was not retried. Its previously asserted quotation is removed. The separate captured SEL-710 card-options document supplies narrower hardware-applicability grounding."
+      },
+      {
+        "id": "code-assurance",
+        "kind": "sourced",
+        "text": "SEL describes reviewing and testing code in its products.",
+        "source_url": "https://selinc.com/industries/utilities/distribution/",
+        "quote": "We thoroughly review and test the code in our products",
+        "basis": "Read in the supplied full capture's Security Bulletins and Updates section. This establishes code assurance as an operating function, without identifying a repository or build platform."
+      },
+      {
+        "id": "application-support",
+        "kind": "sourced",
+        "text": "SEL describes application engineers providing technical support after customer systems are commissioned.",
+        "source_url": "https://selinc.com/industries/utilities/distribution/",
+        "quote": "our application engineers provide technical support for SEL products",
+        "basis": "Read in the supplied captured lifetime-support discussion. Surrounding text establishes continuing support while products remain in service. Assignments and service-population counts remain synthetic."
+      },
+      {
+        "id": "operating-organization",
+        "kind": "inferred",
+        "text": "A sustaining-firmware unit can coherently combine software management, embedded development, independent verification, security analysis, electrical application engineering and technical support.",
+        "source_url": "",
+        "quote": "",
+        "basis": "Derived from core-identity, security-assessment, functional-impact, hardware-applicability, code-assurance and application-support. These responsibilities reconcile software behavior, evidence applicability and customer consequences. Their grouping into two teams is a modeling inference, not a sourced SEL organization chart."
+      },
+      {
+        "id": "modeled-scale",
+        "kind": "synthetic",
+        "text": "Clearwater's unit has 24 employees supporting four relay families, twelve firmware branches, 180 customer organizations and 14,000 registered devices, with the recurring workload and ten-year archive described in operations.",
+        "source_url": "",
+        "quote": "",
+        "basis": "Preserved scenario assumptions represent a continuing installed-base support operation beyond selected cases. Registered devices describe the modeled service population, not complete knowledge of installations or SEL's actual scale."
+      },
+      {
+        "id": "scenario-authority",
+        "kind": "synthetic",
+        "text": "The sustaining-software manager creates plans and authorizes internal maintenance priorities and guidance packages within documented unit limits. Specialists own their technical conclusions.",
+        "source_url": "",
+        "quote": "",
+        "basis": "Synthetic delegation makes internal decisions consequential while reserving laboratory certification, firmware distribution and customer operational authorization to their respective downstream processes."
+      },
+      {
+        "id": "workspace-model",
+        "kind": "synthetic",
+        "text": "The analogue uses Gmail, Slack, Google Calendar, Google Drive, Google Docs and GitHub as its shared digital workplace.",
+        "source_url": "",
+        "quote": "",
+        "basis": "The five standard applications are mandatory synthetic infrastructure. GitHub is a proposed engineering-record substitution. No SEL adoption of these products is claimed."
+      },
+      {
+        "id": "catalog-inspection",
+        "kind": "inferred",
+        "text": "The inspected application schemas support a record-based firmware review workspace but do not establish executable embedded builds or deployed cross-application behavior.",
+        "source_url": "",
+        "quote": "",
+        "basis": "Used search_catalog and read_app_schema for GitHub and all five standard applications during this repair. Documented records include branch-associated source content, issues, pull requests, comments and checks; editable documents and comments; Drive items, users and upload states; email drafts; chat threads; and calendar events. Suitability is inferred from these records. No deployed interface, permissions, reset behavior or shared persistence was independently tested."
+      },
+      {
+        "id": "classification",
+        "kind": "inferred",
+        "text": "NAICS 335314, Relay and Industrial Control Manufacturing, is the dossier's analytical classification.",
+        "source_url": "",
+        "quote": "",
+        "basis": "Selected for the modeled protective-relay manufacturing operation. This is not a verified establishment-level classification assigned to SEL."
+      },
+      {
+        "id": "digital-boundary",
+        "kind": "synthetic",
+        "text": "Episodes begin with relevant source snapshots, existing candidate changes, completed test evidence, customer records and fixed internal rules. They finish with internal decisions and usable downstream instructions.",
+        "source_url": "",
+        "quote": "",
+        "basis": "Supports substantive software and engineering work without waiting for laboratory execution, external replies, customer installation or future releases. Unavailable qualification remains an explicit downstream condition."
+      },
+      {
+        "id": "general-evidence-policy",
+        "kind": "synthetic",
+        "text": "Guidance must match evidenced hardware, firmware, configuration history and operational requirements. Candidate acceptance must distinguish covered behavior from unresolved behavior and identify remaining conditions.",
+        "source_url": "",
+        "quote": "",
+        "basis": "Preserves the requested repair to answer leakage: seeded policy supplies general evidence-applicability rules, without customer-specific recovery choices or causal conclusions. Workers derive those from source code, reports, compatibility facts and customer preferences. Resolved answers belong only in private evaluation."
+      }
+    ],
+    "workers": [
+      {
+        "id": "software-manager",
+        "title": "Sustaining Software Manager",
+        "soc": "11-3021",
+        "responsibility": "Receives the objective, creates the work plan, coordinates specialists, resolves competing priorities and integrates remediation or customer-guidance decisions. Manages the continuing firmware-maintenance portfolio.",
+        "information_access": [
+          "Shared correspondence, documents, chat and calendar",
+          "Repository snapshots, engineering issues and review comments",
+          "Security, verification and customer-impact assessments",
+          "Approved maintenance capacity and existing commitments"
+        ],
+        "authority": "May allocate documented unit capacity and approve internal dispositions and guidance packages. Cannot replace missing technical evidence with managerial approval, authorize customer switching operations or certify unperformed tests.",
+        "evidence_ids": [
+          "operating-organization",
+          "scenario-authority"
+        ]
+      },
+      {
+        "id": "firmware-developer",
+        "title": "Embedded Firmware Developer",
+        "soc": "15-1252",
+        "responsibility": "Traces behavior through source snapshots and branch configurations, reviews candidate code, evaluates reuse and backport feasibility, and defines correction requirements and acceptance criteria.",
+        "information_access": [
+          "Branch-associated source files and build manifests",
+          "Candidate pull request descriptions and code snapshots",
+          "Defect reports, completed tests and change history",
+          "Hardware compatibility and application requirements"
+        ],
+        "authority": "Owns software analysis and recommends accepting, revising or rejecting candidate changes. May update issues and review comments; an administrative merge or passing-check label cannot establish a working firmware image.",
+        "evidence_ids": [
+          "code-assurance",
+          "hardware-applicability",
+          "operating-organization"
+        ]
+      },
+      {
+        "id": "security-analyst",
+        "title": "Product Security Analyst",
+        "soc": "15-1212",
+        "responsibility": "Evaluates attack prerequisites, affected scope and uncertainty; distinguishes confirmed vulnerabilities from unsupported reports; assesses mitigations, deferral exposure and candidate-change security implications.",
+        "information_access": [
+          "Security intake reports and existing reproduction evidence",
+          "Source snapshots and component inventories",
+          "Application topology and exposure records",
+          "Internal disclosure rules and prior dispositions"
+        ],
+        "authority": "Issues security assessments and recommends urgency and disclosure scope. May challenge unsupported risk reductions; the manager authorizes internal resource commitments and integrated packages.",
+        "evidence_ids": [
+          "security-assessment",
+          "functional-impact",
+          "operating-organization",
+          "scenario-authority"
+        ]
+      },
+      {
+        "id": "verification-engineer",
+        "title": "Firmware Verification Engineer",
+        "soc": "15-1253",
+        "responsibility": "Independently maps completed tests to requirements, hardware revisions, configurations and build identities. Tests causal and acceptance claims against actual coverage and counterexamples.",
+        "information_access": [
+          "Completed regression reports and raw result extracts",
+          "Build identities, configurations and test specifications",
+          "Candidate changes and developer analysis",
+          "Historical failures and qualification restrictions"
+        ],
+        "authority": "May reject unsupported verification claims and specify remaining acceptance conditions. Cannot create passing results or certify laboratory activity through administrative status changes.",
+        "evidence_ids": [
+          "code-assurance",
+          "operating-organization",
+          "digital-boundary"
+        ]
+      },
+      {
+        "id": "application-engineer",
+        "title": "Protection Applications Engineer",
+        "soc": "17-2071",
+        "responsibility": "Interprets protection requirements, hardware applicability and recorded customer configurations. Evaluates operational consequences of mitigations, firmware changes, rollback and maintenance deferral.",
+        "information_access": [
+          "Application diagrams and configuration exports",
+          "Product requirements and compatibility records",
+          "Existing event analyses and customer operating constraints",
+          "Security, development and verification findings"
+        ],
+        "authority": "Defines supported application boundaries and identifies unsuitable mitigations. May recommend customer options but cannot approve a customer's outage, settings change or installation.",
+        "evidence_ids": [
+          "functional-impact",
+          "hardware-applicability",
+          "application-support",
+          "operating-organization"
+        ]
+      },
+      {
+        "id": "technical-support",
+        "title": "Firmware Technical Support Specialist",
+        "soc": "15-1232",
+        "responsibility": "Reconstructs reported symptoms, device versions, configuration history and prior troubleshooting. Converts accepted engineering conclusions into usable support instructions and preserves unresolved customer questions.",
+        "information_access": [
+          "Customer correspondence, support-case exports and prior responses",
+          "Registered-device and version snapshots",
+          "Compatibility findings and troubleshooting references",
+          "Engineering dispositions and guidance drafts"
+        ],
+        "authority": "May correct internal support records and prepare responses from accepted findings. Cannot infer installed firmware from shipment records alone or promise an unapproved fix, release or installation date.",
+        "evidence_ids": [
+          "application-support",
+          "operating-organization",
+          "scenario-authority"
+        ]
+      }
+    ],
+    "teams": [
+      {
+        "id": "sustaining-engineering",
+        "name": "Sustaining Firmware Engineering",
+        "purpose": "Maintain shipped firmware through source analysis, candidate review, verification assessment and maintenance commitments.",
+        "worker_ids": [
+          "software-manager",
+          "firmware-developer",
+          "verification-engineer"
+        ]
+      },
+      {
+        "id": "product-assurance-support",
+        "name": "Product Assurance and Application Support",
+        "purpose": "Connect security assessments and product behavior to hardware applicability, customer operating needs and support guidance.",
+        "worker_ids": [
+          "software-manager",
+          "security-analyst",
+          "application-engineer",
+          "technical-support"
+        ]
+      }
+    ],
+    "software": [
+      {
+        "id": "email",
+        "capability": "Email correspondence for incoming reports, historical troubleshooting and prepared customer responses.",
+        "reference_product": "Gmail",
+        "catalog_app_ids": [
+          "gmail_mock"
+        ],
+        "status": "substitution",
+        "rationale": "Mandatory synthetic workplace infrastructure, not established SEL adoption. The inspected schema documents email bodies, threads, attachments, labels and drafts. Customer responses remain unsent. Attachment URLs need readable underlying content; deployed draft editing and persistence remain unverified.",
+        "evidence_ids": [
+          "workspace-model",
+          "catalog-inspection"
+        ]
+      },
+      {
+        "id": "team-chat",
+        "capability": "Team chat for manager-created plans, specialist questions, competing interpretations and handoff references.",
+        "reference_product": "Slack",
+        "catalog_app_ids": [
+          "slack_mock"
+        ],
+        "status": "substitution",
+        "rationale": "Mandatory synthetic workplace infrastructure. The schema documents channels, messages, threads, pinned references and profile fields. Shared-session identity cannot establish individual authorship. Profile editing and shared persistence require deployment validation; substantive judgments need explicit worker attribution.",
+        "evidence_ids": [
+          "workspace-model",
+          "catalog-inspection"
+        ]
+      },
+      {
+        "id": "scheduling",
+        "capability": "Scheduling ordinary support coverage, maintenance work and internal review commitments.",
+        "reference_product": "Google Calendar",
+        "catalog_app_ids": [
+          "google_calendar_mock"
+        ],
+        "status": "substitution",
+        "rationale": "Mandatory synthetic workplace infrastructure. Events, calendar visibility and scheduling settings are documented. Events express commitments rather than completed tests or customer acceptance. Construction must respect documented calendar-ID normalization. No outline requires waiting for an appointment; deployed editing and persistence remain unverified.",
+        "evidence_ids": [
+          "workspace-model",
+          "catalog-inspection"
+        ]
+      },
+      {
+        "id": "shared-storage",
+        "capability": "Shared drive storage for compatibility records, customer exports, completed reports, manifests and handoff packages.",
+        "reference_product": "Google Drive",
+        "catalog_app_ids": [
+          "google_drive_mock"
+        ],
+        "status": "substitution",
+        "rationale": "Mandatory synthetic workplace infrastructure. The inspected schema documents items, owners, optional text content and uploadQueue states including error. A listing, owner identity or completed upload does not establish technical qualification. Readable report inspection, owner lookup, historical upload-error visibility and persistence remain construction checks. No outline depends on retrying an upload. Automatic synchronization with Docs is unverified.",
+        "evidence_ids": [
+          "workspace-model",
+          "catalog-inspection"
+        ]
+      },
+      {
+        "id": "collaborative-documents",
+        "capability": "Collaborative documents for impact assessments, alternatives, guidance, decisions and substantive review comments.",
+        "reference_product": "Google Docs",
+        "catalog_app_ids": [
+          "google_docs_mock"
+        ],
+        "status": "substitution",
+        "rationale": "Mandatory synthetic workplace infrastructure. Editable document content, comments, replies and resolution are documented. Approval belongs in reviewed content and linked engineering records; Docs has no native approval workflow state. Sharing fields do not establish enforceable worker permissions. Editing and shared persistence require deployment validation.",
+        "evidence_ids": [
+          "workspace-model",
+          "catalog-inspection"
+        ]
+      },
+      {
+        "id": "firmware-review",
+        "capability": "Review branch-associated source snapshots, candidate changes and completed check evidence; maintain engineering issues and pull request discussions.",
+        "reference_product": "GitHub",
+        "catalog_app_ids": [
+          "github_mock"
+        ],
+        "status": "substitution",
+        "rationale": "Proposed synthetic engineering workspace, not established SEL adoption. The inspected schema documents repositories, branches, source content, issue states, labels, pull requests, comments, reviewers and check records. These support source analysis and recorded planning or candidate dispositions. Source readability, label assignment and review interactions remain deployment checks. Git transport, computed diffs, executable continuous integration, protected branches and merge effects on files are unverified and unnecessary for these outlines.",
+        "evidence_ids": [
+          "code-assurance",
+          "workspace-model",
+          "catalog-inspection",
+          "digital-boundary"
+        ]
+      },
+      {
+        "id": "embedded-validation-and-delivery",
+        "capability": "Compile device firmware, execute hardware-dependent validation, sign production images and distribute authenticated updates.",
+        "reference_product": "Embedded build toolchain, relay test equipment and controlled firmware-signing system",
+        "catalog_app_ids": [],
+        "status": "gap",
+        "rationale": "No inspected catalog capability establishes this domain behavior. Existing source snapshots, build manifests and completed laboratory reports support review but cannot substitute for execution, signing or field deployment. These activities remain downstream boundaries.",
+        "evidence_ids": [
+          "code-assurance",
+          "catalog-inspection",
+          "digital-boundary"
+        ]
+      }
+    ],
+    "outlines": [
+      {
+        "id": "maintenance-portfolio-selection",
+        "title": "Choose a maintenance scope across competing firmware branches",
+        "objective": "Authorize a technically credible maintenance commitment balancing security exposure, operational importance and branch-specific engineering effort.",
+        "decision_problem": "The backlog contains security corrections and functional defects that share some code but differ in hardware compatibility and customer consequences. A proposed common backport overstates reusable work; source differences and qualification history may require separate changes on older branches. The developer establishes reusable versus branch-specific work and substantiates effort. The security analyst assesses exposure under deferral, while the application engineer evaluates critical functions and mitigation costs. The manager creates the plan, reconciles protected support capacity and chooses among materially different feasible scopes using fixed workspace rules. The comparison preserves dependencies, uncertainty and deferred obligations. Authorized work, acceptance conditions and reassessment commitments flow into engineering issues, the maintenance decision and support-facing availability statements. Selecting work establishes a planning commitment, not qualification or release readiness.",
+        "team_ids": [
+          "sustaining-engineering",
+          "product-assurance-support"
+        ],
+        "worker_ids": [
+          "software-manager",
+          "firmware-developer",
+          "security-analyst",
+          "application-engineer"
+        ],
+        "evidence_ids": [
+          "security-assessment",
+          "functional-impact",
+          "hardware-applicability",
+          "modeled-scale",
+          "scenario-authority",
+          "digital-boundary"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Clearwater Protection Systems is fictional. Its unit structure, scale, customer population, products, branch names, workload, archive and authority limits are synthetic, not SEL counts or reporting-line claims.",
+      "The six workers represent recurring participants within a 24-person unit. Other employees' ordinary support and development commitments appear in existing records; those employees need not act to finish an episode.",
+      "All worker SOC codes come from the supplied occupation list. Roles follow the sustaining-firmware operation rather than manufacturing occupation quotas.",
+      "All participants use computer-use automation (CUA) and bash in separate personal virtual machines (VMs), accessing shared applications. The entire unit workspace may be shared; artificial secrecy is unnecessary.",
+      "The declared runtime uses shared_session identity. In-app usernames, assignees, reviewers and document owners cannot independently prove worker authorship or technical approval. Attribute contributions through worker VM records and explicit worker identifiers.",
+      "Every required app has a separate origin. Seed every documented top-level state key and no undocumented keys. Access differences use VM-level app URLs, not assumed server-enforced per-worker permissions.",
+      "The six selected applications are within available_runtime_apps. No deployed surface manifest or independent runtime validation was supplied. Mounts, source readability, shared persistence, interface behavior and reset behavior remain explicit construction gaps.",
+      "The supplied https://selinc.com/products/710-5/ capture is unreadable with error 'ValueError: empty page or access challenge'. Its purported quotation is removed and the page supplies no operational evidence. The replacement hardware-applicability claim uses the successfully read SEL-710 Card Options PDF, date code 20190508.",
+      "The dated hardware-applicability evidence establishes a particular dependency, not present-day compatibility across SEL products. Episode-specific compatibility, rollback and qualification facts must be supplied in underlying synthetic technical records.",
+      "Populate readable source snapshots, configuration histories, manifests, completed test reports and customer correspondence before execution. A filename, upload status, green check, shipment record or merged pull request alone cannot establish tested behavior, installed firmware or release readiness.",
+      "GitHub holds engineering records, Drive holds supporting evidence, Docs holds analysis and guidance, Gmail holds correspondence, Slack holds coordination and Calendar holds commitments. Stable case, device, build, branch and report identifiers connect records; synchronization is not assumed.",
+      "Seeded regression policy contains general evidence-applicability, operational-function and customer-guidance requirements. It must not contain resolved customer-specific recovery choices, promise restrictions or causal explanations. Preserve underlying reports, compatibility facts and customer preferences; keep resolved conclusions in private evaluation.",
+      "Historical upload failures may inform provenance only if their records are inspectable. Completion must not require retrying uploads or treating upload metadata as qualification evidence.",
+      "Each episode fixes capacity, priorities, risk categories, compatibility requirements and disclosure authority in its starting workspace. Dates express internal commitments; fictional vulnerabilities and firmware versions do not depend on changing live web state.",
+      "Managers receive objectives and create their own plans. Outline contributions identify necessary expertise and downstream dependencies without prescribing a delegation sequence.",
+      "All outlines finish through analysis, review and internal record updates. Laboratory work, firmware signing, distribution, external replies, customer outages and field installation remain downstream boundaries; no clock acceleration is required.",
+      "Customer-facing outputs remain internally approved, unsent drafts unless a later assignment explicitly authorizes transmission. Holds, returns and deferred maintenance preserve specific unresolved obligations."
+    ]
+  },
+  "oracle": {}
+}

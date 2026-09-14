@@ -1,0 +1,77 @@
+{
+  "skill": "company-discovery",
+  "provenance": {
+    "sources": [
+      {
+        "path": "companies/ust/company.json",
+        "sha256": "e7234590d4d6163ec2aeb69b830a3cf39ff8ac681b510781438df3e336c06eea"
+      },
+      {
+        "path": "companies/ust/tasks/ust_shared-cost-allocation/workflow.json",
+        "sha256": "802fa4f4b70a5d371c5cb964c720b2b98a0ad2365b3edd53f372804d6d889033"
+      },
+      {
+        "path": "data/sources/a30873dedfc9d0eccbd961c7a056eec85fbb37c3d082a63295efbbc6952879fb.json",
+        "sha256": "cd50e2acbdb2b81a50d88c53c6641c2d4860238757d2c5d8fec950f1552a3f51"
+      },
+      {
+        "path": "data/sources/a30873dedfc9d0eccbd961c7a056eec85fbb37c3d082a63295efbbc6952879fb.json",
+        "sha256": "cd50e2acbdb2b81a50d88c53c6641c2d4860238757d2c5d8fec950f1552a3f51"
+      },
+      {
+        "path": "data/sources/7f0013ceabf6c3438c3dba9482fe8fed173f996dc6d0680d7ebbf78bf62bdb93.json",
+        "sha256": "36e6aa7dd9b647f5461a56ba959ae4f508248ebf6e1c87a127658cf70dcb3320"
+      },
+      {
+        "path": "data/sources/7f0013ceabf6c3438c3dba9482fe8fed173f996dc6d0680d7ebbf78bf62bdb93.json",
+        "sha256": "36e6aa7dd9b647f5461a56ba959ae4f508248ebf6e1c87a127658cf70dcb3320"
+      },
+      {
+        "path": "data/sources/7f0013ceabf6c3438c3dba9482fe8fed173f996dc6d0680d7ebbf78bf62bdb93.json",
+        "sha256": "36e6aa7dd9b647f5461a56ba959ae4f508248ebf6e1c87a127658cf70dcb3320"
+      },
+      {
+        "path": "data/sources/ffd46df4f50e41f0ee4e306f2a363a7c2b39869a34697d4d460dfbc4533ed03b.json",
+        "sha256": "8c17c1055c2bcea0cf0082be3b1dcb4547f474404d115393aacb0dfc5cd07567"
+      },
+      {
+        "path": "data/sources/ffd46df4f50e41f0ee4e306f2a363a7c2b39869a34697d4d460dfbc4533ed03b.json",
+        "sha256": "8c17c1055c2bcea0cf0082be3b1dcb4547f474404d115393aacb0dfc5cd07567"
+      }
+    ],
+    "changes": "Trimmed to one task and a few native records. Calibration tasks are explicitly narrowed exercises derived from that task; their answers and planted defects are hand-authored test data, not accepted production outcomes."
+  },
+  "input": {
+    "sector": "Professional, Scientific, and Technical Services",
+    "candidate_count": 1,
+    "excluded": [
+      {
+        "id": "excluded-vendor",
+        "real_firm": "Excluded Vendor LLC",
+        "website": "https://excludedvendor.invalid"
+      }
+    ],
+    "coverage": {
+      "under_used_apps": [
+        "ServiceNow_mock"
+      ]
+    },
+    "source_excerpts": {
+      "https://www.prnewswire.com/news-releases/ust-opens-new-global-headquarters-in-aliso-viejo-california-302837637.html": "\nng-edge research facilities and collaborative spaces to serve as a global hub for ust's ai and digital innovation efforts aliso viejo, calif. , july 30, 2026 /prnewswire/ -- ust , a leading ai and technology transformation solutions company, has unveiled its new state-of-the-art global headquarters in aliso viejo, california, us, establishing a strategic innovation hub that will accelerate the company's ai, engineeri\nal innovation efforts aliso viejo, calif. , july 30, 2026 /prnewswire/ -- ust , a leading ai and technology transformation solutions company, has unveiled its new state-of-the-art global headquarters in aliso viejo, california, us, establishing a strategic innovation hub that will accelerate the company's ai, engineering, and digital transformation capabilities for clients worldwide. the new office at 101 e",
+      "https://www.ust.com/en/insights/ust-helped-global-tech-company-streamline-cloud-management-saved-one-point-five-million-dollar-per-year": "\normed the high-tech company's cloud asset management capabilities in these three key areas: continuous improvement - our consultants designed a comprehensive, standardized plan to tag cloud assets and map cloud instances to business units. the plan also included visibility capabilities to track who was accessing cloud resources. cost avoidance - the cloud finops framework also provided functionality to help the com\ncompany the visibility and governance strategies it needed to monitor and manage cloud assets and consumption, optimize utilization and control cloud costs. the company can easily forecast costs and create budgets for cloud usage. the cloud management team can also charge back costs to business units, set alerts for usage limits and receive recommendations for cost savings. \"the company has saved over $20 \nlso recommended strategies to fully utilize cloud vendor enterprise pricing plans, avoid expensive on-demand pricing, take advantage of less expensive storage options and leverage lower cost reserve instances. the impact reduced cloud spend by $20 million the ust cloud finops framework gave the company the visibility and governance strategies it needed to monitor and manage cloud asset",
+      "https://www.ust.com/en/insights/ust-pace-finops-delivers-dollar2m-in-annualized-aws-savings-for-a-leading-healthcare-federation": "\n directly into the client's aws cloudops workflows. rather than treating finops as a separate reporting function, pace finops served as an insights and execution layer that helped engineering, finance, and cloudops teams act on cloud spend in real time. the solution focused on embedding finops into daily operations: cost ownership was mapped to teams, products, and environments, giving stakeholders clearer responsibility for the\nrated. continuous optimization was integrated into cloudops, replacing periodic cost reviews with day-to-day operating practices across production and pre-production environments. aws consumption data was converted into prioritized actions, helping teams focus their effort on areas with the highest financial impact. cloud and data platform spend was brought under one finops operating model, extending governance from"
+    }
+  },
+  "double": {
+    "candidates": [
+      {
+        "id": "ust",
+        "real_firm": "UST",
+        "sector": "Professional, Scientific, and Technical Services",
+        "website": "https://www.ust.com/",
+        "reason": "UST provides technology transformation services. Its captured FinOps case studies describe resource ownership mapping, pricing recommendations, cloud budgets and forecasts, and coordinated optimization. FinOps means cloud financial management connecting financial and technical decisions. Seacliff Technology Advisors is a fictional analogue modeling a bounded US advisory unit. Its three-person pod serves two continuing US enterprise technology clients whose finance and engineering organizations consume its recommendations. Synthetic scale: 16 cloud accounts, approximately 45 application services and $800,000 combined monthly cloud expenditure. Ordinary work includes weekly consumption reviews, investigation of six to ten new cost findings per week, two monthly client reporting packages, allocation maintenance, quarterly commitment assessments and follow-up on previously implemented optimizations. Eighteen months of billing and decision history establish continuing relationships beyond individual episodes. Work products include reproducible financial models, ownership mappings, technical assessments, savings reconciliations and actionable recommendations. The manager integrates financial and technical findings into internal advice; customers retain purchasing, production-change and accounting authority. This pod does not represent UST's entire business or provide round-the-clock production support."
+      }
+    ]
+  },
+  "oracle": {}
+}

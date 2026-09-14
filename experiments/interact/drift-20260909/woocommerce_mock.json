@@ -1,0 +1,267 @@
+{
+  "app_id": "woocommerce_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "analytics",
+    "categories",
+    "coupons",
+    "currentUser",
+    "customers",
+    "notifications",
+    "orders",
+    "paymentGateways",
+    "products",
+    "reviews",
+    "shippingZones",
+    "store",
+    "tags",
+    "taxRates"
+  ],
+  "observed": [
+    "analytics",
+    "categories",
+    "coupons",
+    "currentUser",
+    "customers",
+    "notifications",
+    "orders",
+    "paymentGateways",
+    "products",
+    "reviews",
+    "shippingZones",
+    "store",
+    "tags",
+    "taxRates"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "store": {
+      "kind": "object",
+      "count": 21,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "products": {
+      "kind": "array",
+      "count": 27,
+      "record_fields": [
+        "id",
+        "name",
+        "slug",
+        "type",
+        "status",
+        "featured",
+        "catalogVisibility",
+        "description",
+        "shortDescription",
+        "sku",
+        "price",
+        "regularPrice",
+        "salePrice",
+        "onSale",
+        "taxStatus",
+        "taxClass",
+        "manageStock",
+        "stockQuantity",
+        "stockStatus",
+        "weight",
+        "dimensions",
+        "categories",
+        "tags",
+        "images",
+        "attributes",
+        "variations",
+        "reviewCount",
+        "averageRating",
+        "totalSales",
+        "dateCreated",
+        "dateModified"
+      ],
+      "keyed_by_id": false
+    },
+    "categories": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "name",
+        "slug",
+        "parent",
+        "description",
+        "count"
+      ],
+      "keyed_by_id": false
+    },
+    "tags": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "slug",
+        "count"
+      ],
+      "keyed_by_id": false
+    },
+    "orders": {
+      "kind": "array",
+      "count": 25,
+      "record_fields": [
+        "id",
+        "number",
+        "status",
+        "dateCreated",
+        "dateModified",
+        "dateCompleted",
+        "datePaid",
+        "currency",
+        "total",
+        "subtotal",
+        "totalTax",
+        "shippingTotal",
+        "discountTotal",
+        "paymentMethod",
+        "paymentMethodTitle",
+        "customerId",
+        "billing",
+        "shipping",
+        "lineItems",
+        "shippingLines",
+        "couponLines",
+        "customerNote",
+        "orderNotes"
+      ],
+      "keyed_by_id": false
+    },
+    "customers": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "email",
+        "firstName",
+        "lastName",
+        "username",
+        "billing",
+        "shipping",
+        "ordersCount",
+        "totalSpent",
+        "averageOrderValue",
+        "dateCreated",
+        "dateLastActive",
+        "avatarUrl",
+        "role"
+      ],
+      "keyed_by_id": false
+    },
+    "coupons": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "code",
+        "description",
+        "discountType",
+        "amount",
+        "dateCreated",
+        "dateExpires",
+        "usageCount",
+        "usageLimit",
+        "usageLimitPerUser",
+        "minimumAmount",
+        "maximumAmount",
+        "freeShipping",
+        "excludeSaleItems",
+        "productIds",
+        "categoryIds"
+      ],
+      "keyed_by_id": false
+    },
+    "reviews": {
+      "kind": "array",
+      "count": 20,
+      "record_fields": [
+        "id",
+        "productId",
+        "productName",
+        "reviewer",
+        "reviewerEmail",
+        "rating",
+        "review",
+        "status",
+        "dateCreated",
+        "verified"
+      ],
+      "keyed_by_id": false
+    },
+    "analytics": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "type",
+        "title",
+        "content",
+        "dateCreated",
+        "isRead",
+        "actions"
+      ],
+      "keyed_by_id": false
+    },
+    "shippingZones": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "regions",
+        "methods"
+      ],
+      "keyed_by_id": false
+    },
+    "taxRates": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "country",
+        "state",
+        "postcode",
+        "city",
+        "rate",
+        "name",
+        "priority",
+        "compound",
+        "shipping",
+        "taxClass"
+      ],
+      "keyed_by_id": false
+    },
+    "paymentGateways": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "title",
+        "description",
+        "enabled",
+        "order"
+      ],
+      "keyed_by_id": false
+    }
+  }
+}

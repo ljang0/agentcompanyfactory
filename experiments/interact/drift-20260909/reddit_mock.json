@@ -1,0 +1,147 @@
+{
+  "app_id": "reddit_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "awards",
+    "comments",
+    "currentUser",
+    "notifications",
+    "posts",
+    "subreddits",
+    "users",
+    "votes"
+  ],
+  "observed": [
+    "awards",
+    "comments",
+    "currentUser",
+    "notifications",
+    "posts",
+    "subreddits",
+    "users",
+    "votes"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 11,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "username",
+        "avatar",
+        "postKarma",
+        "commentKarma",
+        "cakeDay",
+        "about"
+      ],
+      "keyed_by_id": false
+    },
+    "subreddits": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "icon",
+        "bannerColor",
+        "members",
+        "online",
+        "created",
+        "rules",
+        "moderators",
+        "flairs"
+      ],
+      "keyed_by_id": false
+    },
+    "posts": {
+      "kind": "array",
+      "count": 14,
+      "record_fields": [
+        "id",
+        "subredditId",
+        "userId",
+        "title",
+        "content",
+        "type",
+        "url",
+        "flairId",
+        "upvotes",
+        "downvotes",
+        "created",
+        "isStickied",
+        "isLocked",
+        "isSpoiler",
+        "isNSFW",
+        "commentIds",
+        "awards"
+      ],
+      "keyed_by_id": false
+    },
+    "comments": {
+      "kind": "array",
+      "count": 46,
+      "record_fields": [
+        "id",
+        "postId",
+        "parentId",
+        "userId",
+        "content",
+        "upvotes",
+        "downvotes",
+        "created",
+        "isEdited",
+        "isDistinguished",
+        "awards"
+      ],
+      "keyed_by_id": false
+    },
+    "votes": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "userId",
+        "targetId",
+        "targetType",
+        "value"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "type",
+        "fromUserId",
+        "postId",
+        "commentId",
+        "content",
+        "read",
+        "created"
+      ],
+      "keyed_by_id": false
+    },
+    "awards": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "icon",
+        "cost"
+      ],
+      "keyed_by_id": false
+    }
+  }
+}

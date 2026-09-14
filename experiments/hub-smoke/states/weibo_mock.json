@@ -1,0 +1,36 @@
+{
+  "currentUser": {"id": "user_current", "screenName": "云栖茶社小掌柜", "handle": "yunqi_tea", "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=云栖&backgroundColor=2a9d8f", "coverImage": "", "bio": "杭州云栖茶社官方账号，龙井、白茶与茶点", "location": "杭州", "verified": true, "verifiedType": "blue_v", "followingCount": 2, "followersCount": 8420, "postsCount": 1, "isFollowing": false, "createdAt": "2021-03-12T00:00:00Z"},
+  "users": {
+    "user_current": {"id": "user_current", "screenName": "云栖茶社小掌柜", "handle": "yunqi_tea", "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=云栖&backgroundColor=2a9d8f", "coverImage": "", "bio": "杭州云栖茶社官方账号，龙井、白茶与茶点", "location": "杭州", "verified": true, "verifiedType": "blue_v", "followingCount": 2, "followersCount": 8420, "postsCount": 1, "isFollowing": false, "createdAt": "2021-03-12T00:00:00Z"},
+    "user_1": {"id": "user_1", "screenName": "西湖茶农老周", "handle": "laozhou_tea", "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=老周&backgroundColor=e9c46a", "coverImage": "", "bio": "梅家坞三代茶农", "location": "杭州", "verified": false, "verifiedType": "none", "followingCount": 120, "followersCount": 3200, "postsCount": 1, "isFollowing": true, "createdAt": "2018-05-01T00:00:00Z"},
+    "user_2": {"id": "user_2", "screenName": "杭州吃喝指南", "handle": "hz_foodguide", "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=吃喝&backgroundColor=e76f51", "coverImage": "", "bio": "每天推荐一家杭州小店", "location": "杭州", "verified": true, "verifiedType": "orange_v", "followingCount": 500, "followersCount": 260000, "postsCount": 1, "isFollowing": true, "createdAt": "2016-09-20T00:00:00Z"}
+  },
+  "posts": {
+    "post_1": {"id": "post_1", "userId": "user_current", "text": "云栖茶社秋季新品上线：桂花龙井冷萃，本周到店试饮免费 #云栖茶社#", "images": [], "video": null, "createdAt": "2026-09-05T02:00:00Z", "source": "微博网页版", "repostCount": 3, "commentCount": 1, "likeCount": 46, "isLiked": false, "isReposted": false, "repostOf": null, "repostText": "", "isLongText": false, "topicIds": ["topic_1"], "isFavorited": false},
+    "post_2": {"id": "post_2", "userId": "user_1", "text": "今年秋茶采摘提前一周，白露前后的鲜叶最香。", "images": [], "video": null, "createdAt": "2026-09-04T09:30:00Z", "source": "微博网页版", "repostCount": 1, "commentCount": 0, "likeCount": 88, "isLiked": true, "isReposted": false, "repostOf": null, "repostText": "", "isLongText": false, "topicIds": [], "isFavorited": false},
+    "post_3": {"id": "post_3", "userId": "user_2", "text": "云栖茶社的桂花龙井冷萃已经喝到了，甜香不腻，推荐。", "images": [], "video": null, "createdAt": "2026-09-06T05:15:00Z", "source": "微博网页版", "repostCount": 0, "commentCount": 0, "likeCount": 12, "isLiked": false, "isReposted": false, "repostOf": null, "repostText": "", "isLongText": false, "topicIds": ["topic_1"], "isFavorited": false}
+  },
+  "comments": {
+    "comment_1": {"id": "comment_1", "postId": "post_1", "userId": "user_2", "text": "明天就去！", "createdAt": "2026-09-05T03:00:00Z", "likeCount": 2, "isLiked": false, "replyToId": null, "replyToUserId": null}
+  },
+  "hotSearches": [
+    {"id": "hot_1", "rank": 1, "title": "白露秋茶上市", "searchCount": 1820000, "category": "生活", "badge": "hot", "url": "/search?q=白露秋茶上市"},
+    {"id": "hot_2", "rank": 2, "title": "杭州桂花开了", "searchCount": 960000, "category": "生活", "badge": "new", "url": "/search?q=杭州桂花开了"}
+  ],
+  "topics": {
+    "topic_1": {"id": "topic_1", "name": "云栖茶社", "readCount": 54000, "discussionCount": 320, "description": "云栖茶社的新品与活动", "hostUserId": "user_current", "isSuperTopic": false}
+  },
+  "conversations": {
+    "conv_1": {"id": "conv_1", "participantIds": ["user_current", "user_1"], "lastMessageId": "msg_2", "lastMessageAt": "2026-09-05T08:10:00Z", "unreadCount": 1}
+  },
+  "messages": {
+    "msg_1": {"id": "msg_1", "conversationId": "conv_1", "senderId": "user_current", "receiverId": "user_1", "text": "周叔，这周的鲜叶还能再订二十斤吗？", "createdAt": "2026-09-05T08:00:00Z", "isRead": true},
+    "msg_2": {"id": "msg_2", "conversationId": "conv_1", "senderId": "user_1", "receiverId": "user_current", "text": "可以，周四送到。", "createdAt": "2026-09-05T08:10:00Z", "isRead": false}
+  },
+  "notifications": [
+    {"id": "notif_1", "type": "comment", "fromUserId": "user_2", "postId": "post_1", "commentId": "comment_1", "text": "评论了你的微博", "createdAt": "2026-09-05T03:00:00Z", "isRead": false}
+  ],
+  "ui": {"feedTab": "following", "searchQuery": "", "selectedPostId": null, "notificationUnreadCount": 1, "messageUnreadCount": 1},
+  "settings": {"receiveDMs": "everyone", "commentPermission": "everyone", "darkMode": false, "emailNotifications": true, "pushNotifications": true},
+  "followedTopics": ["topic_1"]
+}

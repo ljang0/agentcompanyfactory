@@ -1,0 +1,470 @@
+{
+  "captured_at": "2026-09-05T03:47:31.062177+00:00",
+  "source_repository": "<user-home>/agent-company-factory",
+  "source_commit": "820ede7d47759d47e1455e9df6d2b5aa517a0ba3",
+  "note": "Working-tree bytes are pinned individually; they may differ from the source commit. Files carrying an `amended` line were edited here after import and are pinned as amended, not as provenance.",
+  "files": {
+    "gdpval_occupations.json": {
+      "sha256": "1f9fe69875b4960ed84f8dc797e5db5242d64bffd4e65012a922d77eed59ce6a",
+      "original": "<user-home>/agent-company-factory/taxonomy/gdpval_occupations.json"
+    },
+    "gdpval_socs.json": {
+      "sha256": "515da5d0e0ac5a416dc6d1fa6d1dc59d013426b5eb959a78016d4a4007eb1e6b",
+      "original": "<user-home>/agent-company-factory/taxonomy/gdpval_socs.json"
+    },
+    "industry_occupations.json": {
+      "sha256": "2e69f880da90481388a0465a065f4ceb849a7378659a247f8f039f1109990f78",
+      "original": "<user-home>/agent-company-factory/taxonomy/industry_occupations.json"
+    },
+    "soc_wages.json": {
+      "sha256": "091d15249603cf1746819b097d552a41cf2bb72955d568ac3f3c09cba8d0d069",
+      "original": "<user-home>/agent-company-factory/taxonomy/soc_wages.json"
+    },
+    "software_prior.json": {
+      "sha256": "56d72b70b05f17d121f9b167cdec96ddc38e44a7206905831382f378c24e19a5",
+      "original": "<user-home>/agent-company-factory/taxonomy/software_prior.json"
+    },
+    "apps.json": {
+      "sha256": "89cbb6e6f65a94427b2334d48a509537250f28821de5d8702c0f3313999a6768",
+      "original": "<user-home>/agent-company-factory/taxonomy/apps.json",
+      "amended": "Four hub rows added (canva_mock, canvas_mock, confluence_mock, openreview_mock); google_analytics_mock's and youtube_mock's empty state_keys filled from their pinned schema documents; and TradingView_mock, tripadvisor_mock, wandb_mock and westlaw_mock given the schema document and top-level state_keys the importer could not produce. hub_app.hub_apps() now admits all 98 hub apps. See _meta.amendments in apps.json for why the importer produced neither."
+    },
+    "gdp_sectors.json": {
+      "sha256": "441878c48d4438a56bf02cc5e0685e7271ef1a82e37cb009ac68fbc4b2912c04",
+      "original": "<user-home>/agent-company-factory/taxonomy/gdp_sectors.json"
+    },
+    "naics_sector_map.json": {
+      "sha256": "fb812c948b35b8980d0baf79dfe82ecb1ce04c1aae294e6817799e0cf30561a7",
+      "original": "<user-home>/agent-company-factory/taxonomy/naics_sector_map.json"
+    },
+    "tool_counterparts.json": {
+      "sha256": "7b2a703d2bcd3d6f3bc5d4922d51647f69308e12e6164105d1ea0c6daf74cb09",
+      "original": "<user-home>/agent-company-factory/taxonomy/tool_counterparts.json"
+    },
+    "gym_anything_kinds.json": {
+      "sha256": "7b047c7ca43e1e21213ec2d5565fe881c2228d93969a1b12593ce4b8033e739b",
+      "original": "<user-home>/agent-company-factory/taxonomy/gym_anything_kinds.json"
+    },
+    "app_schemas/12306_mock.md": {
+      "sha256": "beb24f4de73ad6b52e5c77136a6376e872c92367249e42cf2b774b7297ed6091",
+      "original": "<user-home>/agent-company-factory/apps/12306_mock.md"
+    },
+    "app_schemas/Canvas-LMS_mock.md": {
+      "sha256": "2460a3363feb8c42a6b3f93807a3f553dcd118f52d606b452eefae6f45ce95a2",
+      "original": "<user-home>/agent-company-factory/apps/Canvas-LMS_mock.md"
+    },
+    "app_schemas/Expensify_mock.md": {
+      "sha256": "a93f3b6524e96e0b00671da0f2444c7a264ea7865d3c15f7cce07d8356264db0",
+      "original": "<user-home>/agent-company-factory/apps/Expensify_mock.md"
+    },
+    "app_schemas/PACS-viewer_mock.md": {
+      "sha256": "ee50d3c0a1226343c1bbd2eb812a55326ed336bf6971de7e8acc6479592e4a99",
+      "original": "<user-home>/agent-company-factory/apps/PACS-viewer_mock.md"
+    },
+    "app_schemas/SAP_mock.md": {
+      "sha256": "1feba5fbb666ae8e734d9735377b5e21071aa4fb6944ca4055921c5778fab457",
+      "original": "<user-home>/agent-company-factory/apps/SAP_mock.md"
+    },
+    "app_schemas/ServiceNow_mock.md": {
+      "sha256": "64e19b364ef6e950ff9c6b93fca9460c2da7145d44bfa61ca4ea2e9520ca0e46",
+      "original": "<user-home>/agent-company-factory/apps/ServiceNow_mock.md"
+    },
+    "app_schemas/Zendesk_mock.md": {
+      "sha256": "ae9c276dc434e1798f4ab535722267f09cdc10606aa7fa294fe621c926efdb65",
+      "original": "<user-home>/agent-company-factory/apps/Zendesk_mock.md"
+    },
+    "app_schemas/adp_mock.md": {
+      "sha256": "23604568e157efaed27082e99c661b2cb1b9108fa7bee6bec488c5854275b9ec",
+      "original": "<user-home>/agent-company-factory/apps/adp_mock.md"
+    },
+    "app_schemas/airtable_mock.md": {
+      "sha256": "742f3f4c87cca09c455308509012b05d2e5f6efe7a9c4b4b231621a0ad253280",
+      "original": "<user-home>/agent-company-factory/apps/airtable_mock.md"
+    },
+    "app_schemas/aliyun_mock.md": {
+      "sha256": "c1eed32b81589317599d7e2fb364a8f633c18ee0834680413b5e6f752efc942b",
+      "original": "<user-home>/agent-company-factory/apps/aliyun_mock.md"
+    },
+    "app_schemas/amazon_mock.md": {
+      "sha256": "6ca459d3bcfd71b1807c01e04272b81ecc7ed088ebc7cad1fe36b3ca6d4f4654",
+      "original": "<user-home>/agent-company-factory/apps/amazon_mock.md"
+    },
+    "app_schemas/amazon_seller_mock.md": {
+      "sha256": "922cdee2efc0512114a29f7426ec2d353823674c78964df430db4ef3c054bd7c",
+      "original": "<user-home>/agent-company-factory/apps/amazon_seller_mock.md"
+    },
+    "app_schemas/amplitude_mock.md": {
+      "sha256": "1b2be89f11a55ffa972c79acf5163666381d35f6514f8b9ee461cf0bc816e0aa",
+      "original": "<user-home>/agent-company-factory/apps/amplitude_mock.md"
+    },
+    "app_schemas/asana_mock.md": {
+      "sha256": "43100f76f99149cbeda611873a3f5cfda23895ac2eb0f6e63b10183e60903f7d",
+      "original": "<user-home>/agent-company-factory/apps/asana_mock.md"
+    },
+    "app_schemas/aws_console_mock.md": {
+      "sha256": "236cfb55de9e0477d43c2a9e8f695abfbc4acf210661da3c5dadbaf5bd7809d7",
+      "original": "<user-home>/agent-company-factory/apps/aws_console_mock.md"
+    },
+    "app_schemas/azure_mock.md": {
+      "sha256": "46b66275dd8d3a774e4ec0f37ca344fc8ad25b1b209cf6cbc98e4ff1373c1263",
+      "original": "<user-home>/agent-company-factory/apps/azure_mock.md"
+    },
+    "app_schemas/bamboohr_mock.md": {
+      "sha256": "b0e6f14ef0e731224fcf0951ca83ac48b28fe0b7fd304c73d2c0b5bf1c7dfe8f",
+      "original": "<user-home>/agent-company-factory/apps/bamboohr_mock.md"
+    },
+    "app_schemas/booking_com_mock.md": {
+      "sha256": "fe96da43f4e9f875e1c744e0c376e3647347e66417128c1920b8486c7de58565",
+      "original": "<user-home>/agent-company-factory/apps/booking_com_mock.md"
+    },
+    "app_schemas/canva_mock.md": {
+      "sha256": "2f353d0765f7408dd8c6366644ff5de06de1fe8616be9b74206f568a64247d38",
+      "original": "<user-home>/agent-company-factory/apps/canva_mock.md"
+    },
+    "app_schemas/canvas_mock.md": {
+      "sha256": "72101fd36f3986204af2ddb11006df8670f7be79575a4fa11ebcaf9c7f3d57fa",
+      "original": "<user-home>/agent-company-factory/apps/canvas_mock.md"
+    },
+    "app_schemas/circleci_mock.md": {
+      "sha256": "55781b915d6d5f3167130045a62126eb86b17623750b621cadcdf232cde8377c",
+      "original": "<user-home>/agent-company-factory/apps/circleci_mock.md"
+    },
+    "app_schemas/clio_mock.md": {
+      "sha256": "bf94cc5b1c2f1b1a833d82e4986dd4e63c8f0fc1bd33ec79ad917e8b2a4a2437",
+      "original": "<user-home>/agent-company-factory/apps/clio_mock.md"
+    },
+    "app_schemas/cloudflare_mock.md": {
+      "sha256": "7aa65274dd04343f3849ee858fc215cf21b31a967aea9bedd30db6b6d76e13f7",
+      "original": "<user-home>/agent-company-factory/apps/cloudflare_mock.md"
+    },
+    "app_schemas/coinbase_mock.md": {
+      "sha256": "8793749d5f054f11f24d0c0d50294e73854583f3e2ef37bd710b5022cc9dab85",
+      "original": "<user-home>/agent-company-factory/apps/coinbase_mock.md"
+    },
+    "app_schemas/confluence_mock.md": {
+      "sha256": "6ad742383e167b020d987b2b97fd12cab0d06df380fa63239cff906fb0adae55",
+      "original": "<user-home>/agent-company-factory/apps/confluence_mock.md"
+    },
+    "app_schemas/contractbook_mock.md": {
+      "sha256": "b6655d9a35ad7a1ec5202f302fbe7c3740955ba0168411fc199bfadf1892ea2c",
+      "original": "<user-home>/agent-company-factory/apps/contractbook_mock.md"
+    },
+    "app_schemas/datadog_mock.md": {
+      "sha256": "2b20f61bbf4d3ce516868cc33b7398e0306b2dbee4436c7576daf38228fc5a7b",
+      "original": "<user-home>/agent-company-factory/apps/datadog_mock.md"
+    },
+    "app_schemas/dingtalk_mock.md": {
+      "sha256": "cb1e6a2f1822ff0c6ce97bc7ebbca605f973f419f2ee3cacf41613d0f49fa146",
+      "original": "<user-home>/agent-company-factory/apps/dingtalk_mock.md"
+    },
+    "app_schemas/discord_mock.md": {
+      "sha256": "c999f266b9be68c9785679512af05162f17e786cbf22a7229c838d7621f5a9c3",
+      "original": "<user-home>/agent-company-factory/apps/discord_mock.md"
+    },
+    "app_schemas/docusign_mock.md": {
+      "sha256": "cf1c828b8300aec5f89188205f46eec3f516b82e79a9e1e646f2d7af23ccdb2f",
+      "original": "<user-home>/agent-company-factory/apps/docusign_mock.md"
+    },
+    "app_schemas/ebay_mock.md": {
+      "sha256": "7c9ef88efc2c59b3d4a9407eb29ed1016c444ae47422a77e07b5d0992e92d145",
+      "original": "<user-home>/agent-company-factory/apps/ebay_mock.md"
+    },
+    "app_schemas/epic-health_mock.md": {
+      "sha256": "cff7cdff3d1fe6746cbafff4792e74b038cb59b84ebd0119eca0db8a01448be7",
+      "original": "<user-home>/agent-company-factory/apps/epic-health_mock.md"
+    },
+    "app_schemas/expedia_mock.md": {
+      "sha256": "2ec641d6c65f5fe24693a3ea39db9869ade9fccf83ad7225e8d04cf93db7f812",
+      "original": "<user-home>/agent-company-factory/apps/expedia_mock.md"
+    },
+    "app_schemas/facebook_mock.md": {
+      "sha256": "6734a8f4fb3a8950c467c3d513730ae0bec9a943c58004ea82baeb945e7fff53",
+      "original": "<user-home>/agent-company-factory/apps/facebook_mock.md"
+    },
+    "app_schemas/feishu_mock.md": {
+      "sha256": "bbad652d5ba005c5fc6c7d614615a70cb1759bde7fe7993f2e9681ac77b4e8fe",
+      "original": "<user-home>/agent-company-factory/apps/feishu_mock.md"
+    },
+    "app_schemas/github_mock.md": {
+      "sha256": "2121f60aa82b31d3752a1cdff9d551b6c87066622240c7e741004b2ad0793580",
+      "original": "<user-home>/agent-company-factory/apps/github_mock.md"
+    },
+    "app_schemas/gitlab_mock.md": {
+      "sha256": "6b831750c2279859659c38ca3bbcdb602a2f2cafb817dab07ccc7f32fb330c2b",
+      "original": "<user-home>/agent-company-factory/apps/gitlab_mock.md"
+    },
+    "app_schemas/gmail_mock.md": {
+      "sha256": "e51a05aa58b10d11859788a7293f32b6d06f72c08563efb5ea235cc8b8602812",
+      "original": "<user-home>/agent-company-factory/apps/gmail_mock.md"
+    },
+    "app_schemas/google_ads_mock.md": {
+      "sha256": "5ef02c33cbf2316ef39fc19d083d7e8c7568396f24ef265e43bb95eec337cc7a",
+      "original": "<user-home>/agent-company-factory/apps/google_ads_mock.md"
+    },
+    "app_schemas/google_analytics_mock.md": {
+      "sha256": "5d7c83740fb6481d453588037f7c11189bf4df6be964f3416942c1a180aeb665",
+      "original": "<user-home>/agent-company-factory/apps/google_analytics_mock.md"
+    },
+    "app_schemas/google_calendar_mock.md": {
+      "sha256": "137219cf5a33d1e55c00d2190ce7f895281a3f9ad52e1e6dab410ce80b55b735",
+      "original": "<user-home>/agent-company-factory/apps/google_calendar_mock.md"
+    },
+    "app_schemas/google_docs_mock.md": {
+      "sha256": "0c5fab91f7fe9c6114ed344e758d439b40bfc1b694337c4234d135e63a9f4d5b",
+      "original": "<user-home>/agent-company-factory/apps/google_docs_mock.md"
+    },
+    "app_schemas/google_drive_mock.md": {
+      "sha256": "39ee62f4c16b8474db4954560cbbb349ac883056cb7f03d1da328435c5b957ae",
+      "original": "<user-home>/agent-company-factory/apps/google_drive_mock.md"
+    },
+    "app_schemas/google_flights_mock.md": {
+      "sha256": "f2c827bf556b4825723dbb383995e18e0112972d06f79353baea7366cac6cb57",
+      "original": "<user-home>/agent-company-factory/apps/google_flights_mock.md"
+    },
+    "app_schemas/google_sheets_mock.md": {
+      "sha256": "2205a01e0e33ad2211b79ccd9ddcf7d4c872b6c1a072cd68473442a2d7155612",
+      "original": "<user-home>/agent-company-factory/apps/google_sheets_mock.md"
+    },
+    "app_schemas/greenhouse_mock.md": {
+      "sha256": "86df1688d9c264b544ff779dac4f7455aaf5b88894f1e0c874fbf4c8e1baba88",
+      "original": "<user-home>/agent-company-factory/apps/greenhouse_mock.md"
+    },
+    "app_schemas/gusto_mock.md": {
+      "sha256": "76cca7977138194628371496aa1bbc99caf81fe14f7dad5bb107f5bf0dbac259",
+      "original": "<user-home>/agent-company-factory/apps/gusto_mock.md"
+    },
+    "app_schemas/hotjar_mock.md": {
+      "sha256": "d9341e43d9c370fa81bc6b4a8a3957e675156d6e6fd9f6ddb5dbcd6f9f91a264",
+      "original": "<user-home>/agent-company-factory/apps/hotjar_mock.md"
+    },
+    "app_schemas/hubspot_marketing_mock.md": {
+      "sha256": "caac77a82c5059edaabe9e30e699eed379e6b043596b8f1bc69303aafe8b2d24",
+      "original": "<user-home>/agent-company-factory/apps/hubspot_marketing_mock.md"
+    },
+    "app_schemas/hubspot_mock.md": {
+      "sha256": "fe3a64fd714a8e03332d1db9bd2c54c56df375454005631dc96a3200880684dd",
+      "original": "<user-home>/agent-company-factory/apps/hubspot_mock.md"
+    },
+    "app_schemas/instacart_mock.md": {
+      "sha256": "b6e4186ec32264b0c6830db02e4edd58a7922a09828011a8573deb9ba4550d4c",
+      "original": "<user-home>/agent-company-factory/apps/instacart_mock.md"
+    },
+    "app_schemas/instagram_mock.md": {
+      "sha256": "78aead3a02416a935fe0a777304dd1eafd1c9bc841789427a719e4162238ab1f",
+      "original": "<user-home>/agent-company-factory/apps/instagram_mock.md"
+    },
+    "app_schemas/jira_mock.md": {
+      "sha256": "56194ae1ef38e9acd6080191d287e948b6ce9a4f4ee904aa77f5e828a06e0b88",
+      "original": "<user-home>/agent-company-factory/apps/jira_mock.md"
+    },
+    "app_schemas/klaviyo_mock.md": {
+      "sha256": "3f04b7e0b266650deb098f35f41f445bdb1ddd8f64cc8cd80e3499bb812a5d80",
+      "original": "<user-home>/agent-company-factory/apps/klaviyo_mock.md"
+    },
+    "app_schemas/lattice_mock.md": {
+      "sha256": "b4480cfad6f19b8107c0f38d5881ffd943d4062e82e32d3c0e10a0e5e4c6bbcf",
+      "original": "<user-home>/agent-company-factory/apps/lattice_mock.md"
+    },
+    "app_schemas/linear_mock.md": {
+      "sha256": "efac7ca2f0171ca5758d0362b242732677880b4d16c69740248e19fe1b5ff68b",
+      "original": "<user-home>/agent-company-factory/apps/linear_mock.md"
+    },
+    "app_schemas/linkedin_mock.md": {
+      "sha256": "406da66f105e11bc8e872bdadf54a38778956417512b3a04df69b563eb0898ea",
+      "original": "<user-home>/agent-company-factory/apps/linkedin_mock.md"
+    },
+    "app_schemas/looker_studio_mock.md": {
+      "sha256": "1d5b02d112ce15352760d6f88691f21f934304b2e3cc09520978dc70bffc7f02",
+      "original": "<user-home>/agent-company-factory/apps/looker_studio_mock.md"
+    },
+    "app_schemas/lucidchart_mock.md": {
+      "sha256": "f5315d97177af330af88441203a4a60a8fef9196096196cafef787dddf89c2d5",
+      "original": "<user-home>/agent-company-factory/apps/lucidchart_mock.md"
+    },
+    "app_schemas/mailchimp_mock.md": {
+      "sha256": "b1dc417e7f8f8998d6515a3183ec0e19097ef5b2858f232a592934c8f0bd5d07",
+      "original": "<user-home>/agent-company-factory/apps/mailchimp_mock.md"
+    },
+    "app_schemas/meta_ads_mock.md": {
+      "sha256": "e3705ba66b695e356c47107acbf81d2ff708706e22fb5cb10e7c801998b97334",
+      "original": "<user-home>/agent-company-factory/apps/meta_ads_mock.md"
+    },
+    "app_schemas/microsoft_teams_mock.md": {
+      "sha256": "c026745876e02c8f30c8ac8065777c4de1f466db7325826458b37ec7cc06d61e",
+      "original": "<user-home>/agent-company-factory/apps/microsoft_teams_mock.md"
+    },
+    "app_schemas/miro_mock.md": {
+      "sha256": "02bffee717450e277fc826bcc640225d52b015c8ef996ab291c15d1665924051",
+      "original": "<user-home>/agent-company-factory/apps/miro_mock.md"
+    },
+    "app_schemas/mixpanel_mock.md": {
+      "sha256": "aba3c8210e13f7d08d72367dd875e3ce8e184286437773904a772c75219e174f",
+      "original": "<user-home>/agent-company-factory/apps/mixpanel_mock.md"
+    },
+    "app_schemas/monday_mock.md": {
+      "sha256": "c0af333f4bb5e14eab02858540121104ee83212c00b6bad8973e450d94ac851e",
+      "original": "<user-home>/agent-company-factory/apps/monday_mock.md"
+    },
+    "app_schemas/notion_mock.md": {
+      "sha256": "1d23c341a47d4ed8771f1795e29f5deafe199d3755c0d48780d8bd83bcb7f30a",
+      "original": "<user-home>/agent-company-factory/apps/notion_mock.md"
+    },
+    "app_schemas/openreview_mock.md": {
+      "sha256": "ba405efba33cb2480c78aff3b305f83a20e151b15f93c07aed7306b13982c528",
+      "original": "<user-home>/agent-company-factory/apps/openreview_mock.md"
+    },
+    "app_schemas/outlook_web_mock.md": {
+      "sha256": "b7a451b138edf87ded00fe42aedc2cd9e3f6907dd4e8f697c65ff69ac2ce44e9",
+      "original": "<user-home>/agent-company-factory/apps/outlook_web_mock.md"
+    },
+    "app_schemas/paypal_mock.md": {
+      "sha256": "19249f8e7655f23c83ff87d9a5ae847d4a7fe674174cddc1cc6791683ec0550b",
+      "original": "<user-home>/agent-company-factory/apps/paypal_mock.md"
+    },
+    "app_schemas/pinterest_mock.md": {
+      "sha256": "48d2fc1e0b1ed737c9818ac7a2387664ddad87632fd8d4fcef913c609acf08c5",
+      "original": "<user-home>/agent-company-factory/apps/pinterest_mock.md"
+    },
+    "app_schemas/postman_mock.md": {
+      "sha256": "da367401f66e689f28f1a3d474dc124d768bf2b1f14f20554279195005e9346e",
+      "original": "<user-home>/agent-company-factory/apps/postman_mock.md"
+    },
+    "app_schemas/quickbooks_mock.md": {
+      "sha256": "ae72057552ad4285c31447947bb84203a23b4c2e5a9dfdeae1aac75dc8347ffb",
+      "original": "<user-home>/agent-company-factory/apps/quickbooks_mock.md"
+    },
+    "app_schemas/reddit_mock.md": {
+      "sha256": "b4b971a1206d39b990f8c253d2110afdcb6e66557ea2fccd7f48ec6bc7f307fe",
+      "original": "<user-home>/agent-company-factory/apps/reddit_mock.md"
+    },
+    "app_schemas/robinhood_mock.md": {
+      "sha256": "da59ad8623a14d09842cce4549b1aa779ce654ecae9007f2cf8a22a234533e59",
+      "original": "<user-home>/agent-company-factory/apps/robinhood_mock.md"
+    },
+    "app_schemas/salesforce_mock.md": {
+      "sha256": "bce1a05cf6952d64e890e68ad86ba7bec0a2aebcf0957fafa438edf0485e98fb",
+      "original": "<user-home>/agent-company-factory/apps/salesforce_mock.md"
+    },
+    "app_schemas/sentry_mock.md": {
+      "sha256": "dbe386645544fc44adbeff4ccfc281763907b6dd4ac1ea068a294e6fab9f0c21",
+      "original": "<user-home>/agent-company-factory/apps/sentry_mock.md"
+    },
+    "app_schemas/shopify_admin_mock.md": {
+      "sha256": "b7434e3f0cfc351e0d03ed3fad0c3bf03a81976a16817b2d3b110e1f0e7343e5",
+      "original": "<user-home>/agent-company-factory/apps/shopify_admin_mock.md"
+    },
+    "app_schemas/slack_mock.md": {
+      "sha256": "a17ef518fb9efd7ebb661c23d75d7708f0365d3851f517190a4dfead35e5e072",
+      "original": "<user-home>/agent-company-factory/apps/slack_mock.md"
+    },
+    "app_schemas/stripe_dashboard_mock.md": {
+      "sha256": "87994ee8596345e2b9226f014808f787bf22aea5e835cba7501b01d674830d11",
+      "original": "<user-home>/agent-company-factory/apps/stripe_dashboard_mock.md"
+    },
+    "app_schemas/tableau_mock.md": {
+      "sha256": "f465fc32cc10fa2ee32206ba0515ee8ff3bb8c3f81d1cb8103159a30823ac394",
+      "original": "<user-home>/agent-company-factory/apps/tableau_mock.md"
+    },
+    "app_schemas/taobao_seller_mock.md": {
+      "sha256": "ecf77d83d861b85b85c084a29075781431f5a0ad51a0d2a595453fd0499e9647",
+      "original": "<user-home>/agent-company-factory/apps/taobao_seller_mock.md"
+    },
+    "app_schemas/trello_mock.md": {
+      "sha256": "d0a4028349f78b85bd2ac4458d1e2817f425429a621645167968c1e57967a791",
+      "original": "<user-home>/agent-company-factory/apps/trello_mock.md"
+    },
+    "app_schemas/twitter_mock.md": {
+      "sha256": "85398fb4c9faedf888bda41d581604cfedae8fed56b3257ff64ac0729cb6cad4",
+      "original": "<user-home>/agent-company-factory/apps/twitter_mock.md"
+    },
+    "app_schemas/uber_eats_mock.md": {
+      "sha256": "f72e9cecb91e67147183a3268f39ad1ec7b5a9cd4ebdd3c2dffb2e50a7cf49e5",
+      "original": "<user-home>/agent-company-factory/apps/uber_eats_mock.md"
+    },
+    "app_schemas/vercel_mock.md": {
+      "sha256": "ef45fd029ceeb56c149ec1dbbdbd82a8985855a303de1da9fa4eaf05855706a2",
+      "original": "<user-home>/agent-company-factory/apps/vercel_mock.md"
+    },
+    "app_schemas/wechat_mock.md": {
+      "sha256": "8000a77f67835845cb836faff361181f3a334d54ebca3a581127395f16133a68",
+      "original": "<user-home>/agent-company-factory/apps/wechat_mock.md"
+    },
+    "app_schemas/weibo_mock.md": {
+      "sha256": "87b59509350aa824a8037d4310a01f1d0b13b6ebdebb25f875954680e53910ea",
+      "original": "<user-home>/agent-company-factory/apps/weibo_mock.md"
+    },
+    "app_schemas/woocommerce_mock.md": {
+      "sha256": "467ad640dac1d8037f1fc53cb3456b6babe3a85808897cfa63e160c578a79df7",
+      "original": "<user-home>/agent-company-factory/apps/woocommerce_mock.md"
+    },
+    "app_schemas/workday_mock.md": {
+      "sha256": "0e671cf62669a8d8035d52ea9c3b69ff941a56862714e8a1da097a472c4e0b7c",
+      "original": "<user-home>/agent-company-factory/apps/workday_mock.md"
+    },
+    "app_schemas/xiaohongshu_mock.md": {
+      "sha256": "0520c9e1bc1e4d8735d7eae2fa0ebc3c51ca52b6530f4a7bec424525397168b7",
+      "original": "<user-home>/agent-company-factory/apps/xiaohongshu_mock.md"
+    },
+    "app_schemas/youtube_mock.md": {
+      "sha256": "e5f80697ff20c780a3f80299d72de66d7bc4f990710cafddb09d6df252fa5713",
+      "original": "<user-home>/agent-company-factory/apps/youtube_mock.md"
+    },
+    "app_schemas/zhihu_mock.md": {
+      "sha256": "a2349f54882e9efc23427b57d42e6774396960a6209e546fdd4630f5a964db96",
+      "original": "<user-home>/agent-company-factory/apps/zhihu_mock.md"
+    },
+    "app_schemas/zillow_mock.md": {
+      "sha256": "ca9d3f6c5537344a7a324f1ac57837f97060db6311e7581ef7a237e274a80088",
+      "original": "<user-home>/agent-company-factory/apps/zillow_mock.md"
+    },
+    "app_schemas/zoom_web_mock.md": {
+      "sha256": "27d944b040dd8b98d4e0d7beda7fdb3db2f2c9eb67990b4f5600d954679364dd",
+      "original": "<user-home>/agent-company-factory/apps/zoom_web_mock.md"
+    },
+    "app_schemas/TradingView_mock.md": {
+      "sha256": "779c228afa6cd1204d7e5b57b265a454d5d975f3d98291f122f868debfd9fe60",
+      "original": "<user-home>/CUA-Gym/.claude/skills/mock_websites/schemas/TradingView_mock.md"
+    },
+    "app_schemas/wandb_mock.md": {
+      "sha256": "f48a06b728d06b44c871cb76212254e8b60f08fdf67b2d74d56ace715259014e",
+      "original": "<user-home>/CUA-Gym/.claude/skills/mock_websites/schemas/wandb_mock.md"
+    },
+    "app_schemas/tripadvisor_mock.md": {
+      "sha256": "5bf6e8f08b5f2aee0c8de93f2e4a47eb70d6b4257c3123bee350eef141a5ad5d",
+      "original": "<user-home>/CUA-Gym/hub/websites/tripadvisor_mock/SCHEMA.md"
+    },
+    "app_schemas/westlaw_mock.md": {
+      "sha256": "f7e8183d192e16f6048ec57ac0d78bef773567be34d92a8bbfe8783ecfb60b4c",
+      "original": "<user-home>/CUA-Gym/hub/websites/westlaw_mock/SCHEMA.md"
+    }
+  },
+  "amendments": [
+    {
+      "at": "2026-09-10T18:55:27.797429+00:00",
+      "files": [
+        {
+          "file": "apps.json",
+          "was": "bfb9ef97dfbcb1ecdbd598b546935225efe120e467f4c27d66025286d0caa10e",
+          "now": "de7ee2ba306843293336400bf211d43ba0a47a48f0a5cbedee34bc855bc81b55"
+        }
+      ]
+    },
+    {
+      "at": "2026-09-10T19:45:01.129953+00:00",
+      "files": [
+        {
+          "file": "apps.json",
+          "was": "de7ee2ba306843293336400bf211d43ba0a47a48f0a5cbedee34bc855bc81b55",
+          "now": "89cbb6e6f65a94427b2334d48a509537250f28821de5d8702c0f3313999a6768"
+        }
+      ],
+      "pins_added": [
+        "app_schemas/TradingView_mock.md",
+        "app_schemas/tripadvisor_mock.md",
+        "app_schemas/wandb_mock.md",
+        "app_schemas/westlaw_mock.md"
+      ],
+      "why": "The last five hub apps hub_apps() could not admit. The four new app_schemas documents are imported bytes, so they are pinned as provenance with no `amended` line; apps.json is pinned again as amended."
+    }
+  ]
+}

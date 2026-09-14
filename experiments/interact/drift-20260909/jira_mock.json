@@ -1,0 +1,134 @@
+{
+  "app_id": "jira_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "comments",
+    "currentUser",
+    "issues",
+    "notifications",
+    "projects",
+    "sprints",
+    "users",
+    "workflows"
+  ],
+  "observed": [
+    "comments",
+    "currentUser",
+    "issues",
+    "notifications",
+    "projects",
+    "sprints",
+    "users",
+    "workflows"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "users": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "email",
+        "avatar"
+      ],
+      "keyed_by_id": false
+    },
+    "projects": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "key",
+        "name",
+        "leadId",
+        "category",
+        "icon"
+      ],
+      "keyed_by_id": false
+    },
+    "issues": {
+      "kind": "array",
+      "count": 25,
+      "record_fields": [
+        "id",
+        "key",
+        "projectId",
+        "summary",
+        "description",
+        "type",
+        "status",
+        "priority",
+        "storyPoints",
+        "reporterId",
+        "assigneeId",
+        "sprintId",
+        "epicId",
+        "labels",
+        "subtasks",
+        "linkedIssueIds",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "sprints": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "projectId",
+        "name",
+        "goal",
+        "startDate",
+        "endDate",
+        "state"
+      ],
+      "keyed_by_id": false
+    },
+    "comments": {
+      "kind": "array",
+      "count": 18,
+      "record_fields": [
+        "id",
+        "issueId",
+        "userId",
+        "content",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "workflows": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "name",
+        "transitions"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "type",
+        "issueId",
+        "actorId",
+        "message",
+        "read",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "currentUser": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

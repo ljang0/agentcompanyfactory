@@ -1,0 +1,476 @@
+{
+ "_meta": {
+  "doc": "real product -> usable mock counterparts, derived by scripts/build_tool_counterparts.py (name match + ERP/EHR/office family list)",
+  "families": {
+   "salesforce_mock": [
+    "salesforce",
+    "dynamics 365 sales",
+    "dynamics 365 customer",
+    "dynamics crm"
+   ],
+   "SAP_mock": [
+    "sap ",
+    "sap s/4",
+    "netsuite",
+    "oracle erp",
+    "oracle e-business",
+    "dynamics 365 finance",
+    "dynamics 365 business central",
+    "dynamics 365 supply chain"
+   ],
+   "epic-health_mock": [
+    "epic ",
+    "cerner",
+    "meditech",
+    "allscripts",
+    "athenahealth"
+   ],
+   "quickbooks_mock": [
+    "quickbooks",
+    "sage intacct",
+    "xero"
+   ],
+   "ServiceNow_mock": [
+    "servicenow",
+    "bmc remedy"
+   ],
+   "microsoft_teams_mock": [
+    "microsoft teams"
+   ],
+   "slack_mock": [
+    "slack"
+   ],
+   "google_drive_mock": [
+    "sharepoint",
+    "google drive",
+    "onedrive"
+   ],
+   "outlook_web_mock": [
+    "microsoft outlook"
+   ],
+   "gmail_mock": [
+    "gmail"
+   ],
+   "google_sheets_mock": [
+    "google sheets"
+   ],
+   "google_docs_mock": [
+    "google docs"
+   ]
+  }
+ },
+ "counterparts": {
+  "Airtable": [
+   "airtable_mock"
+  ],
+  "Allscripts": [
+   "epic-health_mock"
+  ],
+  "Allscripts Professional EHR": [
+   "epic-health_mock"
+  ],
+  "Allscripts Sunrise": [
+   "epic-health_mock"
+  ],
+  "Allscripts Sunrise (Sunrise EHR)": [
+   "epic-health_mock"
+  ],
+  "Amazon Ads": [
+   "amazon_mock"
+  ],
+  "Amazon Alexa": [
+   "amazon_mock"
+  ],
+  "Amazon Flex": [
+   "amazon_mock"
+  ],
+  "Amazon Music": [
+   "amazon_mock"
+  ],
+  "Asana": [
+   "asana_mock"
+  ],
+  "Azure Data Studio": [
+   "azure_mock"
+  ],
+  "Azure DevOps Server": [
+   "azure_mock"
+  ],
+  "BambooHR": [
+   "bamboohr_mock"
+  ],
+  "Canvas LMS": [
+   "Canvas-LMS_mock"
+  ],
+  "Cerner Millennium": [
+   "epic-health_mock"
+  ],
+  "Cerner PathNet": [
+   "epic-health_mock"
+  ],
+  "Cerner PharmNet": [
+   "epic-health_mock"
+  ],
+  "Cerner PowerChart": [
+   "epic-health_mock"
+  ],
+  "Cerner PowerChart Oncology": [
+   "epic-health_mock"
+  ],
+  "Cerner SurgiNet Anesthesia": [
+   "epic-health_mock"
+  ],
+  "Clio Manage": [
+   "clio_mock"
+  ],
+  "Crane Sentry Configurator": [
+   "sentry_mock"
+  ],
+  "DocuSign": [
+   "docusign_mock"
+  ],
+  "Epic": [
+   "epic-health_mock"
+  ],
+  "Epic Anesthesia": [
+   "epic-health_mock"
+  ],
+  "Epic Beacon": [
+   "epic-health_mock"
+  ],
+  "Epic Beaker": [
+   "epic-health_mock"
+  ],
+  "Epic Haiku": [
+   "epic-health_mock"
+  ],
+  "Epic Hyperspace": [
+   "epic-health_mock"
+  ],
+  "Epic Radiant": [
+   "epic-health_mock"
+  ],
+  "Epic Willow": [
+   "epic-health_mock"
+  ],
+  "Facebook": [
+   "facebook_mock"
+  ],
+  "GitLab": [
+   "gitlab_mock"
+  ],
+  "Gmail": [
+   "gmail_mock"
+  ],
+  "Gmail App": [
+   "gmail_mock"
+  ],
+  "Google Ads": [
+   "google_ads_mock"
+  ],
+  "Google Ads Editor": [
+   "google_ads_mock"
+  ],
+  "Google Calendar": [
+   "google_calendar_mock"
+  ],
+  "Google Docs": [
+   "google_docs_mock"
+  ],
+  "Google Drive": [
+   "google_drive_mock"
+  ],
+  "Google Gmail": [
+   "gmail_mock"
+  ],
+  "Google Sheets": [
+   "google_sheets_mock"
+  ],
+  "Google Workspace (Gmail)": [
+   "gmail_mock"
+  ],
+  "Greenhouse": [
+   "greenhouse_mock"
+  ],
+  "Gusto": [
+   "gusto_mock"
+  ],
+  "Gusto Wallet": [
+   "gusto_mock"
+  ],
+  "HubSpot CRM": [
+   "hubspot_mock"
+  ],
+  "HubSpot Marketing Hub": [
+   "hubspot_marketing_mock",
+   "hubspot_mock"
+  ],
+  "Instagram": [
+   "instagram_mock"
+  ],
+  "Jira": [
+   "jira_mock"
+  ],
+  "Jira Data Center": [
+   "jira_mock"
+  ],
+  "Jira Service Management": [
+   "jira_mock"
+  ],
+  "Jira Software": [
+   "jira_mock"
+  ],
+  "LinkedIn": [
+   "linkedin_mock"
+  ],
+  "LinkedIn Recruiter": [
+   "linkedin_mock"
+  ],
+  "LinkedIn Sales Navigator": [
+   "linkedin_mock"
+  ],
+  "Lucidchart": [
+   "lucidchart_mock"
+  ],
+  "MEDITECH Anesthesia": [
+   "epic-health_mock"
+  ],
+  "MEDITECH Expanse": [
+   "epic-health_mock"
+  ],
+  "MEDITECH Pharmacy": [
+   "epic-health_mock"
+  ],
+  "Mailchimp": [
+   "mailchimp_mock"
+  ],
+  "Meditech LIS": [
+   "epic-health_mock"
+  ],
+  "Microsoft Dynamics 365 Business Central": [
+   "SAP_mock"
+  ],
+  "Microsoft Dynamics 365 Business Central On-Premises": [
+   "SAP_mock"
+  ],
+  "Microsoft Dynamics 365 Customer Engagement (on-premises)": [
+   "salesforce_mock"
+  ],
+  "Microsoft Dynamics 365 Finance": [
+   "SAP_mock"
+  ],
+  "Microsoft Dynamics 365 Sales": [
+   "salesforce_mock"
+  ],
+  "Microsoft Dynamics 365 Supply Chain Management": [
+   "SAP_mock"
+  ],
+  "Microsoft OneDrive": [
+   "google_drive_mock"
+  ],
+  "Microsoft Outlook": [
+   "outlook_web_mock"
+  ],
+  "Microsoft SharePoint": [
+   "google_drive_mock"
+  ],
+  "Microsoft SharePoint Server": [
+   "google_drive_mock"
+  ],
+  "Microsoft Teams": [
+   "microsoft_teams_mock"
+  ],
+  "Miro": [
+   "miro_mock"
+  ],
+  "Monday.com": [
+   "monday_mock"
+  ],
+  "Monday.com CRM": [
+   "monday_mock"
+  ],
+  "NetSuite": [
+   "SAP_mock"
+  ],
+  "NetSuite WMS": [
+   "SAP_mock"
+  ],
+  "Notion": [
+   "notion_mock"
+  ],
+  "Oracle NetSuite": [
+   "SAP_mock"
+  ],
+  "PayPal Zettle": [
+   "paypal_mock"
+  ],
+  "Pinterest": [
+   "pinterest_mock"
+  ],
+  "Postman": [
+   "postman_mock"
+  ],
+  "QuickBooks Desktop": [
+   "quickbooks_mock"
+  ],
+  "QuickBooks Desktop Enterprise": [
+   "quickbooks_mock"
+  ],
+  "QuickBooks Desktop Payroll": [
+   "quickbooks_mock"
+  ],
+  "QuickBooks Desktop Point of Sale": [
+   "quickbooks_mock"
+  ],
+  "QuickBooks Online": [
+   "quickbooks_mock"
+  ],
+  "QuickBooks Point of Sale": [
+   "quickbooks_mock"
+  ],
+  "QuickBooks Time": [
+   "quickbooks_mock"
+  ],
+  "QuickBooks Workforce": [
+   "quickbooks_mock"
+  ],
+  "SAP Ariba": [
+   "SAP_mock"
+  ],
+  "SAP Business One": [
+   "SAP_mock"
+  ],
+  "SAP CRM": [
+   "SAP_mock"
+  ],
+  "SAP Concur": [
+   "SAP_mock"
+  ],
+  "SAP Customer Experience": [
+   "SAP_mock"
+  ],
+  "SAP ERP": [
+   "SAP_mock"
+  ],
+  "SAP Enterprise Asset Management": [
+   "SAP_mock"
+  ],
+  "SAP Extended Warehouse Management": [
+   "SAP_mock"
+  ],
+  "SAP Field Service Management": [
+   "SAP_mock"
+  ],
+  "SAP GRC": [
+   "SAP_mock"
+  ],
+  "SAP HANA": [
+   "SAP_mock"
+  ],
+  "SAP HCM": [
+   "SAP_mock"
+  ],
+  "SAP Litmos": [
+   "SAP_mock"
+  ],
+  "SAP Manufacturing Execution": [
+   "SAP_mock"
+  ],
+  "SAP Plant Maintenance": [
+   "SAP_mock"
+  ],
+  "SAP PowerDesigner": [
+   "SAP_mock"
+  ],
+  "SAP S/4HANA": [
+   "SAP_mock"
+  ],
+  "SAP S/4HANA Asset Management": [
+   "SAP_mock"
+  ],
+  "SAP SuccessFactors": [
+   "SAP_mock"
+  ],
+  "SAP SuccessFactors Incentive Management": [
+   "SAP_mock"
+  ],
+  "SAP SuccessFactors Mobile": [
+   "SAP_mock"
+  ],
+  "SAP Supply Chain Management": [
+   "SAP_mock"
+  ],
+  "SAP Transactional Banking": [
+   "SAP_mock"
+  ],
+  "SAP Transportation Management": [
+   "SAP_mock"
+  ],
+  "SAP for Insurance": [
+   "SAP_mock"
+  ],
+  "Salesforce": [
+   "salesforce_mock"
+  ],
+  "Salesforce Field Service": [
+   "salesforce_mock"
+  ],
+  "Salesforce Marketing Cloud": [
+   "salesforce_mock"
+  ],
+  "Salesforce Mobile App": [
+   "salesforce_mock"
+  ],
+  "Salesforce Net Zero Cloud": [
+   "salesforce_mock"
+  ],
+  "Salesforce Sales Cloud": [
+   "salesforce_mock"
+  ],
+  "ServiceNow": [
+   "ServiceNow_mock"
+  ],
+  "ServiceNow Business Continuity Management": [
+   "ServiceNow_mock"
+  ],
+  "Slack": [
+   "slack_mock"
+  ],
+  "Stripe Dashboard": [
+   "stripe_dashboard_mock"
+  ],
+  "Tableau Desktop": [
+   "tableau_mock"
+  ],
+  "Uber Eats Orders": [
+   "uber_eats_mock"
+  ],
+  "WeChat": [
+   "wechat_mock"
+  ],
+  "WooCommerce": [
+   "woocommerce_mock"
+  ],
+  "Workday": [
+   "workday_mock"
+  ],
+  "Workday HCM": [
+   "workday_mock"
+  ],
+  "Workday Learning": [
+   "workday_mock"
+  ],
+  "Workday Procurement": [
+   "workday_mock"
+  ],
+  "Workday Student": [
+   "workday_mock"
+  ],
+  "Xero": [
+   "quickbooks_mock"
+  ],
+  "Zendesk": [
+   "Zendesk_mock"
+  ]
+ }
+}

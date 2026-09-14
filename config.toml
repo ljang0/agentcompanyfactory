@@ -1,0 +1,262 @@
+[generation]
+difficulty_required = true  # every authored workflow carries easy/medium/hard
+review_votes = 3            # independent readings for Stage 1 and world review; majority decides
+companies = 50
+tasks = 100
+workers = 4
+seed = 0
+max_revisions = 2
+candidate_multiplier = 3
+discovery_batch = 8
+# Output-size budget, not a cap on company task diversity or workflow depth.
+workflow_batch_size = 2
+research_timeout_seconds = 1500
+completion_timeout_seconds = 600
+# 337 authoring calls were cut off at 1800s and thrown away, costing 182 core-hours; four in
+# five succeeded when retried, and the attempts that do succeed have a p90 of 1863s. The
+# ceiling was landing just past where this work normally finishes.
+authoring_timeout_seconds = 2700
+# Transport retries are separate from semantic/source repairs and retained in receipts.
+isolate_model_failures = true
+max_model_retries = 1
+
+[design]
+# Real VM episodes (the vm stage): one QEMU guest per worker, booted from this image with this
+# browser, reaching its apps through the host at vm_host_ip. The batch driver budgets guests, not
+# companies: a task takes one guest per roster member (manager + workers). vm_slots is the legacy
+# unit, one company of five guests, so 4 slots = 20 guests; set vm_guests to state the budget directly.
+vm_base_image = "~/.cache/gym-anything/qemu/base_ubuntu_gnome.qcow2"
+vm_browser_dir = "~/.cache/ms-playwright/chromium-1217/chrome-linux64"
+vm_host_ip = "10.0.2.2"
+vm_slots = 8  # 40 guests; host has 64 cores and ~430 GB free
+# Model calls one world may spend before seeding stops with a reason. A median world spends 263;
+# the worst spent 653 over 43 hours with nothing to stop it. 0 or absent means uncapped.
+seed_call_budget = 500
+vm_model_calls = 450
+# The mine stage tops a reviewed world up to this many tasks from its unused outlines.
+tasks_per_company = 4
+# Total byte budget for one app's whole state, measured as bulk.add_to_state measures it:
+# len(json.dumps(state)) -- compact, not the indent=2 form storage.write puts on disk, which is a
+# median 1.21x larger. In that unit no state in the fleet exceeds 4.09 MB and 22 of 406 sit within
+# 2% of the cap: the distribution is not a tail, it is a wall, and google_drive alone lost ~6,900
+# declared records to it.
+# The ceiling this has to respect is the browser's, and it was measured per app rather than guessed
+# (experiments/VOLUME-CEILINGS.md, 136 probes over 26 apps at 2-12 MB). localStorage takes 5 MiB of
+# JSON.stringify characters per origin: a 5.23 MB state still cached, 5.36 MB and up cached nothing.
+# Under ~2.6 MB an app caches the state twice (current and baseline); above that, once; above the
+# quota the shim makes the write a no-op and the cache is absent rather than stale.
+# An absent cache is harmless for 25 of the 26 apps probed: they gate their fetch on the state key
+# itself, find it missing and re-read the server, and render, write and read back unchanged at
+# 12 MB. google_docs_mock is the exception and it is the binding constraint -- it gates on a
+# separate `_initial_` key that its own demo data writes at module load, so past the quota it
+# skips the fetch, loads 10 KB of shipped demo documents and POSTs them back as the state. At
+# 5.03 MB it passes every check; at 5.36 MB the first reload replaces the company's 1,947 documents
+# with "Project Proposal" and "Meeting Notes - Feb 14" and takes the typed write with them.
+# 4500000 leaves 743 KB under the quota and 860 KB under that failure for an episode's own writes.
+# 6000000 remains unsafe, and for one measured reason, not the fleet-wide one previously recorded
+# here: of the 8 apps that run reported over 6 MB, 6 failed only clicks_mostly_work, and paired
+# fidelity-vs-volume shows growth cost the write path in 3 of 42 apps and gained it in 2.
+# This stays the default for every app that has not been measured, and bulk_max_bytes_by_app below
+# overrides it for the ones that have. See VOLUME-CEILINGS.md for the ladder behind each entry.
+bulk_max_bytes_per_app = 4500000
+seed_shards = 3            # extra calls per high-volume collection, each an earlier window of the history
+seed_shard_min_records = 15
+hub_revision = "1e50b797200f8afd6f11ca8e3ee04412de97b0f2"
+model_pin = "codex/gpt-6-astra"
+# Every company gets this workplace bundle seeded with ordinary traffic; the boss
+# delegates through it; tasks add domain apps on top.
+standard_apps = ["gmail_mock", "slack_mock", "google_calendar_mock", "google_drive_mock", "google_docs_mock"]
+workflow_version = "2"
+execution_mode = "digital"
+# Runtime adapter for new runs. "hub" = generic CUA-Gym hub state contract (every
+# listed app is its own origin, seeded by posting full native state). "native" =
+# the historical four-app hand-built path. Frozen runs keep their own value.
+runtime_adapter = "hub"
+# Where the CUA-Gym hub mock apps live; each app_id below is a directory there.
+hub_root = "~/CUA-Gym/hub/websites"
+# Identity policy for hub apps: all workers of one company world share one
+# session per app; attribution is by worker VM, access is by which VM gets which URL.
+identity = "shared_session"
+# Worker VMs have no route off the host, so the absolute image URLs the app clones ship
+# (picsum avatars, gstatic and wikimedia logos) render as broken boxes. The worker proxy
+# rewrites them to a same-origin /__image/<token> SVG it serves itself. false = leave the
+# clones' URLs alone.
+placeholder_images = true
+# Stage 1 design surface: every hub app with a pinned schema document. Trim this
+# list to narrow a run; gym-anything environments are not seedable through this contract.
+available_runtime_apps = [
+  "12306_mock",
+  "Canvas-LMS_mock",
+  "Expensify_mock",
+  "PACS-viewer_mock",
+  "SAP_mock",
+  "ServiceNow_mock",
+  "TradingView_mock",
+  "Zendesk_mock",
+  "adp_mock",
+  "airtable_mock",
+  "aliyun_mock",
+  "amazon_mock",
+  "amazon_seller_mock",
+  "amplitude_mock",
+  "asana_mock",
+  "aws_console_mock",
+  "azure_mock",
+  "bamboohr_mock",
+  "booking_com_mock",
+  "canva_mock",
+  "canvas_mock",
+  "circleci_mock",
+  "clio_mock",
+  "cloudflare_mock",
+  "coinbase_mock",
+  "confluence_mock",
+  "contractbook_mock",
+  "datadog_mock",
+  "dingtalk_mock",
+  "discord_mock",
+  "docusign_mock",
+  "ebay_mock",
+  "epic-health_mock",
+  "expedia_mock",
+  "facebook_mock",
+  "feishu_mock",
+  "github_mock",
+  "gitlab_mock",
+  "gmail_mock",
+  "google_ads_mock",
+  "google_analytics_mock",
+  "google_calendar_mock",
+  "google_docs_mock",
+  "google_drive_mock",
+  "google_flights_mock",
+  "google_sheets_mock",
+  "greenhouse_mock",
+  "gusto_mock",
+  "hotjar_mock",
+  "hubspot_marketing_mock",
+  "hubspot_mock",
+  "instacart_mock",
+  "instagram_mock",
+  "jira_mock",
+  "klaviyo_mock",
+  "lattice_mock",
+  "linear_mock",
+  "linkedin_mock",
+  "looker_studio_mock",
+  "lucidchart_mock",
+  "mailchimp_mock",
+  "meta_ads_mock",
+  "microsoft_teams_mock",
+  "miro_mock",
+  "mixpanel_mock",
+  "monday_mock",
+  "notion_mock",
+  "openreview_mock",
+  "outlook_web_mock",
+  "paypal_mock",
+  "pinterest_mock",
+  "postman_mock",
+  "quickbooks_mock",
+  "reddit_mock",
+  "robinhood_mock",
+  "salesforce_mock",
+  "sentry_mock",
+  "shopify_admin_mock",
+  "slack_mock",
+  "stripe_dashboard_mock",
+  "tableau_mock",
+  "taobao_seller_mock",
+  "trello_mock",
+  "tripadvisor_mock",
+  "twitter_mock",
+  "uber_eats_mock",
+  "vercel_mock",
+  "wandb_mock",
+  "wechat_mock",
+  "weibo_mock",
+  "westlaw_mock",
+  "woocommerce_mock",
+  "workday_mock",
+  "xiaohongshu_mock",
+  "youtube_mock",
+  "zhihu_mock",
+  "zillow_mock",
+  "zoom_web_mock",
+]
+minimum_workers = 3
+# Assign each task a distinct (app collections, decision type) cell before design.
+feature_matrix = true
+# Opt-in: the three-pair pilot did not establish a quality/efficiency gain.
+# Joint portfolio-aware selection/design, captured evidence, bounded roster edits.
+agency = false
+read_only_tools = true
+select_outlines = true
+allow_amendment = false
+review_separate_witness = true
+
+# Per-app byte budgets, read by bulk_layer.max_bytes_for. A missing app takes the default above,
+# so an app nobody has measured behaves exactly as it did before this table existed.
+#
+# HALF-WIRED until one more change lands: add-bulk reads this table, world_repair.lay_layers still
+# re-lays every app under the default. A repair therefore drops slack back to 4500000 and puts
+# robinhood back up to it. The three-line change is written out and handed to the coordinator.
+#
+# Two different constraints set these, and they have different remedies:
+#   quota  -- the browser's 5 MiB of localStorage per origin. Harmless for 25 of the 26 apps
+#             measured: they gate their fetch on the state key, find it absent and re-read the
+#             server. Not harmless for google_docs_mock, which is why its ceiling is not here but
+#             in bulk_layer.HARD_MAX_BYTES, where a config edit cannot raise it.
+#   clock  -- page render time. Most apps virtualise and cost nothing extra to 12 MB. gmail_mock
+#             renders the whole mailbox and costs about +3 s of page load per MB, so its 6 MB is
+#             bought against the 25-minute per-worker episode, not against storage. Raising it
+#             takes minutes out of every episode that opens a mailbox.
+# A value *below* the default is not a ceiling at all: it is an app the generator was over-seeding
+# because the skill tells it to spend whatever budget it is given. Lowering one means the next
+# add-bulk --again or world repair lays fewer records than the world holds today.
+[design.bulk_max_bytes_by_app]
+slack_mock           = 8000000   # clean to 12.28 MB; a 40-person quarter would be 15.3 MB, so still a window
+google_drive_mock    = 8000000   # clean to 12.11 MB; a department drive is 9-90 MB, so still a window
+shopify_admin_mock   = 8000000   # clean to 11.99 MB; a merchant year is ~51 MB, so still a window
+gmail_mock           = 6000000   # clock, not quota: storage-clean to 12.07 MB, but ~+3 s per MB per page load
+google_calendar_mock = 2500000   # realistic volume: 40 people for half a year is 2.2 MB
+trello_mock          = 2500000   # realistic volume: a real board holds 200-2,000 cards
+robinhood_mock       = 1000000   # realistic volume: an account's alerts are hundreds, not 5,017
+
+[models]
+discover = ["codex/gpt-6-astra"]
+research = ["codex/gpt-6-astra"]
+expand = ["codex/gpt-6-astra"]
+review = ["codex/gpt-6-astra"]
+# Stage 2 world states: one call per company writes world/<app>.state.json, identities and materials.
+world_states = ["codex/gpt-6-astra"]
+world_review = ["codex/gpt-6-astra"]
+reasoning = "high"
+# Codex service tier for every pipeline call: "fast" for throughput, "default" otherwise.
+service_tier = "default"  # fast tier turned off 2026-09-09 (user request)
+review_policy = "fresh_session"
+# Logged-in Codex account directories; calls rotate across them so concurrent
+# jobs spread over both quotas. Directories without auth.json are skipped.
+codex_homes = ["~/.codex-b"]  # ~/.codex hit its weekly limit; returns Sep 15 17:11 — re-add then
+
+[diversity]
+model = "sentence-transformers/all-mpnet-base-v2"
+# Resolved to an immutable Hugging Face revision by bootstrap, then frozen per run.
+revision = "main"
+neighbors = 10
+cross_run = true
+
+[worker_policy]
+seconds = 1500  # per worker; the episode step budget (run-company --seconds) still caps it
+actions = 150
+# No-hint worker policies that each get a graded episode after the teacher passes, in order;
+# every policy after the first starts from a fresh session (one more reset + launch of VM time).
+# "own" is our WorkerPolicy; another name X loads company_envs.world.policies.X.XPolicy.
+policies = ["own"]
+# policies = ["own", "macu"]  # add the MACU-style manager/worker adapter (policies/macu.py) for a comparison run
+# These are no-hint policies and they label difficulty; a second harness here also catches
+# environment faults a single teacher pass hides, which is why more than one is worth the VM time.
+# Hint runs are different: the teacher is the pipeline's one hint run because delivery is defined on
+# it. Any further hint run collects demonstrations, which happens after delivery in
+# company_envs.world.benchmark, never as a pipeline stage. MacuPolicy refuses insider references for
+# this reason, so it cannot be made a hint policy by configuration alone.

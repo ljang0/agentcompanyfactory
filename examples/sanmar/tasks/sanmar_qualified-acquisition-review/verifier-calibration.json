@@ -1,0 +1,236 @@
+{
+  "at": "2026-09-14T00:23:54.753703+00:00",
+  "status": "accepted",
+  "proof_key": "0c2bf3d667f9aa7b701376aacb2920a407cdbb9c7391ae4db36594c868c04501",
+  "cases": [
+    {
+      "case": "noop",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "d145abe31088b1d0fbd931ba6e8595610ab430b82fbfe875c1216045bf19c511"
+    },
+    {
+      "case": "noop",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "6ca28bf8322016c73abe44d3a20e1c93459c42b5ab3ca0d94d062d89020d7edd"
+    },
+    {
+      "case": "reference",
+      "evidence_mode": "expanded",
+      "expected": "pass",
+      "observed": "pass",
+      "ok": true,
+      "report_hash": "fe1680d62625a2aa2296029f91ebf8eb2c0962e1f0687ebf11969026aa6032da"
+    },
+    {
+      "case": "reference",
+      "evidence_mode": "encoded",
+      "expected": "pass",
+      "observed": "pass",
+      "ok": true,
+      "report_hash": "61e96b66269a40e42c1e24a8afbac5535b5df49a4ee947d887a430de0c2f7fb9"
+    },
+    {
+      "case": "alternative",
+      "evidence_mode": "expanded",
+      "expected": "pass",
+      "observed": "pass",
+      "ok": true,
+      "report_hash": "11b135f38ad6c062d94e43d240813151daed4847ab881eeb4874284c2d03643e"
+    },
+    {
+      "case": "alternative",
+      "evidence_mode": "encoded",
+      "expected": "pass",
+      "observed": "pass",
+      "ok": true,
+      "report_hash": "689b5f9e240956d8395aa1a0e922533ffbd5bb6eb998797cd297a48ba1ccfe05"
+    },
+    {
+      "case": "forged_claim",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "07ac2d8d534bd9b6741101eac40a7d694529ba771325ba40c29cbbf1a1650912"
+    },
+    {
+      "case": "forged_claim",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "79769b373dd095c0228f8b1b1164308bf6fa25b5e0b56c4b3809f65d80875994"
+    },
+    {
+      "case": "irrelevant_contribution",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "2d4504f9634e0a223ec6f3cdc32963afce40dc5e042e9d99cb895f37c351b2b1"
+    },
+    {
+      "case": "irrelevant_contribution",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "35e07740bdf611f4afa6d395927a7c3ea4e98b17e76414904a979fcdae7b9895"
+    },
+    {
+      "case": "missing_authority",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "99b69047ce3484bdb342ab128652e73a5373d9f14ac4f6a45f605a02a3fc0f77"
+    },
+    {
+      "case": "missing_authority",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "2df78d493768935d2bc84fb42363f076a6b2a12c11f5bacd05ba6abdac0296ed"
+    },
+    {
+      "case": "missing_evidence",
+      "evidence_mode": "expanded",
+      "expected": "unavailable",
+      "observed": "unavailable",
+      "ok": true,
+      "error": "Final evidence must contain every app snapshot"
+    },
+    {
+      "case": "missing_evidence",
+      "evidence_mode": "encoded",
+      "expected": "unavailable",
+      "observed": "unavailable",
+      "ok": true,
+      "error": "Final evidence must contain every app snapshot"
+    },
+    {
+      "case": "partial",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "08aadb4182c1a8a2eb040160e12331ab721bdb9e117fd74848f4a558d6cf17d7"
+    },
+    {
+      "case": "partial",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "89f787ebc9c69a69dc1531548d4cec390605cfb4df2d973b7b7722dd966e9000"
+    },
+    {
+      "case": "wrong_record",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "ff422dc6e48328e4cfab9bdc5608d7da1c05deddd1485129ab4ebf99f4784735"
+    },
+    {
+      "case": "wrong_record",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "5ee674482e8a4489256a40ffb3990bc706a96c37db94c74305a839ebb948d167"
+    },
+    {
+      "case": "wrong_total",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "93931430fc6fefe170ece3f2822de7417749cd89dd4d3469a20ecc3dcea88bb5"
+    },
+    {
+      "case": "wrong_total",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "4e40a66282592d1425c8831ee5d32ea0639ba32d7ec5705f57fee62d1ad797be"
+    }
+  ],
+  "reference_hash": "a9f15634e691ce3e94029445324c0c9ebaea6f663a627eeb64bf428764a12a80",
+  "golden_hash": "1b3470dedc178205ab0dfb295af151f18cfd0a56c51bbac32e9336dee9c7a02b",
+  "fixtures_hash": "804f1526aac62095a721e98d5edb60532c9da394e96049d06630d11b593cc2df",
+  "failure_targets": {
+    "alternative": {
+      "kind": "alternative",
+      "criteria": [],
+      "workers": [],
+      "reason": "A feasible alternative with coordinated approval, implementation, specialist contributions and preserved customer obligations."
+    },
+    "forged_claim": {
+      "kind": "forged_claim",
+      "criteria": [],
+      "workers": [
+        "order-coordinator"
+      ],
+      "reason": "An unsupported assertion replaces the required actual order-coordinator contribution; retained workpapers do not establish that contribution."
+    },
+    "irrelevant_contribution": {
+      "kind": "irrelevant_contribution",
+      "criteria": [],
+      "workers": [
+        "order-coordinator"
+      ],
+      "reason": "Sorting document titles does not perform the required ordering and capacity checks using the representative's findings."
+    },
+    "missing_authority": {
+      "kind": "missing_authority",
+      "criteria": [
+        2,
+        3
+      ],
+      "workers": [
+        "sales-supervisor"
+      ],
+      "reason": "The required supervisor decision is absent, and ordinary advertising changes were implemented without recorded approval."
+    },
+    "missing_evidence": {
+      "kind": "missing_evidence",
+      "criteria": [],
+      "workers": [],
+      "reason": "The empty final snapshot prevents assessment of persisted business outcomes; this is an evidence gap."
+    },
+    "partial": {
+      "kind": "partial",
+      "criteria": [
+        3
+      ],
+      "workers": [],
+      "reason": "RETURN remains active at $25 daily despite the approved pause, so persisted delivery contradicts the chosen scope."
+    },
+    "wrong_record": {
+      "kind": "wrong_record",
+      "criteria": [
+        4
+      ],
+      "workers": [],
+      "reason": "Kestrel's follow-up task and note are attached to Oakline, failing to preserve obligations against the correct customer relationship."
+    },
+    "wrong_total": {
+      "kind": "wrong_total",
+      "criteria": [
+        2
+      ],
+      "workers": [],
+      "reason": "The separately costed support comparison omits $200 of retained marketing hours, understating weekly support cost and corrupting savings and September-equivalent costs."
+    }
+  },
+  "scope": "isolated mechanics and semantic calibration in expanded and losslessly encoded evidence modes; no real-team necessity proof"
+}

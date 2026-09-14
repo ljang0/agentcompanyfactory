@@ -1,0 +1,1745 @@
+{
+  "abravibe_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "abravibe is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "active_inspire_windows_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "active inspire windows is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "activity_browser_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "activity browser is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "aerobridge_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "aircraft, flight plans, personnel, and operations",
+    "seed_via": "api",
+    "note": "aerobridge is a shared operational server where multiple team roles work on the same records."
+  },
+  "anaconda_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "anaconda is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "android_aps_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "ui",
+    "note": "android aps is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "android_avd_calculator_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "android avd calculator is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "android_calculator_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "android calculator is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "android_studio_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "android studio is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "angry_ip_scanner_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "angry ip scanner is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "animal_shelter_manager_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "animals, people, adoptions, and medical care",
+    "seed_via": "database",
+    "note": "animal shelter manager is a shared operational server where multiple team roles work on the same records."
+  },
+  "apache_ofbiz_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "products, parties, orders, inventory, and accounting transactions",
+    "seed_via": "api",
+    "note": "apache ofbiz is a shared operational server where multiple team roles work on the same records."
+  },
+  "apache_openoffice_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "apache openoffice is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "ardour_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "ardour is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "arkcase_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "cases, requests, tasks, and case documents",
+    "seed_via": "api",
+    "note": "arkcase is a shared operational server where multiple team roles work on the same records."
+  },
+  "astroimagej_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "astroimagej is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "attendhrm_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "employees, attendance, leave, and payroll",
+    "seed_via": "database",
+    "note": "attendhrm is a shared operational server where multiple team roles work on the same records."
+  },
+  "autopsy_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "autopsy is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "avare_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "ui",
+    "note": "avare is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "axelor_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "customers, sales, purchases, projects, and business transactions",
+    "seed_via": "api",
+    "note": "axelor is a shared operational server where multiple team roles work on the same records."
+  },
+  "azure_devops_server_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "projects, work items, repositories, builds, and sprints",
+    "seed_via": "api",
+    "note": "azure devops server is a shared operational server where multiple team roles work on the same records."
+  },
+  "bahmni_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "patients, encounters, orders, results, and billing",
+    "seed_via": "api",
+    "note": "bahmni is a shared operational server where multiple team roles work on the same records."
+  },
+  "bcwebcam_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "ui",
+    "note": "bcwebcam is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "blender3d_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "blender3d is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "blenderbim_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "blenderbim is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "blue_sky_plan_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "blue sky plan is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "bluemail_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "bluemail is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "booked_scheduler_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "resources, reservations, schedules, and users",
+    "seed_via": "api",
+    "note": "booked scheduler is a shared operational server where multiple team roles work on the same records."
+  },
+  "bridgecommand_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "bridgecommand is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "brl_cad_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "brl cad is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "btcpay_server_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "stores, invoices, payments, and wallet transactions",
+    "seed_via": "api",
+    "note": "btcpay server is a shared operational server where multiple team roles work on the same records."
+  },
+  "calem_eam_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "assets, work orders, maintenance plans, and inventory",
+    "seed_via": "api",
+    "note": "calem eam is a shared operational server where multiple team roles work on the same records."
+  },
+  "calligra_words_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "calligra words is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "cameo_chemicals_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "cameo chemicals is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "cameo_data_manager_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "cameo data manager is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "canvas_lms_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "courses, enrollments, assignments, submissions, and grades",
+    "seed_via": "api",
+    "note": "canvas lms is a shared operational server where multiple team roles work on the same records."
+  },
+  "care2x_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "patients, admissions, clinical events, lab work, and pharmacy orders",
+    "seed_via": "api",
+    "note": "care2x is a shared operational server where multiple team roles work on the same records."
+  },
+  "casebox_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "cases, tasks, documents, and human-rights evidence",
+    "seed_via": "api",
+    "note": "casebox is a shared operational server where multiple team roles work on the same records."
+  },
+  "chrome_env_all": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "chrome env all is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "chrome_env_osw": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "chrome env osw is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "chromis_pos_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "products, customers, sales, payments, and stock",
+    "seed_via": "database",
+    "note": "chromis pos is a shared operational server where multiple team roles work on the same records."
+  },
+  "claude_thunderbird": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "claude thunderbird is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "cmdbuild_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "configuration items, assets, relationships, and workflows",
+    "seed_via": "api",
+    "note": "cmdbuild is a shared operational server where multiple team roles work on the same records."
+  },
+  "code_saturne_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "code saturne is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "coppeliasim_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "coppeliasim is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "copper_point_of_sale_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "copper point of sale is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "crimson_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "crimson is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "dbeaver_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "database",
+    "note": "dbeaver is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "dhis2_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "health programs, tracked entities, events, and aggregate data",
+    "seed_via": "api",
+    "note": "dhis2 is a shared operational server where multiple team roles work on the same records."
+  },
+  "diagrams_net_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "diagrams net is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "docker_desktop_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "docker desktop is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "docker_desktop_env_temp_codex": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "docker desktop env temp codex is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "docker_desktop_env_temp_gemini": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "docker desktop env temp gemini is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "docker_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "docker is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "draw_desktop_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "draw desktop is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "dreamplan_home_design_software_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "dreamplan home design software is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "drupal_commerce_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "products, promotions, customers, and orders",
+    "seed_via": "api",
+    "note": "drupal commerce is a shared operational server where multiple team roles work on the same records."
+  },
+  "eclipse_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "eclipse is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "ekylibre_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "farms, crops, livestock, interventions, inventory, and finances",
+    "seed_via": "api",
+    "note": "ekylibre is a shared operational server where multiple team roles work on the same records."
+  },
+  "electrical_calculations_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "electrical calculations is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "emoncms_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "energy feeds, time-series measurements, dashboards, and users",
+    "seed_via": "files",
+    "note": "emoncms is a shared operational server where multiple team roles work on the same records."
+  },
+  "energy_3d_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "energy 3d is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "epi_info_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "epi info is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "equest_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "equest is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "eramba_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "risks, controls, policies, compliance requirements, and reviews",
+    "seed_via": "api",
+    "note": "eramba is a shared operational server where multiple team roles work on the same records."
+  },
+  "erpnext_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "customers, orders, inventory, accounts, employees, and manufacturing",
+    "seed_via": "api",
+    "note": "erpnext is a shared operational server where multiple team roles work on the same records."
+  },
+  "farmos_field_kit_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "ui",
+    "note": "farmos field kit is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "fiji_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "fiji is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "firefox_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "firefox is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "flica_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "ui",
+    "note": "flica is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "floreant_pos_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "menus, tables, orders, payments, customers, and shifts",
+    "seed_via": "database",
+    "note": "floreant pos is a shared operational server where multiple team roles work on the same records."
+  },
+  "free_scout_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "shared mailboxes, conversations, customers, and support assignments",
+    "seed_via": "api",
+    "note": "free scout is a shared operational server where multiple team roles work on the same records."
+  },
+  "freecad_envb": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "freecad envb is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "freemed_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "patients, appointments, prescriptions, and clinical records",
+    "seed_via": "api",
+    "note": "freemed is a shared operational server where multiple team roles work on the same records."
+  },
+  "frog_seo_spider_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "frog seo spider is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "garmin_basecamp_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "garmin basecamp is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "gcompris_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "gcompris is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "geo_server_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "geospatial workspaces, layers, styles, stores, and services",
+    "seed_via": "api",
+    "note": "geo server is a shared operational server where multiple team roles work on the same records."
+  },
+  "geogebra_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "geogebra is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "gimp_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "gimp is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "gimp_env_all": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "gimp env all is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "gimp_env_all_fast": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "gimp env all fast is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "gimp_env_osw": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "gimp env osw is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "gmat_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "gmat is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "gnu_health_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "patients, encounters, appointments, prescriptions, and lab records",
+    "seed_via": "database",
+    "note": "gnu health is a shared operational server where multiple team roles work on the same records."
+  },
+  "gnu_octave_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "gnu octave is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "google_earth_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "google earth is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "google_earth_env_bak": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "google earth env bak is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "google_earth_env_final": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "google earth env final is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "gpredict_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "ui",
+    "note": "gpredict is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "graphite_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "shared metrics, time-series feeds, dashboards, and graphs",
+    "seed_via": "files",
+    "note": "graphite is a shared operational server where multiple team roles work on the same records."
+  },
+  "gretl_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "gretl is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "gvsig_desktop_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "gvsig desktop is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "hec_ras_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "hec ras is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "hospitalrun_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "patients, encounters, appointments, medications, and inventory",
+    "seed_via": "api",
+    "note": "hospitalrun is a shared operational server where multiple team roles work on the same records."
+  },
+  "houdini_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "houdini is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "idempiere_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "business partners, products, orders, shipments, invoices, and accounts",
+    "seed_via": "api",
+    "note": "idempiere is a shared operational server where multiple team roles work on the same records."
+  },
+  "imagej_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "imagej is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "intellij_idea_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "intellij idea is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "invesalius3_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "invesalius3 is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "jamovi_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "jamovi is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "jasp_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "jasp is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "jenkins_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "jobs, pipelines, build history, credentials, and agents",
+    "seed_via": "files",
+    "note": "jenkins is a shared operational server where multiple team roles work on the same records."
+  },
+  "jfrog_artifactory_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "artifact repositories, packages, users, and permissions",
+    "seed_via": "api",
+    "note": "jfrog artifactory is a shared operational server where multiple team roles work on the same records."
+  },
+  "jitsi_meet_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "meeting rooms, participants, and moderation state",
+    "seed_via": "ui",
+    "note": "jitsi meet is a shared operational server where multiple team roles work on the same records."
+  },
+  "jolly_lobby_track_windows_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "visitors, hosts, badges, and entry or exit events",
+    "seed_via": "ui",
+    "note": "jolly lobby track windows is a shared operational server where multiple team roles work on the same records."
+  },
+  "jstock_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "jstock is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "juris_m_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "juris m is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "knime_analytics_platform_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "knime analytics platform is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "kstars_sim_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "kstars sim is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "librecad_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "librecad is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "librehealth_ehr_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "patients, appointments, prescriptions, encounters, and medical records",
+    "seed_via": "files",
+    "note": "librehealth ehr is a shared operational server where multiple team roles work on the same records."
+  },
+  "libreoffice_base_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "database",
+    "note": "libreoffice base is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "libreoffice_calc_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "libreoffice calc is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "libreoffice_impress_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "libreoffice impress is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "libreoffice_writer_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "libreoffice writer is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "limesurvey_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "surveys, questions, participants, responses, and quotas",
+    "seed_via": "api",
+    "note": "limesurvey is a shared operational server where multiple team roles work on the same records."
+  },
+  "liverpool_cancer_ichart_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "ui",
+    "note": "liverpool cancer ichart is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "magento_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "products, categories, customers, promotions, and orders",
+    "seed_via": "api",
+    "note": "magento is a shared operational server where multiple team roles work on the same records."
+  },
+  "manageengine_adaudit_plus_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "directory audit events, alerts, reports, and policies",
+    "seed_via": "api",
+    "note": "manageengine adaudit plus is a shared operational server where multiple team roles work on the same records."
+  },
+  "manageengine_eventlog_analyzer_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "logs, security events, alerts, and compliance reports",
+    "seed_via": "files",
+    "note": "manageengine eventlog analyzer is a shared operational server where multiple team roles work on the same records."
+  },
+  "manageengine_opmanager_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "devices, monitors, alerts, dashboards, and network inventory",
+    "seed_via": "api",
+    "note": "manageengine opmanager is a shared operational server where multiple team roles work on the same records."
+  },
+  "manager_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "customers, suppliers, invoices, payments, inventory, and accounts",
+    "seed_via": "api",
+    "note": "manager is a shared operational server where multiple team roles work on the same records."
+  },
+  "manageservice_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "tickets, assets, problems, changes, and service requests",
+    "seed_via": "api",
+    "note": "manageservice is a shared operational server where multiple team roles work on the same records."
+  },
+  "matomo_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "sites, visits, events, goals, segments, and analytics reports",
+    "seed_via": "api",
+    "note": "matomo is a shared operational server where multiple team roles work on the same records."
+  },
+  "mattermost_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "teams, channels, messages, users, and reactions",
+    "seed_via": "api",
+    "note": "mattermost is a shared operational server where multiple team roles work on the same records."
+  },
+  "medintux_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "patients, appointments, consultations, and prescriptions",
+    "seed_via": "database",
+    "note": "medintux is a shared operational server where multiple team roles work on the same records."
+  },
+  "microsoft_edge_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "microsoft edge is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "microsoft_excel_2010_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "microsoft excel 2010 is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "microsoft_excel_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "microsoft excel is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "microsoft_word_starter_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "microsoft word starter is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "moodle_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "courses, users, enrollments, assignments, submissions, and grades",
+    "seed_via": "api",
+    "note": "moodle is a shared operational server where multiple team roles work on the same records."
+  },
+  "ms_sql_server_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "database",
+    "note": "ms sql server is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "multiecuscan_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "ui",
+    "note": "multiecuscan is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "mysql_workbench_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "database",
+    "note": "mysql workbench is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "nextgen_connect_integration_engine_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "channels, connectors, message history, and routing configuration",
+    "seed_via": "api",
+    "note": "nextgen connect integration engine is a shared operational server where multiple team roles work on the same records."
+  },
+  "ninja_trader_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "ninja trader is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "nosh_charting_system_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "patients, appointments, clinical notes, and practice records",
+    "seed_via": "api",
+    "note": "nosh charting system is a shared operational server where multiple team roles work on the same records."
+  },
+  "nosh_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "patients, appointments, clinical notes, and practice records",
+    "seed_via": "api",
+    "note": "nosh is a shared operational server where multiple team roles work on the same records."
+  },
+  "nuxeo_platform_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "documents, metadata, versions, workflows, and permissions",
+    "seed_via": "api",
+    "note": "nuxeo platform is a shared operational server where multiple team roles work on the same records."
+  },
+  "nx_witness_vms_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "cameras, recordings, layouts, users, and access rules",
+    "seed_via": "database",
+    "note": "nx witness vms is a shared operational server where multiple team roles work on the same records."
+  },
+  "odoo_crm_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "leads, opportunities, customers, activities, and pipeline stages",
+    "seed_via": "api",
+    "note": "odoo crm is a shared operational server where multiple team roles work on the same records."
+  },
+  "odoo_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "customers, sales, inventory, invoices, and business operations",
+    "seed_via": "api",
+    "note": "odoo is a shared operational server where multiple team roles work on the same records."
+  },
+  "odoo_hr_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "employees, departments, leave, expenses, and recruitment",
+    "seed_via": "api",
+    "note": "odoo hr is a shared operational server where multiple team roles work on the same records."
+  },
+  "odoo_inventory_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "products, warehouses, stock moves, receipts, and deliveries",
+    "seed_via": "api",
+    "note": "odoo inventory is a shared operational server where multiple team roles work on the same records."
+  },
+  "odoo_quality_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "quality checks, alerts, control points, and corrective actions",
+    "seed_via": "api",
+    "note": "odoo quality is a shared operational server where multiple team roles work on the same records."
+  },
+  "odoo_scheduling_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "appointments, calendar events, resources, and attendees",
+    "seed_via": "api",
+    "note": "odoo scheduling is a shared operational server where multiple team roles work on the same records."
+  },
+  "onlyoffice_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "onlyoffice is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "openbci_gui_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "ui",
+    "note": "openbci gui is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "openc3_cosmos_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "ui",
+    "note": "openc3 cosmos is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "opencad_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "dispatch incidents, units, civilians, and law-enforcement records",
+    "seed_via": "database",
+    "note": "opencad is a shared operational server where multiple team roles work on the same records."
+  },
+  "openclinic_ga_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "patients, encounters, clinical records, lab work, pharmacy, and billing",
+    "seed_via": "database",
+    "note": "openclinic ga is a shared operational server where multiple team roles work on the same records."
+  },
+  "openclinica_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "studies, sites, subjects, forms, clinical data, and audit trails",
+    "seed_via": "api",
+    "note": "openclinica is a shared operational server where multiple team roles work on the same records."
+  },
+  "openelis_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "patients, specimens, laboratory orders, results, and workflows",
+    "seed_via": "api",
+    "note": "openelis is a shared operational server where multiple team roles work on the same records."
+  },
+  "openemr_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "patients, appointments, encounters, prescriptions, and billing",
+    "seed_via": "api",
+    "note": "openemr is a shared operational server where multiple team roles work on the same records."
+  },
+  "openice_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "ui",
+    "note": "openice is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "openkm_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "documents, folders, metadata, versions, and access permissions",
+    "seed_via": "api",
+    "note": "openkm is a shared operational server where multiple team roles work on the same records."
+  },
+  "openlca_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "openlca is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "openmaint_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "properties, facilities, assets, work orders, and maintenance plans",
+    "seed_via": "api",
+    "note": "openmaint is a shared operational server where multiple team roles work on the same records."
+  },
+  "openmrs_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "patients, visits, observations, appointments, and clinical orders",
+    "seed_via": "api",
+    "note": "openmrs is a shared operational server where multiple team roles work on the same records."
+  },
+  "openproject_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "projects, work packages, time entries, wikis, and memberships",
+    "seed_via": "api",
+    "note": "openproject is a shared operational server where multiple team roles work on the same records."
+  },
+  "openrocket_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "openrocket is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "opensis_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "students, courses, enrollments, attendance, schedules, and grades",
+    "seed_via": "api",
+    "note": "opensis is a shared operational server where multiple team roles work on the same records."
+  },
+  "opentoonz_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "opentoonz is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "openvsp_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "openvsp is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "oracle_analytics_desktop_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "oracle analytics desktop is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "oracle_database_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "database",
+    "note": "oracle database is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "oracle_sql_developer_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "database",
+    "note": "oracle sql developer is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "orangehrm_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "employees, jobs, leave, attendance, recruitment, and performance",
+    "seed_via": "api",
+    "note": "orangehrm is a shared operational server where multiple team roles work on the same records."
+  },
+  "orientdb_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "database",
+    "note": "orientdb is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "oscar_emr_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "patients, appointments, encounters, prescriptions, and clinical documents",
+    "seed_via": "api",
+    "note": "oscar emr is a shared operational server where multiple team roles work on the same records."
+  },
+  "panoply_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "panoply is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "pebl_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "pebl is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "portfolio_performance_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "portfolio performance is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "power_bi_desktop_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "power bi desktop is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "preset_gnome_systemd": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "preset gnome systemd is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "preset_x11": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "preset x11 is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "project_libre_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "project libre is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "psychopy_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "psychopy is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "pycharm_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "pycharm is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "pymol_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "pymol is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "qblade_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "qblade is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "qfield_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "qfield is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "qgis_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "qgis is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "qground_control_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "ui",
+    "note": "qground control is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "rancher_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "clusters, projects, workloads, configuration, and access policies",
+    "seed_via": "api",
+    "note": "rancher is a shared operational server where multiple team roles work on the same records."
+  },
+  "redmine_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "projects, issues, versions, time entries, wikis, and users",
+    "seed_via": "api",
+    "note": "redmine is a shared operational server where multiple team roles work on the same records."
+  },
+  "reqview_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "reqview is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "rocket_chat_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "channels, messages, users, roles, and reactions",
+    "seed_via": "api",
+    "note": "rocket chat is a shared operational server where multiple team roles work on the same records."
+  },
+  "rstudio_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "rstudio is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "safe_exam_browser_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "exam configurations, users, sessions, and monitoring events",
+    "seed_via": "api",
+    "note": "safe exam browser is a shared operational server where multiple team roles work on the same records."
+  },
+  "sakai_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "courses, rosters, assignments, announcements, submissions, and grades",
+    "seed_via": "api",
+    "note": "sakai is a shared operational server where multiple team roles work on the same records."
+  },
+  "scinote_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "projects, experiments, tasks, protocols, results, and inventory",
+    "seed_via": "api",
+    "note": "scinote is a shared operational server where multiple team roles work on the same records."
+  },
+  "seiscomp_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "seiscomp is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "sentrifugo_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "employees, departments, leave, appraisals, and HR requests",
+    "seed_via": "database",
+    "note": "sentrifugo is a shared operational server where multiple team roles work on the same records."
+  },
+  "simple_user_setup": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "simple user setup is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "skelion_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "skelion is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "slicer3d_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "slicer3d is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "snap_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "snap is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "snipe_it_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "assets, accessories, users, licenses, and checkout history",
+    "seed_via": "api",
+    "note": "snipe it is a shared operational server where multiple team roles work on the same records."
+  },
+  "socioboard_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "social accounts, scheduled posts, campaigns, and analytics",
+    "seed_via": "api",
+    "note": "socioboard is a shared operational server where multiple team roles work on the same records."
+  },
+  "solvespace_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "solvespace is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "splunk_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "indexed events, searches, alerts, dashboards, and reports",
+    "seed_via": "files",
+    "note": "splunk is a shared operational server where multiple team roles work on the same records."
+  },
+  "stellarium_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "stellarium is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "studio_tax_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "ui",
+    "note": "studio tax is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "subsurface_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "ui",
+    "note": "subsurface is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "subway_surfers_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "subway surfers is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "sugar_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "sugar is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "suite_crm_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "accounts, contacts, leads, opportunities, cases, and activities",
+    "seed_via": "api",
+    "note": "suite crm is a shared operational server where multiple team roles work on the same records."
+  },
+  "sumo_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "sumo is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "sweet_home_3d_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "sweet home 3d is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "sygic_gps_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "sygic gps is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "system_advisor_model_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "system advisor model is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "talon_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "talon is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "tcl_tk_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "tcl tk is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "thunderbird_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "thunderbird is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "tiddly_wiki_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "tiddly wiki is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "tier_ii_submit_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "ui",
+    "note": "tier ii submit is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "timetrex_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "employees, time entries, schedules, leave, payroll, and HR records",
+    "seed_via": "api",
+    "note": "timetrex is a shared operational server where multiple team roles work on the same records."
+  },
+  "topocal_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "topocal is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "tor_browser_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "tor browser is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "twon_access_commander_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "ui",
+    "note": "twon access commander is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "ugene_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "ugene is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "unicenta_opos_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "products, customers, sales, payments, inventory, and terminal activity",
+    "seed_via": "database",
+    "note": "unicenta opos is a shared operational server where multiple team roles work on the same records."
+  },
+  "urban_sim_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "urban sim is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "user_permissions_demo": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "user permissions demo is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "veracrypt_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "veracrypt is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "vicidial_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "campaigns, calling lists, leads, agents, and call outcomes",
+    "seed_via": "api",
+    "note": "vicidial is a shared operational server where multiple team roles work on the same records."
+  },
+  "virtualmin_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "virtual servers, domains, users, mailboxes, DNS, and databases",
+    "seed_via": "api",
+    "note": "virtualmin is a shared operational server where multiple team roles work on the same records."
+  },
+  "visallo_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "investigative entities, relationships, evidence, and workspaces",
+    "seed_via": "api",
+    "note": "visallo is a shared operational server where multiple team roles work on the same records."
+  },
+  "vista_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "patients, encounters, orders, results, medications, and clinical notes",
+    "seed_via": "api",
+    "note": "vista is a shared operational server where multiple team roles work on the same records."
+  },
+  "visual_studio_2022_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "visual studio 2022 is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "vital_recorder_windows_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "vital recorder windows is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "vlc_media_player_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "vlc media player is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "vscode_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "vscode is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "vtiger_crm_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "accounts, contacts, leads, opportunities, tickets, and inventory",
+    "seed_via": "api",
+    "note": "vtiger crm is a shared operational server where multiple team roles work on the same records."
+  },
+  "wazuh_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "agents, security events, alerts, rules, and compliance findings",
+    "seed_via": "files",
+    "note": "wazuh is a shared operational server where multiple team roles work on the same records."
+  },
+  "weasis_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "weasis is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "webots_env": {
+    "kind": "other",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "unknown",
+    "note": "webots is a game, simulator, device controller, or base environment rather than a shared knowledge-work record system."
+  },
+  "wger_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "users, workouts, exercises, nutrition plans, and body measurements",
+    "seed_via": "api",
+    "note": "wger is a shared operational server where multiple team roles work on the same records."
+  },
+  "windows_notepad_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "windows notepad is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "wireshark_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "wireshark is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "wondershare_edrawmax_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "wondershare edrawmax is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "woo_commerce_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "products, customers, coupons, orders, and payments",
+    "seed_via": "api",
+    "note": "woo commerce is a shared operational server where multiple team roles work on the same records."
+  },
+  "wordpress_env": {
+    "kind": "system_of_record",
+    "multi_user": true,
+    "record": "posts, pages, media, comments, users, and site settings",
+    "seed_via": "api",
+    "note": "wordpress is a shared operational server where multiple team roles work on the same records."
+  },
+  "wps_office_writer_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "wps office writer is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "wps_presentation_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "wps presentation is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "wps_spreadsheet_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "wps spreadsheet is a standalone tool for one person's local files, analysis, or configuration."
+  },
+  "zotero_env": {
+    "kind": "personal_tool",
+    "multi_user": false,
+    "record": "",
+    "seed_via": "files",
+    "note": "zotero is a standalone tool for one person's local files, analysis, or configuration."
+  }
+}

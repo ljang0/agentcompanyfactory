@@ -1,0 +1,303 @@
+{
+  "app_id": "greenhouse_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activityFeed",
+    "applications",
+    "candidates",
+    "currentUser",
+    "departments",
+    "interviews",
+    "jobStages",
+    "jobs",
+    "notes",
+    "notifications",
+    "offers",
+    "offices",
+    "rejectionReasons",
+    "scorecards",
+    "sources",
+    "ui",
+    "users"
+  ],
+  "observed": [
+    "activityFeed",
+    "applications",
+    "candidates",
+    "currentUser",
+    "departments",
+    "interviews",
+    "jobStages",
+    "jobs",
+    "notes",
+    "notifications",
+    "offers",
+    "offices",
+    "rejectionReasons",
+    "scorecards",
+    "settings",
+    "sources",
+    "ui",
+    "users"
+  ],
+  "undocumented_so_unseedable": [
+    "settings"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 9,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "firstName",
+        "lastName",
+        "name",
+        "email",
+        "role",
+        "avatarUrl",
+        "department",
+        "title"
+      ],
+      "keyed_by_id": false
+    },
+    "departments": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "parentId"
+      ],
+      "keyed_by_id": false
+    },
+    "offices": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "location"
+      ],
+      "keyed_by_id": false
+    },
+    "jobs": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "title",
+        "status",
+        "departmentId",
+        "officeId",
+        "hiringManagerId",
+        "recruiterId",
+        "coordinatorId",
+        "openings",
+        "openDate",
+        "closeDate",
+        "description",
+        "requirements",
+        "stages",
+        "candidateCount",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "jobStages": {
+      "kind": "array",
+      "count": 80,
+      "record_fields": [
+        "id",
+        "jobId",
+        "name",
+        "orderIndex",
+        "stageType"
+      ],
+      "keyed_by_id": false
+    },
+    "candidates": {
+      "kind": "array",
+      "count": 32,
+      "record_fields": [
+        "id",
+        "firstName",
+        "lastName",
+        "name",
+        "email",
+        "phone",
+        "location",
+        "currentCompany",
+        "currentTitle",
+        "resumeUrl",
+        "linkedinUrl",
+        "source",
+        "referrerId",
+        "tags",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "applications": {
+      "kind": "array",
+      "count": 39,
+      "record_fields": [
+        "id",
+        "candidateId",
+        "jobId",
+        "currentStageId",
+        "status",
+        "appliedAt",
+        "rejectedAt",
+        "rejectionReason",
+        "hiredAt",
+        "lastActivityAt",
+        "source",
+        "creditedTo",
+        "recruiterId",
+        "coordinatorId",
+        "actionRequired",
+        "daysInCurrentStage"
+      ],
+      "keyed_by_id": false
+    },
+    "scorecards": {
+      "kind": "array",
+      "count": 17,
+      "record_fields": [
+        "id",
+        "applicationId",
+        "interviewerId",
+        "stageId",
+        "overallRecommendation",
+        "attributes",
+        "submittedAt",
+        "createdAt",
+        "notes"
+      ],
+      "keyed_by_id": false
+    },
+    "interviews": {
+      "kind": "array",
+      "count": 14,
+      "record_fields": [
+        "id",
+        "applicationId",
+        "stageId",
+        "interviewerIds",
+        "scheduledAt",
+        "duration",
+        "location",
+        "status",
+        "meetingUrl",
+        "notes"
+      ],
+      "keyed_by_id": false
+    },
+    "offers": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "applicationId",
+        "jobId",
+        "candidateId",
+        "status",
+        "salary",
+        "equity",
+        "signingBonus",
+        "currency",
+        "startDate",
+        "expiresAt",
+        "createdBy",
+        "approvers",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "notes": {
+      "kind": "array",
+      "count": 14,
+      "record_fields": [
+        "id",
+        "candidateId",
+        "authorId",
+        "body",
+        "visibility",
+        "isPinned",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "activityFeed": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "candidateId",
+        "applicationId",
+        "type",
+        "actorId",
+        "description",
+        "metadata",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "type",
+        "title",
+        "message",
+        "isRead",
+        "link",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "sources": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "name"
+      ],
+      "keyed_by_id": false
+    },
+    "rejectionReasons": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name"
+      ],
+      "keyed_by_id": false
+    },
+    "settings": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "ui": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

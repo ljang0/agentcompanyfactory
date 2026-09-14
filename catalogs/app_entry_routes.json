@@ -1,0 +1,83 @@
+{
+  "captured_at": "2026-09-10",
+  "how": "Measured by serving each app against the largest real seeded world it has, through the same WorkerAppProxy a VM worker gets (identity substituted, collections scoped), and rendering every static route the clone's own router declares. Each route is scored by how many of that company's own strings reach the DOM -- strings drawn from the seeded records and then filtered against the clone's whole source tree, so a string that appears is one the app could not have generated. The route recorded here is kept only where '/' showed under a quarter of the best route's count. Counts below read seen/candidates@visible-characters.",
+  "contract": "The page an app lands a worker on. The gate, the VM launcher and the worker's start page must open the same one, so this file is the single upstream source; catalogs/apps.json is pinned by manifest.json and is not ours to edit. An app absent from here opens '/'.",
+  "apps": {
+    "google_sheets_mock": {
+      "entry_path": "/spreadsheet",
+      "reason": "'/' is a 'Recent spreadsheets' launcher whose only seeded string is the workbook title. Measured: '/' shows 1 of 170 seeded values in ~180 characters; /spreadsheet shows 7-246 values and up to 15k characters, with the company's grid and its tabs. Sheets is the decisive collection for at least 6 tasks and had never been rendered."
+    },
+    "google_drive_mock": {
+      "entry_path": "/recent",
+      "reason": "My Drive lists only items the signed-in worker owns, so most workers open an empty pane. Measured: '/' shows 1 of 400 seeded values in ~210 characters in 12 of 20 companies; /recent shows 5-26 values in 1.3-2.0k characters."
+    },
+    "hubspot_mock": {
+      "entry_path": "/deals",
+      "reason": "Re-measured on sanmar: '/' 2/200@1281, '/contacts' 31/200@2471, '/deals' 106/200@11206, '/companies' 29/200@1841. The pipeline is where a hubspot world's records are; /contacts was this file's earlier choice and is superseded by the fuller route sweep."
+    },
+    "canvas_mock": {
+      "entry_path": "/editor",
+      "reason": "'/' is a template launcher showing the clone's own stock-photo cards and 'No recent projects saved in local storage yet'; it neither loads nor persists the seeded state. Measured on the 1.8 kB smoke fixture: '/' renders 277 characters and 2 clickable controls, /editor renders the seeded canvas with all 6 objects and 4 controls. Neither route shows a seeded value in the DOM (0 of 8 on both) because this app's whole world is drawn into a <canvas>; the difference is that on /editor the world is there at all."
+    },
+    "openreview_mock": {
+      "entry_path": "/console/area-chairs",
+      "reason": "'/' is the clone's marketing homepage: news items and a venue list that mixes the seeded venue with four the app hardcodes. Measured on the 62 kB smoke fixture: '/' shows 8 of 44 seeded values in 970 characters and 3 of 18 clicks change the screen; /console/area-chairs shows 14 of 44 and 16 of 18 clicks change the screen, with the submissions, their reviewers and their ratings on it. The seeded user's role is area_chair, which is the console this route opens."
+    },
+    "Zendesk_mock": {
+      "entry_path": "/customers",
+      "reason": "national-archives-and-records-administration: '/' 6/200@661, '/customers' 197/200@17396, '/reporting' 4@398. The clone has no '/tickets' list route -- only '/tickets/new' -- and its requesters carry their tickets, so the customer list is the only static route that shows the desk."
+    },
+    "clio_mock": {
+      "entry_path": "/matters",
+      "reason": "california-civil-rights-department: '/' 19/200@1220, '/matters' 92/200@9706, '/contacts' 108/200@6999, '/tasks' 62@4181. Contacts scores marginally higher and is an address book; matters are the work, and this is also the app whose '/' the render gate caught sitting on 'Xlio Manage Loading...' with 0 of 400 seeded strings."
+    },
+    "hotjar_mock": {
+      "entry_path": "/feedback",
+      "reason": "sixt-se: '/' 1/95@1142, '/feedback' 80/95@51359, '/trends' 10@719, '/surveys' 8@766. The feedback the research exists for is invisible from the dashboard."
+    },
+    "salesforce_mock": {
+      "entry_path": "/chatter",
+      "reason": "federal-home-loan-bank-des-moines: '/' 24/200@2086, '/chatter' 87/200@185303, '/cases' 30@1558, '/contacts' 29@1414. Chatter is the feed a worker opens onto; it is also a large page, and it rendered inside the 3-second settle in the measurement."
+    },
+    "Canvas-LMS_mock": {
+      "entry_path": "/conversations",
+      "reason": "childrens-aid: '/' and '/dashboard' both 7/154@630, '/conversations' 66/154@50757, '/calendar' 2@523. The dashboard shows course cards; the inbox holds the world."
+    },
+    "jira_mock": {
+      "entry_path": "/search",
+      "reason": "seattle-police-department: '/' 4/200@813, '/search' 59/200@42395. Every other route is behind '/project/:key/...', which no entry_path can name, so the search list is the only static route that reaches the issues."
+    },
+    "facebook_mock": {
+      "entry_path": "/marketplace",
+      "reason": "bluestone-real-estate-services: '/' 15/200@559, '/marketplace' 61/200@6354, '/profile' 5@362. Measured on one company -- the only one that mounts facebook -- whose records are listings."
+    },
+    "quickbooks_mock": {
+      "entry_path": "/sales/customers",
+      "reason": "eisneramper: '/' 10/200@1599, '/sales/customers' 45/200@2811, '/customers' 45@2758, '/expenses/bills' 42@39667. The dashboard is tiles; the customer ledger is the books."
+    },
+    "greenhouse_mock": {
+      "entry_path": "/candidates",
+      "reason": "new-york-city-campaign-finance-board: '/' and '/dashboard' 9/200@1004, '/candidates' 42/200@2527, '/jobs' 11@907."
+    },
+    "mailchimp_mock": {
+      "entry_path": "/campaigns",
+      "reason": "rs-americas: '/' 4/93@1177, '/campaigns' 28/93@3465, '/audience' 2@2048. This is also the app whose header avatar crashed the whole page on an unproxied render."
+    },
+    "booking_com_mock": {
+      "entry_path": "/search",
+      "reason": "evolve: '/' 6/73@1614, '/search' 24/73@4783, '/saved' 4@921. '/' is a marketing hero with a search form."
+    },
+    "expedia_mock": {
+      "entry_path": "/hotels",
+      "reason": "cruise-america: '/' 0/58@954 -- not one of the company's own strings on the landing page -- against '/hotels' 16/58@2918."
+    },
+    "ServiceNow_mock": {
+      "entry_path": "/incident/list",
+      "reason": "ust: '/' 1/155@421, '/incident/list' 15/155@3668, '/problem/list' 10@3553, '/knowledge' 12@1092."
+    },
+    "google_ads_mock": {
+      "entry_path": "/ads",
+      "reason": "comfort-keepers: '/' 3/12@1673, '/ads' 8/12@4935, '/keywords' 7@2831, '/insights/search-terms' 6@14214."
+    }
+  }
+}

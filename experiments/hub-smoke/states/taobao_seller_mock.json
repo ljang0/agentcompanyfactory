@@ -1,0 +1,47 @@
+{
+  "store": {"name": "云杉Cedarwood陶瓷小店", "rating": "三钻", "owner": "周雨桐", "description": "手工釉下彩茶具与餐具", "announcement": "9月新品上架，满199包邮", "category": "餐饮具/茶具", "location": "江西省景德镇市", "logo": "", "phone": "0798-8666-0123", "returnAddress": "江西省景德镇市珠山区陶溪川文创街区A12 周雨桐 13700000123"},
+  "products": [
+    {"id": "prod_001", "title": "云杉青釉手工盖碗 150ml", "category": "茶具", "subcategory": "盖碗", "price": 128, "originalPrice": 158, "mainImage": "https://picsum.photos/seed/gaiwan/400/400", "images": ["https://picsum.photos/seed/gaiwan/400/400"], "description": "景德镇手工拉坯，青釉，容量150ml。", "status": "on_sale", "stock": 36, "sales": 214, "views": 5320, "favoriteCount": 188, "rating": 4.9, "reviewCount": 96, "shippingFee": 0, "weight": 0.35, "skus": [{"id": "sku_001_1", "name": "青釉", "price": 128, "stock": 36}], "createdAt": "2026-03-10T08:00:00Z", "updatedAt": "2026-09-01T08:00:00Z"},
+    {"id": "prod_002", "title": "釉下彩山水餐盘 8寸", "category": "餐具", "subcategory": "盘子", "price": 68, "originalPrice": 68, "mainImage": "https://picsum.photos/seed/plate8/400/400", "images": ["https://picsum.photos/seed/plate8/400/400"], "description": "手绘山水纹样，微波炉可用。", "status": "on_sale", "stock": 5, "sales": 87, "views": 2110, "favoriteCount": 64, "rating": 4.7, "reviewCount": 31, "shippingFee": 8, "weight": 0.6, "skus": [{"id": "sku_002_1", "name": "8寸", "price": 68, "stock": 5}], "createdAt": "2026-05-02T08:00:00Z", "updatedAt": "2026-08-20T08:00:00Z"}
+  ],
+  "orders": [
+    {"id": "order_001", "orderNo": "TB202609070001", "status": "pending_shipment", "buyerId": "cust_001", "buyerName": "林晓芸", "buyerNote": "请多包一层泡泡纸", "shippingAddress": {"province": "上海市", "city": "上海市", "district": "徐汇区", "street": "漕溪北路88号", "recipient": "林晓芸", "phone": "13900000456"}, "items": [{"productId": "prod_001", "title": "云杉青釉手工盖碗 150ml", "sku": "青釉", "price": 128, "quantity": 1}], "totalAmount": 128, "shippingFee": 0, "discountAmount": 10, "actualAmount": 118, "paymentMethod": "支付宝", "createdAt": "2026-09-07T01:12:00Z", "paidAt": "2026-09-07T01:13:00Z", "shippedAt": null, "completedAt": null, "logistics": null, "sellerNote": "", "sellerNoteColor": ""},
+    {"id": "order_002", "orderNo": "TB202609050002", "status": "completed", "buyerId": "cust_002", "buyerName": "陈浩", "buyerNote": "", "shippingAddress": {"province": "广东省", "city": "广州市", "district": "天河区", "street": "体育西路191号", "recipient": "陈浩", "phone": "13600000789"}, "items": [{"productId": "prod_002", "title": "釉下彩山水餐盘 8寸", "sku": "8寸", "price": 68, "quantity": 2}], "totalAmount": 136, "shippingFee": 8, "discountAmount": 0, "actualAmount": 144, "paymentMethod": "微信支付", "createdAt": "2026-09-01T06:30:00Z", "paidAt": "2026-09-01T06:31:00Z", "shippedAt": "2026-09-02T02:00:00Z", "completedAt": "2026-09-05T09:00:00Z", "logistics": {"provider": "顺丰速运", "trackingNo": "SF1398820011"}, "sellerNote": "老客户", "sellerNoteColor": "green"}
+  ],
+  "refunds": [
+    {"id": "refund_001", "refundNo": "RF202609060001", "orderId": "order_002", "orderNo": "TB202609050002", "productId": "prod_002", "productTitle": "釉下彩山水餐盘 8寸", "productSku": "8寸", "buyerId": "cust_002", "buyerName": "陈浩", "amount": 68, "type": "refund_only", "reason": "damaged", "reasonText": "其中一个盘子边缘有裂", "evidenceImages": ["https://picsum.photos/seed/crack/300/300"], "status": "pending", "deadline": "2026-09-09T09:00:00Z", "appliedAt": "2026-09-06T09:00:00Z", "processedAt": null, "sellerResponse": ""}
+  ],
+  "customers": [
+    {"id": "cust_001", "name": "林晓芸", "phone": "13900000456", "province": "上海市", "city": "上海市", "orderCount": 1, "totalSpent": 118, "vipLevel": "normal", "tags": ["新客"], "lastOrderAt": "2026-09-07T01:12:00Z"},
+    {"id": "cust_002", "name": "陈浩", "phone": "13600000789", "province": "广东省", "city": "广州市", "orderCount": 4, "totalSpent": 612, "vipLevel": "silver", "tags": ["回头客"], "lastOrderAt": "2026-09-01T06:30:00Z"}
+  ],
+  "conversations": [
+    {"id": "conv_001", "buyerId": "cust_001", "buyerName": "林晓芸", "messages": [{"id": "msg_001", "senderId": "cust_001", "senderType": "buyer", "content": "盖碗今天能发出吗？", "time": "2026-09-07T02:00:00Z"}], "lastMessage": "盖碗今天能发出吗？", "lastMessageTime": "2026-09-07T02:00:00Z", "unreadCount": 1}
+  ],
+  "coupons": [
+    {"id": "coupon_001", "name": "满199减20", "type": "threshold", "discountAmount": 20, "threshold": 199, "discountRate": null, "startDate": "2026-09-01", "endDate": "2026-09-30", "totalQuantity": 500, "usedQuantity": 42, "claimedQuantity": 130, "status": "active", "scope": "all"}
+  ],
+  "reviews": [
+    {"id": "review_001", "productId": "prod_001", "productTitle": "云杉青釉手工盖碗 150ml", "orderId": "order_002", "buyerName": "陈浩", "rating": 5, "content": "釉色很温润，手感好。", "sellerReply": "", "sellerReplyTime": null, "createdAt": "2026-09-05T10:00:00Z", "skuInfo": "青釉"}
+  ],
+  "notifications": [
+    {"id": "notif_001", "type": "order", "title": "新订单待发货", "content": "订单 TB202609070001 已付款，请及时发货", "relatedId": "order_001", "read": false, "createdAt": "2026-09-07T01:13:00Z"},
+    {"id": "notif_002", "type": "refund", "title": "新的退款申请", "content": "陈浩 申请退款 68 元", "relatedId": "refund_001", "read": false, "createdAt": "2026-09-06T09:00:00Z"}
+  ],
+  "quickReplies": [
+    {"id": "qr_001", "label": "发货时间", "content": "您好，付款后48小时内发货。"},
+    {"id": "qr_002", "label": "破损处理", "content": "如收到破损请拍照联系我们，我们会补发或退款。"}
+  ],
+  "logisticsTemplates": [
+    {"id": "lt_001", "name": "陶瓷加固包装模板", "freeShippingThreshold": 199, "baseFee": 8, "description": "满199包邮，不满收8元"}
+  ],
+  "logisticsProviders": ["中通快递", "圆通速递", "韵达快递", "顺丰速运", "申通快递"],
+  "promotions": [
+    {"id": "promo_001", "name": "九月新品折扣", "type": "discount", "discountType": "percentage", "discountValue": 10, "startDate": "2026-09-01", "endDate": "2026-09-30", "status": "active", "productIds": ["prod_001"], "description": "盖碗系列9折"}
+  ],
+  "dashboardMetrics": {
+    "today": {"sales": 118, "orderCount": 1, "pendingShipment": 1, "pendingRefund": 1, "visitors": 342},
+    "yesterday": {"sales": 396, "orderCount": 3, "pendingShipment": 0, "pendingRefund": 1, "visitors": 410},
+    "salesTrend": [{"date": "2026-09-01", "sales": 144, "orders": 1}, {"date": "2026-09-02", "sales": 0, "orders": 0}, {"date": "2026-09-03", "sales": 256, "orders": 2}, {"date": "2026-09-04", "sales": 128, "orders": 1}, {"date": "2026-09-05", "sales": 68, "orders": 1}, {"date": "2026-09-06", "sales": 396, "orders": 3}, {"date": "2026-09-07", "sales": 118, "orders": 1}]
+  }
+}

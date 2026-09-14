@@ -1,0 +1,281 @@
+{
+  "app_id": "lattice_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "careerTracks",
+    "careerVision",
+    "celebrations",
+    "company",
+    "compensation",
+    "currentUser",
+    "feedback",
+    "goals",
+    "growthAreas",
+    "meetings",
+    "oneOnOnes",
+    "reviewCycles",
+    "reviews",
+    "surveyResults",
+    "surveys",
+    "tasks",
+    "updates",
+    "users"
+  ],
+  "observed": [
+    "careerTracks",
+    "careerVision",
+    "celebrations",
+    "company",
+    "compensation",
+    "currentUser",
+    "feedback",
+    "goals",
+    "growthAreas",
+    "meetings",
+    "oneOnOnes",
+    "reviewCycles",
+    "reviews",
+    "surveyResults",
+    "surveys",
+    "tasks",
+    "updates",
+    "users"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 16,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 24,
+      "record_fields": [
+        "id",
+        "firstName",
+        "lastName",
+        "email",
+        "avatar",
+        "title",
+        "department",
+        "team",
+        "location",
+        "startDate",
+        "managerId",
+        "directReportIds",
+        "role",
+        "status",
+        "birthday",
+        "workAnniversary"
+      ],
+      "keyed_by_id": false
+    },
+    "goals": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "title",
+        "description",
+        "ownerId",
+        "status",
+        "progress",
+        "dueDate",
+        "parentGoalId",
+        "category",
+        "keyResults",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "feedback": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "type",
+        "fromUserId",
+        "toUserId",
+        "body",
+        "visibility",
+        "competencyTags",
+        "valueTags",
+        "reactions",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "oneOnOnes": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "participantIds",
+        "frequency",
+        "nextMeetingDate"
+      ],
+      "keyed_by_id": false
+    },
+    "meetings": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "oneOnOneId",
+        "date",
+        "status",
+        "talkingPoints",
+        "actionItems",
+        "notes"
+      ],
+      "keyed_by_id": false
+    },
+    "reviewCycles": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "status",
+        "startDate",
+        "endDate",
+        "steps",
+        "currentStep",
+        "revieweeIds",
+        "nominationsSubmitted"
+      ],
+      "keyed_by_id": false
+    },
+    "reviews": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "cycleId",
+        "revieweeId",
+        "status",
+        "nominatedPeerIds",
+        "reviews"
+      ],
+      "keyed_by_id": false
+    },
+    "updates": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "authorId",
+        "weekOf",
+        "accomplishments",
+        "challenges",
+        "priorities",
+        "mood",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "growthAreas": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "userId",
+        "title",
+        "description",
+        "status",
+        "actions",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "careerTracks": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "title",
+        "levels"
+      ],
+      "keyed_by_id": false
+    },
+    "surveys": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "title",
+        "status",
+        "startDate",
+        "endDate",
+        "responseRate",
+        "questions",
+        "userHasResponded"
+      ],
+      "keyed_by_id": false
+    },
+    "surveyResults": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": [
+        "overallScore",
+        "eNPS",
+        "categoryScores",
+        "responseRate"
+      ],
+      "keyed_by_id": true
+    },
+    "tasks": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "title",
+        "type",
+        "assigneeId",
+        "dueDate",
+        "priority",
+        "completed",
+        "relatedEntityId",
+        "relatedEntityType",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "celebrations": {
+      "kind": "array",
+      "count": 11,
+      "record_fields": [
+        "id",
+        "type",
+        "userId",
+        "date",
+        "details"
+      ],
+      "keyed_by_id": false
+    },
+    "company": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "careerVision": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "compensation": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

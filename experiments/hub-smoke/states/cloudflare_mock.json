@@ -1,0 +1,63 @@
+{
+  "account": {"id": "acc_bwu", "name": "Brightwater Utility District", "email": "netops@brightwater-utility.example", "type": "standard", "created_on": "2024-02-12T10:30:00Z", "settings": {"enforce_twofactor": true}},
+  "zones": [
+    {"id": "zone_bwu1", "name": "brightwater-utility.example", "account_id": "acc_bwu", "status": "active", "paused": false, "plan": {"id": "pro", "name": "Pro Website", "price": 20, "currency": "USD", "frequency": "monthly"}, "name_servers": ["ada.ns.cloudflare.com", "rob.ns.cloudflare.com"], "original_name_servers": ["ns1.oldhost.example", "ns2.oldhost.example"], "created_on": "2024-02-12T11:00:00Z", "modified_on": "2026-08-30T09:15:00Z", "activated_on": "2024-02-13T08:00:00Z", "meta": {"step": 4, "page_rule_quota": 20, "ssl_status": "active"}, "stats": {"total_requests_24h": 48210, "threats_blocked_24h": 12, "bandwidth_saved_percent": 61}},
+    {"id": "zone_bwu2", "name": "pay.brightwater-utility.example", "account_id": "acc_bwu", "status": "pending", "paused": false, "plan": {"id": "free", "name": "Free Website", "price": 0, "currency": "USD", "frequency": "monthly"}, "name_servers": ["ada.ns.cloudflare.com", "rob.ns.cloudflare.com"], "original_name_servers": [], "created_on": "2026-09-01T14:00:00Z", "modified_on": "2026-09-01T14:00:00Z", "activated_on": null, "meta": {"step": 2, "page_rule_quota": 3, "ssl_status": "pending"}, "stats": {"total_requests_24h": 0, "threats_blocked_24h": 0, "bandwidth_saved_percent": 0}}
+  ],
+  "dnsRecords": {
+    "zone_bwu1": [
+      {"id": "dns_bwu001", "zone_id": "zone_bwu1", "type": "A", "name": "brightwater-utility.example", "content": "198.51.100.24", "ttl": 1, "proxied": true, "proxiable": true, "priority": null, "locked": false, "created_on": "2024-02-12T11:05:00Z", "modified_on": "2026-05-20T09:00:00Z"},
+      {"id": "dns_bwu002", "zone_id": "zone_bwu1", "type": "CNAME", "name": "outages.brightwater-utility.example", "content": "status.brightwater-utility.example", "ttl": 1, "proxied": true, "proxiable": true, "priority": null, "locked": false, "created_on": "2024-03-01T11:05:00Z", "modified_on": "2024-03-01T11:05:00Z"},
+      {"id": "dns_bwu003", "zone_id": "zone_bwu1", "type": "MX", "name": "brightwater-utility.example", "content": "mail.brightwater-utility.example", "ttl": 3600, "proxied": false, "proxiable": false, "priority": 10, "locked": false, "created_on": "2024-02-12T11:06:00Z", "modified_on": "2024-02-12T11:06:00Z"}
+    ],
+    "zone_bwu2": []
+  },
+  "sslSettings": {
+    "zone_bwu1": {"zone_id": "zone_bwu1", "mode": "strict", "certificate_status": "active", "always_use_https": true, "min_tls_version": "1.2", "automatic_https_rewrites": true, "tls_1_3": "on", "edge_certificates": []},
+    "zone_bwu2": {"zone_id": "zone_bwu2", "mode": "full", "certificate_status": "pending", "always_use_https": false, "min_tls_version": "1.2", "automatic_https_rewrites": false, "tls_1_3": "on", "edge_certificates": []}
+  },
+  "securitySettings": {
+    "zone_bwu1": {"zone_id": "zone_bwu1", "security_level": "high", "challenge_ttl": 1800, "browser_integrity_check": true, "bot_fight_mode": true, "waf_enabled": true, "ip_access_rules": []},
+    "zone_bwu2": {"zone_id": "zone_bwu2", "security_level": "medium", "challenge_ttl": 1800, "browser_integrity_check": true, "bot_fight_mode": false, "waf_enabled": false, "ip_access_rules": []}
+  },
+  "firewallRules": {
+    "zone_bwu1": [
+      {"id": "fw_bwu001", "zone_id": "zone_bwu1", "action": "block", "description": "Block legacy billing API scrapers", "filter": {"id": "flt_bwu001", "expression": "(http.request.uri.path contains \"/api/v1/billing\" and not ip.src in {198.51.100.0/24})", "paused": false}, "priority": 1, "paused": false, "created_on": "2025-11-04T10:00:00Z", "modified_on": "2025-11-04T10:00:00Z", "activity_last_24h": 37}
+    ],
+    "zone_bwu2": []
+  },
+  "speedSettings": {
+    "zone_bwu1": {"zone_id": "zone_bwu1", "auto_minify": {"javascript": true, "css": true, "html": false}, "brotli": true, "rocket_loader": "off", "polish": "lossless", "mirage": false, "early_hints": true, "http2_prioritization": false},
+    "zone_bwu2": {"zone_id": "zone_bwu2", "auto_minify": {"javascript": false, "css": false, "html": false}, "brotli": false, "rocket_loader": "off", "polish": "off", "mirage": false, "early_hints": false, "http2_prioritization": false}
+  },
+  "cachingSettings": {
+    "zone_bwu1": {"zone_id": "zone_bwu1", "caching_level": "standard", "browser_cache_ttl": 14400, "always_online": true, "development_mode": false, "development_mode_expires": null, "last_purge_on": "2026-08-30T09:15:00Z", "cache_rules": []},
+    "zone_bwu2": {"zone_id": "zone_bwu2", "caching_level": "standard", "browser_cache_ttl": 14400, "always_online": false, "development_mode": false, "development_mode_expires": null, "last_purge_on": null, "cache_rules": []}
+  },
+  "pageRules": {
+    "zone_bwu1": [
+      {"id": "pr_bwu001", "zone_id": "zone_bwu1", "targets": [{"target": "url", "constraint": {"operator": "matches", "value": "brightwater-utility.example/outages/*"}}], "actions": [{"id": "cache_level", "value": "bypass"}], "priority": 1, "status": "active", "created_on": "2025-01-10T08:00:00Z", "modified_on": "2025-01-10T08:00:00Z"}
+    ],
+    "zone_bwu2": []
+  },
+  "networkSettings": {
+    "zone_bwu1": {"zone_id": "zone_bwu1", "http2": true, "http3": true, "websockets": true, "grpc": false, "onion_routing": "off", "ip_geolocation": true, "pseudo_ipv4": "off"},
+    "zone_bwu2": {"zone_id": "zone_bwu2", "http2": true, "http3": false, "websockets": false, "grpc": false, "onion_routing": "off", "ip_geolocation": true, "pseudo_ipv4": "off"}
+  },
+  "scrapeShieldSettings": {
+    "zone_bwu1": {"zone_id": "zone_bwu1", "email_obfuscation": true, "server_side_excludes": true, "hotlink_protection": false},
+    "zone_bwu2": {"zone_id": "zone_bwu2", "email_obfuscation": false, "server_side_excludes": false, "hotlink_protection": false}
+  },
+  "analytics": {},
+  "kvNamespaces": [
+    {"id": "kv_bwu001", "title": "OUTAGE_STATUS", "created_on": "2025-06-01T12:00:00Z", "keys_count": 14}
+  ],
+  "workers": [
+    {"id": "worker_bwu001", "account_id": "acc_bwu", "name": "outage-banner", "script": "addEventListener('fetch', event => {\n  event.respondWith(new Response('No active outages', { status: 200 }))\n})", "created_on": "2025-06-01T12:10:00Z", "modified_on": "2026-07-14T16:00:00Z", "routes": [{"id": "route_bwu001", "pattern": "brightwater-utility.example/outages/*", "zone_id": "zone_bwu1", "zone_name": "brightwater-utility.example"}], "usage": {"requests_today": 2140, "cpu_time_avg_ms": 1.4}}
+  ],
+  "notifications": [
+    {"id": "notif_bwu001", "account_id": "acc_bwu", "type": "warning", "title": "Pending nameserver update", "message": "pay.brightwater-utility.example is waiting for nameserver changes at the registrar.", "zone_name": "pay.brightwater-utility.example", "read": false, "created_on": "2026-09-01T14:05:00Z"}
+  ],
+  "selectedZoneId": null,
+  "currentUser": {"name": "Ines Kowalczyk", "email": "ines.kowalczyk@brightwater-utility.example", "avatar": null}
+}

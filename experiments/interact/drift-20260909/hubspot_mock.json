@@ -1,0 +1,241 @@
+{
+  "app_id": "hubspot_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "appState",
+    "companies",
+    "contacts",
+    "dealStages",
+    "deals",
+    "forms",
+    "meetings",
+    "notes",
+    "tasks",
+    "templates",
+    "ticketStatuses",
+    "tickets"
+  ],
+  "observed": [
+    "appState",
+    "companies",
+    "contacts",
+    "dealStages",
+    "deals",
+    "emails",
+    "forms",
+    "meetings",
+    "notes",
+    "tasks",
+    "templates",
+    "ticketStatuses",
+    "tickets"
+  ],
+  "undocumented_so_unseedable": [
+    "emails"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "contacts": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "firstName",
+        "lastName",
+        "email",
+        "phone",
+        "jobTitle",
+        "companyId",
+        "lifecycleStage",
+        "leadStatus",
+        "owner",
+        "city",
+        "state",
+        "country",
+        "createDate",
+        "lastActivityDate",
+        "timeline"
+      ],
+      "keyed_by_id": false
+    },
+    "companies": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "name",
+        "domain",
+        "industry",
+        "phone",
+        "city",
+        "state",
+        "country",
+        "numberOfEmployees",
+        "annualRevenue",
+        "lifecycleStage",
+        "owner",
+        "description",
+        "createDate"
+      ],
+      "keyed_by_id": false
+    },
+    "deals": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "name",
+        "stage",
+        "amount",
+        "closeDate",
+        "dealType",
+        "priority",
+        "owner",
+        "companyId",
+        "contactIds",
+        "probability",
+        "description",
+        "createDate",
+        "lastActivityDate"
+      ],
+      "keyed_by_id": false
+    },
+    "tickets": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "subject",
+        "description",
+        "status",
+        "pipeline",
+        "priority",
+        "category",
+        "source",
+        "owner",
+        "contactId",
+        "companyId",
+        "createDate",
+        "closeDate",
+        "lastActivityDate"
+      ],
+      "keyed_by_id": false
+    },
+    "tasks": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "title",
+        "type",
+        "status",
+        "priority",
+        "dueDate",
+        "notes",
+        "owner",
+        "contactId",
+        "companyId",
+        "dealId",
+        "createDate",
+        "completedDate"
+      ],
+      "keyed_by_id": false
+    },
+    "notes": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "body",
+        "associatedType",
+        "associatedId",
+        "createdBy",
+        "createDate"
+      ],
+      "keyed_by_id": false
+    },
+    "templates": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "subject",
+        "body",
+        "folder",
+        "createdBy",
+        "createDate",
+        "timesUsed"
+      ],
+      "keyed_by_id": false
+    },
+    "emails": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "meetings": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "title",
+        "date",
+        "duration",
+        "contactId",
+        "companyId",
+        "status",
+        "notes",
+        "location",
+        "owner",
+        "createDate"
+      ],
+      "keyed_by_id": false
+    },
+    "forms": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "status",
+        "submissions",
+        "fields",
+        "createDate",
+        "lastSubmission"
+      ],
+      "keyed_by_id": false
+    },
+    "dealStages": {
+      "kind": "object",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "label",
+        "probability",
+        "color",
+        "order"
+      ],
+      "keyed_by_id": true
+    },
+    "ticketStatuses": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "label",
+        "color",
+        "order"
+      ],
+      "keyed_by_id": true
+    },
+    "appState": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

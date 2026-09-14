@@ -1,0 +1,154 @@
+{
+  "app_id": "slack_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "bookmarkedMessages",
+    "callHistory",
+    "channels",
+    "currentUser",
+    "dms",
+    "invitations",
+    "messages",
+    "notifications",
+    "settings",
+    "threads",
+    "users",
+    "workspace"
+  ],
+  "observed": [
+    "bookmarkedMessages",
+    "callHistory",
+    "channels",
+    "currentUser",
+    "dms",
+    "invitations",
+    "messages",
+    "notifications",
+    "settings",
+    "threads",
+    "users",
+    "workspace"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "workspace": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "userId",
+        "fullName",
+        "displayName",
+        "email",
+        "avatar",
+        "title",
+        "status",
+        "statusMessage",
+        "statusEmoji",
+        "timeZone"
+      ],
+      "keyed_by_id": false
+    },
+    "channels": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "channelId",
+        "name",
+        "description",
+        "topic",
+        "isPrivate",
+        "isStarred",
+        "members",
+        "createdBy",
+        "createdAt",
+        "pinnedMessages",
+        "unreadCount"
+      ],
+      "keyed_by_id": false
+    },
+    "messages": {
+      "kind": "object",
+      "count": 9,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "threads": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": [
+        "threadId",
+        "parentMessageId",
+        "channelId",
+        "dmId",
+        "replies",
+        "followers"
+      ],
+      "keyed_by_id": true
+    },
+    "dms": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "dmId",
+        "participants",
+        "lastMessage",
+        "lastTime",
+        "unreadCount"
+      ],
+      "keyed_by_id": false
+    },
+    "bookmarkedMessages": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "callHistory": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "settings": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "invitations": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "notificationId",
+        "type",
+        "messageId",
+        "channelId",
+        "dmId",
+        "userId",
+        "timestamp",
+        "read"
+      ],
+      "keyed_by_id": false
+    }
+  }
+}

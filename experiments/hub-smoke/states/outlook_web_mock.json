@@ -1,0 +1,406 @@
+{
+  "user": {
+    "id": "user-1",
+    "displayName": "Malik Sørensen",
+    "email": "malik.sorensen@ashgrove-parks.example",
+    "initials": "MS",
+    "avatarColor": "#0078D4",
+    "jobTitle": "Parks Superintendent",
+    "company": "Ashgrove Parks District",
+    "timezone": "America/Chicago",
+    "signature": "<p>Regards,<br>Malik Sørensen<br>Ashgrove Parks District</p>"
+  },
+  "folders": [
+    {
+      "id": "folder-inbox",
+      "displayName": "Inbox",
+      "parentFolderId": null,
+      "wellKnownName": "inbox",
+      "totalItemCount": 2,
+      "unreadItemCount": 1,
+      "isSystem": true,
+      "icon": "inbox",
+      "childFolders": [],
+      "isFavorite": true
+    },
+    {
+      "id": "folder-drafts",
+      "displayName": "Drafts",
+      "parentFolderId": null,
+      "wellKnownName": "drafts",
+      "totalItemCount": 0,
+      "unreadItemCount": 0,
+      "isSystem": true,
+      "icon": "drafts",
+      "childFolders": [],
+      "isFavorite": false
+    },
+    {
+      "id": "folder-sentitems",
+      "displayName": "Sent Items",
+      "parentFolderId": null,
+      "wellKnownName": "sentitems",
+      "totalItemCount": 1,
+      "unreadItemCount": 0,
+      "isSystem": true,
+      "icon": "send",
+      "childFolders": [],
+      "isFavorite": false
+    },
+    {
+      "id": "folder-deleteditems",
+      "displayName": "Deleted Items",
+      "parentFolderId": null,
+      "wellKnownName": "deleteditems",
+      "totalItemCount": 0,
+      "unreadItemCount": 0,
+      "isSystem": true,
+      "icon": "trash",
+      "childFolders": [],
+      "isFavorite": false
+    },
+    {
+      "id": "folder-junkemail",
+      "displayName": "Junk Email",
+      "parentFolderId": null,
+      "wellKnownName": "junkemail",
+      "totalItemCount": 0,
+      "unreadItemCount": 0,
+      "isSystem": true,
+      "icon": "warning",
+      "childFolders": [],
+      "isFavorite": false
+    },
+    {
+      "id": "folder-archive",
+      "displayName": "Archive",
+      "parentFolderId": null,
+      "wellKnownName": "archive",
+      "totalItemCount": 0,
+      "unreadItemCount": 0,
+      "isSystem": true,
+      "icon": "archive",
+      "childFolders": [],
+      "isFavorite": false
+    },
+    {
+      "id": "folder-permits",
+      "displayName": "Permits",
+      "parentFolderId": null,
+      "wellKnownName": null,
+      "totalItemCount": 0,
+      "unreadItemCount": 0,
+      "isSystem": false,
+      "icon": "folder",
+      "childFolders": [],
+      "isFavorite": true
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg-001",
+      "conversationId": "conv-001",
+      "parentFolderId": "folder-inbox",
+      "subject": "Riverside Pavilion roof repair quote",
+      "bodyPreview": "Attached is the revised quote for the pavilion roof. We can start the week of September 21.",
+      "body": {
+        "contentType": "html",
+        "content": "<p>Hi Malik,</p><p>Attached is the revised quote for the pavilion roof. We can start the week of September 21.</p><p>Thanks,<br>Dana</p>"
+      },
+      "from": {
+        "name": "Dana Kowalczyk",
+        "email": "dana@kowalczyk-roofing.example"
+      },
+      "sender": {
+        "name": "Dana Kowalczyk",
+        "email": "dana@kowalczyk-roofing.example"
+      },
+      "toRecipients": [
+        {
+          "name": "Malik Sørensen",
+          "email": "malik.sorensen@ashgrove-parks.example"
+        }
+      ],
+      "ccRecipients": [],
+      "bccRecipients": [],
+      "receivedDateTime": "2026-09-07T07:55:00Z",
+      "sentDateTime": "2026-09-07T07:54:00Z",
+      "isRead": false,
+      "isDraft": false,
+      "importance": "high",
+      "flag": {
+        "flagStatus": "flagged"
+      },
+      "categories": [
+        "Blue category"
+      ],
+      "hasAttachments": true,
+      "attachments": [
+        {
+          "id": "att-001",
+          "name": "Pavilion_Roof_Quote_v2.pdf",
+          "contentType": "application/pdf",
+          "size": 182330,
+          "isInline": false
+        }
+      ],
+      "inferenceClassification": "focused",
+      "isPinned": false
+    },
+    {
+      "id": "msg-002",
+      "conversationId": "conv-002",
+      "parentFolderId": "folder-inbox",
+      "subject": "Fall soccer league field allocations",
+      "bodyPreview": "Can we confirm fields 3 and 4 for Saturday mornings through November?",
+      "body": {
+        "contentType": "html",
+        "content": "<p>Can we confirm fields 3 and 4 for Saturday mornings through November?</p>"
+      },
+      "from": {
+        "name": "Priya Anand",
+        "email": "priya.anand@ashgrove-youth-soccer.example"
+      },
+      "sender": {
+        "name": "Priya Anand",
+        "email": "priya.anand@ashgrove-youth-soccer.example"
+      },
+      "toRecipients": [
+        {
+          "name": "Malik Sørensen",
+          "email": "malik.sorensen@ashgrove-parks.example"
+        }
+      ],
+      "ccRecipients": [],
+      "bccRecipients": [],
+      "receivedDateTime": "2026-09-05T19:10:00Z",
+      "sentDateTime": "2026-09-05T19:09:00Z",
+      "isRead": true,
+      "isDraft": false,
+      "importance": "normal",
+      "flag": {
+        "flagStatus": "notFlagged"
+      },
+      "categories": [],
+      "hasAttachments": false,
+      "attachments": [],
+      "inferenceClassification": "focused",
+      "isPinned": false
+    },
+    {
+      "id": "msg-003",
+      "conversationId": "conv-002",
+      "parentFolderId": "folder-sentitems",
+      "subject": "RE: Fall soccer league field allocations",
+      "bodyPreview": "Fields 3 and 4 are yours 8-12 on Saturdays. Permit to follow.",
+      "body": {
+        "contentType": "html",
+        "content": "<p>Fields 3 and 4 are yours 8-12 on Saturdays. Permit to follow.</p>"
+      },
+      "from": {
+        "name": "Malik Sørensen",
+        "email": "malik.sorensen@ashgrove-parks.example"
+      },
+      "sender": {
+        "name": "Malik Sørensen",
+        "email": "malik.sorensen@ashgrove-parks.example"
+      },
+      "toRecipients": [
+        {
+          "name": "Priya Anand",
+          "email": "priya.anand@ashgrove-youth-soccer.example"
+        }
+      ],
+      "ccRecipients": [],
+      "bccRecipients": [],
+      "receivedDateTime": "2026-09-06T13:30:00Z",
+      "sentDateTime": "2026-09-06T13:30:00Z",
+      "isRead": true,
+      "isDraft": false,
+      "importance": "normal",
+      "flag": {
+        "flagStatus": "notFlagged"
+      },
+      "categories": [],
+      "hasAttachments": false,
+      "attachments": [],
+      "inferenceClassification": "focused",
+      "isPinned": false
+    }
+  ],
+  "calendars": [
+    {
+      "id": "cal-default",
+      "name": "Calendar",
+      "color": "#0078D4",
+      "isDefault": true,
+      "isVisible": true,
+      "canEdit": true
+    },
+    {
+      "id": "cal-holidays",
+      "name": "United States holidays",
+      "color": "#107C10",
+      "isDefault": false,
+      "isVisible": true,
+      "canEdit": false
+    }
+  ],
+  "events": [
+    {
+      "id": "evt-board",
+      "subject": "Parks Board Meeting",
+      "calendarId": "cal-default",
+      "color": "#0078D4",
+      "body": {
+        "contentType": "text",
+        "content": "Monthly board meeting, agenda item: pavilion roof."
+      },
+      "start": {
+        "dateTime": "2026-09-10T23:00:00",
+        "timeZone": "America/Chicago"
+      },
+      "end": {
+        "dateTime": "2026-09-11T01:00:00",
+        "timeZone": "America/Chicago"
+      },
+      "location": {
+        "displayName": "District Office, Room B"
+      },
+      "isAllDay": false,
+      "isCancelled": false,
+      "organizer": {
+        "name": "Malik Sørensen",
+        "email": "malik.sorensen@ashgrove-parks.example"
+      },
+      "attendees": [
+        {
+          "name": "Dana Kowalczyk",
+          "email": "dana@kowalczyk-roofing.example",
+          "status": "tentative"
+        }
+      ],
+      "importance": "normal",
+      "showAs": "busy",
+      "sensitivity": "normal",
+      "categories": [],
+      "isOnlineMeeting": false,
+      "onlineMeetingUrl": null,
+      "recurrence": null,
+      "reminderMinutesBefore": 30,
+      "hasAttachments": false,
+      "responseStatus": "organizer"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "contact-001",
+      "displayName": "Dana Kowalczyk",
+      "givenName": "Dana",
+      "surname": "Kowalczyk",
+      "emailAddresses": [
+        {
+          "address": "dana@kowalczyk-roofing.example",
+          "name": "Dana Kowalczyk"
+        }
+      ],
+      "businessPhones": [
+        "+1 312 555 0161"
+      ],
+      "mobilePhone": null,
+      "homePhones": [],
+      "jobTitle": "Owner",
+      "companyName": "Kowalczyk Roofing",
+      "department": null,
+      "officeLocation": null,
+      "businessAddress": null,
+      "homeAddress": null,
+      "birthday": null,
+      "personalNotes": "Preferred roofing vendor.",
+      "initials": "DK",
+      "avatarColor": "#8764B8",
+      "isFavorite": true,
+      "categories": []
+    },
+    {
+      "id": "contact-002",
+      "displayName": "Priya Anand",
+      "givenName": "Priya",
+      "surname": "Anand",
+      "emailAddresses": [
+        {
+          "address": "priya.anand@ashgrove-youth-soccer.example",
+          "name": "Priya Anand"
+        }
+      ],
+      "businessPhones": [],
+      "mobilePhone": "+1 312 555 0199",
+      "homePhones": [],
+      "jobTitle": "League Coordinator",
+      "companyName": "Ashgrove Youth Soccer",
+      "department": null,
+      "officeLocation": null,
+      "businessAddress": null,
+      "homeAddress": null,
+      "birthday": null,
+      "personalNotes": "",
+      "initials": "PA",
+      "avatarColor": "#FF8C00",
+      "isFavorite": false,
+      "categories": []
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-blue",
+      "displayName": "Blue category",
+      "color": "#0078D4",
+      "presetIndex": 0
+    },
+    {
+      "id": "cat-green",
+      "displayName": "Green category",
+      "color": "#107C10",
+      "presetIndex": 1
+    }
+  ],
+  "settings": {
+    "readingPanePosition": "right",
+    "density": "medium",
+    "conversationView": true,
+    "focusedInbox": true,
+    "autoReply": {
+      "enabled": false
+    },
+    "signature": {
+      "enabled": true
+    },
+    "theme": "light",
+    "previewText": true,
+    "weekStart": "Sunday",
+    "workingHours": {
+      "start": "08:00",
+      "end": "17:00"
+    }
+  },
+  "tasks": [
+    {
+      "id": "task-001",
+      "title": "Sign field permit for Ashgrove Youth Soccer",
+      "dueDate": "2026-09-09T00:00:00",
+      "completed": false,
+      "importance": "high",
+      "categories": []
+    }
+  ],
+  "selectedFolderId": "folder-inbox",
+  "selectedMessageId": null,
+  "selectedModule": "mail",
+  "calendarView": "month",
+  "calendarDate": "2026-09-07T00:00:00.000Z",
+  "searchQuery": "",
+  "composeState": null,
+  "settingsOpen": false,
+  "settingsSection": "accounts",
+  "folderPaneCollapsed": false
+}

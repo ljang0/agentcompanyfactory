@@ -1,0 +1,247 @@
+{
+  "app_id": "workday_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "announcements",
+    "benefits",
+    "clockStatus",
+    "currentUser",
+    "departments",
+    "employees",
+    "goals",
+    "notifications",
+    "payroll",
+    "reviews",
+    "tasks",
+    "timeEntries",
+    "timeOffBalance",
+    "timeOffRequests"
+  ],
+  "observed": [
+    "announcements",
+    "benefits",
+    "clockStatus",
+    "contactDrafts",
+    "currentUser",
+    "departments",
+    "employees",
+    "goals",
+    "notifications",
+    "payroll",
+    "reviews",
+    "tasks",
+    "timeEntries",
+    "timeOffBalance",
+    "timeOffRequests"
+  ],
+  "undocumented_so_unseedable": [
+    "contactDrafts"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 19,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "employees": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "name",
+        "email",
+        "phone",
+        "role",
+        "department",
+        "departmentId",
+        "avatar",
+        "managerId",
+        "title",
+        "location",
+        "joinDate",
+        "employeeType",
+        "compensationGrade",
+        "annualSalary",
+        "workSchedule",
+        "skills",
+        "birthday",
+        "workAnniversary"
+      ],
+      "keyed_by_id": false
+    },
+    "departments": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "headcount",
+        "managerId"
+      ],
+      "keyed_by_id": false
+    },
+    "timeEntries": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "entryId",
+        "employeeId",
+        "date",
+        "hours",
+        "project",
+        "status",
+        "notes"
+      ],
+      "keyed_by_id": false
+    },
+    "timeOffRequests": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "requestId",
+        "employeeId",
+        "type",
+        "startDate",
+        "endDate",
+        "status",
+        "reason",
+        "totalHours",
+        "reviewedBy",
+        "reviewedDate"
+      ],
+      "keyed_by_id": false
+    },
+    "timeOffBalance": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "payroll": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "paystubId",
+        "employeeId",
+        "period",
+        "payDate",
+        "date",
+        "grossPay",
+        "federalTax",
+        "stateTax",
+        "socialSecurity",
+        "medicare",
+        "healthInsurance",
+        "retirement401k",
+        "otherDeductions",
+        "totalDeductions",
+        "netPay",
+        "deductions"
+      ],
+      "keyed_by_id": false
+    },
+    "benefits": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "reviews": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "reviewId",
+        "employeeId",
+        "managerId",
+        "period",
+        "rating",
+        "ratingScore",
+        "status",
+        "selfReviewComments",
+        "managerComments",
+        "comments",
+        "completedDate"
+      ],
+      "keyed_by_id": false
+    },
+    "goals": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "goalId",
+        "employeeId",
+        "title",
+        "description",
+        "category",
+        "status",
+        "progress",
+        "dueDate",
+        "createdDate",
+        "milestones"
+      ],
+      "keyed_by_id": false
+    },
+    "tasks": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "taskId",
+        "employeeId",
+        "type",
+        "subType",
+        "description",
+        "status",
+        "dueDate",
+        "createdDate",
+        "relatedId",
+        "initiator",
+        "businessProcess",
+        "priority",
+        "comments"
+      ],
+      "keyed_by_id": false
+    },
+    "announcements": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "title",
+        "date",
+        "content",
+        "category",
+        "priority"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "type",
+        "title",
+        "message",
+        "timestamp",
+        "read",
+        "link"
+      ],
+      "keyed_by_id": false
+    },
+    "contactDrafts": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "clockStatus": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

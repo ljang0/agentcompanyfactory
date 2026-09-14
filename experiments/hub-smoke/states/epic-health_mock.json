@@ -1,0 +1,210 @@
+{
+  "currentUser": {
+    "id": "patient-1",
+    "firstName": "Rosa",
+    "lastName": "Delacroix",
+    "fullName": "Rosa Delacroix",
+    "dateOfBirth": "1978-11-02",
+    "age": 47,
+    "gender": "Female",
+    "email": "rosa.delacroix@example.com",
+    "phone": "(503) 555-0142",
+    "address": {"street": "88 Alder Lane", "city": "Tillamook", "state": "OR", "zip": "97141"},
+    "emergencyContact": {"name": "Marc Delacroix", "relationship": "Spouse", "phone": "(503) 555-0143"},
+    "preferredLanguage": "English",
+    "preferredPharmacy": {"name": "Bayfront Pharmacy", "address": "12 Harbor St, Tillamook, OR 97141", "phone": "(503) 555-0170"},
+    "avatarInitials": "RD",
+    "avatarColor": "#0075BC"
+  },
+  "providers": [
+    {
+      "id": "provider-1",
+      "firstName": "Anil",
+      "lastName": "Venkataraman",
+      "fullName": "Anil Venkataraman, MD",
+      "title": "MD",
+      "specialty": "Family Medicine",
+      "role": "Primary Care Provider",
+      "department": "Family Medicine",
+      "phone": "(503) 555-0200",
+      "email": "a.venkataraman@coastridgehealth.example",
+      "location": "Coast Ridge Community Health - Tillamook Clinic",
+      "address": "400 Coast Ridge Way, Tillamook, OR 97141",
+      "avatarInitials": "AV",
+      "avatarColor": "#4CAF50",
+      "imageUrl": null
+    }
+  ],
+  "appointments": [
+    {
+      "id": "appt-1",
+      "patientId": "patient-1",
+      "providerId": "provider-1",
+      "providerName": "Anil Venkataraman, MD",
+      "type": "Diabetes Follow-up",
+      "status": "Scheduled",
+      "dateTime": "2026-09-22T10:00:00",
+      "duration": 30,
+      "location": "Coast Ridge Community Health - Tillamook Clinic",
+      "address": "400 Coast Ridge Way, Tillamook, OR 97141",
+      "department": "Family Medicine",
+      "reason": "Quarterly A1c review",
+      "instructions": "Bring your glucose log.",
+      "isUpcoming": true,
+      "canCheckIn": true,
+      "canCancel": true,
+      "canReschedule": true,
+      "afterVisitSummary": null,
+      "questionnairesRequired": [],
+      "notes": ""
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg-1",
+      "threadId": "thread-1",
+      "parentId": null,
+      "from": {"id": "provider-1", "name": "Anil Venkataraman, MD", "type": "provider"},
+      "to": {"id": "patient-1", "name": "Rosa Delacroix", "type": "patient"},
+      "subject": "Your A1c result from Coast Ridge lab",
+      "body": "Hi Rosa, your A1c came back at 6.9, a nice improvement. Keep up the walking routine.",
+      "date": "2026-09-04T14:23:00",
+      "isRead": false,
+      "isStarred": false,
+      "folder": "inbox",
+      "hasAttachment": false,
+      "attachments": [],
+      "isUrgent": false
+    }
+  ],
+  "testResults": [
+    {
+      "id": "result-1",
+      "patientId": "patient-1",
+      "name": "Hemoglobin A1c",
+      "category": "Lab",
+      "orderedBy": "Anil Venkataraman, MD",
+      "orderedById": "provider-1",
+      "collectedDate": "2026-09-02",
+      "resultDate": "2026-09-04",
+      "status": "Final",
+      "isNew": true,
+      "isAbnormal": false,
+      "observations": [
+        {"name": "Hemoglobin A1c", "value": "6.9", "unit": "%", "referenceRange": "4.0-5.6", "flag": "H", "isAbnormal": true}
+      ],
+      "notes": "Improved from 7.4.",
+      "providerComments": "Great progress."
+    }
+  ],
+  "medications": [
+    {
+      "id": "med-1",
+      "patientId": "patient-1",
+      "name": "Metformin",
+      "genericName": "Metformin HCl",
+      "dosage": "500 mg",
+      "form": "Tablet",
+      "frequency": "Twice daily",
+      "route": "Oral",
+      "instructions": "Take one tablet by mouth twice daily with meals.",
+      "prescriber": "Anil Venkataraman, MD",
+      "prescriberId": "provider-1",
+      "pharmacy": "Bayfront Pharmacy",
+      "status": "Active",
+      "startDate": "2024-02-10",
+      "endDate": null,
+      "lastFilledDate": "2026-08-15",
+      "refillsRemaining": 2,
+      "totalRefills": 5,
+      "isRefillable": true,
+      "daysSupply": 30,
+      "quantity": 60,
+      "reason": "Type 2 diabetes"
+    }
+  ],
+  "conditions": [
+    {"id": "cond-1", "patientId": "patient-1", "name": "Type 2 diabetes mellitus", "icd10": "E11.9", "status": "Active", "diagnosedDate": "2024-02-10", "diagnosedBy": "Anil Venkataraman, MD", "severity": "Moderate", "notes": "Diet controlled plus metformin."}
+  ],
+  "allergies": [
+    {"id": "allergy-1", "patientId": "patient-1", "allergen": "Sulfa drugs", "type": "Medication", "reaction": "Rash", "severity": "Moderate", "notedDate": "2015-06-01", "status": "Active"}
+  ],
+  "immunizations": [
+    {"id": "imm-1", "patientId": "patient-1", "name": "Influenza vaccine", "date": "2025-10-12", "administeredBy": "Nursing Staff", "location": "Coast Ridge Community Health - Tillamook Clinic", "lotNumber": "FLU25-118", "series": "Annual", "nextDue": "2026-10-01"}
+  ],
+  "vitals": [
+    {
+      "id": "vital-1",
+      "patientId": "patient-1",
+      "date": "2026-06-18",
+      "readings": {
+        "bloodPressureSystolic": {"value": 128, "unit": "mmHg"},
+        "bloodPressureDiastolic": {"value": 82, "unit": "mmHg"},
+        "heartRate": {"value": 72, "unit": "bpm"},
+        "temperature": {"value": 98.4, "unit": "°F"},
+        "respiratoryRate": {"value": 16, "unit": "breaths/min"},
+        "weight": {"value": 168, "unit": "lbs"},
+        "height": {"value": 64, "unit": "in"},
+        "bmi": {"value": 28.8, "unit": "kg/m²"},
+        "oxygenSaturation": {"value": 98, "unit": "%"}
+      },
+      "recordedBy": "Nursing Staff",
+      "location": "Coast Ridge Community Health - Tillamook Clinic"
+    }
+  ],
+  "billingStatements": [
+    {
+      "id": "bill-1",
+      "patientId": "patient-1",
+      "statementDate": "2026-08-20",
+      "dueDate": "2026-09-20",
+      "totalAmount": 85.0,
+      "insurancePaid": 240.0,
+      "patientResponsibility": 85.0,
+      "amountPaid": 0,
+      "balanceDue": 85.0,
+      "status": "Due",
+      "lineItems": [
+        {"id": "line-1", "description": "Office visit, established patient", "serviceDate": "2026-06-18", "provider": "Anil Venkataraman, MD", "charge": 325.0, "insurancePaid": 240.0, "patientResponsibility": 85.0, "cptCode": "99214"}
+      ]
+    }
+  ],
+  "insurance": [
+    {
+      "id": "ins-1",
+      "patientId": "patient-1",
+      "planName": "Cascadia Health Plan PPO",
+      "planType": "PPO",
+      "memberId": "CHP4471002",
+      "groupNumber": "GRP-20411",
+      "subscriberName": "Rosa Delacroix",
+      "relationship": "Self",
+      "effectiveDate": "2026-01-01",
+      "copay": {"primaryCare": 25, "specialist": 50, "urgentCare": 75, "emergency": 250},
+      "deductible": {"individual": 1500, "family": 3000, "metAmount": 610},
+      "outOfPocketMax": {"individual": 6000, "family": 12000, "metAmount": 850},
+      "contactPhone": "1-800-555-0199",
+      "isActive": true
+    }
+  ],
+  "preventiveCare": [
+    {"id": "prev-1", "patientId": "patient-1", "name": "Annual Flu Vaccination", "category": "Immunization", "status": "Due", "lastCompleted": "2025-10-12", "nextDue": "2026-10-01", "frequency": "Annually", "notes": ""},
+    {"id": "prev-2", "patientId": "patient-1", "name": "Diabetic Eye Exam", "category": "Exam", "status": "Overdue", "lastCompleted": "2025-05-03", "nextDue": "2026-05-03", "frequency": "Annually", "notes": ""}
+  ],
+  "ui": {
+    "activeSection": "home",
+    "selectedAppointment": null,
+    "selectedMessage": null,
+    "selectedTestResult": null,
+    "selectedMedication": null,
+    "selectedBill": null,
+    "sideMenuOpen": false,
+    "messageComposerOpen": false,
+    "schedulingFlowStep": null,
+    "refillSelections": [],
+    "unreadMessageCount": 1,
+    "notificationBanners": [
+      {"id": "notif-1", "type": "appointment", "text": "Upcoming: Diabetes Follow-up on Sep 22 at 10:00 AM", "dismissed": false}
+    ]
+  }
+}

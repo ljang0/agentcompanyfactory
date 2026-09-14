@@ -1,0 +1,251 @@
+{
+  "app_id": "quickbooks_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "accounts",
+    "bills",
+    "company",
+    "customers",
+    "employees",
+    "estimates",
+    "expenses",
+    "invoices",
+    "products",
+    "projects",
+    "reportCategories",
+    "transactions",
+    "vendors"
+  ],
+  "observed": [
+    "accounts",
+    "bills",
+    "company",
+    "customers",
+    "emailDrafts",
+    "employees",
+    "estimates",
+    "expenses",
+    "invoices",
+    "products",
+    "projects",
+    "reportCategories",
+    "transactions",
+    "vendors"
+  ],
+  "undocumented_so_unseedable": [
+    "emailDrafts"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "company": {
+      "kind": "object",
+      "count": 9,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "customers": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "name",
+        "company",
+        "email",
+        "phone",
+        "address",
+        "balance",
+        "notes",
+        "isActive",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "vendors": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "company",
+        "email",
+        "phone",
+        "address",
+        "balance",
+        "isActive",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "products": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "type",
+        "price",
+        "cost",
+        "category",
+        "sku",
+        "isActive",
+        "isTaxable",
+        "quantityOnHand"
+      ],
+      "keyed_by_id": false
+    },
+    "invoices": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "number",
+        "customerId",
+        "date",
+        "dueDate",
+        "items",
+        "subtotal",
+        "tax",
+        "total",
+        "status",
+        "paidAmount",
+        "paidDate",
+        "terms",
+        "message",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "estimates": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "number",
+        "customerId",
+        "date",
+        "expiryDate",
+        "items",
+        "total",
+        "status"
+      ],
+      "keyed_by_id": false
+    },
+    "expenses": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "date",
+        "payee",
+        "vendorId",
+        "category",
+        "amount",
+        "description",
+        "accountId",
+        "receipt",
+        "isBillable",
+        "customerId",
+        "status"
+      ],
+      "keyed_by_id": false
+    },
+    "bills": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "vendorId",
+        "number",
+        "date",
+        "dueDate",
+        "items",
+        "total",
+        "status",
+        "paidDate"
+      ],
+      "keyed_by_id": false
+    },
+    "accounts": {
+      "kind": "array",
+      "count": 20,
+      "record_fields": [
+        "id",
+        "number",
+        "name",
+        "type",
+        "detailType",
+        "balance",
+        "bankBalance",
+        "isActive"
+      ],
+      "keyed_by_id": false
+    },
+    "transactions": {
+      "kind": "array",
+      "count": 20,
+      "record_fields": [
+        "id",
+        "accountId",
+        "date",
+        "description",
+        "payee",
+        "amount",
+        "type",
+        "category",
+        "matchedTo",
+        "status",
+        "isReconciled"
+      ],
+      "keyed_by_id": false
+    },
+    "employees": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "email",
+        "role",
+        "department",
+        "salary",
+        "payFrequency",
+        "startDate",
+        "isActive"
+      ],
+      "keyed_by_id": false
+    },
+    "projects": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "customerId",
+        "status",
+        "budget",
+        "spent",
+        "startDate",
+        "endDate",
+        "description"
+      ],
+      "keyed_by_id": false
+    },
+    "emailDrafts": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "reportCategories": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "name",
+        "reports"
+      ],
+      "keyed_by_id": false
+    }
+  }
+}

@@ -1,0 +1,411 @@
+{
+  "app_id": "adp_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "address",
+    "announcements",
+    "benefitPlans",
+    "clockStatus",
+    "companyInfo",
+    "dependents",
+    "directDeposits",
+    "directReports",
+    "emergencyContacts",
+    "employee",
+    "holidays",
+    "notifications",
+    "payStatements",
+    "pendingApprovals",
+    "taxDocuments",
+    "timeEntries",
+    "timeOffBalances",
+    "timeOffRequests",
+    "todoItems"
+  ],
+  "observed": [
+    "address",
+    "announcements",
+    "benefitPlans",
+    "clockStatus",
+    "companyInfo",
+    "departments",
+    "dependents",
+    "directDeposits",
+    "directReports",
+    "emergencyContacts",
+    "employee",
+    "employees",
+    "holidays",
+    "locations",
+    "notifications",
+    "payPolicies",
+    "payStatements",
+    "payrollRuns",
+    "pendingApprovals",
+    "savedReports",
+    "taxDocuments",
+    "timeEntries",
+    "timeOffBalances",
+    "timeOffRequests",
+    "todoItems"
+  ],
+  "undocumented_so_unseedable": [
+    "departments",
+    "employees",
+    "locations",
+    "payPolicies",
+    "payrollRuns",
+    "savedReports"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "employee": {
+      "kind": "object",
+      "count": 18,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "address": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "emergencyContacts": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "relationship",
+        "phone",
+        "email",
+        "isPrimary"
+      ],
+      "keyed_by_id": false
+    },
+    "employees": {
+      "kind": "array",
+      "count": 26,
+      "record_fields": [
+        "id",
+        "firstName",
+        "lastName",
+        "email",
+        "phone",
+        "employeeId",
+        "hireDate",
+        "jobTitle",
+        "department",
+        "division",
+        "manager",
+        "managerId",
+        "workLocation",
+        "employmentStatus",
+        "payRate",
+        "payFrequency",
+        "avatar",
+        "status"
+      ],
+      "keyed_by_id": false
+    },
+    "payStatements": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "payDate",
+        "periodStart",
+        "periodEnd",
+        "grossPay",
+        "netPay",
+        "earnings",
+        "deductions",
+        "taxes",
+        "ytdGross",
+        "ytdNet"
+      ],
+      "keyed_by_id": false
+    },
+    "taxDocuments": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "year",
+        "type",
+        "employerName",
+        "availableDate",
+        "downloaded",
+        "wages",
+        "federalTaxWithheld",
+        "stateTaxWithheld",
+        "socialSecurityWages",
+        "medicareWages"
+      ],
+      "keyed_by_id": false
+    },
+    "directDeposits": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "bankName",
+        "accountType",
+        "routingNumber",
+        "accountNumber",
+        "depositType",
+        "amount",
+        "isPrimary"
+      ],
+      "keyed_by_id": false
+    },
+    "timeEntries": {
+      "kind": "array",
+      "count": 9,
+      "record_fields": [
+        "id",
+        "date",
+        "clockIn",
+        "clockOut",
+        "breakMinutes",
+        "totalHours",
+        "status",
+        "note"
+      ],
+      "keyed_by_id": false
+    },
+    "timeOffBalances": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "type",
+        "totalDays",
+        "usedDays",
+        "pendingDays",
+        "availableDays",
+        "accrualRate"
+      ],
+      "keyed_by_id": false
+    },
+    "timeOffRequests": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "type",
+        "startDate",
+        "endDate",
+        "totalHours",
+        "status",
+        "notes",
+        "submittedDate",
+        "reviewedBy",
+        "reviewedDate"
+      ],
+      "keyed_by_id": false
+    },
+    "holidays": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "name",
+        "date",
+        "dayOfWeek"
+      ],
+      "keyed_by_id": false
+    },
+    "benefitPlans": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "category",
+        "planName",
+        "coverageLevel",
+        "employeeCostPerPeriod",
+        "employerContribution",
+        "effectiveDate",
+        "status",
+        "dependentsCovered",
+        "details"
+      ],
+      "keyed_by_id": false
+    },
+    "dependents": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "firstName",
+        "lastName",
+        "relationship",
+        "dateOfBirth",
+        "ssn",
+        "coveredPlans"
+      ],
+      "keyed_by_id": false
+    },
+    "directReports": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "firstName",
+        "lastName",
+        "jobTitle",
+        "department",
+        "email",
+        "phone",
+        "avatar",
+        "status"
+      ],
+      "keyed_by_id": false
+    },
+    "announcements": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "title",
+        "content",
+        "date",
+        "category",
+        "isRead",
+        "priority"
+      ],
+      "keyed_by_id": false
+    },
+    "todoItems": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "title",
+        "description",
+        "dueDate",
+        "type",
+        "isCompleted",
+        "link"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "title",
+        "message",
+        "date",
+        "isRead",
+        "type",
+        "actionUrl"
+      ],
+      "keyed_by_id": false
+    },
+    "companyInfo": {
+      "kind": "object",
+      "count": 7,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "clockStatus": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "pendingApprovals": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "type",
+        "employeeId",
+        "employeeName",
+        "employeeAvatar",
+        "request",
+        "startDate",
+        "endDate",
+        "totalHours",
+        "submittedDate",
+        "status"
+      ],
+      "keyed_by_id": false
+    },
+    "payrollRuns": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "name",
+        "payDate",
+        "periodStart",
+        "periodEnd",
+        "status",
+        "totalGross",
+        "totalNet",
+        "employeeCount",
+        "approvedBy",
+        "approvedDate"
+      ],
+      "keyed_by_id": false
+    },
+    "departments": {
+      "kind": "array",
+      "count": 9,
+      "record_fields": [
+        "id",
+        "name",
+        "headcount",
+        "manager",
+        "managerId",
+        "location",
+        "costCenter"
+      ],
+      "keyed_by_id": false
+    },
+    "locations": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "address",
+        "phone",
+        "headcount",
+        "type"
+      ],
+      "keyed_by_id": false
+    },
+    "payPolicies": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "frequency",
+        "overtimeRule",
+        "effectiveDate",
+        "status"
+      ],
+      "keyed_by_id": false
+    },
+    "savedReports": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "lastRun",
+        "schedule",
+        "createdBy"
+      ],
+      "keyed_by_id": false
+    }
+  }
+}

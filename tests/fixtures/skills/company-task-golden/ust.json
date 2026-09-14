@@ -1,0 +1,730 @@
+{
+  "skill": "company-task-golden",
+  "provenance": {
+    "sources": [
+      {
+        "path": "companies/ust/company.json",
+        "sha256": "e7234590d4d6163ec2aeb69b830a3cf39ff8ac681b510781438df3e336c06eea"
+      },
+      {
+        "path": "companies/ust/tasks/ust_shared-cost-allocation/workflow.json",
+        "sha256": "802fa4f4b70a5d371c5cb964c720b2b98a0ad2365b3edd53f372804d6d889033"
+      },
+      {
+        "path": "data/sources/a30873dedfc9d0eccbd961c7a056eec85fbb37c3d082a63295efbbc6952879fb.json",
+        "sha256": "cd50e2acbdb2b81a50d88c53c6641c2d4860238757d2c5d8fec950f1552a3f51"
+      },
+      {
+        "path": "data/sources/a30873dedfc9d0eccbd961c7a056eec85fbb37c3d082a63295efbbc6952879fb.json",
+        "sha256": "cd50e2acbdb2b81a50d88c53c6641c2d4860238757d2c5d8fec950f1552a3f51"
+      },
+      {
+        "path": "data/sources/7f0013ceabf6c3438c3dba9482fe8fed173f996dc6d0680d7ebbf78bf62bdb93.json",
+        "sha256": "36e6aa7dd9b647f5461a56ba959ae4f508248ebf6e1c87a127658cf70dcb3320"
+      },
+      {
+        "path": "data/sources/7f0013ceabf6c3438c3dba9482fe8fed173f996dc6d0680d7ebbf78bf62bdb93.json",
+        "sha256": "36e6aa7dd9b647f5461a56ba959ae4f508248ebf6e1c87a127658cf70dcb3320"
+      },
+      {
+        "path": "data/sources/7f0013ceabf6c3438c3dba9482fe8fed173f996dc6d0680d7ebbf78bf62bdb93.json",
+        "sha256": "36e6aa7dd9b647f5461a56ba959ae4f508248ebf6e1c87a127658cf70dcb3320"
+      },
+      {
+        "path": "data/sources/ffd46df4f50e41f0ee4e306f2a363a7c2b39869a34697d4d460dfbc4533ed03b.json",
+        "sha256": "8c17c1055c2bcea0cf0082be3b1dcb4547f474404d115393aacb0dfc5cd07567"
+      },
+      {
+        "path": "data/sources/ffd46df4f50e41f0ee4e306f2a363a7c2b39869a34697d4d460dfbc4533ed03b.json",
+        "sha256": "8c17c1055c2bcea0cf0082be3b1dcb4547f474404d115393aacb0dfc5cd07567"
+      },
+      {
+        "path": "experiments/batch/thin-worlds-20260907T2046/ust/google_docs_mock.state.json",
+        "sha256": "686f26a527a2ff46f621b40cc1ff67b1dcd4ce76d46ef8d64eebeadfa101e2cd"
+      },
+      {
+        "path": "experiments/batch/thin-worlds-20260907T2046/ust/world.json",
+        "sha256": "40e6a2f6585476b3629f08fa896f9f0df4358de5e981a560490d9442fb439959"
+      },
+      {
+        "path": "experiments/batch/thin-worlds-20260907T2046/ust/identities.json",
+        "sha256": "c08583cd21ba6d434a85dfbe03db281fef30c616c2d045a0c54b116f0991b5e8"
+      },
+      {
+        "path": "experiments/batch/thin-worlds-20260907T2046/ust/SEED.json",
+        "sha256": "825522f87663f04d482fc6dcbb3b53e6ee297238e07002e2aef8c280798aa840"
+      }
+    ],
+    "changes": "Trimmed to one task and a few native records. Calibration tasks are explicitly narrowed exercises derived from that task; their answers and planted defects are hand-authored test data, not accepted production outcomes."
+  },
+  "input": {
+    "public_brief": {
+      "brief": "Alder needs a reviewed recovery funding note for the September 11 finance review. In doc-allocation-working, record the minimum recovery capacity supported by the July 20 test and its monthly cost. Separate the remaining subscribed headroom and its monthly cost, with the three customer allocations. Tess signs the technical finding, Ravi signs the cost calculation, and Celia signs the internal recommendation. Use the active funding standard and test log. This advice does not authorize production changes or accounting postings."
+    },
+    "apps": [
+      {
+        "app_id": "google_docs_mock",
+        "schema": "schema.md",
+        "state_file": "world/google_docs_mock.state.json",
+        "top_level_keys": [
+          "documents",
+          "users",
+          "currentUser"
+        ],
+        "identity_key": "currentUser",
+        "initial_state": {
+          "documents": {
+            "doc-recovery-july": {
+              "id": "doc-recovery-july",
+              "title": "Alder recovery exercise — July 20 test log",
+              "content": "<h1>Alder recovery exercise — July 20 test log</h1><p>Customer operator: Adam Pike. Observer: Tess Navarro. All times include their local offset; Coordinated Universal Time (UTC) is the common reference.</p><p>On July 20 at 09:05-07:00 the 48-unit configuration cfg-al-recovery-48 began the contracted-load recovery exercise. Recovery completed at 09:52-07:00, taking 47 minutes against the 30-minute target. Queue drain was the limiting stage. At 11:10-07:00 the 60-unit configuration cfg-al-recovery-60 began the same load case and completed at 11:38-07:00, taking 28 minutes. The accepted capacity test identifies 60 units as the minimum for the contracted load.</p><p>The installed standby configuration cfg-al-standby-100 has 100 equal-cost units. The remaining 40 units are subscribed headroom, with 20 Retail, 10 Enterprise and 10 Research units. Their subscription does not make them part of the tested recovery minimum. August pricing is $400 per unit-month. Low routine CPU utilization does not measure recovery readiness. The failed smaller configuration remains the subject of INC0012101; no production downsizing has been authorized.</p>",
+              "ownerId": "sc-tess",
+              "starred": false,
+              "created": "2026-07-20T15:10:00-07:00",
+              "updated": "2026-07-21T09:15:00-07:00",
+              "linkSharing": {
+                "enabled": false,
+                "permission": "viewer"
+              }
+            },
+            "doc-allocation-working": {
+              "id": "doc-allocation-working",
+              "title": "Alder shared allocation — working notes",
+              "content": "<h1>Alder shared allocation — working notes</h1><p>Working space. No method selected and no team acceptance recorded. Source index: doc-alder-index. Billing workbook: wb-portfolio-202608. Contributors can add signed findings and links below.</p>",
+              "ownerId": "sc-celia",
+              "starred": false,
+              "created": "2026-09-04T16:20:00-07:00",
+              "updated": "2026-09-04T16:20:00-07:00",
+              "linkSharing": {
+                "enabled": false,
+                "permission": "viewer"
+              }
+            },
+            "doc-funding-v3": {
+              "id": "doc-funding-v3",
+              "title": "Alder shared services funding standard — version 3",
+              "content": "<h1>Alder shared services funding standard — version 3</h1><p>Effective August 1, 2026. Approved by Louise Mercer for Alder’s finance policy library on July 31.</p><p>Dedicated net cost follows its beneficiary. Discounts, commitment benefits and credits stay with their originating cost pools; do not spread a dedicated benefit to shared services or a service-specific credit to unrelated costs.</p><p>Minimum capacity needed to meet the contracted recovery target is centrally funded. Remaining active shared services may use validated transactions or subscribed entitlements, with reasons that address accountability, predictable access and driver quality. Transaction allocation requires at least 98% attributed coverage without duplicates. Material unattributed cost must remain disclosed centrally. Optional subscribed headroom may use entitlements, or central funding when a business reason is stated.</p><p>Compare at least two materially different compliant methods before recommending a change in allocation practice. Show a case in which Retail transactions rise 20%, other consumer transactions remain unchanged, and the cost pool remains unchanged. Round displayed final amounts to cents and reconcile any remainder explicitly.</p><p>A billing credit is not evidence of a recurring technical saving. Monthly forecasts must identify whether a one-time adjustment is included; do not silently carry it into later months. Internal team acceptance of advice authorizes neither accounting postings nor capacity removal. Catalog prices explain services and are not invoice substitutes. Version 2 remains in the archive and is superseded for August.</p>",
+              "ownerId": "sc-celia",
+              "starred": true,
+              "created": "2026-07-29T14:00:00-07:00",
+              "updated": "2026-07-31T11:00:00-07:00",
+              "linkSharing": {
+                "enabled": false,
+                "permission": "viewer"
+              }
+            }
+          },
+          "users": [
+            {
+              "id": "sc-celia",
+              "name": "Celia Hart",
+              "email": "celia.hart@seacliffadvisors.com",
+              "avatar": ""
+            },
+            {
+              "id": "sc-ravi",
+              "name": "Ravi Desai",
+              "email": "ravi.desai@seacliffadvisors.com",
+              "avatar": ""
+            },
+            {
+              "id": "sc-tess",
+              "name": "Tess Navarro",
+              "email": "tess.navarro@seacliffadvisors.com",
+              "avatar": ""
+            }
+          ],
+          "currentUser": {
+            "id": "sc-celia",
+            "name": "Celia Hart",
+            "email": "celia.hart@seacliffadvisors.com",
+            "avatar": ""
+          }
+        },
+        "schema_document": "Reduced native state contract. {\"documents\": \"dict\", \"users\": \"list\", \"currentUser\": \"dict\"}\nRecord fields and shapes are shown in the supplied initial state."
+      }
+    ],
+    "success_criteria": [
+      {
+        "requirement": "Record the tested minimum and why the smaller option failed.",
+        "observable": "$.documents[\"doc-allocation-working\"].content",
+        "method": "state"
+      },
+      {
+        "requirement": "Calculate recovery and subscribed headroom costs and the customer shares.",
+        "observable": "$.documents[\"doc-allocation-working\"].content",
+        "method": "state"
+      },
+      {
+        "requirement": "Record internal management advice and preserve customer authority.",
+        "observable": "$.documents[\"doc-allocation-working\"].content",
+        "method": "state"
+      }
+    ],
+    "workflow": {
+      "id": "ust_shared-cost-allocation",
+      "worker_ids": [
+        "finops-manager",
+        "cloud-financial-analyst",
+        "cloud-operations-engineer"
+      ],
+      "manager_id": "finops-manager",
+      "initial_materials": [
+        "doc-recovery-july and doc-funding-v3 support the new signed findings in doc-allocation-working."
+      ],
+      "success_criteria": [
+        {
+          "requirement": "Record the tested minimum and why the smaller option failed.",
+          "observable": "$.documents[\"doc-allocation-working\"].content",
+          "method": "state"
+        },
+        {
+          "requirement": "Calculate recovery and subscribed headroom costs and the customer shares.",
+          "observable": "$.documents[\"doc-allocation-working\"].content",
+          "method": "state"
+        },
+        {
+          "requirement": "Record internal management advice and preserve customer authority.",
+          "observable": "$.documents[\"doc-allocation-working\"].content",
+          "method": "state"
+        }
+      ],
+      "completion": {
+        "outcomes": [],
+        "feasible_path": {
+          "summary": "Append the technical test finding, the $24,000 central and $16,000 headroom calculation, then the bounded internal recommendation."
+        }
+      },
+      "contributions": [
+        {
+          "worker_id": "finops-manager",
+          "inputs": [
+            "Customer objective and funding rules",
+            "Analyst’s alternatives",
+            "Engineer’s capacity and driver findings"
+          ],
+          "work": "Develop the working plan and delegate through workplace chat or email. Resolve the tradeoff between consumption accountability and predictable entitlements, address substantive objections and accept a consistent recommendation within advisory authority.",
+          "produces": [
+            "Reasoned allocation decision",
+            "Accepted forecast and policy package",
+            "Customer explanation draft"
+          ],
+          "shares_with": [
+            "cloud-financial-analyst",
+            "cloud-operations-engineer"
+          ],
+          "apps": [
+            "google_sheets_mock"
+          ]
+        },
+        {
+          "worker_id": "cloud-financial-analyst",
+          "inputs": [
+            "Billing, discount and credit records",
+            "Business-unit forecast baselines",
+            "Supported capacity classifications and drivers"
+          ],
+          "work": "Reconstruct the net pool, preserve adjustment attribution, compare compliant distributions and sensitivity, and propagate the manager’s selected method into every business-unit forecast. Report findings through chat or email with links to the model.",
+          "produces": [
+            "Reproducible cost bridge",
+            "Allocation alternatives and sensitivity",
+            "Revised cost reporting and forecasts"
+          ],
+          "shares_with": [
+            "finops-manager",
+            "cloud-operations-engineer"
+          ],
+          "apps": [
+            "google_sheets_mock"
+          ]
+        },
+        {
+          "worker_id": "cloud-operations-engineer",
+          "inputs": [
+            "Catalog service definitions",
+            "Service mappings and capacity exports",
+            "Recovery test and incident histories",
+            "Proposed allocation methods"
+          ],
+          "work": "Determine dedicated, shared and protected capacity; assess whether transactions or entitlements explain demand; reconcile the omitted recovery concern; and translate the selected policy into precise ownership corrections and continuing safeguards. Report the consequences through chat or email with supporting evidence.",
+          "produces": [
+            "Technical classification and driver assessment",
+            "Capacity restrictions consumed by the financial model",
+            "Ownership and recovery follow-up instructions"
+          ],
+          "shares_with": [
+            "finops-manager",
+            "cloud-financial-analyst"
+          ],
+          "apps": [
+            "ServiceNow_mock"
+          ]
+        }
+      ],
+      "title": "Recommend Alder Systems’ shared cloud cost allocation",
+      "brief": "Alder needs a reviewed recovery funding note for the September 11 finance review. In doc-allocation-working, record the minimum recovery capacity supported by the July 20 test and its monthly cost. Separate the remaining subscribed headroom and its monthly cost, with the three customer allocations. Tess signs the technical finding, Ravi signs the cost calculation, and Celia signs the internal recommendation. Use the active funding standard and test log. This advice does not authorize production changes or accounting postings."
+    }
+  },
+  "double": {
+    "golden_json": "[{\"worker_id\": \"cloud-operations-engineer\", \"app_id\": \"google_docs_mock\", \"action\": \"set_current\", \"state_patch\": {\"documents\": {\"doc-allocation-working\": {\"content\": \"<h1>Alder shared allocation \\u2014 working notes</h1><p>Working space. No method selected and no team acceptance recorded. Source index: doc-alder-index. Billing workbook: wb-portfolio-202608. Contributors can add signed findings and links below.</p><p>Tess Navarro: The 48-unit test missed the 30-minute target at 47 minutes. The 60-unit test passed at 28 minutes; keep 60 units as the recovery minimum.</p>\"}}}}, {\"worker_id\": \"cloud-financial-analyst\", \"app_id\": \"google_docs_mock\", \"action\": \"set_current\", \"state_patch\": {\"documents\": {\"doc-allocation-working\": {\"content\": \"<h1>Alder shared allocation \\u2014 working notes</h1><p>Working space. No method selected and no team acceptance recorded. Source index: doc-alder-index. Billing workbook: wb-portfolio-202608. Contributors can add signed findings and links below.</p><p>Tess Navarro: The 48-unit test missed the 30-minute target at 47 minutes. The 60-unit test passed at 28 minutes; keep 60 units as the recovery minimum.</p><p>Ravi Desai: At $400 per unit-month, the 60-unit recovery minimum costs $24,000 per month. The remaining 40 subscribed units cost $16,000: Retail $8,000, Enterprise $4,000 and Research $4,000.</p>\"}}}}, {\"worker_id\": \"finops-manager\", \"app_id\": \"google_docs_mock\", \"action\": \"set_current\", \"state_patch\": {\"documents\": {\"doc-allocation-working\": {\"content\": \"<h1>Alder shared allocation \\u2014 working notes</h1><p>Working space. No method selected and no team acceptance recorded. Source index: doc-alder-index. Billing workbook: wb-portfolio-202608. Contributors can add signed findings and links below.</p><p>Tess Navarro: The 48-unit test missed the 30-minute target at 47 minutes. The 60-unit test passed at 28 minutes; keep 60 units as the recovery minimum.</p><p>Ravi Desai: At $400 per unit-month, the 60-unit recovery minimum costs $24,000 per month. The remaining 40 subscribed units cost $16,000: Retail $8,000, Enterprise $4,000 and Research $4,000.</p><p>Celia Hart: Recommend central funding for the tested recovery minimum. Keep optional subscribed headroom separate. This internal recommendation authorizes neither production changes nor accounting postings.</p>\"}}}}]"
+  },
+  "oracle": {
+    "predicates": [
+      {
+        "app_id": "google_docs_mock",
+        "selector": "$.documents[\"doc-allocation-working\"].content",
+        "operator": "contains",
+        "value_json": "\"Tess Navarro: The 48-unit test missed the 30-minute target at 47 minutes. The 60-unit test passed at 28 minutes; keep 60 units as the recovery minimum.\""
+      },
+      {
+        "app_id": "google_docs_mock",
+        "selector": "$.documents[\"doc-allocation-working\"].content",
+        "operator": "contains",
+        "value_json": "\"Ravi Desai: At $400 per unit-month, the 60-unit recovery minimum costs $24,000 per month. The remaining 40 subscribed units cost $16,000: Retail $8,000, Enterprise $4,000 and Research $4,000.\""
+      },
+      {
+        "app_id": "google_docs_mock",
+        "selector": "$.documents[\"doc-allocation-working\"].content",
+        "operator": "contains",
+        "value_json": "\"Celia Hart: Recommend central funding for the tested recovery minimum. Keep optional subscribed headroom separate. This internal recommendation authorizes neither production changes nor accounting postings.\""
+      }
+    ],
+    "grader": {
+      "checks": [
+        {
+          "id": "outcome-0",
+          "criterion_ref": "/success_criteria/0",
+          "kind": "state",
+          "description": "Record the tested minimum and why the smaller option failed.",
+          "predicate": {
+            "app_id": "google_docs_mock",
+            "selector": "$.documents[\"doc-allocation-working\"].content",
+            "operator": "contains",
+            "value_json": "\"Tess Navarro: The 48-unit test missed the 30-minute target at 47 minutes. The 60-unit test passed at 28 minutes; keep 60 units as the recovery minimum.\""
+          }
+        },
+        {
+          "id": "outcome-1",
+          "criterion_ref": "/success_criteria/1",
+          "kind": "state",
+          "description": "Calculate recovery and subscribed headroom costs and the customer shares.",
+          "predicate": {
+            "app_id": "google_docs_mock",
+            "selector": "$.documents[\"doc-allocation-working\"].content",
+            "operator": "contains",
+            "value_json": "\"Ravi Desai: At $400 per unit-month, the 60-unit recovery minimum costs $24,000 per month. The remaining 40 subscribed units cost $16,000: Retail $8,000, Enterprise $4,000 and Research $4,000.\""
+          }
+        },
+        {
+          "id": "outcome-2",
+          "criterion_ref": "/success_criteria/2",
+          "kind": "state",
+          "description": "Record internal management advice and preserve customer authority.",
+          "predicate": {
+            "app_id": "google_docs_mock",
+            "selector": "$.documents[\"doc-allocation-working\"].content",
+            "operator": "contains",
+            "value_json": "\"Celia Hart: Recommend central funding for the tested recovery minimum. Keep optional subscribed headroom separate. This internal recommendation authorizes neither production changes nor accounting postings.\""
+          }
+        }
+      ]
+    }
+  },
+  "world_files": {
+    "company.json": {
+      "id": "ust",
+      "workers": [
+        {
+          "id": "finops-manager",
+          "title": "Cloud Financial Management Service Manager",
+          "soc": "11-3021",
+          "responsibility": "Receive the advisory objective, create the working plan and coordinate specialist contributions. Decide the firm's recommended allocation policy, treatment of disputed savings and commitment exposure. Integrate accepted findings into forecasts, customer advice and continuing follow-up obligations.",
+          "information_access": [
+            "Engagement scope, customer objectives, decision limits and service history",
+            "Shared billing exports, commercial terms and financial models",
+            "Architecture, utilization and completed-change evidence",
+            "ServiceNow records and specialist work notes",
+            "Shared correspondence, chat, calendars and advisory documents",
+            "Focal AWS inventory and billing summaries when AWS Console is included"
+          ],
+          "authority": "Approve internal recommendations and allocate pod effort within the engagement remit. Resolve competing proposals while preserving material limitations. Cannot purchase customer commitments, authorize customer production changes or post customer charges.",
+          "evidence_ids": [
+            "operating-model",
+            "synthetic-unit",
+            "synthetic-authority",
+            "execution-contract"
+          ]
+        },
+        {
+          "id": "cloud-financial-analyst",
+          "title": "Cloud Financial Analyst",
+          "soc": "13-2051",
+          "responsibility": "Reconcile cloud expenditure, compare allocation alternatives, model commitment economics and downside exposure, and separate recurring savings from demand changes and billing adjustments. Explain how engineering findings change economic conclusions and revise downstream forecasts.",
+          "information_access": [
+            "Historical billing exports, invoices, credits and cost definitions",
+            "Commitment terms, eligible-use rules and frozen rate schedules",
+            "Business-unit budgets, demand scenarios and allocation policies",
+            "Resource identifiers and engineering assessments",
+            "ServiceNow change histories",
+            "Shared workbooks, documents, correspondence, calendars and chat"
+          ],
+          "authority": "Own analytical methods and recommend financial treatments within supplied policy. Challenge unsupported allocation and savings claims. Update working models and advisory records without committing customer funds or authorizing postings.",
+          "evidence_ids": [
+            "cloud-budgeting",
+            "pricing-options",
+            "operating-model",
+            "synthetic-authority"
+          ]
+        },
+        {
+          "id": "cloud-operations-engineer",
+          "title": "Cloud Operations Engineer",
+          "soc": "15-1244",
+          "responsibility": "Interpret resource configuration, utilization and service dependencies. Establish protected capacity and suitable allocation drivers, identify technically eligible optimization scopes, assess migration and resilience implications, and determine what completed-change evidence supports. Convert accepted recommendations into precise prerequisites and verification requirements.",
+          "information_access": [
+            "Resource configurations and resource-to-service mappings",
+            "Existing utilization exports, capacity tests and architecture records",
+            "Service requirements, migration plans and recovery constraints",
+            "ServiceNow configuration items, incidents, problems, changes and catalog descriptions",
+            "Financial alternatives and shared collaboration records",
+            "Focal AWS configuration records when AWS Console is included"
+          ],
+          "authority": "Determine what technical evidence supports and preserve unresolved constraints. Recommend changes and verification work; update advisory operational records. Production mutation and customer implementation authorization remain outside the pod's remit.",
+          "evidence_ids": [
+            "resource-ownership",
+            "cross-functional-finops",
+            "prioritized-optimization",
+            "operating-model",
+            "synthetic-authority"
+          ]
+        }
+      ]
+    },
+    "apps.json": {
+      "apps": [
+        {
+          "app_id": "google_docs_mock",
+          "schema": "schema.md",
+          "state_file": "world/google_docs_mock.state.json",
+          "top_level_keys": [
+            "documents",
+            "users",
+            "currentUser"
+          ],
+          "identity_key": "currentUser"
+        }
+      ]
+    },
+    "schema.md": "Reduced native state contract. {\"documents\": \"dict\", \"users\": \"list\", \"currentUser\": \"dict\"}\nRecord fields and shapes are shown in the supplied initial state.",
+    "world/google_docs_mock.state.json": {
+      "documents": {
+        "doc-recovery-july": {
+          "id": "doc-recovery-july",
+          "title": "Alder recovery exercise — July 20 test log",
+          "content": "<h1>Alder recovery exercise — July 20 test log</h1><p>Customer operator: Adam Pike. Observer: Tess Navarro. All times include their local offset; Coordinated Universal Time (UTC) is the common reference.</p><p>On July 20 at 09:05-07:00 the 48-unit configuration cfg-al-recovery-48 began the contracted-load recovery exercise. Recovery completed at 09:52-07:00, taking 47 minutes against the 30-minute target. Queue drain was the limiting stage. At 11:10-07:00 the 60-unit configuration cfg-al-recovery-60 began the same load case and completed at 11:38-07:00, taking 28 minutes. The accepted capacity test identifies 60 units as the minimum for the contracted load.</p><p>The installed standby configuration cfg-al-standby-100 has 100 equal-cost units. The remaining 40 units are subscribed headroom, with 20 Retail, 10 Enterprise and 10 Research units. Their subscription does not make them part of the tested recovery minimum. August pricing is $400 per unit-month. Low routine CPU utilization does not measure recovery readiness. The failed smaller configuration remains the subject of INC0012101; no production downsizing has been authorized.</p>",
+          "ownerId": "sc-tess",
+          "starred": false,
+          "created": "2026-07-20T15:10:00-07:00",
+          "updated": "2026-07-21T09:15:00-07:00",
+          "linkSharing": {
+            "enabled": false,
+            "permission": "viewer"
+          }
+        },
+        "doc-allocation-working": {
+          "id": "doc-allocation-working",
+          "title": "Alder shared allocation — working notes",
+          "content": "<h1>Alder shared allocation — working notes</h1><p>Working space. No method selected and no team acceptance recorded. Source index: doc-alder-index. Billing workbook: wb-portfolio-202608. Contributors can add signed findings and links below.</p>",
+          "ownerId": "sc-celia",
+          "starred": false,
+          "created": "2026-09-04T16:20:00-07:00",
+          "updated": "2026-09-04T16:20:00-07:00",
+          "linkSharing": {
+            "enabled": false,
+            "permission": "viewer"
+          }
+        },
+        "doc-funding-v3": {
+          "id": "doc-funding-v3",
+          "title": "Alder shared services funding standard — version 3",
+          "content": "<h1>Alder shared services funding standard — version 3</h1><p>Effective August 1, 2026. Approved by Louise Mercer for Alder’s finance policy library on July 31.</p><p>Dedicated net cost follows its beneficiary. Discounts, commitment benefits and credits stay with their originating cost pools; do not spread a dedicated benefit to shared services or a service-specific credit to unrelated costs.</p><p>Minimum capacity needed to meet the contracted recovery target is centrally funded. Remaining active shared services may use validated transactions or subscribed entitlements, with reasons that address accountability, predictable access and driver quality. Transaction allocation requires at least 98% attributed coverage without duplicates. Material unattributed cost must remain disclosed centrally. Optional subscribed headroom may use entitlements, or central funding when a business reason is stated.</p><p>Compare at least two materially different compliant methods before recommending a change in allocation practice. Show a case in which Retail transactions rise 20%, other consumer transactions remain unchanged, and the cost pool remains unchanged. Round displayed final amounts to cents and reconcile any remainder explicitly.</p><p>A billing credit is not evidence of a recurring technical saving. Monthly forecasts must identify whether a one-time adjustment is included; do not silently carry it into later months. Internal team acceptance of advice authorizes neither accounting postings nor capacity removal. Catalog prices explain services and are not invoice substitutes. Version 2 remains in the archive and is superseded for August.</p>",
+          "ownerId": "sc-celia",
+          "starred": true,
+          "created": "2026-07-29T14:00:00-07:00",
+          "updated": "2026-07-31T11:00:00-07:00",
+          "linkSharing": {
+            "enabled": false,
+            "permission": "viewer"
+          }
+        }
+      },
+      "users": [
+        {
+          "id": "sc-celia",
+          "name": "Celia Hart",
+          "email": "celia.hart@seacliffadvisors.com",
+          "avatar": ""
+        },
+        {
+          "id": "sc-ravi",
+          "name": "Ravi Desai",
+          "email": "ravi.desai@seacliffadvisors.com",
+          "avatar": ""
+        },
+        {
+          "id": "sc-tess",
+          "name": "Tess Navarro",
+          "email": "tess.navarro@seacliffadvisors.com",
+          "avatar": ""
+        }
+      ],
+      "currentUser": {
+        "id": "sc-celia",
+        "name": "Celia Hart",
+        "email": "celia.hart@seacliffadvisors.com",
+        "avatar": ""
+      }
+    },
+    "world/world.json": {
+      "company": {
+        "id": "ust",
+        "name": "Seacliff Technology Advisors",
+        "domain": "seacliffadvisors.com",
+        "timezone": "America/Los_Angeles",
+        "currency": "USD",
+        "apps": [
+          "gmail_mock",
+          "slack_mock",
+          "google_calendar_mock",
+          "google_drive_mock",
+          "google_docs_mock",
+          "google_sheets_mock",
+          "ServiceNow_mock"
+        ]
+      },
+      "documents": {
+        "doc-recovery-july": {
+          "id": "doc-recovery-july",
+          "title": "Alder recovery exercise — July 20 test log",
+          "content": "<h1>Alder recovery exercise — July 20 test log</h1><p>Customer operator: Adam Pike. Observer: Tess Navarro. All times include their local offset; Coordinated Universal Time (UTC) is the common reference.</p><p>On July 20 at 09:05-07:00 the 48-unit configuration cfg-al-recovery-48 began the contracted-load recovery exercise. Recovery completed at 09:52-07:00, taking 47 minutes against the 30-minute target. Queue drain was the limiting stage. At 11:10-07:00 the 60-unit configuration cfg-al-recovery-60 began the same load case and completed at 11:38-07:00, taking 28 minutes. The accepted capacity test identifies 60 units as the minimum for the contracted load.</p><p>The installed standby configuration cfg-al-standby-100 has 100 equal-cost units. The remaining 40 units are subscribed headroom, with 20 Retail, 10 Enterprise and 10 Research units. Their subscription does not make them part of the tested recovery minimum. August pricing is $400 per unit-month. Low routine CPU utilization does not measure recovery readiness. The failed smaller configuration remains the subject of INC0012101; no production downsizing has been authorized.</p>",
+          "ownerId": "sc-tess",
+          "starred": false,
+          "created": "2026-07-20T15:10:00-07:00",
+          "updated": "2026-07-21T09:15:00-07:00",
+          "linkSharing": {
+            "enabled": false,
+            "permission": "viewer"
+          }
+        },
+        "doc-allocation-working": {
+          "id": "doc-allocation-working",
+          "title": "Alder shared allocation — working notes",
+          "content": "<h1>Alder shared allocation — working notes</h1><p>Working space. No method selected and no team acceptance recorded. Source index: doc-alder-index. Billing workbook: wb-portfolio-202608. Contributors can add signed findings and links below.</p>",
+          "ownerId": "sc-celia",
+          "starred": false,
+          "created": "2026-09-04T16:20:00-07:00",
+          "updated": "2026-09-04T16:20:00-07:00",
+          "linkSharing": {
+            "enabled": false,
+            "permission": "viewer"
+          }
+        },
+        "doc-funding-v3": {
+          "id": "doc-funding-v3",
+          "title": "Alder shared services funding standard — version 3",
+          "content": "<h1>Alder shared services funding standard — version 3</h1><p>Effective August 1, 2026. Approved by Louise Mercer for Alder’s finance policy library on July 31.</p><p>Dedicated net cost follows its beneficiary. Discounts, commitment benefits and credits stay with their originating cost pools; do not spread a dedicated benefit to shared services or a service-specific credit to unrelated costs.</p><p>Minimum capacity needed to meet the contracted recovery target is centrally funded. Remaining active shared services may use validated transactions or subscribed entitlements, with reasons that address accountability, predictable access and driver quality. Transaction allocation requires at least 98% attributed coverage without duplicates. Material unattributed cost must remain disclosed centrally. Optional subscribed headroom may use entitlements, or central funding when a business reason is stated.</p><p>Compare at least two materially different compliant methods before recommending a change in allocation practice. Show a case in which Retail transactions rise 20%, other consumer transactions remain unchanged, and the cost pool remains unchanged. Round displayed final amounts to cents and reconcile any remainder explicitly.</p><p>A billing credit is not evidence of a recurring technical saving. Monthly forecasts must identify whether a one-time adjustment is included; do not silently carry it into later months. Internal team acceptance of advice authorizes neither accounting postings nor capacity removal. Catalog prices explain services and are not invoice substitutes. Version 2 remains in the archive and is superseded for August.</p>",
+          "ownerId": "sc-celia",
+          "starred": true,
+          "created": "2026-07-29T14:00:00-07:00",
+          "updated": "2026-07-31T11:00:00-07:00",
+          "linkSharing": {
+            "enabled": false,
+            "permission": "viewer"
+          }
+        }
+      }
+    },
+    "world/identities.json": {
+      "finops-manager": {
+        "google_docs_mock": {
+          "id": "sc-celia",
+          "name": "Celia Hart",
+          "email": "celia.hart@seacliffadvisors.com",
+          "avatar": ""
+        }
+      },
+      "cloud-financial-analyst": {
+        "google_docs_mock": {
+          "id": "sc-ravi",
+          "name": "Ravi Desai",
+          "email": "ravi.desai@seacliffadvisors.com",
+          "avatar": ""
+        }
+      },
+      "cloud-operations-engineer": {
+        "google_docs_mock": {
+          "id": "sc-tess",
+          "name": "Tess Navarro",
+          "email": "tess.navarro@seacliffadvisors.com",
+          "avatar": ""
+        }
+      }
+    },
+    "world/SEED.json": {
+      "reference_date": "2026-09-08T09:00:00-07:00"
+    },
+    "tasks/ust_shared-cost-allocation/assignment.json": {
+      "brief": "Alder needs a reviewed recovery funding note for the September 11 finance review. In doc-allocation-working, record the minimum recovery capacity supported by the July 20 test and its monthly cost. Separate the remaining subscribed headroom and its monthly cost, with the three customer allocations. Tess signs the technical finding, Ravi signs the cost calculation, and Celia signs the internal recommendation. Use the active funding standard and test log. This advice does not authorize production changes or accounting postings."
+    },
+    "tasks/ust_shared-cost-allocation/workflow.json": {
+      "id": "ust_shared-cost-allocation",
+      "worker_ids": [
+        "finops-manager",
+        "cloud-financial-analyst",
+        "cloud-operations-engineer"
+      ],
+      "manager_id": "finops-manager",
+      "initial_materials": [
+        "doc-recovery-july and doc-funding-v3 support the new signed findings in doc-allocation-working."
+      ],
+      "success_criteria": [
+        {
+          "requirement": "Record the tested minimum and why the smaller option failed.",
+          "observable": "$.documents[\"doc-allocation-working\"].content",
+          "method": "state"
+        },
+        {
+          "requirement": "Calculate recovery and subscribed headroom costs and the customer shares.",
+          "observable": "$.documents[\"doc-allocation-working\"].content",
+          "method": "state"
+        },
+        {
+          "requirement": "Record internal management advice and preserve customer authority.",
+          "observable": "$.documents[\"doc-allocation-working\"].content",
+          "method": "state"
+        }
+      ],
+      "completion": {
+        "outcomes": [],
+        "feasible_path": {
+          "summary": "Append the technical test finding, the $24,000 central and $16,000 headroom calculation, then the bounded internal recommendation."
+        }
+      },
+      "contributions": [
+        {
+          "worker_id": "finops-manager",
+          "inputs": [
+            "Customer objective and funding rules",
+            "Analyst’s alternatives",
+            "Engineer’s capacity and driver findings"
+          ],
+          "work": "Develop the working plan and delegate through workplace chat or email. Resolve the tradeoff between consumption accountability and predictable entitlements, address substantive objections and accept a consistent recommendation within advisory authority.",
+          "produces": [
+            "Reasoned allocation decision",
+            "Accepted forecast and policy package",
+            "Customer explanation draft"
+          ],
+          "shares_with": [
+            "cloud-financial-analyst",
+            "cloud-operations-engineer"
+          ],
+          "apps": [
+            "google_sheets_mock"
+          ]
+        },
+        {
+          "worker_id": "cloud-financial-analyst",
+          "inputs": [
+            "Billing, discount and credit records",
+            "Business-unit forecast baselines",
+            "Supported capacity classifications and drivers"
+          ],
+          "work": "Reconstruct the net pool, preserve adjustment attribution, compare compliant distributions and sensitivity, and propagate the manager’s selected method into every business-unit forecast. Report findings through chat or email with links to the model.",
+          "produces": [
+            "Reproducible cost bridge",
+            "Allocation alternatives and sensitivity",
+            "Revised cost reporting and forecasts"
+          ],
+          "shares_with": [
+            "finops-manager",
+            "cloud-operations-engineer"
+          ],
+          "apps": [
+            "google_sheets_mock"
+          ]
+        },
+        {
+          "worker_id": "cloud-operations-engineer",
+          "inputs": [
+            "Catalog service definitions",
+            "Service mappings and capacity exports",
+            "Recovery test and incident histories",
+            "Proposed allocation methods"
+          ],
+          "work": "Determine dedicated, shared and protected capacity; assess whether transactions or entitlements explain demand; reconcile the omitted recovery concern; and translate the selected policy into precise ownership corrections and continuing safeguards. Report the consequences through chat or email with supporting evidence.",
+          "produces": [
+            "Technical classification and driver assessment",
+            "Capacity restrictions consumed by the financial model",
+            "Ownership and recovery follow-up instructions"
+          ],
+          "shares_with": [
+            "finops-manager",
+            "cloud-financial-analyst"
+          ],
+          "apps": [
+            "ServiceNow_mock"
+          ]
+        }
+      ],
+      "title": "Recommend Alder Systems’ shared cloud cost allocation",
+      "brief": "Alder needs a reviewed recovery funding note for the September 11 finance review. In doc-allocation-working, record the minimum recovery capacity supported by the July 20 test and its monthly cost. Separate the remaining subscribed headroom and its monthly cost, with the three customer allocations. Tess signs the technical finding, Ravi signs the cost calculation, and Celia signs the internal recommendation. Use the active funding standard and test log. This advice does not authorize production changes or accounting postings."
+    },
+    "tasks/ust_shared-cost-allocation/golden.json": [
+      {
+        "worker_id": "cloud-operations-engineer",
+        "app_id": "google_docs_mock",
+        "action": "set_current",
+        "state_patch": {
+          "documents": {
+            "doc-allocation-working": {
+              "content": "<h1>Alder shared allocation — working notes</h1><p>Working space. No method selected and no team acceptance recorded. Source index: doc-alder-index. Billing workbook: wb-portfolio-202608. Contributors can add signed findings and links below.</p><p>Tess Navarro: The 48-unit test missed the 30-minute target at 47 minutes. The 60-unit test passed at 28 minutes; keep 60 units as the recovery minimum.</p>"
+            }
+          }
+        }
+      },
+      {
+        "worker_id": "cloud-financial-analyst",
+        "app_id": "google_docs_mock",
+        "action": "set_current",
+        "state_patch": {
+          "documents": {
+            "doc-allocation-working": {
+              "content": "<h1>Alder shared allocation — working notes</h1><p>Working space. No method selected and no team acceptance recorded. Source index: doc-alder-index. Billing workbook: wb-portfolio-202608. Contributors can add signed findings and links below.</p><p>Tess Navarro: The 48-unit test missed the 30-minute target at 47 minutes. The 60-unit test passed at 28 minutes; keep 60 units as the recovery minimum.</p><p>Ravi Desai: At $400 per unit-month, the 60-unit recovery minimum costs $24,000 per month. The remaining 40 subscribed units cost $16,000: Retail $8,000, Enterprise $4,000 and Research $4,000.</p>"
+            }
+          }
+        }
+      },
+      {
+        "worker_id": "finops-manager",
+        "app_id": "google_docs_mock",
+        "action": "set_current",
+        "state_patch": {
+          "documents": {
+            "doc-allocation-working": {
+              "content": "<h1>Alder shared allocation — working notes</h1><p>Working space. No method selected and no team acceptance recorded. Source index: doc-alder-index. Billing workbook: wb-portfolio-202608. Contributors can add signed findings and links below.</p><p>Tess Navarro: The 48-unit test missed the 30-minute target at 47 minutes. The 60-unit test passed at 28 minutes; keep 60 units as the recovery minimum.</p><p>Ravi Desai: At $400 per unit-month, the 60-unit recovery minimum costs $24,000 per month. The remaining 40 subscribed units cost $16,000: Retail $8,000, Enterprise $4,000 and Research $4,000.</p><p>Celia Hart: Recommend central funding for the tested recovery minimum. Keep optional subscribed headroom separate. This internal recommendation authorizes neither production changes nor accounting postings.</p>"
+            }
+          }
+        }
+      }
+    ],
+    "review.json": {
+      "tasks": [
+        {
+          "workflow_id": "ust_shared-cost-allocation",
+          "verdict": "accept"
+        }
+      ]
+    }
+  },
+  "task_id": "ust_shared-cost-allocation"
+}

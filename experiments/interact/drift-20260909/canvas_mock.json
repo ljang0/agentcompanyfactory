@@ -1,0 +1,39 @@
+{
+ "app_id": "canvas_mock",
+ "source": "posted_to_server (route /editor)",
+ "documented": [
+  "canvasImage",
+  "canvasJSON",
+  "timestamp"
+ ],
+ "observed": [
+  "canvasImage",
+  "canvasJSON",
+  "timestamp"
+ ],
+ "undocumented_so_unseedable": [],
+ "documented_but_app_keeps_none": [],
+ "agrees": true,
+ "shapes": {
+  "canvasJSON": {
+   "kind": "object",
+   "count": 3,
+   "record_fields": null,
+   "keyed_by_id": false
+  },
+  "canvasImage": {
+   "kind": "null",
+   "count": null,
+   "record_fields": null,
+   "keyed_by_id": null
+  },
+  "timestamp": {
+   "kind": "string",
+   "count": null,
+   "record_fields": null,
+   "keyed_by_id": false
+  }
+ },
+ "captured_at": "2026-09-10",
+ "note": "Observed 2026-09-10 while porting this app into the catalogue. Filed in the 2026-09-09 batch directory rather than a new dated one so it is read whether tests/test_app_schema_contract.py pins that single directory or globs every drift-* run; captured_at is the real date. Move it to experiments/interact/drift-20260910/ once the glob is the only reader. scripts/app_schema_drift.py opens '/' for every app; canvas_mock's '/' is a template launcher that neither loads nor persists state, so it reported source: nothing_observed and its three documented keys read as keys the app never keeps. On /editor it keeps exactly those three."
+}

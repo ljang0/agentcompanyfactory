@@ -1,0 +1,230 @@
+{
+  "app_id": "zhihu_mock",
+  "source": "localStorage:zhihu_initial_state_drift",
+  "documented": [
+    "answers",
+    "articles",
+    "collections",
+    "comments",
+    "currentUser",
+    "ideas",
+    "notifications",
+    "questions",
+    "topics",
+    "userCommentVoteups",
+    "userFavorites",
+    "userFollowedQuestions",
+    "userFollowedTopics",
+    "userFollowings",
+    "userVoteups",
+    "users"
+  ],
+  "observed": [
+    "answers",
+    "articles",
+    "collections",
+    "comments",
+    "currentUser",
+    "ideas",
+    "notifications",
+    "questions",
+    "topics",
+    "userCommentVoteups",
+    "userFavorites",
+    "userFollowedQuestions",
+    "userFollowedTopics",
+    "userFollowings",
+    "userVoteups",
+    "users"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 18,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "userId",
+        "nickname",
+        "avatar",
+        "headline",
+        "description",
+        "gender",
+        "location",
+        "industry",
+        "employment",
+        "education",
+        "followingCount",
+        "followerCount",
+        "voteupCount",
+        "thankedCount",
+        "favoriteCount",
+        "answerCount",
+        "articleCount",
+        "questionCount"
+      ],
+      "keyed_by_id": false
+    },
+    "questions": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "questionId",
+        "title",
+        "description",
+        "topics",
+        "authorId",
+        "createdTime",
+        "updatedTime",
+        "followerCount",
+        "viewCount",
+        "answerCount"
+      ],
+      "keyed_by_id": false
+    },
+    "answers": {
+      "kind": "array",
+      "count": 18,
+      "record_fields": [
+        "answerId",
+        "questionId",
+        "authorId",
+        "content",
+        "createdTime",
+        "updatedTime",
+        "voteupCount",
+        "commentCount",
+        "favoriteCount",
+        "thankCount"
+      ],
+      "keyed_by_id": false
+    },
+    "articles": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "articleId",
+        "title",
+        "content",
+        "coverImage",
+        "authorId",
+        "topics",
+        "createdTime",
+        "updatedTime",
+        "viewCount",
+        "voteupCount",
+        "commentCount",
+        "favoriteCount"
+      ],
+      "keyed_by_id": false
+    },
+    "comments": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "topics": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "topicId",
+        "name",
+        "icon",
+        "description",
+        "followerCount",
+        "questionCount"
+      ],
+      "keyed_by_id": false
+    },
+    "collections": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "collectionId",
+        "name",
+        "description",
+        "privacy",
+        "itemIds",
+        "itemTypes",
+        "createdTime",
+        "updatedTime"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "notificationId",
+        "type",
+        "fromUserId",
+        "targetId",
+        "targetType",
+        "content",
+        "isRead",
+        "createdTime"
+      ],
+      "keyed_by_id": false
+    },
+    "ideas": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "ideaId",
+        "authorId",
+        "content",
+        "images",
+        "topics",
+        "createdTime",
+        "voteupCount",
+        "commentCount",
+        "shareCount"
+      ],
+      "keyed_by_id": false
+    },
+    "userVoteups": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "userFavorites": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "userFollowings": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "userFollowedTopics": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "userFollowedQuestions": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "userCommentVoteups": {
+      "kind": "object",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

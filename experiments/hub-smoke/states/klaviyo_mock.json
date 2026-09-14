@@ -1,0 +1,57 @@
+{
+  "account": {
+    "id": "acct_001", "companyName": "Willowmere Candle Co.", "industry": "E-commerce", "website": "https://willowmere-candles.example",
+    "defaultSenderName": "Willowmere Candle Co.", "defaultSenderEmail": "hello@willowmere-candles.example", "timezone": "America/Denver", "plan": "growth", "contactCount": 3,
+    "user": { "name": "Beatrix Nakamura", "email": "beatrix@willowmere-candles.example", "role": "owner" }
+  },
+  "profiles": [
+    { "id": "prof_001", "email": "carla.espinoza@mail.example", "firstName": "Carla", "lastName": "Espinoza", "phone": "+1-555-1001", "location": { "city": "Denver", "region": "CO", "country": "US", "zip": "80202" }, "title": "Interior Designer", "organization": "Espinoza Interiors", "createdAt": "2025-11-02T09:15:00Z", "lastActive": "2026-09-04T10:20:00Z", "customProperties": { "total_orders": 9, "lifetime_value": 812.40, "favorite_scent": "Cedar & Smoke" }, "predictedGender": "female", "predictedLTV": 1100.00, "listIds": ["list_001", "list_002"], "segmentIds": ["seg_001"], "consent": { "email": "subscribed", "sms": "subscribed" }, "tags": ["vip", "repeat-buyer"] },
+    { "id": "prof_002", "email": "owen.fitzgerald@mail.example", "firstName": "Owen", "lastName": "Fitzgerald", "phone": "+1-555-1002", "location": { "city": "Boulder", "region": "CO", "country": "US", "zip": "80302" }, "title": "Teacher", "organization": "", "createdAt": "2026-08-20T14:00:00Z", "lastActive": "2026-09-01T08:45:00Z", "customProperties": { "total_orders": 1, "lifetime_value": 48.00 }, "predictedGender": "male", "predictedLTV": 96.00, "listIds": ["list_001"], "segmentIds": ["seg_002"], "consent": { "email": "subscribed", "sms": "not_subscribed" }, "tags": [] },
+    { "id": "prof_003", "email": "nadia.kowalczyk@mail.example", "firstName": "Nadia", "lastName": "Kowalczyk", "phone": "+1-555-1003", "location": { "city": "Fort Collins", "region": "CO", "country": "US", "zip": "80521" }, "title": "Nurse", "organization": "", "createdAt": "2025-06-11T11:30:00Z", "lastActive": "2026-03-15T09:00:00Z", "customProperties": { "total_orders": 3, "lifetime_value": 156.00 }, "predictedGender": "female", "predictedLTV": 180.00, "listIds": ["list_001"], "segmentIds": [], "consent": { "email": "unsubscribed", "sms": "not_subscribed" }, "tags": ["at-risk"] }
+  ],
+  "campaigns": [
+    { "id": "camp_001", "name": "Autumn Hearth Collection Launch", "status": "sent", "channel": "email", "subject": "The Autumn Hearth collection is here", "previewText": "Cedar, clove and woodsmoke, poured this week", "senderName": "Willowmere Candle Co.", "senderEmail": "hello@willowmere-candles.example", "templateId": "tmpl_001", "audienceInclude": ["list_001"], "audienceExclude": [], "sendStrategy": "immediate", "scheduledAt": null, "sentAt": "2026-09-02T15:00:00Z", "createdAt": "2026-08-28T10:00:00Z", "updatedAt": "2026-09-02T15:00:00Z", "tags": ["seasonal"], "trackingOptions": { "isTrackingOpens": true, "isTrackingClicks": true, "addUtm": true }, "stats": { "recipients": 2, "delivered": 2, "opens": 3, "uniqueOpens": 2, "clicks": 1, "uniqueClicks": 1, "bounced": 0, "unsubscribed": 0, "spamComplaints": 0, "revenue": 96.00, "ordersPlaced": 1, "openRate": 1.0, "clickRate": 0.5, "conversionRate": 0.5 } },
+    { "id": "camp_002", "name": "VIP Early Access - Holiday Preview", "status": "draft", "channel": "email", "subject": "A first look at our holiday scents", "previewText": "", "senderName": "Willowmere Candle Co.", "senderEmail": "hello@willowmere-candles.example", "templateId": "tmpl_001", "audienceInclude": ["list_002"], "audienceExclude": [], "sendStrategy": "immediate", "scheduledAt": null, "sentAt": null, "createdAt": "2026-09-05T09:30:00Z", "updatedAt": "2026-09-05T09:30:00Z", "tags": ["vip"], "trackingOptions": { "isTrackingOpens": true, "isTrackingClicks": true, "addUtm": false }, "stats": { "recipients": 0, "delivered": 0, "opens": 0, "uniqueOpens": 0, "clicks": 0, "uniqueClicks": 0, "bounced": 0, "unsubscribed": 0, "spamComplaints": 0, "revenue": 0, "ordersPlaced": 0, "openRate": 0, "clickRate": 0, "conversionRate": 0 } }
+  ],
+  "flows": [
+    {
+      "id": "flow_001", "name": "Willowmere Welcome Series", "status": "live", "triggerType": "list", "triggerDetails": { "type": "added_to_list", "listId": "list_001", "listName": "Newsletter Subscribers" }, "createdAt": "2025-10-01T10:00:00Z", "updatedAt": "2026-08-15T16:45:00Z", "tags": ["onboarding"],
+      "actions": [
+        { "id": "fa_001", "flowId": "flow_001", "type": "send_email", "position": { "x": 0, "y": 0 }, "parentId": null, "branchType": null, "config": { "subject": "Welcome to Willowmere", "senderName": "Willowmere Candle Co.", "templateId": "tmpl_001" }, "stats": { "delivered": 640, "openRate": 0.61, "clickRate": 0.14 } },
+        { "id": "fa_002", "flowId": "flow_001", "type": "time_delay", "position": { "x": 0, "y": 120 }, "parentId": "fa_001", "branchType": null, "config": { "value": 3, "unit": "days" }, "stats": {} }
+      ],
+      "stats": { "delivered": 640, "opens": 390, "clicks": 90, "revenue": 2140, "conversions": 31 }
+    }
+  ],
+  "lists": [
+    { "id": "list_001", "name": "Newsletter Subscribers", "type": "double_opt_in", "memberCount": 3, "createdAt": "2025-09-15T08:00:00Z", "updatedAt": "2026-09-04T12:00:00Z", "tags": ["active"] },
+    { "id": "list_002", "name": "VIP Customers", "type": "manual", "memberCount": 1, "createdAt": "2025-12-01T10:00:00Z", "updatedAt": "2026-08-18T14:00:00Z", "tags": ["vip"] }
+  ],
+  "segments": [
+    { "id": "seg_001", "name": "VIP Customers - High LTV", "isStarred": true, "isActive": true, "memberCount": 1, "conditionGroups": [ { "conditions": [ { "type": "profile-property", "property": "customProperties.lifetime_value", "operator": "greater_than", "value": 500 } ] } ], "createdAt": "2025-12-01T09:00:00Z", "lastCalculated": "2026-09-06T06:00:00Z" },
+    { "id": "seg_002", "name": "Engaged Last 30 Days", "isStarred": false, "isActive": true, "memberCount": 2, "conditionGroups": [ { "conditions": [ { "type": "profile-property", "property": "lastActive", "operator": "is_within", "value": 30, "timeframe": "days" } ] } ], "createdAt": "2025-12-01T09:00:00Z", "lastCalculated": "2026-09-06T06:00:00Z" }
+  ],
+  "templates": [
+    { "id": "tmpl_001", "name": "Willowmere Seasonal Launch", "category": "seasonal", "channel": "email", "htmlContent": "<div style=\"max-width:600px;margin:0 auto;font-family:serif;\"><h1>Willowmere Candle Co.</h1><p>New scents, poured by hand in Denver.</p></div>", "previewImageUrl": "", "createdAt": "2025-10-01T10:00:00Z", "updatedAt": "2026-08-20T10:00:00Z", "tags": ["seasonal"] }
+  ],
+  "metrics": [
+    { "id": "met_001", "name": "Placed Order", "integration": "Shopify", "eventCount": 13, "lastEventAt": "2026-09-04T10:20:00Z" },
+    { "id": "met_002", "name": "Viewed Product", "integration": "Shopify", "eventCount": 412, "lastEventAt": "2026-09-06T16:00:00Z" }
+  ],
+  "signupForms": [
+    { "id": "form_001", "name": "Homepage Newsletter Popup", "type": "popup", "status": "live", "targetListId": "list_001", "views": 2210, "submissions": 134, "conversionRate": 0.0606, "createdAt": "2025-10-05T10:00:00Z", "updatedAt": "2026-08-01T11:00:00Z", "config": { "title": "Join the Willowmere list", "description": "10% off your first candle", "fields": ["email"], "buttonText": "Sign Up" } }
+  ],
+  "tags": [
+    { "id": "tag_001", "name": "seasonal" },
+    { "id": "tag_002", "name": "vip" },
+    { "id": "tag_003", "name": "onboarding" }
+  ],
+  "ui": {
+    "activePage": "home",
+    "campaignFilters": { "status": "all", "channel": "all", "search": "" },
+    "flowFilters": { "status": "all", "search": "" },
+    "audienceTab": "lists",
+    "analyticsDateRange": { "start": "2026-08-07", "end": "2026-09-06", "label": "Last 30 days", "comparison": true },
+    "selectedConversionMetric": "revenue"
+  }
+}

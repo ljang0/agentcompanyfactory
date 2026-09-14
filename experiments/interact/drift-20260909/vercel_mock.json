@@ -1,0 +1,178 @@
+{
+  "app_id": "vercel_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activityEvents",
+    "currentTeam",
+    "currentUser",
+    "deployments",
+    "domains",
+    "environmentVariables",
+    "integrations",
+    "projects",
+    "teamMembers",
+    "ui"
+  ],
+  "observed": [
+    "activityEvents",
+    "currentTeam",
+    "currentUser",
+    "deployments",
+    "domains",
+    "environmentVariables",
+    "integrations",
+    "projects",
+    "teamMembers",
+    "ui"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentTeam": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "currentUser": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "projects": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "slug",
+        "framework",
+        "gitRepo",
+        "productionUrl",
+        "customDomains",
+        "latestDeployment",
+        "createdAt",
+        "updatedAt",
+        "buildCommand",
+        "outputDirectory",
+        "installCommand",
+        "rootDirectory",
+        "nodeVersion",
+        "productionBranch",
+        "autoDeployEnabled",
+        "screenshot",
+        "isPaused"
+      ],
+      "keyed_by_id": false
+    },
+    "deployments": {
+      "kind": "array",
+      "count": 20,
+      "record_fields": [
+        "id",
+        "projectId",
+        "url",
+        "productionUrl",
+        "status",
+        "environment",
+        "git",
+        "buildDuration",
+        "framework",
+        "nodeVersion",
+        "regions",
+        "output",
+        "buildLogs",
+        "createdAt",
+        "readyAt",
+        "creatorId"
+      ],
+      "keyed_by_id": false
+    },
+    "domains": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "projectId",
+        "name",
+        "apexDomain",
+        "verified",
+        "sslStatus",
+        "dnsRecords",
+        "redirectTo",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "environmentVariables": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "projectId",
+        "key",
+        "value",
+        "target",
+        "type",
+        "gitBranch",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "teamMembers": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "username",
+        "email",
+        "avatar",
+        "role",
+        "joinedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "activityEvents": {
+      "kind": "array",
+      "count": 20,
+      "record_fields": [
+        "id",
+        "type",
+        "description",
+        "userId",
+        "userName",
+        "userAvatar",
+        "projectId",
+        "projectName",
+        "metadata",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "integrations": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "slug",
+        "icon",
+        "description",
+        "installedAt",
+        "status",
+        "configuredProjects"
+      ],
+      "keyed_by_id": false
+    },
+    "ui": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

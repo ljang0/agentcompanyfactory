@@ -1,0 +1,397 @@
+{
+  "app_id": "clio_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activities",
+    "bills",
+    "calendarEvents",
+    "communications",
+    "contacts",
+    "currentUserId",
+    "documents",
+    "firmSettings",
+    "folders",
+    "matters",
+    "notes",
+    "notifications",
+    "recentContacts",
+    "recentMatters",
+    "tasks",
+    "timer",
+    "users"
+  ],
+  "observed": [
+    "activities",
+    "appIntegrations",
+    "bills",
+    "calendarEvents",
+    "communications",
+    "contacts",
+    "currentUserId",
+    "documents",
+    "firmSettings",
+    "folders",
+    "matters",
+    "notes",
+    "notifications",
+    "onlinePayments",
+    "recentContacts",
+    "recentMatters",
+    "tasks",
+    "timer",
+    "trustAccounts",
+    "trustTransactions",
+    "users"
+  ],
+  "undocumented_so_unseedable": [
+    "appIntegrations",
+    "onlinePayments",
+    "trustAccounts",
+    "trustTransactions"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "users": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "email",
+        "role",
+        "isAdmin",
+        "subscriberType",
+        "initials",
+        "avatarColor",
+        "hourlyRate",
+        "phone",
+        "jobTitle",
+        "groups",
+        "permissions"
+      ],
+      "keyed_by_id": false
+    },
+    "currentUserId": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "contacts": {
+      "kind": "array",
+      "count": 16,
+      "record_fields": [
+        "id",
+        "type",
+        "prefix",
+        "firstName",
+        "lastName",
+        "displayName",
+        "companyId",
+        "companyName",
+        "jobTitle",
+        "email",
+        "emailSecondary",
+        "phone",
+        "phoneType",
+        "website",
+        "address",
+        "dateOfBirth",
+        "maritalStatus",
+        "tags",
+        "customFields",
+        "billingInfo",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "matters": {
+      "kind": "array",
+      "count": 16,
+      "record_fields": [
+        "id",
+        "matterNumber",
+        "description",
+        "status",
+        "clientId",
+        "clientName",
+        "practiceArea",
+        "responsibleAttorneyId",
+        "responsibleAttorneyName",
+        "originatingAttorneyId",
+        "billingMethod",
+        "hourlyRate",
+        "budget",
+        "openDate",
+        "closeDate",
+        "pendingDate",
+        "statuteOfLimitations",
+        "courtName",
+        "caseNumber",
+        "stage",
+        "tags",
+        "relatedContacts",
+        "notes",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "activities": {
+      "kind": "array",
+      "count": 48,
+      "record_fields": [
+        "id",
+        "type",
+        "matterId",
+        "matterDescription",
+        "userId",
+        "userName",
+        "date",
+        "description",
+        "duration",
+        "rate",
+        "total",
+        "billable",
+        "billed",
+        "billId",
+        "category",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "tasks": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "matterId",
+        "matterDescription",
+        "assigneeId",
+        "assigneeName",
+        "assignerId",
+        "priority",
+        "status",
+        "dueDate",
+        "completedDate",
+        "taskListId",
+        "taskListName",
+        "isPrivate",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "calendarEvents": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "title",
+        "description",
+        "matterId",
+        "matterDescription",
+        "location",
+        "startDate",
+        "endDate",
+        "allDay",
+        "attendees",
+        "reminderMinutes",
+        "color",
+        "recurrence",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "bills": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "billNumber",
+        "matterId",
+        "matterDescription",
+        "clientId",
+        "clientName",
+        "status",
+        "issuedDate",
+        "dueDate",
+        "paidDate",
+        "subtotal",
+        "taxRate",
+        "taxAmount",
+        "totalDue",
+        "amountPaid",
+        "balance",
+        "lineItems",
+        "memo",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "documents": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "size",
+        "matterId",
+        "matterDescription",
+        "folderId",
+        "folderName",
+        "uploadedBy",
+        "uploadedByName",
+        "category",
+        "description",
+        "version",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "notes": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "matterId",
+        "matterDescription",
+        "subject",
+        "body",
+        "authorId",
+        "authorName",
+        "isPrivate",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "communications": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "type",
+        "direction",
+        "matterId",
+        "contactId",
+        "contactName",
+        "subject",
+        "body",
+        "from",
+        "to",
+        "date",
+        "read",
+        "attachments",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "type",
+        "title",
+        "message",
+        "referenceType",
+        "referenceId",
+        "read",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "timer": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "firmSettings": {
+      "kind": "object",
+      "count": 11,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "folders": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name"
+      ],
+      "keyed_by_id": false
+    },
+    "trustAccounts": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "bank",
+        "accountNumber",
+        "balance",
+        "type",
+        "status",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "trustTransactions": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "accountId",
+        "type",
+        "amount",
+        "description",
+        "matterId",
+        "contactId",
+        "date",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "onlinePayments": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "appIntegrations": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "icon",
+        "status",
+        "connectedAt",
+        "description",
+        "category"
+      ],
+      "keyed_by_id": false
+    },
+    "recentMatters": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "recentContacts": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

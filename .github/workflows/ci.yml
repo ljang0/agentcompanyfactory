@@ -1,0 +1,33 @@
+name: checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.10.2'
+          enable-cache: true
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y bubblewrap fonts-dejavu-core
+          uv sync --frozen --extra browser --python 3.13
+          uv run playwright install --with-deps chromium
+          uv run python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print("COMPANY_ENVS_BROWSER=" + p.chromium.executable_path); p.stop()' >> "$GITHUB_ENV"
+      - name: Lint
+        run: uv run ruff check src scripts tests
+      - name: Test
+        run: uv run pytest -q

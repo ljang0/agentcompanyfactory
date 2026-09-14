@@ -1,0 +1,316 @@
+{
+ "app_id": "google_analytics_mock",
+ "source": "posted_to_server",
+ "documented": [
+  "activeComparison",
+  "ageBrackets",
+  "audiences",
+  "cities",
+  "conversions",
+  "countries",
+  "currentUser",
+  "customDimensions",
+  "customMetrics",
+  "dailyMetrics",
+  "events",
+  "explorations",
+  "genders",
+  "languages",
+  "pages",
+  "property",
+  "realtimeData",
+  "recentlyAccessed",
+  "retentionCohorts",
+  "selectedDateRange",
+  "techPlatforms",
+  "trafficSources"
+ ],
+ "observed": [
+  "activeComparison",
+  "ageBrackets",
+  "audiences",
+  "cities",
+  "conversions",
+  "countries",
+  "currentUser",
+  "customDimensions",
+  "customMetrics",
+  "dailyMetrics",
+  "events",
+  "explorations",
+  "genders",
+  "languages",
+  "pages",
+  "property",
+  "realtimeData",
+  "recentlyAccessed",
+  "retentionCohorts",
+  "selectedDateRange",
+  "techPlatforms",
+  "trafficSources"
+ ],
+ "undocumented_so_unseedable": [],
+ "documented_but_app_keeps_none": [],
+ "agrees": true,
+ "shapes": {
+  "property": {
+   "kind": "object",
+   "count": 10,
+   "record_fields": null,
+   "keyed_by_id": false
+  },
+  "dailyMetrics": {
+   "kind": "object",
+   "count": 90,
+   "record_fields": [
+    "date",
+    "users",
+    "newUsers",
+    "returningUsers",
+    "sessions",
+    "engagedSessions",
+    "engagementRate",
+    "avgSessionDuration",
+    "avgEngagementTime",
+    "sessionsPerUser",
+    "screenPageViews",
+    "viewsPerSession",
+    "eventCount",
+    "conversions",
+    "totalRevenue",
+    "purchaseRevenue",
+    "ecommercePurchases",
+    "bounceRate"
+   ],
+   "keyed_by_id": true
+  },
+  "trafficSources": {
+   "kind": "array",
+   "count": 10,
+   "record_fields": [
+    "id",
+    "channelGroup",
+    "source",
+    "medium",
+    "campaign",
+    "users",
+    "newUsers",
+    "sessions",
+    "engagedSessions",
+    "engagementRate",
+    "avgEngagementTime",
+    "eventCount",
+    "conversions",
+    "totalRevenue"
+   ],
+   "keyed_by_id": false
+  },
+  "events": {
+   "kind": "array",
+   "count": 15,
+   "record_fields": [
+    "id",
+    "name",
+    "count",
+    "totalUsers",
+    "countPerUser",
+    "isKeyEvent",
+    "revenue"
+   ],
+   "keyed_by_id": false
+  },
+  "pages": {
+   "kind": "array",
+   "count": 15,
+   "record_fields": [
+    "id",
+    "pagePath",
+    "pageTitle",
+    "views",
+    "users",
+    "viewsPerUser",
+    "avgEngagementTime",
+    "eventCount",
+    "conversions"
+   ],
+   "keyed_by_id": false
+  },
+  "countries": {
+   "kind": "array",
+   "count": 10,
+   "record_fields": [
+    "id",
+    "country",
+    "countryCode",
+    "users",
+    "newUsers",
+    "sessions",
+    "engagementRate",
+    "avgEngagementTime",
+    "conversions",
+    "revenue"
+   ],
+   "keyed_by_id": false
+  },
+  "cities": {
+   "kind": "array",
+   "count": 15,
+   "record_fields": [
+    "id",
+    "city",
+    "country",
+    "users",
+    "sessions"
+   ],
+   "keyed_by_id": false
+  },
+  "languages": {
+   "kind": "array",
+   "count": 6,
+   "record_fields": [
+    "language",
+    "users",
+    "percentage"
+   ],
+   "keyed_by_id": false
+  },
+  "ageBrackets": {
+   "kind": "array",
+   "count": 6,
+   "record_fields": [
+    "bracket",
+    "users",
+    "percentage"
+   ],
+   "keyed_by_id": false
+  },
+  "genders": {
+   "kind": "array",
+   "count": 3,
+   "record_fields": [
+    "gender",
+    "users",
+    "percentage"
+   ],
+   "keyed_by_id": false
+  },
+  "techPlatforms": {
+   "kind": "object",
+   "count": 4,
+   "record_fields": null,
+   "keyed_by_id": false
+  },
+  "realtimeData": {
+   "kind": "object",
+   "count": 6,
+   "record_fields": null,
+   "keyed_by_id": false
+  },
+  "retentionCohorts": {
+   "kind": "array",
+   "count": 8,
+   "record_fields": [
+    "cohortDate",
+    "cohortSize",
+    "retention"
+   ],
+   "keyed_by_id": false
+  },
+  "explorations": {
+   "kind": "array",
+   "count": 3,
+   "record_fields": [
+    "id",
+    "name",
+    "type",
+    "createdAt",
+    "lastModified",
+    "owner",
+    "shared",
+    "config"
+   ],
+   "keyed_by_id": false
+  },
+  "customDimensions": {
+   "kind": "array",
+   "count": 2,
+   "record_fields": [
+    "id",
+    "name",
+    "scope",
+    "description",
+    "parameterName"
+   ],
+   "keyed_by_id": false
+  },
+  "customMetrics": {
+   "kind": "array",
+   "count": 1,
+   "record_fields": [
+    "id",
+    "name",
+    "scope",
+    "description",
+    "parameterName",
+    "unit"
+   ],
+   "keyed_by_id": false
+  },
+  "conversions": {
+   "kind": "array",
+   "count": 4,
+   "record_fields": [
+    "id",
+    "eventName",
+    "isKeyEvent",
+    "createdAt",
+    "count",
+    "value"
+   ],
+   "keyed_by_id": false
+  },
+  "audiences": {
+   "kind": "array",
+   "count": 5,
+   "record_fields": [
+    "id",
+    "name",
+    "description",
+    "membershipDuration",
+    "userCount",
+    "trigger"
+   ],
+   "keyed_by_id": false
+  },
+  "selectedDateRange": {
+   "kind": "object",
+   "count": 5,
+   "record_fields": null,
+   "keyed_by_id": false
+  },
+  "activeComparison": {
+   "kind": "null",
+   "count": null,
+   "record_fields": null,
+   "keyed_by_id": null
+  },
+  "recentlyAccessed": {
+   "kind": "array",
+   "count": 1,
+   "record_fields": [
+    "path",
+    "title",
+    "timestamp"
+   ],
+   "keyed_by_id": false
+  },
+  "currentUser": {
+   "kind": "object",
+   "count": 4,
+   "record_fields": null,
+   "keyed_by_id": false
+  }
+ },
+ "captured_at": "2026-09-10",
+ "note": "Observed 2026-09-10 while porting this app into the catalogue. Filed in the 2026-09-09 batch directory rather than a new dated one so it is read whether tests/test_app_schema_contract.py pins that single directory or globs every drift-* run; captured_at is the real date. Move it to experiments/interact/drift-20260910/ once the glob is the only reader."
+}

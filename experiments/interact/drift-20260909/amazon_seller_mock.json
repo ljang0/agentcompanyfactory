@@ -1,0 +1,268 @@
+{
+  "app_id": "amazon_seller_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "accountHealth",
+    "campaigns",
+    "coupons",
+    "fbaInventory",
+    "feedback",
+    "messages",
+    "notifications",
+    "orders",
+    "payments",
+    "pricingRules",
+    "products",
+    "returns",
+    "salesData",
+    "seller",
+    "settings"
+  ],
+  "observed": [
+    "accountHealth",
+    "campaigns",
+    "coupons",
+    "fbaInventory",
+    "feedback",
+    "messages",
+    "notifications",
+    "orders",
+    "payments",
+    "pricingRules",
+    "products",
+    "returns",
+    "salesData",
+    "seller",
+    "settings"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "seller": {
+      "kind": "object",
+      "count": 12,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "products": {
+      "kind": "array",
+      "count": 35,
+      "record_fields": [
+        "id",
+        "asin",
+        "sku",
+        "title",
+        "brand",
+        "category",
+        "price",
+        "salePrice",
+        "costOfGoods",
+        "fulfillmentChannel",
+        "status",
+        "condition",
+        "availableQuantity",
+        "reservedQuantity",
+        "inboundQuantity",
+        "buyBoxOwner",
+        "buyBoxPrice",
+        "lowestPrice",
+        "rating",
+        "reviewCount",
+        "bulletPoints",
+        "description",
+        "keywords",
+        "weight",
+        "dimensions",
+        "dateCreated",
+        "lastUpdated"
+      ],
+      "keyed_by_id": false
+    },
+    "orders": {
+      "kind": "array",
+      "count": 27,
+      "record_fields": [
+        "id",
+        "amazonOrderId",
+        "purchaseDate",
+        "lastUpdateDate",
+        "status",
+        "fulfillmentChannel",
+        "salesChannel",
+        "buyerName",
+        "buyerEmail",
+        "shippingAddress",
+        "items",
+        "orderTotal",
+        "shippingFee",
+        "amazonFees",
+        "netProceeds",
+        "carrier",
+        "trackingNumber",
+        "shipByDate",
+        "deliverByDate",
+        "shippedDate"
+      ],
+      "keyed_by_id": false
+    },
+    "messages": {
+      "kind": "array",
+      "count": 9,
+      "record_fields": [
+        "id",
+        "threadId",
+        "orderId",
+        "buyerName",
+        "subject",
+        "body",
+        "sender",
+        "timestamp",
+        "isRead",
+        "status",
+        "responseDeadline",
+        "attachments"
+      ],
+      "keyed_by_id": false
+    },
+    "returns": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "orderId",
+        "amazonOrderId",
+        "returnRequestDate",
+        "status",
+        "reason",
+        "buyerComments",
+        "items",
+        "sellerNotes",
+        "resolution"
+      ],
+      "keyed_by_id": false
+    },
+    "campaigns": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "status",
+        "dailyBudget",
+        "startDate",
+        "endDate",
+        "targetingType",
+        "bidStrategy",
+        "metrics",
+        "adGroups"
+      ],
+      "keyed_by_id": false
+    },
+    "accountHealth": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "feedback": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "orderId",
+        "buyerName",
+        "rating",
+        "comment",
+        "date",
+        "hasResponse",
+        "sellerResponse",
+        "removalRequested"
+      ],
+      "keyed_by_id": false
+    },
+    "salesData": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "payments": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "fbaInventory": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "coupons": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "type",
+        "discount",
+        "budget",
+        "budgetUsed",
+        "startDate",
+        "endDate",
+        "status",
+        "targetProducts",
+        "redemptions",
+        "clipCount"
+      ],
+      "keyed_by_id": false
+    },
+    "pricingRules": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "target",
+        "strategy",
+        "status",
+        "productsCount",
+        "minPrice",
+        "maxPrice"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "type",
+        "title",
+        "message",
+        "timestamp",
+        "isRead",
+        "actionUrl",
+        "category"
+      ],
+      "keyed_by_id": false
+    },
+    "settings": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": [
+        "emailOrderConfirmation",
+        "emailReturnRequest",
+        "emailBuyerMessage",
+        "emailInventoryAlert",
+        "emailPromotions",
+        "emailReports",
+        "emailFeedback",
+        "emailAdvertisingAlerts"
+      ],
+      "keyed_by_id": true
+    }
+  }
+}

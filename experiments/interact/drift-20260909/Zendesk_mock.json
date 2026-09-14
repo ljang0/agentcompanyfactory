@@ -1,0 +1,172 @@
+{
+  "app_id": "Zendesk_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "comments",
+    "currentUser",
+    "groups",
+    "macros",
+    "organizations",
+    "tags",
+    "tickets",
+    "ui",
+    "users",
+    "views"
+  ],
+  "observed": [
+    "comments",
+    "currentUser",
+    "groups",
+    "macros",
+    "organizations",
+    "tags",
+    "tickets",
+    "ui",
+    "users",
+    "views"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 19,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "name",
+        "email",
+        "role",
+        "phone",
+        "photo",
+        "organization_id",
+        "group_id",
+        "time_zone",
+        "locale",
+        "signature",
+        "notes",
+        "suspended",
+        "verified",
+        "active",
+        "created_at",
+        "updated_at",
+        "last_login_at",
+        "initials"
+      ],
+      "keyed_by_id": false
+    },
+    "organizations": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "domain_names",
+        "details",
+        "notes",
+        "group_id",
+        "shared_tickets",
+        "shared_comments",
+        "tags",
+        "created_at",
+        "updated_at"
+      ],
+      "keyed_by_id": false
+    },
+    "groups": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "default",
+        "created_at",
+        "updated_at"
+      ],
+      "keyed_by_id": false
+    },
+    "tickets": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "id",
+        "subject",
+        "description",
+        "status",
+        "type",
+        "priority",
+        "requester_id",
+        "submitter_id",
+        "assignee_id",
+        "group_id",
+        "organization_id",
+        "collaborator_ids",
+        "follower_ids",
+        "tags",
+        "via",
+        "satisfaction_rating",
+        "due_at",
+        "is_public",
+        "custom_fields",
+        "created_at",
+        "updated_at",
+        "comment_count",
+        "sla"
+      ],
+      "keyed_by_id": false
+    },
+    "comments": {
+      "kind": "object",
+      "count": 15,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "views": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "title",
+        "description",
+        "active",
+        "position",
+        "type",
+        "conditions"
+      ],
+      "keyed_by_id": false
+    },
+    "macros": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "title",
+        "description",
+        "active",
+        "position",
+        "actions",
+        "restriction"
+      ],
+      "keyed_by_id": false
+    },
+    "tags": {
+      "kind": "array",
+      "count": 33,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "ui": {
+      "kind": "object",
+      "count": 7,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "currentUser": {
+    "id": "user-current", "username": "Marisol_Vega", "discriminator": "4410", "avatar": "https://picsum.photos/seed/marisolvega/128/128",
+    "status": "online", "customStatus": "Reviewing pull requests", "aboutMe": "Engineering lead at Kestrel Robotics (fictional).",
+    "roles": ["role-admin"], "badges": ["server_owner"], "bannerColor": "#5865F2", "joinedAt": "2025-03-02T10:00:00Z", "isBot": false
+  },
+  "servers": {
+    "server-1": {
+      "id": "server-1", "name": "Kestrel Robotics Engineering", "icon": "https://picsum.photos/seed/kestrel-eng/64/64", "ownerId": "user-current",
+      "channels": ["ch-1", "ch-2", "ch-3"], "roles": ["role-admin", "role-eng"], "members": ["user-current", "user-2", "user-3"],
+      "categories": [
+        { "id": "cat-1", "name": "TEXT CHANNELS", "channelIds": ["ch-1", "ch-2"] },
+        { "id": "cat-2", "name": "VOICE CHANNELS", "channelIds": ["ch-3"] }
+      ],
+      "description": "Internal engineering chat for Kestrel Robotics", "boostCount": 0, "boostTier": 0
+    }
+  },
+  "channels": {
+    "ch-1": { "id": "ch-1", "serverId": "server-1", "name": "general", "type": "text", "category": "TEXT CHANNELS", "topic": "Team-wide announcements and chatter", "position": 0, "isNsfw": false, "slowMode": 0, "pinnedMessageIds": ["msg-1"], "lastMessageId": "msg-2", "unreadCount": 1, "permissions": {} },
+    "ch-2": { "id": "ch-2", "serverId": "server-1", "name": "firmware", "type": "text", "category": "TEXT CHANNELS", "topic": "Drone firmware releases", "position": 1, "isNsfw": false, "slowMode": 0, "pinnedMessageIds": [], "lastMessageId": "msg-3", "unreadCount": 0, "permissions": {} },
+    "ch-3": { "id": "ch-3", "serverId": "server-1", "name": "Standup", "type": "voice", "category": "VOICE CHANNELS", "topic": "", "position": 2, "isNsfw": false, "slowMode": 0, "pinnedMessageIds": [], "lastMessageId": null, "unreadCount": 0, "permissions": {} }
+  },
+  "messages": {
+    "msg-1": { "id": "msg-1", "channelId": "ch-1", "userId": "user-current", "content": "Welcome to the Kestrel engineering server. Release notes go in #firmware.", "timestamp": "2026-09-01T09:00:00Z", "editedTimestamp": null, "reactions": { "👍": ["user-2", "user-3"] }, "attachments": [], "embeds": [], "mentions": [], "pinned": true, "type": "default", "referencedMessageId": null, "threadId": null, "isEdited": false },
+    "msg-2": { "id": "msg-2", "channelId": "ch-1", "userId": "user-2", "content": "Flight test on the K-200 prototype is moved to Thursday.", "timestamp": "2026-09-05T15:30:00Z", "editedTimestamp": null, "reactions": {}, "attachments": [], "embeds": [], "mentions": [], "pinned": false, "type": "default", "referencedMessageId": null, "threadId": null, "isEdited": false },
+    "msg-3": { "id": "msg-3", "channelId": "ch-2", "userId": "user-3", "content": "Firmware 2.4.1 fixes the barometer drift. Please flash before Thursday.", "timestamp": "2026-09-05T16:10:00Z", "editedTimestamp": null, "reactions": {}, "attachments": [], "embeds": [], "mentions": [], "pinned": false, "type": "default", "referencedMessageId": null, "threadId": "thread-1", "isEdited": false }
+  },
+  "threads": {
+    "thread-1": {
+      "id": "thread-1", "channelId": "ch-2", "messageId": "msg-3", "name": "2.4.1 flashing issues", "ownerId": "user-3",
+      "messages": [
+        { "id": "thr-msg-1", "channelId": "thread-1", "userId": "user-2", "content": "Flash fails on unit 07, bootloader mismatch?", "timestamp": "2026-09-05T16:40:00Z", "editedTimestamp": null, "reactions": {}, "attachments": [], "embeds": [], "mentions": [], "pinned": false, "type": "default", "referencedMessageId": null, "threadId": "thread-1", "isEdited": false }
+      ],
+      "messageCount": 1, "memberCount": 2, "archived": false, "locked": false, "createdAt": "2026-09-05T16:40:00Z"
+    }
+  },
+  "users": {
+    "user-current": { "id": "user-current", "username": "Marisol_Vega", "discriminator": "4410", "avatar": "https://picsum.photos/seed/marisolvega/128/128", "status": "online", "customStatus": "Reviewing pull requests", "aboutMe": "Engineering lead at Kestrel Robotics (fictional).", "roles": ["role-admin"], "badges": ["server_owner"], "bannerColor": "#5865F2", "joinedAt": "2025-03-02T10:00:00Z", "isBot": false },
+    "user-2": { "id": "user-2", "username": "Dev_Okafor", "discriminator": "2287", "avatar": "https://picsum.photos/seed/devokafor/128/128", "status": "idle", "customStatus": null, "aboutMe": "Flight test engineer.", "roles": ["role-eng"], "badges": [], "bannerColor": "#3BA55D", "joinedAt": "2025-04-11T10:00:00Z", "isBot": false },
+    "user-3": { "id": "user-3", "username": "Hana_Lindqvist", "discriminator": "0931", "avatar": "https://picsum.photos/seed/hanalindqvist/128/128", "status": "dnd", "customStatus": "Heads down", "aboutMe": "Firmware.", "roles": ["role-eng"], "badges": [], "bannerColor": "#FAA61A", "joinedAt": "2025-05-20T10:00:00Z", "isBot": false }
+  },
+  "roles": {
+    "role-admin": { "id": "role-admin", "serverId": "server-1", "name": "Admin", "color": "#e74c3c", "position": 2, "permissions": ["ADMINISTRATOR"], "hoist": true, "mentionable": true },
+    "role-eng": { "id": "role-eng", "serverId": "server-1", "name": "Engineer", "color": "#3498db", "position": 1, "permissions": ["SEND_MESSAGES", "READ_MESSAGES"], "hoist": true, "mentionable": true }
+  },
+  "dmConversations": {
+    "dm-1": {
+      "id": "dm-1", "recipientId": "user-2",
+      "messages": [
+        { "id": "dm-msg-1", "channelId": "dm-1", "userId": "user-2", "content": "Can you approve the K-200 test plan today?", "timestamp": "2026-09-06T08:15:00Z", "editedTimestamp": null, "reactions": {}, "attachments": [], "embeds": [], "mentions": [], "mentionEveryone": false, "pinned": false, "type": "default", "referencedMessageId": null, "threadId": null, "isEdited": false }
+      ],
+      "lastMessageTimestamp": "2026-09-06T08:15:00Z", "unreadCount": 1
+    }
+  },
+  "activeVoiceChannel": null,
+  "dms": ["user-2"],
+  "ui": { "memberSidebarVisible": true, "threadPanelOpen": false, "activeThreadId": null, "searchQuery": "", "searchResults": [], "pinnedPanelOpen": false }
+}

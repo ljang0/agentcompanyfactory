@@ -1,0 +1,113 @@
+{
+  "app_id": "wechat_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "contacts",
+    "conversations",
+    "favorites",
+    "groups",
+    "messages",
+    "moments",
+    "user"
+  ],
+  "observed": [
+    "contacts",
+    "conversations",
+    "favorites",
+    "groups",
+    "messages",
+    "moments",
+    "user"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "user": {
+      "kind": "object",
+      "count": 9,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "contacts": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "userId",
+        "nickname",
+        "avatar",
+        "wechatId",
+        "phone",
+        "signature",
+        "region",
+        "gender",
+        "tag",
+        "isStar"
+      ],
+      "keyed_by_id": false
+    },
+    "conversations": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "contactId",
+        "lastMessage",
+        "lastTime",
+        "unreadCount",
+        "isGroup",
+        "isPinned",
+        "isMuted",
+        "draft"
+      ],
+      "keyed_by_id": false
+    },
+    "messages": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "moments": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "postId",
+        "userId",
+        "content",
+        "images",
+        "timestamp",
+        "likes",
+        "comments",
+        "location"
+      ],
+      "keyed_by_id": false
+    },
+    "groups": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "groupId",
+        "name",
+        "avatar",
+        "members",
+        "createdAt",
+        "createdBy",
+        "description",
+        "announcement"
+      ],
+      "keyed_by_id": false
+    },
+    "favorites": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "favoriteId",
+        "type",
+        "content",
+        "source",
+        "timestamp"
+      ],
+      "keyed_by_id": false
+    }
+  }
+}

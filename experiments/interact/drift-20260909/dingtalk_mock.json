@@ -1,0 +1,308 @@
+{
+  "app_id": "dingtalk_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activeConversationId",
+    "activeTab",
+    "announcements",
+    "approvalActiveTab",
+    "approvalForms",
+    "attendanceRecords",
+    "calendarDate",
+    "calendarEvents",
+    "calendarView",
+    "contactsActiveTab",
+    "conversations",
+    "currentUser",
+    "departments",
+    "dingActiveTab",
+    "dingMessages",
+    "drive",
+    "messages",
+    "searchQuery",
+    "settings",
+    "todoItems",
+    "users",
+    "workbenchApps"
+  ],
+  "observed": [
+    "activeConversationId",
+    "activeTab",
+    "announcements",
+    "approvalActiveTab",
+    "approvalForms",
+    "attendanceRecords",
+    "calendarDate",
+    "calendarEvents",
+    "calendarView",
+    "contactsActiveTab",
+    "conversations",
+    "currentUser",
+    "dailyReports",
+    "departments",
+    "dingActiveTab",
+    "dingMessages",
+    "drive",
+    "messages",
+    "searchQuery",
+    "settings",
+    "todoItems",
+    "users",
+    "workbenchApps"
+  ],
+  "undocumented_so_unseedable": [
+    "dailyReports"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 10,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 16,
+      "record_fields": [
+        "id",
+        "name",
+        "avatar",
+        "title",
+        "department",
+        "departmentId",
+        "phone",
+        "email",
+        "status",
+        "isCurrentUser"
+      ],
+      "keyed_by_id": false
+    },
+    "departments": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "parentId",
+        "memberCount",
+        "order",
+        "expanded"
+      ],
+      "keyed_by_id": false
+    },
+    "conversations": {
+      "kind": "array",
+      "count": 11,
+      "record_fields": [
+        "id",
+        "type",
+        "name",
+        "avatar",
+        "memberIds",
+        "lastMessage",
+        "unreadCount",
+        "isPinned",
+        "isMuted",
+        "isGroup",
+        "announcement",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "messages": {
+      "kind": "array",
+      "count": 33,
+      "record_fields": [
+        "id",
+        "conversationId",
+        "senderId",
+        "type",
+        "content",
+        "timestamp",
+        "readBy",
+        "isRecalled",
+        "replyTo"
+      ],
+      "keyed_by_id": false
+    },
+    "dingMessages": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "senderId",
+        "recipientIds",
+        "content",
+        "timestamp",
+        "confirmedBy",
+        "type"
+      ],
+      "keyed_by_id": false
+    },
+    "approvalForms": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "type",
+        "title",
+        "submitterId",
+        "status",
+        "createdAt",
+        "approverIds",
+        "currentApproverId",
+        "fields",
+        "comments"
+      ],
+      "keyed_by_id": false
+    },
+    "calendarEvents": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "title",
+        "startTime",
+        "endTime",
+        "location",
+        "creatorId",
+        "participantIds",
+        "color",
+        "isAllDay",
+        "reminder",
+        "recurrence",
+        "description"
+      ],
+      "keyed_by_id": false
+    },
+    "todoItems": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "title",
+        "description",
+        "completed",
+        "dueDate",
+        "creatorId",
+        "assigneeId",
+        "priority",
+        "conversationId",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "workbenchApps": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "id",
+        "name",
+        "icon",
+        "color",
+        "route",
+        "category",
+        "badge"
+      ],
+      "keyed_by_id": false
+    },
+    "announcements": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "title",
+        "content",
+        "authorId",
+        "publishedAt",
+        "readBy",
+        "isTop"
+      ],
+      "keyed_by_id": false
+    },
+    "attendanceRecords": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "drive": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "dailyReports": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "type",
+        "authorId",
+        "createdAt",
+        "todayWork",
+        "tomorrowPlan",
+        "problems",
+        "readBy",
+        "recipientIds"
+      ],
+      "keyed_by_id": false
+    },
+    "activeTab": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "activeConversationId": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    },
+    "searchQuery": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": ""
+    },
+    "dingActiveTab": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "approvalActiveTab": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "contactsActiveTab": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "calendarView": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "calendarDate": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "settings": {
+      "kind": "object",
+      "count": 7,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

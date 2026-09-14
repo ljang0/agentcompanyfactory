@@ -1,0 +1,401 @@
+{
+  "app_id": "ServiceNow_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activeModule",
+    "catalog",
+    "catalogCategories",
+    "catalogItems",
+    "changeRequests",
+    "cmdbItems",
+    "currentListFilters",
+    "currentSortColumn",
+    "currentSortDirection",
+    "currentUser",
+    "favorites",
+    "groups",
+    "history",
+    "incidents",
+    "journal",
+    "kbArticles",
+    "kbCategories",
+    "navigatorExpandedSections",
+    "navigatorFilter",
+    "notifications",
+    "problems",
+    "requestedItems",
+    "requests",
+    "shoppingCart",
+    "users"
+  ],
+  "observed": [
+    "activeModule",
+    "catalog",
+    "catalogCategories",
+    "catalogItems",
+    "changeRequests",
+    "cmdbItems",
+    "currentListFilters",
+    "currentSortColumn",
+    "currentSortDirection",
+    "currentUser",
+    "favorites",
+    "groups",
+    "history",
+    "incidents",
+    "journal",
+    "kbArticles",
+    "kbCategories",
+    "navigatorExpandedSections",
+    "navigatorFilter",
+    "notifications",
+    "problems",
+    "requestedItems",
+    "requests",
+    "shoppingCart",
+    "users"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 12,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "sys_id",
+        "user_name",
+        "first_name",
+        "last_name",
+        "email",
+        "title",
+        "department",
+        "phone",
+        "avatar",
+        "role",
+        "active",
+        "vip"
+      ],
+      "keyed_by_id": false
+    },
+    "groups": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "sys_id",
+        "name",
+        "description",
+        "manager",
+        "members",
+        "type",
+        "active"
+      ],
+      "keyed_by_id": false
+    },
+    "incidents": {
+      "kind": "array",
+      "count": 15,
+      "record_fields": [
+        "sys_id",
+        "number",
+        "caller_id",
+        "category",
+        "subcategory",
+        "contact_type",
+        "short_description",
+        "description",
+        "state",
+        "impact",
+        "urgency",
+        "priority",
+        "assignment_group",
+        "assigned_to",
+        "opened_at",
+        "opened_by",
+        "resolved_at",
+        "resolved_by",
+        "closed_at",
+        "closed_by",
+        "close_code",
+        "close_notes",
+        "updated_at",
+        "sla_due",
+        "cmdb_ci",
+        "knowledge"
+      ],
+      "keyed_by_id": false
+    },
+    "problems": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "sys_id",
+        "number",
+        "short_description",
+        "description",
+        "state",
+        "priority",
+        "impact",
+        "urgency",
+        "assignment_group",
+        "assigned_to",
+        "opened_at",
+        "opened_by",
+        "resolved_at",
+        "closed_at",
+        "cause_notes",
+        "fix_notes",
+        "known_error",
+        "related_incidents",
+        "updated_at",
+        "cmdb_ci"
+      ],
+      "keyed_by_id": false
+    },
+    "changeRequests": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "sys_id",
+        "number",
+        "type",
+        "short_description",
+        "description",
+        "state",
+        "priority",
+        "impact",
+        "risk",
+        "category",
+        "assignment_group",
+        "assigned_to",
+        "requested_by",
+        "opened_at",
+        "opened_by",
+        "start_date",
+        "end_date",
+        "close_code",
+        "close_notes",
+        "updated_at",
+        "cmdb_ci",
+        "approval",
+        "conflict_status"
+      ],
+      "keyed_by_id": false
+    },
+    "catalog": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "catalogCategories": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "sys_id",
+        "title",
+        "description",
+        "icon",
+        "parent",
+        "catalog",
+        "active",
+        "order"
+      ],
+      "keyed_by_id": false
+    },
+    "catalogItems": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "sys_id",
+        "name",
+        "short_description",
+        "description",
+        "category",
+        "price",
+        "delivery_time",
+        "active",
+        "order",
+        "popular",
+        "picture"
+      ],
+      "keyed_by_id": false
+    },
+    "requests": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "sys_id",
+        "number",
+        "requested_for",
+        "opened_at",
+        "opened_by",
+        "state",
+        "stage",
+        "items",
+        "updated_at"
+      ],
+      "keyed_by_id": false
+    },
+    "requestedItems": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "sys_id",
+        "number",
+        "request",
+        "cat_item",
+        "state",
+        "assigned_to",
+        "assignment_group",
+        "quantity",
+        "opened_at",
+        "updated_at",
+        "short_description"
+      ],
+      "keyed_by_id": false
+    },
+    "kbCategories": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "sys_id",
+        "label",
+        "parent_id",
+        "description",
+        "active",
+        "article_count"
+      ],
+      "keyed_by_id": false
+    },
+    "kbArticles": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "sys_id",
+        "number",
+        "short_description",
+        "text",
+        "category",
+        "author",
+        "published",
+        "workflow_state",
+        "rating",
+        "view_count",
+        "helpful_count",
+        "updated_at"
+      ],
+      "keyed_by_id": false
+    },
+    "cmdbItems": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "sys_id",
+        "name",
+        "sys_class_name",
+        "status",
+        "environment",
+        "category",
+        "assigned_to",
+        "department",
+        "location",
+        "ip_address",
+        "serial_number",
+        "manufacturer",
+        "model"
+      ],
+      "keyed_by_id": false
+    },
+    "journal": {
+      "kind": "array",
+      "count": 12,
+      "record_fields": [
+        "sys_id",
+        "element_id",
+        "element",
+        "value",
+        "sys_created_by",
+        "sys_created_on",
+        "name"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "sys_id",
+        "type",
+        "target_table",
+        "target_id",
+        "target_number",
+        "message",
+        "created_at",
+        "read",
+        "actor"
+      ],
+      "keyed_by_id": false
+    },
+    "shoppingCart": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "navigatorFilter": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": ""
+    },
+    "navigatorExpandedSections": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "activeModule": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "favorites": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "history": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "currentListFilters": {
+      "kind": "object",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "currentSortColumn": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    },
+    "currentSortDirection": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

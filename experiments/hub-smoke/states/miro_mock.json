@@ -1,0 +1,236 @@
+{
+  "currentUser": {
+    "id": "user_1",
+    "name": "Camille Duarte",
+    "email": "camille.duarte@orchardgate-studio.example",
+    "avatarUrl": null,
+    "initials": "CD",
+    "color": "#4262ff",
+    "role": "owner",
+    "teamId": "team_1"
+  },
+  "team": {
+    "id": "team_1",
+    "name": "Orchardgate Studio",
+    "memberCount": 3,
+    "members": [
+      {
+        "id": "user_1",
+        "name": "Camille Duarte",
+        "initials": "CD",
+        "avatarUrl": null
+      },
+      {
+        "id": "user_2",
+        "name": "Rafael Lindgren",
+        "initials": "RL",
+        "avatarUrl": null
+      },
+      {
+        "id": "user_3",
+        "name": "Tessa Nakamura",
+        "initials": "TN",
+        "avatarUrl": null
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "project_1",
+      "name": "Bakery App Redesign",
+      "teamId": "team_1",
+      "boardIds": [
+        "board_1"
+      ],
+      "createdAt": "2026-06-01T09:00:00Z"
+    },
+    {
+      "id": "project_2",
+      "name": "Studio Operations",
+      "teamId": "team_1",
+      "boardIds": [
+        "board_2"
+      ],
+      "createdAt": "2026-07-15T09:00:00Z"
+    }
+  ],
+  "boards": [
+    {
+      "id": "board_1",
+      "name": "Orchardgate Checkout Flow Retro",
+      "description": "Retrospective on the bakery checkout redesign sprint.",
+      "projectId": "project_1",
+      "teamId": "team_1",
+      "createdBy": "user_1",
+      "createdAt": "2026-08-20T10:00:00Z",
+      "modifiedAt": "2026-09-05T15:30:00Z",
+      "starred": true,
+      "thumbnailColor": "#7bc86c",
+      "viewedAt": "2026-09-07T08:10:00Z"
+    },
+    {
+      "id": "board_2",
+      "name": "Q4 Studio Hiring Plan",
+      "description": "Roles, timeline and budget for Q4 hires.",
+      "projectId": "project_2",
+      "teamId": "team_1",
+      "createdBy": "user_2",
+      "createdAt": "2026-08-28T11:00:00Z",
+      "modifiedAt": "2026-09-03T12:00:00Z",
+      "starred": false,
+      "thumbnailColor": "#4262ff",
+      "viewedAt": "2026-09-04T09:00:00Z"
+    }
+  ],
+  "boardItems": {
+    "board_1": [
+      {
+        "id": "item_1",
+        "type": "frame",
+        "boardId": "board_1",
+        "x": 400,
+        "y": 300,
+        "width": 700,
+        "height": 500,
+        "rotation": 0,
+        "parentId": null,
+        "locked": false,
+        "zIndex": 1,
+        "createdBy": "user_1",
+        "createdAt": "2026-08-20T10:05:00Z",
+        "modifiedAt": "2026-08-20T10:05:00Z",
+        "title": "What went well",
+        "style": {
+          "fillColor": "#f5f5f5"
+        },
+        "childrenIds": [
+          "item_2"
+        ],
+        "showContent": true
+      },
+      {
+        "id": "item_2",
+        "type": "sticky_note",
+        "boardId": "board_1",
+        "x": 250,
+        "y": 200,
+        "width": 200,
+        "height": 200,
+        "rotation": 0,
+        "parentId": "item_1",
+        "locked": false,
+        "zIndex": 2,
+        "createdBy": "user_2",
+        "createdAt": "2026-08-20T10:10:00Z",
+        "modifiedAt": "2026-08-20T10:10:00Z",
+        "content": "Guest checkout cut cart abandonment by 12%",
+        "shape": "square",
+        "tagIds": [
+          "tag_1"
+        ],
+        "style": {
+          "fillColor": "light_yellow",
+          "textAlign": "center",
+          "textAlignVertical": "middle",
+          "fontSize": "auto",
+          "bold": false
+        }
+      },
+      {
+        "id": "item_3",
+        "type": "text",
+        "boardId": "board_1",
+        "x": 400,
+        "y": 20,
+        "width": 400,
+        "height": 40,
+        "rotation": 0,
+        "parentId": null,
+        "locked": false,
+        "zIndex": 3,
+        "createdBy": "user_1",
+        "createdAt": "2026-08-20T10:00:00Z",
+        "modifiedAt": "2026-08-20T10:00:00Z",
+        "content": "Sprint 14 Retrospective",
+        "style": {
+          "fillColor": "transparent",
+          "fontFamily": "arial",
+          "fontSize": 24,
+          "color": "#1a1a1a",
+          "textAlign": "left",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "strikethrough": false
+        }
+      }
+    ],
+    "board_2": [
+      {
+        "id": "item_4",
+        "type": "shape",
+        "boardId": "board_2",
+        "x": 300,
+        "y": 200,
+        "width": 220,
+        "height": 100,
+        "rotation": 0,
+        "parentId": null,
+        "locked": false,
+        "zIndex": 1,
+        "createdBy": "user_2",
+        "createdAt": "2026-08-28T11:05:00Z",
+        "modifiedAt": "2026-08-28T11:05:00Z",
+        "shapeType": "round_rectangle",
+        "content": "Senior Product Designer - Oct",
+        "style": {
+          "fillColor": "#ffffff",
+          "fillOpacity": 1,
+          "borderColor": "#1a1a1a",
+          "borderWidth": 2,
+          "borderStyle": "normal",
+          "borderOpacity": 1,
+          "fontFamily": "arial",
+          "fontSize": 14,
+          "color": "#1a1a1a",
+          "textAlign": "center",
+          "textAlignVertical": "middle"
+        }
+      }
+    ]
+  },
+  "comments": {
+    "board_1": [
+      {
+        "id": "comment_1",
+        "boardId": "board_1",
+        "x": 260,
+        "y": 210,
+        "authorId": "user_3",
+        "resolved": false,
+        "createdAt": "2026-09-05T15:30:00Z",
+        "replies": [
+          {
+            "id": "reply_1",
+            "authorId": "user_1",
+            "content": "Confirmed with analytics; will add the chart.",
+            "createdAt": "2026-09-05T15:45:00Z"
+          }
+        ],
+        "content": "Can we link the analytics dashboard here?"
+      }
+    ],
+    "board_2": []
+  },
+  "tags": {
+    "board_1": [
+      {
+        "id": "tag_1",
+        "boardId": "board_1",
+        "title": "Win",
+        "color": "green"
+      }
+    ],
+    "board_2": []
+  }
+}

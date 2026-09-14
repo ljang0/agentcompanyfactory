@@ -1,0 +1,3330 @@
+{
+  "Zendesk_mock": {
+    "write": {
+      "collection": "tickets",
+      "marker": "Audit saved value 2026",
+      "route": "/tickets/new",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Search for a requester...",
+          "value": "an"
+        },
+        {
+          "op": "click",
+          "selector": ".form-autocomplete-item",
+          "index": 0
+        },
+        {
+          "op": "click",
+          "selector": ".form-autocomplete-item",
+          "index": 0
+        },
+        {
+          "op": "fill",
+          "placeholder": "Enter ticket subject...",
+          "value": "Audit saved value 2026"
+        },
+        {
+          "op": "fill",
+          "placeholder": "Describe the issue...",
+          "value": "Please confirm the service request."
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Submit as Open"
+        }
+      ]
+    },
+    "action_controls": {
+      "Create new ticket": [
+        {
+          "view": "route-002",
+          "name": "Submit as Open"
+        }
+      ],
+      "ADD_TICKET": [
+        {
+          "view": "route-002",
+          "name": "Submit as Open"
+        }
+      ]
+    },
+    "collection_selectors": {
+      "comments": ".comment-block"
+    },
+    "collection_views": {
+      "users": [
+        "route-004"
+      ],
+      "comments": [
+        "route-003"
+      ]
+    }
+  },
+  "clio_mock": {
+    "views": [
+      {
+        "name": "matters",
+        "route": "/matters",
+        "steps": []
+      },
+      {
+        "name": "contacts",
+        "route": "/contacts",
+        "steps": []
+      },
+      {
+        "name": "activities",
+        "route": "/activities",
+        "steps": []
+      },
+      {
+        "name": "tasks",
+        "route": "/tasks",
+        "steps": []
+      },
+      {
+        "name": "calendar",
+        "route": "/calendar",
+        "steps": []
+      },
+      {
+        "name": "billing",
+        "route": "/billing",
+        "steps": []
+      },
+      {
+        "name": "documents",
+        "route": "/documents",
+        "steps": []
+      },
+      {
+        "name": "communications",
+        "route": "/communications",
+        "steps": []
+      },
+      {
+        "name": "settings",
+        "route": "/settings",
+        "steps": []
+      },
+      {
+        "name": "new-task",
+        "route": "/tasks",
+        "steps": [
+          {
+            "op": "click",
+            "role": "button",
+            "name": "New Task"
+          }
+        ]
+      },
+      {
+        "name": "staff",
+        "route": "/settings",
+        "steps": [
+          {
+            "op": "click",
+            "text": "Users"
+          }
+        ]
+      }
+    ],
+    "write": {
+      "collection": "tasks",
+      "marker": "Audit saved value 2026",
+      "route": "/tasks",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "New Task"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Task name",
+          "value": "Audit saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Save"
+        }
+      ]
+    },
+    "collection_selectors": {
+      "calendarEvents": ".card div[style*=\"cursor: pointer\"]",
+      "folders": ".card > div[style*=\"cursor: pointer\"]",
+      "tasks": ".card > div[style*=\"border-bottom\"]"
+    },
+    "collection_views": {
+      "tasks": [
+        "tasks"
+      ],
+      "folders": [
+        "documents"
+      ],
+      "users": [
+        "staff"
+      ]
+    }
+  },
+  "gmail_mock": {
+    "views": [
+      {
+        "name": "compose",
+        "route": "/",
+        "steps": [
+          {
+            "op": "click",
+            "role": "button",
+            "name": "Compose"
+          }
+        ]
+      }
+    ],
+    "write": {
+      "collection": "emails",
+      "marker": "Audit saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Compose"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Subject",
+          "value": "Audit saved value 2026"
+        }
+      ]
+    },
+    "collection_selectors": {
+      "emails": "div.group.cursor-pointer",
+      "labels": "a[href*=\"/label/\"]",
+      "drafts": "div.group.cursor-pointer"
+    },
+    "collection_views": {
+      "drafts": [
+        "route-005"
+      ]
+    },
+    "action_controls": {
+      "Send email": [
+        {
+          "view": "compose",
+          "name": "Send"
+        }
+      ],
+      "Save draft": [
+        {
+          "view": "compose",
+          "name": "Save & close"
+        }
+      ]
+    }
+  },
+  "google_calendar_mock": {
+    "views": [
+      {
+        "name": "create-event",
+        "route": "/",
+        "steps": [
+          {
+            "op": "click",
+            "role": "button",
+            "name": "Create"
+          }
+        ]
+      }
+    ],
+    "write": {
+      "collection": "events",
+      "marker": "Audit saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Add title",
+          "value": "Audit saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Save"
+        }
+      ]
+    },
+    "collection_selectors": {
+      "calendars": "aside label, aside .group",
+      "events": "div[draggable]"
+    }
+  },
+  "google_docs_mock": {
+    "write": {
+      "collection": "documents",
+      "marker": "Audit saved value 2026",
+      "route": "/document/doc-1",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "selector": ".doc-title-input",
+          "value": "Audit saved value 2026"
+        },
+        {
+          "op": "press",
+          "selector": ".doc-title-input",
+          "value": "Enter"
+        }
+      ]
+    },
+    "views": [
+      {
+        "name": "doc-list",
+        "route": "/",
+        "steps": [
+          {
+            "op": "click",
+            "role": "button",
+            "name": "List view"
+          }
+        ]
+      },
+      {
+        "name": "editor",
+        "route": "/document/doc-1",
+        "steps": []
+      },
+      {
+        "name": "comments",
+        "route": "/document/doc-1",
+        "steps": [
+          {
+            "op": "click",
+            "role": "button",
+            "name": "Comments"
+          }
+        ]
+      },
+      {
+        "name": "share",
+        "route": "/document/doc-1",
+        "steps": [
+          {
+            "op": "click",
+            "role": "button",
+            "name": "Share"
+          }
+        ]
+      },
+      {
+        "name": "menu-File",
+        "route": "/document/doc-1",
+        "steps": [
+          {
+            "op": "click",
+            "text": "File"
+          }
+        ]
+      },
+      {
+        "name": "menu-Edit",
+        "route": "/document/doc-1",
+        "steps": [
+          {
+            "op": "click",
+            "text": "Edit"
+          }
+        ]
+      },
+      {
+        "name": "menu-View",
+        "route": "/document/doc-1",
+        "steps": [
+          {
+            "op": "click",
+            "text": "View"
+          }
+        ]
+      },
+      {
+        "name": "menu-Insert",
+        "route": "/document/doc-1",
+        "steps": [
+          {
+            "op": "click",
+            "text": "Insert"
+          }
+        ]
+      },
+      {
+        "name": "menu-Format",
+        "route": "/document/doc-1",
+        "steps": [
+          {
+            "op": "click",
+            "text": "Format"
+          }
+        ]
+      },
+      {
+        "name": "menu-Tools",
+        "route": "/document/doc-1",
+        "steps": [
+          {
+            "op": "click",
+            "text": "Tools"
+          }
+        ]
+      },
+      {
+        "name": "new-document",
+        "route": "/",
+        "steps": [
+          {
+            "op": "click",
+            "role": "button",
+            "name": "Blank"
+          }
+        ]
+      }
+    ],
+    "collection_selectors": {
+      "documents": "div.grid.grid-cols-12.group",
+      "comments": "div.space-y-3 > div",
+      "users": "div.space-y-1 > div"
+    },
+    "action_controls": {
+      "Create new document": [
+        {
+          "view": "home",
+          "name": "Blank"
+        }
+      ],
+      "Rename document": [
+        {
+          "view": "menu-File",
+          "name": "Rename"
+        }
+      ]
+    },
+    "collection_views": {
+      "users": [
+        "share"
+      ],
+      "comments": [
+        "comments"
+      ]
+    }
+  },
+  "google_drive_mock": {
+    "views": [
+      {
+        "name": "new-menu",
+        "route": "/",
+        "steps": [
+          {
+            "op": "click",
+            "role": "button",
+            "name": "New"
+          }
+        ]
+      }
+    ],
+    "write": {
+      "collection": "items",
+      "marker": "Audit saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "New"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "New folder"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "selector": "form input",
+          "value": "Audit saved value 2026",
+          "index": 1
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create"
+        }
+      ]
+    },
+    "collection_selectors": {
+      "items": "div.grid.grid-cols-12.group"
+    }
+  },
+  "google_sheets_mock": {
+    "views": [
+      {
+        "name": "editor",
+        "route": "/spreadsheet",
+        "steps": []
+      },
+      {
+        "name": "menu-File",
+        "route": "/spreadsheet",
+        "steps": [
+          {
+            "op": "click",
+            "text": "File"
+          }
+        ]
+      },
+      {
+        "name": "menu-Edit",
+        "route": "/spreadsheet",
+        "steps": [
+          {
+            "op": "click",
+            "text": "Edit"
+          }
+        ]
+      },
+      {
+        "name": "menu-View",
+        "route": "/spreadsheet",
+        "steps": [
+          {
+            "op": "click",
+            "text": "View"
+          }
+        ]
+      },
+      {
+        "name": "menu-Insert",
+        "route": "/spreadsheet",
+        "steps": [
+          {
+            "op": "click",
+            "text": "Insert"
+          }
+        ]
+      },
+      {
+        "name": "menu-Format",
+        "route": "/spreadsheet",
+        "steps": [
+          {
+            "op": "click",
+            "text": "Format"
+          }
+        ]
+      },
+      {
+        "name": "menu-Data",
+        "route": "/spreadsheet",
+        "steps": [
+          {
+            "op": "click",
+            "text": "Data"
+          }
+        ]
+      },
+      {
+        "name": "menu-Tools",
+        "route": "/spreadsheet",
+        "steps": [
+          {
+            "op": "click",
+            "text": "Tools"
+          }
+        ]
+      },
+      {
+        "name": "named-ranges",
+        "route": "/spreadsheet",
+        "steps": [
+          {
+            "op": "click",
+            "text": "Data"
+          },
+          {
+            "op": "click",
+            "text": "Named ranges"
+          }
+        ]
+      },
+      {
+        "name": "open-from-home",
+        "route": "/",
+        "steps": [
+          {
+            "op": "click",
+            "selector": "a[href*=\"spreadsheet\"]",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "write": {
+      "collection": "sheets",
+      "marker": "Audit saved value 2026",
+      "route": "/spreadsheet",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "selector": "input[aria-label=\"Formula bar\"]",
+          "value": "Audit saved value 2026"
+        },
+        {
+          "op": "press",
+          "selector": "input[aria-label=\"Formula bar\"]",
+          "value": "Enter"
+        }
+      ]
+    },
+    "collection_selectors": {
+      "sheets": "div.cursor-pointer.border-l.border-r",
+      "namedRanges": "[class*=named], div.border.rounded"
+    }
+  },
+  "hubspot_mock": {
+    "views": [
+      {
+        "name": "new-task",
+        "route": "/tasks",
+        "steps": [
+          {
+            "op": "click",
+            "role": "button",
+            "name": "Create Task"
+          }
+        ]
+      }
+    ],
+    "write": {
+      "collection": "tasks",
+      "marker": "Audit saved value 2026",
+      "route": "/tasks",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Task"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Task title",
+          "value": "Audit saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Task",
+          "index": 1
+        }
+      ]
+    },
+    "collection_views": {
+      "contacts": [
+        "route-001"
+      ],
+      "companies": [
+        "route-002"
+      ],
+      "deals": [
+        "route-003"
+      ],
+      "tickets": [
+        "route-004"
+      ],
+      "tasks": [
+        "route-005"
+      ],
+      "templates": [
+        "route-006"
+      ],
+      "meetings": [
+        "route-007"
+      ],
+      "forms": [
+        "route-008"
+      ]
+    }
+  },
+  "jira_mock": {
+    "views": [
+      {
+        "name": "create-issue",
+        "route": "/",
+        "steps": [
+          {
+            "op": "click",
+            "role": "button",
+            "name": "Create"
+          }
+        ]
+      },
+      {
+        "name": "issue",
+        "route": "/project/LFP/board",
+        "steps": [
+          {
+            "op": "click",
+            "text": "Firmware OTA fails on units below 20% battery"
+          }
+        ]
+      }
+    ],
+    "write": {
+      "collection": "issues",
+      "marker": "Audit saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Enter a brief summary",
+          "value": "Audit saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create",
+          "index": 1
+        }
+      ]
+    },
+    "action_controls": {
+      "ADD_ISSUE": [
+        {
+          "view": "create-issue",
+          "name": "Create"
+        }
+      ],
+      "Create new issue (via Create modal)": [
+        {
+          "view": "create-issue",
+          "name": "Create"
+        }
+      ]
+    },
+    "collection_views": {
+      "users": [],
+      "sprints": [
+        "route-002"
+      ],
+      "comments": [
+        "issue"
+      ]
+    },
+    "collection_selectors": {
+      "sprints": "span.font-semibold.text-sm",
+      "comments": "p.whitespace-pre-wrap"
+    }
+  },
+  "quickbooks_mock": {
+    "views": [
+      {
+        "name": "new-customer",
+        "route": "/sales/customers",
+        "steps": [
+          {
+            "op": "click",
+            "role": "button",
+            "name": "New customer"
+          }
+        ]
+      }
+    ],
+    "write": {
+      "collection": "customers",
+      "marker": "Audit saved value 2026",
+      "route": "/sales/customers",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "New customer"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "selector": "form input[required]",
+          "value": "Audit saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Add Customer"
+        }
+      ]
+    },
+    "collection_views": {
+      "customers": [
+        "route-006",
+        "route-012"
+      ],
+      "vendors": [
+        "route-011"
+      ],
+      "products": [
+        "route-007"
+      ],
+      "invoices": [
+        "route-005"
+      ],
+      "expenses": [
+        "route-009",
+        "route-010",
+        "route-011",
+        "route-019"
+      ],
+      "bills": [
+        "route-010",
+        "route-020"
+      ],
+      "transactions": [
+        "route-001",
+        "route-002",
+        "route-003"
+      ],
+      "employees": [
+        "route-024"
+      ],
+      "projects": [
+        "route-026"
+      ],
+      "reportCategories": [
+        "route-013"
+      ]
+    },
+    "action_controls": {
+      "Add a new customer via Sales \u2192 Customers \u2192 \"New customer\" button": [
+        {
+          "view": "new-customer",
+          "name": "Add Customer"
+        }
+      ]
+    },
+    "collection_selectors": {
+      "reportCategories": "button"
+    }
+  },
+  "salesforce_mock": {
+    "views": [
+      {
+        "name": "new-lead",
+        "route": "/leads?create=1",
+        "steps": []
+      },
+      {
+        "name": "new-dashboard",
+        "route": "/dashboards",
+        "steps": [
+          {
+            "op": "click",
+            "role": "button",
+            "name": "New Dashboard"
+          }
+        ]
+      }
+    ],
+    "write": {
+      "collection": "dashboards",
+      "marker": "Audit saved value 2026",
+      "route": "/dashboards",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "New Dashboard"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "selector": ".form-group input",
+          "value": "Audit saved value 2026",
+          "index": 0
+        },
+        {
+          "op": "select_option",
+          "selector": ".form-group select",
+          "value": "bar"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create"
+        }
+      ]
+    },
+    "action_controls": {
+      "Create dashboard": [
+        {
+          "view": "new-dashboard",
+          "name": "Create"
+        }
+      ]
+    },
+    "collection_views": {
+      "users": []
+    }
+  },
+  "slack_mock": {
+    "write": {
+      "collection": "messages",
+      "marker": "Audit saved value 2026",
+      "route": "/",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "selector": "[placeholder^='Message #'], [placeholder^='Message @']",
+          "index": 0,
+          "value": "Audit saved value 2026"
+        },
+        {
+          "op": "click",
+          "selector": "button.send-btn",
+          "index": 0
+        }
+      ]
+    },
+    "views": [
+      {
+        "name": "members",
+        "route": "/channel/general",
+        "steps": [
+          {
+            "op": "click",
+            "role": "button",
+            "name": "View members"
+          }
+        ]
+      },
+      {
+        "name": "message-menu",
+        "route": "/channel/general",
+        "steps": [
+          {
+            "op": "hover",
+            "selector": ".message",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "name": "-channel-author-events",
+        "route": "/channel/author-events",
+        "steps": []
+      },
+      {
+        "name": "-dm-dm_1",
+        "route": "/dm/dm_1",
+        "steps": []
+      },
+      {
+        "name": "-all-dms",
+        "route": "/all-dms",
+        "steps": []
+      },
+      {
+        "name": "-threads",
+        "route": "/threads",
+        "steps": []
+      },
+      {
+        "name": "-profile",
+        "route": "/profile",
+        "steps": []
+      }
+    ],
+    "collection_selectors": {
+      "channels": "a[href*=\"/channel/\"]",
+      "messages": ".message",
+      "users": ".cdp-member-item"
+    },
+    "action_controls": {
+      "Send message in channel": [
+        {
+          "view": "home",
+          "name": "Send message"
+        }
+      ]
+    }
+  },
+  "Canvas-LMS_mock": {
+    "write": {
+      "collection": "assignments",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Assignments"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Assignment"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Enter assignment name",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Save & Publish"
+        }
+      ]
+    }
+  },
+  "SAP_mock": {
+    "write": {
+      "collection": "salesOrders",
+      "marker": "Probe saved value 2026",
+      "route": "/app/create-sales-order",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Customer name",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Save"
+        }
+      ]
+    }
+  },
+  "ServiceNow_mock": {
+    "write": {
+      "collection": "journal",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "text": "Create New"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Add a comment...",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "index": 0,
+          "text": "Post"
+        }
+      ]
+    }
+  },
+  "airtable_mock": {
+    "write": {
+      "collection": "tables",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Add field"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "role": "textbox",
+          "name": "",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create"
+        }
+      ]
+    }
+  },
+  "asana_mock": {
+    "write": {
+      "collection": "projects",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Project"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Enter project name",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "press",
+          "value": "Enter"
+        }
+      ]
+    }
+  },
+  "datadog_mock": {
+    "write": {
+      "collection": "dashboards",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "+ New Dashboard"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Dashboard title",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create"
+        }
+      ]
+    }
+  },
+  "dingtalk_mock": {
+    "write": {
+      "collection": "searchQuery",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "\u641c\u7d22\u8054\u7cfb\u4eba\u3001\u7fa4\u7ec4\u3001\u804a\u5929\u8bb0\u5f55",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "press",
+          "value": "Enter"
+        }
+      ]
+    }
+  },
+  "discord_mock": {
+    "write": {
+      "collection": "pendingFriends",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Add Friend"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "You can add friends with their Xiscord username.",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Send Friend Request"
+        }
+      ]
+    }
+  },
+  "docusign_mock": {
+    "write": {
+      "collection": "envelopes",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Start"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Send an Envelope"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Add a message for all recipients...",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Add"
+        }
+      ]
+    }
+  },
+  "facebook_mock": {
+    "write": {
+      "collection": "groups",
+      "marker": "Probe saved value 2026",
+      "route": "/groups",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create New Group"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "What is your group called?",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Group"
+        }
+      ]
+    }
+  },
+  "feishu_mock": {
+    "write": {
+      "collection": "conversations",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "\u53d1\u7ed9 Meridian Freight Dispatch Desk",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "press",
+          "value": "Enter"
+        }
+      ]
+    }
+  },
+  "github_mock": {
+    "write": {
+      "collection": "issues",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "link",
+          "name": "Issues"
+        },
+        {
+          "op": "click",
+          "role": "link",
+          "name": "New Issue"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Title",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Submit new issue"
+        }
+      ]
+    }
+  },
+  "gitlab_mock": {
+    "write": {
+      "collection": "projects",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "New Project"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "my-awesome-project",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Project"
+        }
+      ]
+    }
+  },
+  "lattice_mock": {
+    "write": {
+      "collection": "goals",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create goal"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "+ Create goal"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "What do you want to achieve?",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Goal"
+        }
+      ]
+    }
+  },
+  "linear_mock": {
+    "write": {
+      "collection": "issues",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create issue"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Issue title",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create issue",
+          "index": 1
+        }
+      ]
+    }
+  },
+  "mixpanel_mock": {
+    "write": {
+      "collection": "cohorts",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Cohorts"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Cohort"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "e.g., Active Purchasers",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Cohort",
+          "index": 1
+        }
+      ]
+    }
+  },
+  "monday_mock": {
+    "write": {
+      "collection": "items",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "+ Add",
+          "index": 0
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Enter item name...",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "+ Add"
+        }
+      ]
+    }
+  },
+  "outlook_web_mock": {
+    "write": {
+      "collection": "folders",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create new folder"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Folder name",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create"
+        }
+      ]
+    }
+  },
+  "postman_mock": {
+    "write": {
+      "collection": "currentRequest",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "+ Add new"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Key",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Collection"
+        }
+      ]
+    }
+  },
+  "reddit_mock": {
+    "write": {
+      "collection": "posts",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "link",
+          "name": "Create Post"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Title",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Post",
+          "index": 1
+        }
+      ]
+    }
+  },
+  "shopify_admin_mock": {
+    "write": {
+      "collection": "products",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "link",
+          "name": "Add product"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Short sleeve t-shirt",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Save"
+        }
+      ]
+    }
+  },
+  "trello_mock": {
+    "write": {
+      "collection": "boards",
+      "marker": "Probe saved value 2026",
+      "route": "/boards",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create new board"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Board title",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Board"
+        }
+      ]
+    }
+  },
+  "twitter_mock": {
+    "write": {
+      "collection": "tweets",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "What is happening?!",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Post"
+        }
+      ]
+    }
+  },
+  "woocommerce_mock": {
+    "write": {
+      "collection": "products",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "New"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Product"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Product name",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Publish"
+        }
+      ]
+    }
+  },
+  "zillow_mock": {
+    "write": {
+      "collection": "filters",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Address, City, ZIP, Neighborhood",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Save Search"
+        }
+      ]
+    }
+  },
+  "12306_mock": {
+    "write": {
+      "collection": "passengers",
+      "marker": "Probe saved value 2026",
+      "route": "/passengers",
+      "prepare": [
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 3
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "\u8bf7\u8f93\u5165\u59d3\u540d",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 7
+        }
+      ]
+    }
+  },
+  "Expensify_mock": {
+    "write": {
+      "collection": "reports",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "link",
+          "name": "Reports"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "New Report"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 2,
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Report"
+        }
+      ]
+    }
+  },
+  "adp_mock": {
+    "write": {
+      "collection": "dependents",
+      "marker": "Probe saved value 2026",
+      "route": "/myself/dependents",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "+ Add Dependent"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "***-**-XXXX",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Save"
+        }
+      ]
+    }
+  },
+  "aliyun_mock": {
+    "write": {
+      "collection": "tickets",
+      "marker": "Probe saved value 2026",
+      "route": "/tickets/create",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "\u8bf7\u7b80\u8981\u63cf\u8ff0\u60a8\u9047\u5230\u7684\u95ee\u9898",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "select_option",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 4,
+          "value": "\u4f4e"
+        },
+        {
+          "op": "fill",
+          "placeholder": "\u8bf7\u8be6\u7ec6\u63cf\u8ff0\u60a8\u9047\u5230\u7684\u95ee\u9898\uff0c\u5305\u62ec\uff1a\n1. \u95ee\u9898\u73b0\u8c61\n2. \u5f71\u54cd\u8303\u56f4\n3. \u5df2\u5c1d\u8bd5\u7684\u89e3\u51b3\u65b9\u6848",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "\u63d0\u4ea4\u5de5\u5355"
+        }
+      ]
+    }
+  },
+  "amazon_mock": {
+    "write": {
+      "collection": "reviews",
+      "marker": "Probe saved value 2026",
+      "route": "/orders",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Write a product review"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Write a customer review"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "What did you like or dislike? (min 10 characters)",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "fill",
+          "placeholder": "What's most important to know?",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "fill",
+          "placeholder": "What did you like or dislike? (min 10 characters)",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Submit Review"
+        }
+      ]
+    }
+  },
+  "amazon_seller_mock": {
+    "write": {
+      "collection": "products",
+      "marker": "Probe saved value 2026",
+      "route": "/catalog/add-product",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Enter ASIN",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Save as Draft"
+        }
+      ]
+    }
+  },
+  "aws_console_mock": {
+    "write": {
+      "collection": "s3",
+      "marker": "Probe saved value 2026",
+      "route": "/s3",
+      "prepare": [
+        {
+          "op": "click",
+          "selector": "button,a,[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 20
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "my-new-bucket",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "selector": "button,a,[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 27
+        }
+      ]
+    }
+  },
+  "bamboohr_mock": {
+    "write": {
+      "collection": "jobOpenings",
+      "marker": "Probe saved value 2026",
+      "route": "/hiring",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "New Job Opening"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "e.g. Senior Software Engineer",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Job Opening"
+        }
+      ]
+    }
+  },
+  "circleci_mock": {
+    "write": {
+      "collection": "resourceClasses",
+      "marker": "Probe saved value 2026",
+      "route": "/runners",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Resource Class"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "acme-corp/my-runner",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create"
+        }
+      ]
+    }
+  },
+  "contractbook_mock": {
+    "write": {
+      "collection": "tasks",
+      "marker": "Probe saved value 2026",
+      "route": "/tasks",
+      "prepare": [
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 7
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Task title",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 13
+        }
+      ]
+    }
+  },
+  "google_ads_mock": {
+    "write": {
+      "collection": "campaigns",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Admin"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 2,
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Save changes"
+        }
+      ]
+    }
+  },
+  "greenhouse_mock": {
+    "write": {
+      "collection": "jobs",
+      "marker": "Probe saved value 2026",
+      "route": "/jobs",
+      "prepare": [
+        {
+          "op": "click",
+          "selector": "button,a,[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 8
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "e.g. Senior Software Engineer",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "select_option",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 1,
+          "value": "open"
+        },
+        {
+          "op": "select_option",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 2,
+          "value": "dept-1"
+        },
+        {
+          "op": "select_option",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 3,
+          "value": "office-1"
+        },
+        {
+          "op": "fill",
+          "placeholder": "e.g. Senior Software Engineer",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "select_option",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 5,
+          "value": "dept-1"
+        },
+        {
+          "op": "select_option",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 6,
+          "value": "office-1"
+        },
+        {
+          "op": "select_option",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 7,
+          "value": "user-3"
+        },
+        {
+          "op": "fill",
+          "placeholder": "Describe the role and responsibilities...",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "fill",
+          "placeholder": "5+ years of experience...\nProficiency in React...\nStrong communication skills...",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "selector": "button,a,[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 11
+        }
+      ]
+    }
+  },
+  "gusto_mock": {
+    "write": {
+      "collection": "company",
+      "marker": "Probe saved value 2026",
+      "route": "/company",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "+ Add location"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "e.g. HQ, Branch Office",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Add location"
+        }
+      ]
+    }
+  },
+  "hotjar_mock": {
+    "write": {
+      "collection": "surveys",
+      "marker": "Probe saved value 2026",
+      "route": "/surveys/new",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 0,
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create survey"
+        }
+      ]
+    }
+  },
+  "hubspot_marketing_mock": {
+    "write": {
+      "collection": "reports",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Add report"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "e.g. Email Open Rate",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Add to dashboard"
+        }
+      ]
+    }
+  },
+  "instacart_mock": {
+    "write": {
+      "collection": "orders",
+      "marker": "Probe saved value 2026",
+      "route": "/order-status",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Message your shopper...",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "press",
+          "value": "Enter"
+        }
+      ]
+    }
+  },
+  "instagram_mock": {
+    "write": {
+      "collection": "posts",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 0,
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Post"
+        }
+      ]
+    }
+  },
+  "klaviyo_mock": {
+    "write": {
+      "collection": "flows",
+      "marker": "Probe saved value 2026",
+      "route": "/flows",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create flow"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Enter flow name",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Flow"
+        }
+      ]
+    }
+  },
+  "linkedin_mock": {
+    "write": {
+      "collection": "chats",
+      "marker": "Probe saved value 2026",
+      "route": "/messaging",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Write a message... (Enter to send, Shift+Enter for new line)",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Send"
+        }
+      ]
+    }
+  },
+  "lucidchart_mock": {
+    "write": {
+      "collection": "folders",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Folder"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 1,
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "press",
+          "value": "Enter"
+        }
+      ]
+    }
+  },
+  "meta_ads_mock": {
+    "write": {
+      "collection": "adSets",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "New ad set or ad"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Enter ad set name",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "select_option",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 4,
+          "value": "camp_bt001"
+        },
+        {
+          "op": "fill",
+          "placeholder": "Enter ad set name",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Continue"
+        }
+      ]
+    }
+  },
+  "microsoft_teams_mock": {
+    "write": {
+      "collection": "chats",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Type a new message",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "selector": "button,a,[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 35
+        }
+      ]
+    }
+  },
+  "notion_mock": {
+    "write": {
+      "collection": "pages",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Untitled",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "selector": "button,a,[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 43
+        }
+      ]
+    }
+  },
+  "paypal_mock": {
+    "write": {
+      "collection": "invoices",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "link",
+          "name": "Create Invoice\n\nGet paid by clients"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Invoice"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Description",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "fill",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 0,
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "fill",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 1,
+          "value": "probe.audit@example.com"
+        },
+        {
+          "op": "select_option",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 3,
+          "value": "Due on receipt"
+        },
+        {
+          "op": "fill",
+          "placeholder": "Description",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "fill",
+          "placeholder": "Price",
+          "value": "12"
+        },
+        {
+          "op": "fill",
+          "placeholder": "Thank you for your business",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Send Invoice"
+        }
+      ]
+    }
+  },
+  "pinterest_mock": {
+    "write": {
+      "collection": "boards",
+      "marker": "Probe saved value 2026",
+      "route": "/board/b1",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Section"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Section Name",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Add"
+        }
+      ]
+    }
+  },
+  "sentry_mock": {
+    "write": {
+      "collection": "alertRules",
+      "marker": "Probe saved value 2026",
+      "route": "/alerts/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Alert"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "e.g., High error rate on checkout",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Rule"
+        }
+      ]
+    }
+  },
+  "taobao_seller_mock": {
+    "write": {
+      "collection": "orders",
+      "marker": "Probe saved value 2026",
+      "route": "/orders/order_001",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "\u7f16\u8f91"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "\u8f93\u5165\u5356\u5bb6\u5907\u6ce8...",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "\u4fdd\u5b58"
+        }
+      ]
+    }
+  },
+  "vercel_mock": {
+    "write": {
+      "collection": "activityEvents",
+      "marker": "Probe saved value 2026",
+      "route": "/domains",
+      "prepare": [
+        {
+          "op": "click",
+          "selector": "button,a,[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 6
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "example.com",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "selector": "button,a,[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 8
+        }
+      ]
+    }
+  },
+  "weibo_mock": {
+    "write": {
+      "collection": "posts",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "\u6709\u4ec0\u4e48\u65b0\u9c9c\u4e8b\u60f3\u544a\u8bc9\u5927\u5bb6\uff1f",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "\u53d1\u5e03"
+        }
+      ]
+    }
+  },
+  "workday_mock": {
+    "write": {
+      "collection": "employees",
+      "marker": "Probe saved value 2026",
+      "route": "/profile",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "+ Add emergency contact"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Full name",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Save Contacts"
+        }
+      ]
+    }
+  },
+  "xiaohongshu_mock": {
+    "write": {
+      "collection": "users",
+      "marker": "Probe saved value 2026",
+      "route": "/user/u1",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "\u7f16\u8f91\u8d44\u6599"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "\u57ce\u5e02",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "\u4fdd\u5b58"
+        }
+      ]
+    }
+  },
+  "zhihu_mock": {
+    "write": {
+      "collection": "questions",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "\u63d0\u95ee"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "\u8f93\u5165\u95ee\u9898\u6807\u9898\uff08\u6700\u591a50\u4e2a\u5b57\uff09",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "\u53d1\u5e03\u95ee\u9898"
+        }
+      ]
+    }
+  },
+  "zoom_web_mock": {
+    "write": {
+      "collection": "contacts",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "link",
+          "name": "Contacts"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Add Contact"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 0,
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "fill",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 0,
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "fill",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 1,
+          "value": "probe.audit@example.com"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Add"
+        }
+      ]
+    }
+  },
+  "mailchimp_mock": {
+    "write": {
+      "collection": "tags",
+      "marker": "Probe saved value 2026",
+      "route": "/audience",
+      "prepare": [
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 8
+        },
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 14
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Enter tag name",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 23
+        }
+      ]
+    }
+  },
+  "stripe_dashboard_mock": {
+    "write": {
+      "collection": "payments",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 1
+        },
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 2
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Payment for...",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "fill",
+          "placeholder": "0.00",
+          "value": "12"
+        },
+        {
+          "op": "select_option",
+          "selector": "input,textarea,select,[contenteditable=\"true\"]",
+          "index": 2,
+          "value": "cus_jlb001"
+        },
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 28
+        }
+      ]
+    }
+  },
+  "canva_mock": {
+    "write": {
+      "collection": "elements",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Text"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Add body text"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Edit text...",
+          "value": "Probe saved value 2026"
+        }
+      ]
+    }
+  },
+  "canvas_mock": {
+    "write": {
+      "collection": "canvasJSON",
+      "marker": "#2026ab",
+      "route": "/editor",
+      "prepare": [
+        {
+          "op": "click",
+          "selector": "ul > li",
+          "index": 0
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "selector": "input[type=text]",
+          "index": 0,
+          "value": "#2026ab"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Save"
+        }
+      ]
+    }
+  },
+  "confluence_mock": {
+    "write": {
+      "collection": "comments",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "selector": "a[href*='/pages/']",
+          "index": 0
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Write a comment...",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Post"
+        }
+      ]
+    }
+  },
+  "google_analytics_mock": {
+    "write": {
+      "collection": "customDimensions",
+      "marker": "Probe saved value 2026",
+      "route": "/admin/custom-definitions",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create custom dimension"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "e.g., user_membership_level",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "fill",
+          "placeholder": "e.g., membership_level",
+          "value": "probe_saved_value_2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create"
+        }
+      ]
+    }
+  },
+  "openreview_mock": {
+    "write": {
+      "collection": "reviews",
+      "marker": "Probe saved value 2026",
+      "route": "/forum?id=noteId1",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Reply"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Write your comment...",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Submit Comment"
+        }
+      ]
+    }
+  },
+  "TradingView_mock": {
+    "write": {
+      "collection": "alerts",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create Alert (Alt+A)"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Alert name...",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create"
+        }
+      ]
+    }
+  },
+  "tripadvisor_mock": {
+    "write": {
+      "collection": "trips",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 12
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Where to?",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 20
+        },
+        {
+          "op": "fill",
+          "placeholder": "Trip name",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 21
+        }
+      ]
+    }
+  },
+  "wandb_mock": {
+    "write": {
+      "collection": "projects",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "New Project"
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "my-project",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create"
+        }
+      ]
+    }
+  },
+  "westlaw_mock": {
+    "write": {
+      "collection": "folders",
+      "marker": "Probe saved value 2026",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 3
+        },
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 10
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Folder name...",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 11
+        }
+      ]
+    }
+  },
+  "youtube_mock": {
+    "write": {
+      "collection": "playlists",
+      "marker": "Probe saved value 2026",
+      "route": "/liked",
+      "prepare": [
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 24
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Add a comment...",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 32
+        },
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 68
+        },
+        {
+          "op": "fill",
+          "placeholder": "Playlist name",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "selector": "button,a,input[type=\"submit\"],input[type=\"button\"],[role=\"button\"],[role=\"menuitem\"],[role=\"tab\"],.cursor-pointer",
+          "index": 69
+        }
+      ]
+    }
+  },
+  "amplitude_mock": {
+    "write": {
+      "collection": "cohorts",
+      "marker": "Probe saved value 2026",
+      "route": "/cohorts/new",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Enter cohort name...",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Save as Cohort"
+        }
+      ]
+    }
+  },
+  "azure_mock": {
+    "write": {
+      "collection": "resourceGroups",
+      "marker": "Probe-saved-value-2026",
+      "route": "/resource-groups/create",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Enter a resource group name",
+          "value": "Probe-saved-value-2026"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Review + create"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Create"
+        }
+      ]
+    }
+  },
+  "wechat_mock": {
+    "write": {
+      "collection": "messages",
+      "marker": "Probe saved value 2026",
+      "route": "/messages",
+      "prepare": [
+        {
+          "op": "click",
+          "selector": ".conversation-item",
+          "index": 0
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "\u53d1\u9001\u6d88\u606f",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "press",
+          "placeholder": "\u53d1\u9001\u6d88\u606f",
+          "value": "Enter"
+        }
+      ]
+    }
+  },
+  "cloudflare_mock": {
+    "write": {
+      "collection": "zones",
+      "marker": "probe-saved-2026.example",
+      "route": "/",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Add site",
+          "index": 1
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "example.com",
+          "value": "probe-saved-2026.example"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Add site",
+          "index": 2
+        }
+      ]
+    }
+  },
+  "ebay_mock": {
+    "write": {
+      "collection": "listings",
+      "marker": "Probe saved value 2026",
+      "route": "/sell",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "What are you selling? (3\u201380 characters)",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "fill",
+          "placeholder": "Describe your item in detail (condition, features, included accessories, etc.)",
+          "value": "A sturdy item in good condition, ready to ship."
+        },
+        {
+          "op": "fill",
+          "placeholder": "0.00",
+          "value": "24.50"
+        },
+        {
+          "op": "fill",
+          "placeholder": "Enter 0 for free shipping",
+          "value": "0"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "List Item"
+        }
+      ]
+    }
+  },
+  "coinbase_mock": {
+    "write": {
+      "collection": "transactions",
+      "marker": "13.5724",
+      "route": "/trade",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "0.00",
+          "value": "13.5724"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Preview Buy Order"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Confirm Buy"
+        }
+      ]
+    }
+  },
+  "robinhood_mock": {
+    "write": {
+      "collection": "transactions",
+      "marker": "\"quantity\": 13,",
+      "route": "/portfolio",
+      "prepare": [
+        {
+          "op": "click",
+          "selector": "a[href*='/stock/']",
+          "index": 0
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "selector": "input[type=number]",
+          "value": "13"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Review Order"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Submit Buy"
+        }
+      ]
+    }
+  },
+  "booking_com_mock": {
+    "write": {
+      "collection": "bookings",
+      "marker": "Probesaved2026",
+      "route": "/search",
+      "prepare": [
+        {
+          "op": "click",
+          "selector": "a[href*='/property/']",
+          "index": 0
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Reserve",
+          "index": 0
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Enter your first name",
+          "value": "Probesaved2026"
+        },
+        {
+          "op": "fill",
+          "placeholder": "Enter your last name",
+          "value": "Harbourline"
+        },
+        {
+          "op": "fill",
+          "placeholder": "Enter your email",
+          "value": "probe.saved@cort-analogue.example"
+        },
+        {
+          "op": "fill",
+          "placeholder": "Enter your phone number",
+          "value": "5555550137"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Complete booking"
+        }
+      ]
+    }
+  },
+  "expedia_mock": {
+    "write": {
+      "collection": "bookings",
+      "marker": "Probesaved2026",
+      "route": "/hotels/hotel_1",
+      "prepare": [
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Reserve",
+          "index": 0
+        }
+      ],
+      "steps": [
+        {
+          "op": "fill",
+          "selector": ".form-input",
+          "index": 0,
+          "value": "Probesaved2026"
+        },
+        {
+          "op": "fill",
+          "selector": ".form-input",
+          "index": 1,
+          "value": "Harbourline"
+        },
+        {
+          "op": "fill",
+          "selector": ".form-input",
+          "index": 2,
+          "value": "probe.saved@cort-analogue.example"
+        },
+        {
+          "op": "fill",
+          "selector": ".form-input",
+          "index": 3,
+          "value": "5555550137"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Continue to payment"
+        },
+        {
+          "op": "fill",
+          "placeholder": "1234 5678 9012 3456",
+          "value": "4111111111111111"
+        },
+        {
+          "op": "fill",
+          "placeholder": "MM/YY",
+          "value": "12/29"
+        },
+        {
+          "op": "fill",
+          "placeholder": "123",
+          "value": "456"
+        },
+        {
+          "op": "fill",
+          "selector": ".form-input",
+          "index": 3,
+          "value": "Probesaved2026 Harbourline"
+        },
+        {
+          "op": "fill",
+          "selector": ".form-input",
+          "index": 4,
+          "value": "118 Harbourline Row"
+        },
+        {
+          "op": "fill",
+          "selector": ".form-input",
+          "index": 5,
+          "value": "Cape Wexley"
+        },
+        {
+          "op": "select_option",
+          "selector": ".form-select",
+          "index": 0,
+          "value": "NY"
+        },
+        {
+          "op": "fill",
+          "selector": ".form-input",
+          "index": 6,
+          "value": "10014"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Review booking"
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Complete booking"
+        }
+      ]
+    }
+  },
+  "epic-health_mock": {
+    "write": {
+      "collection": "messages",
+      "marker": "Probe saved value 2026",
+      "route": "/messages/compose",
+      "prepare": [],
+      "steps": [
+        {
+          "op": "fill",
+          "placeholder": "Enter subject...",
+          "value": "Probe saved value 2026"
+        },
+        {
+          "op": "fill",
+          "placeholder": "Type your message...",
+          "value": "Please confirm the appointment."
+        },
+        {
+          "op": "click",
+          "role": "button",
+          "name": "Send Message"
+        }
+      ]
+    }
+  }
+}

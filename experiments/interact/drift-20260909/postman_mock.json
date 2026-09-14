@@ -1,0 +1,156 @@
+{
+  "app_id": "postman_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activeEnvironmentId",
+    "activeRequestId",
+    "activeTabId",
+    "collections",
+    "currentRequest",
+    "environments",
+    "globalVariables",
+    "history",
+    "response",
+    "sidebarPanel",
+    "splitRatio",
+    "tabs",
+    "workspace"
+  ],
+  "observed": [
+    "activeEnvironmentId",
+    "activeRequestId",
+    "activeTabId",
+    "collections",
+    "currentRequest",
+    "environments",
+    "globalVariables",
+    "history",
+    "response",
+    "sidebarPanel",
+    "splitRatio",
+    "tabs",
+    "workspace"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "workspace": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "collections": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "auth",
+        "variables",
+        "folders",
+        "requests",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "environments": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "color",
+        "variables",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "activeEnvironmentId": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "tabs": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "type",
+        "name",
+        "method",
+        "requestId",
+        "collectionId",
+        "isDirty",
+        "request",
+        "response"
+      ],
+      "keyed_by_id": false
+    },
+    "activeTabId": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "currentRequest": {
+      "kind": "object",
+      "count": 8,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "activeRequestId": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "response": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    },
+    "history": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "timestamp",
+        "method",
+        "url",
+        "statusCode",
+        "responseTime"
+      ],
+      "keyed_by_id": false
+    },
+    "globalVariables": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "key",
+        "value",
+        "description",
+        "enabled"
+      ],
+      "keyed_by_id": false
+    },
+    "sidebarPanel": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "splitRatio": {
+      "kind": "number",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

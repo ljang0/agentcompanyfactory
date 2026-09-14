@@ -1,0 +1,119 @@
+{
+  "app_id": "paypal_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "contacts",
+    "invoices",
+    "notifications",
+    "paymentLinks",
+    "paymentMethods",
+    "settings",
+    "subscriptions",
+    "transactions",
+    "user"
+  ],
+  "observed": [
+    "contacts",
+    "invoices",
+    "notifications",
+    "paymentLinks",
+    "paymentMethods",
+    "settings",
+    "subscriptions",
+    "transactions",
+    "user"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "user": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "contacts": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "name",
+        "email",
+        "avatar"
+      ],
+      "keyed_by_id": false
+    },
+    "transactions": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "type",
+        "amount",
+        "currency",
+        "recipientName",
+        "date",
+        "status",
+        "description"
+      ],
+      "keyed_by_id": false
+    },
+    "paymentMethods": {
+      "kind": "array",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "type",
+        "brand",
+        "last4",
+        "expiry",
+        "verified"
+      ],
+      "keyed_by_id": false
+    },
+    "invoices": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "number",
+        "recipientEmail",
+        "amount",
+        "status",
+        "dueDate",
+        "items"
+      ],
+      "keyed_by_id": false
+    },
+    "subscriptions": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "paymentLinks": {
+      "kind": "array",
+      "count": 0,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "settings": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 1,
+      "record_fields": [
+        "id",
+        "message",
+        "read",
+        "date"
+      ],
+      "keyed_by_id": false
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "currentUser": {"id": "u1", "username": "wrenfield_pottery", "name": "Imogen Wrenfield", "avatar": "https://ui-avatars.com/api/?name=Imogen+Wrenfield&background=E60023&color=fff", "bio": "Studio potter in Asheville | Wrenfield Pottery", "website": "https://wrenfield-pottery.example", "followers": ["u2", "u3"], "following": ["u2"], "monthlyViews": 3800, "createdAt": 1735689600000},
+  "users": [
+    {"id": "u1", "username": "wrenfield_pottery", "name": "Imogen Wrenfield", "avatar": "https://ui-avatars.com/api/?name=Imogen+Wrenfield&background=E60023&color=fff", "bio": "Studio potter in Asheville | Wrenfield Pottery", "website": "https://wrenfield-pottery.example", "followers": ["u2", "u3"], "following": ["u2"], "monthlyViews": 3800, "createdAt": 1735689600000},
+    {"id": "u2", "username": "kiln_and_clay", "name": "Rafael Quintero", "avatar": "https://ui-avatars.com/api/?name=Rafael+Quintero&background=005F73&color=fff", "bio": "Glaze chemistry nerd", "website": "", "followers": ["u1"], "following": ["u1"], "monthlyViews": 12000, "createdAt": 1717200000000},
+    {"id": "u3", "username": "tablescapes_by_lou", "name": "Louisa Achterberg", "avatar": "https://ui-avatars.com/api/?name=Louisa+Achterberg&background=9B2226&color=fff", "bio": "Event stylist", "website": "", "followers": [], "following": ["u1"], "monthlyViews": 25000, "createdAt": 1704067200000}
+  ],
+  "pins": [
+    {"id": "p1", "userId": "u1", "title": "Wrenfield speckled stoneware mugs", "description": "Our autumn glaze test batch in oatmeal and iron speckle.", "image": "https://picsum.photos/seed/wrenfield1/400/560", "imageWidth": 400, "imageHeight": 560, "url": "https://wrenfield-pottery.example/mugs", "boardId": "b1", "sectionId": null, "altText": "Speckled stoneware mugs on a wooden shelf", "tags": ["ceramics", "handmade", "mugs"], "likes": 48, "likedBy": ["u2", "u3"], "commentCount": 1, "saves": 130, "createdAt": 1756900000000},
+    {"id": "p2", "userId": "u2", "title": "Tenmoku glaze over porcelain", "description": "Fired to cone 10 in reduction.", "image": "https://picsum.photos/seed/tenmoku/400/400", "imageWidth": 400, "imageHeight": 400, "url": "https://example.com/glaze/tenmoku", "boardId": null, "sectionId": null, "altText": "Dark brown glazed bowl", "tags": ["ceramics", "glaze"], "likes": 210, "likedBy": ["u1"], "commentCount": 0, "saves": 640, "createdAt": 1756000000000},
+    {"id": "p3", "userId": "u3", "title": "Harvest table with handmade plates", "description": "Long table styling for a farm dinner.", "image": "https://picsum.photos/seed/harvest/400/700", "imageWidth": 400, "imageHeight": 700, "url": "https://example.com/tablescapes/harvest", "boardId": null, "sectionId": null, "altText": "Rustic dinner table", "tags": ["tablescape", "autumn"], "likes": 95, "likedBy": [], "commentCount": 0, "saves": 300, "createdAt": 1755000000000}
+  ],
+  "boards": [
+    {"id": "b1", "userId": "u1", "name": "Wrenfield Pottery catalog", "description": "Pieces currently in the shop", "privacy": "public", "coverPinId": "p1", "pins": ["p1"], "sections": [{"id": "sec1", "boardId": "b1", "name": "Mugs", "pins": ["p1"]}], "collaborators": [], "createdAt": 1735689600000, "updatedAt": 1756900000000},
+    {"id": "b2", "userId": "u1", "name": "Glaze inspiration", "description": "", "privacy": "secret", "coverPinId": null, "pins": [], "sections": [], "collaborators": [], "createdAt": 1740000000000, "updatedAt": 1740000000000}
+  ],
+  "comments": [
+    {"id": "c1", "pinId": "p1", "userId": "u2", "text": "That iron speckle came out beautifully.", "likes": 2, "likedBy": ["u1"], "createdAt": 1756950000000}
+  ],
+  "notifications": [
+    {"id": "n1", "type": "comment", "fromUserId": "u2", "targetId": "p1", "message": "Rafael Quintero commented on your pin", "thumbnail": null, "read": false, "createdAt": 1756950000000},
+    {"id": "n2", "type": "follow", "fromUserId": "u3", "targetId": null, "message": "Louisa Achterberg started following you", "thumbnail": null, "read": true, "createdAt": 1756000000000}
+  ],
+  "searchQuery": "",
+  "searchFilters": [],
+  "selectedCategory": null,
+  "lastUsedBoardId": "b1"
+}

@@ -1,0 +1,155 @@
+{
+  "app_id": "youtube_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "categories",
+    "channels",
+    "comments",
+    "communityPosts",
+    "notifications",
+    "playlists",
+    "settings",
+    "shorts",
+    "user",
+    "videos"
+  ],
+  "observed": [
+    "categories",
+    "channels",
+    "comments",
+    "communityPosts",
+    "notifications",
+    "playlists",
+    "settings",
+    "shorts",
+    "user",
+    "videos"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "user": {
+      "kind": "object",
+      "count": 12,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "videos": {
+      "kind": "array",
+      "count": 54,
+      "record_fields": [
+        "videoId",
+        "title",
+        "description",
+        "channelId",
+        "channelName",
+        "channelAvatar",
+        "thumbnail",
+        "duration",
+        "uploadDate",
+        "viewCount",
+        "likeCount",
+        "dislikeCount",
+        "category",
+        "tags",
+        "videoUrl"
+      ],
+      "keyed_by_id": false
+    },
+    "shorts": {
+      "kind": "array",
+      "count": 20,
+      "record_fields": [
+        "shortId",
+        "title",
+        "channelId",
+        "channelName",
+        "channelAvatar",
+        "thumbnail",
+        "viewCount",
+        "likeCount",
+        "dislikeCount",
+        "commentCount",
+        "uploadDate",
+        "isShort"
+      ],
+      "keyed_by_id": false
+    },
+    "channels": {
+      "kind": "array",
+      "count": 16,
+      "record_fields": [
+        "channelId",
+        "name",
+        "handle",
+        "avatar",
+        "banner",
+        "description",
+        "subscriberCount",
+        "videoCount",
+        "joinedDate",
+        "links",
+        "videos",
+        "verified"
+      ],
+      "keyed_by_id": false
+    },
+    "comments": {
+      "kind": "object",
+      "count": 54,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "playlists": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "playlistId",
+        "name",
+        "description",
+        "creatorId",
+        "videoIds",
+        "privacy",
+        "createdDate",
+        "thumbnail"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "notificationId",
+        "type",
+        "channelId",
+        "channelName",
+        "channelAvatar",
+        "videoId",
+        "videoTitle",
+        "videoThumbnail",
+        "timestamp",
+        "isRead"
+      ],
+      "keyed_by_id": false
+    },
+    "communityPosts": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "categories": {
+      "kind": "array",
+      "count": 16,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "settings": {
+      "kind": "object",
+      "count": 12,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

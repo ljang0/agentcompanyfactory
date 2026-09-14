@@ -1,0 +1,227 @@
+{
+  "app_id": "contractbook_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activities",
+    "comments",
+    "contacts",
+    "contracts",
+    "currentUser",
+    "folders",
+    "notifications",
+    "savedViews",
+    "settings",
+    "tags",
+    "tasks",
+    "templates",
+    "users"
+  ],
+  "observed": [
+    "activities",
+    "comments",
+    "contacts",
+    "contracts",
+    "currentUser",
+    "folders",
+    "notifications",
+    "savedViews",
+    "settings",
+    "tags",
+    "tasks",
+    "templates",
+    "users"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUser": {
+      "kind": "object",
+      "count": 11,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "firstName",
+        "lastName",
+        "email",
+        "avatar",
+        "role",
+        "jobTitle",
+        "status"
+      ],
+      "keyed_by_id": false
+    },
+    "contacts": {
+      "kind": "array",
+      "count": 13,
+      "record_fields": [
+        "id",
+        "firstName",
+        "lastName",
+        "email",
+        "company",
+        "jobTitle",
+        "phone",
+        "notes",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": false
+    },
+    "folders": {
+      "kind": "array",
+      "count": 9,
+      "record_fields": [
+        "id",
+        "name",
+        "parentId",
+        "color",
+        "createdAt",
+        "createdBy"
+      ],
+      "keyed_by_id": false
+    },
+    "tags": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "name",
+        "color"
+      ],
+      "keyed_by_id": false
+    },
+    "contracts": {
+      "kind": "array",
+      "count": 17,
+      "record_fields": [
+        "id",
+        "title",
+        "status",
+        "content",
+        "folderId",
+        "templateId",
+        "tags",
+        "parties",
+        "createdAt",
+        "updatedAt",
+        "createdBy",
+        "expiresAt",
+        "signedAt",
+        "sentAt",
+        "value",
+        "currency",
+        "renewalDate",
+        "notes",
+        "approvals"
+      ],
+      "keyed_by_id": false
+    },
+    "templates": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "title",
+        "description",
+        "content",
+        "category",
+        "language",
+        "tags",
+        "usageCount",
+        "createdAt",
+        "updatedAt",
+        "createdBy",
+        "isDefault"
+      ],
+      "keyed_by_id": false
+    },
+    "tasks": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "title",
+        "description",
+        "type",
+        "status",
+        "contractId",
+        "assigneeId",
+        "createdBy",
+        "dueDate",
+        "completedAt",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "activities": {
+      "kind": "array",
+      "count": 40,
+      "record_fields": [
+        "id",
+        "contractId",
+        "type",
+        "userId",
+        "contactId",
+        "description",
+        "timestamp",
+        "metadata"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 8,
+      "record_fields": [
+        "id",
+        "type",
+        "title",
+        "description",
+        "contractId",
+        "read",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "comments": {
+      "kind": "array",
+      "count": 11,
+      "record_fields": [
+        "id",
+        "contractId",
+        "userId",
+        "content",
+        "createdAt",
+        "updatedAt",
+        "resolved"
+      ],
+      "keyed_by_id": false
+    },
+    "savedViews": {
+      "kind": "array",
+      "count": 5,
+      "record_fields": [
+        "id",
+        "name",
+        "filters",
+        "sortBy",
+        "sortOrder",
+        "columns",
+        "isDefault",
+        "createdBy"
+      ],
+      "keyed_by_id": false
+    },
+    "settings": {
+      "kind": "object",
+      "count": 9,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "app_id": "monday_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "activeBoardId",
+    "activeWorkspaceId",
+    "activityLog",
+    "boards",
+    "columns",
+    "currentUserId",
+    "groups",
+    "items",
+    "notifications",
+    "ui",
+    "updates",
+    "users",
+    "workspaces"
+  ],
+  "observed": [
+    "activeBoardId",
+    "activeWorkspaceId",
+    "activityLog",
+    "boards",
+    "columns",
+    "currentUserId",
+    "groups",
+    "items",
+    "notifications",
+    "ui",
+    "updates",
+    "users",
+    "workspaces"
+  ],
+  "undocumented_so_unseedable": [],
+  "documented_but_app_keeps_none": [],
+  "agrees": true,
+  "shapes": {
+    "currentUserId": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "users": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "name",
+        "email",
+        "initials",
+        "color",
+        "role",
+        "isCurrentUser"
+      ],
+      "keyed_by_id": true
+    },
+    "workspaces": {
+      "kind": "object",
+      "count": 2,
+      "record_fields": [
+        "id",
+        "name",
+        "icon",
+        "color",
+        "boardIds"
+      ],
+      "keyed_by_id": true
+    },
+    "activeWorkspaceId": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "activeBoardId": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "boards": {
+      "kind": "object",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "name",
+        "description",
+        "workspaceId",
+        "type",
+        "isFavorite",
+        "groupIds",
+        "columnIds",
+        "views",
+        "createdAt",
+        "updatedAt"
+      ],
+      "keyed_by_id": true
+    },
+    "columns": {
+      "kind": "object",
+      "count": 21,
+      "record_fields": [
+        "id",
+        "title",
+        "type",
+        "width",
+        "settings"
+      ],
+      "keyed_by_id": true
+    },
+    "groups": {
+      "kind": "object",
+      "count": 9,
+      "record_fields": [
+        "id",
+        "boardId",
+        "title",
+        "color",
+        "isCollapsed",
+        "itemIds",
+        "position"
+      ],
+      "keyed_by_id": true
+    },
+    "items": {
+      "kind": "object",
+      "count": 25,
+      "record_fields": [
+        "id",
+        "boardId",
+        "groupId",
+        "name",
+        "columnValues",
+        "subitemIds",
+        "isSelected",
+        "createdAt",
+        "updatedAt",
+        "creatorId"
+      ],
+      "keyed_by_id": true
+    },
+    "updates": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "itemId",
+        "authorId",
+        "body",
+        "createdAt",
+        "likes",
+        "isReply",
+        "parentUpdateId"
+      ],
+      "keyed_by_id": true
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 4,
+      "record_fields": [
+        "id",
+        "type",
+        "message",
+        "userId",
+        "actorId",
+        "itemId",
+        "boardId",
+        "isRead",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "activityLog": {
+      "kind": "array",
+      "count": 3,
+      "record_fields": [
+        "id",
+        "boardId",
+        "itemId",
+        "userId",
+        "columnId",
+        "action",
+        "previousValue",
+        "newValue",
+        "createdAt"
+      ],
+      "keyed_by_id": false
+    },
+    "ui": {
+      "kind": "object",
+      "count": 9,
+      "record_fields": null,
+      "keyed_by_id": false
+    }
+  }
+}

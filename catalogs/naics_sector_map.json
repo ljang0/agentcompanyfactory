@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "doc": "Most-specific-prefix NAICS crosswalk to the canonical GDPVal sector ids. Every NAICS 2-digit sector prefix is explicitly mapped. Prefix 99 added: BLS OEWS codes federal/state/local government as 999xxx.",
+    "schema_version": 1
+  },
+  "prefixes": {
+    "11": "agriculture",
+    "21": "mining",
+    "22": "utilities",
+    "23": "construction",
+    "31": "manufacturing",
+    "32": "manufacturing",
+    "33": "manufacturing",
+    "42": "wholesale_trade",
+    "44": "retail_trade",
+    "45": "retail_trade",
+    "51": "information",
+    "52": "finance_and_insurance",
+    "53": "real_estate_rental_leasing",
+    "54": "professional_scientific_technical",
+    "55": "management_of_companies",
+    "56": "administrative_support_services",
+    "48": "transportation_warehousing",
+    "49": "transportation_warehousing",
+    "61": "educational_services",
+    "62": "health_care_social_assistance",
+    "71": "arts_entertainment_recreation",
+    "72": "accommodation_food_services",
+    "81": "other_services",
+    "92": "government",
+    "99": "government"
+  },
+  "unmapped_examples": {}
+}

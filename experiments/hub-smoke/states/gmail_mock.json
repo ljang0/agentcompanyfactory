@@ -1,0 +1,40 @@
+{
+  "user": {"userId": "u1", "username": "Leila Ferreira", "email": "leila.ferreira@copperleaf-vet.example", "avatar": null},
+  "emails": [
+    {
+      "id": "email_1", "threadId": "thread_1",
+      "from": {"name": "Sam Whitlock", "email": "sam.whitlock@copperleaf-vet.example", "avatar": null},
+      "to": [{"name": "Leila Ferreira", "email": "leila.ferreira@copperleaf-vet.example"}], "cc": [], "bcc": [],
+      "subject": "Autoclave service visit rescheduled to Thursday", "body": "<p>Hi Leila,</p><p>The technician moved the autoclave service to Thursday 2 pm. Can you keep the sterilization room clear that afternoon?</p><p>Sam</p>",
+      "snippet": "The technician moved the autoclave service to Thursday 2 pm.", "timestamp": "2026-09-07T07:42:00Z", "read": false, "starred": true, "important": true, "labels": ["l1"], "category": "primary", "folder": "inbox", "attachments": []
+    },
+    {
+      "id": "email_2", "threadId": "thread_2",
+      "from": {"name": "Copperleaf Vet Supply", "email": "orders@copperleaf-supply.example", "avatar": null},
+      "to": [{"name": "Leila Ferreira", "email": "leila.ferreira@copperleaf-vet.example"}], "cc": [], "bcc": [],
+      "subject": "Order #48213 shipped: exam gloves and suture kits", "body": "<p>Your order has shipped and should arrive Tuesday.</p>",
+      "snippet": "Your order has shipped and should arrive Tuesday.", "timestamp": "2026-09-06T16:05:00Z", "read": true, "starred": false, "important": false, "labels": ["l4"], "category": "promotions", "folder": "inbox", "attachments": [{"id": "att_1", "name": "invoice-48213.pdf", "size": 84211, "type": "application/pdf", "url": "#"}]
+    },
+    {
+      "id": "email_3", "threadId": "thread_3",
+      "from": {"name": "Leila Ferreira", "email": "leila.ferreira@copperleaf-vet.example", "avatar": null},
+      "to": [{"name": "Dr. Anjali Rao", "email": "anjali.rao@copperleaf-vet.example"}], "cc": [], "bcc": [],
+      "subject": "Saturday surgery schedule", "body": "<p>Two spays and one dental booked for Saturday morning. Let me know if you want the dental moved.</p>",
+      "snippet": "Two spays and one dental booked for Saturday morning.", "timestamp": "2026-09-05T18:20:00Z", "read": true, "starred": false, "important": false, "labels": ["l1"], "category": "primary", "folder": "sent", "attachments": []
+    }
+  ],
+  "labels": [
+    {"id": "l1", "name": "Clinic", "color": "#ef4444"},
+    {"id": "l2", "name": "Personal", "color": "#3b82f6"},
+    {"id": "l4", "name": "Suppliers", "color": "#eab308"}
+  ],
+  "drafts": [
+    {
+      "id": "draft_1", "threadId": "thread_4",
+      "from": {"name": "Leila Ferreira", "email": "leila.ferreira@copperleaf-vet.example", "avatar": null},
+      "to": [{"name": "Sam Whitlock", "email": "sam.whitlock@copperleaf-vet.example"}], "cc": [], "bcc": [],
+      "subject": "Re: Autoclave service visit rescheduled to Thursday", "body": "<p>Thursday works. I will block the room from 1:30.</p>",
+      "snippet": "Thursday works. I will block the room from 1:30.", "timestamp": "2026-09-07T08:01:00Z", "read": true, "starred": false, "important": false, "labels": [], "category": "primary", "folder": "drafts", "attachments": []
+    }
+  ]
+}

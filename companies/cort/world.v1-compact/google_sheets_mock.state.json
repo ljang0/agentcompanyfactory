@@ -1,0 +1,1474 @@
+{
+  "id": "HW-RDU-0908",
+  "title": "Hearthway district source register — 8 September 2026",
+  "sheets": [
+    {
+      "id": "assets",
+      "name": "Asset snapshot",
+      "rowCount": 100,
+      "colCount": 26,
+      "frozenRows": 1,
+      "data": {
+        "A1": {
+          "value": "Asset ID",
+          "formula": "Asset ID"
+        },
+        "B1": {
+          "value": "Specification",
+          "formula": "Specification"
+        },
+        "C1": {
+          "value": "Custody / location / condition",
+          "formula": "Custody / location / condition"
+        },
+        "D1": {
+          "value": "Reservation or evidence",
+          "formula": "Reservation or evidence"
+        },
+        "A2": {
+          "value": "S1",
+          "formula": "S1"
+        },
+        "B2": {
+          "value": "SOFA-190; width 190 cm; 3 m3",
+          "formula": "SOFA-190; width 190 cm; 3 m3"
+        },
+        "C2": {
+          "value": "H310 / H310 / in service",
+          "formula": "H310 / H310 / in service"
+        },
+        "D2": {
+          "value": "L310-v2; F311 source field tentative; not reserved",
+          "formula": "L310-v2; F311 source field tentative; not reserved"
+        },
+        "A3": {
+          "value": "B1",
+          "formula": "B1"
+        },
+        "B3": {
+          "value": "QUEEN-Q; 210x165x110 cm; 2 m3",
+          "formula": "QUEEN-Q; 210x165x110 cm; 2 m3"
+        },
+        "C3": {
+          "value": "H310 / H310 / in service",
+          "formula": "H310 / H310 / in service"
+        },
+        "D3": {
+          "value": "L310-v2; F312 source field tentative; not reserved",
+          "formula": "L310-v2; F312 source field tentative; not reserved"
+        },
+        "A4": {
+          "value": "D1",
+          "formula": "D1"
+        },
+        "B4": {
+          "value": "DRESSER-6; 1 m3",
+          "formula": "DRESSER-6; 1 m3"
+        },
+        "C4": {
+          "value": "H310 / H310 / in service",
+          "formula": "H310 / H310 / in service"
+        },
+        "D4": {
+          "value": "L310-v2; no future reservation",
+          "formula": "L310-v2; no future reservation"
+        },
+        "A5": {
+          "value": "S2",
+          "formula": "S2"
+        },
+        "B5": {
+          "value": "SOFA-215; width 215 cm; 3.5 m3",
+          "formula": "SOFA-215; width 215 cm; 3.5 m3"
+        },
+        "C5": {
+          "value": "district / WH1-A03 / rental ready",
+          "formula": "district / WH1-A03 / rental ready"
+        },
+        "D5": {
+          "value": "Unreserved; RC-S2-0904 released September 4 16:00",
+          "formula": "Unreserved; RC-S2-0904 released September 4 16:00"
+        },
+        "A6": {
+          "value": "B2",
+          "formula": "B2"
+        },
+        "B6": {
+          "value": "QUEEN-Q; 210x165x110 cm; 2 m3",
+          "formula": "QUEEN-Q; 210x165x110 cm; 2 m3"
+        },
+        "C6": {
+          "value": "district / WH1-B04 / rental ready",
+          "formula": "district / WH1-B04 / rental ready"
+        },
+        "D6": {
+          "value": "Unreserved; RC-B2-0907 released September 7 16:00",
+          "formula": "Unreserved; RC-B2-0907 released September 7 16:00"
+        },
+        "A7": {
+          "value": "S3",
+          "formula": "S3"
+        },
+        "B7": {
+          "value": "SOFA-190; width 190 cm; 3 m3",
+          "formula": "SOFA-190; width 190 cm; 3 m3"
+        },
+        "C7": {
+          "value": "district / WH1-A05 / rental ready",
+          "formula": "district / WH1-A05 / rental ready"
+        },
+        "D7": {
+          "value": "R320-S3 / F320; September 9–December 31; TX-R320",
+          "formula": "R320-S3 / F320; September 9–December 31; TX-R320"
+        },
+        "A8": {
+          "value": "B3",
+          "formula": "B3"
+        },
+        "B8": {
+          "value": "QUEEN-Q; 2 m3",
+          "formula": "QUEEN-Q; 2 m3"
+        },
+        "C8": {
+          "value": "district / WH1-B05 / rental ready",
+          "formula": "district / WH1-B05 / rental ready"
+        },
+        "D8": {
+          "value": "R321-B3 / F321; September 10–December 31; TX-R321",
+          "formula": "R321-B3 / F321; September 10–December 31; TX-R321"
+        },
+        "A9": {
+          "value": "S4",
+          "formula": "S4"
+        },
+        "B9": {
+          "value": "SOFA-205; width 205 cm; 3.2 m3",
+          "formula": "SOFA-205; width 205 cm; 3.2 m3"
+        },
+        "C9": {
+          "value": "H322 / H322 / in service",
+          "formula": "H322 / H322 / in service"
+        },
+        "D9": {
+          "value": "L322 through October 31; cushion inquiry ticket 1315",
+          "formula": "L322 through October 31; cushion inquiry ticket 1315"
+        },
+        "A10": {
+          "value": "B4",
+          "formula": "B4"
+        },
+        "B10": {
+          "value": "QUEEN-Q; 2 m3",
+          "formula": "QUEEN-Q; 2 m3"
+        },
+        "C10": {
+          "value": "district / WH1-HOLD / structural hold",
+          "formula": "district / WH1-HOLD / structural hold"
+        },
+        "D10": {
+          "value": "INSP-B4-0904; cracked rail; held through September 30",
+          "formula": "INSP-B4-0904; cracked rail; held through September 30"
+        },
+        "A11": {
+          "value": "T310",
+          "formula": "T310"
+        },
+        "B11": {
+          "value": "TABLE-ROUND; 1.2 m3",
+          "formula": "TABLE-ROUND; 1.2 m3"
+        },
+        "C11": {
+          "value": "H322 / H322 / in service",
+          "formula": "H322 / H322 / in service"
+        },
+        "D11": {
+          "value": "L322; TX-L322-0820",
+          "formula": "L322; TX-L322-0820"
+        },
+        "A12": {
+          "value": "C310A",
+          "formula": "C310A"
+        },
+        "B12": {
+          "value": "CHAIR-OAK; 0.3 m3",
+          "formula": "CHAIR-OAK; 0.3 m3"
+        },
+        "C12": {
+          "value": "H322 / H322 / in service",
+          "formula": "H322 / H322 / in service"
+        },
+        "D12": {
+          "value": "L322; TX-L322-0820",
+          "formula": "L322; TX-L322-0820"
+        },
+        "A13": {
+          "value": "C310B",
+          "formula": "C310B"
+        },
+        "B13": {
+          "value": "CHAIR-OAK; 0.3 m3",
+          "formula": "CHAIR-OAK; 0.3 m3"
+        },
+        "C13": {
+          "value": "H322 / H322 / in service",
+          "formula": "H322 / H322 / in service"
+        },
+        "D13": {
+          "value": "L322; TX-L322-0820",
+          "formula": "L322; TX-L322-0820"
+        },
+        "A14": {
+          "value": "D2",
+          "formula": "D2"
+        },
+        "B14": {
+          "value": "DRESSER-4; 0.8 m3",
+          "formula": "DRESSER-4; 0.8 m3"
+        },
+        "C14": {
+          "value": "H323 / H323 / in service",
+          "formula": "H323 / H323 / in service"
+        },
+        "D14": {
+          "value": "L323 through September 30; handle inquiry ticket 1331",
+          "formula": "L323 through September 30; handle inquiry ticket 1331"
+        },
+        "A15": {
+          "value": "A21",
+          "formula": "A21"
+        },
+        "B15": {
+          "value": "ARMCHAIR-L; 1.1 m3",
+          "formula": "ARMCHAIR-L; 1.1 m3"
+        },
+        "C15": {
+          "value": "H324 / H324 / in service",
+          "formula": "H324 / H324 / in service"
+        },
+        "D15": {
+          "value": "L324 through September 22; exchange inquiry only",
+          "formula": "L324 through September 22; exchange inquiry only"
+        },
+        "A16": {
+          "value": "A22",
+          "formula": "A22"
+        },
+        "B16": {
+          "value": "ARMCHAIR-L; 1.1 m3",
+          "formula": "ARMCHAIR-L; 1.1 m3"
+        },
+        "C16": {
+          "value": "district / WH1-REPAIR / cosmetic hold",
+          "formula": "district / WH1-REPAIR / cosmetic hold"
+        },
+        "D16": {
+          "value": "INSP-A22-0903; 2.5 hours + $34 fabric estimate; no release",
+          "formula": "INSP-A22-0903; 2.5 hours + $34 fabric estimate; no release"
+        },
+        "A17": {
+          "value": "T22",
+          "formula": "T22"
+        },
+        "B17": {
+          "value": "TABLE-RECT; 1.4 m3; asking $165",
+          "formula": "TABLE-RECT; 1.4 m3; asking $165"
+        },
+        "C17": {
+          "value": "district / OUT1 / outlet ready, unsold",
+          "formula": "district / OUT1 / outlet ready, unsold"
+        },
+        "D17": {
+          "value": "RET-T22-0826; OR-T22-0828; floor price $140",
+          "formula": "RET-T22-0826; OR-T22-0828; floor price $140"
+        },
+        "A18": {
+          "value": "C22",
+          "formula": "C22"
+        },
+        "B18": {
+          "value": "CHAIR-OAK; 0.3 m3; asking $45",
+          "formula": "CHAIR-OAK; 0.3 m3; asking $45"
+        },
+        "C18": {
+          "value": "district / OUT1 / outlet ready, unsold",
+          "formula": "district / OUT1 / outlet ready, unsold"
+        },
+        "D18": {
+          "value": "RET-C22-0826; OR-C22-0828; seat-edge wear; floor $35",
+          "formula": "RET-C22-0826; OR-C22-0828; seat-edge wear; floor $35"
+        },
+        "A19": {
+          "value": "N22",
+          "formula": "N22"
+        },
+        "B19": {
+          "value": "NIGHTSTAND-OAK; 0.25 m3",
+          "formula": "NIGHTSTAND-OAK; 0.25 m3"
+        },
+        "C19": {
+          "value": "district / WH1-C02 / rental ready",
+          "formula": "district / WH1-C02 / rental ready"
+        },
+        "D19": {
+          "value": "R325-N22 / F325; September 11–30",
+          "formula": "R325-N22 / F325; September 11–30"
+        },
+        "A20": {
+          "value": "L22",
+          "formula": "L22"
+        },
+        "B20": {
+          "value": "LAMP-FLOOR; 0.2 m3",
+          "formula": "LAMP-FLOOR; 0.2 m3"
+        },
+        "C20": {
+          "value": "district / SR1 / display",
+          "formula": "district / SR1 / display"
+        },
+        "D20": {
+          "value": "No reservation; specification card missing",
+          "formula": "No reservation; specification card missing"
+        },
+        "A21": {
+          "value": "M22",
+          "formula": "M22"
+        },
+        "B21": {
+          "value": "DESK-COMPACT; 0.7 m3",
+          "formula": "DESK-COMPACT; 0.7 m3"
+        },
+        "C21": {
+          "value": "district / WH1-C06 / rental ready",
+          "formula": "district / WH1-C06 / rental ready"
+        },
+        "D21": {
+          "value": "R326-M22 / F326; September 15–November 15",
+          "formula": "R326-M22 / F326; September 15–November 15"
+        }
+      }
+    },
+    {
+      "id": "commitments",
+      "name": "Leases and orders",
+      "rowCount": 100,
+      "colCount": 26,
+      "frozenRows": 1,
+      "data": {
+        "A1": {
+          "value": "Record",
+          "formula": "Record"
+        },
+        "B1": {
+          "value": "Household / status",
+          "formula": "Household / status"
+        },
+        "C1": {
+          "value": "Terms / date",
+          "formula": "Terms / date"
+        },
+        "D1": {
+          "value": "Source / appointment",
+          "formula": "Source / appointment"
+        },
+        "A2": {
+          "value": "L310-v2",
+          "formula": "L310-v2"
+        },
+        "B2": {
+          "value": "H310 / active, unchanged",
+          "formula": "H310 / active, unchanged"
+        },
+        "C2": {
+          "value": "S1 $60, B1 $90, D1 $30 monthly; paid through September 14 inclusive",
+          "formula": "S1 $60, B1 $90, D1 $30 monthly; paid through September 14 inclusive"
+        },
+        "D2": {
+          "value": "TX-L310-2; AP310-14 booked September 14 09:00–11:00 for all three",
+          "formula": "TX-L310-2; AP310-14 booked September 14 09:00–11:00 for all three"
+        },
+        "A3": {
+          "value": "REQ-H310-0907",
+          "formula": "REQ-H310-0907"
+        },
+        "B3": {
+          "value": "H310 / request only; ticket 1310",
+          "formula": "H310 / request only; ticket 1310"
+        },
+        "C3": {
+          "value": "B1+D1 needed through September 24; S1 may leave September 14 or 24; ceiling $70 pre-tax",
+          "formula": "B1+D1 needed through September 24; S1 may leave September 14 or 24; ceiling $70 pre-tax"
+        },
+        "D3": {
+          "value": "One final visit or two staged visits acceptable; no quote or acceptance",
+          "formula": "One final visit or two staged visits acceptable; no quote or acceptance"
+        },
+        "A4": {
+          "value": "F311-v1",
+          "formula": "F311-v1"
+        },
+        "B4": {
+          "value": "H311 / accepted; ticket 1311",
+          "formula": "H311 / accepted; ticket 1311"
+        },
+        "C4": {
+          "value": "One sofa; $60/month; September 17–December 16; delivery 10:00–12:00",
+          "formula": "One sofa; $60/month; September 17–December 16; delivery 10:00–12:00"
+        },
+        "D4": {
+          "value": "ACC-F311-1; AP311-17; tentative S1; no asset reservation; exact alternative confirmation pending",
+          "formula": "ACC-F311-1; AP311-17; tentative S1; no asset reservation; exact alternative confirmation pending"
+        },
+        "A5": {
+          "value": "F312-v1",
+          "formula": "F312-v1"
+        },
+        "B5": {
+          "value": "H312 / accepted; ticket 1312",
+          "formula": "H312 / accepted; ticket 1312"
+        },
+        "C5": {
+          "value": "One queen bed; $90/month; September 18–December 17; delivery 10:00–12:00",
+          "formula": "One queen bed; $90/month; September 18–December 17; delivery 10:00–12:00"
+        },
+        "D5": {
+          "value": "ACC-F312-1; AP312-18; tentative B1; no asset reservation; alternative confirmation pending",
+          "formula": "ACC-F312-1; AP312-18; tentative B1; no asset reservation; alternative confirmation pending"
+        },
+        "A6": {
+          "value": "F320",
+          "formula": "F320"
+        },
+        "B6": {
+          "value": "H320 / accepted",
+          "formula": "H320 / accepted"
+        },
+        "C6": {
+          "value": "September 9–December 31; sofa $64/month",
+          "formula": "September 9–December 31; sofa $64/month"
+        },
+        "D6": {
+          "value": "R320-S3; TX-R320; protected C2 route September 9",
+          "formula": "R320-S3; TX-R320; protected C2 route September 9"
+        },
+        "A7": {
+          "value": "F321",
+          "formula": "F321"
+        },
+        "B7": {
+          "value": "H321 / accepted",
+          "formula": "H321 / accepted"
+        },
+        "C7": {
+          "value": "September 10–December 31; queen bed $94/month",
+          "formula": "September 10–December 31; queen bed $94/month"
+        },
+        "D7": {
+          "value": "R321-B3; TX-R321; protected C3 route September 10",
+          "formula": "R321-B3; TX-R321; protected C3 route September 10"
+        },
+        "A8": {
+          "value": "L322-v1",
+          "formula": "L322-v1"
+        },
+        "B8": {
+          "value": "H322 / active",
+          "formula": "H322 / active"
+        },
+        "C8": {
+          "value": "August 20–October 31; named set S4/T310/C310A/C310B",
+          "formula": "August 20–October 31; named set S4/T310/C310A/C310B"
+        },
+        "D8": {
+          "value": "TX-L322-0820; not available supply",
+          "formula": "TX-L322-0820; not available supply"
+        },
+        "A9": {
+          "value": "L323-v1",
+          "formula": "L323-v1"
+        },
+        "B9": {
+          "value": "H323 / active",
+          "formula": "H323 / active"
+        },
+        "C9": {
+          "value": "Ends September 30; D2 in custody",
+          "formula": "Ends September 30; D2 in custody"
+        },
+        "D9": {
+          "value": "Pickup access pending; ticket 1316",
+          "formula": "Pickup access pending; ticket 1316"
+        },
+        "A10": {
+          "value": "L324-v1",
+          "formula": "L324-v1"
+        },
+        "B10": {
+          "value": "H324 / active",
+          "formula": "H324 / active"
+        },
+        "C10": {
+          "value": "Ends September 22; A21 in custody",
+          "formula": "Ends September 22; A21 in custody"
+        },
+        "D10": {
+          "value": "Exchange request 1317 is not an amendment",
+          "formula": "Exchange request 1317 is not an amendment"
+        },
+        "A11": {
+          "value": "L325-v1",
+          "formula": "L325-v1"
+        },
+        "B11": {
+          "value": "H325 / active",
+          "formula": "H325 / active"
+        },
+        "C11": {
+          "value": "Ends September 30",
+          "formula": "Ends September 30"
+        },
+        "D11": {
+          "value": "Sponsor receipt request 1330",
+          "formula": "Sponsor receipt request 1330"
+        },
+        "A12": {
+          "value": "F325",
+          "formula": "F325"
+        },
+        "B12": {
+          "value": "H325 / accepted add-on",
+          "formula": "H325 / accepted add-on"
+        },
+        "C12": {
+          "value": "N22 $12/month; September 11–30",
+          "formula": "N22 $12/month; September 11–30"
+        },
+        "D12": {
+          "value": "R325-N22; protected C4 route September 11",
+          "formula": "R325-N22; protected C4 route September 11"
+        },
+        "A13": {
+          "value": "L326-v1",
+          "formula": "L326-v1"
+        },
+        "B13": {
+          "value": "H326 / active",
+          "formula": "H326 / active"
+        },
+        "C13": {
+          "value": "Ends November 15",
+          "formula": "Ends November 15"
+        },
+        "D13": {
+          "value": "Desk add-on F326",
+          "formula": "Desk add-on F326"
+        },
+        "A14": {
+          "value": "F326",
+          "formula": "F326"
+        },
+        "B14": {
+          "value": "H326 / accepted add-on",
+          "formula": "H326 / accepted add-on"
+        },
+        "C14": {
+          "value": "M22 $28/month; September 15–November 15",
+          "formula": "M22 $28/month; September 15–November 15"
+        },
+        "D14": {
+          "value": "R326-M22; protected C2 route September 15",
+          "formula": "R326-M22; protected C2 route September 15"
+        },
+        "A15": {
+          "value": "L327-v1",
+          "formula": "L327-v1"
+        },
+        "B15": {
+          "value": "H327 / active",
+          "formula": "H327 / active"
+        },
+        "C15": {
+          "value": "Ends September 16; booked pickup",
+          "formula": "Ends September 16; booked pickup"
+        },
+        "D15": {
+          "value": "Protected C3 route September 16; permit pending",
+          "formula": "Protected C3 route September 16; permit pending"
+        },
+        "A16": {
+          "value": "L328-v1",
+          "formula": "L328-v1"
+        },
+        "B16": {
+          "value": "H328 / active",
+          "formula": "H328 / active"
+        },
+        "C16": {
+          "value": "Ends September 30; October inquiry only",
+          "formula": "Ends September 30; October inquiry only"
+        },
+        "D16": {
+          "value": "No extension acceptance; ticket 1321",
+          "formula": "No extension acceptance; ticket 1321"
+        }
+      }
+    },
+    {
+      "id": "history",
+      "name": "Movement and billing evidence",
+      "rowCount": 100,
+      "colCount": 26,
+      "frozenRows": 1,
+      "data": {
+        "A1": {
+          "value": "Evidence ID",
+          "formula": "Evidence ID"
+        },
+        "B1": {
+          "value": "Local date / time",
+          "formula": "Local date / time"
+        },
+        "C1": {
+          "value": "Observed or executed fact",
+          "formula": "Observed or executed fact"
+        },
+        "A2": {
+          "value": "TX-L310-1",
+          "formula": "TX-L310-1"
+        },
+        "B2": {
+          "value": "2026-06-15 11:00",
+          "formula": "2026-06-15 11:00"
+        },
+        "C2": {
+          "value": "Six items delivered to H310: S1/B1/D1/T310/C310A/C310B; lease v1",
+          "formula": "Six items delivered to H310: S1/B1/D1/T310/C310A/C310B; lease v1"
+        },
+        "A3": {
+          "value": "INV310-0615 / PAY310-0615",
+          "formula": "INV310-0615 / PAY310-0615"
+        },
+        "B3": {
+          "value": "2026-06-15",
+          "formula": "2026-06-15"
+        },
+        "C3": {
+          "value": "June 15–July 14: $255 invoiced, $255 paid; v1",
+          "formula": "June 15–July 14: $255 invoiced, $255 paid; v1"
+        },
+        "A4": {
+          "value": "INV310-0715 / PAY310-0715",
+          "formula": "INV310-0715 / PAY310-0715"
+        },
+        "B4": {
+          "value": "2026-07-15",
+          "formula": "2026-07-15"
+        },
+        "C4": {
+          "value": "July 15–August 14: $255 invoiced, $255 paid; v1",
+          "formula": "July 15–August 14: $255 invoiced, $255 paid; v1"
+        },
+        "A5": {
+          "value": "RCV310-0814",
+          "formula": "RCV310-0814"
+        },
+        "B5": {
+          "value": "2026-08-14 15:20",
+          "formula": "2026-08-14 15:20"
+        },
+        "C5": {
+          "value": "T310/C310A/C310B physically received WH1; H310 partial pickup completed",
+          "formula": "T310/C310A/C310B physically received WH1; H310 partial pickup completed"
+        },
+        "A6": {
+          "value": "TX-L310-2 / ACC-L310-2",
+          "formula": "TX-L310-2 / ACC-L310-2"
+        },
+        "B6": {
+          "value": "2026-08-14 16:00",
+          "formula": "2026-08-14 16:00"
+        },
+        "C6": {
+          "value": "v2 executed: only S1/B1/D1 remain; AP310-14 accepted September 14 09:00–11:00",
+          "formula": "v2 executed: only S1/B1/D1 remain; AP310-14 accepted September 14 09:00–11:00"
+        },
+        "A7": {
+          "value": "INV310-0815 / PAY310-0815",
+          "formula": "INV310-0815 / PAY310-0815"
+        },
+        "B7": {
+          "value": "2026-08-15",
+          "formula": "2026-08-15"
+        },
+        "C7": {
+          "value": "August 15–September 14 inclusive: $180 invoiced and paid; balance $0",
+          "formula": "August 15–September 14 inclusive: $180 invoiced and paid; balance $0"
+        },
+        "A8": {
+          "value": "RC310-0817",
+          "formula": "RC310-0817"
+        },
+        "B8": {
+          "value": "2026-08-17 16:00",
+          "formula": "2026-08-17 16:00"
+        },
+        "C8": {
+          "value": "T310/C310A/C310B inspection, cleaning and function checks passed",
+          "formula": "T310/C310A/C310B inspection, cleaning and function checks passed"
+        },
+        "A9": {
+          "value": "TX-L322-0820",
+          "formula": "TX-L322-0820"
+        },
+        "B9": {
+          "value": "2026-08-20 11:30",
+          "formula": "2026-08-20 11:30"
+        },
+        "C9": {
+          "value": "S4/T310/C310A/C310B delivered H322; custody acknowledged",
+          "formula": "S4/T310/C310A/C310B delivered H322; custody acknowledged"
+        },
+        "A10": {
+          "value": "RET-T22-0826 / RET-C22-0826",
+          "formula": "RET-T22-0826 / RET-C22-0826"
+        },
+        "B10": {
+          "value": "2026-08-26 14:00",
+          "formula": "2026-08-26 14:00"
+        },
+        "C10": {
+          "value": "Dana approved retirement; no rental reservations; resale preparation required",
+          "formula": "Dana approved retirement; no rental reservations; resale preparation required"
+        },
+        "A11": {
+          "value": "OR-T22-0828 / OR-C22-0828",
+          "formula": "OR-T22-0828 / OR-C22-0828"
+        },
+        "B11": {
+          "value": "2026-08-28 14:20",
+          "formula": "2026-08-28 14:20"
+        },
+        "C11": {
+          "value": "OUT1 actual receipts after preparation; T22 surface scratches, C22 seat-edge wear; no sale",
+          "formula": "OUT1 actual receipts after preparation; T22 surface scratches, C22 seat-edge wear; no sale"
+        },
+        "A12": {
+          "value": "TX-R320 / TX-R321",
+          "formula": "TX-R320 / TX-R321"
+        },
+        "B12": {
+          "value": "2026-09-02 13:00 / 13:10",
+          "formula": "2026-09-02 13:00 / 13:10"
+        },
+        "C12": {
+          "value": "S3 reserved to F320 September 9–December 31; B3 to F321 September 10–December 31",
+          "formula": "S3 reserved to F320 September 9–December 31; B3 to F321 September 10–December 31"
+        },
+        "A13": {
+          "value": "RCV-S2-0903",
+          "formula": "RCV-S2-0903"
+        },
+        "B13": {
+          "value": "2026-09-03 14:40",
+          "formula": "2026-09-03 14:40"
+        },
+        "C13": {
+          "value": "S2 received WH1 after prior rental",
+          "formula": "S2 received WH1 after prior rental"
+        },
+        "A14": {
+          "value": "RC-S2-0904",
+          "formula": "RC-S2-0904"
+        },
+        "B14": {
+          "value": "2026-09-04 16:00",
+          "formula": "2026-09-04 16:00"
+        },
+        "C14": {
+          "value": "S2 passed inspection, cleaning, function checks; rental release acknowledged",
+          "formula": "S2 passed inspection, cleaning, function checks; rental release acknowledged"
+        },
+        "A15": {
+          "value": "RCV-B2-0904",
+          "formula": "RCV-B2-0904"
+        },
+        "B15": {
+          "value": "2026-09-04 14:10",
+          "formula": "2026-09-04 14:10"
+        },
+        "C15": {
+          "value": "B2 received WH1 after prior rental",
+          "formula": "B2 received WH1 after prior rental"
+        },
+        "A16": {
+          "value": "RC-B2-0907",
+          "formula": "RC-B2-0907"
+        },
+        "B16": {
+          "value": "2026-09-07 16:00",
+          "formula": "2026-09-07 16:00"
+        },
+        "C16": {
+          "value": "B2 passed inspection, cleaning, function checks; rental release acknowledged",
+          "formula": "B2 passed inspection, cleaning, function checks; rental release acknowledged"
+        },
+        "A17": {
+          "value": "REQ-H310-0907",
+          "formula": "REQ-H310-0907"
+        },
+        "B17": {
+          "value": "2026-09-07 15:10",
+          "formula": "2026-09-07 15:10"
+        },
+        "C17": {
+          "value": "Departure change requested; no offer, accepted amendment or execution",
+          "formula": "Departure change requested; no offer, accepted amendment or execution"
+        }
+      }
+    },
+    {
+      "id": "calendar",
+      "name": "RV-1 protected capacity",
+      "rowCount": 100,
+      "colCount": 26,
+      "frozenRows": 1,
+      "data": {
+        "A1": {
+          "value": "Date / resource",
+          "formula": "Date / resource"
+        },
+        "B1": {
+          "value": "Protected commitment",
+          "formula": "Protected commitment"
+        },
+        "C1": {
+          "value": "Residual or appointment fact",
+          "formula": "Residual or appointment fact"
+        },
+        "A2": {
+          "value": "2026-09-14 / C1",
+          "formula": "2026-09-14 / C1"
+        },
+        "B2": {
+          "value": "P-C1-0914; 13:00–17:00; 240 min",
+          "formula": "P-C1-0914; 13:00–17:00; 240 min"
+        },
+        "C2": {
+          "value": "08:00–12:00 WH1-to-WH1 block; 8 m3; AP310-14 booked, manifest unreleased",
+          "formula": "08:00–12:00 WH1-to-WH1 block; 8 m3; AP310-14 booked, manifest unreleased"
+        },
+        "A3": {
+          "value": "2026-09-17 / C1",
+          "formula": "2026-09-17 / C1"
+        },
+        "B3": {
+          "value": "P-C1-0917; 13:00–17:00; 240 min",
+          "formula": "P-C1-0917; 13:00–17:00; 240 min"
+        },
+        "C3": {
+          "value": "08:00–12:00 WH1-to-WH1 block; 8 m3; AP311-17 booked, manifest unreleased",
+          "formula": "08:00–12:00 WH1-to-WH1 block; 8 m3; AP311-17 booked, manifest unreleased"
+        },
+        "A4": {
+          "value": "2026-09-18 / C1",
+          "formula": "2026-09-18 / C1"
+        },
+        "B4": {
+          "value": "P-C1-0918; 13:00–17:00; 240 min",
+          "formula": "P-C1-0918; 13:00–17:00; 240 min"
+        },
+        "C4": {
+          "value": "08:00–12:00 WH1-to-WH1 block; 8 m3; AP312-18 booked, manifest unreleased",
+          "formula": "08:00–12:00 WH1-to-WH1 block; 8 m3; AP312-18 booked, manifest unreleased"
+        },
+        "A5": {
+          "value": "2026-09-24 / C1",
+          "formula": "2026-09-24 / C1"
+        },
+        "B5": {
+          "value": "P-C1-0924; 13:00–17:00; 240 min",
+          "formula": "P-C1-0924; 13:00–17:00; 240 min"
+        },
+        "C5": {
+          "value": "08:00–12:00 WH1-to-WH1 block; 8 m3; no additional appointment yet",
+          "formula": "08:00–12:00 WH1-to-WH1 block; 8 m3; no additional appointment yet"
+        },
+        "A6": {
+          "value": "2026-09-25 / C1",
+          "formula": "2026-09-25 / C1"
+        },
+        "B6": {
+          "value": "P-C1-0925; 13:00–17:00; 240 min",
+          "formula": "P-C1-0925; 13:00–17:00; 240 min"
+        },
+        "C6": {
+          "value": "08:00–12:00 WH1-to-WH1 block; 8 m3; no additional appointment yet",
+          "formula": "08:00–12:00 WH1-to-WH1 block; 8 m3; no additional appointment yet"
+        },
+        "A7": {
+          "value": "September 14,17,18,24,25 / C2",
+          "formula": "September 14,17,18,24,25 / C2"
+        },
+        "B7": {
+          "value": "P-C2-MMDD each date; 08:00–12:00 + 13:00–17:00; 480 min",
+          "formula": "P-C2-MMDD each date; 08:00–12:00 + 13:00–17:00; 480 min"
+        },
+        "C7": {
+          "value": "Zero residual; accepted unrelated household deliveries and returns",
+          "formula": "Zero residual; accepted unrelated household deliveries and returns"
+        },
+        "A8": {
+          "value": "September 14,17,18,24,25 / C3",
+          "formula": "September 14,17,18,24,25 / C3"
+        },
+        "B8": {
+          "value": "P-C3-MMDD each date; 08:00–12:00 + 13:00–17:00; 480 min",
+          "formula": "P-C3-MMDD each date; 08:00–12:00 + 13:00–17:00; 480 min"
+        },
+        "C8": {
+          "value": "Zero residual; accepted unrelated household pickups and exchanges",
+          "formula": "Zero residual; accepted unrelated household pickups and exchanges"
+        },
+        "A9": {
+          "value": "September 14,17,18,24,25 / C4",
+          "formula": "September 14,17,18,24,25 / C4"
+        },
+        "B9": {
+          "value": "P-C4-MMDD each date; 08:00–12:00 + 13:00–17:00; 480 min",
+          "formula": "P-C4-MMDD each date; 08:00–12:00 + 13:00–17:00; 480 min"
+        },
+        "C9": {
+          "value": "Zero residual; accepted household work and district transfers",
+          "formula": "Zero residual; accepted household work and district transfers"
+        },
+        "A10": {
+          "value": "Other weekdays September 8–28 / all crews",
+          "formula": "Other weekdays September 8–28 / all crews"
+        },
+        "B10": {
+          "value": "Protected day calendars; 480 min per crew",
+          "formula": "Protected day calendars; 480 min per crew"
+        },
+        "C10": {
+          "value": "No residual for additional stops",
+          "formula": "No residual for additional stops"
+        },
+        "A11": {
+          "value": "2026-09-15 / routine station",
+          "formula": "2026-09-15 / routine station"
+        },
+        "B11": {
+          "value": "RP-0915: 9 of 12 person-hours protected",
+          "formula": "RP-0915: 9 of 12 person-hours protected"
+        },
+        "C11": {
+          "value": "3 person-hours residual; release evidence required",
+          "formula": "3 person-hours residual; release evidence required"
+        },
+        "A12": {
+          "value": "2026-09-25 / routine station",
+          "formula": "2026-09-25 / routine station"
+        },
+        "B12": {
+          "value": "RP-0925: 9 of 12 person-hours protected",
+          "formula": "RP-0925: 9 of 12 person-hours protected"
+        },
+        "C12": {
+          "value": "3 person-hours residual; release evidence required",
+          "formula": "3 person-hours residual; release evidence required"
+        },
+        "A13": {
+          "value": "2026-09-28 / routine station",
+          "formula": "2026-09-28 / routine station"
+        },
+        "B13": {
+          "value": "RP-0928: 9 of 12 person-hours protected",
+          "formula": "RP-0928: 9 of 12 person-hours protected"
+        },
+        "C13": {
+          "value": "3 person-hours residual; release evidence required",
+          "formula": "3 person-hours residual; release evidence required"
+        },
+        "A14": {
+          "value": "H310 access",
+          "formula": "H310 access"
+        },
+        "B14": {
+          "value": "310 Maple Landing Drive, Durham, Apt 204",
+          "formula": "310 Maple Landing Drive, Durham, Apt 204"
+        },
+        "C14": {
+          "value": "September 14 09:00–11:00; September 24 09:00–12:00",
+          "formula": "September 14 09:00–11:00; September 24 09:00–12:00"
+        },
+        "A15": {
+          "value": "H311 access",
+          "formula": "H311 access"
+        },
+        "B15": {
+          "value": "311 Oak Terrace Court, Raleigh, Apt 102",
+          "formula": "311 Oak Terrace Court, Raleigh, Apt 102"
+        },
+        "C15": {
+          "value": "September 17 10:00–12:00; width limit 220 cm; room fits 190 or 215 cm sofa",
+          "formula": "September 17 10:00–12:00; width limit 220 cm; room fits 190 or 215 cm sofa"
+        },
+        "A16": {
+          "value": "H312 access",
+          "formula": "H312 access"
+        },
+        "B16": {
+          "value": "312 Cedar Walk, Durham, Apt 3",
+          "formula": "312 Cedar Walk, Durham, Apt 3"
+        },
+        "C16": {
+          "value": "September 18 10:00–12:00; Queen-Q size accepted",
+          "formula": "September 18 10:00–12:00; Queen-Q size accepted"
+        }
+      }
+    },
+    {
+      "id": "rules",
+      "name": "Shared operating rules",
+      "rowCount": 100,
+      "colCount": 26,
+      "frozenRows": 1,
+      "data": {
+        "A1": {
+          "value": "Reference",
+          "formula": "Reference"
+        },
+        "B1": {
+          "value": "Frozen rule or source statement",
+          "formula": "Frozen rule or source statement"
+        },
+        "A2": {
+          "value": "Snapshot and authority",
+          "formula": "Snapshot and authority"
+        },
+        "B2": {
+          "value": "September 8, 2026 08:00 America/New_York. Weekday operations 08:00–17:00; no modeled holiday closures September 8–28. This workbook is an external-system source extract and analytical workspace, not a rental transaction engine. Blank acceptance or reservation means absent, not approved.",
+          "formula": "September 8, 2026 08:00 America/New_York. Weekday operations 08:00–17:00; no modeled holiday closures September 8–28. This workbook is an external-system source extract and analytical workspace, not a rental transaction engine. Blank acceptance or reservation means absent, not approved."
+        },
+        "A3": {
+          "value": "LT-1 rates",
+          "formula": "LT-1 rates"
+        },
+        "B3": {
+          "value": "L310 monthly rates: S1 $60, B1 $90, D1 $30. Existing payment covers all three through September 14 inclusive. Extension rent is item monthly rate / 30 for each retained calendar day beginning September 15, including actual pickup date. No cancellation or early-return penalty.",
+          "formula": "L310 monthly rates: S1 $60, B1 $90, D1 $30. Existing payment covers all three through September 14 inclusive. Extension rent is item monthly rate / 30 for each retained calendar day beginning September 15, including actual pickup date. No cancellation or early-return penalty."
+        },
+        "A4": {
+          "value": "LT-1 visits and quotation",
+          "formula": "LT-1 visits and quotation"
+        },
+        "B4": {
+          "value": "One final pickup included. Voluntarily splitting the originally included pickup adds one $25 visit charge. Failure to collect an unemptied item continues that item's rent through actual collection; one recovery attempt is included with no extra visit charge. Each quote must explain actual-pickup billing. No unlisted concessions, rate changes or tax calculation in this pre-tax handoff.",
+          "formula": "One final pickup included. Voluntarily splitting the originally included pickup adds one $25 visit charge. Failure to collect an unemptied item continues that item's rent through actual collection; one recovery attempt is included with no extra visit charge. Each quote must explain actual-pickup billing. No unlisted concessions, rate changes or tax calculation in this pre-tax handoff."
+        },
+        "A5": {
+          "value": "RC-1",
+          "formula": "RC-1"
+        },
+        "B5": {
+          "value": "Returned S1, B1 and D1 each require actual WH1 receipt, inspection, cleaning and function checks: one person-hour per asset, completing 16:00 next business day after receipt when residual station capacity is available. Three residual hours exist September 15, 25 and 28. A passed external checklist supports preauthorized routine release; a failed check requires a hold. Estimate or planned pickup is never release evidence.",
+          "formula": "Returned S1, B1 and D1 each require actual WH1 receipt, inspection, cleaning and function checks: one person-hour per asset, completing 16:00 next business day after receipt when residual station capacity is available. Three residual hours exist September 15, 25 and 28. A passed external checklist supports preauthorized routine release; a failed check requires a hold. Estimate or planned pickup is never release evidence."
+        },
+        "A6": {
+          "value": "RV-1",
+          "formula": "RV-1"
+        },
+        "B6": {
+          "value": "Only C1 has additional-stop capacity: September 14, 17, 18, 24 and 25, 08:00–12:00 warehouse-to-warehouse, vehicle 8 m3. C1 has 240 minutes other work each date; daily limit 480 minutes, no overtime. C2–C4 fully protected. Appointment changes require acceptance. Load, service, travel and waiting all count. Protected work cannot be displaced by an analyst.",
+          "formula": "Only C1 has additional-stop capacity: September 14, 17, 18, 24 and 25, 08:00–12:00 warehouse-to-warehouse, vehicle 8 m3. C1 has 240 minutes other work each date; daily limit 480 minutes, no overtime. C2–C4 fully protected. Appointment changes require acceptance. Load, service, travel and waiting all count. Protected work cannot be displaced by an analyst."
+        },
+        "A7": {
+          "value": "TM-1 travel and handling",
+          "formula": "TM-1 travel and handling"
+        },
+        "B7": {
+          "value": "One-way WH1 travel: H310 35 minutes; H311 40; H312 40. Each visit requires 30 minutes departure loading/handling and 30 minutes return unloading/handling. H310 onsite: S1 alone 25; B1+D1 45; all three 60; D1 alone 20; B1 alone 35; B1+S1 45. An unsuccessful D1 removal attempt adds 15 minutes to successful-item service. Each future delivery is 45 minutes onsite. No direct customer-to-customer travel time is authorized; combinations must route through WH1 unless a new matrix entry is supplied.",
+          "formula": "One-way WH1 travel: H310 35 minutes; H311 40; H312 40. Each visit requires 30 minutes departure loading/handling and 30 minutes return unloading/handling. H310 onsite: S1 alone 25; B1+D1 45; all three 60; D1 alone 20; B1 alone 35; B1+S1 45. An unsuccessful D1 removal attempt adds 15 minutes to successful-item service. Each future delivery is 45 minutes onsite. No direct customer-to-customer travel time is authorized; combinations must route through WH1 unless a new matrix entry is supplied."
+        },
+        "A8": {
+          "value": "SCOPE-0908",
+          "formula": "SCOPE-0908"
+        },
+        "B8": {
+          "value": "External inventory census as of September 8 08:00: complete uncommitted ready alternatives for the sofa and Queen-Q requirements are S2 and B2. S3 and B3 are protected to unrelated accepted orders through December 31. S4 is customer-held through October 31; B4 held through September 30. Every other matching piece is customer-held, reserved or condition-held throughout September 8–28. No interdistrict borrowing rights. This is a scope certificate, not an allocation instruction.",
+          "formula": "External inventory census as of September 8 08:00: complete uncommitted ready alternatives for the sofa and Queen-Q requirements are S2 and B2. S3 and B3 are protected to unrelated accepted orders through December 31. S4 is customer-held through October 31; B4 held through September 30. Every other matching piece is customer-held, reserved or condition-held throughout September 8–28. No interdistrict borrowing rights. This is a scope certificate, not an allocation instruction."
+        },
+        "A9": {
+          "value": "External transaction protocol",
+          "formula": "External transaction protocol"
+        },
+        "B9": {
+          "value": "Submit instruction ID/idempotency key, entity IDs, expected versions, exact accepted offer reference, item intervals, appointments, rates and authorization. Actor returns accepted/rejected status, reason, effective time, before/after state and immutable transaction ID. Reuse of a key cannot execute twice. Acceptance is not execution. Conditional reassignment must be explicitly authored by a worker and may execute only against referenced actual receipt/release evidence; a protected backup stays assigned until a replacement acknowledgment.",
+          "formula": "Submit instruction ID/idempotency key, entity IDs, expected versions, exact accepted offer reference, item intervals, appointments, rates and authorization. Actor returns accepted/rejected status, reason, effective time, before/after state and immutable transaction ID. Reuse of a key cannot execute twice. Acceptance is not execution. Conditional reassignment must be explicitly authored by a worker and may execute only against referenced actual receipt/release evidence; a protected backup stays assigned until a replacement acknowledgment."
+        },
+        "A10": {
+          "value": "Physical and billing evidence",
+          "formula": "Physical and billing evidence"
+        },
+        "B10": {
+          "value": "Crew reports identify loaded and uncollected asset IDs, actual times and custody transitions. Receiving reports confirm arrival at WH1. Routine reports record checklist outcomes and release transaction. Billing handoff requires accepted lease versions, item rates, actual collection dates, visit structure, source IDs and total; intake receipt is distinct from later accounting posting. External Accounting Intake owns validation; Morgan Hale owns subsequent posting. No future actor reports are present in this snapshot.",
+          "formula": "Crew reports identify loaded and uncollected asset IDs, actual times and custody transitions. Receiving reports confirm arrival at WH1. Routine reports record checklist outcomes and release transaction. Billing handoff requires accepted lease versions, item rates, actual collection dates, visit structure, source IDs and total; intake receipt is distinct from later accounting posting. External Accounting Intake owns validation; Morgan Hale owns subsequent posting. No future actor reports are present in this snapshot."
+        },
+        "A11": {
+          "value": "District delegation D-1",
+          "formula": "District delegation D-1"
+        },
+        "B11": {
+          "value": "Maya: standard tariff and exact acceptance. Eli: supported inventory corrections/reservations. Nora: available crews within accepted access. Luis: approved repair queue and evidenced release. Dana: repair approvals up to $500/item and $3000/week, retirement up to $2000 book value/item subject to commitments. Simone: received outlet stock pricing no lower than recorded floor; markdown at most 15% without Dana approval. Labor planning $28/hour. No worker can waive structural concerns or invent physical events.",
+          "formula": "Maya: standard tariff and exact acceptance. Eli: supported inventory corrections/reservations. Nora: available crews within accepted access. Luis: approved repair queue and evidenced release. Dana: repair approvals up to $500/item and $3000/week, retirement up to $2000 book value/item subject to commitments. Simone: received outlet stock pricing no lower than recorded floor; markdown at most 15% without Dana approval. Labor planning $28/hour. No worker can waive structural concerns or invent physical events."
+        }
+      }
+    },
+    {
+      "id": "weekly",
+      "name": "Recent district activity",
+      "rowCount": 100,
+      "colCount": 26,
+      "frozenRows": 1,
+      "data": {
+        "A1": {
+          "value": "Week ending",
+          "formula": "Week ending"
+        },
+        "B1": {
+          "value": "New orders",
+          "formula": "New orders"
+        },
+        "C1": {
+          "value": "Completed returns",
+          "formula": "Completed returns"
+        },
+        "D1": {
+          "value": "Outlet pieces received",
+          "formula": "Outlet pieces received"
+        },
+        "E1": {
+          "value": "Service tickets opened",
+          "formula": "Service tickets opened"
+        },
+        "A2": {
+          "value": "2026-06-14",
+          "formula": "2026-06-14"
+        },
+        "B2": {
+          "value": "43",
+          "formula": "43"
+        },
+        "C2": {
+          "value": "38",
+          "formula": "38"
+        },
+        "D2": {
+          "value": "68",
+          "formula": "68"
+        },
+        "E2": {
+          "value": "22",
+          "formula": "22"
+        },
+        "A3": {
+          "value": "2026-06-21",
+          "formula": "2026-06-21"
+        },
+        "B3": {
+          "value": "46",
+          "formula": "46"
+        },
+        "C3": {
+          "value": "40",
+          "formula": "40"
+        },
+        "D3": {
+          "value": "72",
+          "formula": "72"
+        },
+        "E3": {
+          "value": "24",
+          "formula": "24"
+        },
+        "A4": {
+          "value": "2026-06-28",
+          "formula": "2026-06-28"
+        },
+        "B4": {
+          "value": "44",
+          "formula": "44"
+        },
+        "C4": {
+          "value": "37",
+          "formula": "37"
+        },
+        "D4": {
+          "value": "65",
+          "formula": "65"
+        },
+        "E4": {
+          "value": "21",
+          "formula": "21"
+        },
+        "A5": {
+          "value": "2026-07-05",
+          "formula": "2026-07-05"
+        },
+        "B5": {
+          "value": "41",
+          "formula": "41"
+        },
+        "C5": {
+          "value": "36",
+          "formula": "36"
+        },
+        "D5": {
+          "value": "62",
+          "formula": "62"
+        },
+        "E5": {
+          "value": "20",
+          "formula": "20"
+        },
+        "A6": {
+          "value": "2026-07-12",
+          "formula": "2026-07-12"
+        },
+        "B6": {
+          "value": "47",
+          "formula": "47"
+        },
+        "C6": {
+          "value": "41",
+          "formula": "41"
+        },
+        "D6": {
+          "value": "75",
+          "formula": "75"
+        },
+        "E6": {
+          "value": "26",
+          "formula": "26"
+        },
+        "A7": {
+          "value": "2026-07-19",
+          "formula": "2026-07-19"
+        },
+        "B7": {
+          "value": "45",
+          "formula": "45"
+        },
+        "C7": {
+          "value": "39",
+          "formula": "39"
+        },
+        "D7": {
+          "value": "70",
+          "formula": "70"
+        },
+        "E7": {
+          "value": "24",
+          "formula": "24"
+        },
+        "A8": {
+          "value": "2026-07-26",
+          "formula": "2026-07-26"
+        },
+        "B8": {
+          "value": "48",
+          "formula": "48"
+        },
+        "C8": {
+          "value": "42",
+          "formula": "42"
+        },
+        "D8": {
+          "value": "78",
+          "formula": "78"
+        },
+        "E8": {
+          "value": "27",
+          "formula": "27"
+        },
+        "A9": {
+          "value": "2026-08-02",
+          "formula": "2026-08-02"
+        },
+        "B9": {
+          "value": "44",
+          "formula": "44"
+        },
+        "C9": {
+          "value": "40",
+          "formula": "40"
+        },
+        "D9": {
+          "value": "69",
+          "formula": "69"
+        },
+        "E9": {
+          "value": "23",
+          "formula": "23"
+        },
+        "A10": {
+          "value": "2026-08-09",
+          "formula": "2026-08-09"
+        },
+        "B10": {
+          "value": "50",
+          "formula": "50"
+        },
+        "C10": {
+          "value": "43",
+          "formula": "43"
+        },
+        "D10": {
+          "value": "80",
+          "formula": "80"
+        },
+        "E10": {
+          "value": "29",
+          "formula": "29"
+        },
+        "A11": {
+          "value": "2026-08-16",
+          "formula": "2026-08-16"
+        },
+        "B11": {
+          "value": "49",
+          "formula": "49"
+        },
+        "C11": {
+          "value": "45",
+          "formula": "45"
+        },
+        "D11": {
+          "value": "76",
+          "formula": "76"
+        },
+        "E11": {
+          "value": "28",
+          "formula": "28"
+        },
+        "A12": {
+          "value": "2026-08-23",
+          "formula": "2026-08-23"
+        },
+        "B12": {
+          "value": "46",
+          "formula": "46"
+        },
+        "C12": {
+          "value": "42",
+          "formula": "42"
+        },
+        "D12": {
+          "value": "71",
+          "formula": "71"
+        },
+        "E12": {
+          "value": "25",
+          "formula": "25"
+        },
+        "A13": {
+          "value": "2026-08-30",
+          "formula": "2026-08-30"
+        },
+        "B13": {
+          "value": "45",
+          "formula": "45"
+        },
+        "C13": {
+          "value": "40",
+          "formula": "40"
+        },
+        "D13": {
+          "value": "73",
+          "formula": "73"
+        },
+        "E13": {
+          "value": "24",
+          "formula": "24"
+        },
+        "A14": {
+          "value": "2026-09-06",
+          "formula": "2026-09-06"
+        },
+        "B14": {
+          "value": "42",
+          "formula": "42"
+        },
+        "C14": {
+          "value": "39",
+          "formula": "39"
+        },
+        "D14": {
+          "value": "66",
+          "formula": "66"
+        },
+        "E14": {
+          "value": "22",
+          "formula": "22"
+        },
+        "A16": {
+          "value": "District snapshot September 8",
+          "formula": "District snapshot September 8"
+        },
+        "B16": {
+          "value": "900 active leases",
+          "formula": "900 active leases"
+        },
+        "C16": {
+          "value": "12000 current pieces",
+          "formula": "12000 current pieces"
+        },
+        "D16": {
+          "value": "25 open requests in working queue",
+          "formula": "25 open requests in working queue"
+        },
+        "A18": {
+          "value": "Archive scope",
+          "formula": "Archive scope"
+        },
+        "B18": {
+          "value": "Five-year external archive; recent rows are weekly aggregates",
+          "formula": "Five-year external archive; recent rows are weekly aggregates"
+        }
+      }
+    }
+  ],
+  "activeSheetId": "assets",
+  "selectedCell": "A1",
+  "selectionRange": null,
+  "clipboard": null,
+  "isDragging": false,
+  "undoStack": [],
+  "redoStack": [],
+  "namedRanges": [
+    {
+      "name": "AssetSnapshot",
+      "sheetId": "assets",
+      "range": "A1:D21"
+    },
+    {
+      "name": "Commitments",
+      "sheetId": "commitments",
+      "range": "A1:D16"
+    },
+    {
+      "name": "OperatingRules",
+      "sheetId": "rules",
+      "range": "A1:B11"
+    },
+    {
+      "name": "ResidualCalendar",
+      "sheetId": "calendar",
+      "range": "A1:C16"
+    }
+  ],
+  "conditionalFormats": [],
+  "charts": [],
+  "showGridlines": true,
+  "showFormulas": false,
+  "zoom": 100
+}

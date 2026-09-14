@@ -1,0 +1,212 @@
+{
+  "app_id": "google_ads_mock",
+  "source": "posted_to_server",
+  "documented": [
+    "account",
+    "adGroups",
+    "ads",
+    "campaigns",
+    "currentView",
+    "dailyMetrics",
+    "keywords",
+    "notifications",
+    "recommendations",
+    "searchTerms",
+    "selectedCampaignFilter",
+    "selectedDateRange"
+  ],
+  "observed": [
+    "account",
+    "adGroups",
+    "ads",
+    "billing",
+    "campaigns",
+    "currentView",
+    "dailyMetrics",
+    "keywords",
+    "notifications",
+    "recommendations",
+    "searchTerms",
+    "selectedCampaignFilter",
+    "selectedDateRange",
+    "selectedGoal"
+  ],
+  "undocumented_so_unseedable": [
+    "billing",
+    "selectedGoal"
+  ],
+  "documented_but_app_keeps_none": [],
+  "agrees": false,
+  "shapes": {
+    "account": {
+      "kind": "object",
+      "count": 6,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "campaigns": {
+      "kind": "array",
+      "count": 7,
+      "record_fields": [
+        "id",
+        "name",
+        "status",
+        "type",
+        "budget",
+        "biddingStrategy",
+        "targetCpa",
+        "targetRoas",
+        "startDate",
+        "endDate",
+        "networks",
+        "locations",
+        "languages",
+        "adSchedule",
+        "metrics"
+      ],
+      "keyed_by_id": false
+    },
+    "adGroups": {
+      "kind": "array",
+      "count": 16,
+      "record_fields": [
+        "id",
+        "campaignId",
+        "name",
+        "status",
+        "defaultBid",
+        "metrics"
+      ],
+      "keyed_by_id": false
+    },
+    "ads": {
+      "kind": "array",
+      "count": 19,
+      "record_fields": [
+        "id",
+        "adGroupId",
+        "campaignId",
+        "type",
+        "status",
+        "headlines",
+        "descriptions",
+        "finalUrl",
+        "displayUrl",
+        "metrics"
+      ],
+      "keyed_by_id": false
+    },
+    "keywords": {
+      "kind": "array",
+      "count": 49,
+      "record_fields": [
+        "id",
+        "adGroupId",
+        "campaignId",
+        "text",
+        "matchType",
+        "status",
+        "bid",
+        "qualityScore",
+        "qualityScoreComponents",
+        "isNegative",
+        "metrics"
+      ],
+      "keyed_by_id": false
+    },
+    "recommendations": {
+      "kind": "array",
+      "count": 10,
+      "record_fields": [
+        "id",
+        "type",
+        "title",
+        "description",
+        "impact",
+        "estimatedImpact",
+        "campaignId",
+        "adGroupId",
+        "status"
+      ],
+      "keyed_by_id": false
+    },
+    "dailyMetrics": {
+      "kind": "array",
+      "count": 210,
+      "record_fields": [
+        "date",
+        "campaignId",
+        "clicks",
+        "impressions",
+        "cost",
+        "conversions"
+      ],
+      "keyed_by_id": false
+    },
+    "notifications": {
+      "kind": "array",
+      "count": 6,
+      "record_fields": [
+        "id",
+        "type",
+        "title",
+        "message",
+        "timestamp",
+        "read",
+        "campaignId"
+      ],
+      "keyed_by_id": false
+    },
+    "searchTerms": {
+      "kind": "array",
+      "count": 25,
+      "record_fields": [
+        "id",
+        "searchTerm",
+        "matchedKeywordId",
+        "campaignId",
+        "adGroupId",
+        "clicks",
+        "impressions",
+        "cost",
+        "conversions"
+      ],
+      "keyed_by_id": false
+    },
+    "billing": {
+      "kind": "object",
+      "count": 5,
+      "record_fields": [
+        "type",
+        "last4",
+        "expiry",
+        "name"
+      ],
+      "keyed_by_id": false
+    },
+    "selectedDateRange": {
+      "kind": "object",
+      "count": 3,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "selectedCampaignFilter": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    },
+    "currentView": {
+      "kind": "string",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": false
+    },
+    "selectedGoal": {
+      "kind": "null",
+      "count": null,
+      "record_fields": null,
+      "keyed_by_id": null
+    }
+  }
+}

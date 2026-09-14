@@ -1,0 +1,42 @@
+{
+  "currentUserId": "user-1",
+  "users": {
+    "user-1": {"id": "user-1", "name": "Beatriz Camargo", "email": "beatriz.camargo@fernhollow-parks.example", "initials": "BC", "color": "#0073EA", "role": "Admin", "isCurrentUser": true},
+    "user-2": {"id": "user-2", "name": "Sven Halvorsen", "email": "sven.halvorsen@fernhollow-parks.example", "initials": "SH", "color": "#00C875", "role": "Member", "isCurrentUser": false},
+    "user-3": {"id": "user-3", "name": "Adaeze Nwosu", "email": "adaeze.nwosu@fernhollow-parks.example", "initials": "AN", "color": "#FDAB3D", "role": "Member", "isCurrentUser": false}
+  },
+  "workspaces": {
+    "ws-1": {"id": "ws-1", "name": "Fernhollow Parks Department", "icon": "F", "color": "#0073EA", "boardIds": ["board-1"]}
+  },
+  "activeWorkspaceId": "ws-1",
+  "activeBoardId": "board-1",
+  "boards": {
+    "board-1": {"id": "board-1", "name": "Fernhollow Parks Capital Projects", "description": "FY27 capital projects for the Fernhollow parks system", "workspaceId": "ws-1", "type": "board", "isFavorite": true, "groupIds": ["group-1", "group-2"], "columnIds": ["col-person-1", "col-status-1", "col-priority-1", "col-date-1", "col-numbers-1"], "views": [{"id": "view-1", "type": "table", "name": "Table", "isDefault": true}, {"id": "view-2", "type": "kanban", "name": "Kanban", "isDefault": false, "statusColumnId": "col-status-1"}], "createdAt": "2026-07-01T09:00:00Z", "updatedAt": "2026-09-05T16:00:00Z"}
+  },
+  "columns": {
+    "col-person-1": {"id": "col-person-1", "title": "Owner", "type": "people", "width": 140, "settings": {}},
+    "col-status-1": {"id": "col-status-1", "title": "Status", "type": "status", "width": 140, "settings": {"labels": {"0": {"text": "Done", "color": "#00C875"}, "1": {"text": "Working on it", "color": "#FDAB3D"}, "2": {"text": "Stuck", "color": "#E2445C"}, "3": {"text": "Not Started", "color": "#C4C4C4"}}}},
+    "col-priority-1": {"id": "col-priority-1", "title": "Priority", "type": "status", "width": 120, "settings": {"labels": {"0": {"text": "Critical", "color": "#333333"}, "1": {"text": "High", "color": "#401694"}, "2": {"text": "Medium", "color": "#5559DF"}, "3": {"text": "Low", "color": "#579BFC"}, "4": {"text": "", "color": "#C4C4C4"}}}},
+    "col-date-1": {"id": "col-date-1", "title": "Due Date", "type": "date", "width": 140, "settings": {}},
+    "col-numbers-1": {"id": "col-numbers-1", "title": "Budget", "type": "numbers", "width": 120, "settings": {"unit": "$", "direction": "left"}}
+  },
+  "groups": {
+    "group-1": {"id": "group-1", "boardId": "board-1", "title": "In construction", "color": "#579BFC", "isCollapsed": false, "itemIds": ["item-1", "item-2"], "position": 0},
+    "group-2": {"id": "group-2", "boardId": "board-1", "title": "Design phase", "color": "#00C875", "isCollapsed": false, "itemIds": ["item-3"], "position": 1}
+  },
+  "items": {
+    "item-1": {"id": "item-1", "boardId": "board-1", "groupId": "group-1", "name": "Alder Creek splash pad", "columnValues": {"col-person-1": {"value": ["user-2"]}, "col-status-1": {"value": 1}, "col-priority-1": {"value": 1}, "col-date-1": {"value": "2026-10-15"}, "col-numbers-1": {"value": 420000}}, "subitemIds": [], "isSelected": false, "createdAt": "2026-07-01T09:10:00Z", "updatedAt": "2026-09-05T16:00:00Z", "creatorId": "user-1"},
+    "item-2": {"id": "item-2", "boardId": "board-1", "groupId": "group-1", "name": "Ridge Trail boardwalk repair", "columnValues": {"col-person-1": {"value": ["user-3"]}, "col-status-1": {"value": 2}, "col-priority-1": {"value": 0}, "col-date-1": {"value": "2026-09-30"}, "col-numbers-1": {"value": 85000}}, "subitemIds": [], "isSelected": false, "createdAt": "2026-07-01T09:12:00Z", "updatedAt": "2026-09-04T11:00:00Z", "creatorId": "user-1"},
+    "item-3": {"id": "item-3", "boardId": "board-1", "groupId": "group-2", "name": "Eastside dog park lighting", "columnValues": {"col-person-1": {"value": ["user-1"]}, "col-status-1": {"value": 3}, "col-priority-1": {"value": 2}, "col-date-1": {"value": "2027-02-28"}, "col-numbers-1": {"value": 60000}}, "subitemIds": [], "isSelected": false, "createdAt": "2026-08-15T09:00:00Z", "updatedAt": "2026-08-15T09:00:00Z", "creatorId": "user-1"}
+  },
+  "updates": {
+    "update-1": {"id": "update-1", "itemId": "item-2", "authorId": "user-3", "body": "Lumber delivery slipped two weeks; contractor asking for a change order.", "createdAt": "2026-09-04T11:00:00Z", "likes": ["user-1"], "isReply": false, "parentUpdateId": null}
+  },
+  "notifications": [
+    {"id": "notif-1", "type": "status_change", "message": "Adaeze Nwosu changed Ridge Trail boardwalk repair to Stuck", "userId": "user-1", "actorId": "user-3", "itemId": "item-2", "boardId": "board-1", "isRead": false, "createdAt": "2026-09-04T11:01:00Z"}
+  ],
+  "activityLog": [
+    {"id": "activity-1", "boardId": "board-1", "itemId": "item-2", "userId": "user-3", "columnId": "col-status-1", "action": "column_change", "previousValue": {"value": 1}, "newValue": {"value": 2}, "createdAt": "2026-09-04T11:00:00Z"}
+  ],
+  "ui": {"sidebarCollapsed": false, "activeBoardId": "board-1", "activeViewId": "view-1", "selectedItemIds": [], "searchQuery": "", "filterConditions": [], "sortConditions": [], "itemDetailOpenId": null, "notificationsPanelOpen": false}
+}

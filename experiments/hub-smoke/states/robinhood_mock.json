@@ -1,0 +1,695 @@
+{
+ "user": {
+  "id": "user_1",
+  "name": "Camille Okonkwo-Reyes",
+  "email": "camille.okonkwo@example",
+  "cashBalance": 8420.0,
+  "buyingPower": 8420.0,
+  "portfolioValue": 0,
+  "accountType": "Individual",
+  "joinDate": "2023-06-02",
+  "goldMember": false
+ },
+ "stocks": [
+  {
+   "id": "HGRD",
+   "symbol": "HGRD",
+   "name": "Halcyon Grid Storage",
+   "currentPrice": 64.2,
+   "prevClose": 62.85,
+   "change": 1.35,
+   "changePercent": 2.15,
+   "open": 62.85,
+   "high": 64.84,
+   "low": 62.22,
+   "volume": 2400000,
+   "avgVolume": 2100000,
+   "marketCap": 11556000000.0,
+   "peRatio": 24.1,
+   "dividendYield": 0.0,
+   "week52High": 83.46,
+   "week52Low": 44.94,
+   "about": "Halcyon Grid Storage builds utility-scale battery systems.",
+   "sector": "Energy",
+   "employees": 1200,
+   "headquarters": "Reno, NV",
+   "founded": 2014,
+   "ceo": "Marisa Delacroix-Huang",
+   "tags": [
+    "Energy",
+    "Batteries"
+   ],
+   "analystRating": {
+    "buy": 9,
+    "hold": 4,
+    "sell": 1,
+    "priceTarget": 71.9
+   },
+   "earnings": {
+    "nextDate": "2026-10-22",
+    "epsEstimate": 0.84,
+    "revenueEstimate": "$412M"
+   },
+   "history": [
+    {
+     "date": "2026-05-01",
+     "price": 58.77,
+     "volume": 1000000
+    },
+    {
+     "date": "2026-05-02",
+     "price": 58.89,
+     "volume": 1003500
+    },
+    {
+     "date": "2026-05-03",
+     "price": 58.77,
+     "volume": 1007000
+    },
+    {
+     "date": "2026-05-04",
+     "price": 59.06,
+     "volume": 1010500
+    },
+    {
+     "date": "2026-05-05",
+     "price": 59.12,
+     "volume": 1014000
+    },
+    {
+     "date": "2026-05-06",
+     "price": 58.94,
+     "volume": 1017500
+    },
+    {
+     "date": "2026-05-07",
+     "price": 59.18,
+     "volume": 1021000
+    },
+    {
+     "date": "2026-05-08",
+     "price": 59.18,
+     "volume": 1024500
+    },
+    {
+     "date": "2026-05-09",
+     "price": 58.94,
+     "volume": 1028000
+    },
+    {
+     "date": "2026-05-10",
+     "price": 59.12,
+     "volume": 1031500
+    },
+    {
+     "date": "2026-05-11",
+     "price": 59.06,
+     "volume": 1035000
+    },
+    {
+     "date": "2026-05-12",
+     "price": 58.76,
+     "volume": 1038500
+    },
+    {
+     "date": "2026-05-13",
+     "price": 58.88,
+     "volume": 1042000
+    },
+    {
+     "date": "2026-05-14",
+     "price": 58.76,
+     "volume": 1045500
+    },
+    {
+     "date": "2026-05-15",
+     "price": 59.05,
+     "volume": 1049000
+    },
+    {
+     "date": "2026-05-16",
+     "price": 59.11,
+     "volume": 1052500
+    },
+    {
+     "date": "2026-05-17",
+     "price": 58.93,
+     "volume": 1056000
+    },
+    {
+     "date": "2026-05-18",
+     "price": 59.17,
+     "volume": 1059500
+    },
+    {
+     "date": "2026-05-19",
+     "price": 59.17,
+     "volume": 1063000
+    },
+    {
+     "date": "2026-05-20",
+     "price": 58.93,
+     "volume": 1066500
+    },
+    {
+     "date": "2026-05-21",
+     "price": 59.11,
+     "volume": 1070000
+    },
+    {
+     "date": "2026-05-22",
+     "price": 59.05,
+     "volume": 1073500
+    },
+    {
+     "date": "2026-05-23",
+     "price": 58.75,
+     "volume": 1077000
+    },
+    {
+     "date": "2026-05-24",
+     "price": 58.87,
+     "volume": 1080500
+    },
+    {
+     "date": "2026-05-25",
+     "price": 58.75,
+     "volume": 1084000
+    },
+    {
+     "date": "2026-05-26",
+     "price": 59.04,
+     "volume": 1087500
+    },
+    {
+     "date": "2026-05-27",
+     "price": 59.1,
+     "volume": 1091000
+    },
+    {
+     "date": "2026-05-28",
+     "price": 58.92,
+     "volume": 1094500
+    },
+    {
+     "date": "2026-05-29",
+     "price": 59.16,
+     "volume": 1098000
+    },
+    {
+     "date": "2026-05-30",
+     "price": 59.16,
+     "volume": 1101500
+    }
+   ]
+  },
+  {
+   "id": "PLNR",
+   "symbol": "PLNR",
+   "name": "Plainsong Robotics",
+   "currentPrice": 118.4,
+   "prevClose": 121.1,
+   "change": -2.7,
+   "changePercent": -2.23,
+   "open": 121.1,
+   "high": 122.31,
+   "low": 117.22,
+   "volume": 2400000,
+   "avgVolume": 2100000,
+   "marketCap": 21312000000.0,
+   "peRatio": 24.1,
+   "dividendYield": 0.0,
+   "week52High": 153.92,
+   "week52Low": 82.88,
+   "about": "Plainsong Robotics makes warehouse picking robots.",
+   "sector": "Technology",
+   "employees": 1200,
+   "headquarters": "Madison, WI",
+   "founded": 2011,
+   "ceo": "Owen Adebayo",
+   "tags": [
+    "Technology",
+    "Robotics"
+   ],
+   "analystRating": {
+    "buy": 9,
+    "hold": 4,
+    "sell": 1,
+    "priceTarget": 132.61
+   },
+   "earnings": {
+    "nextDate": "2026-10-22",
+    "epsEstimate": 0.84,
+    "revenueEstimate": "$412M"
+   },
+   "history": [
+    {
+     "date": "2026-05-01",
+     "price": 108.38,
+     "volume": 1000000
+    },
+    {
+     "date": "2026-05-02",
+     "price": 108.6,
+     "volume": 1003500
+    },
+    {
+     "date": "2026-05-03",
+     "price": 108.38,
+     "volume": 1007000
+    },
+    {
+     "date": "2026-05-04",
+     "price": 108.92,
+     "volume": 1010500
+    },
+    {
+     "date": "2026-05-05",
+     "price": 109.03,
+     "volume": 1014000
+    },
+    {
+     "date": "2026-05-06",
+     "price": 108.7,
+     "volume": 1017500
+    },
+    {
+     "date": "2026-05-07",
+     "price": 109.13,
+     "volume": 1021000
+    },
+    {
+     "date": "2026-05-08",
+     "price": 109.13,
+     "volume": 1024500
+    },
+    {
+     "date": "2026-05-09",
+     "price": 108.69,
+     "volume": 1028000
+    },
+    {
+     "date": "2026-05-10",
+     "price": 109.02,
+     "volume": 1031500
+    },
+    {
+     "date": "2026-05-11",
+     "price": 108.91,
+     "volume": 1035000
+    },
+    {
+     "date": "2026-05-12",
+     "price": 108.37,
+     "volume": 1038500
+    },
+    {
+     "date": "2026-05-13",
+     "price": 108.59,
+     "volume": 1042000
+    },
+    {
+     "date": "2026-05-14",
+     "price": 108.37,
+     "volume": 1045500
+    },
+    {
+     "date": "2026-05-15",
+     "price": 108.91,
+     "volume": 1049000
+    },
+    {
+     "date": "2026-05-16",
+     "price": 109.02,
+     "volume": 1052500
+    },
+    {
+     "date": "2026-05-17",
+     "price": 108.69,
+     "volume": 1056000
+    },
+    {
+     "date": "2026-05-18",
+     "price": 109.12,
+     "volume": 1059500
+    },
+    {
+     "date": "2026-05-19",
+     "price": 109.12,
+     "volume": 1063000
+    },
+    {
+     "date": "2026-05-20",
+     "price": 108.68,
+     "volume": 1066500
+    },
+    {
+     "date": "2026-05-21",
+     "price": 109.01,
+     "volume": 1070000
+    },
+    {
+     "date": "2026-05-22",
+     "price": 108.9,
+     "volume": 1073500
+    },
+    {
+     "date": "2026-05-23",
+     "price": 108.36,
+     "volume": 1077000
+    },
+    {
+     "date": "2026-05-24",
+     "price": 108.58,
+     "volume": 1080500
+    },
+    {
+     "date": "2026-05-25",
+     "price": 108.36,
+     "volume": 1084000
+    },
+    {
+     "date": "2026-05-26",
+     "price": 108.9,
+     "volume": 1087500
+    },
+    {
+     "date": "2026-05-27",
+     "price": 109.01,
+     "volume": 1091000
+    },
+    {
+     "date": "2026-05-28",
+     "price": 108.68,
+     "volume": 1094500
+    },
+    {
+     "date": "2026-05-29",
+     "price": 109.11,
+     "volume": 1098000
+    },
+    {
+     "date": "2026-05-30",
+     "price": 109.11,
+     "volume": 1101500
+    }
+   ]
+  },
+  {
+   "id": "VXBT",
+   "symbol": "VXBT",
+   "name": "Verdant Bakehouse Trust",
+   "currentPrice": 22.15,
+   "prevClose": 21.9,
+   "change": 0.25,
+   "changePercent": 1.14,
+   "open": 21.9,
+   "high": 22.37,
+   "low": 21.68,
+   "volume": 2400000,
+   "avgVolume": 2100000,
+   "marketCap": 3986999999.9999995,
+   "peRatio": 24.1,
+   "dividendYield": 0.0,
+   "week52High": 28.79,
+   "week52Low": 15.5,
+   "about": "Verdant Bakehouse Trust operates regional bakeries.",
+   "sector": "Consumer Staples",
+   "employees": 1200,
+   "headquarters": "Portland, ME",
+   "founded": 2005,
+   "ceo": "Lena Farrokhzad",
+   "tags": [
+    "Consumer Staples"
+   ],
+   "analystRating": {
+    "buy": 9,
+    "hold": 4,
+    "sell": 1,
+    "priceTarget": 24.81
+   },
+   "earnings": {
+    "nextDate": "2026-10-22",
+    "epsEstimate": 0.84,
+    "revenueEstimate": "$412M"
+   },
+   "history": [
+    {
+     "date": "2026-05-01",
+     "price": 20.28,
+     "volume": 1000000
+    },
+    {
+     "date": "2026-05-02",
+     "price": 20.32,
+     "volume": 1003500
+    },
+    {
+     "date": "2026-05-03",
+     "price": 20.28,
+     "volume": 1007000
+    },
+    {
+     "date": "2026-05-04",
+     "price": 20.38,
+     "volume": 1010500
+    },
+    {
+     "date": "2026-05-05",
+     "price": 20.4,
+     "volume": 1014000
+    },
+    {
+     "date": "2026-05-06",
+     "price": 20.34,
+     "volume": 1017500
+    },
+    {
+     "date": "2026-05-07",
+     "price": 20.42,
+     "volume": 1021000
+    },
+    {
+     "date": "2026-05-08",
+     "price": 20.42,
+     "volume": 1024500
+    },
+    {
+     "date": "2026-05-09",
+     "price": 20.34,
+     "volume": 1028000
+    },
+    {
+     "date": "2026-05-10",
+     "price": 20.4,
+     "volume": 1031500
+    },
+    {
+     "date": "2026-05-11",
+     "price": 20.38,
+     "volume": 1035000
+    },
+    {
+     "date": "2026-05-12",
+     "price": 20.28,
+     "volume": 1038500
+    },
+    {
+     "date": "2026-05-13",
+     "price": 20.32,
+     "volume": 1042000
+    },
+    {
+     "date": "2026-05-14",
+     "price": 20.28,
+     "volume": 1045500
+    },
+    {
+     "date": "2026-05-15",
+     "price": 20.38,
+     "volume": 1049000
+    },
+    {
+     "date": "2026-05-16",
+     "price": 20.4,
+     "volume": 1052500
+    },
+    {
+     "date": "2026-05-17",
+     "price": 20.34,
+     "volume": 1056000
+    },
+    {
+     "date": "2026-05-18",
+     "price": 20.42,
+     "volume": 1059500
+    },
+    {
+     "date": "2026-05-19",
+     "price": 20.42,
+     "volume": 1063000
+    },
+    {
+     "date": "2026-05-20",
+     "price": 20.34,
+     "volume": 1066500
+    },
+    {
+     "date": "2026-05-21",
+     "price": 20.4,
+     "volume": 1070000
+    },
+    {
+     "date": "2026-05-22",
+     "price": 20.38,
+     "volume": 1073500
+    },
+    {
+     "date": "2026-05-23",
+     "price": 20.28,
+     "volume": 1077000
+    },
+    {
+     "date": "2026-05-24",
+     "price": 20.32,
+     "volume": 1080500
+    },
+    {
+     "date": "2026-05-25",
+     "price": 20.28,
+     "volume": 1084000
+    },
+    {
+     "date": "2026-05-26",
+     "price": 20.38,
+     "volume": 1087500
+    },
+    {
+     "date": "2026-05-27",
+     "price": 20.4,
+     "volume": 1091000
+    },
+    {
+     "date": "2026-05-28",
+     "price": 20.34,
+     "volume": 1094500
+    },
+    {
+     "date": "2026-05-29",
+     "price": 20.42,
+     "volume": 1098000
+    },
+    {
+     "date": "2026-05-30",
+     "price": 20.42,
+     "volume": 1101500
+    }
+   ]
+  }
+ ],
+ "portfolio": {
+  "HGRD": {
+   "quantity": 40,
+   "avgPrice": 58.1
+  },
+  "VXBT": {
+   "quantity": 120,
+   "avgPrice": 19.75
+  }
+ },
+ "watchlist": [
+  "HGRD",
+  "PLNR",
+  "VXBT"
+ ],
+ "transactions": [
+  {
+   "id": "txn_001",
+   "date": "2026-08-21T14:32:00Z",
+   "symbol": "HGRD",
+   "name": "Halcyon Grid Storage",
+   "type": "market",
+   "side": "buy",
+   "quantity": 40,
+   "price": 58.1,
+   "totalAmount": 2324.0,
+   "status": "filled",
+   "limitPrice": null,
+   "stopPrice": null
+  },
+  {
+   "id": "txn_002",
+   "date": "2026-08-27T15:05:00Z",
+   "symbol": "VXBT",
+   "name": "Verdant Bakehouse Trust",
+   "type": "limit",
+   "side": "buy",
+   "quantity": 120,
+   "price": 19.75,
+   "totalAmount": 2370.0,
+   "status": "filled",
+   "limitPrice": 19.8,
+   "stopPrice": null
+  }
+ ],
+ "alerts": [
+  {
+   "id": "alert_1",
+   "type": "order_filled",
+   "title": "Order filled",
+   "message": "Your limit buy of 120 VXBT at $19.75 was filled.",
+   "timestamp": "2026-08-27T15:05:00Z",
+   "read": false,
+   "symbol": "VXBT"
+  },
+  {
+   "id": "alert_2",
+   "type": "earnings",
+   "title": "Earnings ahead",
+   "message": "Halcyon Grid Storage reports earnings on Oct 22.",
+   "timestamp": "2026-09-03T12:00:00Z",
+   "read": false,
+   "symbol": "HGRD"
+  }
+ ],
+ "news": [
+  {
+   "id": 1,
+   "headline": "Halcyon Grid Storage wins 400 MWh Nevada utility contract",
+   "source": "Reuters",
+   "time": "2h ago",
+   "summary": "The battery maker's largest order to date.",
+   "imageUrl": "https://picsum.photos/200/120?random=51",
+   "relatedSymbols": [
+    "HGRD"
+   ],
+   "url": "#"
+  },
+  {
+   "id": 2,
+   "headline": "Plainsong Robotics slips after guidance cut",
+   "source": "Bloomberg",
+   "time": "Yesterday",
+   "summary": "Shares fell 2% on softer warehouse demand.",
+   "imageUrl": "https://picsum.photos/200/120?random=52",
+   "relatedSymbols": [
+    "PLNR"
+   ],
+   "url": "#"
+  }
+ ],
+ "lists": {
+  "topMovers": [
+   "PLNR",
+   "HGRD"
+  ],
+  "mostPopular": [
+   "HGRD",
+   "VXBT",
+   "PLNR"
+  ],
+  "techStocks": [
+   "PLNR"
+  ]
+ }
+}

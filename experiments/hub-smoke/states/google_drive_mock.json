@@ -1,0 +1,20 @@
+{
+  "items": {
+    "folder_001": {"id": "folder_001", "parentId": null, "name": "Thornbury Library Board Packets", "type": "folder", "size": 0, "ownerId": "user_001", "sharedWith": [{"userId": "user_002", "role": "editor", "addedAt": "2026-02-03T10:00:00Z"}], "starred": true, "trashed": false, "color": "#4285F4", "createdAt": 1770112800000, "modifiedAt": 1757145600000, "accessedAt": 1757145600000},
+    "folder_002": {"id": "folder_002", "parentId": null, "name": "Summer Reading 2026", "type": "folder", "size": 0, "ownerId": "user_001", "sharedWith": [], "starred": false, "trashed": false, "color": null, "createdAt": 1775000000000, "modifiedAt": 1756800000000, "accessedAt": 1756800000000},
+    "file_001": {"id": "file_001", "parentId": "folder_001", "name": "September 2026 Board Agenda", "type": "doc", "mimeType": "application/vnd.google-apps.document", "size": 0, "ownerId": "user_001", "sharedWith": [{"userId": "user_002", "role": "commenter", "addedAt": "2026-09-01T10:00:00Z"}], "starred": false, "trashed": false, "color": null, "createdAt": 1756700000000, "modifiedAt": 1757145600000, "accessedAt": 1757145600000},
+    "file_002": {"id": "file_002", "parentId": "folder_001", "name": "FY27 Materials Budget.xlsx", "type": "spreadsheet", "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "size": 48211, "ownerId": "user_002", "sharedWith": [{"userId": "user_001", "role": "editor", "addedAt": "2026-08-20T10:00:00Z"}], "starred": false, "trashed": false, "color": null, "createdAt": 1755600000000, "modifiedAt": 1756900000000, "accessedAt": 1757000000000},
+    "file_003": {"id": "file_003", "parentId": null, "name": "Branch hours flyer.pdf", "type": "pdf", "mimeType": "application/pdf", "size": 213004, "ownerId": "user_001", "sharedWith": [], "starred": false, "trashed": true, "color": null, "createdAt": 1750000000000, "modifiedAt": 1750000000000, "accessedAt": 1756000000000}
+  },
+  "users": {
+    "user_001": {"id": "user_001", "name": "Grace Adebayo", "email": "grace.adebayo@thornbury-library.example", "avatar": "https://ui-avatars.com/api/?name=Grace+Adebayo&background=4285F4&color=fff"},
+    "user_002": {"id": "user_002", "name": "Piotr Zielinski", "email": "piotr.zielinski@thornbury-library.example", "avatar": "https://ui-avatars.com/api/?name=Piotr+Zielinski&background=EA4335&color=fff"}
+  },
+  "currentUser": {"id": "user_001", "name": "Grace Adebayo", "email": "grace.adebayo@thornbury-library.example", "avatar": "https://ui-avatars.com/api/?name=Grace+Adebayo&background=4285F4&color=fff"},
+  "viewMode": "list",
+  "sortConfig": {"key": "name", "direction": "asc"},
+  "uploadQueue": [],
+  "storageUsed": 2147483648,
+  "storageTotal": 16106127360,
+  "selectedItems": []
+}

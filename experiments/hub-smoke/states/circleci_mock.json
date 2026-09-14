@@ -1,0 +1,59 @@
+{
+  "organization": {"id": "org-1", "name": "Saltmarsh Software", "slug": "saltmarsh-software", "avatarUrl": null, "plan": "performance", "createdAt": "2025-11-03T10:00:00Z", "creditBalance": 38000, "creditsUsed": 6120},
+  "currentUser": {"id": "user-1", "name": "Ingrid Solberg", "username": "ingrids", "email": "ingrid.solberg@saltmarsh.example", "avatarUrl": null, "role": "admin", "createdAt": "2025-11-03T10:00:00Z"},
+  "users": [
+    {"id": "user-1", "name": "Ingrid Solberg", "username": "ingrids", "email": "ingrid.solberg@saltmarsh.example", "avatarUrl": null, "role": "admin", "createdAt": "2025-11-03T10:00:00Z"},
+    {"id": "user-2", "name": "Devon Achebe", "username": "devona", "email": "devon.achebe@saltmarsh.example", "avatarUrl": null, "role": "member", "createdAt": "2026-01-12T10:00:00Z"}
+  ],
+  "projects": [
+    {"id": "proj-1", "name": "tide-scheduler", "slug": "gh/saltmarsh-software/tide-scheduler", "vcsProvider": "github", "vcsUrl": "https://github.example/saltmarsh-software/tide-scheduler", "defaultBranch": "main", "isFollowed": true, "lastBuildStatus": "failed", "lastBuildAt": "2026-09-07T08:12:00Z", "createdAt": "2025-11-05T09:00:00Z", "settings": {"buildForkPRs": false, "passSecretsToForks": false, "onlyBuildPRs": false, "autoCancelRedundant": true}},
+    {"id": "proj-2", "name": "harbor-billing", "slug": "gh/saltmarsh-software/harbor-billing", "vcsProvider": "github", "vcsUrl": "https://github.example/saltmarsh-software/harbor-billing", "defaultBranch": "main", "isFollowed": true, "lastBuildStatus": "success", "lastBuildAt": "2026-09-06T17:40:00Z", "createdAt": "2026-02-01T09:00:00Z", "settings": {"buildForkPRs": false, "passSecretsToForks": false, "onlyBuildPRs": true, "autoCancelRedundant": false}}
+  ],
+  "pipelines": [
+    {"id": "pipe-1", "projectId": "proj-1", "number": 412, "state": "created", "trigger": {"type": "webhook", "actor": {"login": "ingrids", "avatarUrl": null}}, "vcs": {"branch": "main", "commitHash": "9c41e2f", "commitMessage": "Handle daylight-saving rollover in tide table export", "commitAuthor": "ingrids"}, "createdAt": "2026-09-07T08:10:00Z", "updatedAt": "2026-09-07T08:12:00Z"},
+    {"id": "pipe-2", "projectId": "proj-2", "number": 88, "state": "created", "trigger": {"type": "webhook", "actor": {"login": "devona", "avatarUrl": null}}, "vcs": {"branch": "main", "commitHash": "51ab77d", "commitMessage": "Round invoice totals to cents", "commitAuthor": "devona"}, "createdAt": "2026-09-06T17:35:00Z", "updatedAt": "2026-09-06T17:40:00Z"}
+  ],
+  "workflows": [
+    {"id": "wf-1", "pipelineId": "pipe-1", "projectId": "proj-1", "name": "build-test", "status": "failed", "startedAt": "2026-09-07T08:10:05Z", "stoppedAt": "2026-09-07T08:12:00Z", "duration": 115, "creditsUsed": 12, "createdAt": "2026-09-07T08:10:05Z"},
+    {"id": "wf-2", "pipelineId": "pipe-2", "projectId": "proj-2", "name": "build-test-deploy", "status": "success", "startedAt": "2026-09-06T17:35:05Z", "stoppedAt": "2026-09-06T17:40:00Z", "duration": 295, "creditsUsed": 31, "createdAt": "2026-09-06T17:35:05Z"}
+  ],
+  "jobs": [
+    {"id": "job-1", "workflowId": "wf-1", "pipelineId": "pipe-1", "projectId": "proj-1", "name": "build", "type": "build", "status": "success", "jobNumber": 1301, "executor": {"type": "docker", "resourceClass": "medium"}, "parallelism": 1, "dependencies": [], "startedAt": "2026-09-07T08:10:05Z", "stoppedAt": "2026-09-07T08:11:00Z", "duration": 55, "creditsUsed": 5, "createdAt": "2026-09-07T08:10:05Z", "steps": [{"id": "step-1", "name": "Checkout code", "status": "success", "index": 0, "duration": 4, "output": [{"line": 1, "text": "Cloning repository...", "timestamp": "2026-09-07T08:10:06Z"}]}]},
+    {"id": "job-2", "workflowId": "wf-1", "pipelineId": "pipe-1", "projectId": "proj-1", "name": "test", "type": "build", "status": "failed", "jobNumber": 1302, "executor": {"type": "docker", "resourceClass": "medium"}, "parallelism": 2, "dependencies": ["job-1"], "startedAt": "2026-09-07T08:11:05Z", "stoppedAt": "2026-09-07T08:12:00Z", "duration": 55, "creditsUsed": 7, "createdAt": "2026-09-07T08:11:05Z", "steps": [{"id": "step-2", "name": "Run tests", "status": "failed", "index": 0, "duration": 50, "output": [{"line": 1, "text": "FAIL test_export_dst_rollover", "timestamp": "2026-09-07T08:11:55Z"}]}]}
+  ],
+  "testResults": [
+    {"id": "tr-1", "jobId": "job-2", "suiteName": "tide_export", "totalTests": 148, "passed": 147, "failed": 1, "skipped": 0, "duration": 48.2, "failures": [{"testName": "test_export_dst_rollover", "className": "tests.test_export", "message": "AssertionError: expected 24 rows, got 25", "stackTrace": "tests/test_export.py:88"}]}
+  ],
+  "artifacts": [
+    {"id": "art-1", "jobId": "job-2", "path": "reports/junit.xml", "url": "/artifacts/job-2/reports/junit.xml", "size": 18422}
+  ],
+  "contexts": [
+    {"id": "ctx-1", "name": "production-secrets", "orgId": "org-1", "createdAt": "2025-11-10T10:00:00Z", "envVars": [{"id": "cev-1", "name": "DEPLOY_TOKEN", "value": "xxxx...8f2c", "createdAt": "2025-11-10T10:00:00Z"}]}
+  ],
+  "environmentVariables": [
+    {"id": "env-1", "projectId": "proj-1", "name": "NOAA_API_KEY", "value": "xxxx...41aa", "createdAt": "2025-11-06T10:00:00Z"}
+  ],
+  "sshKeys": [
+    {"id": "ssh-1", "projectId": "proj-1", "type": "deploy-key", "fingerprint": "SHA256:c3f1Tq9vLp0ZkR2mWx8nA7yE5dQ1sHbJ4uKoVfG6tXw", "hostname": "github.example", "createdAt": "2025-11-05T09:05:00Z"}
+  ],
+  "webhooks": [
+    {"id": "wh-1", "projectId": "proj-1", "name": "Slack Notification", "url": "https://hooks.slack.example/services/T01/B02/xyz", "events": ["workflow-completed"], "signingSecret": "xxxx...9b1d", "createdAt": "2025-12-01T10:00:00Z"}
+  ],
+  "insights": {
+    "timeRange": "30d",
+    "summary": {"workflowRuns": 64, "totalDuration": 15840, "successRate": 89.1, "totalCredits": 1420},
+    "workflowMetrics": [{"workflowName": "build-test", "projectName": "tide-scheduler", "runs": 40, "successRate": 85.0, "p50Duration": 110, "p95Duration": 180, "credits": 620, "mttr": 3600, "throughput": 1.3}],
+    "dailyData": [{"date": "2026-09-06", "runs": 3, "successRate": 100, "avgDuration": 210, "credits": 60}, {"date": "2026-09-07", "runs": 1, "successRate": 0, "avgDuration": 115, "credits": 12}]
+  },
+  "pipelineFilters": {"ownership": "everyone", "projectId": "all", "branch": "all"},
+  "searchQuery": "",
+  "resourceClasses": [
+    {"id": "rc-1", "name": "saltmarsh-software/linux-runner", "description": "Self-hosted Linux runner", "createdAt": "2026-03-01T10:00:00Z"}
+  ],
+  "runnerInstances": [
+    {"id": "ri-1", "name": "runner-linux-01", "resourceClassId": "rc-1", "resourceClassName": "saltmarsh-software/linux-runner", "version": "3.1.2", "platform": "linux/amd64", "status": "online", "ip": "10.8.0.21", "lastContactAt": "2026-09-07T08:30:00Z"}
+  ],
+  "deployEnvironments": [
+    {"id": "deploy-env-1", "name": "Production", "status": "success", "version": "v2.14.0", "commit": "51ab77d", "deployedAt": "2026-09-06T17:40:00Z", "url": "https://billing.saltmarsh.example"}
+  ]
+}

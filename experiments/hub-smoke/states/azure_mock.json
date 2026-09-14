@@ -1,0 +1,70 @@
+{
+  "currentUser": {"id": "user-001", "displayName": "Noor El-Amin", "email": "noor.elamin@harborlinetransit.example", "avatarUrl": null, "directoryName": "Harborline Transit Authority", "directoryId": "tenant-harborline-001"},
+  "tenant": {"id": "tenant-harborline-001", "displayName": "Harborline Transit Authority", "domain": "harborlinetransit.onmicrosoft.com", "tenantId": "5c1e8f0a-2b6d-4e7f-9a3c-8d1f2e3b4c5d"},
+  "subscriptions": [
+    {"id": "sub-001", "subscriptionId": "9f8e7d6c-5b4a-4321-8765-0fedcba98765", "displayName": "Harborline Production", "state": "Enabled", "tenantId": "tenant-harborline-001", "spendingLimit": "Off"}
+  ],
+  "resourceGroups": [
+    {"id": "rg-001", "name": "rg-harborline-permits-prod", "subscriptionId": "sub-001", "location": "East US 2", "tags": {"environment": "production", "team": "permits"}, "provisioningState": "Succeeded", "createdDate": "2025-02-11T10:30:00Z"},
+    {"id": "rg-002", "name": "rg-harborline-shared-net", "subscriptionId": "sub-001", "location": "East US 2", "tags": {"environment": "shared"}, "provisioningState": "Succeeded", "createdDate": "2025-02-11T10:00:00Z"}
+  ],
+  "virtualMachines": [
+    {"id": "vm-001", "name": "vm-harborline-permits-01", "resourceGroup": "rg-harborline-permits-prod", "subscriptionId": "sub-001", "location": "East US 2", "status": "Running", "powerState": "VM running", "size": "Standard_D2s_v5", "osType": "Linux", "osImage": "Ubuntu Server 24.04 LTS", "publicIpAddress": "20.75.14.201", "privateIpAddress": "10.20.1.4", "virtualNetwork": "vnet-harborline-prod", "subnet": "app", "networkSecurityGroup": "nsg-harborline-app", "osDiskSizeGb": 64, "osDiskType": "Premium SSD", "computerName": "vm-harborline-permits-01", "adminUsername": "hlopsadmin", "tags": {"role": "appserver", "env": "prod"}, "createdDate": "2025-03-01T09:00:00Z"},
+    {"id": "vm-002", "name": "vm-harborline-jumpbox", "resourceGroup": "rg-harborline-shared-net", "subscriptionId": "sub-001", "location": "East US 2", "status": "Stopped", "powerState": "VM deallocated", "size": "Standard_B2s", "osType": "Windows", "osImage": "Windows Server 2022 Datacenter", "publicIpAddress": null, "privateIpAddress": "10.20.0.10", "virtualNetwork": "vnet-harborline-prod", "subnet": "management", "networkSecurityGroup": "nsg-harborline-mgmt", "osDiskSizeGb": 128, "osDiskType": "Standard SSD", "computerName": "hl-jumpbox", "adminUsername": "hlopsadmin", "tags": {"role": "jumpbox"}, "createdDate": "2025-02-20T09:00:00Z"}
+  ],
+  "storageAccounts": [
+    {"id": "sa-001", "name": "harborlinepermitsdocs", "resourceGroup": "rg-harborline-permits-prod", "subscriptionId": "sub-001", "location": "East US 2", "kind": "StorageV2", "performance": "Standard", "replication": "GRS", "accessTier": "Hot", "status": "Available", "primaryEndpoint": "https://harborlinepermitsdocs.blob.core.windows.net", "createdDate": "2025-02-12T12:00:00Z", "tags": {"purpose": "permit-scans"}, "containers": [
+      {"id": "container-001", "name": "permit-scans", "publicAccessLevel": "Private", "leaseState": "Available", "lastModified": "2026-09-02T08:00:00Z", "blobCount": 4812}
+    ]}
+  ],
+  "virtualNetworks": [
+    {"id": "vnet-001", "name": "vnet-harborline-prod", "resourceGroup": "rg-harborline-shared-net", "subscriptionId": "sub-001", "location": "East US 2", "addressSpace": "10.20.0.0/16", "status": "Succeeded", "subnets": [
+      {"id": "subnet-001", "name": "management", "addressPrefix": "10.20.0.0/24", "connectedDevices": 1, "networkSecurityGroup": "nsg-harborline-mgmt"},
+      {"id": "subnet-002", "name": "app", "addressPrefix": "10.20.1.0/24", "connectedDevices": 1, "networkSecurityGroup": "nsg-harborline-app"}
+    ], "tags": {}, "createdDate": "2025-02-11T10:45:00Z"}
+  ],
+  "networkSecurityGroups": [
+    {"id": "nsg-001", "name": "nsg-harborline-app", "resourceGroup": "rg-harborline-shared-net", "subscriptionId": "sub-001", "location": "East US 2", "inboundRules": [
+      {"name": "AllowHTTPS", "priority": 100, "direction": "Inbound", "access": "Allow", "protocol": "TCP", "sourcePortRange": "*", "destinationPortRange": "443", "sourceAddressPrefix": "*", "destinationAddressPrefix": "*", "description": "Public permits portal"}
+    ], "outboundRules": [
+      {"name": "AllowInternetOut", "priority": 100, "direction": "Outbound", "access": "Allow", "protocol": "*", "sourcePortRange": "*", "destinationPortRange": "*", "sourceAddressPrefix": "*", "destinationAddressPrefix": "Internet", "description": "Default outbound"}
+    ], "tags": {}, "createdDate": "2025-02-11T11:00:00Z"}
+  ],
+  "appServices": [
+    {"id": "app-001", "name": "harborline-permits-api", "resourceGroup": "rg-harborline-permits-prod", "subscriptionId": "sub-001", "location": "East US 2", "status": "Running", "kind": "app", "defaultHostName": "harborline-permits-api.azurewebsites.net", "appServicePlan": "asp-harborline-prod", "runtime": ".NET 8 (LTS)", "httpsOnly": true, "tags": {"app": "permits-api"}, "createdDate": "2025-03-10T13:00:00Z"}
+  ],
+  "sqlDatabases": [
+    {"id": "sqldb-001", "name": "harborline-permits-db", "resourceGroup": "rg-harborline-permits-prod", "subscriptionId": "sub-001", "location": "East US 2", "serverName": "harborline-sql-prod", "status": "Online", "pricingTier": "General Purpose GP_S_Gen5_2", "maxSizeGb": 64, "collation": "SQL_Latin1_General_CP1_CI_AS", "tags": {"environment": "prod"}, "createdDate": "2025-03-05T12:00:00Z"}
+  ],
+  "costManagement": {
+    "currentMonthCost": 212.40, "forecastedCost": 1980.00, "budgetAmount": 2400.00, "currency": "USD",
+    "costByService": [{"service": "Virtual Machines", "cost": 96.10, "percentage": 45.2}, {"service": "Azure SQL Database", "cost": 62.30, "percentage": 29.3}, {"service": "App Service", "cost": 38.00, "percentage": 17.9}, {"service": "Storage", "cost": 16.00, "percentage": 7.6}],
+    "costByResourceGroup": [{"resourceGroup": "rg-harborline-permits-prod", "cost": 190.20}, {"resourceGroup": "rg-harborline-shared-net", "cost": 22.20}],
+    "costByLocation": [{"location": "East US 2", "cost": 212.40}],
+    "dailyCosts": [{"date": "2026-09-01", "cost": 70.10}, {"date": "2026-09-02", "cost": 71.40}, {"date": "2026-09-03", "cost": 70.90}],
+    "budgets": [{"id": "budget-001", "name": "Permits-Monthly", "amount": 2400, "timeGrain": "Monthly", "currentSpend": 212.40, "status": "OK"}],
+    "invoices": [{"id": "inv-001", "period": "August 2026", "amount": 2105.77, "status": "Paid", "dueDate": "2026-09-15"}]
+  },
+  "activityLog": [
+    {"id": "event-001", "timestamp": "2026-09-03T07:45:00Z", "operation": "Microsoft.Compute/virtualMachines/deallocate/action", "operationName": "Deallocate Virtual Machine", "status": "Succeeded", "level": "Informational", "resourceGroup": "rg-harborline-shared-net", "resourceName": "vm-harborline-jumpbox", "resourceType": "Microsoft.Compute/virtualMachines", "initiatedBy": "noor.elamin@harborlinetransit.example"}
+  ],
+  "notifications": [
+    {"id": "notif-001", "title": "Virtual machine deallocated", "message": "vm-harborline-jumpbox was deallocated successfully.", "level": "success", "timestamp": "2026-09-03T07:45:00Z", "read": false, "resourceName": "vm-harborline-jumpbox"}
+  ],
+  "favorites": [
+    {"id": "fav-001", "name": "All resources", "icon": "Grid", "path": "/all-resources"},
+    {"id": "fav-002", "name": "Resource groups", "icon": "Folder", "path": "/resource-groups"},
+    {"id": "fav-003", "name": "Virtual machines", "icon": "Monitor", "path": "/virtual-machines"},
+    {"id": "fav-008", "name": "Cost Management", "icon": "DollarSign", "path": "/cost-management"}
+  ],
+  "allServicesCategories": [
+    {"category": "Compute", "services": [{"name": "Virtual machines", "icon": "Monitor", "path": "/virtual-machines"}, {"name": "App Services", "icon": "Globe", "path": "/app-services"}]},
+    {"category": "Storage", "services": [{"name": "Storage accounts", "icon": "Database", "path": "/storage-accounts"}]},
+    {"category": "Databases", "services": [{"name": "SQL databases", "icon": "Database", "path": "/sql-databases"}]}
+  ],
+  "recentResources": [
+    {"name": "vm-harborline-permits-01", "type": "Virtual machine", "resourceGroup": "rg-harborline-permits-prod", "lastViewed": "2026-09-03T08:10:00Z"},
+    {"name": "rg-harborline-permits-prod", "type": "Resource group", "resourceGroup": null, "lastViewed": "2026-09-03T08:00:00Z"}
+  ],
+  "portalSettings": {"theme": "light", "menuBehavior": "flyout", "serviceMenuBehavior": "collapsed", "startupPage": "home", "language": "English", "regionalFormat": "English (United States)"}
+}

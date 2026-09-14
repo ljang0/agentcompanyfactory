@@ -1,0 +1,48 @@
+{
+  "user": { "userId": "user-1", "name": "Constance Abernathy", "email": "constance.abernathy@mail.example", "phone": "(503) 555-0127", "avatar": null, "savedProperties": ["prop-2"], "savedSearches": ["search-1"], "recentlyViewed": ["prop-1", "prop-2"] },
+  "filters": { "search": "", "listingStatus": "For Sale", "minPrice": 0, "maxPrice": 10000000, "minBeds": 0, "minBaths": 0, "minSqft": 0, "maxSqft": 100000, "type": "All", "features": [], "sortBy": "Homes for You" },
+  "properties": [
+    {
+      "id": "prop-1", "zpid": "88120451", "address": "1420 Kestrel Hollow Ln", "city": "Bend", "state": "OR", "zip": "97702", "neighborhood": "Old Mill District",
+      "price": 689000, "zestimate": 695000, "zestimateRange": { "low": 660000, "high": 730000 }, "rentZestimate": 3100,
+      "beds": 3, "baths": 2.5, "sqft": 2140, "lotSize": 6500, "yearBuilt": 2009, "type": "Single Family", "propertyType": "Single Family",
+      "listingStatus": "For Sale", "listingType": "Agent Listed", "daysOnZillow": 6,
+      "description": "Craftsman-style home two blocks from the Deschutes River trail, with a fenced yard and detached studio.",
+      "features": ["Garage", "Fireplace", "Fenced Yard"], "coordinates": [44.0463, -121.3153], "images": ["https://picsum.photos/seed/kestrel1/800/600"],
+      "agentId": "agent-1", "tags": ["New Listing"], "openHouse": "Sat 11am-1pm", "hoaFee": null, "propertyTax": 6120, "walkScore": 72, "transitScore": 35, "bikeScore": 88,
+      "priceHistory": [ { "date": "2026-09-01", "event": "Listed for sale", "price": 689000, "source": "Cascade Realty" } ],
+      "taxHistory": [ { "year": 2025, "propertyTax": 6120, "taxAssessment": 512000 } ],
+      "schools": [ { "name": "Riverbend Elementary", "level": "Elementary", "grades": "K-5", "rating": 8, "distance": 0.6, "type": "Public" } ],
+      "estimatedPayment": { "total": 4210, "principalAndInterest": 3480, "propertyTax": 510, "homeInsurance": 120, "hoa": 0, "mortgageInsurance": 100 }
+    },
+    {
+      "id": "prop-2", "zpid": "88120598", "address": "305 Juniper Ridge Ct Unit 12", "city": "Bend", "state": "OR", "zip": "97703", "neighborhood": "NorthWest Crossing",
+      "price": 415000, "zestimate": 420000, "zestimateRange": { "low": 400000, "high": 440000 }, "rentZestimate": 2100,
+      "beds": 2, "baths": 2, "sqft": 1180, "lotSize": 0, "yearBuilt": 2017, "type": "Condo", "propertyType": "Condo",
+      "listingStatus": "For Sale", "listingType": "Agent Listed", "daysOnZillow": 21,
+      "description": "Top-floor condo with mountain views and secured parking.",
+      "features": ["Balcony", "Secured Parking"], "coordinates": [44.0705, -121.3402], "images": ["https://picsum.photos/seed/juniper12/800/600"],
+      "agentId": "agent-2", "tags": ["Price Cut"], "openHouse": null, "hoaFee": 285, "propertyTax": 3900, "walkScore": 65, "transitScore": 28, "bikeScore": 80,
+      "priceHistory": [ { "date": "2026-08-15", "event": "Listed for sale", "price": 429000, "source": "Juniper Homes" }, { "date": "2026-09-02", "event": "Price change", "price": 415000, "source": "Juniper Homes" } ],
+      "taxHistory": [ { "year": 2025, "propertyTax": 3900, "taxAssessment": 355000 } ],
+      "schools": [], "estimatedPayment": { "total": 2820, "principalAndInterest": 2100, "propertyTax": 325, "homeInsurance": 80, "hoa": 285, "mortgageInsurance": 30 }
+    }
+  ],
+  "agents": [
+    { "id": "agent-1", "name": "Rosalind Featherstone", "photo": null, "phone": "(541) 555-0190", "email": "rosalind@cascade-realty.example", "brokerage": "Cascade Realty", "rating": 4.9, "reviewCount": 61, "recentSales": 14, "activeListings": 5, "specialties": ["Listing Agent", "Relocation"], "serviceAreas": ["Bend", "Redmond"], "isFeatured": true, "bio": "Central Oregon specialist since 2012." },
+    { "id": "agent-2", "name": "Devon Achterberg", "photo": null, "phone": "(541) 555-0177", "email": "devon@juniper-homes.example", "brokerage": "Juniper Homes", "rating": 4.7, "reviewCount": 33, "recentSales": 9, "activeListings": 3, "specialties": ["Buyer's Agent"], "serviceAreas": ["Bend"], "isFeatured": false, "bio": "Helping first-time buyers find condos and townhomes." }
+  ],
+  "savedSearches": [
+    { "id": "search-1", "name": "Bend Under 700K", "location": "Bend, OR", "filters": { "search": "Bend", "listingStatus": "For Sale", "minPrice": 300000, "maxPrice": 700000, "minBeds": 2, "type": "All" }, "createdAt": "2026-08-20T16:00:00Z", "newListings": 1, "emailAlerts": true }
+  ],
+  "searchSuggestions": [
+    { "id": "sug-1", "text": "Bend, OR", "type": "city", "subtext": "City in Oregon" },
+    { "id": "sug-2", "text": "Old Mill District", "type": "neighborhood", "subtext": "Neighborhood in Bend, OR" },
+    { "id": "sug-3", "text": "97702", "type": "zip", "subtext": "ZIP code in Bend, OR" }
+  ],
+  "mortgageRates": [
+    { "type": "30-Year Fixed", "rate": 6.41, "apr": 6.48, "lastUpdated": "2026-09-05" },
+    { "type": "15-Year Fixed", "rate": 5.72, "apr": 5.81, "lastUpdated": "2026-09-05" }
+  ],
+  "tours": []
+}

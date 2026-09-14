@@ -1,0 +1,427 @@
+{
+  "schema_version": "1",
+  "id": "sanmar",
+  "name": "Cedarline Apparel Supply",
+  "real_firm": "SanMar Corporation",
+  "website": "https://www.sanmar.com",
+  "sector": "Wholesale Trade",
+  "naics": "424350",
+  "location": "Fictional operating unit in Issaquah, Washington, serving US reseller accounts.",
+  "operations": "Cedarline Apparel Supply is a fictional analogue of SanMar Corporation. SanMar supplies wholesale imprintable apparel and accessories to reseller businesses and provides customer marketing resources. Its June 2025 statement describes an Issaquah headquarters and nationwide distribution. The modeled unit is an ongoing US reseller account-development desk covering customer qualification, assortment recommendations, order-service coordination, customer enablement and acquisition performance. Synthetic scale: four desk workers serve 160 active reseller businesses and 60 prospects or dormant accounts. Ordinary monthly workload includes approximately 35 qualification inquiries, 50 assortment or quotation requests, 45 order-service exceptions and eight marketing-material refreshes; the portfolio generates approximately 400 orders processed by central operations. The workspace contains 18 months of account, order and service history and six months of completed acquisition campaigns. Central credit, sales-policy administration, purchasing, warehousing and transportation remain surrounding functions. The desk produces supported commercial recommendations and processing instructions; physical fulfillment remains outside the modeled desk.",
+  "evidence": [
+    {
+      "id": "core-identity",
+      "kind": "sourced",
+      "text": "SanMar Corporation supplies wholesale imprintable clothing and accessories in the United States, supporting the Wholesale Trade classification.",
+      "source_url": "https://www.sanmar.com/aboutus/press/release06252025",
+      "quote": "supplier of wholesale imprintable clothing and accessories in the United States",
+      "basis": "The supplied captured page's About SanMar paragraph identifies SanMar Corporation and its wholesale product operation. It does not establish internal reporting relationships. The page heading and body differ by one day, so this dossier refers to the June 2025 statement."
+    },
+    {
+      "id": "us-footprint",
+      "kind": "sourced",
+      "text": "The June 2025 company statement places SanMar in Issaquah, Washington, and reports nine distribution centers nationwide.",
+      "source_url": "https://www.sanmar.com/aboutus/press/release06252025",
+      "quote": "SanMar is based in Issaquah, Washington, with nine distribution centers nationwide",
+      "basis": "This literal passage was also revisited through the frozen-source reader. The footprint is a dated company statement, not a verified September 2026 count."
+    },
+    {
+      "id": "business-history",
+      "kind": "sourced",
+      "text": "SanMar's June 2025 statement describes more than 50 years of business history.",
+      "source_url": "https://www.sanmar.com/aboutus/press/release06252025",
+      "quote": "It all started more than 50 years ago",
+      "basis": "The captured About SanMar paragraph supports the stated historical duration without establishing a precise founding date."
+    },
+    {
+      "id": "reseller-customers",
+      "kind": "sourced",
+      "text": "SanMar restricts sales to registered reseller businesses in imprintable apparel and promotional advertising.",
+      "source_url": "https://www.sanmar.com/signup/customer",
+      "quote": "SanMar exclusively sells to registered businesses involved in reselling within the imprintable apparel and promotional advertising industries.",
+      "basis": "The supplied customer-application capture establishes the customer population. It supports qualification work but does not identify the employee who approves accounts."
+    },
+    {
+      "id": "application-documents",
+      "kind": "sourced",
+      "text": "SanMar's application instructions require a valid State Sales Tax License and the applicable resale certificate or equivalent.",
+      "source_url": "https://www.sanmar.com/signup/customer",
+      "quote": "Submit a valid State Sales Tax License Submit your state's applicable Resale Certificate Form or equivalent",
+      "basis": "The literal captured application instructions establish documentary prerequisites, not credit approval or eligibility for every product."
+    },
+    {
+      "id": "brand-channel-boundaries",
+      "kind": "sourced",
+      "text": "SanMar's captured sales terms impose embellishment and online-channel restrictions on specifically listed brands.",
+      "source_url": "https://www.sanmar.com/termsandconditions",
+      "quote": "Sales on or through eBay, Amazon, Craigslist, Etsy or any other direct-to-consumer, third party site are prohibited.",
+      "basis": "The surrounding captured clause lists the affected brands, requires embellishment for a stated brand population and limits online sales to specified eligible websites. Those lists differ and must be evaluated separately; the restrictions are not universal product rules."
+    },
+    {
+      "id": "policy-referral",
+      "kind": "sourced",
+      "text": "The sales-policy paragraph directs policy questions in writing to the Sales Policy Coordinator and prohibits representatives from discussing the policy or seeking assurances of compliance.",
+      "source_url": "https://www.sanmar.com/termsandconditions",
+      "quote": "All questions regarding this Policy shall be directed, in writing, to SanMar, Attn: Sales Policy Coordinator",
+      "basis": "The complete supplied paragraph contains both the referral instruction and the representative restrictions. This is a boundary for the modeled desk, not evidence of its reporting line."
+    },
+    {
+      "id": "order-boundaries",
+      "kind": "sourced",
+      "text": "SanMar accepts orders through written, telephone and electronic channels; accepted-order cancellation requires SanMar's consent, and shipment is subject to availability.",
+      "source_url": "https://www.sanmar.com/termsandconditions",
+      "quote": "You may not cancel an order accepted by SanMar (i.e., they are non-refundable), except upon the consent of SanMar in each instance.",
+      "basis": "The supplied section 17 capture also states the order channels and that shipment of Goods is subject to availability. This supports reconciliation and qualified instructions without guaranteeing fulfillment."
+    },
+    {
+      "id": "marketing-resources",
+      "kind": "sourced",
+      "text": "SanMar offers customer marketing tools, catalog options and product images and videos.",
+      "source_url": "https://www.sanmar.com/marketing",
+      "quote": "Grow your business with our free marketing tools.",
+      "basis": "The supplied page separately lists catalog options and a media library for SanMar product images and videos. These offerings do not establish a managed advertising service or SanMar's adoption of Meta Ads."
+    },
+    {
+      "id": "organization-model",
+      "kind": "inferred",
+      "text": "A coordinated desk combining wholesale selling, order administration and marketing analysis is a plausible operating unit for this reseller business.",
+      "source_url": "",
+      "quote": "",
+      "basis": "Customer qualification, product restrictions, order handling and marketing resources create interdependent information needs. The four-worker roster and reporting relationships are functional modeling choices, not a captured SanMar organization chart."
+    },
+    {
+      "id": "industry-code",
+      "kind": "inferred",
+      "text": "NAICS 424350, Clothing and Clothing Accessories Merchant Wholesalers, is the modeled operating unit's classification.",
+      "source_url": "",
+      "quote": "",
+      "basis": "Selected from the sourced wholesale apparel activity; not represented as SanMar's officially registered North American Industry Classification System code."
+    },
+    {
+      "id": "synthetic-unit",
+      "kind": "synthetic",
+      "text": "Cedarline's four-person desk, account population, recurring workload and historical record volumes are scenario assumptions.",
+      "source_url": "",
+      "quote": "",
+      "basis": "The continuing portfolio of 160 active accounts and 60 prospects or dormant accounts supplies normal business beyond individual episodes. Central operations handles routine transaction execution."
+    },
+    {
+      "id": "synthetic-acquisition",
+      "kind": "synthetic",
+      "text": "Cedarline uses paid social campaigns to attract US reseller applications and promote its wholesale assortment and customer resources.",
+      "source_url": "",
+      "quote": "",
+      "basis": "This is a plausible acquisition method for the sourced reseller operation. Meta Ads is proposed infrastructure for Cedarline; SanMar's use of Meta and a customer advertising agency service are not established."
+    },
+    {
+      "id": "synthetic-authority",
+      "kind": "synthetic",
+      "text": "The desk supervisor plans reviews and approves internal account-development recommendations and campaign allocations within supplied authority.",
+      "source_url": "",
+      "quote": "",
+      "basis": "Versioned scenario instructions govern commitments and budgets. Credit approval, policy exceptions, account termination, customer acceptance and fulfillment remain separate decisions."
+    },
+    {
+      "id": "synthetic-workspace",
+      "kind": "synthetic",
+      "text": "The analogue uses Gmail, Slack, Google Calendar, Google Drive, Google Docs, HubSpot, Meta Ads and Google Sheets.",
+      "source_url": "",
+      "quote": "",
+      "basis": "These are synthetic substitutions. This repair searched the frozen catalog and inspected pinned HubSpot, Meta Ads, Google Sheets and Google Drive documentation. Documented records and actions do not prove deployed availability, interfaces, integration, recovery behavior or shared persistence."
+    }
+  ],
+  "workers": [
+    {
+      "id": "sales-supervisor",
+      "title": "Reseller Sales Desk Supervisor",
+      "soc": "41-1012",
+      "responsibility": "Receives the business objective, develops the working plan, supervises wholesale sales work, challenges competing assessments and accepts a coherent account-development or acquisition decision. Maintains continuing service priorities across the portfolio.",
+      "information_access": [
+        "Shared policies and meeting calendar",
+        "Management summaries and prior approvals",
+        "Internal desk capacity and spending authority",
+        "Specialist findings supplied through normal correspondence"
+      ],
+      "authority": "Approves internal desk recommendations, priorities and spending allocations within supplied authority. Cannot waive brand rules, grant credit, terminate accounts or certify fulfillment. Refers policy questions through the designated route.",
+      "evidence_ids": [
+        "organization-model",
+        "synthetic-authority",
+        "policy-referral"
+      ]
+    },
+    {
+      "id": "account-representative",
+      "title": "Wholesale Account Representative",
+      "soc": "41-4012",
+      "responsibility": "Assesses reseller business models, customer demand and product opportunities; reconstructs customer requests; compares commercially useful assortment options; prepares account plans and customer correspondence informed by service and marketing findings.",
+      "information_access": [
+        "Customer applications and business descriptions",
+        "Customer relationship records, opportunities and communication history",
+        "Versioned product and scenario price references",
+        "Personal eligibility notes and reseller correspondence"
+      ],
+      "authority": "Recommends products and proposed commercial terms within documented guidance. Maintains relationship records and drafts communications. Cannot treat a proposal as acceptance or negotiate sales-policy exceptions.",
+      "evidence_ids": [
+        "reseller-customers",
+        "brand-channel-boundaries",
+        "organization-model",
+        "policy-referral"
+      ]
+    },
+    {
+      "id": "order-coordinator",
+      "title": "Order Services Coordinator",
+      "soc": "43-4151",
+      "responsibility": "Reconciles requested styles, variants and quantities with recorded orders, cancellations, returns and credits. Establishes documentary account prerequisites and supported order instructions. Separates actual ordering behavior from duplicate inquiries and uncompleted transactions.",
+      "information_access": [
+        "Order-line, invoice, return and credit exports",
+        "Product and availability snapshots",
+        "Service requests and central-operations correspondence",
+        "Personal reconciliation workbooks and unresolved exception notes"
+      ],
+      "authority": "Corrects desk service records and prepares line-specific processing instructions. Does not post inventory movements, grant credit or represent a requested cancellation as approved.",
+      "evidence_ids": [
+        "application-documents",
+        "order-boundaries",
+        "organization-model"
+      ]
+    },
+    {
+      "id": "marketing-specialist",
+      "title": "Reseller Marketing and Acquisition Specialist",
+      "soc": "13-1161",
+      "responsibility": "Analyzes acquisition cohorts and campaign economics, assesses audience and message fit, and prepares reseller-facing product content from approved materials. Connects marketing results to qualified accounts and ordering outcomes while distinguishing attribution from causation.",
+      "information_access": [
+        "Campaign, ad set, ad, creative and audience records",
+        "Application-source mappings and historical acquisition metrics",
+        "Product media and usage permissions",
+        "Personal attribution workpapers and campaign planning files"
+      ],
+      "authority": "Maintains campaign planning records and makes documented budget or pause changes within approved authority. Produces content revisions and recommendations; cannot invent platform approvals, customer eligibility or future conversions.",
+      "evidence_ids": [
+        "marketing-resources",
+        "synthetic-acquisition",
+        "organization-model",
+        "synthetic-authority"
+      ]
+    }
+  ],
+  "teams": [
+    {
+      "id": "reseller-development",
+      "name": "US Reseller Development Desk",
+      "purpose": "Develop commercially useful reseller relationships while keeping qualification, product recommendations, order instructions and acquisition activity consistent.",
+      "worker_ids": [
+        "sales-supervisor",
+        "account-representative",
+        "order-coordinator",
+        "marketing-specialist"
+      ]
+    }
+  ],
+  "software": [
+    {
+      "id": "email",
+      "capability": "Email correspondence concerning applications, assortment requests, order questions and customer response drafts.",
+      "reference_product": "Gmail",
+      "catalog_app_ids": [
+        "gmail_mock"
+      ],
+      "status": "substitution",
+      "rationale": "Mandatory synthetic workplace infrastructure, with no claim of SanMar adoption. Retains the supplied dossier's documented email, thread, attachment, label and draft capabilities. Accessible attachment content and draft persistence require construction verification; external delivery is not required for completion.",
+      "evidence_ids": [
+        "synthetic-workspace"
+      ]
+    },
+    {
+      "id": "team-chat",
+      "capability": "Team chat for the supervisor's plan, specialist findings, substantive objections and handoffs.",
+      "reference_product": "Slack",
+      "catalog_app_ids": [
+        "slack_mock"
+      ],
+      "status": "substitution",
+      "rationale": "Mandatory synthetic workplace infrastructure. Retains the supplied channel, message, thread and bookmark mapping. Shared-session authorship must be attributed through worker virtual-machine records and explicit business authorship rather than the displayed user.",
+      "evidence_ids": [
+        "synthetic-workspace"
+      ]
+    },
+    {
+      "id": "scheduling",
+      "capability": "Scheduling of account reviews, continuing follow-up and ordinary desk commitments.",
+      "reference_product": "Google Calendar",
+      "catalog_app_ids": [
+        "google_calendar_mock"
+      ],
+      "status": "substitution",
+      "rationale": "Mandatory synthetic workplace infrastructure. Retains the supplied calendar, event, guest and description mapping. Entries record commitments; they do not establish customer attendance, completed work or additional worker capacity.",
+      "evidence_ids": [
+        "synthetic-workspace"
+      ]
+    },
+    {
+      "id": "shared-storage",
+      "capability": "Shared drive storage for application evidence, product references, transaction exports, approved assets and historical decision packages.",
+      "reference_product": "Google Drive",
+      "catalog_app_ids": [
+        "google_drive_mock"
+      ],
+      "status": "substitution",
+      "rationale": "Mandatory synthetic workplace infrastructure. The inspected schema documents items, text content, selectedItems, storageUsed and storageTotal, and describes selection actions. Readable evidence must be populated; file metadata does not establish readable binary documents or links to other applications. Evidence selection, storage behavior and persistence across workers remain unverified. A media handoff can specify existing assets and calculated storage needs without claiming that binaries were copied.",
+      "evidence_ids": [
+        "synthetic-workspace",
+        "marketing-resources"
+      ]
+    },
+    {
+      "id": "collaborative-documents",
+      "capability": "Collaborative account plans, assortment explanations, marketing copy and management decisions with review comments.",
+      "reference_product": "Google Docs",
+      "catalog_app_ids": [
+        "google_docs_mock"
+      ],
+      "status": "substitution",
+      "rationale": "Mandatory synthetic workplace infrastructure. Retains the supplied document-content, comment and reply mapping. Approval is expressed in accepted content and associated business records; the catalog does not establish a native approval-status field.",
+      "evidence_ids": [
+        "synthetic-workspace"
+      ]
+    },
+    {
+      "id": "account-management",
+      "capability": "Maintain reseller companies, contacts, qualification assessments, opportunities, service issues and continuing account-development obligations.",
+      "reference_product": "HubSpot",
+      "catalog_app_ids": [
+        "hubspot_mock"
+      ],
+      "status": "substitution",
+      "rationale": "Synthetic customer relationship management (CRM) selection. The inspected schema documents linked companies, contacts, deals, tickets, tasks and notes, including record update actions. Detailed product eligibility belongs in associated notes and reviewed documents. Pipeline stages neither enforce brand rules nor release orders in an enterprise resource planning (ERP) system. User interface (UI) actions and persistence across separate worker sessions remain construction checks.",
+      "evidence_ids": [
+        "organization-model",
+        "synthetic-workspace"
+      ]
+    },
+    {
+      "id": "paid-reseller-acquisition",
+      "capability": "Review Cedarline's US reseller-acquisition campaigns, compare qualified-account outcomes with spending, and maintain approved campaign budget and pause decisions.",
+      "reference_product": "Meta Ads Manager",
+      "catalog_app_ids": [
+        "meta_ads_mock"
+      ],
+      "status": "substitution",
+      "rationale": "Adopts an assigned app for Cedarline's synthetic acquisition function. The inspected schema documents campaigns, ad sets, ads, creatives, historical performance fields, inline budget editing, campaign toggles and bulk pause. Parent campaign budget ownership must be explicit so child budgets are not double counted. Application-to-campaign mappings are separately populated; no automatic customer relationship management integration or live attribution is assumed. Campaign-view selection, budget changes and pause persistence require runtime verification. Existing-creative editing is unverified, so revised copy remains in collaborative documents with implementation instructions.",
+      "evidence_ids": [
+        "reseller-customers",
+        "synthetic-acquisition",
+        "synthetic-workspace"
+      ]
+    },
+    {
+      "id": "commercial-analysis",
+      "capability": "Reconcile order outcomes, compare assortment economics and calculate acquisition performance using reproducible workpapers.",
+      "reference_product": "Google Sheets",
+      "catalog_app_ids": [
+        "google_sheets_mock"
+      ],
+      "status": "substitution",
+      "rationale": "Synthetic analytical workspace. The inspected schema documents workbook cells, formulas, notes and cell-selection actions. Formula evaluation requires verification; transparent calculations through the Bash command-line shell may support the workpapers. The schema contains isDragging but documents no ordinary-app recovery action for a seeded true value. No such recovery is required by these reusable outlines. The spreadsheet does not replace order acceptance, inventory reservation or eligibility enforcement.",
+      "evidence_ids": [
+        "synthetic-workspace",
+        "order-boundaries"
+      ]
+    },
+    {
+      "id": "transaction-execution",
+      "capability": "Authoritative wholesale order acceptance, credit release, inventory reservation and warehouse execution.",
+      "reference_product": "SanMar order and distribution systems; specific internal products unverified",
+      "catalog_app_ids": [],
+      "status": "gap",
+      "rationale": "No inspected integration establishes these domain behaviors. Retained workflows use populated historical exports and finish with desk decisions and precise processing handoffs. They do not execute or replace these systems.",
+      "evidence_ids": [
+        "order-boundaries",
+        "synthetic-unit"
+      ]
+    }
+  ],
+  "outlines": [
+    {
+      "id": "qualified-acquisition-review",
+      "title": "Choose acquisition spending that produces usable reseller relationships",
+      "objective": "Assess the existing campaigns, compare at least two materially different feasible support scopes, and choose an allocation or reasoned pause. Align campaign records and account follow-up with the decision, including specific reconsideration conditions for declined support.",
+      "decision_problem": "Low platform cost per result may conceal end-user inquiries, repeat contacts from existing businesses, incomplete applications or accounts that never produce usable orders. Other campaigns may produce fewer but better-qualified opportunities while requiring more sales and service effort. The marketing specialist reconstructs comparable cohorts and spending; the representative assesses business fit and realistic opportunities; the order coordinator establishes documentary readiness and net ordering outcomes. Their findings change the supervisor's support, spending and capacity decision. Compare materially different feasible allocations, including a pause where justified, while protecting existing application and service obligations. Account for concentrated buyer outcomes and distinguish historical associations from expected future returns. The accepted decision drives campaign budget and pause records, a reproducible economic comparison, customer relationship management follow-up and explicit reconsideration conditions for unsupported campaigns. Finish from recorded history without waiting for new leads or ad delivery.",
+      "team_ids": [
+        "reseller-development"
+      ],
+      "worker_ids": [
+        "sales-supervisor",
+        "account-representative",
+        "order-coordinator",
+        "marketing-specialist"
+      ],
+      "evidence_ids": [
+        "reseller-customers",
+        "application-documents",
+        "order-boundaries",
+        "synthetic-acquisition",
+        "synthetic-authority"
+      ]
+    },
+    {
+      "id": "account-assortment-review",
+      "title": "Define a supportable assortment for a reseller's proposed selling channels",
+      "objective": "Assess every proposed product and channel combination, prepare commercially useful alternatives, preserve accepted commitments and produce consistent account, order and marketing instructions.",
+      "decision_problem": "A reseller's expansion combines products, decoration plans and sales channels. General account qualification does not establish that every requested combination is supportable. The representative establishes the customer need and assesses commercially suitable substitutes; the order coordinator reconciles variants, quantities, documentary prerequisites and accepted versus proposed commitments; the marketing specialist prepares product descriptions and an asset handoff that accurately reflect the supported assortment and supplied usage permissions. The supervisor selects supported opportunities, narrower proposals and scoped policy referrals. The resulting account plan drives customer relationship management opportunity records, line-specific processing instructions and revised customer materials. Every line requires a disposition; a blanket hold cannot replace the analysis. Supported substitution and scoped referral are legitimate alternatives, and an existing accepted order remains intact without evidenced amendment authority. Any storage constraint concerns a reproducible media-handoff plan, not required binary copying. Policy exceptions and customer acceptance remain outside this desk cycle.",
+      "team_ids": [
+        "reseller-development"
+      ],
+      "worker_ids": [
+        "sales-supervisor",
+        "account-representative",
+        "order-coordinator",
+        "marketing-specialist"
+      ],
+      "evidence_ids": [
+        "reseller-customers",
+        "brand-channel-boundaries",
+        "policy-referral",
+        "order-boundaries",
+        "marketing-resources",
+        "synthetic-authority"
+      ]
+    },
+    {
+      "id": "account-development-diagnosis",
+      "title": "Decide how to develop accounts with weakening repeat business",
+      "objective": "Choose differentiated account-development responses based on the causes and commercial consequences of weak repeat purchasing.",
+      "decision_problem": "A sales decline can reflect seasonal buying, misleading campaign expectations, incomplete product fit, service failures or a genuine reduction in the reseller's business. Gross order totals alone cannot distinguish these explanations. The order coordinator reconstructs net purchases, cancellations, returns and service episodes; the representative assesses recorded customer demand and the value of alternative assortments; the marketing specialist tests whether previously supplied content and acquisition messages attracted the intended businesses or created unsupported expectations. The supervisor selects justified account interventions and effort levels, weighing commercial benefit against continuing service needs and uncertain recovery. Worker findings change account plans, customer response drafts, product-resource guidance and customer relationship management obligations. The cycle preserves unresolved causes and does not claim that revised materials or follow-up have already restored sales.",
+      "team_ids": [
+        "reseller-development"
+      ],
+      "worker_ids": [
+        "sales-supervisor",
+        "account-representative",
+        "order-coordinator",
+        "marketing-specialist"
+      ],
+      "evidence_ids": [
+        "order-boundaries",
+        "marketing-resources",
+        "organization-model",
+        "synthetic-unit",
+        "synthetic-acquisition"
+      ]
+    }
+  ],
+  "assumptions": [
+    "Cedarline Apparel Supply is fictional. Its desk roster, reporting relationships, account counts, workload, campaign history and authority limits are scenario assumptions, not SanMar facts.",
+    "The continuing portfolio includes 160 active reseller accounts and 60 prospects. Preserve 18 months of account, transaction and service history and six months of acquisition history. Include ordinary successful work, recurring commitments, dormant relationships and unresolved work.",
+    "The sales supervisor sets priorities and approves internal recommendations within documented authority. Staff own their working evidence and share relevant findings with colleagues when needed. Do not preassign a final task or delegation sequence.",
+    "Each employee has a distinct identity and a personal desktop, mailbox and private conversations. Common policies, meeting calendars and shared documents are available to the appropriate team; private correspondence and working notes remain with their owner.",
+    "The supervisor uses shared communications and reviewed management summaries. The account representative operates the relationship system and holds application evidence and account notes. The order coordinator works from transaction exports and service records. The marketing specialist operates campaign records and owns attribution workpapers. Grant domain applications to their ordinary operators; handoffs and approvals connect their work.",
+    "Product and price references have explicit effective dates and version histories. Earlier correspondence follows the version in force at the time. Material facts, amounts, account IDs, product IDs and dates agree across records and files.",
+    "Campaign, application, account and transaction references are joined explicitly using stable identifiers. Do not assume an automatic Meta-to-HubSpot or Drive-to-Docs integration.",
+    "Historical marketing metrics remain observations. Do not require future auctions, new customer responses, physical inspection, shipment or clock acceleration. External correspondence can remain an internally accepted unsent draft.",
+    "Sales-policy questions follow the captured referral boundary. The desk cannot negotiate pricing-policy compliance or infer exception authority from a sales title.",
+    "Central operations remains responsible for order acceptance, credit release, inventory reservation, transaction posting and physical fulfillment. The desk uses historical exports and prepares precise processing handoffs. Distinguish proposed action, existing authorization and completed processing.",
+    "Shared policies state ordinary business requirements in plain language. Personal desktops include drafts, older versions, unrelated work, useful exports and role-specific notes alongside current working files."
+  ]
+}

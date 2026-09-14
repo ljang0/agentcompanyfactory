@@ -1,0 +1,54 @@
+{
+  "currentUser": {"id": "user_1", "firstName": "Adaeze", "lastName": "Mensah", "email": "adaeze.mensah@fernhill-analytics.example", "avatar": null, "title": "Data Team Lead", "department": "Analytics", "team": "Insights", "location": "Raleigh, NC", "startDate": "2023-04-10", "managerId": "user_2", "directReportIds": ["user_3"], "role": "manager", "status": "active", "birthday": "1990-11-02", "workAnniversary": "04-10"},
+  "users": [
+    {"id": "user_1", "firstName": "Adaeze", "lastName": "Mensah", "email": "adaeze.mensah@fernhill-analytics.example", "avatar": null, "title": "Data Team Lead", "department": "Analytics", "team": "Insights", "location": "Raleigh, NC", "startDate": "2023-04-10", "managerId": "user_2", "directReportIds": ["user_3"], "role": "manager", "status": "active", "birthday": "1990-11-02", "workAnniversary": "04-10"},
+    {"id": "user_2", "firstName": "Bram", "lastName": "Visser", "email": "bram.visser@fernhill-analytics.example", "avatar": null, "title": "VP of Analytics", "department": "Analytics", "team": "Leadership", "location": "Raleigh, NC", "startDate": "2021-01-18", "managerId": null, "directReportIds": ["user_1"], "role": "admin", "status": "active", "birthday": "1982-06-21", "workAnniversary": "01-18"},
+    {"id": "user_3", "firstName": "Sofia", "lastName": "Ekwueme", "email": "sofia.ekwueme@fernhill-analytics.example", "avatar": null, "title": "Data Analyst", "department": "Analytics", "team": "Insights", "location": "Remote", "startDate": "2025-09-02", "managerId": "user_1", "directReportIds": [], "role": "employee", "status": "active", "birthday": "1998-03-14", "workAnniversary": "09-02"}
+  ],
+  "goals": [
+    {"id": "goal_1", "title": "Ship the Fernhill churn dashboard to all account managers", "description": "Replace the monthly churn spreadsheet with a live dashboard.", "ownerId": "user_1", "status": "on_track", "progress": 60, "dueDate": "2026-10-31", "parentGoalId": "goal_2", "category": "individual", "keyResults": [{"id": "kr_1", "title": "Account managers onboarded", "startValue": 0, "currentValue": 6, "targetValue": 10, "unit": "people"}], "createdAt": "2026-07-01T09:00:00Z", "updatedAt": "2026-09-04T16:00:00Z"},
+    {"id": "goal_2", "title": "Reduce reporting turnaround to under 2 days", "description": "Company OKR for FY27 H1.", "ownerId": "user_2", "status": "progressing", "progress": 40, "dueDate": "2026-12-31", "parentGoalId": null, "category": "company", "keyResults": [{"id": "kr_2", "title": "Median turnaround (days)", "startValue": 5, "currentValue": 3.2, "targetValue": 2, "unit": "days"}], "createdAt": "2026-07-01T09:00:00Z", "updatedAt": "2026-08-28T10:00:00Z"}
+  ],
+  "feedback": [
+    {"id": "fb_1", "type": "praise", "fromUserId": "user_2", "toUserId": "user_1", "body": "Great facilitation of the Q3 planning session.", "visibility": "public", "competencyTags": ["Communication"], "valueTags": ["Clarity"], "reactions": [{"userId": "user_3", "emoji": "👏"}], "createdAt": "2026-09-02T14:00:00Z"}
+  ],
+  "oneOnOnes": [
+    {"id": "oo_1", "participantIds": ["user_1", "user_2"], "frequency": "weekly", "nextMeetingDate": "2026-09-09T15:00:00Z"},
+    {"id": "oo_2", "participantIds": ["user_1", "user_3"], "frequency": "biweekly", "nextMeetingDate": "2026-09-10T17:00:00Z"}
+  ],
+  "meetings": [
+    {"id": "meeting_1", "oneOnOneId": "oo_1", "date": "2026-09-09T15:00:00Z", "status": "upcoming", "talkingPoints": [{"id": "tp_1", "text": "Dashboard rollout blockers", "addedBy": "user_1", "discussed": false, "order": 1}], "actionItems": [], "notes": ""},
+    {"id": "meeting_2", "oneOnOneId": "oo_1", "date": "2026-09-02T15:00:00Z", "status": "completed", "talkingPoints": [{"id": "tp_2", "text": "Hiring plan for Q4", "addedBy": "user_2", "discussed": true, "order": 1}], "actionItems": [{"id": "ai_1", "text": "Draft analyst job description", "assigneeId": "user_1", "dueDate": "2026-09-12", "completed": false}], "notes": "Agreed to open one analyst role."}
+  ],
+  "reviewCycles": [
+    {"id": "rc_1", "name": "FY27 Mid-Year Review", "status": "active", "startDate": "2026-09-01", "endDate": "2026-09-30", "steps": ["Peer nominations", "Self review", "Manager review", "Calibration"], "currentStep": 1, "revieweeIds": ["user_1", "user_3"], "nominationsSubmitted": false}
+  ],
+  "reviews": [
+    {"id": "rev_1", "cycleId": "rc_1", "revieweeId": "user_1", "status": "not_started", "nominatedPeerIds": [], "selfReviewSubmitted": false, "reviews": []}
+  ],
+  "updates": [
+    {"id": "upd_1", "authorId": "user_1", "weekOf": "2026-08-31", "accomplishments": "Six account managers onboarded to the churn dashboard.", "challenges": "Data latency from the billing warehouse.", "priorities": "Finish alerting rules.", "mood": "good", "createdAt": "2026-09-04T17:00:00Z"}
+  ],
+  "growthAreas": [
+    {"id": "ga_1", "userId": "user_1", "title": "Executive communication", "description": "Present analytics findings to the leadership team monthly.", "status": "active", "actions": [{"id": "gaa_1", "text": "Present at September leadership sync", "completed": false}], "createdAt": "2026-07-15T09:00:00Z", "updatedAt": "2026-07-15T09:00:00Z"}
+  ],
+  "careerTracks": [
+    {"id": "ct_1", "title": "Data Analyst", "levels": [{"id": "ct_1_l1", "name": "Analyst I", "level": 1, "competencies": [{"name": "SQL", "description": "Writes correct, readable queries"}]}, {"id": "ct_1_l2", "name": "Analyst II", "level": 2, "competencies": [{"name": "Modeling", "description": "Designs reusable data models"}]}]}
+  ],
+  "surveys": [
+    {"id": "survey_1", "title": "September 2026 Engagement Pulse", "status": "active", "startDate": "2026-09-01", "endDate": "2026-09-15", "responseRate": 45, "questions": [{"id": "q_1", "text": "I have the tools I need to do my job well.", "type": "likert", "category": "Enablement"}, {"id": "q_2", "text": "How likely are you to recommend Fernhill as a place to work?", "type": "enps", "category": "eNPS"}], "userHasResponded": false}
+  ],
+  "surveyResults": {
+    "survey_1": {"overallScore": 4.1, "eNPS": 32, "categoryScores": {"Enablement": 4.0, "eNPS": 4.2}, "responseRate": 45}
+  },
+  "tasks": [
+    {"id": "task_1", "title": "Nominate peers for FY27 Mid-Year Review", "type": "review", "assigneeId": "user_1", "dueDate": "2026-09-12", "priority": "high", "completed": false, "relatedEntityId": "rc_1", "relatedEntityType": "review_cycle", "createdAt": "2026-09-01T09:00:00Z"},
+    {"id": "task_2", "title": "Complete the September engagement pulse", "type": "survey", "assigneeId": "user_1", "dueDate": "2026-09-15", "priority": "medium", "completed": false, "relatedEntityId": "survey_1", "relatedEntityType": "survey", "createdAt": "2026-09-01T09:00:00Z"}
+  ],
+  "celebrations": [
+    {"id": "cel_1", "type": "anniversary", "userId": "user_3", "date": "2026-09-02", "details": "1 year at Fernhill"}
+  ],
+  "company": {"name": "Fernhill Analytics", "departments": ["Analytics", "Engineering", "Sales", "Operations"], "values": ["Clarity", "Curiosity", "Care"]},
+  "careerVision": "Lead a cross-functional insights function that shapes product decisions.",
+  "compensation": {"baseSalary": 128000, "bonusTarget": 10, "equityShares": 4000, "currency": "USD", "history": [{"date": "2026-04-01", "type": "merit_increase", "oldValue": 120000, "newValue": 128000}]}
+}

@@ -1,0 +1,47 @@
+{
+  "currentUser": { "userId": "user_1", "displayName": "Ottoline Vashti", "firstName": "Ottoline", "lastName": "Vashti", "email": "ottoline.vashti@brackenridge-council.example", "avatar": "https://i.pravatar.cc/150?u=user_1", "jobTitle": "Communications Officer", "department": "Corporate Services", "location": "Brackenridge, UK", "phone": "+44 1632 960110", "presence": "available", "statusMessage": "", "statusEmoji": "", "outOfOffice": false, "timezone": "Europe/London" },
+  "users": [
+    { "userId": "user_1", "displayName": "Ottoline Vashti", "firstName": "Ottoline", "lastName": "Vashti", "email": "ottoline.vashti@brackenridge-council.example", "avatar": "https://i.pravatar.cc/150?u=user_1", "jobTitle": "Communications Officer", "department": "Corporate Services", "location": "Brackenridge, UK", "phone": "+44 1632 960110", "presence": "available", "statusMessage": "", "statusEmoji": "", "outOfOffice": false, "timezone": "Europe/London" },
+    { "userId": "user_2", "displayName": "Percival Adjei", "firstName": "Percival", "lastName": "Adjei", "email": "percival.adjei@brackenridge-council.example", "avatar": "https://i.pravatar.cc/150?u=user_2", "jobTitle": "Planning Officer", "department": "Planning", "location": "Brackenridge, UK", "phone": "+44 1632 960111", "presence": "busy", "statusMessage": "In committee", "statusEmoji": "", "outOfOffice": false, "timezone": "Europe/London" },
+    { "userId": "user_3", "displayName": "Saoirse Lindqvist", "firstName": "Saoirse", "lastName": "Lindqvist", "email": "saoirse.lindqvist@brackenridge-council.example", "avatar": "https://i.pravatar.cc/150?u=user_3", "jobTitle": "Highways Engineer", "department": "Highways", "location": "Brackenridge, UK", "phone": "+44 1632 960112", "presence": "away", "statusMessage": "", "statusEmoji": "", "outOfOffice": false, "timezone": "Europe/London" }
+  ],
+  "teams": [
+    { "teamId": "team_1", "displayName": "Brackenridge Council Comms", "description": "Communications and public notices", "avatar": "", "avatarColor": "#4A90D9", "avatarInitials": "BC", "visibility": "private", "isArchived": false, "isFavorite": true, "createdDateTime": "2025-01-10T10:00:00Z", "members": ["user_1", "user_2", "user_3"], "owners": ["user_1"], "channels": ["ch_1", "ch_2"], "settings": { "allowMemberCreateChannels": true, "allowMemberDeleteMessages": true, "allowGiphy": true, "allowStickers": true, "allowMemes": true } }
+  ],
+  "channels": [
+    { "channelId": "ch_1", "teamId": "team_1", "displayName": "General", "description": "Team-wide announcements", "membershipType": "standard", "isFavoriteByDefault": true, "isPinned": false, "isMuted": false, "unreadCount": 1, "lastMessagePreview": "Percival: Roadworks notice approved for Friday", "lastMessageTimestamp": "2026-09-05T15:10:00.000Z", "createdDateTime": "2025-01-10T10:00:00Z", "members": [], "tabs": [ { "tabId": "tab_posts_1", "displayName": "Posts", "type": "posts", "isDefault": true }, { "tabId": "tab_files_1", "displayName": "Files", "type": "files" } ], "pinnedMessages": [] },
+    { "channelId": "ch_2", "teamId": "team_1", "displayName": "Press Releases", "description": "Drafts and approvals", "membershipType": "standard", "isFavoriteByDefault": false, "isPinned": false, "isMuted": false, "unreadCount": 0, "lastMessagePreview": "Ottoline: Draft of the flood defence release attached", "lastMessageTimestamp": "2026-09-04T11:00:00.000Z", "createdDateTime": "2025-01-10T10:00:00Z", "members": [], "tabs": [ { "tabId": "tab_posts_2", "displayName": "Posts", "type": "posts", "isDefault": true } ], "pinnedMessages": [] }
+  ],
+  "chats": [
+    { "chatId": "chat_1", "chatType": "oneOnOne", "topic": "", "participants": ["user_1", "user_2"], "isPinned": true, "isMuted": false, "isHidden": false, "unreadCount": 1, "lastMessagePreview": "Can you review the roadworks notice wording?", "lastMessageSenderId": "user_2", "lastMessageTimestamp": "2026-09-06T08:40:00.000Z", "createdDateTime": "2025-02-01T09:00:00Z", "pinnedMessages": [], "tabs": [ { "tabId": "tab_chat_1", "displayName": "Chat", "type": "chat", "isDefault": true } ] },
+    { "chatId": "chat_2", "chatType": "group", "topic": "Riverside Flood Defence Launch", "participants": ["user_1", "user_2", "user_3"], "isPinned": false, "isMuted": false, "isHidden": false, "unreadCount": 0, "lastMessagePreview": "Site visit confirmed for Tuesday 10am", "lastMessageSenderId": "user_3", "lastMessageTimestamp": "2026-09-05T17:20:00.000Z", "createdDateTime": "2026-08-20T09:00:00Z", "pinnedMessages": [], "tabs": [ { "tabId": "tab_chat_2", "displayName": "Chat", "type": "chat", "isDefault": true } ] }
+  ],
+  "messages": {
+    "ch_1": [
+      { "messageId": "msg_1", "containerId": "ch_1", "containerType": "channel", "senderId": "user_2", "content": "Roadworks notice approved for Friday", "contentType": "text", "messageType": "message", "createdDateTime": "2026-09-05T15:10:00.000Z", "lastEditedDateTime": null, "deletedDateTime": null, "importance": "normal", "subject": "Roadworks notice", "replyToId": null, "reactions": [ { "emoji": "👍", "users": ["user_1"] } ], "mentions": [], "attachments": [], "isBookmarked": false }
+    ],
+    "ch_2": [
+      { "messageId": "msg_2", "containerId": "ch_2", "containerType": "channel", "senderId": "user_1", "content": "Draft of the flood defence release attached", "contentType": "text", "messageType": "message", "createdDateTime": "2026-09-04T11:00:00.000Z", "lastEditedDateTime": null, "deletedDateTime": null, "importance": "normal", "subject": "Flood defence release", "replyToId": null, "reactions": [], "mentions": [], "attachments": [ { "attachmentId": "att_1", "name": "Flood_Defence_Release_v2.docx", "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "contentUrl": "#", "thumbnailUrl": "", "size": 48120 } ], "isBookmarked": false }
+    ],
+    "chat_1": [
+      { "messageId": "msg_3", "containerId": "chat_1", "containerType": "chat", "senderId": "user_2", "content": "Can you review the roadworks notice wording?", "contentType": "text", "messageType": "message", "createdDateTime": "2026-09-06T08:40:00.000Z", "lastEditedDateTime": null, "deletedDateTime": null, "importance": "normal", "subject": "", "replyToId": null, "reactions": [], "mentions": [], "attachments": [], "isBookmarked": false }
+    ],
+    "chat_2": [
+      { "messageId": "msg_4", "containerId": "chat_2", "containerType": "chat", "senderId": "user_3", "content": "Site visit confirmed for Tuesday 10am", "contentType": "text", "messageType": "message", "createdDateTime": "2026-09-05T17:20:00.000Z", "lastEditedDateTime": null, "deletedDateTime": null, "importance": "normal", "subject": "", "replyToId": null, "reactions": [], "mentions": [], "attachments": [], "isBookmarked": false }
+    ]
+  },
+  "meetings": [
+    { "meetingId": "meeting_1", "subject": "Flood defence site visit", "startDateTime": "2026-09-08T09:00:00.000Z", "endDateTime": "2026-09-08T10:30:00.000Z", "isAllDay": false, "location": "Riverside Walk", "organizer": "user_3", "participants": [ { "userId": "user_3", "role": "organizer", "rsvp": "accepted" }, { "userId": "user_1", "role": "attendee", "rsvp": "accepted" }, { "userId": "user_2", "role": "attendee", "rsvp": "tentative" } ], "isRecurring": false, "recurrencePattern": null, "chatId": "chat_2", "channelId": null, "teamId": null, "bodyPreview": "Walk the new embankment before the press launch.", "joinUrl": "#", "status": "scheduled" }
+  ],
+  "calls": [
+    { "callId": "call_1", "callType": "oneOnOne", "direction": "incoming", "participants": ["user_1", "user_2"], "startDateTime": "2026-09-04T14:00:00.000Z", "endDateTime": "2026-09-04T14:09:00.000Z", "duration": 540, "status": "completed", "isVideoCall": false }
+  ],
+  "files": [
+    { "fileId": "file_1", "name": "Flood_Defence_Release_v2.docx", "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "size": 48120, "containerId": "ch_2", "containerType": "channel", "sharedBy": "user_1", "sharedDateTime": "2026-09-04T11:00:00.000Z", "lastModifiedDateTime": "2026-09-04T11:00:00.000Z", "lastModifiedBy": "user_1", "thumbnailUrl": "", "downloadUrl": "#" }
+  ],
+  "notifications": [
+    { "notificationId": "notif_1", "type": "reaction", "actorId": "user_2", "targetMessageId": "msg_2", "containerId": "ch_2", "containerType": "channel", "containerName": "Press Releases", "teamName": "Brackenridge Council Comms", "previewText": "Percival Adjei reacted to your message", "timestamp": "2026-09-04T12:00:00.000Z", "isRead": false, "isActionable": false }
+  ],
+  "settings": { "theme": "light", "language": "en-GB", "notifications": { "showMessagePreviews": true, "playSound": true, "showBadgeCount": true, "muteAll": false, "quietHoursEnabled": false, "quietHoursStart": "22:00", "quietHoursEnd": "07:00" }, "privacy": { "readReceipts": true, "showPresence": true }, "display": { "density": "comfortable", "showChannelPreview": true } },
+  "ui": { "activeView": "chat", "activeTeamId": null, "activeChannelId": null, "activeChatId": null, "activeThreadMessageId": null, "isThreadPanelOpen": false, "isDetailsPanelOpen": false, "searchQuery": "", "searchResults": null }
+}
