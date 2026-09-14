@@ -36,6 +36,18 @@ uv run company-envs --config configs/company.local.toml doctor
 
 Do not overwrite an existing local configuration. Use Python 3.13 to match CI.
 
+With Node.js on `PATH`, check the bundled native app without model access:
+
+```sh
+make smoke
+```
+
+Expected result: `2 passed`. The checks cover seed/read/write, worker proxy access,
+session isolation, file upload and reset. They use a real local Node server and
+bundled build fixture; no external hub, npm download or VM is required. Browser
+rendering is checked when a compatible browser is available. This checks runtime
+plumbing, not a generated company's acceptance.
+
 ## 2. Configure the runtime
 
 Edit `configs/company.local.toml`. Paths are resolved relative to that file, and
@@ -55,9 +67,9 @@ The starter uses the eight-app surface and runtime revision measured in the
 included example. These are starting values, not a promise that other apps or
 model configurations have been validated. See [configuration](../configs/README.md).
 
-The hub and VM image are not bundled. The current hub revision is
-`1e50b797200f8afd6f11ca8e3ee04412de97b0f2`; obtain a compatible checkout and image
-from their distributor or the project maintainer before attempting native replay.
+Follow [runtime assets](RUNTIME.md) for the pinned public hub checkout, desktop
+image build recipe, browser selection and resource requirements. These assets
+are acquired separately from the Python package.
 
 Check the capabilities needed for the next stage:
 

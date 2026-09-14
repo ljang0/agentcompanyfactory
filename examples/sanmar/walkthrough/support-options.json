@@ -1,0 +1,260 @@
+{
+  "id": "SH-ACQ-OPTIONS",
+  "name": "September support options",
+  "rowCount": 100,
+  "colCount": 26,
+  "frozenRows": 1,
+  "data": {
+    "A1": {
+      "value": "Option",
+      "formula": "Option"
+    },
+    "B1": {
+      "value": "DECOR daily USD",
+      "formula": "DECOR daily USD"
+    },
+    "C1": {
+      "value": "START daily USD",
+      "formula": "START daily USD"
+    },
+    "D1": {
+      "value": "RETURN daily USD",
+      "formula": "RETURN daily USD"
+    },
+    "E1": {
+      "value": "30-day media plan USD",
+      "formula": "30-day media plan USD"
+    },
+    "F1": {
+      "value": "Extra representative hours/week",
+      "formula": "Extra representative hours/week"
+    },
+    "G1": {
+      "value": "Extra services hours/week",
+      "formula": "Extra services hours/week"
+    },
+    "H1": {
+      "value": "Extra marketing hours/week",
+      "formula": "Extra marketing hours/week"
+    },
+    "I1": {
+      "value": "Internal support USD/week",
+      "formula": "Internal support USD/week"
+    },
+    "J1": {
+      "value": "Scope",
+      "formula": "Scope"
+    },
+    "A2": {
+      "value": "A: maintain all three",
+      "formula": "A: maintain all three"
+    },
+    "B2": {
+      "value": "65",
+      "formula": "65"
+    },
+    "C2": {
+      "value": "45",
+      "formula": "45"
+    },
+    "D2": {
+      "value": "25",
+      "formula": "25"
+    },
+    "E2": {
+      "value": "=(B2+C2+D2)*30",
+      "formula": "=(B2+C2+D2)*30",
+      "computed": 4050
+    },
+    "F2": {
+      "value": "12",
+      "formula": "12"
+    },
+    "G2": {
+      "value": "6",
+      "formula": "6"
+    },
+    "H2": {
+      "value": "8",
+      "formula": "8"
+    },
+    "I2": {
+      "value": "=F2*48+G2*42+H2*50",
+      "formula": "=F2*48+G2*42+H2*50",
+      "computed": 1228,
+      "note": "Internal planning rates $48 representative/$42 services/$50 marketing per hour; estimates, not completed work."
+    },
+    "J2": {
+      "value": "DECOR development plus proactive starter discovery/document guidance and visitor triage. Campaign role estimates DECOR 6/3/4; START 4/2/2; RETURN 2/1/2. Retains all routine applications and customer service. More learning breadth with greater low-readiness and duplicate triage effort.",
+      "formula": "DECOR development plus proactive starter discovery/document guidance and visitor triage. Campaign role estimates DECOR 6/3/4; START 4/2/2; RETURN 2/1/2. Retains all routine applications and customer service. More learning breadth with greater low-readiness and duplicate triage effort."
+    },
+    "A3": {
+      "value": "B: decorator-only media",
+      "formula": "B: decorator-only media"
+    },
+    "B3": {
+      "value": "65",
+      "formula": "65"
+    },
+    "C3": {
+      "value": "0",
+      "formula": "0"
+    },
+    "D3": {
+      "value": "0",
+      "formula": "0"
+    },
+    "E3": {
+      "value": "=(B3+C3+D3)*30",
+      "formula": "=(B3+C3+D3)*30",
+      "computed": 1950
+    },
+    "F3": {
+      "value": "6",
+      "formula": "6"
+    },
+    "G3": {
+      "value": "3",
+      "formula": "3"
+    },
+    "H3": {
+      "value": "4",
+      "formula": "4"
+    },
+    "I3": {
+      "value": "=F3*48+G3*42+H3*50",
+      "formula": "=F3*48+G3*42+H3*50",
+      "computed": 614,
+      "note": "Internal planning rates $48 representative/$42 services/$50 marketing per hour; estimates, not completed work."
+    },
+    "J3": {
+      "value": "Pause START and RETURN media. Conditional Kestrel preparation, Oakline discovery, Riverbend development and Alder resource help. All six unresolved applications retain routine support in protected time. Marketing estimate: 2 hours approved resource reuse and 2 hours linkage/pacing checks. No new production purchase.",
+      "formula": "Pause START and RETURN media. Conditional Kestrel preparation, Oakline discovery, Riverbend development and Alder resource help. All six unresolved applications retain routine support in protected time. Marketing estimate: 2 hours approved resource reuse and 2 hours linkage/pacing checks. No new production purchase."
+    },
+    "A5": {
+      "value": "Available discretionary hours/week",
+      "formula": "Available discretionary hours/week"
+    },
+    "A6": {
+      "value": "Protected recurring hours/week",
+      "formula": "Protected recurring hours/week"
+    },
+    "A7": {
+      "value": "Option B remaining discretionary",
+      "formula": "Option B remaining discretionary"
+    },
+    "F5": {
+      "value": "18",
+      "formula": "18",
+      "computed": 18
+    },
+    "F6": {
+      "value": "10",
+      "formula": "10",
+      "computed": 10
+    },
+    "F7": {
+      "value": "=F5-F3",
+      "formula": "=F5-F3",
+      "computed": 12
+    },
+    "G5": {
+      "value": "14",
+      "formula": "14",
+      "computed": 14
+    },
+    "G6": {
+      "value": "12",
+      "formula": "12",
+      "computed": 12
+    },
+    "G7": {
+      "value": "=G5-G3",
+      "formula": "=G5-G3",
+      "computed": 11
+    },
+    "H5": {
+      "value": "16",
+      "formula": "16",
+      "computed": 16
+    },
+    "H6": {
+      "value": "8",
+      "formula": "8",
+      "computed": 8
+    },
+    "H7": {
+      "value": "=H5-H3",
+      "formula": "=H5-H3",
+      "computed": 12
+    },
+    "J6": {
+      "value": "POL-AUTH-3 / manager assignment: applications, customer exceptions and catalog maintenance. Discretionary allowances are additional: do not subtract protected hours twice or count them as new capacity. Preserve September 3 reviews and outstanding translation work.",
+      "formula": "POL-AUTH-3 / manager assignment: applications, customer exceptions and catalog maintenance. Discretionary allowances are additional: do not subtract protected hours twice or count them as new capacity. Preserve September 3 reviews and outstanding translation work."
+    },
+    "A8": {
+      "value": "B reductions versus A",
+      "formula": "B reductions versus A"
+    },
+    "E8": {
+      "value": "=E2-E3",
+      "formula": "=E2-E3",
+      "computed": 2100
+    },
+    "I8": {
+      "value": "=I2-I3",
+      "formula": "=I2-I3",
+      "computed": 614
+    },
+    "A9": {
+      "value": "September media authority",
+      "formula": "September media authority"
+    },
+    "E9": {
+      "value": "6000",
+      "formula": "6000",
+      "computed": 6000
+    },
+    "A10": {
+      "value": "Option B media headroom",
+      "formula": "Option B media headroom"
+    },
+    "E10": {
+      "value": "=E9-E3",
+      "formula": "=E9-E3",
+      "computed": 4050
+    },
+    "A11": {
+      "value": "September-equivalent internal cost",
+      "formula": "September-equivalent internal cost"
+    },
+    "E11": {
+      "value": "=ROUND(I2*30/7,2)",
+      "formula": "=ROUND(I2*30/7,2)",
+      "computed": 5262.86,
+      "note": "Option A; weekly estimate prorated 30/7, not a payroll/vendor bill."
+    },
+    "I11": {
+      "value": "=ROUND(I3*30/7,2)",
+      "formula": "=ROUND(I3*30/7,2)",
+      "computed": 2631.43,
+      "note": "Option B; same planning convention. Weekly capacity limits govern."
+    },
+    "A12": {
+      "value": "Production and controls",
+      "formula": "Production and controls"
+    },
+    "J12": {
+      "value": "Both options add $0 resource-production expense; existing catalog/vendor obligations remain within separate $1,200 authority. Internal support is separate from media and vendor expense. CBO false: effective budgets are at ad-set level; matching parent budgets are not additional spend. Daily budget x 30 is planning exposure, not a native monthly hard cap. Check delivered/accrued September spend each business day and reduce/pause before allocation is exceeded; expansion requires recorded approval. Account $36,000 spendCap is not a September cap. Preserve August $650 unpaid balance and vendor invoice correction; no payment asserted.",
+      "formula": "Both options add $0 resource-production expense; existing catalog/vendor obligations remain within separate $1,200 authority. Internal support is separate from media and vendor expense. CBO false: effective budgets are at ad-set level; matching parent budgets are not additional spend. Daily budget x 30 is planning exposure, not a native monthly hard cap. Check delivered/accrued September spend each business day and reduce/pause before allocation is exceeded; expansion requires recorded approval. Account $36,000 spendCap is not a September cap. Preserve August $650 unpaid balance and vendor invoice correction; no payment asserted."
+    },
+    "A13": {
+      "value": "Recommendation and review",
+      "formula": "Recommendation and review"
+    },
+    "J13": {
+      "value": "Recommend B for better-described reseller demand and lower support burden, while evidence remains concentrated in Riverbend. At September 15 review, assess distinct decorator outcomes beyond Riverbend and actual role hours before expansion; require START documentary/business-fit progress and RETURN identity separation before restart. Owen must check selected scope against accepted commitments after written allocation. No settings changed by this comparison.",
+      "formula": "Recommend B for better-described reseller demand and lower support burden, while evidence remains concentrated in Riverbend. At September 15 review, assess distinct decorator outcomes beyond Riverbend and actual role hours before expansion; require START documentary/business-fit progress and RETURN identity separation before restart. Owen must check selected scope against accepted commitments after written allocation. No settings changed by this comparison."
+    }
+  }
+}

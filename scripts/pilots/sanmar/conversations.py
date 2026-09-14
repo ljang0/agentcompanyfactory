@@ -47,7 +47,7 @@ IDs, timestamps, thread indexes and access. Each case is unrelated unless its so
 
 
 def main():
-    root = Path(__file__).resolve().parents[1]
+    root = Path(__file__).resolve().parents[3]
     folder = root / "experiments/pilot-sanmar/company"
     work = folder / "world/population"
     slack = read(folder / "world/slack_mock.state.json")

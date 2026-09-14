@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "browser_version": "151.0.7922.34",
+  "guest": "Ubuntu 22.04.5 LTS\n/usr/bin/xdotool\ngir1.2-gtk-3.0:amd64\t3.24.33-1ubuntu2.2\npython3-gi\t3.42.1-0ubuntu1\n",
+  "image_sha256": "d8422da91051870edd1d329d4ac05fbf0f9c48ec3ac7d30d0efd5338ff7bf5f2",
+  "checks": [
+    "X desktop",
+    "guest Chromium launch",
+    "SSH CDP tunnel",
+    "page read",
+    "text input",
+    "screenshot"
+  ],
+  "model_calls": 0,
+  "unmeasured": [
+    "company app access",
+    "team trials"
+  ]
+}

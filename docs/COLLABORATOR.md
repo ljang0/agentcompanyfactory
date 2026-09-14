@@ -49,9 +49,10 @@ These checks do not require the full external hub or a VM image.
 
 Replay additionally requires the CUA-Gym hub checkout at revision
 `1e50b797200f8afd6f11ca8e3ee04412de97b0f2`, matching the shipped config. The hub and
-VM image are external assets, not included in this repository or release. Obtain
-compatible copies from their distributor or the project maintainer. Access to
-these assets is a remaining requirement for reproducing the native/desktop runs.
+VM image are external assets, not included in this repository or release. Use the
+[public hub checkout instructions](RUNTIME.md#public-hub-checkout) to acquire the
+pinned source. Native replay does not require a VM image. The runtime guide also
+provides a desktop build recipe and identifies the historical pilot image.
 
 From the extracted snapshot:
 

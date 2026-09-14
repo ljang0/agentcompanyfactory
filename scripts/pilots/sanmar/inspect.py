@@ -17,7 +17,7 @@ from company_envs.world.population import additive_world
 
 
 def main():
-    root = Path(__file__).resolve().parents[1]
+    root = Path(__file__).resolve().parents[3]
     folder = root / "experiments/pilot-sanmar/company"
     work = folder / "world/population"
     core, _ = load_core(root, folder)

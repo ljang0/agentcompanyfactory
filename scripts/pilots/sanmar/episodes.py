@@ -10,7 +10,7 @@ from company_envs.models import Models
 from company_envs.storage import digest, read, write
 from company_envs.world.population_episodes import author_episodes
 
-root = Path(__file__).resolve().parents[1]
+root = Path(__file__).resolve().parents[3]
 folder = root / "experiments/pilot-sanmar/company"
 work = folder / "world/population"
 world = read(work / "EFFECTIVE-WORLD.json")

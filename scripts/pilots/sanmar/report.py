@@ -22,7 +22,7 @@ from company_envs.world.world_check import check_folder
 
 
 def main():
-    root = Path(__file__).resolve().parents[1]
+    root = Path(__file__).resolve().parents[3]
     pilot = root / "experiments/pilot-sanmar"
     folder = pilot / "company"
     work = folder / "world/population"

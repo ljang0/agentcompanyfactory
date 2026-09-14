@@ -69,17 +69,19 @@ and acceptance checks. The [architecture guide](docs/ARCHITECTURE.md) maps them 
 
 ## Get started
 
-Install [uv](https://docs.astral.sh/uv/) and Python 3.12+, then:
+Install [uv](https://docs.astral.sh/uv/), Python 3.12+ and Node.js (CI uses Node 22), then:
 
 ```sh
 git clone https://github.com/ljang0/agentcompanyfactory.git
 cd agentcompanyfactory
 make setup
 make doctor
+make smoke
 ```
 
-This installs the locked dependencies, creates an ignored local configuration and
-checks the included catalogs. It does not call a model or create a company.
+This installs the locked dependencies, creates an ignored local configuration,
+checks the catalogs, and exercises a bundled native app's write/reset contract.
+The smoke check needs Node.js; it uses no models, external hub or VM image.
 
 Next, [inspect the included example](examples/sanmar/README.md),
 [configure a new company run](docs/GETTING-STARTED.md), or
@@ -93,6 +95,8 @@ a VM image and model access. The setup guide lists each execution mode's require
 contains four workers, eight apps and two reviewed tasks: an account assortment
 review and a qualified acquisition review.
 
+Start with the [worked example](examples/sanmar/walkthrough/README.md): each worker's
+information, actual desktop screenshots, the team's decision and its grade.
 Browse the assignments, reference actions and grades in GitHub. The
 [inspection release](https://github.com/ljang0/agentcompanyfactory/releases/tag/sanmar-inspection-2026-09-14)
 contains the complete world, delivered files, screenshots and replay proof.

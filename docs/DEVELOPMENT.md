@@ -18,6 +18,10 @@ uv run pytest -q tests/test_collaborator.py
 uv run pytest -q tests/test_render_check.py
 ```
 
+`make smoke` runs the two bundled native-server integration checks without an
+external hub or model credentials. Node.js is required; the target refuses to
+report success if Node is missing.
+
 Install the CLI headless-shell build and select the version matching Playwright:
 
 ```sh

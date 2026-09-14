@@ -1,0 +1,40 @@
+{
+  "archive": "company-envs-inspection-20260914-share.tar.gz",
+  "archive_sha256": "3852830a8b15ac9682f0e330fb75c5a5e3a8a5f88eed76d32c7a594a2f0d0d7a",
+  "files": [
+    {
+      "file": "supervisor-desktop.png",
+      "archive_path": "experiments/pilot-sanmar/company/runtime/teacher/sanmar_qualified-acquisition-review/runs/7d677360b3ad462199ba5df69d336537/company/runtime/vms/sales-supervisor/trace/screen-000000.png",
+      "sha256": "be308d4bc62c6bb7af289155b2af16499943b85f145ab38cded33d48633116ed",
+      "transformation": "none"
+    },
+    {
+      "file": "marketing-inbox.png",
+      "archive_path": "experiments/pilot-sanmar/company/runtime/teacher/sanmar_qualified-acquisition-review/runs/7d677360b3ad462199ba5df69d336537/company/runtime/vms/marketing-specialist/trace/screen-000020.png",
+      "sha256": "5238da3fb590a34d8cc745855ae786af86b6db7c10ce85145dbc44fe697fea73",
+      "transformation": "none"
+    },
+    {
+      "file": "account-inbox.png",
+      "archive_path": "experiments/pilot-sanmar/company/runtime/teacher/sanmar_qualified-acquisition-review/runs/7d677360b3ad462199ba5df69d336537/company/runtime/vms/account-representative/trace/screen-000020.png",
+      "sha256": "47b33bc34a2430c6c7a821fb0619dde8961edb4db9b855d3a31267c7798bf2a7",
+      "transformation": "none"
+    },
+    {
+      "file": "decision.json",
+      "archive_path": "experiments/pilot-sanmar/company/runtime/teacher/sanmar_qualified-acquisition-review/runs/7d677360b3ad462199ba5df69d336537/company/runtime/NATIVE-FINAL.json",
+      "archive_file_sha256": "680496c39a187c8df59c5b0afa225d4ba91bdf4d072a4afa4fc5179bae74c119",
+      "json_pointer": "/apps/google_docs_mock/current_state/documents/DOC-SEP-ACQ-DECISION",
+      "sha256": "70881c9a161eebbf08003828c8243f11109e30d3533c25b4fbd40ebc4f2fdef4",
+      "transformation": "JSON subtree extracted without changing values"
+    },
+    {
+      "file": "support-options.json",
+      "archive_path": "experiments/pilot-sanmar/company/runtime/teacher/sanmar_qualified-acquisition-review/runs/7d677360b3ad462199ba5df69d336537/company/runtime/NATIVE-FINAL.json",
+      "archive_file_sha256": "680496c39a187c8df59c5b0afa225d4ba91bdf4d072a4afa4fc5179bae74c119",
+      "json_pointer": "/apps/google_sheets_mock/current_state/sheets/8",
+      "sha256": "2404ff37ca96e174a7c62988e2fda16b9383955785352cfda80861310f65686c",
+      "transformation": "JSON subtree extracted without changing values"
+    }
+  ]
+}

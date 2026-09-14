@@ -1,0 +1,20 @@
+{
+  "status": "provisioned",
+  "cloud_sha256": "9144540e8af7637d258b50dbabe82ce1aa6752c9574fedfb048270da0e087899",
+  "recipe_sha256": "8f05cd703fed2d2d8f0c7591846a258e5e9f86b1e91d6d491d916e26e58e7fd6",
+  "image_sha256": "d8422da91051870edd1d329d4ac05fbf0f9c48ec3ac7d30d0efd5338ff7bf5f2",
+  "image_bytes": 6678970368,
+  "checks": [
+    "SSH",
+    "cloud-init completed",
+    "ga UID 1000",
+    "xdotool",
+    "Python GTK 3"
+  ],
+  "unmeasured": [
+    "company app access",
+    "guest browser",
+    "team trial"
+  ],
+  "packages": "guest-check.txt"
+}

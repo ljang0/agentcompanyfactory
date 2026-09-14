@@ -45,7 +45,8 @@ an exact previous baseline and explicit old/new field values and reasons.
 `recheck-population FOLDER` handles compiler/checker updates without generating
 new records. Data changes invalidate earlier acceptance.
 
-SanMar population also used `scripts/pilot_stage3_*.py`. The saved outputs are
+SanMar population also used the historical helpers now under `scripts/pilots/sanmar/`.
+The saved outputs are
 inspectable and replayable; those helper steps are not yet a generic generator.
 
 ## Task evaluation

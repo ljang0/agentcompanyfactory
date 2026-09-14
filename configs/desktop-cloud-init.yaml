@@ -1,0 +1,74 @@
+#cloud-config
+# Local evaluation guest. The launcher forwards SSH on loopback only.
+users:
+  - name: ga
+    uid: 1000
+    groups: [sudo, audio, video, input]
+    shell: /bin/bash
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    lock_passwd: false
+ssh_pwauth: true
+chpasswd:
+  expire: false
+  list: |
+    ga:password123
+package_update: true
+packages:
+  - ubuntu-desktop-minimal
+  - dbus-x11
+  - xdotool
+  - x11-xserver-utils
+  - python3-gi
+  - gir1.2-gtk-3.0
+  - python3-pil
+  - python3-numpy
+  - openssh-server
+  - libreoffice-writer
+  - libreoffice-calc
+  - libreoffice-impress
+  - evince
+  - fonts-dejavu-core
+write_files:
+  - path: /etc/ssh/sshd_config.d/00-company.conf
+    content: |
+      PasswordAuthentication yes
+      PermitRootLogin no
+  - path: /etc/gdm3/custom.conf
+    content: |
+      [daemon]
+      AutomaticLoginEnable=true
+      AutomaticLogin=ga
+      WaylandEnable=false
+  - path: /etc/dconf/profile/user
+    content: |
+      user-db:user
+      system-db:local
+  - path: /etc/dconf/db/local.d/00-company-desktop
+    content: |
+      [org/gnome/desktop/screensaver]
+      lock-enabled=false
+      [org/gnome/desktop/session]
+      idle-delay=uint32 0
+      [org/gnome/desktop/notifications]
+      show-banners=false
+      [org/gnome/desktop/interface]
+      enable-animations=false
+  - path: /etc/xdg/autostart/company-x11.desktop
+    content: |
+      [Desktop Entry]
+      Type=Application
+      Name=Allow local desktop automation
+      Exec=xhost +SI:localuser:ga
+      NoDisplay=true
+runcmd:
+  - [dconf, update]
+  - [systemctl, enable, ssh]
+  - [systemctl, set-default, graphical.target]
+  - [mkdir, -p, /home/ga/Desktop, /home/ga/Documents, /home/ga/Downloads]
+  - [chown, -R, 'ga:ga', /home/ga]
+  - [bash, -ec, 'dpkg-query -W > /home/ga/desktop-packages.tsv; touch /home/ga/.desktop-provisioned']
+power_state:
+  mode: poweroff
+  delay: now
+  timeout: 30
+  condition: true

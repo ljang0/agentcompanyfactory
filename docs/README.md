@@ -8,6 +8,8 @@
 - [Use as a template](TEMPLATE.md): create and customize your own project.
 - [Development](DEVELOPMENT.md): checks and extension points.
 - [Agent guide](../AGENTS.md): setup, operating rules, checkpoint handling and troubleshooting.
+- [Runtime assets](RUNTIME.md): pinned hub, desktop image build, browser and hardware requirements.
+- [Worked example](../examples/sanmar/walkthrough/README.md): four workers, their information and a recorded spending decision.
 
 ## Inspect an existing run
 

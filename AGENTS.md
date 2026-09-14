@@ -24,6 +24,10 @@ Use [README.md](README.md) for the project explanation,
 
 Keep code changes narrow and explanations concrete. State the behavior, inputs,
 outputs and measured checks; avoid promotional language and unsupported claims.
+Keep the code lean as an ongoing constraint: extend an existing entrypoint or
+contract before adding another layer, keep company data out of generic modules,
+and remove duplication within the files you change. Preserve historical evidence
+and avoid unrelated cleanup. New scripts need a clear owner and a documented use.
 
 ## Setup and prerequisites
 
@@ -35,6 +39,7 @@ if these setup values change.
 ```sh
 make setup
 make doctor
+make smoke
 ```
 
 `make setup` installs locked dependencies with the browser extra and creates
@@ -112,6 +117,7 @@ The Python import is `company_envs`; the CLI is `company-envs`. Use
 | --- | --- |
 | `make doctor` | Reads prerequisites and catalogs; no models, app builds or VMs |
 | `make preflight` | Measures runtime socket access; no inference |
+| `make smoke` | Runs two bundled native-server integration checks; requires Node, no models or VMs |
 | `preflight --scope models` | Measures disposable profile writes and model environment access; no inference |
 | `make status COMPANY=workspace/companies/ID` | Reads saved pipeline status without model calls |
 | `verify-world` | Starts apps, checks worker views and browser writes, verifies persistence and reset; no models |
@@ -143,7 +149,7 @@ are in [docs/PIPELINE.md](docs/PIPELINE.md).
 The research entrypoint `generate` also performs older workflow drafting. Export
 its accepted dossier with `--dossier-only` to enter the shared-world sequence.
 The older batch and `run-company` routes are not shortcuts around its acceptance
-gates. `scripts/pilot_stage3_*.py` contains company-specific population helpers;
+gates. `scripts/pilots/sanmar/` contains historical company-specific population helpers;
 do not describe those helpers as a generic one-command generator.
 
 ## Checkpoints, repair and evaluation rules

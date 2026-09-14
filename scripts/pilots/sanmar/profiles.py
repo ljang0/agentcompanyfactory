@@ -29,7 +29,7 @@ class Profiles(Contract):
 
 
 def main():
-    root = Path(__file__).resolve().parents[1]
+    root = Path(__file__).resolve().parents[3]
     folder = root / "experiments/pilot-sanmar/company"
     core, _ = load_core(root, folder)
     world = json.loads(core.entities_json)

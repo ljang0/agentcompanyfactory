@@ -5,7 +5,9 @@ Its four roles are sales supervisor, account representative, order coordinator
 and marketing specialist. They use eight native app environments: Gmail, Slack,
 Calendar, Drive, Docs, Sheets, HubSpot and Meta Ads.
 
-Start with [the company](company.json), then read either assignment:
+Start with the [worked example](walkthrough/README.md) for a readable walkthrough
+with actual screenshots, output records and the recorded grade. Then inspect
+[the company](company.json) and either assignment:
 
 | Task | Assignment | Assessment | Reference | Verifier | Calibration |
 | --- | --- | --- | --- | --- | --- |

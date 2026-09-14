@@ -459,6 +459,7 @@ def source_inputs(root):
         "config.toml",
         "configs/pilot-sanmar.toml",
         "configs/company.example.toml",
+        "configs/desktop-cloud-init.yaml",
         "configs/README.md",
         "Makefile",
         "data/person_names.json",

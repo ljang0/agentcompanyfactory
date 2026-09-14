@@ -21,7 +21,7 @@ def next_weekday(day):
 
 
 def main():
-    root = Path(__file__).resolve().parents[1]
+    root = Path(__file__).resolve().parents[3]
     folder = root / "experiments/pilot-sanmar/company"
     work = folder / "world/population"
     world = additive_world(read(folder / "world/world.json"), read(work / "EXTENSION.json"))

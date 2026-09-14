@@ -14,7 +14,7 @@ from company_envs.world.state_seed import app_contract
 
 
 def main():
-    root = Path(__file__).resolve().parents[1]
+    root = Path(__file__).resolve().parents[3]
     folder = root / "experiments/pilot-sanmar/company"
     work = folder / "world/population"
     prepared = work / "conversation-repair"
