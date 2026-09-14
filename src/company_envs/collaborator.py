@@ -107,6 +107,8 @@ def company_inputs(folder, trials=None):
     names.update(population["artifacts"])
     names.update(entry["path"] for entry in population["states"].values())
     names.update(runtime["evidence"])
+    if (folder / "runtime/trials/PLAN.json").is_file():
+        names.add("runtime/trials/PLAN.json")
     for archive in (folder / "world/acceptance/task-binding-refreshes").glob("*"):
         names.update(str(p.relative_to(folder)) for p in archive.glob("*.json"))
         names.update(read(archive / "RUNTIME.json")["evidence"])

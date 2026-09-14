@@ -25,7 +25,7 @@ vm_browser_dir = ""
 vm_host_ip = "10.0.2.2"
 vm_guests = 4
 seed_call_budget = 500
-vm_model_calls = 450
+vm_model_calls = 800
 tasks_per_company = 2
 minimum_workers = 3
 workflow_version = "2"
@@ -71,6 +71,7 @@ neighbors = 10
 cross_run = true
 
 [worker_policy]
-seconds = 1500
-actions = 150
+# Extended validation profile; the first two teachers used 1500 seconds / 150 actions / 450 calls.
+seconds = 3000
+actions = 250
 policies = ["own"]

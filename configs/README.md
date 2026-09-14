@@ -3,8 +3,10 @@
 Start from `company.example.toml`. `make setup` copies it to the ignored
 `company.local.toml` without replacing an existing file. Use `pilot-sanmar.toml`
 when inspecting the measured SanMar snapshot, or `thoughtbot.toml` for the software
-delivery company. These presets preserve each example's app surface and budgets;
-set machine paths in an ignored local copy.
+delivery company. These presets define each example's app surface and execution limits;
+set machine paths in an ignored local copy. `thoughtbot.toml` uses the later
+validation budget: 3,000 seconds, 250 actions per worker and 800 shared calls.
+The earlier 1,500-second teacher attempts remain in the trial history.
 
 Configuration precedence is the command's `--config`, then `COMPANY_ENVS_CONFIG`,
 then the repository's `config.toml`. Relative paths resolve beside the selected

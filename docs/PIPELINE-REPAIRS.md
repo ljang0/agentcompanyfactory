@@ -43,3 +43,37 @@ represented in the effective world.
 Pilot-specific helpers remain as historical tools. A second accepted world is
 evidence that the staged path works beyond SanMar; unattended generation still
 requires further work. See [remaining work](END-TO-END-PLAN.md).
+
+## Software delivery tasks and runtime
+
+A continuation reused that frozen world to author and independently review two
+tasks. Both references replayed and both verifiers passed 20 calibration checks.
+The first desktop teachers received business scores of 0.6 and 0.0 and both reset
+cleanly. Their failed results remain recorded.
+
+| Problem | Repair and check |
+| --- | --- |
+| Task generation applied legacy exclusive-app rules to frozen shared apps | Validate against the world's existing worker grants; reuse the saved generated tasks |
+| An alternative calibration fixture described different decisions in its final records and simulated history | Repair the simulated history while preserving the reference, actors, ordering and other cases; retain the original failed calibration |
+| Jira issue details crashed when saved transitions were a map instead of a list | Read both representations with the same allowed transitions; browser checks open, edit and transition an issue |
+| An older Docs tab could delete a document loaded by another tab | Keep a separate write baseline per page, load server state on each new page and clear all baselines on reset; test stale-tab saves and deliberate deletion separately |
+| Character-by-character editor saves exceeded the grader input limit | Share repeated actor headers and edit layouts while retaining every event and value; the scope packet fell from 1.76 MB to 451 KB and reconstructed all 3,207 original events |
+
+The runtime repair passed all seven app gates and 28 worker views. Task bindings
+were refreshed with the previous runtime receipt and bindings archived. Fresh
+native references produced the same initial and final records and business actor
+history, so the matching verifier calibration was reused. Runtime repair preserves
+the original desktop grades and attempt counts; new teams use new attempts.
+
+The repaired teachers then reached their execution time limits. Release readiness
+scored 0.25; scope scored 0.30 after the encoding repair allowed grading to resume
+over its saved state and history. Both had substantive specialist work but lacked
+final requirements or recommendations, client drafts and some required follow-through.
+The new encoding passed all ten calibration cases in expanded and encoded forms
+for both tasks before the saved scope run was graded.
+
+The final teacher attempts use a recorded validation profile of 3,000 seconds,
+250 actions per worker and 800 shared model calls. Subsequent ordinary and
+ablation comparisons use the same profile. The original 1,500-second attempts,
+their grades and the three-scored-attempt cap are preserved. Inspection packages
+include the budget and ablation plan at `runtime/trials/PLAN.json`.

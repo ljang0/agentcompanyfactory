@@ -60,6 +60,7 @@ def test_company_payload_retains_repair_history_without_model_logs(tmp_path):
             "evidence": {"old-proof.json": "hash"}
         },
         "old-proof.json": {"retained": True},
+        "runtime/trials/PLAN.json": {"budgets": {"seconds": 3000}},
         "tasks/task/verifier-calibration.json": {"reference_hash": "reference", "cases": []},
         "tasks/task/verifier-calibration-history/first/verifier-calibration.json": {
             "cases": [{"report_hash": digest(original_grade)}]
