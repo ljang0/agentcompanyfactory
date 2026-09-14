@@ -23,7 +23,7 @@ hashes before reusing a checkpoint; a saved file alone does not count as accepta
 | Evidence and distribution | `receipt.py`, `pilot_status.py`, `collaborator.py` |
 
 `catalogs/` defines app schemas and probes. `.agents/skills/` supplies authoring and
-review instructions. `scripts/pilot_stage3_*.py` contains the SanMar population
+review instructions. `scripts/pilots/sanmar/` contains the historical SanMar population
 helpers; these are still specific to that pilot.
 
 ## Company layout

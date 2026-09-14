@@ -33,6 +33,13 @@ Run `company-envs COMMAND --help` for options. Prefix commands below with
 
 ## Reuse and repairs
 
+`populate-world` fills missing collections without replacing their saved records.
+Routine automated traffic can use checked templates. When templates are unsuitable
+or fail validation, the same command requests up to 20 literal records per batch,
+grounded in the canonical world and existing native content. Each completed
+batch is checkpointed. Missing records still block Stage 4; a refused template does
+not lower the target or count as completed population.
+
 Matching accepted core and population checkpoints are rechecked without model
 calls. Changed inputs or native state drift are refused for inspection. The raw
 `world/world.json` is the Stage 2 base; `world/population/EFFECTIVE-WORLD.json`

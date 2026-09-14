@@ -48,6 +48,8 @@ def app_fingerprint(core_hashes, world, plan, app, identities, grants, config):
             "population_contract.py",
             "population_comments.py",
             "population_batches.py",
+            "population_records.py",
+            "world_review.py",
             "population_derived.py",
             "population_directories.py",
             "population_quality.py",

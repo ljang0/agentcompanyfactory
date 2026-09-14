@@ -25,7 +25,8 @@ from .population_quality import (
     save_handoff,
     sync_documents,
 )
-from .seed_calls import AppStateResult, load_skill, skill_for_call
+from .population_records import author_records, missing_targets
+from .seed_calls import load_skill, skill_for_call
 from .state_seed import (
     app_contract,
     app_payload,
@@ -33,11 +34,9 @@ from .state_seed import (
     core_payload,
     make_author,
     merge_records,
-    parse_json,
     population_findings,
     project_world,
     record_count,
-    record_ids,
     seed_schema,
     validate_core,
 )
@@ -70,23 +69,6 @@ def additive_world(base, extension):
                 world[collection].append(deepcopy(row))
                 existing[rid] = world[collection][-1]
     return world
-
-
-def missing_targets(state, plan, app_id):
-    def count(collection):
-        value = state.get(collection)
-        ids = record_ids(value)
-        return len(set(ids)) if ids else record_count(value)
-
-    return [
-        {
-            **p,
-            "existing_records": count(p["collection"]),
-            "missing_records": max(0, p["target_records"] - count(p["collection"])),
-        }
-        for p in plan
-        if p["app_id"] == app_id and count(p["collection"]) < p["target_records"]
-    ]
 
 
 def check_bulk_targets(specs, targets):
@@ -150,7 +132,7 @@ def _populate(root, folder, *, models=None, app_ids=None):
         else [p.model_dump() for p in core.population_plan]
     )
     # A final target remains unchanged. Human-authored anchors are followed by
-    # deterministic routine traffic; documents get additional literal batches.
+    # deterministic routine traffic or additional literal batches.
     human_plan = human_targets(plan)
     settings = deepcopy(config)
     settings["design"].update(
@@ -272,66 +254,8 @@ def _populate(root, folder, *, models=None, app_ids=None):
         # completed human work. Provider calls also retain content-addressed cache.
         extra_receipts, ids, specs, spec_errors = [], list((saved or {}).get("bulk_ids", [])), [], []
         targets = missing_targets(state, plan, app_id)
-        if app_id == "google_docs_mock":
-            for target in targets:
-                collection = target["collection"]
-                if collection == "comments":
-                    requests = new_comment_requests(
-                        state, target["missing_records"], target["first_date"], target["last_date"]
-                    )
-                    comments, batches = author_comment_threads(
-                        state,
-                        requests,
-                        models,
-                        work,
-                        reference_date=core.reference_date,
-                        concurrency=4,
-                        first_date=target["first_date"],
-                        last_date=target["last_date"],
-                    )
-                    state[collection] = merge_records(state[collection], comments)
-                    extra_receipts.extend(r for b in batches for r in b["receipts"])
-                    save_partial()
-                    continue
-                # Two bounded extra rounds handle partial batches and duplicate IDs.
-                for batch in range((target["missing_records"] + 19) // 20 + 2):
-                    current = missing_targets(state, [target], app_id)
-                    remaining = current[0]["missing_records"] if current else 0
-                    if remaining <= 0:
-                        break
-                    body = app_payload(
-                        {
-                            "world": world,
-                            "reference_date": core.reference_date,
-                            "operating_scope": core.operating_scope,
-                        },
-                        app,
-                        {w: d[app_id] for w, d in identities.items() if app_id in grants[w]},
-                        grants,
-                        payload["company"],
-                        [],
-                        collections=[collection],
-                        authored=_summary(state, list(state)),
-                    )
-                    body["population_batch"] = {
-                        "count": min(20, remaining),
-                        "index": batch,
-                        "existing_ids": record_ids(state[collection]),
-                        "window": [target["first_date"], target["last_date"]],
-                    }
-                    body["output_contract"] = (
-                        f"Return exactly {min(20, remaining)} NEW literal {collection} records. Each document has a different plausible substantive piece of ordinary work and complete readable body. No template specs or task answers. Existing records are immutable. Use unique IDs; comment document IDs must exist in already_authored_collections."
-                    )
-                    result, receipt = models.call(
-                        "world_states",
-                        skill_for_call(instructions, "app_state") + "\n" + json.dumps(body),
-                        AppStateResult,
-                    )
-                    addition = parse_json(result.state_json, f"{app_id} batch", expected=[collection])
-                    state[collection] = merge_records(state[collection], addition[collection])
-                    extra_receipts.append(receipt)
-                    save_partial()
-        elif targets:
+        literal_targets = targets if app_id == "google_docs_mock" else []
+        if targets and app_id != "google_docs_mock":
             keys = [p["collection"] for p in targets]
             body = {
                 "call": "bulk_specs",
@@ -359,6 +283,12 @@ def _populate(root, folder, *, models=None, app_ids=None):
                     BulkSpecs,
                 )
                 extra_receipts.append(receipt)
+                if not result.specs:
+                    # The author declined templates for substantive work. Continue
+                    # from saved anchors instead of asking for the same refused plan.
+                    literal_targets = targets
+                    spec_errors = []
+                    break
                 spec_errors = check_bulk_targets(result.specs, targets) + check_specs(
                     result.specs,
                     app,
@@ -385,6 +315,55 @@ def _populate(root, folder, *, models=None, app_ids=None):
                     ids.extend(candidate_ids)
                     break
                 body["revision_feedback"] = spec_errors
+            else:
+                # Invalid template candidates were never applied. Keep their call
+                # receipts and try literal records against the unchanged anchors.
+                literal_targets = targets
+                spec_errors = []
+        for target in literal_targets:
+            collection = target["collection"]
+            if app_id == "google_docs_mock" and collection == "comments":
+                requests = new_comment_requests(
+                    state, target["missing_records"], target["first_date"], target["last_date"]
+                )
+                comments, batches = author_comment_threads(
+                    state,
+                    requests,
+                    models,
+                    work,
+                    reference_date=core.reference_date,
+                    concurrency=4,
+                    first_date=target["first_date"],
+                    last_date=target["last_date"],
+                )
+                state[collection] = merge_records(state[collection], comments)
+                extra_receipts.extend(r for b in batches for r in b["receipts"])
+                save_partial()
+                continue
+            body = app_payload(
+                {
+                    "world": world,
+                    "reference_date": core.reference_date,
+                    "operating_scope": core.operating_scope,
+                    "population_plan": [target],
+                },
+                app,
+                {w: d[app_id] for w, d in identities.items() if app_id in grants[w]},
+                grants,
+                payload["company"],
+                [],
+                collections=[collection],
+            )
+            extra_receipts.extend(
+                author_records(
+                    state,
+                    target,
+                    body,
+                    models=models,
+                    instructions=instructions,
+                    save_partial=save_partial,
+                )
+            )
         if app_id == "google_drive_mock":
             materialize_drive(folder, state)
         write(folder / "world" / f"{app_id}.state.json", state)
