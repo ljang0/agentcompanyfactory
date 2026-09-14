@@ -1,0 +1,233 @@
+{
+  "at": "2026-09-14T17:00:25.139937+00:00",
+  "status": "accepted",
+  "proof_key": "a17c74eecc4bcf6f844cde7d66a79849355ac3d444285bb6f094e39a000d5262",
+  "cases": [
+    {
+      "case": "noop",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "4c9845fdc7e0fe4879c20c0bf64c2f69075474ba22ad1f6fa12432819e4b7d9a"
+    },
+    {
+      "case": "noop",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "5ccb9171d03c0c893fce0ef9129725efb5a58147553e116378b95c19ceaba9e8"
+    },
+    {
+      "case": "reference",
+      "evidence_mode": "expanded",
+      "expected": "pass",
+      "observed": "pass",
+      "ok": true,
+      "report_hash": "aee258221f37f9a9827e78d2a2ebfac86a54f11ac31230c8d9b336d6209b4a60"
+    },
+    {
+      "case": "reference",
+      "evidence_mode": "encoded",
+      "expected": "pass",
+      "observed": "pass",
+      "ok": true,
+      "report_hash": "01492acbd24f635e36451a5cb0a64ba58490341b6cf8dd449a7f2ff8e6a38c9d"
+    },
+    {
+      "case": "alternative",
+      "evidence_mode": "expanded",
+      "expected": "pass",
+      "observed": "pass",
+      "ok": true,
+      "report_hash": "8aa2e89e1aa80361c71a306cfed9db9e24b282115d5e88ce62abaa2a0083518e"
+    },
+    {
+      "case": "alternative",
+      "evidence_mode": "encoded",
+      "expected": "pass",
+      "observed": "pass",
+      "ok": true,
+      "report_hash": "ae671d47275e279b375463ef60dfa299a0bbc6998927ac4933c3a387624646bc"
+    },
+    {
+      "case": "forged_claim",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "0ec139ef53a9a3b876a01cd47def1978e9527684f2f853af9b1f2ddaedd27475"
+    },
+    {
+      "case": "forged_claim",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "103f46dfd0de8dfd3cf97b99c40838a01bdbfcbdb03e060e3209ea34f460c0af"
+    },
+    {
+      "case": "irrelevant_contribution",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "b2f22322a68082e71bb279903f398255133d04faae3b745c34e4e9d39bf4e600"
+    },
+    {
+      "case": "irrelevant_contribution",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "dd25a9b501d1f9e6fee7135a114378956e3bc745fb77178531bab4b900cfa936"
+    },
+    {
+      "case": "missing_authority",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "ce005c9fab2bdb71bc2e7bd815211f58c4b66e5a48d99924d69c221d4d003484"
+    },
+    {
+      "case": "missing_authority",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "02e097a114ae5cde82c2b53d0ba5f94bc07a34f3d1f029ccd8160f98cc8b75ba"
+    },
+    {
+      "case": "missing_evidence",
+      "evidence_mode": "expanded",
+      "expected": "unavailable",
+      "observed": "unavailable",
+      "ok": true,
+      "error": "Final evidence must contain every app snapshot"
+    },
+    {
+      "case": "missing_evidence",
+      "evidence_mode": "encoded",
+      "expected": "unavailable",
+      "observed": "unavailable",
+      "ok": true,
+      "error": "Final evidence must contain every app snapshot"
+    },
+    {
+      "case": "partial",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "d02d8846730639c7b20139e46227e31242bdae4a456e6f646dbe9f3cc6dabc8c"
+    },
+    {
+      "case": "partial",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "f3db26266263c842f3d643eb53bc4796cb2217c20125a830452ec9a9f2e06013"
+    },
+    {
+      "case": "wrong_record",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "72d0ecd1889f82e7ed99c74f1ac9497ee7af69c683f897013324f970de6d4c6d"
+    },
+    {
+      "case": "wrong_record",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "2984e577abc45d3dffcf6962c944ee293a007c552d16bd1c95e1fbebb4720fb0"
+    },
+    {
+      "case": "wrong_total",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "20189d9faf931194f7a6241ede582e9bbf9f7697b0eb5abc71a3ec56c960fcfc"
+    },
+    {
+      "case": "wrong_total",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "a196d2a9d843a989a6eb4624c60b7ca095cfe04f3c023993c81ba6b5f2180098"
+    }
+  ],
+  "reference_hash": "3d7a3e72a3da27c067b738d7747eceab61753bb155989429f431d4fe2c1c49d9",
+  "golden_hash": "a7a6a8066efac85a05e96de0c12b16bb1915b349b713378989cf065ef1471960",
+  "fixtures_hash": "43cfb5d514264cbaefdccb975e7104303cd441898397b55605d447a9cc7ed6e5",
+  "failure_targets": {
+    "alternative": {
+      "kind": "alternative",
+      "criteria": [],
+      "workers": [],
+      "reason": "The bounded investigation is an accepted alternative; coordinated records preserve corrections, open questions and commitment limits."
+    },
+    "forged_claim": {
+      "kind": "forged_claim",
+      "criteria": [],
+      "workers": [
+        "w-backend"
+      ],
+      "reason": "Complete artifacts and Mara's claimed sign-off cannot replace trusted evidence of the backend worker's required technical contribution and consumption of scope direction."
+    },
+    "irrelevant_contribution": {
+      "kind": "irrelevant_contribution",
+      "criteria": [],
+      "workers": [
+        "w-backend"
+      ],
+      "reason": "An unrelated supplies email does not establish the required backend assessment or use of Mara's scope boundary."
+    },
+    "missing_authority": {
+      "kind": "missing_authority",
+      "criteria": [],
+      "workers": [
+        "w-product-lead"
+      ],
+      "reason": "Removing trusted product-lead events leaves no evidence that Mara supplied the required scope direction and commitment limits for specialists to consume."
+    },
+    "missing_evidence": {
+      "kind": "missing_evidence",
+      "criteria": [],
+      "workers": [],
+      "reason": "The empty final snapshot prevents inspection of delivered app state; this is an evidence gap."
+    },
+    "partial": {
+      "kind": "partial",
+      "criteria": [
+        3
+      ],
+      "workers": [],
+      "reason": "Jira RD-201 retains the seeded interpretation while GitHub is corrected, violating consistent corrected scope and open questions across both systems."
+    },
+    "wrong_record": {
+      "kind": "wrong_record",
+      "criteria": [
+        3
+      ],
+      "workers": [],
+      "reason": "Transposed Jira descriptions attach corrections to the wrong work identities and contradict their matching GitHub records."
+    },
+    "wrong_total": {
+      "kind": "wrong_total",
+      "criteria": [
+        1
+      ],
+      "workers": [],
+      "reason": "Counting repeated Alder contacts as independent confirmations violates the requirement to preserve their continuing-case relationship and inflates the research evidence."
+    }
+  },
+  "scope": "isolated mechanics and semantic calibration in expanded and losslessly encoded evidence modes; no real-team necessity proof"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "doc-july-research",
+  "title": "Summer request workflow observations",
+  "content": "<p>Summer request workflow observations — corrected interpretation</p><p></p><p>Imani Reed, September 1, 2026. Prepared under Mara's delegation in relaydesk-delivery. This corrects the earlier generalization that both information-finding accounts concern the next reviewer. Source correspondence spans July 21 through the September 1 snapshot; no new interview or reply is claimed.</p><p></p><p>Observation A: a person could see that a request was waiting but asked others who held it. The August 4 follow-up explicitly concerns the same request as July 21 and adds that the reviewer was eventually found in the activity list. These are two contacts about one continuing case, not two independent confirmations. Where the person first looked and what remained unclear after finding the reviewer are still unanswered.</p><p></p><p>Observation B: a separate, secondhand account concerns finding an approval in history and repeatedly opening the form. It does not establish uncertainty about the next reviewer. The August 10 clarification asks whether opening again meant reading or trying to change and submit; no answer is supplied. This cannot establish an attempt or a right to reopen a declined request.</p><p></p><p>Separate request: Cedar Reach requested automatic assignment of warehouse requests to a different reviewer and reported changing the reviewer manually. Attribution of the original request is permitted, but follow-up questions remain open: how staff choose the reviewer, who would maintain routing, and what should happen with no designated reviewer. Manual override and its interaction with subsequent routing also need clarification. This is demand for routing behavior, not evidence that routing caused observations A or B.</p><p></p><p>Interpretation and proposed next work: investigate how existing review information can be found from request detail without confusing decision result with assignment. A visibility refinement may help; its effectiveness has not been tested. Keep automatic routing in RD-205 and reopening rights in RD-207 separate from RD-201. Theo must assess whether existing fields support each example before names or state labels are specified.</p><p></p><p>Follow-up questions for a later investigation: where did the person look before history; could they identify the relevant review information; what happened to the work while they searched; did the second account involve reading or editing? Complete that investigation with a permitted account of the actual sequence and remaining uncertainty, not an assumed customer response.</p><p></p><p>Sharing follows Customer research permissions (doc-consent), effective April 24. Restricted observations are paraphrased without personal names, organization names, distinctive roles or quotations. Participant notes and the source crosswalk remain with Imani. Internal note permission does not grant attributed quotation permission. Contact Imani Reed with the document link and quote location for quotation-removal requests. No prevalence or measured workflow reach follows from these contacts.</p>",
+  "ownerId": "p-imani",
+  "starred": false,
+  "created": "2026-07-24T14:00:00-04:00",
+  "updated": "2026-09-01T00:38:31.407Z",
+  "sharedWith": [
+    {
+      "userId": "p-mara",
+      "permission": "editor"
+    },
+    {
+      "userId": "p-imani",
+      "permission": "editor"
+    },
+    {
+      "userId": "p-theo",
+      "permission": "editor"
+    },
+    {
+      "userId": "p-june",
+      "permission": "editor"
+    }
+  ],
+  "linkSharing": {
+    "enabled": false,
+    "permission": "viewer"
+  }
+}

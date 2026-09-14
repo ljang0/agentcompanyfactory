@@ -1,0 +1,6 @@
+{
+  "workflow_id": "thoughtbot_o-release-readiness",
+  "company_id": "thoughtbot",
+  "title": "Decide which Relaydesk changes can move toward release",
+  "brief": "Brindle Works needs a clear release recommendation for Relaydesk’s return filters, request-state proposal and attachment index. Prepare it by September 3, 2026, explaining whether each change can advance and whether a smaller release makes sense. Compare the code, recorded checks and complete customer journeys, and explain any conditions that remain open. Update the linked Jira work and GitHub review comments with the remaining work, responsible people and checks needed. Account for maintenance, support and leave, and identify work that still needs sizing before anyone promises dates. Finish with a written recommendation and a draft client update; Elise decides business scope and Nolan authorizes deployment."
+}

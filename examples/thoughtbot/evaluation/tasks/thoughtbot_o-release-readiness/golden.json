@@ -1,0 +1,627 @@
+[
+  {
+    "worker_id": "w-product-lead",
+    "app_id": "slack_mock",
+    "action": "set_current",
+    "state_patch": {
+      "messages": {
+        "ch-engineering": {
+          "$append": [
+            {
+              "messageId": "msg-rr-delegation",
+              "senderId": "p-mara",
+              "content": "Release recommendation assignment, due September 3: Imani, define complete return-filter and empty-result journeys and the customer distinction between waiting and unassigned requests. Theo, assess #88 against the current serializer and Nolan's compatibility questions, and #89 against its migration and retained query samples; specify recovery and operational conditions. June, compare the current browser consumer and #87 source with the actual revisions covered by recorded checks; turn Imani's requirements into a browser verification plan. Put findings on the linked Jira work and cross-review each other's conclusions before I select the internal scope. Then apply that scope to final Jira requirements and GitHub review comments. I will compare smaller combinations, reconcile RD-211 and prepare the recommendation and client draft. Preserve RD-212's September 18 maintenance deadline and support allowance; June is away September 4, Imani has a two-hour September 3 panel, and the studio closes September 7. Remaining capacity is unconfirmed. This assignment is review and planning, with no new test execution, implementation completion, client acceptance or deployment implied. Elise decides scope; Nolan authorizes and schedules deployment.",
+              "timestamp": "2026-09-01T09:10:00-04:00",
+              "threadId": null,
+              "reactions": [],
+              "attachments": [],
+              "isEdited": false
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "worker_id": "w-designer",
+    "app_id": "jira_mock",
+    "action": "set_current",
+    "state_patch": {
+      "comments": [
+        {
+          "id": "c-rr-design-return",
+          "issueId": "RD-202",
+          "userId": "p-imani",
+          "content": "Design assessment for Mara's release review: retaining a query is only part of the journey. Starting in an account's filtered list, open a request, activate the return link by keyboard, recognize the restored filters and destination, and continue working. Include a return where the filter now has zero matches: explain that the filter has no results and provide a discoverable, keyboard-reachable route to all requests without changing accounts. Review the generic 'Back to requests' label against the filtered destination. June should record the return focus destination and visible focus, final result announcement, recovery after a load failure, 200 percent zoom and narrow-screen behavior. Closing a filter panel already has its own focus behavior under RD-121; that does not establish focus after leaving request detail. PR #87 at b461efad1028493ca0e715f985c3246e09ad7732 still needs these observations. These are acceptance requirements, not completed browser checks. RD-210 is related empty-queue work; determine whether a minimal recovery action is already present or needs sizing before expanding scope.",
+          "createdAt": "2026-09-01T10:00:00-04:00"
+        },
+        {
+          "id": "c-rr-design-state",
+          "issueId": "RD-203",
+          "userId": "p-imani",
+          "content": "Design objection to the #88 proposal: 'pending' alone cannot tell a person whether a reviewer is assigned or someone must arrange ownership. Preserve an understandable distinction between waiting for review and unassigned imported requests; do not imply that someone is acting when no reviewer is identified. Show the request detail, list and activity context together when reviewing proposed labels and next actions. Reviewer identity alone also does not establish availability. Theo and June should bring explicit response and display examples for neither flag with and without a reviewer, conflicting flags, and an unavailable reviewer. The sketch is additive and keeps existing fields; this is a proposal review, not an implemented contract change. Keep the customer need to find the next reviewer separate from automatic department routing in RD-205. I recommend withholding implementation commitment until these meanings and compatible recovery behavior are agreed.",
+          "createdAt": "2026-09-01T10:05:00-04:00"
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "w-backend",
+    "app_id": "jira_mock",
+    "action": "set_current",
+    "state_patch": {
+      "comments": [
+        {
+          "id": "c-rr-backend-state",
+          "issueId": "RD-203",
+          "userId": "p-theo",
+          "content": "Server assessment responding to Mara's delegation and Imani's c-rr-design-state: main's RequestSerializer exposes approved, rejected and reviewer_id, with stable request and account identifiers. Draft #88 at 23e184c7b865af119a52d46e3900fa726d81bc55 proposes adding state alongside those fields; it does not remove them or implement a migration. In the proposed mapping, approved=true gives approved; otherwise rejected=true gives declined; otherwise pending. Both false with a reviewer and both false without a reviewer therefore collapse to pending, although their required next actions differ. Imani's distinction must become an explicit response/display matrix reviewed with June and Nolan. Conflicting true flags need an agreed rule and data investigation; the current browser's precedence is not business approval of that rule. A reviewer identifier does not prove that reviewer is available. Inventory actual consumers and their field assumptions, agree precedence and fallback for absent or unknown state, and preserve the old fields while mixed consumers coexist. Compare derived projection versus stored state: the latter requires sizing backfill, consistency, transition and recovery work; no storage choice is agreed. Preserve account ownership, identifiers and error code/message behavior. Propose an additive transition with old-consumer support, verify coexistence before switching readers, and define how readers return to legacy fields if the transition fails. Field removal requires a separate agreed compatibility exit. Nolan's requested transition and recovery review remains open; this analysis supplies questions and conditions, not an approved contract.",
+          "createdAt": "2026-09-01T10:45:00-04:00"
+        },
+        {
+          "id": "c-rr-backend-index",
+          "issueId": "RD-206",
+          "userId": "p-theo",
+          "content": "Index assessment: PR #89, attachment-request-index at 64a2185cd772fb93a0d614ecc93984b5f108de27, adds index_attachments_on_request_id on attachments.request_id with algorithm :concurrently and disable_ddl_transaction!. This is a lookup index, not a request-state change, and the supplied source establishes no dependency on #88 or #87. The August 28 retained artifact-query-report uses a restored August dataset: each of three samples has 18,000 requests and 61,000 attachments, with 184/19, 176/21 and 192/20 ms before/after. Means are 184 and 20 ms. These samples support a query benefit on that dataset; they do not measure production workload, migration duration, locking or full attachment correctness. The CSV does not record an execution timestamp or environment details sufficient for a new execution claim. Concurrent construction avoids a normal transactional index build but still needs review of locks, concurrent writes, resource use, failure states and recovery. Before readiness, I must propose a representative rehearsal and operational plan for Nolan: check duplicate/existing or invalid index states, interruption and safe retry, inspect validity and query use, and specify monitored stop conditions plus a reviewed removal/recovery procedure. Do not infer a safe rollback from the Rails change method. Preserve account-scoped attachment access and RD-114's exclusion of deleted rows from counts. June should check list/open/download/remove/reload/count behavior on the candidate revision. July's 43-minute database restore and matching ownership/activity samples in doc-restore do not establish fuller attachment consistency; RD-278 remains open. No migration or new checks have run.",
+          "createdAt": "2026-09-01T10:55:00-04:00"
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "w-frontend",
+    "app_id": "jira_mock",
+    "action": "set_current",
+    "state_patch": {
+      "comments": [
+        {
+          "id": "c-rr-frontend-return",
+          "issueId": "RD-202",
+          "userId": "p-june",
+          "content": "Browser assessment incorporating Imani's c-rr-design-return: web/RequestReturnLink.tsx at b461efad1028493ca0e715f985c3246e09ad7732 builds /requests plus the captured saved-view query, accepts a leading question mark, and uses /requests for an empty query. The anchor remains labelled 'Back to requests'. Source inspection supports that target construction only; the extract does not demonstrate focus restoration, loading/error handling, result announcements or an empty-list recovery action. Required fresh checks: filtered list to detail to keyboard return with populated results; the same return with zero matches and a usable route to all requests; no-query return; preserved account context and saved sort; failed load and retry; focus position and visible focus; one useful final result announcement without duplicate speech. Record browser version, branch, revision, execution date, steps and outcomes under doc-browser, including current and previous major desktop Chrome, Edge and Firefox, Safari 17 or later, relevant narrow-screen journeys and 200 percent zoom. artifact-aug-tests ran August 28 at 16:10 -04:00 on main 8d72a6f934cd90a287b154c6be9a102f683dd421: 428 server examples, zero failures, two pending; 96 browser checks passed, one skipped. It covers empty-export headers, completed jobs and download access, plus lower-viewport menu positioning. The pending cases concern webhook signing-key overlap; the skip concerns mobile Safari native file selection. None is evidence of #87's later August 31 revision passing the return journey. No fresh execution is available.",
+          "createdAt": "2026-09-01T11:35:00-04:00"
+        },
+        {
+          "id": "c-rr-frontend-state",
+          "issueId": "RD-203",
+          "userId": "p-june",
+          "content": "Consumer comparison for Theo's c-rr-backend-state and Imani's c-rr-design-state: main web/requestDecisionLabel.ts tests approved first, then rejected, then reviewer_id. Thus true/false displays Approved; false/true displays Declined; false/false with a reviewer displays Waiting for review; false/false without one displays Unassigned; true/true currently displays Approved because of ordering. Draft #88 would supply approved, declined or pending in addition to the old fields. An unchanged old consumer can keep using those fields if their behavior is preserved, but a new consumer that displays only pending loses the waiting/unassigned distinction. No implementation or compatibility test demonstrates mixed-consumer safety. Theo's proposed transition needs a matrix pairing old responses/displays with proposed new responses/displays, including missing or unknown state, imported requests, conflict handling and reviewer unavailability. Do not invent availability from a non-null identifier. Prefer retaining the existing browser interpretation during exploration; choose any new behavior with design and contract review before sizing the browser transition. The August main report does not execute this draft proposal or validate its meanings.",
+          "createdAt": "2026-09-01T11:40:00-04:00"
+        },
+        {
+          "id": "c-rr-frontend-index",
+          "issueId": "RD-206",
+          "userId": "p-june",
+          "content": "Browser follow-up to Theo's c-rr-backend-index: the 184-to-20 ms sample mean is a database lookup result, not time to a usable attachment or proof of correct counts. On the eventual #89 candidate revision, check opening an account-owned request, loading and opening/downloading an authorized attachment, removing a file, then reloading and comparing the visible list and count with deleted rows excluded. Include removal of the last file, denied access, failed load and recovery. Preserve readable filenames, empty-state upload guidance and inline upload retry behavior. Record focus and announcements with Imani, keeping the already recorded RD-208 focus-loss observation distinct from the unverified #89 count/removal journey. No evidence attributes that focus issue to the index. Fuller restoration consistency and opening restored attachments remain separate open work under RD-278 and doc-restore. These requirements make index-only preparation coherent without claiming that its complete customer journey has passed.",
+          "createdAt": "2026-09-01T11:45:00-04:00"
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "w-designer",
+    "app_id": "jira_mock",
+    "action": "set_current",
+    "state_patch": {
+      "comments": [
+        {
+          "id": "c-rr-design-crossreview",
+          "issueId": "RD-206",
+          "userId": "p-imani",
+          "content": "Cross-review of June's c-rr-frontend-return, c-rr-frontend-state and c-rr-frontend-index with Theo's c-rr-backend-state and c-rr-backend-index: I support retaining the waiting/unassigned distinction rather than displaying a bare pending value; June's true/true precedence describes current code but cannot settle the intended customer meaning. Theo's ownership and deleted-row invariants make the index journey include permission failures and list/count agreement, not just faster opening. For attachment removal, my proposed acceptance is that the person can identify the removed file and continue from a useful control: a remaining attachment action when files remain, or the upload action when the last file is removed. June must first record existing speech before adding announcements, to avoid duplication. A failed load must not be presented as 'No supporting files'. RD-208 needs its own design and browser follow-up and must remain visible when considering a release that includes the attachment area; this is not evidence that #89 caused it. For #87, June's source limitation means we still need an observed empty-result recovery and return focus sequence. These are review proposals and reconsideration conditions, not passed interaction checks. Mara can consider the index independently, but neither its timings nor the old main report closes these journeys.",
+          "createdAt": "2026-09-01T12:15:00-04:00"
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "w-product-lead",
+    "app_id": "jira_mock",
+    "action": "set_current",
+    "state_patch": {
+      "issues": [
+        {
+          "id": "RD-211",
+          "key": "RD-211",
+          "projectId": "project-relaydesk",
+          "summary": "Reconcile September maintenance capacity",
+          "description": "Account for the dependency update, support rotation and approved leave in the first September cycle.\n\nSeptember 2 internal release scope: hold unconditional release readiness for RD-202/#87, RD-203/#88 and RD-206/#89. Preserve RD-212 maintenance preparation and support first. Treat the index alone as the preferred independent preparation option, subject to sizing, representative operational verification and Nolan's review; this is not a release commitment. Keep return-filter journey clarification and sizing visible; defer request-state implementation and consumer migration commitment while contract exploration remains open.\n\nMara's decision consumes Imani's empty-result and distinguishable waiting/unassigned requirements, June's main-only evidence and consumer mapping, and Theo's compatibility and concurrent-index recovery gaps. An index-only option avoids waiting for an unrelated contract redesign but delays improved return navigation and clearer request meaning. Return filters alone could be reconsidered after complete journey checks; combining filters and index requires both sets of conditions and integration checks. Adding the state proposal now introduces unresolved semantics and transition work.\n\nCapacity boundaries: June has approved leave September 4; Imani has a two-hour hiring panel September 3; studio closure September 7; Theo's dependency review and support allowance remain protected. RD-212's maintenance window closes September 18, with retry behavior and retained job arguments still requiring checks. No numeric remaining allowance is established. Existing story points are not available hours or an updated estimate for the newly identified work.\n\nBefore promising dates, Theo sizes index rehearsal/recovery, dependency checks and contract options; June sizes branch browser coverage and possible return/removal corrections; Imani sizes design review around the panel. Mara reconciles their estimates and coverage, including urgent replies during June's leave, and takes any scope displacement to Elise. September 3 is the recommendation deadline, not an implementation or deployment date. Elise approves business scope; Nolan authorizes infrastructure changes and deployment scheduling. Keep this capacity reconciliation In Progress until its open estimates and coverage questions are resolved.",
+          "type": "Task",
+          "status": "In Progress",
+          "priority": "High",
+          "storyPoints": 1,
+          "reporterId": "p-mara",
+          "assigneeId": "p-mara",
+          "sprintId": "sprint-sep-a",
+          "epicId": null,
+          "labels": [
+            "area-platform"
+          ],
+          "subtasks": [],
+          "linkedIssueIds": [
+            "RD-202",
+            "RD-203",
+            "RD-206",
+            "RD-212"
+          ],
+          "createdAt": "2026-08-27T09:00:00-04:00",
+          "updatedAt": "2026-09-02T09:15:00-04:00"
+        }
+      ],
+      "comments": [
+        {
+          "id": "c-rr-manager-scope",
+          "issueId": "RD-211",
+          "userId": "p-mara",
+          "content": "Final internal recommendation for specialists to apply: hold unconditional readiness for all three. Prefer sizing and preparing #89 independently after maintenance/support reservations; no migration execution or delivery date is promised. Imani's c-rr-design-crossreview prevents us equating query preservation or timing with usable journeys. June's c-rr-frontend-return and c-rr-frontend-state show why the main report and bare pending value cannot clear the candidates. Theo's c-rr-backend-index and c-rr-backend-state make operational recovery and mixed-consumer behavior explicit gates. Imani: apply this scope to immediate attachment acceptance preparation and deferred state/return design conditions. Theo: carry June's actual label precedence and Imani's ownership distinction into #88; make #89's preparation and recovery requirements concrete without advancing its status. June: translate their conditions into branch-specific #87 and attachment checks, with a written handoff before September 4. Keep all existing engineering statuses open, record remaining sizing and retain the September 18 dependency obligation. I will write the recommendation and draft to Elise and Nolan after these final instructions are recorded.",
+          "createdAt": "2026-09-02T09:15:00-04:00"
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "w-product-lead",
+    "app_id": "slack_mock",
+    "action": "set_current",
+    "state_patch": {
+      "messages": {
+        "ch-engineering": {
+          "$append": [
+            {
+              "messageId": "msg-rr-scope-decision",
+              "senderId": "p-mara",
+              "content": "Scope settled in RD-211 / c-rr-manager-scope: hold unconditional release readiness for all candidates. Imani's whole-journey requirements, June's evidence that main checks do not cover the newer return branch and that pending erases a useful distinction, and Theo's unresolved migration/consumer recovery questions rule out clearing the bundle. Index-only preparation is the preferred smaller option because its query benefit is grounded and no dependency on the state proposal or return link is shown. It still needs sizing, operational review and attachment journey verification; return-filter improvement and clearer request-state meaning would wait. A filter-only option remains possible after its own checks, and filters plus index require both sets plus integration coverage. State implementation stays deferred. Apply these boundaries in final Jira and PR comments. Preserve maintenance, support and leave in estimates; no repair dates, client acceptance or deployment authorization have been granted.",
+              "timestamp": "2026-09-02T09:20:00-04:00",
+              "threadId": null,
+              "reactions": [],
+              "attachments": [],
+              "isEdited": false
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "worker_id": "w-designer",
+    "app_id": "jira_mock",
+    "action": "set_current",
+    "state_patch": {
+      "comments": [
+        {
+          "id": "c-rr-design-final-return",
+          "issueId": "RD-202",
+          "userId": "p-imani",
+          "content": "Applying Mara's c-rr-manager-scope: #87 remains held for release, with journey clarification and sizing available for reconsideration. June owns observation of filtered list -> detail -> keyboard return -> populated or empty results -> a usable next action on b461efad1028493ca0e715f985c3246e09ad7732. I will review destination wording, focus, announcements and the route to all requests using her recorded version/revision evidence. The supplied anchor does not establish these outcomes. If the empty-result recovery requires RD-210 work, size the minimal change and bring the scope choice to Mara before extending the commitment. Allow for my September 3 two-hour panel and June's September 4 leave. No design requirement here is a claim of completed browser verification.",
+          "createdAt": "2026-09-02T10:00:00-04:00"
+        },
+        {
+          "id": "c-rr-design-final-state",
+          "issueId": "RD-203",
+          "userId": "p-imani",
+          "content": "Applying the deferred-implementation scope: my immediate output is the semantic review requirement, not a new state design commitment. June's current Approved/Declined/Waiting for review/Unassigned mapping and Theo's additive transition assessment must remain paired in the contract examples. A new consumer must distinguish an assigned undecided request from an unassigned imported request and avoid implying reviewer availability. Theo and June must propose conflict and unknown-state handling before I review labels and next actions across list, detail and activity. Mara takes any resulting scope choice to Elise; Nolan reviews transition/recovery. The draft stays open, and implementation and browser-transition estimates wait for those choices.",
+          "createdAt": "2026-09-02T10:05:00-04:00"
+        },
+        {
+          "id": "c-rr-design-final-index",
+          "issueId": "RD-206",
+          "userId": "p-imani",
+          "content": "Applying index-only preparation as Mara's preferred smaller option: use Theo's account ownership/deleted-row invariants and June's c-rr-frontend-index sequence for the acceptance checklist. After successful removal, the list and count must agree, the removed filename must be understandable, and the person must continue from a useful control. For last-file removal, distinguish a genuinely empty list with upload guidance from a failed load with recovery. June should capture existing announcements before proposing speech changes and record focus with files remaining and with none. These requirements and RD-208's existing focus issue remain open; neither timings nor the index source demonstrates them. I will review recorded outcomes when available. Broader request-state and layout changes are outside this immediate preparation option. Size any corrective design or browser work before committing it.",
+          "createdAt": "2026-09-02T10:10:00-04:00"
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "w-backend",
+    "app_id": "github_mock",
+    "action": "set_current",
+    "state_patch": {
+      "pullRequests": [
+        {
+          "id": "pr-state-contract",
+          "repoId": "repo-relaydesk",
+          "number": 88,
+          "title": "Add a request-state field to the response contract",
+          "description": "Working contract sketch in docs/request-state-proposal.md on request-state-contract. We still need agreement on imported undecided requests, reviewer availability and the transition between old and new consumers. The current contract uses approved and rejected booleans with a nullable reviewer identifier; imported requests can have neither flag set. The main-branch serializer and browser-label extracts are available for comparison. Linked work: RD-203.",
+          "baseBranch": "main",
+          "compareBranch": "request-state-contract",
+          "status": "open",
+          "isDraft": true,
+          "authorId": "p-theo",
+          "assignees": [
+            "p-theo"
+          ],
+          "labels": [],
+          "milestone": "sprint-sep-a",
+          "mergeStrategy": "merge",
+          "mergedAt": null,
+          "mergedBy": null,
+          "createdAt": "2026-08-27T13:00:00-04:00",
+          "closedAt": null,
+          "reviewers": [
+            {
+              "userId": "p-june",
+              "status": "pending",
+              "date": null,
+              "body": ""
+            },
+            {
+              "userId": "p-nolan",
+              "status": "pending",
+              "date": null,
+              "body": ""
+            }
+          ],
+          "comments": [
+            {
+              "id": "pr88-rr-review",
+              "authorId": "p-theo",
+              "content": "Release review, September 2: hold readiness and defer implementation under Mara's RD-211 scope. Inspected docs/request-state-proposal.md on request-state-contract at 23e184c7b865af119a52d46e3900fa726d81bc55 against main's serializer and browser extract at 8d72a6f934cd90a287b154c6be9a102f683dd421. This is an additive sketch: state would accompany approved, rejected and reviewer_id. Existing fields have not been removed and no implementation, storage choice or migration is established.\n\nJune's c-rr-frontend-state shows the current consumer: approved first -> Approved, rejected next -> Declined, otherwise reviewer_id selects Waiting for review versus Unassigned. Both true currently displays Approved; that is code precedence, not an agreed conflict policy. Imani's c-rr-design-final-state requires distinguishable waiting/unassigned meanings and useful next actions. The draft's pending groups both undecided cases; an old consumer could retain its distinction if legacy field behavior survives, while a new state-only consumer would lose it. Reviewer identity does not prove availability.\n\nRemaining work, owned by Theo with June's consumer review and Imani's interaction review: document old/new response and display examples for imported undecided requests with and without reviewers, unavailable reviewers, conflicting flags, and missing/unknown state; preserve stable request/account identifiers and error behavior. Inventory consumers and their legacy assumptions. Propose coexistence, precedence, fallback and compatibility exit criteria before considering field removal. Compare derived projection with stored state; size any backfill, consistency and recovery work if storage is chosen. Propose an additive rollout retaining old fields, compatibility checks before switching readers, and a reader fallback/recovery plan. These are options for Nolan's review, not accepted infrastructure changes.\n\nartifact-aug-tests executed August 28 at 16:10 -04:00 on main 8d72a6f934cd90a287b154c6be9a102f683dd421, with 428 server examples/0 failures/2 pending and 96 browser passes/1 skip. Its stated empty-export and menu coverage does not validate this draft's semantics or mixed-consumer behavior. Pending webhook signing-key overlap and skipped mobile Safari file selection remain recorded. No new execution is claimed. Keep this PR draft and RD-203 In Progress for exploration. Size implementation only after contract choices; preserve maintenance/support capacity. Elise decides business scope and Nolan reviews transition/recovery before any deployment scheduling.",
+              "date": "2026-09-02T10:45:00-04:00",
+              "reactions": {}
+            }
+          ],
+          "checks": []
+        },
+        {
+          "id": "pr-attachment-index",
+          "repoId": "repo-relaydesk",
+          "number": 89,
+          "title": "Index attachment lookups by request",
+          "description": "Add the attachment request lookup index. Review db/migrate/20260828155000_add_request_lookup_index.rb on attachment-request-index alongside the August query report in reports/64a2185cd772fb93a0d614ecc93984b5f108de27/attachment-lookup-timings.csv. The report uses a restored August dataset with 18,000 request rows and 61,000 attachment rows in each sample. Before/after timings in milliseconds are query-a 184/19, query-b 176/21 and query-c 192/20. June and Nolan, please review the migration and operational impact. Linked work: RD-206.",
+          "baseBranch": "main",
+          "compareBranch": "attachment-request-index",
+          "status": "open",
+          "isDraft": false,
+          "authorId": "p-theo",
+          "assignees": [
+            "p-theo"
+          ],
+          "labels": [],
+          "milestone": "sprint-sep-a",
+          "mergeStrategy": "merge",
+          "mergedAt": null,
+          "mergedBy": null,
+          "createdAt": "2026-08-25T14:00:00-04:00",
+          "closedAt": null,
+          "reviewers": [
+            {
+              "userId": "p-june",
+              "status": "pending",
+              "date": null,
+              "body": ""
+            },
+            {
+              "userId": "p-nolan",
+              "status": "pending",
+              "date": null,
+              "body": ""
+            }
+          ],
+          "comments": [
+            {
+              "id": "pr89-rr-review",
+              "authorId": "p-theo",
+              "content": "Release review, September 2: unconditional readiness remains held. Applying Mara's RD-211 decision, this is the preferred independent preparation option after sizing and maintenance/support reservations; it is not approved for migration or deployment. No dependency on #87 or #88 is established by the supplied index source.\n\nInspected db/migrate/20260828155000_add_request_lookup_index.rb on attachment-request-index at 64a2185cd772fb93a0d614ecc93984b5f108de27: disable_ddl_transaction! and add_index on attachments.request_id named index_attachments_on_request_id using algorithm :concurrently. Concurrent creation still requires assessment of locking, concurrent writes, resource use and failure recovery. A reversible-looking Rails change method does not establish an operationally safe rollback.\n\nThe August 28 retained artifact-query-report for this branch/revision has three restored-August-dataset samples, each 18,000 requests and 61,000 attachments: 184/19, 176/21 and 192/20 ms. Mean lookup time is 184 ms before and 20 ms after. This supports a measured lookup benefit on those samples only. The CSV lacks a precise execution timestamp and does not demonstrate migration safety, production performance, correctness after removal or complete user journeys. The separate main regression report executed August 28 at 16:10 -04:00 on 8d72a6f934cd90a287b154c6be9a102f683dd421; its 428 server examples with 0 failures/2 pending and 96 browser passes/1 skip do not clear this branch. Its stated coverage is empty-export headers/completed jobs/download access and lower-viewport menu positioning. Pending webhook overlap and skipped mobile Safari file selection remain historical limitations.\n\nTheo owns sizing and proposing a representative migration rehearsal: record dataset/environment/revision, inspect existing/duplicate/invalid indexes, measure build duration, locks and load under concurrent access, verify index validity and query use, and document interruption, retry, stop criteria and recovery/removal procedures for Nolan's review. Preserve account-scoped lookup and access plus exclusion of deleted rows from counts. Incorporating June's c-rr-frontend-index and Imani's c-rr-design-final-index, June owns request -> attachment list -> authorized open/download -> removal -> reload/list/count checks, including the last file, denied access, failed load, focus and announcements. Existing RD-208 focus loss remains separately open; it is not attributed to this index. Imani reviews whether empty, failed and removed states leave a clear next action.\n\nThe July 22 restore of the July 20 database in 43 minutes proved only its recorded sampled ownership/activity results. Fuller attachment consistency and opening restored files remain under RD-278/doc-restore; include unresolved recovery concerns in Nolan's assessment. All proposed checks are unexecuted. Keep RD-206 In Review and this PR open. Nolan must review operational conditions and authorize infrastructure changes and deployment; Elise decides the proposed smaller scope. Reconsider only with applicable reports, resolved blockers and confirmed capacity, not timings alone.",
+              "date": "2026-09-02T10:55:00-04:00",
+              "reactions": {}
+            }
+          ],
+          "checks": []
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "w-backend",
+    "app_id": "jira_mock",
+    "action": "set_current",
+    "state_patch": {
+      "issues": [
+        {
+          "id": "RD-203",
+          "key": "RD-203",
+          "projectId": "project-relaydesk",
+          "summary": "Add a request-state field to the response contract",
+          "description": "Explore a named state alongside the existing approved and rejected flags. Consumers and old imported requests need a documented contract before implementation is agreed.\n\nRelease disposition September 2: held for unconditional readiness; implementation and consumer migration commitment deferred under RD-211. Retain In Progress for contract exploration, with draft GitHub #88 at 23e184c7b865af119a52d46e3900fa726d81bc55. Existing storyPoints=5 is not a fresh estimate for unresolved transition work.\n\nTheo owns a response/consumer matrix reviewed by June and Imani: main's approved-first, rejected-second, then reviewer-based Waiting for review/Unassigned display; proposed additive state; imported undecided requests with and without reviewers; unavailable reviewers; both flags true; absent/unknown state. Imani requires distinct waiting/unassigned next actions; June confirms a state-only pending label loses this distinction. Preserve request/account identifiers, legacy fields and error behavior. No field removal or stored-state implementation is established.\n\nInventory consumers; agree mixed-consumer precedence, fallback, compatibility exit and recovery with June and Nolan. Compare derived versus stored state and size migration/backfill/consistency if needed. Propose additive rollout and return to legacy reader behavior on failure; no rollout is authorized. Only after meanings and storage choice are agreed can implementation and browser-transition estimates support a commitment.\n\nAcceptance for reconsideration: reviewed old/new response and display examples, explicit import/conflict/availability behavior, agreed transition/recovery plan, applicable server and browser compatibility evidence on the eventual implementation revision, and scope/capacity agreement. The historical main regression report does not validate this proposal. See #88 comment pr88-rr-review and RD-211. Elise owns business scope; Nolan owns infrastructure/deployment authorization. No fresh checks or approval are claimed.",
+          "type": "Task",
+          "status": "In Progress",
+          "priority": "Medium",
+          "storyPoints": 5,
+          "reporterId": "p-theo",
+          "assigneeId": "p-theo",
+          "sprintId": "sprint-sep-a",
+          "epicId": null,
+          "labels": [
+            "area-platform"
+          ],
+          "subtasks": [],
+          "linkedIssueIds": [
+            "RD-211"
+          ],
+          "createdAt": "2026-08-12T11:10:00-04:00",
+          "updatedAt": "2026-09-02T11:15:00-04:00"
+        },
+        {
+          "id": "RD-206",
+          "key": "RD-206",
+          "projectId": "project-relaydesk",
+          "summary": "Index attachment lookups by request",
+          "description": "The index change is in review. The retained query report covers a restored August dataset.\n\nRelease disposition September 2: hold unconditional readiness. Under Mara's RD-211 scope, index-only preparation is the preferred smaller option, subject to sizing after protected maintenance/support work. Keep In Review, assignee Theo, priority High. GitHub #89 remains open at attachment-request-index revision 64a2185cd772fb93a0d614ecc93984b5f108de27. No dependency on return filters or the proposed state field is established. Existing storyPoints=2 is not a complete estimate of rehearsal and recovery work.\n\nRetained samples: 18,000 requests and 61,000 attachments each; 184/19, 176/21, 192/20 ms; means 184 and 20 ms. This supports sampled query benefit only. The concurrent nontransactional index source does not prove safe operations or rollback. The separate August main regression report does not validate this branch.\n\nTheo: size and propose representative migration checks for Nolan, including existing/duplicate/invalid index detection, concurrent workload, build duration/locks/load, index validity/query use, interruption/retry, monitored stop criteria and reviewed removal/recovery. Preserve account ownership/access and deleted-row count exclusion. June: record candidate-specific request/list/open/download/removal/reload/count journeys, last-file removal, denied access and failed-load recovery. Imani: review useful next actions, empty-versus-failed wording, focus and announcements; inspect existing speech before adding more. RD-208 remains a separate open focus issue and RD-278 retains fuller restoration consistency work.\n\nReconsideration requires revision-bound operational and journey evidence, review of unresolved RD-208/recovery concerns, confirmed preparation capacity, Elise's scope decision and Nolan's infrastructure/deployment authorization. Stop and retain mismatches for review rather than declaring success or silently repairing evidence. No new execution, correction, approval or schedule has been recorded. See #89 comment pr89-rr-review.",
+          "type": "Task",
+          "status": "In Review",
+          "priority": "High",
+          "storyPoints": 2,
+          "reporterId": "p-theo",
+          "assigneeId": "p-theo",
+          "sprintId": "sprint-sep-a",
+          "epicId": null,
+          "labels": [
+            "area-platform"
+          ],
+          "subtasks": [],
+          "linkedIssueIds": [
+            "RD-211",
+            "RD-208",
+            "RD-278"
+          ],
+          "createdAt": "2026-08-17T09:15:00-04:00",
+          "updatedAt": "2026-09-02T11:20:00-04:00"
+        }
+      ],
+      "comments": [
+        {
+          "id": "c-rr-backend-final-state",
+          "issueId": "RD-203",
+          "userId": "p-theo",
+          "content": "Applied Mara's final scope in the issue and #88 comment pr88-rr-review. June's actual approved-first precedence and Imani's waiting/unassigned requirement now define the matrix to prepare; no state-only consumer transition is committed. The old fields remain available in the proposal. Derived/stored choice, consumer inventory, compatibility exit, import/conflict handling and reader recovery require agreement and sizing. RD-212 maintenance and support remain ahead of additional implementation allocation. Contract exploration stays In Progress; no dates are promised.",
+          "createdAt": "2026-09-02T11:15:00-04:00"
+        },
+        {
+          "id": "c-rr-backend-final-index",
+          "issueId": "RD-206",
+          "userId": "p-theo",
+          "content": "Applied index-only preparation boundaries from c-rr-manager-scope in this issue and #89 comment pr89-rr-review. June's removal/reload/count sequence and Imani's distinction between empty and failed states extend the acceptance conditions beyond the query result. I own operational sizing and Nolan's proposed review package; June owns browser evidence and Imani interaction review. Timing means remain 184/20 ms on the retained restored dataset, with no migration proof. RD-208 and RD-278 remain open and visible. No execution or deployment is authorized; existing In Review status and maintenance/support obligations are retained.",
+          "createdAt": "2026-09-02T11:20:00-04:00"
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "w-frontend",
+    "app_id": "github_mock",
+    "action": "set_current",
+    "state_patch": {
+      "pullRequests": [
+        {
+          "id": "pr-return-filters",
+          "repoId": "repo-relaydesk",
+          "number": 87,
+          "title": "Retain filters after opening a request",
+          "description": "Keep the saved-view query when returning from a request. The change is in web/RequestReturnLink.tsx on keep-return-filters. Please check keyboard navigation and the path back to an empty result list. Linked work: RD-202.",
+          "baseBranch": "main",
+          "compareBranch": "keep-return-filters",
+          "status": "open",
+          "isDraft": false,
+          "authorId": "p-june",
+          "assignees": [
+            "p-june"
+          ],
+          "labels": [],
+          "milestone": "sprint-sep-a",
+          "mergeStrategy": "merge",
+          "mergedAt": null,
+          "mergedBy": null,
+          "createdAt": "2026-08-26T14:00:00-04:00",
+          "closedAt": null,
+          "reviewers": [
+            {
+              "userId": "p-theo",
+              "status": "pending",
+              "date": null,
+              "body": ""
+            },
+            {
+              "userId": "p-imani",
+              "status": "pending",
+              "date": null,
+              "body": ""
+            }
+          ],
+          "comments": [
+            {
+              "id": "pr87-rr-review",
+              "authorId": "p-june",
+              "content": "Release review, September 2: apply Mara's RD-211 scope and hold unconditional readiness. Keep this PR open and RD-202 In Review. Index-only preparation is the preferred smaller option; #87 remains an independent navigation candidate with requirements and sizing for reconsideration, not a dated delivery commitment.\n\nSource inspected: web/RequestReturnLink.tsx, keep-return-filters at b461efad1028493ca0e715f985c3246e09ad7732, updated August 31 at 16:40 -04:00. It builds /requests plus savedViewQuery, preserves a leading question mark or adds one, and uses /requests for an empty query. It displays 'Back to requests'. This supports link-target construction, not evidence of return focus, result announcements, error recovery or a usable empty-result path.\n\nartifact-aug-tests records execution August 28 at 16:10 -04:00 on main 8d72a6f934cd90a287b154c6be9a102f683dd421: server 428 examples, 0 failures, 2 pending; browser 96 passed, 1 skipped. Covered behavior includes empty-export headers, completed job records and download access, plus menu positioning at the lower viewport boundary. Pending cases concern webhook signing-key overlap; the skipped case is mobile Safari native file selection. These are historical results for main, not fresh checks of this later branch.\n\nApplying Imani's c-rr-design-final-return, I own a check matrix for account-filtered list -> request detail -> keyboard return -> correctly restored results/filters and useful focus. Include populated results, zero matches with a reachable route to all requests, empty query, saved sort, recognizable destination wording, load failure and retry, visible focus and one useful final result announcement. Theo's ownership invariant from the server review means account context must survive both navigation and recovery; do not treat query preservation as access verification. Imani reviews wording, focus and next actions; Theo reviews query/account assumptions. Determine whether minimal empty-result recovery needs RD-210 work and size any change before extending scope.\n\nUse doc-browser: current and previous major desktop Chrome, Edge and Firefox, Safari 17 or later; relevant narrow-screen journeys, keyboard, 200 percent zoom and asynchronous announcements. Reports must record browser version, branch, revision, execution date and observed sequence/outcome. If the branch changes, retain this evidence, describe the delta and identify reruns against the new revision. None of these checks has been executed in this review.\n\nThe supplied anchor does not use the proposed state field, so #88 is not an established prerequisite. Any future combination with #89 needs both item gates and integration coverage. I will leave the written outstanding-check handoff before September 4 leave; Mara coordinates urgent replies and capacity around the September 7 closure. September 3 is the recommendation deadline. No merge, release approval or repair date is implied.",
+              "date": "2026-09-02T12:00:00-04:00",
+              "reactions": {}
+            }
+          ],
+          "checks": []
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "w-frontend",
+    "app_id": "jira_mock",
+    "action": "set_current",
+    "state_patch": {
+      "issues": [
+        {
+          "id": "RD-202",
+          "key": "RD-202",
+          "projectId": "project-relaydesk",
+          "summary": "Retain filters after opening a request",
+          "description": "The saved-view branch keeps filters in the return link. Review is open on keyboard navigation and the empty-result path.\n\nRelease disposition September 2: hold unconditional readiness, retain In Review with June as owner and High priority. Under RD-211, index-only preparation is preferred; this candidate retains journey clarification, verification planning and sizing for reconsideration without a delivery promise. GitHub #87 at b461efad1028493ca0e715f985c3246e09ad7732 remains open.\n\nSource confirms /requests plus captured query, optional leading question mark, /requests for empty query and the Back to requests label. It does not establish whole-journey results. August 28 main regression at 8d72a6f934cd90a287b154c6be9a102f683dd421 is historical evidence for that main revision, not this August 31 branch.\n\nJune owns candidate-specific checks incorporating Imani's c-rr-design-final-return and Theo's stable account-context invariant: filtered list -> detail -> keyboard return; populated and zero-match results; recognizable destination and retained filters/sort; usable focus; route from empty results to all requests; no-query path; failed load/retry; visible focus and useful nonduplicated result announcements. Imani reviews copy and next actions, Theo reviews query/account assumptions. Determine whether RD-210 recovery work is necessary and size it before extending scope.\n\nUse doc-browser's desktop Chrome/Edge/Firefox current and previous major versions, Safari 17 or later, relevant narrow-screen journeys and 200 percent zoom. Record browser version, branch, exact revision, execution date, steps and outcomes. Preserve older reports and record change deltas/reruns if the branch changes. No fresh checks have run.\n\nRemaining verification and possible corrections need sizing; existing storyPoints=3 is not confirmed remaining capacity. Written handoff precedes June's September 4 leave; Mara coordinates urgent follow-ups and the September 7 closure, preserving support and maintenance. September 3 is the recommendation deadline, not a release date. No dependency on #88 is established. Reconsider after applicable journey evidence and review, confirmed capacity, Elise's scope decision and Nolan's deployment authorization. See #87 comment pr87-rr-review.",
+          "type": "Task",
+          "status": "In Review",
+          "priority": "High",
+          "storyPoints": 3,
+          "reporterId": "p-june",
+          "assigneeId": "p-june",
+          "sprintId": "sprint-sep-a",
+          "epicId": null,
+          "labels": [
+            "area-search"
+          ],
+          "subtasks": [],
+          "linkedIssueIds": [
+            "RD-210",
+            "RD-211"
+          ],
+          "createdAt": "2026-08-11T09:20:00-04:00",
+          "updatedAt": "2026-09-02T12:15:00-04:00"
+        }
+      ],
+      "comments": [
+        {
+          "id": "c-rr-frontend-final-return",
+          "issueId": "RD-202",
+          "userId": "p-june",
+          "content": "Applied c-rr-manager-scope in this issue and #87 comment pr87-rr-review. Imani's final empty-result/destination requirements and Theo's account invariant are explicit checks; query construction and the old main report do not close them. This is the written pre-leave handoff: outstanding branch/browser matrix, possible minimal RD-210 correction, focus/announcements and failure recovery all need evidence and sizing. Mara handles urgent customer replies during September 4 leave and checks coverage before promising dates around September 7. No release date or completed check is asserted.",
+          "createdAt": "2026-09-02T12:15:00-04:00"
+        },
+        {
+          "id": "c-rr-frontend-final-index",
+          "issueId": "RD-206",
+          "userId": "p-june",
+          "content": "Checked the final #89 conditions against Mara's index-only preparation option, Theo's c-rr-backend-final-index and Imani's c-rr-design-final-index. My browser plan pairs server ownership/deleted-row invariants with visible list/count after removal and reload, permitted open/download, denied access, failed-load recovery and last-file empty state. I will record current speech before proposing announcements and compare focus with remaining-file and last-file cases. RD-208's existing body-focus observation remains open; it neither proves a new index defect nor disappears because the index is independently preparable. No fresh observations or expanded capacity are available. Size this matrix and any repairs before scheduling; operational approval remains with Nolan.",
+          "createdAt": "2026-09-02T12:20:00-04:00"
+        },
+        {
+          "id": "c-rr-frontend-final-state",
+          "issueId": "RD-203",
+          "userId": "p-june",
+          "content": "Final consumer check of Theo's #88 review and Imani's final semantic requirements under Mara's deferred implementation scope: retaining old fields makes continued legacy reading a possible transition strategy, not demonstrated compatibility. New responses/displays must preserve waiting versus unassigned, explicitly address conflict/unknown state and avoid inferring availability. I will size the browser transition only after the matrix and fallback are agreed; no consumer switch is committed. This aligns #88 and RD-203 with the hold and protects the maintenance/support allowance.",
+          "createdAt": "2026-09-02T12:25:00-04:00"
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "w-product-lead",
+    "app_id": "google_docs_mock",
+    "action": "set_current",
+    "state_patch": {
+      "documents": {
+        "doc-relaydesk-release-recommendation-20260903": {
+          "id": "doc-relaydesk-release-recommendation-20260903",
+          "title": "Relaydesk release recommendation — September 3, 2026",
+          "content": "<h1>Relaydesk release recommendation</h1><p>Mara Ellison, September 3, 2026. Internal recommendation based on the September 1 snapshot and the team's subsequent source and record review. Hold unconditional release readiness for return filters (RD-202/#87), the request-state proposal (RD-203/#88), and the attachment index (RD-206/#89). Prefer evaluating and sizing the index alone for independent preparation after protecting maintenance and support. No new tests, migration rehearsal, repairs, merge, client acceptance or deployment have occurred.</p><h2>Why this recommendation</h2><p>Imani's c-rr-design-return and c-rr-design-state establish that keeping a query and exposing a pending label do not by themselves complete understandable customer journeys. June's c-rr-frontend-return ties the available regression report to main, not the later return-filter branch; her c-rr-frontend-state exposes the loss of waiting versus unassigned meaning in a state-only consumer. Theo's c-rr-backend-state and c-rr-backend-index identify compatibility, migration and recovery decisions absent from the evidence. Imani then reviewed both engineering assessments in c-rr-design-crossreview. These findings led to the scope in RD-211 / c-rr-manager-scope. All three specialists applied that scope in their final Jira requirements and GitHub comments before this recommendation was finalized.</p><h2>What the recorded evidence establishes</h2><p>artifact-aug-tests executed August 28, 2026 at 16:10 -04:00 on main revision 8d72a6f934cd90a287b154c6be9a102f683dd421. It records 428 server examples, zero failures and two pending; 96 browser passes and one skip. Stated coverage includes an empty export's header, completed job record and account access at download, and menu positioning near the lower viewport boundary. The pending server examples concern webhook signing-key overlap; the skipped browser example concerns mobile Safari native file selection. Retain those limitations. This successful main report does not establish results for the three candidate revisions or complete every customer journey.</p><p>Source inspection is distinct from execution. There is no fresh executable application or test service established for this assignment. Any later report must identify branch, revision, execution date, environment/browser version and covered behavior. If a branch changes, retain earlier reports, describe the changes and identify which checks need rerunning.</p><h2>Return filters: RD-202 / PR #87</h2><p>Hold release readiness; retain In Review, High priority, June as owner. keep-return-filters at b461efad1028493ca0e715f985c3246e09ad7732 was updated August 31 at 16:40 -04:00. web/RequestReturnLink.tsx constructs /requests plus the saved-view query, handles a leading question mark, uses /requests for an empty query, and labels the anchor Back to requests. This supports target construction, but does not establish focus restoration, result feedback, failure recovery or a usable empty-result journey.</p><p>June owns fresh checks of filtered list to request detail to keyboard return, including populated results, zero matches, a clear route to all requests, empty-query return, retained sort/filters and account context, useful visible focus, load failure/retry and final result announcements. Imani reviews destination wording and next actions; Theo reviews account/query assumptions. Apply doc-browser: current and previous major desktop Chrome, Edge and Firefox, Safari 17 or later, relevant narrow-screen journeys, keyboard, 200 percent zoom and asynchronous announcements. Determine whether minimal RD-210 recovery work is needed and size it before changing scope. Existing filter-panel focus and saved-sort work do not prove this different return journey. Deferral postpones customers' ability to resume a filtered queue reliably. See pr87-rr-review and c-rr-frontend-final-return.</p><h2>Request state: RD-203 / draft PR #88</h2><p>Hold readiness and defer implementation commitment; retain In Progress for exploration, Medium priority, Theo as owner. request-state-contract at 23e184c7b865af119a52d46e3900fa726d81bc55 is an additive proposal. It would keep approved, rejected and reviewer_id while adding state. No old-field removal, stored-state implementation or migration is established.</p><p>Current browser semantics, confirmed by June's source comparison, are Approved when approved is true, otherwise Declined when rejected is true, otherwise Waiting for review with a reviewer and Unassigned without one. Both flags true currently yields Approved through precedence; intended conflict policy remains unresolved. The draft groups both undecided cases as pending. An unchanged consumer may retain its distinctions if legacy behavior survives; a new state-only consumer would lose them. A reviewer identifier does not prove availability. Imani's requirement is to preserve useful, distinguishable next actions across list, detail and activity without conflating this need with RD-205's separate automatic-routing request.</p><p>Theo owns old/new response and display examples for imported requests, missing or unavailable reviewers, conflicting flags and absent/unknown state, with June and Imani reviewing. Inventory consumers; agree legacy-field guarantees, coexistence, precedence, fallback, removal exit criteria and recovery with Nolan. Compare derived projection versus stored state; size backfill, consistency and migration work if storage is chosen. A proposed additive rollout must preserve a route back to legacy reader behavior if transition fails. Applicable server/browser compatibility evidence is still needed on any eventual implementation revision. Deferral delays a clearer shared contract; it avoids prematurely imposing an ambiguous customer meaning. See pr88-rr-review and c-rr-backend-final-state.</p><h2>Attachment index: RD-206 / PR #89</h2><p>Hold unconditional readiness; retain In Review, High priority, Theo as owner. The preferred smaller preparation option is the index alone. attachment-request-index at 64a2185cd772fb93a0d614ecc93984b5f108de27 adds index_attachments_on_request_id on attachments.request_id concurrently with the DDL transaction disabled. The supplied source establishes no dependency on #87 or #88.</p><p>The August 28 retained artifact-query-report has three samples of a restored August dataset, each with 18,000 requests and 61,000 attachments: 184/19, 176/21 and 192/20 milliseconds before/after. Means are 184 and 20 milliseconds. That supports a lookup benefit for those samples, not production performance, migration safety or full journey correctness. The CSV does not provide a precise execution timestamp; do not invent one. Concurrent construction still needs locking, concurrent-write, resource, interruption and recovery review. The Rails change method alone does not prove safe rollback.</p><p>Theo must size and propose a representative rehearsal for Nolan: document environment/dataset/revision, inspect existing or invalid indexes, measure build duration/locks/load, verify validity and query use, and review stop, retry and removal/recovery procedures. June's complete journey pairs account-scoped access with list/open/download/removal/reload/count behavior, including denied access, failure recovery and removal of the last file. Preserve RD-114's deleted-row count exclusion, readable filenames, empty-state upload guidance and inline upload recovery. Imani reviews clear next actions, focus and announcements; capture existing speech before adding more. RD-208's recorded focus issue remains open and is not attributed to this index. Review its implications before release rather than assuming either a new dependency or clearance.</p><p>The July 22 rehearsal restored the July 20 database copy in 43 minutes with sampled ownership/activity counts matching. Fuller attachment consistency and opening restored files remain open under RD-278/doc-restore. Those recovery concerns must remain visible to Nolan. Deferral postpones the possible lookup improvement; evidence is not sufficient to quantify customer-visible speed. See pr89-rr-review, c-rr-backend-final-index and c-rr-frontend-final-index.</p><h2>Smaller options and dependencies</h2><p>Index alone is the preferred preparation option because it has a bounded source change and recorded query benefit while avoiding unresolved contract semantics. It still requires all its operational and journey conditions, confirmed capacity and client decisions. Return filters alone could be reconsidered after its own complete-journey evidence; its customer value is resuming work in the intended queue. It need not wait for a proposed state field absent evidence of such a dependency. Filters plus index could combine both benefits, but requires both sets of gates and integration checks on the chosen combined revision; bundling does not reduce the missing work. Any combination containing #88 currently brings unresolved semantics and transition/recovery work and is not recommended for implementation commitment. Holding all candidates remains appropriate until applicable conditions close. We are choosing preparation order, not declaring a release approved.</p><h2>Capacity, owners and decisions</h2><p>RD-211 remains In Progress with Mara as owner and High priority. Protect RD-212 maintenance preparation and support before allocating additional work. The maintenance window closes September 18; retry behavior and retained job arguments still need checks. Theo's scheduled dependency review remains an obligation. June has September 4 leave, Imani a two-hour September 3 hiring panel, and the studio closes September 7. June's written final-check handoff is in Jira and #87; Mara handles urgent replies during leave and checks coverage before setting follow-up dates.</p><p>No numeric remaining capacity is established. Existing story points are not available hours or fresh estimates for these gaps. Theo must size operational rehearsal/recovery, dependency verification and contract alternatives; June must size browser coverage and possible corrections; Imani must size interaction review around the panel. Mara reconciles those estimates and any displacement of current commitments before proposing dates. Keeping items in the cycle does not promise their implementation or release. September 3 is this recommendation's delivery deadline.</p><p>Elise must decide whether the proposed smaller scope and delayed navigation/state benefits meet business priorities and approve any change to agreed scope. Nolan must review operational and recovery conditions and authorize infrastructure changes, deployment and scheduling. Neither decision is recorded as granted. The client update is a draft to Elise and Nolan, prepared after specialist final checks; it requests those decisions and does not announce a deployment.</p>",
+          "ownerId": "p-mara",
+          "starred": false,
+          "created": "2026-09-03T09:15:00-04:00",
+          "updated": "2026-09-03T09:15:00-04:00",
+          "sharedWith": [
+            {
+              "userId": "p-imani",
+              "permission": "editor"
+            },
+            {
+              "userId": "p-theo",
+              "permission": "editor"
+            },
+            {
+              "userId": "p-june",
+              "permission": "editor"
+            }
+          ],
+          "linkSharing": {
+            "enabled": false,
+            "permission": "viewer"
+          }
+        }
+      }
+    }
+  },
+  {
+    "worker_id": "w-product-lead",
+    "app_id": "google_drive_mock",
+    "action": "set_current",
+    "state_patch": {
+      "items": {
+        "doc-relaydesk-release-recommendation-20260903": {
+          "id": "doc-relaydesk-release-recommendation-20260903",
+          "parentId": "folder-delivery",
+          "name": "Relaydesk release recommendation — September 3, 2026",
+          "type": "doc",
+          "mimeType": "application/vnd.google-apps.document",
+          "size": 0,
+          "ownerId": "p-mara",
+          "sharedWith": [
+            {
+              "userId": "p-imani",
+              "role": "editor",
+              "addedAt": "2026-09-03T09:20:00-04:00"
+            },
+            {
+              "userId": "p-theo",
+              "role": "editor",
+              "addedAt": "2026-09-03T09:20:00-04:00"
+            },
+            {
+              "userId": "p-june",
+              "role": "editor",
+              "addedAt": "2026-09-03T09:20:00-04:00"
+            }
+          ],
+          "starred": false,
+          "trashed": false,
+          "color": null,
+          "createdAt": 1788441600000,
+          "modifiedAt": 1788441600000,
+          "accessedAt": 1788441600000,
+          "description": "Internal release recommendation and decision summary. Full recommendation is in Google Docs document doc-relaydesk-release-recommendation-20260903. All three candidates remain held for unconditional readiness; index-only preparation is the preferred smaller option, subject to open conditions and capacity. Link sharing disabled.",
+          "thumbnailUrl": null,
+          "content": "Relaydesk release recommendation — September 3, 2026. Mara Ellison.\n\nHold unconditional release readiness for RD-202/#87, RD-203/#88 and RD-206/#89. Prefer evaluating and sizing the index alone for independent preparation after maintenance and support reservations. This records source/retained-evidence review and planning, not new execution, repairs, acceptance or deployment. Full analysis: Google Docs doc-relaydesk-release-recommendation-20260903.\n\nImani's complete-journey and waiting/unassigned requirements, June's consumer comparison and main-only evidence boundary, and Theo's compatibility/migration recovery assessment determined the scope in RD-211. Each specialist applied it in final Jira conditions and PR comments.\n\nRD-202 remains In Review, High, June. #87 at b461efad1028493ca0e715f985c3246e09ad7732 constructs the saved-query return target; it does not establish usable return focus, empty-result recovery or announcements. June owns filtered-list/detail/keyboard-return checks with populated, empty and failed-load cases, account context, saved sort, no-query path, supported browsers, narrow screens and 200 percent zoom. Imani reviews wording/next actions; Theo reviews query/account assumptions. Size any minimal RD-210 correction.\n\nRD-203 remains In Progress for exploration, Medium, Theo; #88 at 23e184c7b865af119a52d46e3900fa726d81bc55 remains draft. It proposes adding state alongside old fields. Current browser labels distinguish approved, declined, waiting with a reviewer and unassigned without one; both true currently takes approved precedence. Pending alone collapses the undecided cases. Theo, June and Imani must review import/conflict/availability/unknown-state examples, consumer inventory, derived-versus-stored choice, coexistence, fallback and recovery before sizing implementation. Nolan's transition review is open.\n\nRD-206 remains In Review, High, Theo. #89 at 64a2185cd772fb93a0d614ecc93984b5f108de27 adds a concurrent request lookup index outside a DDL transaction. Retained restored-August samples have 18,000 request rows and 61,000 attachment rows each, with 184/19, 176/21 and 192/20 ms before/after; means 184/20 ms. This supports sampled query benefit only. Theo must size representative migration/locking/load/validity/interruption/retry/recovery checks for Nolan. June and Imani require authorized list/open/download/remove/reload/count journeys, last-file and failed-load behavior, focus and announcements. RD-208 remains a separate focus issue and RD-278 fuller restoration checks remain open.\n\nHistorical artifact-aug-tests executed August 28 at 16:10 -04:00 on main 8d72a6f934cd90a287b154c6be9a102f683dd421: 428 server examples, 0 failures, 2 pending; 96 browser passes, 1 skip. Its empty-export and lower-viewport menu checks do not clear candidate revisions. Pending webhook overlap and skipped mobile Safari native file selection remain recorded. Query CSV execution time is not supplied; no fresh checks are claimed.\n\nIndex alone avoids unresolved state semantics; no dependency on #87/#88 is established. Filters alone remain a meaningful later option after their checks. Filters plus index require both item gates and integration coverage. Any combination with #88 remains unsuitable for implementation commitment until contract decisions close. Delayed value includes easier filtered-queue return, clearer shared request meanings and possible lookup improvements.\n\nRD-211 preserves RD-212's September 18 maintenance deadline, retry/retained-argument checks and support allowance. June is away September 4; Imani has a two-hour September 3 panel; September 7 is a closure. No numeric remaining capacity exists in the records. Existing story points do not fund new work. Specialists must size verification/corrections and Mara reconcile commitments before dates. September 3 is the recommendation deadline. Elise decides business scope; Nolan authorizes infrastructure changes and deployment scheduling. Matching review comments: pr87-rr-review, pr88-rr-review, pr89-rr-review. Client communication remains a draft."
+        }
+      }
+    }
+  },
+  {
+    "worker_id": "w-product-lead",
+    "app_id": "gmail_mock",
+    "action": "set_current",
+    "state_patch": {
+      "drafts": [
+        {
+          "id": "draft-relaydesk-release-recommendation-20260903",
+          "threadId": "thread-rel-aug-review",
+          "from": {
+            "name": "Mara Ellison",
+            "email": "mara@harborloom.dev",
+            "avatar": ""
+          },
+          "to": [
+            {
+              "name": "Elise Park",
+              "email": "elise@brindleworks.io"
+            },
+            {
+              "name": "Nolan Price",
+              "email": "nolan@brindleworks.io"
+            }
+          ],
+          "cc": [],
+          "bcc": [],
+          "subject": "Relaydesk: September 3 release recommendation and scope decisions",
+          "body": "<p>Elise, Nolan,</p><p>Our recommendation is to hold unconditional release readiness for return filters, the request-state proposal and the attachment index. We recommend considering the index alone for further preparation after sizing its remaining work and protecting maintenance and support. This is a proposed preparation order; we have not run new checks, repaired the changes or authorized a release.</p><p>Return filters, RD-202 / PR #87, preserve the captured query in the supplied source, but the August 31 revision still needs the complete keyboard return and empty-result journey checked. June owns those checks, with Imani reviewing destination wording, focus and a usable next action, and Theo reviewing account/query assumptions. This delays the improvement to resuming work in a filtered queue. Any minimal empty-result correction needs sizing before a commitment.</p><p>The request-state proposal, RD-203 / draft PR #88, would add a field alongside the existing fields. June's consumer comparison and Imani's review show that pending alone loses the difference between waiting for an assigned reviewer and having no reviewer. Theo, June and Imani must settle imported/conflicting cases, reviewer availability, old/new consumer coexistence and recovery before implementation is sized. Nolan, the transition and recovery review you requested remains open. We recommend deferring implementation commitment while contract exploration continues.</p><p>The attachment index, RD-206 / PR #89, has a grounded potential benefit: the retained restored-August-dataset samples average 184 ms before and 20 ms after for the measured lookup. That does not establish production performance or safe migration. Theo owns the proposed operational rehearsal, interruption/retry and recovery review; June and Imani have specified the complete attachment access, removal, reload/count, focus and failure-recovery checks. The existing attachment focus issue and fuller restoration follow-up remain visible. No migration or browser results have been manufactured from the timings.</p><p>The August 28 regression report belongs to main revision 8d72a6f934cd90a287b154c6be9a102f683dd421. Its recorded 428 server examples with zero failures and two pending, and 96 browser passes with one skip, do not clear the candidate revisions. All engineering work remains open in Jira and GitHub.</p><p>A smaller release is coherent: the supplied index change has no established dependency on return filters or the state proposal. Index-only preparation would defer navigation and state benefits. Return filters alone could be reconsidered after its journey checks; filters plus index would require both sets of conditions and integration evidence. Including the state proposal now adds unresolved meanings and transition work.</p><p>RD-211 preserves the September 18 background-job maintenance deadline, retry and retained-job-argument checks, and support allowance. June is on leave September 4, Imani has a two-hour panel September 3, and the studio closes September 7. We have no confirmed numeric remaining capacity. Theo must size operational and contract work, June browser verification and potential corrections, and Imani interaction review; I will reconcile those estimates before proposing dates. June has recorded her outstanding-check handoff, and I will coordinate urgent replies during her leave. September 3 is the recommendation deadline, not a deployment promise.</p><p>Elise, please decide whether index-only preparation and the delayed return-filter/state benefits are the right scope tradeoff, including any change to existing commitments. Nolan, please review the proposed operational and recovery conditions; deployment authorization and scheduling remain yours after applicable evidence is available. Neither approval is assumed.</p><p>The written recommendation is Relaydesk release recommendation — September 3, 2026, in our delivery records, with matching follow-ups in RD-202, RD-203, RD-206 and RD-211 and review comments on PRs #87–89. Imani, Theo and June applied the chosen scope to their final conditions before I prepared this draft.</p><p>Mara</p>",
+          "snippet": "Hold unconditional readiness for all three; consider index-only preparation with open verification, capacity and client decisions.",
+          "timestamp": "2026-09-03T09:30:00-04:00",
+          "read": true,
+          "starred": false,
+          "important": true,
+          "labels": [
+            "label-relaydesk",
+            "label-delivery-reviews"
+          ],
+          "category": "primary",
+          "folder": "drafts",
+          "attachments": []
+        }
+      ]
+    }
+  }
+]

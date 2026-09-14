@@ -1,0 +1,1157 @@
+{
+  "schema_version": 1,
+  "at": "2026-09-14T16:22:53.753928+00:00",
+  "baseline": {
+    "manifest_hash": "857621bf89b1e223aa419f34afe7b5e5376a316044a06499545f7bca0f5ff008",
+    "states": {
+      "github_mock": "54837eb4932c815e48b76b59166e6d637b9081f7c215fa75fac50aaf1c8a4f99",
+      "gmail_mock": "f52e7cdae80d0c6af341af1ca4199d4de020e1bb7bf1fc27bbb85ea6ad3f4cb1",
+      "google_calendar_mock": "1deb03fef17f30e852202961a1db7160eaa50357a736f95adc771620d1a11784",
+      "jira_mock": "b6f1e4a67dadf3b5602f69f5d261a269f1fa15152c0775c3d48539f39a0d9b57",
+      "google_drive_mock": "7a57249b33f0160057b1d2950c6d9ca00c82b548f313e52ecf101d65bb563c42",
+      "google_docs_mock": "26e59c46a9e591972fc9a11a7d3c82939a45cb2770e23cd18e1470d9431fa861",
+      "slack_mock": "81b2a72c8ffba44d1a9e1ea4454b41de95235d47643a4f5c8c40cb88588bafe2"
+    },
+    "artifacts": {
+      "world/desktop/w-product-lead/Downloads/re_ September coverage.eml": "708b806664a47df5763042adfd12ef2313add07bdff68d2f0f366a7714e095f1",
+      "world/desktop/w-product-lead/Downloads/Invoice 4471 - Beacon Roomworks.pdf": "eb3671fc834fa4e9ac6ab8585e588caabb5a68d8b1d09724dc7b9cbcb6f7fc04",
+      "world/desktop/w-product-lead/Desktop/Client review Aug.pptx": "b3e69c048422d5e4333892460d272fcd8551eea6045550292b581f8ee3566ea9",
+      "world/desktop/w-product-lead/Desktop/Mara notes.md": "2bd37572c3ae0641bdf5cfc55724e0a5b50b380744a587a835585ed9f905f803",
+      "world/desktop/w-product-lead/Documents/Brindle Works/Delivery agreement.pdf": "46f54ffd6caa0670c431c5c4cf4f0880f45374974cb665c9ac263e7694e34b15",
+      "world/desktop/w-product-lead/Documents/Planning/September capacity v2.xlsx": "98c72d854b96d0ed6843854b58b200a97ce97a8a29e256bf950bfb24a2f9062f",
+      "world/desktop/w-frontend/Downloads/Browser support.pdf": "a733e2c588df7a0576dbb0c77d23fef32c0710a5ba6689caab8f0f95f1b25bfe",
+      "world/desktop/w-frontend/Downloads/re_ export button.eml": "52ea2e8166f248f60091433602e0c0f17b016714a775f419d0548d5b812ce747",
+      "world/desktop/w-frontend/Desktop/June working notes.md": "378dd4580cc70c36bfc5d54799506fb74bdbc025c01672e2ad9d8faf7de929f5",
+      "world/desktop/w-frontend/Documents/Relaydesk/Browser observations.xlsx": "650421d25f1dd9308279b9c1855e11dd145f7994779b1c4feeba82ca7900dc00",
+      "world/desktop/w-frontend/Documents/Reviews/Filter panel review April.docx": "d44fa56fbfa224320427f7df835e7fb4af1017a87351a36215ea0ecdf4282b22",
+      "world/desktop/w-frontend/Documents/Relaydesk/source/requestDecisionLabel.ts": "0e10fe637ac3f00ff7aa7aca110d49944c1e69005b59d377b1f2f03c23265ca7",
+      "world/desktop/w-designer/Downloads/Interview notes guidance 2025.docx": "6a7254a65cd2828338b37587637550c7292160d09cc7c4e6fdbced602ca7e48c",
+      "world/desktop/w-designer/Downloads/Customer research permissions.pdf": "272a6c4a9ac91ad8637fcf91c8f933f0a7147f88ffa79817c9abe432a94c9c76",
+      "world/desktop/w-designer/Desktop/Imani scratchpad.md": "193c7d69c225e4f59ccde269b3bd93deb7cad95279e53f52a7dae070eac90e71",
+      "world/desktop/w-designer/Documents/Research/Summer observations.xlsx": "f089bc6bcef6f3b91f4c7c0959efb899f8ef9ac402197ae6e0f182393569b42c",
+      "world/desktop/w-designer/Documents/Research/Participant notes.docx": "0a1d8c996097fed2b559b913958bc4681b1d20b6fe7a7ad4d1f7fa9536965d80",
+      "world/desktop/w-designer/Documents/Reviews/Attachment recovery notes.pdf": "b4a63a9f21ba9632fd699efab47a8218bfc2745cee5601af42f93c1c71ec26e3",
+      "world/desktop/w-backend/Downloads/server regression Aug 28.txt": "1033aaad5235cc6fcf21dea8fa4fc73adf7527b5df5ec5de43761f9c3f575867",
+      "world/desktop/w-backend/Downloads/Attachment lookup report.pdf": "bd08e0f600fc6bc2dbdd581262644d11e4250b7def92d12f2be572f14b24c1d7",
+      "world/desktop/w-backend/Desktop/Theo notes.md": "8b2f7002758c29959aa6b1029948204f8ec75563037d39e1193eca391b6a5b72",
+      "world/desktop/w-backend/Documents/Relaydesk/July restore notebook.docx": "3d38fbabddd4bd0aa7376a17048ef20cbd67dfeb2d88cfdca3392fce7378c3d4",
+      "world/desktop/w-backend/Documents/Relaydesk/Imported request sample.csv": "8cd0e32c205dd9c346e74328007abab56cfd6b3ec054637f8fbd8ef13d1d0af1",
+      "world/desktop/w-backend/Documents/Relaydesk/source/request_serializer.rb": "f044e87e4f9e19f438a6d9bb4c002f2ac8fb531c8ccc20e2a29917c954258863",
+      "world/materials/w-product-lead/Downloads/re_ September coverage.eml": "708b806664a47df5763042adfd12ef2313add07bdff68d2f0f366a7714e095f1",
+      "world/materials/w-product-lead/Downloads/Invoice 4471 - Beacon Roomworks.pdf": "878190f1277eb15cd026065a802968f40d0cfa02a84468237def590dba8b9af4",
+      "world/materials/w-product-lead/Desktop/Client review Aug.pptx": "50e47b57bd22219fedef9214882a1d51cd2d2e744b2353205d5cd8b66c61f84b",
+      "world/materials/w-product-lead/Desktop/Mara notes.md": "2bd37572c3ae0641bdf5cfc55724e0a5b50b380744a587a835585ed9f905f803",
+      "world/materials/w-product-lead/Documents/Brindle Works/Delivery agreement.pdf": "41daf69ac398b1ccc667684e2e7339ff590737787b300f981a545a74c61e6dae",
+      "world/materials/w-product-lead/Documents/Planning/September capacity v2.xlsx": "ef27f841cc7d37bb95634d609d2844110ee1b20aa5328d1d8f50d402af536e73",
+      "world/materials/w-frontend/Downloads/Browser support.pdf": "95636657d33d079466e946e0f6b020a84e5b7216148babf830da144ea149324c",
+      "world/materials/w-frontend/Downloads/re_ export button.eml": "52ea2e8166f248f60091433602e0c0f17b016714a775f419d0548d5b812ce747",
+      "world/materials/w-frontend/Desktop/June working notes.md": "378dd4580cc70c36bfc5d54799506fb74bdbc025c01672e2ad9d8faf7de929f5",
+      "world/materials/w-frontend/Documents/Relaydesk/Browser observations.xlsx": "b5e6ae8591d3869676de7e02371a12a4113eb51aa4184576800725ca06064dba",
+      "world/materials/w-frontend/Documents/Reviews/Filter panel review April.docx": "c68a6bbc0958146367d13e3e86d9a36b0935d6c459cc570f1c00ab4d9cf28f69",
+      "world/materials/w-frontend/Documents/Relaydesk/source/requestDecisionLabel.ts": "0e10fe637ac3f00ff7aa7aca110d49944c1e69005b59d377b1f2f03c23265ca7",
+      "world/materials/w-designer/Downloads/Interview notes guidance 2025.docx": "0057fe1072fc9919337667e3703e046ebcd1583ff582df2c0893d5a4a415473a",
+      "world/materials/w-designer/Downloads/Customer research permissions.pdf": "c99a556cfd6900f57ff2cd8ffb605a6c1107dbf3f633ad539e45bc531dd5bdbd",
+      "world/materials/w-designer/Desktop/Imani scratchpad.md": "193c7d69c225e4f59ccde269b3bd93deb7cad95279e53f52a7dae070eac90e71",
+      "world/materials/w-designer/Documents/Research/Summer observations.xlsx": "ca0fe58249b96cf32cf66f84e8561bd8690563a453846dfffcdaebed4b38fdf1",
+      "world/materials/w-designer/Documents/Research/Participant notes.docx": "1a2ed7a394b74fd36b7006085ed551c7e5d00b6cf72a38a0229e8c96abae15f3",
+      "world/materials/w-designer/Documents/Reviews/Attachment recovery notes.pdf": "6535e7e06671fee0cfd4ccbfdf3ce0d23cc7f56ea6a71e5306d73413bb46c6aa",
+      "world/materials/w-backend/Downloads/server regression Aug 28.txt": "1033aaad5235cc6fcf21dea8fa4fc73adf7527b5df5ec5de43761f9c3f575867",
+      "world/materials/w-backend/Downloads/Attachment lookup report.pdf": "87e0c923bd4e9f1a41b5da146c0efb36318aa1dd1bf3cd332382ee58df4157dc",
+      "world/materials/w-backend/Desktop/Theo notes.md": "8b2f7002758c29959aa6b1029948204f8ec75563037d39e1193eca391b6a5b72",
+      "world/materials/w-backend/Documents/Relaydesk/July restore notebook.docx": "f5f5ea19642e0325da4f72a6a651c1d3adc0c026d7326c2c816913815154bec8",
+      "world/materials/w-backend/Documents/Relaydesk/Imported request sample.csv": "8cd0e32c205dd9c346e74328007abab56cfd6b3ec054637f8fbd8ef13d1d0af1",
+      "world/materials/w-backend/Documents/Relaydesk/source/request_serializer.rb": "f044e87e4f9e19f438a6d9bb4c002f2ac8fb531c8ccc20e2a29917c954258863",
+      "world/population/files/331b46d5923ac25484c6605ae226bf60484443af1058bde12d90ddbf60859258.xlsx": "b61a63035cc84f5cf9c0a778ad00131351e2a534620e4be22eb0cab7544fb463",
+      "world/population/files/RESOURCES.json": "8e5963415e38ee45a1995234e0b8e596cd66437723aace7b7b4e733fc608ef8a",
+      "world/population/EXTENSION.json": "dc648e33dfa353b64e35ef4e67f3a0b8173f9e83d61f86bf426a11454991a968",
+      "world/population/EFFECTIVE-WORLD.json": "428a9c2292a4801decb047ded0d68ca24e64f3a899704df8491728896e206eb2",
+      "world/population/AMENDMENTS.json": "dc517ad9a174c558c7c432e7044efa923fa7c6662692ad812c7b52c32f7f493f"
+    },
+    "world_hash": "d8a0b7f2fcd4b2521c8de54ee61651489ce2d87b2ad56d77d85a7715a9580aa9"
+  },
+  "implementation": {
+    "src/company_envs/world/hub_access.py": "a560c93661382f5c32a76863413b3df43f1fdb588329937c67de05a9d7ad065c",
+    "src/company_envs/world/hub_app.py": "2c7e3fdb39cd27a3a93cc9099c3543ef2a3372d33b654626a1468217553a595d",
+    "src/company_envs/world/hub_documents.py": "2d53f8f1964330636af641b02174adbe22d4c116a1963f352879fb76e2489073",
+    "src/company_envs/world/hub_identity.py": "f1af7f168f0c6be1fbe47630f82876a30ebe5adaec61438064f3b717882c32de",
+    "src/company_envs/world/hub_mail.py": "32eb13949dcd7dc3fcc4543c7c0150571c3e1041613278977f27c7e11b594f75",
+    "src/company_envs/world/hub_patches.json": "f1b7945d9138222e8024f931f31c2c57f36580ab618ecf911143c22cc9437f5c",
+    "src/company_envs/world/hub_resources.py": "c3fcce7942329fc0d67732c11e85c1d8161bbbeffec500144811ee9f87f039fb",
+    "src/company_envs/world/hub_vm.py": "fcae28f1834280cef9a6bc590c7deee6a581894ecdfb0732ac2822ec9e8c3c00",
+    "src/company_envs/world/hub_world.py": "533326ac599d725dd888f685ad00ab2cb0ae9479a2fc741bdca5ff7c241fa08f",
+    "src/company_envs/world/runtime_acceptance.py": "527307abc52292b7f0b5ec9530786ffb14386e1a0db13423979cabeefa84221d",
+    "src/company_envs/world/world_acceptance.py": "8eb1c1e3af6aaec8ec853984b453995c1ea6f2a0f960c6264d657c8235c606bd",
+    "src/company_envs/world/population_snapshot.py": "0deae496a4fa5945615ef72002d495e2ee653874a0017c7126dea7365c0617e4",
+    "src/company_envs/world/interact_check.py": "791551aed068fa708b8d8d14dd8ebd73bbd91e8da0c3047572ef2de6bd871ac3",
+    "src/company_envs/world/app_audit.py": "b73dafd422891e300347c414cd0181fd9ae481a7554339d0c9ea414fdb27b6b8",
+    "src/company_envs/preflight.py": "a5c15d8eea847db338824e49c7f8f08764fbf7e28a0abf641940d53231d21516",
+    "catalogs/runtime_probes.json": "53ea59587c534c6afa3e36873a770644e70ead049276b5669c1b6183e3d73981",
+    "catalogs/app_entry_routes.json": "d8be51fcfeb67d948c5499d53363b3336f61bcf5102ba73bc59a80b5bbb88dea"
+  },
+  "checks": {
+    "build": true,
+    "render": true,
+    "writes": true,
+    "persistence": true,
+    "access": true,
+    "resources": true,
+    "reset": true
+  },
+  "evidence": {
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/BROWSER.json": "11262d98b8b42a007c3030900532f97cbc56099cfcf68d57511f02cf5c784bd9",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/actors-github_mock.json": "e885fa6d6ac2151017a8c3d945c8530918dc7dacd69f9f2855df271f3146c495",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/actors-gmail_mock.json": "6baa167d58295cdc8909cd2d9310aadd5d909f1dab4bf32161744f69efa402e3",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/actors-google_calendar_mock.json": "847589aae02cd39ee822e997669c5bb7aacd84be09b30bad289260d36f67882d",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/actors-google_docs_mock.json": "d84a6d0d15334ae7935c1579ff5a2b5ac335a3ff88ae927b81efe013adbacc87",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/actors-google_drive_mock.json": "9628b4c0e46da65d91bdd4af6e6d19a6e2965cb48c0e460442d9bbd528d8a615",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/actors-jira_mock.json": "2aaa4302e79b3cb6bbe833a19cc562d4de41f0d2d03364bf33203cc7f0788f2f",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/actors-slack_mock.json": "7aa0b8601ea4a92e01e43fdeb20e0f70ca51aaefafcadff50003ed92449120b6",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/logs/github_mock-serve.log": "6aaed7fa35c8dac4fcafef5f38927386ea7734ab80cb02adf732593b679ddabe",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/logs/gmail_mock-serve.log": "6ee0addd14bbc1dceec1fcda4c3456a6b75605e8f4d1e53b714eb39cfb373d34",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/logs/google_calendar_mock-serve.log": "164055b0a3c1d64db38a54cc57625dd30284efb2e87094b2272181c046f84924",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/logs/google_docs_mock-serve.log": "6fb72077d9d7f929813363265406b918d46469021c9016dc74fb4921d14ed43b",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/logs/google_drive_mock-serve.log": "b8679403262aa0f96ce435a33c61a87e66f3f49535e0fe2b020bada589c171d9",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/logs/jira_mock-build.log": "6edde742e72a28bd59a5e40cb4329ba36264804e507bfe44c5be6bbc11ef8a5c",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/logs/jira_mock-serve.log": "9b7394bc910882d4ddae9c6c9fe349a44ab1e7c197fa04db88570a23fea91cdc",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/logs/slack_mock-serve.log": "4535c2e4d66c51316398c3a827436017298d09b4b6f3e914c4c9f5eabedcbf94",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-github_mock-w-backend.png": "381b0757b5ae654a9f13aaeb5ebe1af25ce527ecd61cf892e21bae029e2c701a",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-github_mock-w-designer.png": "381b0757b5ae654a9f13aaeb5ebe1af25ce527ecd61cf892e21bae029e2c701a",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-github_mock-w-frontend.png": "381b0757b5ae654a9f13aaeb5ebe1af25ce527ecd61cf892e21bae029e2c701a",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-github_mock-w-product-lead.png": "381b0757b5ae654a9f13aaeb5ebe1af25ce527ecd61cf892e21bae029e2c701a",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-gmail_mock-w-backend.png": "1d5ecb28e15a485a938c5608997752a1dd200ddf89dfc93fd182f53958edd52d",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-gmail_mock-w-designer.png": "8a5969f75152e6a872a3dc9221b5b090be2be6aa6b42b052530500e8abd8e3f6",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-gmail_mock-w-frontend.png": "811f0b30ec8126f850b6ec6aec37d11c493dbfc11185db4044469d4f684fb898",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-gmail_mock-w-product-lead.png": "1baa6ea374bc86e158fac1968ffec92eb66bdadefc64bf6f7b4a4cad3d264050",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-google_calendar_mock-w-backend.png": "a8c436c39e7d254387d453f0ec4d76dad436a89d6c96b6e80506c66ae3b2d7af",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-google_calendar_mock-w-designer.png": "bc31f9b75763490eff8042410ba7d8d286a34cac9c6661655a0fed93e869ad2d",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-google_calendar_mock-w-frontend.png": "cfe0488fc3063b352546944fadd51471cb1f63bf29d5d520bf0e1c18a78dd5b7",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-google_calendar_mock-w-product-lead.png": "60b11528bbc2b1fd0fb7bf84604ff52e3af8a5f27c4c28112c9fb75ff415f63b",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-google_docs_mock-w-backend.png": "6cf938d969f5b18938841e81647e4e257697bcc64a6e69d91a53fd7f47105831",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-google_docs_mock-w-designer.png": "6cf938d969f5b18938841e81647e4e257697bcc64a6e69d91a53fd7f47105831",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-google_docs_mock-w-frontend.png": "6cf938d969f5b18938841e81647e4e257697bcc64a6e69d91a53fd7f47105831",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-google_docs_mock-w-product-lead.png": "8aab2aa6bb76a11fcab30eb9f2ecd4d1ca626e6d8d79963c58d0bb6a39f15dde",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-google_drive_mock-w-backend.png": "40bd392ee01ec8fa44e0df0a8702a53e09e3c0c4bc44fea898938fd21611341e",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-google_drive_mock-w-designer.png": "f85cbbfa5d1c0efe92f9ebf7b431f0c97c72363f19f7e04a660311baf630f9cf",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-google_drive_mock-w-frontend.png": "52835545f9af05298772eddf190ec5432793813197682bb35cf155231c91c45d",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-google_drive_mock-w-product-lead.png": "a08359cb8d57ce4d144121a61b174ddb7617a0e61b85f7f8e92637f40cc7a81e",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-jira_mock-w-backend.png": "a5741da746f30444612c22986cc172aba43945cc3151186e7d5c45c3daeba971",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-jira_mock-w-designer.png": "f702b92425d091584f948e387eb3050dbf00a27e54dd2dcce6421b026a0c2fca",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-jira_mock-w-frontend.png": "6d6033555de20ecb5026c3235090c2863eaec50ad5c99bd2a79614ce938830ad",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-jira_mock-w-product-lead.png": "e882bfd22a50787656079fd6d4dedd751181e0ddbd348b57e91af7f1b2041521",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-slack_mock-w-backend.png": "f76b60ed88aacbef7be05c7d16c52221dc15475b440c6db4c99ebf730ca8b81c",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-slack_mock-w-designer.png": "bb98247d9323c019cfd1cf713ebc70993c6b54f72e487687590f2c75067cb177",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-slack_mock-w-frontend.png": "dd2d3e2b182f3ae6a69cf725b57173e821175a0facea24a80a9e2b1498d7e6a8",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/render-slack_mock-w-product-lead.png": "df3b9c420b8a209c118ddec38736e8d95d400aa9947b727e85c73f9815de8367",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/write-github_mock.png": "381b0757b5ae654a9f13aaeb5ebe1af25ce527ecd61cf892e21bae029e2c701a",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/write-gmail_mock.png": "d7a0edd4595b44ba51f7fd88d31b9e4ac257f4a3c55c08a754bd1d396e70bd61",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/write-google_calendar_mock.png": "60b11528bbc2b1fd0fb7bf84604ff52e3af8a5f27c4c28112c9fb75ff415f63b",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/write-google_docs_mock.png": "97217ea1e868c2a2e8017abb887c40a4b021fae76c0dbc192b6b4f3563675e5b",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/write-google_drive_mock.png": "98e3872686a88057cce5ed29b4e5d8046564b2b7dc4570bc41f10b87b8f54612",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/write-jira_mock.png": "7f869eff41bcb822006b9d6ad4942c8fc7577f19eedb1ea7f32da83a9b510ebd",
+    "world/acceptance/runtime/2026-09-14T16-22-53.753825+00-00/write-slack_mock.png": "fc56e8042318ce7e85d600d4e4010ee376c0aeb3165d65c44acebca44d9ef2bc"
+  },
+  "builds": {
+    "github_mock": {
+      "seed_hash": "54837eb4932c815e48b76b59166e6d637b9081f7c215fa75fac50aaf1c8a4f99",
+      "native_source_hash": "5bc9f2acf0ca01a985517befcbc41ed23b63702f791f32beb28836ab64a97fa1",
+      "build": {
+        "source_hash": "51b42537e57ed2547b6fef4bc248b5a7594f69f06f64b34fd719fcb13b3e2657",
+        "patches": [
+          {
+            "file": "src/components/Layout.jsx",
+            "reason": "Upstream build error: Layout.jsx imports a non-existent lucide-react icon 'XitHub' (search/replace artifact of 'Github'), so vite build fails and the app never renders."
+          },
+          {
+            "file": "index.html",
+            "reason": "Render a default avatar for an empty round profile image. CSS supplies the visual fallback without changing the seeded identity or saved app state."
+          }
+        ],
+        "built_hash": "19bd27e3d1954463d7510c73fd991aa2938874933df829342a1d872b60c5268d",
+        "dist_hash": "a2ffcbd8947ae3da234c01e60b5e26be2856a9d6f66d1eaf52235f38b525e6fe"
+      },
+      "ok": true
+    },
+    "gmail_mock": {
+      "seed_hash": "f52e7cdae80d0c6af341af1ca4199d4de020e1bb7bf1fc27bbb85ea6ad3f4cb1",
+      "native_source_hash": "fbad130975e7b9843aa245e4b8b690d62ea8c4d8ae3b0f6222c77f265491ccaa",
+      "build": {
+        "source_hash": "03ade194adf69b1d84e8470bcd856320292399e5a360c90aee250ea0deca9ea0",
+        "patches": [
+          {
+            "file": "src/data/mockData.js",
+            "reason": "Default settings carried a demo signature with a placeholder address; a seed without a settings key received it on first load and every composed message would have carried it."
+          },
+          {
+            "file": "src/components/ComposeModal.jsx",
+            "reason": "Composed and replied messages appended a demo signature with a placeholder address to every worker-sent email."
+          }
+        ],
+        "built_hash": "72976cb995fa0124b21e7496eb4f69b8c6131adc3ba5304776dc7b4fac78e5b7",
+        "dist_hash": "f8b811df13ee638294c62979ea736e67d51fe7284a987b28b365082048bf1c05"
+      },
+      "ok": true
+    },
+    "google_calendar_mock": {
+      "seed_hash": "1deb03fef17f30e852202961a1db7160eaa50357a736f95adc771620d1a11784",
+      "native_source_hash": "6d0c0b3bc5e19f70a971040e84d1730e0bcf52fc911541ced68e21f377c74e8e",
+      "build": {
+        "source_hash": "7cff46cf2984e74dcb212d841bd91ce375dfecc694cb352af7f2e6bc410f3db2",
+        "patches": [
+          {
+            "file": "src/utils/helpers.js",
+            "reason": "normalizeEvent rebuilt every seeded event from a fixed field list, so fields the UI does not use (status, meetLink) were dropped and the first save wrote the shrunken events back to the shared store for everyone."
+          },
+          {
+            "file": "src/components/Header.jsx",
+            "reason": "The top bar showed a 'Debug API' button linking to the harness state page; workers must not see debug controls. The /go route itself is untouched."
+          },
+          {
+            "file": "src/components/Sidebar.jsx",
+            "reason": "The sidebar footer linked to 'Debug State (/go)'; workers must not see debug controls."
+          },
+          {
+            "file": "src/components/Sidebar.jsx",
+            "reason": "A calendar's colour is used as a CSS class, so a seeded hex like '#039BE5' painted nothing and every calendar in the sidebar read as unchecked while its events were on screen. A hex now colours the box through style; a class name still works as before."
+          },
+          {
+            "file": "src/components/MonthView.jsx",
+            "reason": "An event's colour is used as a CSS class beside text-white, so a seeded hex painted no background and the month grid showed white text on white. Measured in a guest: 7 of 7 chips had background-color rgba(0,0,0,0) and the screenshot was an empty grid, with 297 of 297 seeded events invisible; fleet-wide 11,731 of 17,465 events are hex-coloured. The same fix already landed in Sidebar.jsx and missed this view."
+          },
+          {
+            "file": "src/utils/helpers.js",
+            "reason": "Preserve seeded calendar IDs; demo-only normalization hid every real company event and rewrote their calendar references."
+          },
+          {
+            "file": "src/utils/helpers.js",
+            "reason": "Preserve seeded event metadata through normalization and ordinary saves."
+          }
+        ],
+        "built_hash": "1c727a34e3fee2fa6515c2a4d9311ed211ed90f9a5e57b012623e302fab67170",
+        "dist_hash": "1c2f498da374a6668ef9a849ab69c233ba048ad308dfb0a9564c882f17e88daa"
+      },
+      "ok": true
+    },
+    "google_docs_mock": {
+      "seed_hash": "26e59c46a9e591972fc9a11a7d3c82939a45cb2770e23cd18e1470d9431fa861",
+      "native_source_hash": "194f13d2c80c0cb4d62cca7ec96a7c69790ca2093381b893ede57d736c35377c",
+      "build": {
+        "source_hash": "86cabf7e53b5ccf2add26d8883f99a7052690a0b69d3c50220fd11ba5c2023b3",
+        "patches": [
+          {
+            "file": "src/context/DocsContext.jsx",
+            "reason": "Upstream loadData() writes the per-sid initial key synchronously before the first-visit check runs, so isRefresh is always true and the app never reads /state; use a per-tab sessionStorage marker to detect a refresh instead."
+          },
+          {
+            "file": "src/store/initialData.js",
+            "reason": "deepMergeWithDefaults copied every demo document the seed did not name into the seeded documents map, and the next save posted the polluted state over the shared store."
+          },
+          {
+            "file": "src/context/DocsContext.jsx",
+            "reason": "Saves need a hydration flag: nothing may be posted before the shared store has answered."
+          },
+          {
+            "file": "src/context/DocsContext.jsx",
+            "reason": "With no sid the app skipped /state, kept its five demo documents and saved them; the proxy appended its own sid, so the demo landed on the shared store."
+          },
+          {
+            "file": "src/context/DocsContext.jsx",
+            "reason": "A tab becomes writable only once the seeded state is in; a failed or empty /state must not turn the demo data into the shared state."
+          },
+          {
+            "file": "src/context/DocsContext.jsx",
+            "reason": "The save effect ran on the mount render with the demo state, before the /state fetch had settled."
+          },
+          {
+            "file": "src/pages/DocumentList.jsx",
+            "reason": "navigate('/document/' + id) dropped ?sid; after a reload of that route the app had no session id and saved its demo state."
+          },
+          {
+            "file": "src/pages/DocumentEditor.jsx",
+            "reason": "The editor's navigate('/') and copy/new document routes dropped ?sid the same way as the document list."
+          },
+          {
+            "file": "src/components/DocumentCard.jsx",
+            "reason": "The grid card put each document's entire body into its preview text node. google_docs is in 60 of 60 worlds, so this is the one app whose list page grows with the whole corpus: LA-County's renders 2.5 MB of innerText in an 8.1 MB DOM, which is why its cards are unclickable and why the render gate caught the page still loading. Only the first ~400 characters can ever be shown through line-clamp-6."
+          },
+          {
+            "file": "src/components/DocumentCard.jsx",
+            "reason": "The document card is a plain <div onClick> with no role, so the only addressable controls on the list are the clone's own six stock template cards -- 'Blank', 'Resume', 'Letter', 'Project proposal', 'Meeting notes' -- plus 'Template gallery'. Those are exactly the 7 targets the interact gate found and the 7 that timed out, which is why clicks_mostly_work fails for an app that renders 200 of 200 seeded strings. google_docs is in 60 of 60 worlds. role=button with the document's own title names every one of the company's documents and demotes the template gallery, the same fix circleci's nav needed."
+          }
+        ],
+        "built_hash": "2ff5aea80c8332c174b562b7f13896e31f601965f267d4bdbadf5244efb4a7bf",
+        "dist_hash": "3fb23cdd3765dcd96d49663da7b2c679cdcbc953f682e506cfde0da34c9950a5"
+      },
+      "ok": true
+    },
+    "google_drive_mock": {
+      "seed_hash": "7a57249b33f0160057b1d2950c6d9ca00c82b548f313e52ecf101d65bb563c42",
+      "native_source_hash": "5b092884af30ae4b871f0a1378acec6bcf3b4d426be335f2e7eb4cfe069f1047",
+      "build": {
+        "source_hash": "fee461f96787f0cfdfa53f581884092846a5e06787939bb440c2594e8914bf2b",
+        "patches": [
+          {
+            "file": "src/App.tsx",
+            "reason": "Upstream defect: Drive/ShareModal/MoveToDialog/NewButton call useToast() but App never mounts ToastProvider, so the page crashes (blank) seeded or not."
+          },
+          {
+            "file": "src/App.tsx",
+            "reason": "Upstream defect: Drive/ShareModal/MoveToDialog/NewButton call useToast() but App never mounts ToastProvider, so the page crashes (blank) seeded or not."
+          },
+          {
+            "file": "src/App.tsx",
+            "reason": "Upstream defect: Drive/ShareModal/MoveToDialog/NewButton call useToast() but App never mounts ToastProvider, so the page crashes (blank) seeded or not."
+          },
+          {
+            "file": "src/lib/mockData.ts",
+            "reason": "A 4-5 MB seeded state does not fit the browser's localStorage quota; upstream wrote the whole state into localStorage inside the load promise, so QuotaExceededError left the app on Loading forever (20 of 42 seeded Drive states are that large). The server store is the source of truth; the local copy is only a cache and may be skipped."
+          },
+          {
+            "file": "src/lib/mockData.ts",
+            "reason": "A 4-5 MB seeded state does not fit the browser's localStorage quota; upstream wrote the whole state into localStorage inside the load promise, so QuotaExceededError left the app on Loading forever (20 of 42 seeded Drive states are that large). The server store is the source of truth; the local copy is only a cache and may be skipped."
+          },
+          {
+            "file": "src/lib/mockData.ts",
+            "reason": "A 4-5 MB seeded state does not fit the browser's localStorage quota; upstream wrote the whole state into localStorage inside the load promise, so QuotaExceededError left the app on Loading forever (20 of 42 seeded Drive states are that large). The server store is the source of truth; the local copy is only a cache and may be skipped."
+          },
+          {
+            "file": "src/lib/mockData.ts",
+            "reason": "A 4-5 MB seeded state does not fit the browser's localStorage quota; upstream wrote the whole state into localStorage inside the load promise, so QuotaExceededError left the app on Loading forever (20 of 42 seeded Drive states are that large). The server store is the source of truth; the local copy is only a cache and may be skipped."
+          },
+          {
+            "file": "src/lib/mockData.ts",
+            "reason": "A 4-5 MB seeded state does not fit the browser's localStorage quota; upstream wrote the whole state into localStorage inside the load promise, so QuotaExceededError left the app on Loading forever (20 of 42 seeded Drive states are that large). The server store is the source of truth; the local copy is only a cache and may be skipped."
+          },
+          {
+            "file": "src/lib/mockData.ts",
+            "reason": "deepMergeWithDefaults recursed into items and users, both keyed objects, so every seeded world carried the 22 shipped demo items and 5 demo users beside the company's 2,531 records."
+          },
+          {
+            "file": "src/context/FileSystemContext.tsx",
+            "reason": "My Drive listed only items the viewer owns, so the per-worker proxy's currentUser emptied it: 18 of 40 worker/company pairs saw zero top-level folders (all four prx workers, 5 of 6 schweitzer)."
+          },
+          {
+            "file": "src/context/FileSystemContext.tsx",
+            "reason": "Saves need a hydration flag instead of a baseline reset: nothing may be posted before the shared store has answered, and the baseline is the harness's to set."
+          },
+          {
+            "file": "src/context/FileSystemContext.tsx",
+            "reason": "A tab that never loaded the shared state must not write to it."
+          },
+          {
+            "file": "src/context/FileSystemContext.tsx",
+            "reason": "On load the app posted its own items as the session baseline with action:\"set\", which the worker proxy refuses (403, seeding is harness-only) and the app swallowed, so in a guest nine clicks, a typed submit and a folder create produced zero further requests and an empty /go diff."
+          },
+          {
+            "file": "src/lib/utils.ts",
+            "reason": "Download the actual manifest-bound ZIP/PDF/Office bytes; preserve native filenames."
+          },
+          {
+            "file": "src/components/PreviewModal.tsx",
+            "reason": "Preview the real PDF in the browser rather than a random image."
+          },
+          {
+            "file": "src/components/FileList.tsx",
+            "reason": "Display the actual seeded file owner instead of claiming every shared file belongs to the viewer."
+          },
+          {
+            "file": "src/components/FileList.tsx",
+            "reason": "Use the current worker and directory when displaying file owners."
+          },
+          {
+            "file": "src/components/Header.tsx",
+            "reason": "Keep the application mark available in the offline worker desktop."
+          }
+        ],
+        "built_hash": "6a2b24a7b8f3d29a011330e3aaf3228ae5e051505c95747ad09747a29327a69d",
+        "dist_hash": "90060c0a01b104e6ff494bbd7f4ecc928293167e64e13faf2b271746952ce5aa"
+      },
+      "ok": true
+    },
+    "jira_mock": {
+      "seed_hash": "b6f1e4a67dadf3b5602f69f5d261a269f1fa15152c0775c3d48539f39a0d9b57",
+      "native_source_hash": "a705e41c503992f1c074a88ba7e658315746c02ecc8e338ef5cf7909cd81e465",
+      "build": {
+        "source_hash": "7c135f4e12dbf8670ff623db1b7a076ec8bda9a17dbf6b58290badb029ea3d5c",
+        "patches": [
+          {
+            "file": "src/components/CreateIssueModal.tsx",
+            "reason": "Choose the next issue number from the current project. The demo project ID p1 ignores seeded projects and creates duplicate issue keys on successive saves."
+          },
+          {
+            "file": "src/components/Sidebar.tsx",
+            "reason": "Remove the host-only state inspector from worker navigation; the worker proxy already denies that route."
+          },
+          {
+            "file": "index.html",
+            "reason": "Render a default avatar for an empty round profile image. CSS supplies the visual fallback without changing the seeded identity or saved app state."
+          },
+          {
+            "file": "src/types.ts",
+            "reason": "Accept the equivalent status-to-targets map used by existing company worlds without changing their saved transition rules."
+          },
+          {
+            "file": "src/components/IssueModal.tsx",
+            "reason": "Open issue details for both transition lists and equivalent maps; retain the configured status restrictions."
+          },
+          {
+            "file": "src/pages/Board.tsx",
+            "reason": "Apply the same declared transition rules when dragging an issue on the board."
+          }
+        ],
+        "built_hash": "63cf97495c8ab43b6c950f4fd3bdad42ba34fc53efa101d8dca461ce7c681660",
+        "dist_hash": "1ebb391831c914489d968ca047051c7f371f3f322615c2f47b2a4d2fb6bcb72c"
+      },
+      "ok": true
+    },
+    "slack_mock": {
+      "seed_hash": "81b2a72c8ffba44d1a9e1ea4454b41de95235d47643a4f5c8c40cb88588bafe2",
+      "native_source_hash": "006dc64dfd1b0238f121597c5f6d2ad4d774058b68c169ed54cfaa623b23805d",
+      "build": {
+        "source_hash": "6466874f01bdb294e23968af5e905dbdd15b6d86dc72f89a377ad06b03fac818",
+        "patches": [
+          {
+            "file": "src/App.jsx",
+            "reason": "The index redirect below reads the loaded state to pick a channel that exists."
+          },
+          {
+            "file": "src/App.jsx",
+            "reason": "Upstream always redirects / to /channel/general; seeded workspaces name their own channels, so the first view was 'Channel not found'."
+          },
+          {
+            "file": "src/components/ChannelView.jsx",
+            "reason": "ChannelView redirects unknown channel ids instead of dead-ending."
+          },
+          {
+            "file": "src/components/ChannelView.jsx",
+            "reason": "A route naming a channel the seeded state does not have showed 'Channel not found' as the worker's first screen; redirect to an existing channel and keep ?sid."
+          }
+        ],
+        "built_hash": "8b76bf5a9069d24e3e4ba8fd2d153c686ae9a3bf6bf4a2d3859b4e4458c6348c",
+        "dist_hash": "13c278a31f0ff85ab1700958a2b39556398a040dc27cb1b4334c0fa78d104ae2"
+      },
+      "ok": true
+    }
+  },
+  "access": [
+    {
+      "app": "github_mock",
+      "worker": "w-product-lead",
+      "scoped_collections": [],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "github_mock",
+      "worker": "w-designer",
+      "scoped_collections": [],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "github_mock",
+      "worker": "w-backend",
+      "scoped_collections": [],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "github_mock",
+      "worker": "w-frontend",
+      "scoped_collections": [],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "gmail_mock",
+      "worker": "w-product-lead",
+      "scoped_collections": [
+        "emails",
+        "drafts"
+      ],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "gmail_mock",
+      "worker": "w-designer",
+      "scoped_collections": [
+        "emails",
+        "drafts"
+      ],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "gmail_mock",
+      "worker": "w-backend",
+      "scoped_collections": [
+        "emails",
+        "drafts"
+      ],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "gmail_mock",
+      "worker": "w-frontend",
+      "scoped_collections": [
+        "emails",
+        "drafts"
+      ],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "google_calendar_mock",
+      "worker": "w-product-lead",
+      "scoped_collections": [
+        "events"
+      ],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "google_calendar_mock",
+      "worker": "w-designer",
+      "scoped_collections": [
+        "events"
+      ],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "google_calendar_mock",
+      "worker": "w-backend",
+      "scoped_collections": [
+        "events"
+      ],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "google_calendar_mock",
+      "worker": "w-frontend",
+      "scoped_collections": [
+        "events"
+      ],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "google_docs_mock",
+      "worker": "w-product-lead",
+      "scoped_collections": [
+        "documents",
+        "comments"
+      ],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "google_docs_mock",
+      "worker": "w-designer",
+      "scoped_collections": [
+        "documents",
+        "comments"
+      ],
+      "forbidden_edits_rejected": [
+        "documents/invoice-hl-2608"
+      ],
+      "ok": true
+    },
+    {
+      "app": "google_docs_mock",
+      "worker": "w-backend",
+      "scoped_collections": [
+        "documents",
+        "comments"
+      ],
+      "forbidden_edits_rejected": [
+        "documents/invoice-hl-2608"
+      ],
+      "ok": true
+    },
+    {
+      "app": "google_docs_mock",
+      "worker": "w-frontend",
+      "scoped_collections": [
+        "documents",
+        "comments"
+      ],
+      "forbidden_edits_rejected": [
+        "documents/invoice-hl-2608"
+      ],
+      "ok": true
+    },
+    {
+      "app": "google_drive_mock",
+      "worker": "w-product-lead",
+      "scoped_collections": [
+        "items"
+      ],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "google_drive_mock",
+      "worker": "w-designer",
+      "scoped_collections": [
+        "items"
+      ],
+      "forbidden_edits_rejected": [
+        "items/folder-finance"
+      ],
+      "ok": true
+    },
+    {
+      "app": "google_drive_mock",
+      "worker": "w-backend",
+      "scoped_collections": [
+        "items"
+      ],
+      "forbidden_edits_rejected": [
+        "items/folder-finance"
+      ],
+      "ok": true
+    },
+    {
+      "app": "google_drive_mock",
+      "worker": "w-frontend",
+      "scoped_collections": [
+        "items"
+      ],
+      "forbidden_edits_rejected": [
+        "items/folder-finance"
+      ],
+      "ok": true
+    },
+    {
+      "app": "jira_mock",
+      "worker": "w-product-lead",
+      "scoped_collections": [
+        "comments"
+      ],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "jira_mock",
+      "worker": "w-designer",
+      "scoped_collections": [
+        "comments"
+      ],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "jira_mock",
+      "worker": "w-backend",
+      "scoped_collections": [
+        "comments"
+      ],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "jira_mock",
+      "worker": "w-frontend",
+      "scoped_collections": [
+        "comments"
+      ],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "slack_mock",
+      "worker": "w-product-lead",
+      "scoped_collections": [
+        "messages",
+        "threads",
+        "dms",
+        "channels"
+      ],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "slack_mock",
+      "worker": "w-designer",
+      "scoped_collections": [
+        "messages",
+        "threads",
+        "dms",
+        "channels"
+      ],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "slack_mock",
+      "worker": "w-backend",
+      "scoped_collections": [
+        "messages",
+        "threads",
+        "dms",
+        "channels"
+      ],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    },
+    {
+      "app": "slack_mock",
+      "worker": "w-frontend",
+      "scoped_collections": [
+        "messages",
+        "threads",
+        "dms",
+        "channels"
+      ],
+      "forbidden_edits_rejected": [],
+      "ok": true
+    }
+  ],
+  "clock": {
+    "instant": "2026-09-01T00:00:00+00:00",
+    "timezone": "UTC"
+  },
+  "downloads": [],
+  "rendered": [
+    {
+      "app": "github_mock",
+      "worker": "w-product-lead",
+      "ok": true,
+      "seconds": 1.243,
+      "text_chars": 364,
+      "excerpt": "/\nPull requests\nIssues\nCodespaces\nMarketplace\nExplore\n7\n▼\n▼\nTop Repositories\nRecent activity\nWhen you have activity, we'll show it here.\nHome\nDiscover interesting projects\n\nExplore what others are building on GitMock.\n\nExplore\nAll Repositories\nnolan-price / relaydesk\nPrivate\nStar\n\nRelaydesk application and maintained engineering records\n\nRuby\n0\nUpdated 8/31/2026",
+      "page_errors": []
+    },
+    {
+      "app": "github_mock",
+      "worker": "w-designer",
+      "ok": true,
+      "seconds": 1.188,
+      "text_chars": 364,
+      "excerpt": "/\nPull requests\nIssues\nCodespaces\nMarketplace\nExplore\n7\n▼\n▼\nTop Repositories\nRecent activity\nWhen you have activity, we'll show it here.\nHome\nDiscover interesting projects\n\nExplore what others are building on GitMock.\n\nExplore\nAll Repositories\nnolan-price / relaydesk\nPrivate\nStar\n\nRelaydesk application and maintained engineering records\n\nRuby\n0\nUpdated 8/31/2026",
+      "page_errors": []
+    },
+    {
+      "app": "github_mock",
+      "worker": "w-backend",
+      "ok": true,
+      "seconds": 1.253,
+      "text_chars": 364,
+      "excerpt": "/\nPull requests\nIssues\nCodespaces\nMarketplace\nExplore\n7\n▼\n▼\nTop Repositories\nRecent activity\nWhen you have activity, we'll show it here.\nHome\nDiscover interesting projects\n\nExplore what others are building on GitMock.\n\nExplore\nAll Repositories\nnolan-price / relaydesk\nPrivate\nStar\n\nRelaydesk application and maintained engineering records\n\nRuby\n0\nUpdated 8/31/2026",
+      "page_errors": []
+    },
+    {
+      "app": "github_mock",
+      "worker": "w-frontend",
+      "ok": true,
+      "seconds": 1.256,
+      "text_chars": 364,
+      "excerpt": "/\nPull requests\nIssues\nCodespaces\nMarketplace\nExplore\n7\n▼\n▼\nTop Repositories\nRecent activity\nWhen you have activity, we'll show it here.\nHome\nDiscover interesting projects\n\nExplore what others are building on GitMock.\n\nExplore\nAll Repositories\nnolan-price / relaydesk\nPrivate\nStar\n\nRelaydesk application and maintained engineering records\n\nRuby\n0\nUpdated 8/31/2026",
+      "page_errors": []
+    },
+    {
+      "app": "gmail_mock",
+      "worker": "w-product-lead",
+      "ok": true,
+      "seconds": 1.112,
+      "text_chars": 6405,
+      "excerpt": "Compose\nInbox\n28\nStarred\n7\nImportant\n45\nSnoozed\nSent\nDrafts\n1\nMore\nLabels\nRelaydesk\nCustomer support\nDelivery reviews\nCustomer research\nFinance\nOffice and coverage\nPrimary\n28\nSocial\nPromotions\nUpdates\nForums\nToday\nAda Finch(8)\nRe: September 3 room use and delivery calls-Mara, One team lunch total by September 2 would be easiest. I'll send you any individual replies I receive so we can avoid counting someone twice. Thanks, Ada\n12:59 PM\nAda Finch(14)\nSeptember lunch numbers due tomorrow-Mara, Please send one delivery-team lunch total by September 2. Anyone with dietary requirements can send them directly to me. The smaller meeting room is boo\n12:55 PM\nAda Finch\nSeptember 3: details needed to find another room-Mara, If any September 3 delivery call needs office space, send me its time and whe",
+      "page_errors": []
+    },
+    {
+      "app": "gmail_mock",
+      "worker": "w-designer",
+      "ok": true,
+      "seconds": 1.051,
+      "text_chars": 4268,
+      "excerpt": "Compose\nInbox\n8\nStarred\n2\nImportant\n5\nSnoozed\nSent\nDrafts\n1\nMore\nLabels\nRelaydesk\nCustomer support\nDelivery reviews\nCustomer research\nFinance\nOffice and coverage\nPrimary\n8\nSocial\nPromotions\nUpdates\nForums\nToday\nAda Finch(5)\nPlease clear delivery papers from the interview room-Mara and Imani, Please collect any delivery papers from the smaller meeting room before the September 3 interviews. If anything needs setting aside during the\n12:50 PM\nAda Finch(2)\nSeptember 3 interview room; lunch numbers by tomorrow-Morning all, The smaller meeting room is reserved for interviews on September 3. Please check with me if you need space for a client call. Send your lunch num\n12:35 PM\nYesterday\nOwen Kerr(5)\nRe: Account census and the summer observations-Imani, That works. When you send the summary, incl",
+      "page_errors": []
+    },
+    {
+      "app": "gmail_mock",
+      "worker": "w-backend",
+      "ok": true,
+      "seconds": 1.077,
+      "text_chars": 4406,
+      "excerpt": "Compose\nInbox\n8\nStarred\n9\nImportant\n28\nSnoozed\nSent\nDrafts\n1\nMore\nLabels\nRelaydesk\nCustomer support\nDelivery reviews\nCustomer research\nFinance\nOffice and coverage\nPrimary\n8\nSocial\nPromotions\nUpdates\nForums\nToday\nAda Finch(4)\nRe: September 3: alternative space for delivery video calls-Theo, I'll check. What time window do you need? The smaller room is booked for interviews, and I haven't confirmed an alternative yet. I'll let you know what i\n12:58 PM\nNolan Price(12)\nRD-212: preparation before September 18-Theo, The background-job dependency update needs to fit before the September 18 maintenance deadline. At the scheduled review, please identify what you need fr\n12:40 PM\nAda Finch\nSeptember 3 interview room; lunch numbers by tomorrow-Morning all, The smaller meeting room is reserved for int",
+      "page_errors": []
+    },
+    {
+      "app": "gmail_mock",
+      "worker": "w-frontend",
+      "ok": true,
+      "seconds": 1.078,
+      "text_chars": 2672,
+      "excerpt": "Compose\nInbox\n5\nStarred\n1\nImportant\n4\nSnoozed\nSent\nDrafts\n1\nMore\nLabels\nRelaydesk\nCustomer support\nDelivery reviews\nCustomer research\nFinance\nOffice and coverage\nPrimary\n5\nSocial\nPromotions\nUpdates\nForums\nToday\nAda Finch(3)\nSeptember 3 interview room; lunch numbers by tomorrow-Morning all, The smaller meeting room is reserved for interviews on September 3. Please check with me if you need space for a client call. Send your lunch num\n12:35 PM\nPetra Singh(8)\nSupport description for the August menu correction-June, Could you send me two sentences on the menu correction reviewed August 28? I'd like to explain how the menu opens upward when a request is near the botto\n12:30 PM\nYesterday\nPetra Singh(16)\nRe: Copperline: update for Luis-Thanks, I'll reply on Luis's original export thread with that",
+      "page_errors": []
+    },
+    {
+      "app": "google_calendar_mock",
+      "worker": "w-product-lead",
+      "ok": true,
+      "seconds": 1.111,
+      "text_chars": 800,
+      "excerpt": "31\nCalendar\nToday\nSeptember 2026\nWeek\nCreate\nSeptember 2026\nS\nM\nT\nW\nT\nF\nS\n30\n31\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n1\n2\n3\nMy calendars\n✓\nRelaydesk delivery\n\nTip:\nDrag and drop events to reschedule.\n\nSUN\n30\nMON\n31\nTUE\n1\nWED\n2\nTHU\n3\nFRI\n4\nSAT\n5\n1 AM\n2 AM\n3 AM\n4 AM\n5 AM\n6 AM\n7 AM\n8 AM\n9 AM\n10 AM\n11 AM\n12 PM\n1 PM\n2 PM\n3 PM\n4 PM\n5 PM\n6 PM\n7 PM\n8 PM\n9 PM\n10 PM\n11 PM\nSeptember first cycle opening and capacity\n1:00 PM – 1:45 PM\nAugust delivery summary review with Elise\n6:00 PM – 6:45 PM\nSeptember 4 leave: route open frontend questions\n7:00 PM – 7:25 PM\nDependency review and September support capacity\n12:10 PM – 12:30 PM\nOffice arrangements and lunch response\n12:45 PM – 1:00 PM\nDelivery planning\n1:30 PM – 2:15 PM\nRelaydesk client review\n6:00 PM – 6:45 PM",
+      "page_errors": []
+    },
+    {
+      "app": "google_calendar_mock",
+      "worker": "w-designer",
+      "ok": true,
+      "seconds": 1.13,
+      "text_chars": 715,
+      "excerpt": "31\nCalendar\nToday\nSeptember 2026\nWeek\nCreate\nSeptember 2026\nS\nM\nT\nW\nT\nF\nS\n30\n31\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n1\n2\n3\nMy calendars\n✓\nRelaydesk delivery\n\nTip:\nDrag and drop events to reschedule.\n\nSUN\n30\nMON\n31\nTUE\n1\nWED\n2\nTHU\n3\nFRI\n4\nSAT\n5\n1 AM\n2 AM\n3 AM\n4 AM\n5 AM\n6 AM\n7 AM\n8 AM\n9 AM\n10 AM\n11 AM\n12 PM\n1 PM\n2 PM\n3 PM\n4 PM\n5 PM\n6 PM\n7 PM\n8 PM\n9 PM\n10 PM\n11 PM\nSeptember first cycle opening and capacity\n1:00 PM – 1:45 PM\nAugust delivery summary review with Elise\n6:00 PM – 6:45 PM\nCheck September 3 hiring-panel logistics\n12:40 PM – 12:55 PM\nDelivery planning\n1:30 PM – 2:15 PM\nRelaydesk client review\n6:00 PM – 6:45 PM\nSupport and research catch-up\n2:00 PM – 2:30 PM",
+      "page_errors": []
+    },
+    {
+      "app": "google_calendar_mock",
+      "worker": "w-backend",
+      "ok": true,
+      "seconds": 1.12,
+      "text_chars": 763,
+      "excerpt": "31\nCalendar\nToday\nSeptember 2026\nWeek\nCreate\nSeptember 2026\nS\nM\nT\nW\nT\nF\nS\n30\n31\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n1\n2\n3\nMy calendars\n✓\nRelaydesk delivery\n\nTip:\nDrag and drop events to reschedule.\n\nSUN\n30\nMON\n31\nTUE\n1\nWED\n2\nTHU\n3\nFRI\n4\nSAT\n5\n1 AM\n2 AM\n3 AM\n4 AM\n5 AM\n6 AM\n7 AM\n8 AM\n9 AM\n10 AM\n11 AM\n12 PM\n1 PM\n2 PM\n3 PM\n4 PM\n5 PM\n6 PM\n7 PM\n8 PM\n9 PM\n10 PM\n11 PM\nSeptember first cycle opening and capacity\n1:00 PM – 1:45 PM\nRevise the draft request-state contract\n2:30 PM – 3:30 PM\nAugust delivery summary review with Elise\n6:00 PM – 6:45 PM\nDependency review and September support capacity\n12:10 PM – 12:30 PM\nDelivery planning\n1:30 PM – 2:15 PM\nCode clinic\n3:00 PM – 3:30 PM\nRelaydesk client review\n6:00 PM – 6:45 PM",
+      "page_errors": []
+    },
+    {
+      "app": "google_calendar_mock",
+      "worker": "w-frontend",
+      "ok": true,
+      "seconds": 1.067,
+      "text_chars": 753,
+      "excerpt": "31\nCalendar\nToday\nSeptember 2026\nWeek\nCreate\nSeptember 2026\nS\nM\nT\nW\nT\nF\nS\n30\n31\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n1\n2\n3\nMy calendars\n✓\nRelaydesk delivery\n\nTip:\nDrag and drop events to reschedule.\n\nSUN\n30\nMON\n31\nTUE\n1\nWED\n2\nTHU\n3\nFRI\n4\nSAT\n5\n1 AM\n2 AM\n3 AM\n4 AM\n5 AM\n6 AM\n7 AM\n8 AM\n9 AM\n10 AM\n11 AM\n12 PM\n1 PM\n2 PM\n3 PM\n4 PM\n5 PM\n6 PM\n7 PM\n8 PM\n9 PM\n10 PM\n11 PM\nSeptember first cycle opening and capacity\n1:00 PM – 1:45 PM\nUpdate the return-filter branch\n2:30 PM – 3:30 PM\nAugust delivery summary review with Elise\n6:00 PM – 6:45 PM\nSeptember 4 leave: route open frontend questions\n7:00 PM – 7:25 PM\nDelivery planning\n1:30 PM – 2:15 PM\nCode clinic\n3:00 PM – 3:30 PM\nRelaydesk client review\n6:00 PM – 6:45 PM",
+      "page_errors": []
+    },
+    {
+      "app": "google_docs_mock",
+      "worker": "w-product-lead",
+      "ok": true,
+      "seconds": 1.143,
+      "text_chars": 11429,
+      "excerpt": "Docs\nStart a new document\nTemplate gallery\n\nBlank\n\nResume\n\nResume\n\nLetter\n\nLetter\n\nProject proposal\n\nProject proposal\n\nMeeting notes\n\nMeeting notes\n\nRecent documents\nLast modified\n\nElise accepted the August work covering archive filter language, header-only exports and menu positioning. The monthly ledger records 38 completed items. Return filters remain in review. The request-state proposal remains under development. Petra will keep forwarding concrete customer examples through the existing support channel.\n\nAugust delivery review notes\nAug 31, 2026\n\nRelaydesk — August deliveryMara Ellison | 2026-08-31Release: rel-aug | Tag: 2026.08Completed items: 38 | Business acceptance: Elise Park (p-elise), 2026-08-31Archive filter wording, empty exports and request-menu positioning were accepted. Wo",
+      "page_errors": []
+    },
+    {
+      "app": "google_docs_mock",
+      "worker": "w-designer",
+      "ok": true,
+      "seconds": 1.131,
+      "text_chars": 10541,
+      "excerpt": "Docs\nStart a new document\nTemplate gallery\n\nBlank\n\nResume\n\nResume\n\nLetter\n\nLetter\n\nProject proposal\n\nProject proposal\n\nMeeting notes\n\nMeeting notes\n\nRecent documents\nLast modified\n\nThe team turns customer needs into small changes that can be reviewed. Keep the reason for a change and an observable acceptance example with the work. Mara maintains priorities; Imani owns design findings; Theo and June own their engineering assessments. Elise accepts business scope. Nolan authorizes production releases. Ask Petra for support context before interpreting a forwarded screenshot as \n\nAcceptance 7fed4ad153c6\nSep 1, 2026\n\nElise accepted the August work covering archive filter language, header-only exports and menu positioning. The monthly ledger records 38 completed items. Return filters remain in r",
+      "page_errors": []
+    },
+    {
+      "app": "google_docs_mock",
+      "worker": "w-backend",
+      "ok": true,
+      "seconds": 1.133,
+      "text_chars": 10541,
+      "excerpt": "Docs\nStart a new document\nTemplate gallery\n\nBlank\n\nResume\n\nResume\n\nLetter\n\nLetter\n\nProject proposal\n\nProject proposal\n\nMeeting notes\n\nMeeting notes\n\nRecent documents\nLast modified\n\nThe team turns customer needs into small changes that can be reviewed. Keep the reason for a change and an observable acceptance example with the work. Mara maintains priorities; Imani owns design findings; Theo and June own their engineering assessments. Elise accepts business scope. Nolan authorizes production releases. Ask Petra for support context before interpreting a forwarded screenshot as \n\nAcceptance 7fed4ad153c6\nSep 1, 2026\n\nElise accepted the August work covering archive filter language, header-only exports and menu positioning. The monthly ledger records 38 completed items. Return filters remain in r",
+      "page_errors": []
+    },
+    {
+      "app": "google_docs_mock",
+      "worker": "w-frontend",
+      "ok": true,
+      "seconds": 1.131,
+      "text_chars": 10541,
+      "excerpt": "Docs\nStart a new document\nTemplate gallery\n\nBlank\n\nResume\n\nResume\n\nLetter\n\nLetter\n\nProject proposal\n\nProject proposal\n\nMeeting notes\n\nMeeting notes\n\nRecent documents\nLast modified\n\nThe team turns customer needs into small changes that can be reviewed. Keep the reason for a change and an observable acceptance example with the work. Mara maintains priorities; Imani owns design findings; Theo and June own their engineering assessments. Elise accepts business scope. Nolan authorizes production releases. Ask Petra for support context before interpreting a forwarded screenshot as \n\nAcceptance 7fed4ad153c6\nSep 1, 2026\n\nElise accepted the August work covering archive filter language, header-only exports and menu positioning. The monthly ledger records 38 completed items. Return filters remain in r",
+      "page_errors": []
+    },
+    {
+      "app": "google_drive_mock",
+      "worker": "w-product-lead",
+      "ok": true,
+      "seconds": 1.038,
+      "text_chars": 1313,
+      "excerpt": "Drive\nNew\nMy Drive\nRelaydesk\nEngagement finance\nStarred\nRecent\nTrash\nStorage\n\n0.0 MB of 15 GB used\n\nRecent\nName\nOwner\nLast modified\nFile size\nAugust delivery review notes\nme\nAug 31, 2026\n0 Bytes\nArchive filters and export edge cases\nme\nAug 31, 2026\n0 Bytes\nDelivery ledger.xlsx\nme\nAug 31, 2026\n5.11 KB\nSeptember coverage notes\nme\nAug 31, 2026\n0 Bytes\nAttachment lookup timings.csv\nTheo Calder\nAug 28, 2026\n139 Bytes\nAugust regression report.txt\nTheo Calder\nAug 28, 2026\n524 Bytes\nRequest decision label.ts\nJune Navarro\nAug 28, 2026\n329 Bytes\nAugust account census.csv\nOwen Kerr\nAug 28, 2026\n510 Bytes\nRequest serializer.rb\nTheo Calder\nAug 28, 2026\n246 Bytes\nAugust delivery services\nme\nAug 28, 2026\n0 Bytes\nReplacement desk chairs\nSimon Vale\nAug 25, 2026\n0 Bytes\nRequest data contract\nTheo Calder\nAug",
+      "page_errors": []
+    },
+    {
+      "app": "google_drive_mock",
+      "worker": "w-designer",
+      "ok": true,
+      "seconds": 1.094,
+      "text_chars": 1382,
+      "excerpt": "Drive\nNew\nMy Drive\nStarred\nRecent\nTrash\nStorage\n\n0.0 MB of 15 GB used\n\nRecent\nName\nOwner\nLast modified\nFile size\nAugust delivery review notes\nMara Ellison\nAug 31, 2026\n0 Bytes\nArchive filters and export edge cases\nMara Ellison\nAug 31, 2026\n0 Bytes\nDelivery ledger.xlsx\nMara Ellison\nAug 31, 2026\n5.11 KB\nSeptember coverage notes\nMara Ellison\nAug 31, 2026\n0 Bytes\nAttachment lookup timings.csv\nTheo Calder\nAug 28, 2026\n139 Bytes\nAugust regression report.txt\nTheo Calder\nAug 28, 2026\n524 Bytes\nRequest decision label.ts\nJune Navarro\nAug 28, 2026\n329 Bytes\nAugust account census.csv\nOwen Kerr\nAug 28, 2026\n510 Bytes\nRequest serializer.rb\nTheo Calder\nAug 28, 2026\n246 Bytes\nRequest data contract\nTheo Calder\nAug 12, 2026\n0 Bytes\nSummer request workflow observations\nme\nAug 7, 2026\n0 Bytes\nUpload recovery ",
+      "page_errors": []
+    },
+    {
+      "app": "google_drive_mock",
+      "worker": "w-backend",
+      "ok": true,
+      "seconds": 1.097,
+      "text_chars": 1336,
+      "excerpt": "Drive\nNew\nMy Drive\nStarred\nRecent\nTrash\nStorage\n\n0.0 MB of 15 GB used\n\nRecent\nName\nOwner\nLast modified\nFile size\nAugust delivery review notes\nMara Ellison\nAug 31, 2026\n0 Bytes\nArchive filters and export edge cases\nMara Ellison\nAug 31, 2026\n0 Bytes\nDelivery ledger.xlsx\nMara Ellison\nAug 31, 2026\n5.11 KB\nSeptember coverage notes\nMara Ellison\nAug 31, 2026\n0 Bytes\nAttachment lookup timings.csv\nme\nAug 28, 2026\n139 Bytes\nAugust regression report.txt\nme\nAug 28, 2026\n524 Bytes\nRequest decision label.ts\nJune Navarro\nAug 28, 2026\n329 Bytes\nAugust account census.csv\nOwen Kerr\nAug 28, 2026\n510 Bytes\nRequest serializer.rb\nme\nAug 28, 2026\n246 Bytes\nRequest data contract\nme\nAug 12, 2026\n0 Bytes\nSummer request workflow observations\nImani Reed\nAug 7, 2026\n0 Bytes\nUpload recovery and export tracing\nMara Elli",
+      "page_errors": []
+    },
+    {
+      "app": "google_drive_mock",
+      "worker": "w-frontend",
+      "ok": true,
+      "seconds": 1.113,
+      "text_chars": 1370,
+      "excerpt": "Drive\nNew\nMy Drive\nStarred\nRecent\nTrash\nStorage\n\n0.0 MB of 15 GB used\n\nRecent\nName\nOwner\nLast modified\nFile size\nAugust delivery review notes\nMara Ellison\nAug 31, 2026\n0 Bytes\nArchive filters and export edge cases\nMara Ellison\nAug 31, 2026\n0 Bytes\nDelivery ledger.xlsx\nMara Ellison\nAug 31, 2026\n5.11 KB\nSeptember coverage notes\nMara Ellison\nAug 31, 2026\n0 Bytes\nAttachment lookup timings.csv\nTheo Calder\nAug 28, 2026\n139 Bytes\nAugust regression report.txt\nTheo Calder\nAug 28, 2026\n524 Bytes\nRequest decision label.ts\nme\nAug 28, 2026\n329 Bytes\nAugust account census.csv\nOwen Kerr\nAug 28, 2026\n510 Bytes\nRequest serializer.rb\nTheo Calder\nAug 28, 2026\n246 Bytes\nRequest data contract\nTheo Calder\nAug 12, 2026\n0 Bytes\nSummer request workflow observations\nImani Reed\nAug 7, 2026\n0 Bytes\nUpload recovery an",
+      "page_errors": []
+    },
+    {
+      "app": "jira_mock",
+      "worker": "w-product-lead",
+      "ok": true,
+      "seconds": 1.154,
+      "text_chars": 8536,
+      "excerpt": "R\nRelaydesk\n\nSoftware\n\nCreate\nDashboard\nBoard\nBacklog\nReports\nSettings\nAdvanced Search\n\nMara Ellison\n\nmara@harborloom.dev\n\nAdvanced Search\nAll Types\nStory\nTask\nBug\nEpic\nAll Statuses\nTo Do\nIn Progress\nIn Review\nDone\nAll Priorities\nHighest\nHigh\nMedium\nLow\nLowest\nAll Assignees\nUnassigned\nMara Ellison\nImani Reed\nTheo Calder\nJune Navarro\nElise Park\nNolan Price\nPetra Singh\n\tKEY\tSUMMARY\tSTATUS\tPRIORITY\tASSIGNEE\n\tRD-101\tPreserve request titles during import\tDone\tMedium\t\nTheo Calder\n\n\tRD-102\tAdd labels to invitation fields\tDone\tMedium\t\nJune Navarro\n\n\tRD-103\tClarify request submission confirmation\tDone\tMedium\t\nImani Reed\n\n\tRD-104\tPrevent duplicate invitation tokens\tDone\tMedium\t\nTheo Calder\n\n\tRD-105\tKeep search text after a failed request\tDone\tMedium\t\nJune Navarro\n\n\tRD-106\tPublish the support escalat",
+      "page_errors": []
+    },
+    {
+      "app": "jira_mock",
+      "worker": "w-designer",
+      "ok": true,
+      "seconds": 1.095,
+      "text_chars": 8593,
+      "excerpt": "R\nRelaydesk\n\nSoftware\n\nCreate\nDashboard\nBoard\nBacklog\nReports\nSettings\nAdvanced Search\n\nImani Reed\n\nimani@harborloom.dev\n\nAdvanced Search\nAll Types\nStory\nTask\nBug\nEpic\nAll Statuses\nTo Do\nIn Progress\nIn Review\nDone\nAll Priorities\nHighest\nHigh\nMedium\nLow\nLowest\nAll Assignees\nUnassigned\nMara Ellison\nImani Reed\nTheo Calder\nJune Navarro\nElise Park\nNolan Price\nPetra Singh\n\tKEY\tSUMMARY\tSTATUS\tPRIORITY\tASSIGNEE\n\tRD-101\tPreserve request titles during import\tDone\tMedium\t\nTheo Calder\n\n\tRD-102\tAdd labels to invitation fields\tDone\tMedium\t\nJune Navarro\n\n\tRD-103\tClarify request submission confirmation\tDone\tMedium\t\nImani Reed\n\n\tRD-104\tPrevent duplicate invitation tokens\tDone\tMedium\t\nTheo Calder\n\n\tRD-105\tKeep search text after a failed request\tDone\tMedium\t\nJune Navarro\n\n\tRD-106\tPublish the support escalati",
+      "page_errors": []
+    },
+    {
+      "app": "jira_mock",
+      "worker": "w-backend",
+      "ok": true,
+      "seconds": 1.128,
+      "text_chars": 8593,
+      "excerpt": "R\nRelaydesk\n\nSoftware\n\nCreate\nDashboard\nBoard\nBacklog\nReports\nSettings\nAdvanced Search\n\nTheo Calder\n\ntheo@harborloom.dev\n\nAdvanced Search\nAll Types\nStory\nTask\nBug\nEpic\nAll Statuses\nTo Do\nIn Progress\nIn Review\nDone\nAll Priorities\nHighest\nHigh\nMedium\nLow\nLowest\nAll Assignees\nUnassigned\nMara Ellison\nImani Reed\nTheo Calder\nJune Navarro\nElise Park\nNolan Price\nPetra Singh\n\tKEY\tSUMMARY\tSTATUS\tPRIORITY\tASSIGNEE\n\tRD-101\tPreserve request titles during import\tDone\tMedium\t\nTheo Calder\n\n\tRD-102\tAdd labels to invitation fields\tDone\tMedium\t\nJune Navarro\n\n\tRD-103\tClarify request submission confirmation\tDone\tMedium\t\nImani Reed\n\n\tRD-104\tPrevent duplicate invitation tokens\tDone\tMedium\t\nTheo Calder\n\n\tRD-105\tKeep search text after a failed request\tDone\tMedium\t\nJune Navarro\n\n\tRD-106\tPublish the support escalati",
+      "page_errors": []
+    },
+    {
+      "app": "jira_mock",
+      "worker": "w-frontend",
+      "ok": true,
+      "seconds": 1.136,
+      "text_chars": 8594,
+      "excerpt": "R\nRelaydesk\n\nSoftware\n\nCreate\nDashboard\nBoard\nBacklog\nReports\nSettings\nAdvanced Search\n\nJune Navarro\n\njune@harborloom.dev\n\nAdvanced Search\nAll Types\nStory\nTask\nBug\nEpic\nAll Statuses\nTo Do\nIn Progress\nIn Review\nDone\nAll Priorities\nHighest\nHigh\nMedium\nLow\nLowest\nAll Assignees\nUnassigned\nMara Ellison\nImani Reed\nTheo Calder\nJune Navarro\nElise Park\nNolan Price\nPetra Singh\n\tKEY\tSUMMARY\tSTATUS\tPRIORITY\tASSIGNEE\n\tRD-101\tPreserve request titles during import\tDone\tMedium\t\nTheo Calder\n\n\tRD-102\tAdd labels to invitation fields\tDone\tMedium\t\nJune Navarro\n\n\tRD-103\tClarify request submission confirmation\tDone\tMedium\t\nImani Reed\n\n\tRD-104\tPrevent duplicate invitation tokens\tDone\tMedium\t\nTheo Calder\n\n\tRD-105\tKeep search text after a failed request\tDone\tMedium\t\nJune Navarro\n\n\tRD-106\tPublish the support escalat",
+      "page_errors": []
+    },
+    {
+      "app": "slack_mock",
+      "worker": "w-product-lead",
+      "ok": true,
+      "seconds": 1.133,
+      "text_chars": 75281,
+      "excerpt": "Harbor Loom Software\n▾\nAll unreads\nThreads\nAll DMs\nMentions & reactions\nSearch\n▾\nChannels\n+\n#\nstudio\nrelaydesk-delivery\nrelaydesk-engineering\nproduct-research\n+\nBrowse channels\n▾\nDirect messages\n+\nSimon Vale\nMara Ellison\n🔒\nrelaydesk-delivery\n☆\n|\n8\n|\nAdd a topic\nMonday, September 1st\nMara Ellison\n12 months ago\nWelcome to Relaydesk delivery. The existing application is now in our review process. I’ll manage priorities; Elise owns business acceptance and Nolan authorizes production releases. For planning, add the customer reason and an example of the expected behavior to each change. Responsibilities are in Working together on Relaydesk (doc-working).\nTuesday, September 30th\nElise Park\n11 months ago\nSeptember's summary is accepted: 32 completed items, including import text handling, invitatio",
+      "page_errors": []
+    },
+    {
+      "app": "slack_mock",
+      "worker": "w-designer",
+      "ok": true,
+      "seconds": 1.127,
+      "text_chars": 75359,
+      "excerpt": "Harbor Loom Software\n▾\nAll unreads\nThreads\nAll DMs\nMentions & reactions\nSearch\n▾\nChannels\n+\n#\nstudio\nrelaydesk-delivery\nrelaydesk-engineering\nproduct-research\n+\nBrowse channels\n▾\nDirect messages\n+\nPetra Singh\nJune Navarro\nImani Reed\n🔒\nrelaydesk-delivery\n☆\n|\n8\n|\nAdd a topic\nMonday, September 1st\nMara Ellison\n12 months ago\nWelcome to Relaydesk delivery. The existing application is now in our review process. I’ll manage priorities; Elise owns business acceptance and Nolan authorizes production releases. For planning, add the customer reason and an example of the expected behavior to each change. Responsibilities are in Working together on Relaydesk (doc-working).\nTuesday, September 30th\nElise Park\n11 months ago\nSeptember's summary is accepted: 32 completed items, including import text handlin",
+      "page_errors": []
+    },
+    {
+      "app": "slack_mock",
+      "worker": "w-backend",
+      "ok": true,
+      "seconds": 1.106,
+      "text_chars": 75330,
+      "excerpt": "Harbor Loom Software\n▾\nAll unreads\nThreads\nAll DMs\nMentions & reactions\nSearch\n▾\nChannels\n+\n#\nstudio\nrelaydesk-delivery\nrelaydesk-engineering\n+\nBrowse channels\n▾\nDirect messages\n+\nNolan Price\nTheo Calder\n🔒\nrelaydesk-delivery\n☆\n|\n8\n|\nAdd a topic\nMonday, September 1st\nMara Ellison\n12 months ago\nWelcome to Relaydesk delivery. The existing application is now in our review process. I’ll manage priorities; Elise owns business acceptance and Nolan authorizes production releases. For planning, add the customer reason and an example of the expected behavior to each change. Responsibilities are in Working together on Relaydesk (doc-working).\nTuesday, September 30th\nElise Park\n11 months ago\nSeptember's summary is accepted: 32 completed items, including import text handling, invitation labels and subm",
+      "page_errors": []
+    },
+    {
+      "app": "slack_mock",
+      "worker": "w-frontend",
+      "ok": true,
+      "seconds": 1.085,
+      "text_chars": 75347,
+      "excerpt": "Harbor Loom Software\n▾\nAll unreads\nThreads\nAll DMs\nMentions & reactions\nSearch\n▾\nChannels\n+\n#\nstudio\nrelaydesk-delivery\nrelaydesk-engineering\nproduct-research\n+\nBrowse channels\n▾\nDirect messages\n+\nImani Reed\nJune Navarro\n🔒\nrelaydesk-delivery\n☆\n|\n8\n|\nAdd a topic\nMonday, September 1st\nMara Ellison\n12 months ago\nWelcome to Relaydesk delivery. The existing application is now in our review process. I’ll manage priorities; Elise owns business acceptance and Nolan authorizes production releases. For planning, add the customer reason and an example of the expected behavior to each change. Responsibilities are in Working together on Relaydesk (doc-working).\nTuesday, September 30th\nElise Park\n11 months ago\nSeptember's summary is accepted: 32 completed items, including import text handling, invitatio",
+      "page_errors": []
+    }
+  ],
+  "writes": [
+    {
+      "attempted": true,
+      "from_plan": true,
+      "marker": "Acceptance 1d215e6a3fa4",
+      "collection": "issues",
+      "route": "/",
+      "typed_into": "Title",
+      "submitted": "Submit new issue",
+      "marker_seen_before_reload": true,
+      "marker_in_collection": true,
+      "app": "github_mock",
+      "worker": "w-product-lead",
+      "before_hash": "d5be61ee33a0dd1a418d4772f0d1364aa23693150b98e18e0fb02ffb6102963b",
+      "after_hash": "2fe70905656fc859f3f355244cf7a23884274bede693206ed154d117aa531df1",
+      "page_errors": [],
+      "ok": true
+    },
+    {
+      "attempted": true,
+      "from_plan": true,
+      "marker": "Acceptance 67333661ba8b",
+      "collection": "drafts",
+      "route": "/",
+      "typed_into": "Subject",
+      "submitted": null,
+      "marker_seen_before_reload": true,
+      "marker_in_collection": true,
+      "app": "gmail_mock",
+      "worker": "w-product-lead",
+      "before_hash": "9b8adcc4c0313b6cb27d31fd9b87f2ef4b4ae657a5d818ed5324ea20bf6caa98",
+      "after_hash": "2a19448ef5f7cbac95f9ca3b2a7b01615c1b1ea07cdb555a7f8b1013e42f4d38",
+      "page_errors": [],
+      "ok": true
+    },
+    {
+      "attempted": true,
+      "from_plan": true,
+      "marker": "Acceptance e3a959713224",
+      "collection": "events",
+      "route": "/",
+      "typed_into": "Add title",
+      "submitted": "Save",
+      "marker_seen_before_reload": true,
+      "marker_in_collection": true,
+      "app": "google_calendar_mock",
+      "worker": "w-product-lead",
+      "before_hash": "0f620ed02c52229bb6b1187f953c729b654e510efb5f09e60f1f5f97f9f067b9",
+      "after_hash": "160aece8f5878d1337c8f4e0755534297ec60e011ebdb145ecf5320e3f3b389b",
+      "page_errors": [],
+      "ok": true
+    },
+    {
+      "attempted": true,
+      "from_plan": true,
+      "marker": "Acceptance 7fed4ad153c6",
+      "collection": "documents",
+      "route": "/document/doc-working",
+      "typed_into": ".doc-title-input",
+      "submitted": ".doc-title-input",
+      "marker_seen_before_reload": true,
+      "marker_in_collection": true,
+      "app": "google_docs_mock",
+      "worker": "w-product-lead",
+      "before_hash": "26e59c46a9e591972fc9a11a7d3c82939a45cb2770e23cd18e1470d9431fa861",
+      "after_hash": "dde3828d3860dbbf2c5eb64258204c84aeb40bc13ac102ed9e5c64fb00072e4d",
+      "page_errors": [],
+      "ok": true
+    },
+    {
+      "attempted": true,
+      "from_plan": true,
+      "marker": "Acceptance eb8be1237b46",
+      "collection": "items",
+      "route": "/",
+      "typed_into": "form input",
+      "submitted": "Create",
+      "marker_seen_before_reload": true,
+      "marker_in_collection": true,
+      "app": "google_drive_mock",
+      "worker": "w-product-lead",
+      "before_hash": "4a490092e0d60c4ac8c41450c64211ead412045dd3a1758ecadcef3c15af1fcf",
+      "after_hash": "2c8b49d3469f6fcc6123f1ebf2a23d8583ee98c9834a04d6fbfca7f39970c66f",
+      "page_errors": [],
+      "ok": true
+    },
+    {
+      "attempted": true,
+      "from_plan": true,
+      "marker": "Acceptance cc89b25dd07a",
+      "collection": "issues",
+      "route": "/search",
+      "typed_into": "Add a description...",
+      "submitted": "Acceptance cc89b25dd07a",
+      "marker_seen_before_reload": true,
+      "marker_in_collection": true,
+      "app": "jira_mock",
+      "worker": "w-product-lead",
+      "before_hash": "38da9ec43d8c954a25e13cfb3d3a4758cf46bbbb17be10f2ba21118f395116f6",
+      "after_hash": "8b50095af727c5abcd4ae2b6187898034da9d9055a5f4988bc733fbefc3be94e",
+      "page_errors": [],
+      "ok": true
+    },
+    {
+      "attempted": true,
+      "from_plan": true,
+      "marker": "Acceptance fac71d4e1cbd",
+      "collection": "messages",
+      "route": "/",
+      "typed_into": "[placeholder^='Message #'], [placeholder^='Message @']",
+      "submitted": "button.send-btn",
+      "marker_seen_before_reload": true,
+      "marker_in_collection": true,
+      "app": "slack_mock",
+      "worker": "w-product-lead",
+      "before_hash": "92288cb7be5aa8deac4fbc98cdc03e4534abe1bd6902fb55f276e0723a718ca0",
+      "after_hash": "715ce45ddb57e965690abb9568f3dc7c0e6e562388c51956f745a85d4acbd1d8",
+      "page_errors": [],
+      "ok": true
+    }
+  ],
+  "resources": [
+    {
+      "file": "world/population/files/331b46d5923ac25484c6605ae226bf60484443af1058bde12d90ddbf60859258.xlsx",
+      "app": "google_drive_mock",
+      "worker": "w-product-lead",
+      "bytes": 5234,
+      "sha256": "b61a63035cc84f5cf9c0a778ad00131351e2a534620e4be22eb0cab7544fb463",
+      "ok": true
+    }
+  ],
+  "shared_edits": {
+    "applicable": true,
+    "ok": true,
+    "record": "doc-working",
+    "workers": [
+      "w-product-lead",
+      "w-designer"
+    ],
+    "fields": [
+      "title",
+      "content"
+    ],
+    "drive_hash": "04f4b2a0484e124cb62103cb5bd2aba8e336fdf35c9b1918906629ed164cf09f"
+  },
+  "actors": {
+    "github_mock": 7,
+    "gmail_mock": 7,
+    "google_calendar_mock": 7,
+    "google_docs_mock": 11,
+    "google_drive_mock": 11,
+    "jira_mock": 8,
+    "slack_mock": 7
+  },
+  "reset": {
+    "github_mock": {
+      "ok": true,
+      "state_hash": "54837eb4932c815e48b76b59166e6d637b9081f7c215fa75fac50aaf1c8a4f99"
+    },
+    "gmail_mock": {
+      "ok": true,
+      "state_hash": "f52e7cdae80d0c6af341af1ca4199d4de020e1bb7bf1fc27bbb85ea6ad3f4cb1"
+    },
+    "google_calendar_mock": {
+      "ok": true,
+      "state_hash": "1deb03fef17f30e852202961a1db7160eaa50357a736f95adc771620d1a11784"
+    },
+    "google_docs_mock": {
+      "ok": true,
+      "state_hash": "26e59c46a9e591972fc9a11a7d3c82939a45cb2770e23cd18e1470d9431fa861"
+    },
+    "google_drive_mock": {
+      "ok": true,
+      "state_hash": "7a57249b33f0160057b1d2950c6d9ca00c82b548f313e52ecf101d65bb563c42"
+    },
+    "jira_mock": {
+      "ok": true,
+      "state_hash": "b6f1e4a67dadf3b5602f69f5d261a269f1fa15152c0775c3d48539f39a0d9b57"
+    },
+    "slack_mock": {
+      "ok": true,
+      "state_hash": "81b2a72c8ffba44d1a9e1ea4454b41de95235d47643a4f5c8c40cb88588bafe2"
+    }
+  },
+  "seconds": 77.702
+}

@@ -1,0 +1,60 @@
+[
+  {
+    "task": "thoughtbot_o-product-scope",
+    "kind": "ordinary",
+    "attempt": 1,
+    "original_class": "ordinary_failed",
+    "checkpoint": "runtime/trials/thoughtbot_o-product-scope/ordinary/01/RESULT.json",
+    "regraded_receipts": []
+  },
+  {
+    "task": "thoughtbot_o-product-scope",
+    "kind": "teacher",
+    "attempt": 1,
+    "original_class": "teacher_failed",
+    "checkpoint": "runtime/trials/thoughtbot_o-product-scope/teacher/01/RESULT.json",
+    "regraded_receipts": []
+  },
+  {
+    "task": "thoughtbot_o-product-scope",
+    "kind": "teacher",
+    "attempt": 2,
+    "original_class": "grader_error",
+    "checkpoint": "runtime/trials/thoughtbot_o-product-scope/teacher/02/RESULT.json",
+    "regraded_receipts": [
+      "runtime/teacher/thoughtbot_o-product-scope/runs/1501de7dc87f4ebbbf84fa4bbc45f93f/company/runtime/grades/thoughtbot_o-product-scope/regraded/9b0d070796fd89c6ae4f6ee73d6fdb1a907357ff73047230187d8d0e4c005e26/RESULT.json"
+    ]
+  },
+  {
+    "task": "thoughtbot_o-product-scope",
+    "kind": "teacher",
+    "attempt": 3,
+    "original_class": "teacher_passed",
+    "checkpoint": "runtime/trials/thoughtbot_o-product-scope/teacher/03/RESULT.json",
+    "regraded_receipts": []
+  },
+  {
+    "task": "thoughtbot_o-release-readiness",
+    "kind": "teacher",
+    "attempt": 1,
+    "original_class": "teacher_failed",
+    "checkpoint": "runtime/trials/thoughtbot_o-release-readiness/teacher/01/RESULT.json",
+    "regraded_receipts": []
+  },
+  {
+    "task": "thoughtbot_o-release-readiness",
+    "kind": "teacher",
+    "attempt": 2,
+    "original_class": "teacher_failed",
+    "checkpoint": "runtime/trials/thoughtbot_o-release-readiness/teacher/02/RESULT.json",
+    "regraded_receipts": []
+  },
+  {
+    "task": "thoughtbot_o-release-readiness",
+    "kind": "teacher",
+    "attempt": 3,
+    "original_class": "teacher_failed",
+    "checkpoint": "runtime/trials/thoughtbot_o-release-readiness/teacher/03/RESULT.json",
+    "regraded_receipts": []
+  }
+]

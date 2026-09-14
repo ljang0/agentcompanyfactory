@@ -1,0 +1,6 @@
+{
+  "workflow_id": "thoughtbot_o-product-scope",
+  "company_id": "thoughtbot",
+  "title": "Clarify Relaydesk approval work before setting scope",
+  "brief": "Relaydesk’s approval backlog combines customer requests with assumptions about what people cannot find and what the software should show. By September 3, 2026, clarify the descriptions for reviewer visibility, request states, department routing and reopening declined requests. Compare customer correspondence with the existing data contract, separate repeat contacts from new observations, and protect research participants’ identities. Correct the matching GitHub and Jira records, with clear examples of the intended behavior and questions that remain unanswered. Recommend which work can advance toward a small product change and what needs investigation before estimates or customer dates can be trusted. Finish with a shared explanation and a draft update for Elise; do not claim that an unanswered question has been settled."
+}

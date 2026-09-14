@@ -1,0 +1,116 @@
+{
+  "archive": "thoughtbot-inspection-20260914.tar.gz",
+  "archive_sha256": "0c0dc3c3118b708dcc72ecbad134c0b8051bf8ce6939714c2e1f46cf35fe3466",
+  "source_commit": "06477c1b5d1d3a79a60870389765ec3de38e58c7",
+  "files": {
+    "reports/FROZEN.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/world/FROZEN.json",
+      "sha256": "3073c1debcf4925c77a8e8542fa979f1ea884c695304794aa9ed18f055971efc"
+    },
+    "reports/RUNTIME.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/world/acceptance/RUNTIME.json",
+      "sha256": "b0aa4a29c6cb850691d6e3a8c931aac227b80ec63495b64cd2f5f36318748285"
+    },
+    "reports/TRIAL-ATTEMPTS.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/proofs/TRIAL-ATTEMPTS.json",
+      "sha256": "ba0b75bb003519bf057a8abc0c76a5aed27bb2084e6a46c94fa1460e259b20c0"
+    },
+    "reports/MODEL-USAGE.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/proofs/MODEL-USAGE.json",
+      "sha256": "5c7b3d4f6f7c48c7b889d5599d5aa3473fa1f721da067bb3c00e29428a6a9b87"
+    },
+    "reports/PLAN.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/runtime/trials/PLAN.json",
+      "sha256": "de095ae2ee473ba8d5f4084f343eeff7f46bea8d28afa5ad78c98ee7fa006950"
+    },
+    "tasks/thoughtbot_o-product-scope/assignment.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/tasks/thoughtbot_o-product-scope/assignment.json",
+      "sha256": "b60d22f0f8385ed84154431b8a830fb7aa0ee4fa6eab8b6cb3e04a7ee4f8d01d"
+    },
+    "tasks/thoughtbot_o-product-scope/assessment.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/tasks/thoughtbot_o-product-scope/assessment.json",
+      "sha256": "abd7c8ffe6d294ab7014feec3b2f2bc18a6bcc0378c6bfc47b8b2f69ad363c9a"
+    },
+    "tasks/thoughtbot_o-product-scope/golden.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/tasks/thoughtbot_o-product-scope/golden.json",
+      "sha256": "4168e040a8a03500b4a0194ca249d6f49cb73c5dd5f5f5d295978b51b3d8705b"
+    },
+    "tasks/thoughtbot_o-product-scope/verifier.py": {
+      "archive_path": "workspace/companies/thoughtbot-trials/tasks/thoughtbot_o-product-scope/verifier.py",
+      "sha256": "1760d31c7d97ad3baada9e1c0d7926fa05423db3a9eb2202ca60861cf40f2db2"
+    },
+    "tasks/thoughtbot_o-product-scope/verifier-calibration.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/tasks/thoughtbot_o-product-scope/verifier-calibration.json",
+      "sha256": "a126da834b1c81ce3622ad027b7cbcc726cde52a90af9c4b4940a9806140d6f9"
+    },
+    "tasks/thoughtbot_o-product-scope/review.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/tasks/thoughtbot_o-product-scope/review.json",
+      "sha256": "1b7496fd901d87aba682b8423d85645d58f90262c261c223057620357c67d545"
+    },
+    "tasks/thoughtbot_o-product-scope/WORLD.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/tasks/thoughtbot_o-product-scope/WORLD.json",
+      "sha256": "70382b9dfda71547230970918c01bb8e2d69cf2e3b2a75bc042b17018871bce3"
+    },
+    "trials/thoughtbot_o-product-scope/teacher.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/runtime/teacher/thoughtbot_o-product-scope/TEACHER.json",
+      "sha256": "c39742b1e1d9fd33df1c2cc889e41bfcb3c4c147570d79aa84b8ca6c61986ace"
+    },
+    "trials/thoughtbot_o-product-scope/teacher-grade.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/runtime/teacher/thoughtbot_o-product-scope/runs/0e44720f9ebe411da7afff798e9c45f9/company/runtime/grades/thoughtbot_o-product-scope/staged/report.json",
+      "sha256": "d18d612b381d41903fcb1cbb95a05ba576e3ee592db454f4c183cd3bf4b6dbe6"
+    },
+    "trials/thoughtbot_o-product-scope/ordinary.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/runtime/ordinary/thoughtbot_o-product-scope/TRIAL.json",
+      "sha256": "e97fb68554ebb19a1b3ce3f38c0e06ce6e0a660a5412203ebd150894d440ef98"
+    },
+    "trials/thoughtbot_o-product-scope/ordinary-grade.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/runtime/ordinary/thoughtbot_o-product-scope/runs/8f9b2b245e0b41688018e2fde3afd94e/company/runtime/grades/thoughtbot_o-product-scope/staged/report.json",
+      "sha256": "08c68d0b6a2731d22edce570172cd362694c1c30a04121456a96637527e6b27b"
+    },
+    "trials/thoughtbot_o-product-scope/ordinary-review.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/runtime/ordinary/thoughtbot_o-product-scope/runs/8f9b2b245e0b41688018e2fde3afd94e/company/runtime/grades/thoughtbot_o-product-scope/staged/OPERATOR-REVIEW.json",
+      "sha256": "439aedeced1bc698d2ddf881420b8407c596c9106fe37a6a33c761cd334fd3de"
+    },
+    "tasks/thoughtbot_o-release-readiness/assignment.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/tasks/thoughtbot_o-release-readiness/assignment.json",
+      "sha256": "78409dddebb617e255fefd690fe9dc56843d4fc597685711df3c704817cca6ec"
+    },
+    "tasks/thoughtbot_o-release-readiness/assessment.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/tasks/thoughtbot_o-release-readiness/assessment.json",
+      "sha256": "92a055d5032cae862688019fb93167540a82117fd86358ddad0b531de94ebb0a"
+    },
+    "tasks/thoughtbot_o-release-readiness/golden.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/tasks/thoughtbot_o-release-readiness/golden.json",
+      "sha256": "88962abbb325d86f46c598066dde59f4a18a967012488f1cf81296e21ec3bc6d"
+    },
+    "tasks/thoughtbot_o-release-readiness/verifier.py": {
+      "archive_path": "workspace/companies/thoughtbot-trials/tasks/thoughtbot_o-release-readiness/verifier.py",
+      "sha256": "f4e52e852ff57bd0958776b57001f6733c1606fdbc90f9ac2f9e0a5d85cb9dac"
+    },
+    "tasks/thoughtbot_o-release-readiness/verifier-calibration.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/tasks/thoughtbot_o-release-readiness/verifier-calibration.json",
+      "sha256": "f874b8d9b453cc6bb7975acb82bf3c233ee64aa79d9e9c9a6b3cd14397655750"
+    },
+    "tasks/thoughtbot_o-release-readiness/review.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/tasks/thoughtbot_o-release-readiness/review.json",
+      "sha256": "1b7496fd901d87aba682b8423d85645d58f90262c261c223057620357c67d545"
+    },
+    "tasks/thoughtbot_o-release-readiness/WORLD.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/tasks/thoughtbot_o-release-readiness/WORLD.json",
+      "sha256": "70382b9dfda71547230970918c01bb8e2d69cf2e3b2a75bc042b17018871bce3"
+    },
+    "trials/thoughtbot_o-release-readiness/teacher.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/runtime/teacher/thoughtbot_o-release-readiness/TEACHER.json",
+      "sha256": "b1c57a25368244251237a78b6004b0b6f928a95fccc2c1ecce73379f4e20b375"
+    },
+    "trials/thoughtbot_o-release-readiness/teacher-grade.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/runtime/teacher/thoughtbot_o-release-readiness/runs/70d07dca915f4b699785a8cc02e90b2c/company/runtime/grades/thoughtbot_o-release-readiness/staged/report.json",
+      "sha256": "d96fa1e0579b389cedfb1ed52c1b1510d1d9badfc25787372607ec3ca5fd7a24"
+    }
+  },
+  "verification": {
+    "file": "reports/VERIFIED.json",
+    "release_asset": "thoughtbot-inspection-20260914-VERIFIED.json",
+    "sha256": "b0177ddbf5dabf36bc69a779960bef6a262d8b134e6963e3cdf3d9dd62867527"
+  }
+}

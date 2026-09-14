@@ -1,7 +1,7 @@
 # Inspect company snapshots
 
 You can read the [apparel supply](../examples/sanmar/README.md) and
-[software delivery](../examples/thoughtbot/README.md) examples on GitHub without
+[software delivery](../examples/thoughtbot/evaluation/README.md) examples on GitHub without
 installing anything. Full inspection packages add native states, worker files,
 desktop traces and replay proof.
 

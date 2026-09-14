@@ -1,0 +1,61 @@
+{
+  "thoughtbot_o-product-scope": {
+    "teacher": {
+      "worker_calls_reserved": 402,
+      "provider_attempts_with_receipts": 423,
+      "provider_statuses": {
+        "complete": 423
+      },
+      "recorded_usage": {
+        "input_tokens": 16422985,
+        "cached_input_tokens": 2860160,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 95530,
+        "reasoning_output_tokens": 11701
+      },
+      "usage_complete": true,
+      "cost_usd": null,
+      "wall_seconds": 2511.67684675497,
+      "note": "Incomplete or cancelled provider attempts may have no token counters. Recorded usage is not an estimate for those missing counters."
+    },
+    "ordinary": {
+      "worker_calls_reserved": 295,
+      "provider_attempts_with_receipts": 316,
+      "provider_statuses": {
+        "complete": 316
+      },
+      "recorded_usage": {
+        "input_tokens": 12567492,
+        "cached_input_tokens": 2066816,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 61000,
+        "reasoning_output_tokens": 7290
+      },
+      "usage_complete": true,
+      "cost_usd": null,
+      "wall_seconds": 2512.580529395025,
+      "note": "Incomplete or cancelled provider attempts may have no token counters. Recorded usage is not an estimate for those missing counters."
+    }
+  },
+  "thoughtbot_o-release-readiness": {
+    "teacher": {
+      "worker_calls_reserved": 717,
+      "provider_attempts_with_receipts": 741,
+      "provider_statuses": {
+        "complete": 738,
+        "running": 3
+      },
+      "recorded_usage": {
+        "input_tokens": 28668225,
+        "cached_input_tokens": 4983552,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 143562,
+        "reasoning_output_tokens": 16951
+      },
+      "usage_complete": false,
+      "cost_usd": null,
+      "wall_seconds": 2530.3470806051046,
+      "note": "Incomplete or cancelled provider attempts may have no token counters. Recorded usage is not an estimate for those missing counters."
+    }
+  }
+}

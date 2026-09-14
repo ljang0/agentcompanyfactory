@@ -1,0 +1,174 @@
+{
+  "criteria": [
+    {
+      "criterion": 1,
+      "weight": 25.0,
+      "must_pass": true,
+      "evidence": [
+        "github_mock.files#artifact-aug-tests",
+        "github_mock.files#artifact-return-filter-change",
+        "github_mock.files#artifact-state-contract-sketch",
+        "github_mock.files#artifact-attachment-index-migration",
+        "google_drive_mock.items#artifact-query-report",
+        "jira_mock.comments#c-rd-202-02",
+        "jira_mock.comments#c-rd-206-02"
+      ],
+      "rubric": "Comments distinguish source inspection, historical execution and unverified behavior for each candidate. They correctly associate revisions and assess both consumer semantics and migration limitations.",
+      "failure_cases": [
+        "Treats the successful main report as proof for all candidates.",
+        "Claims new test execution or migration validation.",
+        "Describes the additive state proposal as an implemented removal of old fields.",
+        "Uses timings alone to clear the index for release."
+      ]
+    },
+    {
+      "criterion": 2,
+      "weight": 30.0,
+      "must_pass": true,
+      "evidence": [
+        "google_drive_mock.items#doc-readiness",
+        "google_docs_mock.documents#doc-browser",
+        "github_mock.files#artifact-browser-source",
+        "github_mock.files#artifact-state-contract-sketch",
+        "gmail_mock.emails#email-pop-040-september-client-expectations"
+      ],
+      "rubric": "The recommendation weighs each candidate and meaningful smaller combinations, incorporates technical and journey findings, and distinguishes internal judgment from client acceptance and deployment authorization.",
+      "failure_cases": [
+        "Blanket hold without evaluating smaller options.",
+        "Unconditional readiness despite missing applicable checks.",
+        "Invented dependency between unrelated candidates.",
+        "Missing treatment of waiting versus unassigned requests."
+      ]
+    },
+    {
+      "criterion": 3,
+      "weight": 25.0,
+      "must_pass": true,
+      "evidence": [
+        "jira_mock.issues#RD-202",
+        "jira_mock.issues#RD-203",
+        "jira_mock.issues#RD-206",
+        "jira_mock.issues#RD-211",
+        "jira_mock.comments#c-rd-212-01",
+        "jira_mock.comments#c-rd-212-02",
+        "google_docs_mock.documents#doc-leave"
+      ],
+      "rubric": "Issue updates turn findings into specific remaining work with owners and observable checks. Capacity assumptions remain explicit, maintenance and support are preserved, and progress statuses do not falsely indicate completed repairs.",
+      "failure_cases": [
+        "Marks candidates Done merely because review notes were written.",
+        "Commits repair dates using invented available hours.",
+        "Drops dependency maintenance or support obligations.",
+        "Leaves only generic instructions to test more."
+      ]
+    },
+    {
+      "criterion": 4,
+      "weight": 20.0,
+      "must_pass": true,
+      "evidence": [
+        "google_docs_mock.documents#doc-working",
+        "gmail_mock.emails#email-pop-040-september-client-expectations",
+        "gmail_mock.emails#email-pop-240-state-contract-client-compatibility-question",
+        "slack_mock.messages#msg-dm-june-imani-003"
+      ],
+      "rubric": "The client draft faithfully communicates the settled recommendation, unresolved decisions and limits. Attributed team work demonstrates that technical and design findings materially shaped it, and specialists consume the chosen scope in their final follow-up instructions.",
+      "failure_cases": [
+        "Client draft promises deployment or acceptance.",
+        "Draft contradicts Jira or review comments.",
+        "Manager copies source summaries without consuming specialist analysis.",
+        "Specialist messages merely acknowledge the assignment."
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "worker_id": "w-product-lead",
+      "inputs": [
+        "gmail_mock.emails#email-pop-040-september-client-expectations",
+        "google_docs_mock.documents#doc-leave",
+        "jira_mock.comments#c-rd-211-02"
+      ],
+      "produces": "Scope tradeoff, commitment boundaries and final candidate recommendation.",
+      "consumed_by": [
+        "w-designer",
+        "w-backend",
+        "w-frontend"
+      ],
+      "necessity": "Specialists need the selected scope and commitment limits to distinguish immediate preparation from deferred work; technical findings alone cannot settle client priorities.",
+      "authority_sources": [
+        "google_docs_mock.documents#doc-working",
+        "jira_mock.comments#c-rd-211-02"
+      ]
+    },
+    {
+      "worker_id": "w-designer",
+      "inputs": [
+        "google_docs_mock.documents#doc-browser",
+        "github_mock.files#artifact-state-contract-sketch",
+        "slack_mock.messages#msg-dm-june-imani-003"
+      ],
+      "produces": "Observable journey requirements and objections to ambiguous request meanings.",
+      "consumed_by": [
+        "w-product-lead",
+        "w-frontend",
+        "w-backend"
+      ],
+      "necessity": "Without these requirements, preserving a query or adding a state field could be mistaken for completing a usable journey.",
+      "authority_sources": [
+        "google_docs_mock.documents#doc-working"
+      ]
+    },
+    {
+      "worker_id": "w-backend",
+      "inputs": [
+        "gmail_mock.emails#email-pop-240-state-contract-client-compatibility-question",
+        "github_mock.files#artifact-server-source",
+        "github_mock.files#artifact-attachment-index-migration",
+        "google_drive_mock.items#artifact-query-report",
+        "jira_mock.comments#c-rd-206-02"
+      ],
+      "produces": "Server compatibility and migration assessment with concrete open conditions.",
+      "consumed_by": [
+        "w-product-lead",
+        "w-frontend",
+        "w-designer"
+      ],
+      "necessity": "Losing this assessment permits an attractive performance result or unclear contract to advance without accounting for data and recovery consequences.",
+      "authority_sources": [
+        "google_docs_mock.documents#doc-working",
+        "gmail_mock.emails#email-pop-240-state-contract-client-compatibility-question"
+      ]
+    },
+    {
+      "worker_id": "w-frontend",
+      "inputs": [
+        "github_mock.files#artifact-browser-source",
+        "github_mock.files#artifact-return-filter-change",
+        "github_mock.files#artifact-aug-tests",
+        "jira_mock.comments#c-rd-202-02"
+      ],
+      "produces": "Consumer compatibility findings and applicable browser verification requirements.",
+      "consumed_by": [
+        "w-product-lead",
+        "w-backend",
+        "w-designer"
+      ],
+      "necessity": "The browser interpretation determines whether proposed server meanings preserve existing behavior and whether historical checks support the candidate journey.",
+      "authority_sources": [
+        "google_docs_mock.documents#doc-working"
+      ]
+    }
+  ],
+  "alternative_successes": [
+    "Conditional preparation of the index alone, with operational review, verification and authorization still open.",
+    "A different preparation order supported by explicit customer-value and dependency reasoning.",
+    "A justified hold on all candidates with detailed reconsideration requirements."
+  ],
+  "prohibited_shortcuts": [
+    "Editing historical reports or check results to manufacture readiness.",
+    "Merging or deploying as a substitute for review.",
+    "Treating unchanged seeded commentary as newly completed analysis.",
+    "Broadening access to private correspondence.",
+    "Counting participation without substantive production and consumption."
+  ]
+}

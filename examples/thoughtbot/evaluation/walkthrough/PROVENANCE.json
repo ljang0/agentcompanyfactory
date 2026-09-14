@@ -1,0 +1,38 @@
+{
+  "archive": "thoughtbot-inspection-20260914.tar.gz",
+  "archive_sha256": "0c0dc3c3118b708dcc72ecbad134c0b8051bf8ce6939714c2e1f46cf35fe3466",
+  "files": {
+    "scope-document.png": {
+      "archive_path": "workspace/companies/thoughtbot-trials/runtime/teacher/thoughtbot_o-product-scope/runs/0e44720f9ebe411da7afff798e9c45f9/company/runtime/vms/w-product-lead/trace/screen-000264.png",
+      "sha256": "7649f9c60a8117997479f7d5f9ef2b4c38402f360114d367f6fe13cac454d5da"
+    },
+    "private-crosswalk.png": {
+      "archive_path": "workspace/companies/thoughtbot-trials/runtime/teacher/thoughtbot_o-product-scope/runs/0e44720f9ebe411da7afff798e9c45f9/company/runtime/vms/w-designer/trace/screen-000211.png",
+      "sha256": "1b5d2d0e1fee5f27c8c2689200be3c086d27e0e902b9c5fb5a194c6d23e6799f"
+    },
+    "scope-decision.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/runtime/teacher/thoughtbot_o-product-scope/runs/0e44720f9ebe411da7afff798e9c45f9/company/runtime/NATIVE-FINAL.json",
+      "source_sha256": "664cacf3ac978a5e936e574b016f6c721f9261539f0f283e50bdce0fa377cecc",
+      "json_pointer": "/apps/google_docs_mock/current_state/documents/doc-1788221338406",
+      "sha256": "5f3c017232e6033e2697b7db835431e1fb1a18c3744f095306242b2e0f351c79"
+    },
+    "research-summary.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/runtime/teacher/thoughtbot_o-product-scope/runs/0e44720f9ebe411da7afff798e9c45f9/company/runtime/NATIVE-FINAL.json",
+      "source_sha256": "664cacf3ac978a5e936e574b016f6c721f9261539f0f283e50bdce0fa377cecc",
+      "json_pointer": "/apps/google_docs_mock/current_state/documents/doc-july-research",
+      "sha256": "1258049c0479d3e55f51cef617738f93163e437b2c9bdb6bedada1e0b7518d85"
+    },
+    "client-draft.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/runtime/teacher/thoughtbot_o-product-scope/runs/0e44720f9ebe411da7afff798e9c45f9/company/runtime/NATIVE-FINAL.json",
+      "source_sha256": "664cacf3ac978a5e936e574b016f6c721f9261539f0f283e50bdce0fa377cecc",
+      "json_pointer": "/apps/gmail_mock/current_state/drafts/5",
+      "sha256": "ee551c47ed6c2e71cc63353109ae7f7d433e0085295b15810ef61d582ab325ca"
+    },
+    "visibility-requirement.json": {
+      "archive_path": "workspace/companies/thoughtbot-trials/runtime/teacher/thoughtbot_o-product-scope/runs/0e44720f9ebe411da7afff798e9c45f9/company/runtime/NATIVE-FINAL.json",
+      "source_sha256": "664cacf3ac978a5e936e574b016f6c721f9261539f0f283e50bdce0fa377cecc",
+      "json_pointer": "/apps/github_mock/current_state/issues/0",
+      "sha256": "a1b4b1daf0d7c78e88bd9163129e65190fed8c51e979dfe523a194458a467e66"
+    }
+  }
+}

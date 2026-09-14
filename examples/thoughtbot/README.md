@@ -7,8 +7,10 @@ observations, code review records, research notes and unfinished product decisio
 
 This directory preserves the original world construction and acceptance snapshot,
 through Stage 4. A continuation has since added product-scope and release-readiness
-tasks, references, calibrated graders and desktop trials. See
-[measured status](../../docs/END-TO-END-PLAN.md) for the continuation's results.
+tasks, references, calibrated graders and desktop trials. Inspect the
+[task and trial results](evaluation/README.md), including a
+[worked teacher example](evaluation/walkthrough/README.md), or read the
+[measured status](../../docs/END-TO-END-PLAN.md).
 
 ## People and information
 

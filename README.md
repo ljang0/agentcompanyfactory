@@ -94,7 +94,7 @@ a VM image and model access. The setup guide lists each execution mode's require
 | Company | What you can inspect |
 | --- | --- |
 | [Apparel supply](examples/sanmar/README.md), informed by SanMar | Eight apps, two tasks, references, grades, desktop traces and native replay |
-| [Software delivery](examples/thoughtbot/README.md), informed by thoughtbot | Seven apps, four roles, two tasks, calibrated graders and desktop trials |
+| [Software delivery](examples/thoughtbot/evaluation/README.md), informed by thoughtbot | Seven apps, four roles, two tasks, calibrated graders and desktop trials |
 
 [Cedarline Apparel Supply](examples/sanmar/README.md), informed by SanMar research,
 contains four workers, eight apps and two reviewed tasks: an account assortment
@@ -108,13 +108,16 @@ contains the complete world, delivered files, screenshots and replay proof.
 Both references passed native replay and reset; full ordinary-team and ablation
 acceptance remains open. [Measured results and limits](docs/END-TO-END-PLAN.md).
 
-[Harbor Loom Software](examples/thoughtbot/README.md) exercises the shared pipeline
+[Harbor Loom Software](examples/thoughtbot/evaluation/README.md) exercises the shared pipeline
 with a second company. Its two tasks cover product scope and release readiness.
 Both passed independent task review, native reference replay and grader calibration.
-The continuation retains the runtime repairs and actual desktop-team outcomes;
-[measured status](docs/END-TO-END-PLAN.md) distinguishes these checks from full
-benchmark acceptance. The original world snapshot remains available, including
-its native states, worker files and seven retained content-review warnings.
+The product-scope teacher passed at 1.00; its ordinary run scored 0.70, with a
+public-brief/assessment alignment question recorded. The release-readiness teacher
+scored 0.80 and failed because its client draft was empty. The
+[worked example](examples/thoughtbot/evaluation/walkthrough/README.md) follows the
+successful teacher's inputs, decision and saved outputs. The original
+[world snapshot](examples/thoughtbot/README.md) remains available with its native
+states, worker files and seven retained content-review warnings.
 
 ## Repository map
 

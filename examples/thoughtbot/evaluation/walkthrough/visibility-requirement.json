@@ -1,0 +1,23 @@
+{
+  "id": "RD-201",
+  "repoId": "repo-relaydesk",
+  "number": 201,
+  "title": "Make existing review information easier to find on the request page",
+  "description": "Requirements corrected September 1, 2026 by Imani using corrected doc-july-research, Theo's written technical report (Gmail ge532by), and Mara's internal direction in Relaydesk approval scope: refinement and open decisions (doc-1788221338406).\n\nEvidence: July 21 and August 4 describe one continuing reviewer-discovery case. The later contact adds eventual discovery in activity, not independent confirmation. A separate secondhand account concerns finding an approval in history; whether opening the form again meant reading or changing and submitting remains unanswered. Neither establishes reopening rights or demand for automatic routing. Restricted identities and quotations are omitted. Reach and prevalence remain unmeasured.\n\nProposed refinement: help an authorized person find existing decision and review information from request detail, preserving a useful route to relevant activity. Current main labels distinguish Approved, Declined, Waiting for review and Unassigned using approved, rejected and reviewer_id. A new state field is not deployed.\n\nProposed acceptance examples, not completed tests:\n1. Both decision flags false with an assigned reviewer: retain Waiting for review and make current reviewer information findable only through a verified authorized lookup. Never infer current assignment from an old activity entry.\n2. Both flags false with reviewer_id null, including an imported undecided request: retain Unassigned; do not invent a person or imply someone is reviewing.\n3. One decision flag set: make the known result and relevant history findable without implying another pending approval or a right to change the decision.\n4. An unresolved reviewer identifier or unavailable reviewer must be distinguished from null assignment; exact copy and recovery await data assessment. Denied access and temporary load failure must not appear as unassigned or empty history.\n5. Both flags true currently displays Approved by browser precedence, but this is not an agreed business rule. Flag the conflict for contract assessment rather than treating that precedence as acceptance.\n\nOpen: where people first look, what remains unclear after discovery, reading versus editing in the second account, activity retrieval, authorized name lookup, reviewer availability, and exact layout/copy. A nullable identifier does not guarantee a display name. Imani and June must review the complete detail-to-history journey, keyboard access and recovery. Theo must verify activity access and authorized reviewer lookup, including missing data; Theo and June then estimate remaining work.\n\nMara's boundary: focused refinement only. Broad layout redesign, RD-205 automatic routing and RD-207 reopening rights remain separate. RD-203 becomes a dependency only for a demonstrated missing contract requirement in an affected example; its whole proposal does not block visibility refinement. Owner and High priority remain unchanged because the focused information-finding problem remains relevant. In progress, not implemented. Existing cycle placement is neither a customer date nor new scope approval. Requirements correction is due September 3; implementation and customer commitment require subsequent scope/capacity decisions.",
+  "status": "open",
+  "authorId": "p-imani",
+  "assignees": [
+    "p-imani"
+  ],
+  "labels": [
+    "High",
+    "Review and approval"
+  ],
+  "milestone": "September first cycle",
+  "column": "inprogress",
+  "isPinned": false,
+  "reactions": {},
+  "createdAt": "2026-08-10T10:00:00-04:00",
+  "closedAt": null,
+  "comments": []
+}

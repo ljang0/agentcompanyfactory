@@ -1,0 +1,59 @@
+{
+  "at": "2026-09-14T18:34:57.181533+00:00",
+  "status": "inspection_verified_not_published",
+  "mode": "inspection",
+  "certified": false,
+  "payload_hash": "4c8df1dfaa9f2d9b49ea30d979f8f06966febdcbdbcd13510d8f348af39e0050",
+  "model_calls": 0,
+  "tasks": {
+    "thoughtbot_o-product-scope": {
+      "status": "replayed_verified_and_reset",
+      "data_hash": "582c13b872886eeaed8159d3f4a141aed0b5354917bf9a7b43aa9b33f2604fdc",
+      "mechanical": {
+        "checks": {
+          "3": {
+            "passed": true,
+            "reason": "All eight required descriptions contain new prose and retain their subject matter; issue identities, known owners, priorities and unfinished statuses agree across systems. Original email correspondence and issue comments are retained. Semantic review must establish that the revised scope and open questions actually agree and that progress changes are justified."
+          }
+        },
+        "input_hash": "582c13b872886eeaed8159d3f4a141aed0b5354917bf9a7b43aa9b33f2604fdc",
+        "code_hash": "1760d31c7d97ad3baada9e1c0d7926fa05423db3a9eb2202ca60861cf40f2db2",
+        "isolation": "bubblewrap: private network/pid/user namespaces; read-only inputs; no host home or credentials",
+        "runner_hash": "7f82877a79fb236f8fe4495c588f34fdbbd1141c80854227ee355bc643897430"
+      }
+    },
+    "thoughtbot_o-release-readiness": {
+      "status": "replayed_verified_and_reset",
+      "data_hash": "26baa3e77060589fc52ab2afdbee79d615e4dbdf12fcf9c6878ea466bf1baaed",
+      "mechanical": {
+        "checks": {
+          "3": {
+            "passed": true,
+            "reason": "All four named Jira issues contain new, candidate-specific follow-up requirements with recognized assignees and valid priorities. Engineering and dependency maintenance remain open. RD-211 records leave, the panel, closure, support, maintenance deadline, sizing needs and commitment limits. Historical Jira review comments are retained. Prose accuracy, adequacy of estimates and cross-document consistency require semantic review."
+          }
+        },
+        "input_hash": "26baa3e77060589fc52ab2afdbee79d615e4dbdf12fcf9c6878ea466bf1baaed",
+        "code_hash": "f4e52e852ff57bd0958776b57001f6733c1606fdbc90f9ac2f9e0a5d85cb9dac",
+        "isolation": "bubblewrap: private network/pid/user namespaces; read-only inputs; no host home or credentials",
+        "runner_hash": "7f82877a79fb236f8fe4495c588f34fdbbd1141c80854227ee355bc643897430"
+      }
+    }
+  },
+  "proof_files": {
+    "verification/3b32a797a4ff4d26a62e638216382e79/thoughtbot_o-product-scope/REFERENCE.json": "9d17e292574e2ba8433c73a6425761c2ac804b58860af1bbd5f51c5242aaaee0",
+    "verification/3b32a797a4ff4d26a62e638216382e79/thoughtbot_o-product-scope/data.json": "ef101bd755517c88aebd68ace8c942db8e9ff66a644a4d5597a6e90a841e3490",
+    "verification/3b32a797a4ff4d26a62e638216382e79/thoughtbot_o-release-readiness/REFERENCE.json": "46df6ca6ac19069557122af4d7472f9163024219a02ef6a5ba7c744abb6a25f4",
+    "verification/3b32a797a4ff4d26a62e638216382e79/thoughtbot_o-release-readiness/data.json": "d9ea4939ee268bc5af8ff733932aba6007824dc9eed0564445736226bb7098fd"
+  },
+  "scope": "Inspection payload, accepted world/tasks/calibration and retained trial records checked; fresh native reference replay, isolated mechanics and reset passed. Ordinary-team and ablation acceptance is not established. No models or desktop trials were run.",
+  "verified_at": "2026-09-14T18:34:59.565222+00:00",
+  "archive": "thoughtbot-inspection-20260914.tar.gz",
+  "archive_sha256": "0c0dc3c3118b708dcc72ecbad134c0b8051bf8ce6939714c2e1f46cf35fe3466",
+  "source_commit": "06477c1b5d1d3a79a60870389765ec3de38e58c7",
+  "payload_files_checked": 6877,
+  "dependency_environment": "Existing environment installed from the same uv.lock; pipeline imported from the clean extraction",
+  "dependency_lock_sha256": "303c132c58a38e66c18da7078be18aeb0860585b740a07a836755b3fa0a4ee88",
+  "original_payload_unchanged": true,
+  "proof_archive": "thoughtbot-inspection-20260914-proofs.tar.gz",
+  "proof_archive_sha256": "8205250f386e0a5f1f00c96fbcf338117e33d60ed7840b9e152da3c9534756bb"
+}

@@ -1,0 +1,42 @@
+{
+  "at": "2026-09-14T16:59:10.187261+00:00",
+  "status": "prepared before final feasibility attempt",
+  "config": "configs/thoughtbot-validation.local.toml",
+  "changes": {
+    "design.vm_model_calls": [
+      450,
+      800
+    ],
+    "worker_policy.seconds": [
+      1500,
+      3000
+    ],
+    "worker_policy.actions": [
+      150,
+      250
+    ]
+  },
+  "unchanged_world_and_verifier_requirements": true,
+  "trial_limit": "three scored attempts per task and kind; prior attempts retained",
+  "comparison": "Use the same fixed extended budgets for subsequent ordinary and ablation trials",
+  "reason": "Every worker in repaired teacher attempt 2 stopped at the episode time limit; release review follow-ups were written but final scope, two PR reviews and client draft remained unfinished.",
+  "ablations": {
+    "recorded_at": "2026-09-14T16:29:19.956194+00:00",
+    "requires": "successful current teacher and ordinary trial before interpreting ablations",
+    "tasks": {
+      "thoughtbot_o-product-scope": {
+        "worker": "w-designer",
+        "input_worker": "w-designer",
+        "reason": "Compare removal of the research role with withholding its accepted customer-evidence and consent inputs."
+      },
+      "thoughtbot_o-release-readiness": {
+        "worker": "w-backend",
+        "input_worker": "w-backend",
+        "reason": "Compare removal of the backend review role with withholding its accepted compatibility, migration and operational evidence inputs."
+      }
+    },
+    "selection": "Fixed from accepted dependencies before the repaired teacher and ordinary outcomes."
+  },
+  "portable_config": "configs/thoughtbot.toml",
+  "world_frozen_hash": "704afc8393ffb3e76f810c397e84be7307994c8c558af38a4b565226ba4d85d1"
+}

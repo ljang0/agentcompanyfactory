@@ -1,0 +1,327 @@
+{
+  "review": {
+    "company_verdict": "accept",
+    "company_reasons": [
+      "The captures support a Boston-connected software consultancy with product management, design and development responsibilities. The fictional staffing, workload, customers and client authority are clearly distinguished from sourced facts.",
+      "The accepted world provides linked delivery history, open maintenance, research permissions, commercial correspondence and unrelated office work. Both tasks fit its existing records and seven-app surface without expanding authority or access.",
+      "The sw-chat rationale incorrectly says application identity is shared. The explicit accepted-world contract and supplied individual identities supersede that legacy statement; implementation must preserve those identities and existing access boundaries.",
+      "Task-specific interface feasibility, assessment calibration and worker/input necessity still require independent testing. Neither schema descriptions nor this review establish successful desktop execution."
+    ],
+    "tasks": [
+      {
+        "workflow_id": "thoughtbot_o-release-readiness",
+        "verdict": "accept",
+        "severity": "P2",
+        "quality": 3,
+        "novelty": "distinct",
+        "duplicate_of": "",
+        "reasons": [
+          "The brief and fixtures support a complete digital task: assess three existing candidates, compare smaller combinations, recommend conditional preparation or a justified hold, and produce consistent review comments, Jira follow-ups and a client draft. Missing verification can remain an explicit obligation; no external approval, fresh execution or clock advance is required.",
+          "The worked path respects the fixtures: the August report covers main rather than the candidate revisions, the state sketch retains existing fields, and index timings do not establish migration safety. The stated means of 184 and 20 milliseconds are correct.",
+          "Both allowed endings retain substantive obligations. The assessment rejects blanket holds, fabricated readiness and unsupported delivery commitments, while permitting alternative preparation orders and independently useful subsets.",
+          "Manager scope decisions, design acceptance examples, server migration analysis and browser compatibility findings have identifiable downstream consumers. The four weighted criteria map to the public assignment and discoverable review policies.",
+          "Difficulty is bounded: c-rd-202-02, the state sketch and c-rd-206-02 already identify the principal evidence gaps. Useful synthesis and concrete follow-up design remain, but the hard label and estimated effort are not established by these short, heavily annotated fixtures.",
+          "Unlike thoughtbot_o-product-scope, this task evaluates revision-specific release evidence, migration risk and candidate combinations. Customer-evidence correction alone would not solve it."
+        ]
+      },
+      {
+        "workflow_id": "thoughtbot_o-product-scope",
+        "verdict": "accept",
+        "severity": "P3",
+        "quality": 4,
+        "novelty": "distinct",
+        "duplicate_of": "",
+        "reasons": [
+          "The task is reconstructable without its example: reconcile original customer contacts with shared interpretations and source extracts, correct four paired backlog records, and recommend bounded refinement or investigation. Missing customer answers, usage measurements and estimates remain legitimate unresolved questions.",
+          "The worked path follows existing evidence: Alder's second contact concerns the same request, Moraine's meaning remains unanswered, routing is a separate request, and a nullable reviewer identifier does not establish an available display name. It introduces no new approval or customer response.",
+          "The designer's permitted research interpretation and backend developer's data constraints materially affect acceptance examples. Mara's scope boundary then shapes their final requirements and the client explanation; the assignment supports normal delegation without exposing the private worked solution.",
+          "The four assessment criteria cover the public requirements once each with positive weights, supporting references and substantive failure cases. Investigation is a valid ending only after required corrections and concrete exit questions, preventing an unsupported easy closure.",
+          "The supplied records fit the named app collections and existing access boundaries. Completion requires only current digital work against the fixed September 1 snapshot, with no new interviews, live analytics or future facts.",
+          "Unlike thoughtbot_o-release-readiness, the decisive work is interpreting restricted customer evidence, preserving uncertainty and correcting requirements across systems. Shared use of RD-203 does not make the solution strategies interchangeable; no additional neighbors were supplied."
+        ]
+      }
+    ]
+  },
+  "receipt": {
+    "job": "review",
+    "model": "codex/gpt-6-astra",
+    "started_at": "2026-09-14T15:05:30.886564+00:00",
+    "prompt_hash": "e1aec8aec99e8a7fc0a69e89ec866e14bf4044dded07ee4db5fe619d924b1076",
+    "call_id": "f1fb512ca571e59ab1bafbece0fdbc149f848e74ff442dc0f8a842b754c1fa5e",
+    "attempt": 1,
+    "status": "complete",
+    "seconds": 48.47141972486861,
+    "usage": {
+      "input_tokens": 150341,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1385,
+      "reasoning_output_tokens": 516
+    },
+    "cost_usd": null,
+    "tool_context_hash": null,
+    "tool_calls": [],
+    "codex_home": "<user-home>/.codex-b",
+    "session_id": "01a0a073-b078-7543-a33e-227fe889e161",
+    "votes": 3,
+    "accepts": 3,
+    "ballots": [
+      {
+        "verdict": {
+          "company_verdict": "accept",
+          "company_reasons": [
+            "The captures support a Boston-connected software consultancy with product management, design and development responsibilities. The fictional staffing, workload, customers and client authority are clearly distinguished from sourced facts.",
+            "The accepted world provides linked delivery history, open maintenance, research permissions, commercial correspondence and unrelated office work. Both tasks fit its existing records and seven-app surface without expanding authority or access.",
+            "The sw-chat rationale incorrectly says application identity is shared. The explicit accepted-world contract and supplied individual identities supersede that legacy statement; implementation must preserve those identities and existing access boundaries.",
+            "Task-specific interface feasibility, assessment calibration and worker/input necessity still require independent testing. Neither schema descriptions nor this review establish successful desktop execution."
+          ],
+          "tasks": [
+            {
+              "workflow_id": "thoughtbot_o-release-readiness",
+              "verdict": "accept",
+              "severity": "P2",
+              "quality": 3,
+              "novelty": "distinct",
+              "duplicate_of": "",
+              "reasons": [
+                "The brief and fixtures support a complete digital task: assess three existing candidates, compare smaller combinations, recommend conditional preparation or a justified hold, and produce consistent review comments, Jira follow-ups and a client draft. Missing verification can remain an explicit obligation; no external approval, fresh execution or clock advance is required.",
+                "The worked path respects the fixtures: the August report covers main rather than the candidate revisions, the state sketch retains existing fields, and index timings do not establish migration safety. The stated means of 184 and 20 milliseconds are correct.",
+                "Both allowed endings retain substantive obligations. The assessment rejects blanket holds, fabricated readiness and unsupported delivery commitments, while permitting alternative preparation orders and independently useful subsets.",
+                "Manager scope decisions, design acceptance examples, server migration analysis and browser compatibility findings have identifiable downstream consumers. The four weighted criteria map to the public assignment and discoverable review policies.",
+                "Difficulty is bounded: c-rd-202-02, the state sketch and c-rd-206-02 already identify the principal evidence gaps. Useful synthesis and concrete follow-up design remain, but the hard label and estimated effort are not established by these short, heavily annotated fixtures.",
+                "Unlike thoughtbot_o-product-scope, this task evaluates revision-specific release evidence, migration risk and candidate combinations. Customer-evidence correction alone would not solve it."
+              ]
+            },
+            {
+              "workflow_id": "thoughtbot_o-product-scope",
+              "verdict": "accept",
+              "severity": "P3",
+              "quality": 4,
+              "novelty": "distinct",
+              "duplicate_of": "",
+              "reasons": [
+                "The task is reconstructable without its example: reconcile original customer contacts with shared interpretations and source extracts, correct four paired backlog records, and recommend bounded refinement or investigation. Missing customer answers, usage measurements and estimates remain legitimate unresolved questions.",
+                "The worked path follows existing evidence: Alder's second contact concerns the same request, Moraine's meaning remains unanswered, routing is a separate request, and a nullable reviewer identifier does not establish an available display name. It introduces no new approval or customer response.",
+                "The designer's permitted research interpretation and backend developer's data constraints materially affect acceptance examples. Mara's scope boundary then shapes their final requirements and the client explanation; the assignment supports normal delegation without exposing the private worked solution.",
+                "The four assessment criteria cover the public requirements once each with positive weights, supporting references and substantive failure cases. Investigation is a valid ending only after required corrections and concrete exit questions, preventing an unsupported easy closure.",
+                "The supplied records fit the named app collections and existing access boundaries. Completion requires only current digital work against the fixed September 1 snapshot, with no new interviews, live analytics or future facts.",
+                "Unlike thoughtbot_o-release-readiness, the decisive work is interpreting restricted customer evidence, preserving uncertainty and correcting requirements across systems. Shared use of RD-203 does not make the solution strategies interchangeable; no additional neighbors were supplied."
+              ]
+            }
+          ]
+        },
+        "receipt": {
+          "job": "review",
+          "model": "codex/gpt-6-astra",
+          "started_at": "2026-09-14T15:05:30.886564+00:00",
+          "prompt_hash": "e1aec8aec99e8a7fc0a69e89ec866e14bf4044dded07ee4db5fe619d924b1076",
+          "call_id": "f1fb512ca571e59ab1bafbece0fdbc149f848e74ff442dc0f8a842b754c1fa5e",
+          "attempt": 1,
+          "status": "complete",
+          "seconds": 48.47141972486861,
+          "usage": {
+            "input_tokens": 150341,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1385,
+            "reasoning_output_tokens": 516
+          },
+          "cost_usd": null,
+          "tool_context_hash": null,
+          "tool_calls": [],
+          "codex_home": "<user-home>/.codex-b",
+          "session_id": "01a0a073-b078-7543-a33e-227fe889e161"
+        }
+      },
+      {
+        "verdict": {
+          "company_verdict": "accept",
+          "company_reasons": [
+            "The captures support Boston software design and development, interdisciplinary review, and product-management coordination. Exact staffing, client scale and authority are explicitly synthetic; the dossier correctly distinguishes them from thoughtbot's actual practices.",
+            "The frozen world provides a credible bounded engagement: linked release history, 80 open items, source extracts, correspondence, superseded guidance and unrelated office work. No reseeding or broader access is needed.",
+            "The sw-chat rationale incorrectly says application identity is shared. The accepted-world contract, supplied identities and later assumptions explicitly override that statement; builders must retain individual identities and existing access boundaries.",
+            "Acceptance supports proceeding to task implementation and calibration. Supplied schema descriptions and record inventories do not independently establish task-specific interface behavior, desktop feasibility or collaboration advantage."
+          ],
+          "tasks": [
+            {
+              "workflow_id": "thoughtbot_o-release-readiness",
+              "verdict": "accept",
+              "severity": "P2",
+              "quality": 4,
+              "novelty": "distinct",
+              "duplicate_of": "",
+              "reasons": [
+                "The brief and fixtures support a complete digital task: assess three existing candidates, compare smaller combinations, record remaining obligations and draft a client recommendation. Release review practice permits unresolved checks to remain conditions; neither fresh execution nor a client response is needed.",
+                "The feasible example respects the evidence. The August report covers main, not the later return-filter revision; the state sketch retains existing fields; index timings establish sampled performance rather than migration safety. Its means of 184 and 20 milliseconds are correct. Both conditional preparation and a substantive hold retain follow-up work and client authority.",
+                "Contributions affect the result: Mara supplies commitment limits, Imani defines usable journeys, Theo assesses data and migration consequences, and June checks browser consumers and revision coverage. The four weighted assessment criteria trace to public deliverables or discoverable policy and reject copied commentary, fabricated verification and unsupported completion.",
+                "Task-specific creation of documents and email drafts, pull-request commenting, and persistent Jira edits still require interface verification. The supplied record structures fit these outputs, but their presence does not prove the required interactions work.",
+                "Unlike thoughtbot_o-product-scope, this task evaluates readiness of existing candidate revisions and operational evidence. Research interpretation and correction of product requirements cannot substitute for its release-combination and verification analysis."
+              ]
+            },
+            {
+              "workflow_id": "thoughtbot_o-product-scope",
+              "verdict": "accept",
+              "severity": "P2",
+              "quality": 4,
+              "novelty": "distinct",
+              "duplicate_of": "",
+              "reasons": [
+                "The task is reconstructable without its example: reconcile original correspondence with four paired backlog records, distinguish observations from proposals, correct requirements and recommend refinement or investigation. Missing reopening rules, usage measurements and estimates may remain explicit questions rather than invented facts.",
+                "The example follows the fixtures: Alder's contacts concern the same request; Moraine's meaning remains unanswered; department routing is separate; the serializer supplies an identifier rather than a guaranteed display name. Proposed refinement does not require a new interview, runtime, business-clock jump or external approval.",
+                "Imani's restricted correspondence changes the shared interpretation, Theo's source analysis constrains acceptance examples, and Mara's client context determines scope and commitment limits. Assessment criteria cover the four public requirements once with positive weights and substantive failure cases. Alternative investigations must still complete all corrections and provide concrete exit conditions.",
+                "Editing GitHub issue descriptions, updating the corresponding Jira records and shared summary, and saving an email draft need task-specific interface verification. Manual consistency is explicitly required, so no automatic cross-app synchronization is assumed.",
+                "This is distinct from thoughtbot_o-release-readiness: its central work corrects customer-evidence interpretation and implementable requirements, rather than determining what revision-specific evidence permits to advance toward release. Shared records and the request-state topic do not make the solution strategies interchangeable."
+              ]
+            }
+          ]
+        },
+        "receipt": {
+          "job": "review",
+          "model": "codex/gpt-6-astra",
+          "started_at": "2026-09-14T15:05:30.888561+00:00",
+          "prompt_hash": "37e4e213fbd3e74acdc32d55e553f922cbd64c1fa17bf70c5d91265bd2499414",
+          "call_id": "8859dfcddbf1b90748ef9057a48ad1d0cfe08b12383ecf8d7b3d6ea0ce8436f9",
+          "attempt": 1,
+          "status": "complete",
+          "seconds": 48.02515559201129,
+          "usage": {
+            "input_tokens": 150356,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1360,
+            "reasoning_output_tokens": 502
+          },
+          "cost_usd": null,
+          "tool_context_hash": null,
+          "tool_calls": [],
+          "codex_home": "<user-home>/.codex-b",
+          "session_id": "01a0a073-afe1-7802-b91e-9938ca6de3cd"
+        }
+      },
+      {
+        "verdict": {
+          "company_verdict": "accept",
+          "company_reasons": [
+            "The captured homepage, Boston page, delivery playbook and product-management page support the selected software consultancy operation and interdisciplinary delivery work. Exact staffing, client scale and authority are explicitly synthetic; the dossier correctly avoids attributing exclusive release authority to thoughtbot.",
+            "The accepted world provides linked delivery history, policies, source extracts, customer correspondence and unrelated work across all seven required apps. Its existing authority and access records support both assignments without reseeding or broader access.",
+            "The sw-chat statement that application identity is shared is stale and conflicts with the supplied individual identities; the explicit accepted-world contract governs. Schema descriptions and this review do not establish task-specific interface feasibility, permission isolation or collaboration advantage. Those remain subjects for runtime verification, calibration and ablation trials."
+          ],
+          "tasks": [
+            {
+              "workflow_id": "thoughtbot_o-release-readiness",
+              "verdict": "accept",
+              "severity": "P3",
+              "quality": 4,
+              "novelty": "distinct",
+              "duplicate_of": "",
+              "reasons": [
+                "The brief and fixtures establish a finishable digital decision: assess three existing candidates, compare smaller combinations, record remaining work and draft a client recommendation. Missing tests, estimates and approvals can remain explicit conditions; completion requires neither deployment nor future responses.",
+                "The worked example follows the supplied evidence. The August report covers main rather than the candidate revisions; the state sketch preserves old fields while leaving semantics unresolved; index timings demonstrate sampled query improvement without establishing migration safety. The recorded means of 184 and 20 milliseconds are correct.",
+                "Both conditional preparation and a justified hold preserve candidate-specific obligations, maintenance, support and coverage limits. The assessment covers each success criterion once with positive weights, substantive rubrics and failure cases. It rejects blanket holds, fabricated execution and documentation edits presented as completed engineering.",
+                "Manager scope decisions, design journey requirements, backend migration analysis and frontend evidence assessment affect the recommendation and downstream instructions. Their production and consumption are specified without prescribing the manager's delegation route. Compared with thoughtbot_o-product-scope, this task evaluates revision-specific release evidence and operational readiness rather than correcting the factual basis of product requirements."
+              ]
+            },
+            {
+              "workflow_id": "thoughtbot_o-product-scope",
+              "verdict": "accept",
+              "severity": "P3",
+              "quality": 4,
+              "novelty": "distinct",
+              "duplicate_of": "",
+              "reasons": [
+                "The public assignment supports reconstruction without the witness: interpret existing correspondence and software records, correct four paired backlog items and the research summary, then explain a bounded product direction. Unknown reopening rights, usage reach, lookup availability and estimates remain questions rather than facts the builder must invent.",
+                "The witness preserves the actual evidence boundaries: Alder's follow-up concerns the same request, Moraine's meaning remains unanswered, Cedar's routing request is separate, and the draft state field is not deployed behavior. No new customer answer or permission is assumed.",
+                "Research interpretation changes the behavior being specified; backend analysis changes data requirements and dependencies; the manager's scope boundary shapes final requirements and client commitments. The assessment maps the four criteria once each, names supporting inputs and authority, and rejects cosmetic corrections, unsupported commitments and ceremonial participation.",
+                "A supported refinement or a concrete investigation can succeed while all required corrections and handoffs remain mandatory. Compared with thoughtbot_o-release-readiness, the central work is resolving customer interpretation and correcting requirements across systems; a release-evidence review strategy would not resolve its consent, repeated-contact and ambiguous-intent problems."
+              ]
+            }
+          ]
+        },
+        "receipt": {
+          "job": "review",
+          "model": "codex/gpt-6-astra",
+          "started_at": "2026-09-14T15:05:30.890237+00:00",
+          "prompt_hash": "bd631978e110457809d0a5cbcfe154d2fc09b0e57fca9cadd816f49b973f7fee",
+          "call_id": "694e15762e184b8ab093bcbf2eb08d657c58b4496e8905736d755224b9f4fee3",
+          "attempt": 1,
+          "status": "complete",
+          "seconds": 46.705442365957424,
+          "usage": {
+            "input_tokens": 150341,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1300,
+            "reasoning_output_tokens": 516
+          },
+          "cost_usd": null,
+          "tool_context_hash": null,
+          "tool_calls": [],
+          "codex_home": "<user-home>/.codex-b",
+          "session_id": "01a0a073-afbf-7363-aa38-03a1ebf3df07"
+        }
+      }
+    ]
+  },
+  "input_hash": "37d8f2695f6067f7cb7ba3c1e6e700a6c7f3541cb9aef18d53c23a5ba229f6b2",
+  "review_policy": "fresh_session",
+  "separate_witness": false,
+  "authors": [
+    "codex/gpt-6-astra"
+  ],
+  "neighbors": {
+    "thoughtbot_o-release-readiness": [],
+    "thoughtbot_o-product-scope": []
+  },
+  "source_excerpts": [
+    {
+      "claim_ids": [
+        "core-identity",
+        "classification"
+      ],
+      "url": "https://thoughtbot.com/",
+      "excerpt": "Design and Development agency building web and mobile products - thoughtbot Skip to main content thoughtbot thoughtbot Close Menu We're live Live on Twitch! thoughtbot is livestreaming Work alongside the thoughtbot team as we collaborate with each other and our clients, live. Ask us anything, we're live right now! Services Industries Case Studies Resources Blog Let’s Talk We're live Live on Twitch! thoughtbot is livestreaming Work alongside the thoughtbot team as we collaborate with each other and our clients, live. Ask us anything, we're live right now! Menu Let’s get started! Back View all Services Development Ruby on Rails Hotwire AI and Machine Learning Maintenance Mobile Design Shaping Sprints UX, UI, and Product Design Design Systems Product MVP Product Management Accessibility Team and Processes Team Augmentation Fractional Leadership View all Services Back Healthcare Finance Insurance Back View all Resources Development Tech Leadership Resources Open Source Books The Bike Shed Podcast Live Streaming on YouTube Conference Talks The business of great software Playbook Giant Robots Smashing Into Other Giant Robots Podcast Design Sprint Guide Live Streaming on LinkedIn View all Resources When the stakes are high, experience matters Our senior team partners with you to deliver reliable software and strengthen your team, even under complex constraints. Let’s talk Headshot photos of thoughtbot team members arranged in a group of colorful rectangles. Featured case study Your browser does not support the video tag. Your browser does not support the video tag. CloseKnit Health Product Management UX, UI, & Product Design Ruby on Rails How thoughtbot delivered a multi-platform care solution while accelerating release speeds by 10x. Read about how we helped CloseKnit Health We’ve had eight to ten times improvement in our release speed over a year, and that pace only looks to continue to accelerate. It’s night and day in terms of what we’re able to deliver. Matt Thompson, Product Manager, CloseKnit Health Our services Your expert partners for building mission-driven products We specialize in building and modernizing software where reliability, compliance, and long-term maintainability matter as much as speed. Learn more about our services For every stage of your business Rapid validation and early product strategy Building a new product and roadmap planning Team augmentation and process improvement DevOps, Cloud, CI/CD Over 1,000+ positive outcomes Our Clients Trusted by teams building software in high-stakes and regulated environments Here are their stories NEW: The State of Software Delivery in Healthcare We surveyed engineering, product, and technology leaders across US healthcare organizations to find out how the best teams are doing both. Learn how your team stacks up. Check out the results Your browser does not support the video tag. Your browser does not support the video tag. Service Highlight Streamline your workflows with Artificial Intelligence (AI) Reimagine your company's future by developing your own custom Generative AI applications. thoughtbot can help you find opportunities to leverage OpenAI's ChatGPT to streamline internal workflows and stay ahead of the competition. Drive innovation with AI Client Success Delivering confidently in complex environments HBR Future-proofing Harvard Business Review to inspire the next generation of global business leaders. Generative AI Transforming healthcare experiences with artificial intelligence and machine learning CloseKnit Health Creating a scalable, multi-platform solution for virtual urgent care We were so impressed by how collaborative and organized thoughtbot’s cross-functional team was . They were able to work through unexpected challenges with strategic focus. That remained consistent throughout our nine-month engagement. Anne Bartholomew Director of Product Management, Harvard Business Review Read the Harvard Business Review case study Our company Purpose-driven teams Our team is driven by our purpose and values; we continually improve our process, do our best work in strong partnerships with you, and transparently share how we work. We now have teammates located throughout the Americas, Europe, West Asia, and Africa enabling us to take on client projects around the world. Learn more about our company Resources for Designers, Developers, and Leaders Reap the rewards of everything we’ve learned while building successful products Tech Leadership A quick-library to help your team level up processes and decision-making. Dive into our resources Design Sprint Guide Our guide to conducting and facilitating Product Design Sprints. Start your sprint Upcase Become an experienced developer and take “junior” out of your title. Learn from the experts Our Playbook Our documented approach to making successful web and mobile products. Discover a better way of working Our Blog The latest design, development, and product tools, techniques and more. Stay current on best practices Giant Robots Smashing Into Other Giant Robots Podcast A podcast about the design, development, and business of great software. Listen and subscribe New Report: 2026 Healthcare Software What does success look like for your project? Let’s chat Footer thoughtbot Services Case Studies Resources Let's Talk Our Company Careers Purpose Blog Events Sponsor Store Mastodon Bluesky GitHub YouTube Twitch Feeds © 2026\n      thoughtbot, inc. The design of a robot and thoughtbot are registered trademarks of thoughtbot, inc. US: +1 (877) 9-ROBOTS UK: +44 (0)20 3807 0560 Code of Conduct Accessibility Statement Privacy Policy",
+      "scope": "full_captured_text",
+      "text_hash": "6c6e6a096c2f58b867b30ca55434673f914e83b16eeddb17a0cce7814b81b72a",
+      "capture_status": "captured",
+      "capture_error": "",
+      "captured_chars": 5628
+    },
+    {
+      "claim_ids": [
+        "boston-operation"
+      ],
+      "url": "https://thoughtbot.com/boston",
+      "excerpt": "Boston Web and Mobile App Design & Development Company - Experts in Product Strategy - thoughtbot | thoughtbot Skip to main content thoughtbot thoughtbot Close Menu We're live Live on Twitch! thoughtbot is livestreaming Work alongside the thoughtbot team as we collaborate with each other and our clients, live. Ask us anything, we're live right now! Services Industries Case Studies Resources Blog Let’s Talk We're live Live on Twitch! thoughtbot is livestreaming Work alongside the thoughtbot team as we collaborate with each other and our clients, live. Ask us anything, we're live right now! Menu Let’s get started! Back View all Services Development Ruby on Rails Hotwire AI and Machine Learning Maintenance Mobile Design Shaping Sprints UX, UI, and Product Design Design Systems Product MVP Product Management Accessibility Team and Processes Team Augmentation Fractional Leadership View all Services Back Healthcare Finance Insurance Back View all Resources Development Tech Leadership Resources Open Source Books The Bike Shed Podcast Live Streaming on YouTube Conference Talks The business of great software Playbook Giant Robots Smashing Into Other Giant Robots Podcast Design Sprint Guide Live Streaming on LinkedIn View all Resources Web and Mobile App Design and Development, Built in Boston Businesses in Boston have turned to thoughtbot to solve their most difficult challenges. Are you ready to see what thoughtbot can do for your business? Let's Talk Our clients We’ve been designing apps for some of Boston’s most disruptive companies for more than 20 years. You have the idea, we’ll get you to success A team of experts who put your customers at the center of product design At thoughtbot, our designers are researchers, art directors, user experience architects, and programmers. From Idea, MVP, and beyond, we can help. We use Product Design Sprints to build products from scratch, refresh existing products, and discover innovative new features for your current users. How we help: User Interface Design Product Design Sprints User Research Go from concept to launch Build your MVP with a web app design agency that understands the entire product lifecycle You’ve validated your product and you’re ready for the next stage; building out a fully fledged MVP. With small teams working collaboratively with you, thoughtbot has the right services to get your product running and into the hands of your users. How we help: React.js Ruby on Rails Elixir and Phoenix And many more Scale ups and beyond A mobile app development company that’s ready to help you scale quickly You’re ready to take your application to the next stage, whether that’s adding the next set of features and moving past MVP, growing and leveling up your team, or scaling your product for the growth that you’re seeing. We use the latest approaches in Swift, Android, and React Native mobile app development to give our clients an edge in quality and time to market. How we help: Mobile Development React Native And many more Let's Talk What does success look like for your project? Footer thoughtbot Services Case Studies Resources Let's Talk Our Company Careers Purpose Blog Events Sponsor Store Mastodon Bluesky GitHub YouTube Twitch Feeds © 2026\n      thoughtbot, inc. The design of a robot and thoughtbot are registered trademarks of thoughtbot, inc. US: +1 (877) 9-ROBOTS UK: +44 (0)20 3807 0560 Code of Conduct Accessibility Statement Privacy Policy",
+      "scope": "full_captured_text",
+      "text_hash": "f68c6608efb1636f6e812733c0f6694683615ccc4cf1f2f716fa862ff10bd7dd",
+      "capture_status": "captured",
+      "capture_error": "",
+      "captured_chars": 3444
+    },
+    {
+      "claim_ids": [
+        "delivery-process"
+      ],
+      "url": "https://thoughtbot.com/playbook/the-thoughtbot-way/how-we-work/planning/manage-priorities-with-a-lightweight-process",
+      "excerpt": "Manage priorities and visualize progress with a lightweight process | thoughtbot’s Playbook for great products and teams Skip to main content thoughtbot thoughtbot Close Menu We're live Live on Twitch! thoughtbot is livestreaming Work alongside the thoughtbot team as we collaborate with each other and our clients, live. Ask us anything, we're live right now! Services Industries Case Studies Resources Blog Let’s Talk We're live Live on Twitch! thoughtbot is livestreaming Work alongside the thoughtbot team as we collaborate with each other and our clients, live. Ask us anything, we're live right now! Menu Let’s get started! Back View all Services Development Ruby on Rails Hotwire AI and Machine Learning Maintenance Mobile Design Shaping Sprints UX, UI, and Product Design Design Systems Product MVP Product Management Accessibility Team and Processes Team Augmentation Fractional Leadership View all Services Back Healthcare Finance Insurance Back View all Resources Development Tech Leadership Resources Open Source Books The Bike Shed Podcast Live Streaming on YouTube Conference Talks The business of great software Playbook Giant Robots Smashing Into Other Giant Robots Podcast Design Sprint Guide Live Streaming on LinkedIn View all Resources Contents Playbook The thoughtbot Way Foundation Purpose, Mission, and Values AI Ethics Guide Community Code of Conduct Brand Logo Colors Typography Photography Voice & Tone Decorative Elements People Team Hiring Apprenticeship Career Paths Performance Reviews Compensation Inclusion Diversity, Equity, and Inclusion Inclusive terminology Inclusive culture - Emotional Intelligence Inclusive culture - How we define and develop Emotional Intelligence Inclusive culture - Why a culture of Emotional Intelligence matters at thoughtbot Design best practices from a DEI perspective How we work Working together Planning our work Product Owners Guide & Team Charter Daily syncs build trust and maintain momentum Manage priorities and visualize progress with a lightweight process Meet weekly to discuss successes, failures, and future plans A functioning remote team doesn't happen by accident Processes need to adapt to the needs of the product and team Operations Business Development Operations Time Sharing Strategy Customer Discovery Kickoff Initial Alignment Customer Focus Message-Market Fit Product Focus Strategic Planning Making this Process Continuous Design Sprints Sprint Planning Review Roles Schedule Interviews Set Expectations SWOT Analysis Running remote workshops and design sprints Pre-Product Validation Design Research Jobs-to-be-Done Theory Switch Interviews Jobs Profile Understand Exercises Review Research Ask the Experts 5 Why's Assumptions Board Problem Statement Sprint Questions How Might We Critical Path Backburner Board Diverge Exercises Focus Area Divide or Swarm Four-Step Sketches Mind Mapping Idea Doodles Speedy Eights 3-Step Storyboard Group Critique Converge Exercises Needs, Wants, Desires Art Museum Heat Map Speed Critique Straw Poll Supervote Identify Conflicts Storyboard Prototype Exercises Write a Testing Script Build a Prototype Testing Exercises Conduct user interviews Create a Scorecard Sticky Feedback Analyse Exercises Present the Results Sprint Retrospective Design Craft Design Team Values User Experience Design User Interface Design & Visual Design Design Process and Tools Designing in Systems Design Implementation Usability Tests Difficult Conversations During Usability Tests Design Audits Implementation Choose Platforms Programming Languages Frameworks Databases Licenses Open Source projects and our values Rails gets web products to market quickly Browser Testing and Support \"Mobile\" refers to the user, not the device Native mobile app development Version Control Style Guide Pair Programming Test-Driven Development Acceptance Tests Refactoring Code Reviews Continuous Integration Playbook Manage priorities and visualize progress with a lightweight process https://thoughtbot.com/playbook/the-thoughtbot-way/how-we-work/planning/manage-priorities-with-a-lightweight-process We have used JIRA, Pivotal Tracker, Lighthouse, Basecamp, Trajectory, Unfuddle,\nand other task management systems over the years. The following section details\na process using Trello but the overall process remains relatively similar across\ndifferent systems. No two products are the same, so flexibility in the product development process\nis important. Trello responds well to changing the structure of the process \"on\nthe fly.\" A Trello board is a software equivalent of a physical wall with columns of\nsticky notes. In Trello terminology, the wall is called a \"board.\" The columns\nare called \"lists.\" The sticky notes in columns are called \"cards.\" In the following image, \"Current\" is an example of a project board. \"In Progress\"\nis an example of a list. \"Confirm Internet Explorer support\" is an example of a\ncard. In any task management system, it's important to have a view into the product\ndevelopment process like this. The Next Up list is the single prioritized\nlist to which the product team refers in order to know what to work on next. It\nrepresents one week of work. A card represents a story, bug fix, engineering task, or general todo. Cards start out as a simple idea, 1-2 sentences long. As they are pulled through\nboards, detail is added, explaining why (from a business perspective)\nwe're focusing on it, and maybe notes on suggested implementation (though\ndesigners and developers may take or leave it at their discretion; it's supposed\nto be helpful, not prescriptive). Once the cards in the Next Up list have been prioritized and vetted, they\nare ready for design and development. A designer or developer \"puts their face\non it\" by assigning it to themselves and pulling it into the In Progress list. The cards in the In Progress list are actively being designed or developed.\nEtiquette is that you should never have your face on more than two cards at a\ntime. Work is done in a feature\nbranch . When a designer or developer creates a pull request for their feature branch,\nthey move the card to the Code Review list. Any reviewers \"put their face\non it\" while reviewing. There is no bottleneck for merging into main: everyone can do it. The cards in the Testing on Staging (or Testing on Ad Hoc build for\niPhone apps) list are deployed to staging (or distributed via TestFlight for iPhone apps). The card creator and a designer review it for accuracy and user experience. There is no bottleneck for deploying to staging: everyone can do it. The cards in the Ready for Production list include cards that have been\naccepted on staging and are ready to be deployed (but not necessarily rolled\nout). There is no bottleneck for releasing to production: everyone can do it. The cards in the Live (Week of [date]) lists have been released. Each week\nhas its own Live list so we can follow what got released when. thoughtbot.com · © 2026 thoughtbot, inc. Talk to one of our product experts about building success into your process. Get Started! Footer thoughtbot Services Case Studies Resources Let's Talk Our Company Careers Purpose Blog Events Sponsor Store Mastodon Bluesky GitHub YouTube Twitch Feeds © 2026\n      thoughtbot, inc. The design of a robot and thoughtbot are registered trademarks of thoughtbot, inc. US: +1 (877) 9-ROBOTS UK: +44 (0)20 3807 0560 Code of Conduct Accessibility Statement Privacy Policy",
+      "scope": "full_captured_text",
+      "text_hash": "eeb6101c89a600b3f7e43798103772721cdc41ed047aafe892c09ab1c4566c7d",
+      "capture_status": "captured",
+      "capture_error": "",
+      "captured_chars": 7428
+    },
+    {
+      "claim_ids": [
+        "product-management",
+        "team-model"
+      ],
+      "url": "https://thoughtbot.com/services/product-management",
+      "excerpt": "Our Product Managers drive product strategy and work closely with you to find success. | thoughtbot Skip to main content thoughtbot thoughtbot Close Menu We're live Live on Twitch! thoughtbot is livestreaming Work alongside the thoughtbot team as we collaborate with each other and our clients, live. Ask us anything, we're live right now! Services Industries Case Studies Resources Blog Let’s Talk We're live Live on Twitch! thoughtbot is livestreaming Work alongside the thoughtbot team as we collaborate with each other and our clients, live. Ask us anything, we're live right now! Menu Let’s get started! Back View all Services Development Ruby on Rails Hotwire AI and Machine Learning Maintenance Mobile Design Shaping Sprints UX, UI, and Product Design Design Systems Product MVP Product Management Accessibility Team and Processes Team Augmentation Fractional Leadership View all Services Back Healthcare Finance Insurance Back View all Resources Development Tech Leadership Resources Open Source Books The Bike Shed Podcast Live Streaming on YouTube Conference Talks The business of great software Playbook Giant Robots Smashing Into Other Giant Robots Podcast Design Sprint Guide Live Streaming on LinkedIn View all Resources Product strategy meets successful delivery Building first-version products is inherently challenging and risky. Especially when it comes to ensuring product-market fit, navigating complex requirements, and meeting the varying needs of the customer. While we can’t eliminate all of the risk, a strong Product Manager can understand the needs of both your customers and your business and solve for them in an efficient and effective way; minimizing risk and maximizing value. Crafting a product vision to meet your business needs Building a roadmap for version 1 and beyond Having a focused go-to-market strategy and product roadmap is imperative for any first version launch. From the very beginning, our Product Managers work with your team to uncover the right go-to-market strategy, set the project up for success, and assemble a team with the right type of experience and skill sets. thoughtbot Product Managers: Identify the root cause and problem statements Focus in on the target users and critical path Call out assumptions, risks, and dependencies Work with designers to run experiments to test, gather information, and validate assumptions Have code-competency to collaborate with developers and understand complexity and technical challenges Prepare a prioritized roadmap outlining implementation details and milestones Use feedback and identify KPIs to inform the foundational product strategy We were so impressed by how collaborative and organized thoughtbot’s cross-functional team was. They were able to work through unexpected challenges with strategic focus. That remained consistent throughout our nine-month engagement. Anne Bartholomew Director of Product Management, Harvard Business Review Read the case study Setting up the project for success Creating a space for team members and partners to do their best work Once a high-level go-to-market plan has been created and the team with the right skill sets has been assembled, it’s our Product Manager’s responsibility to ensure that everyone has a space to do their best work. Product Managers come equipped with best practices for each phase of the product delivery lifecycle. As design and development gets underway, Product Managers lead the collective effort across interdisciplinary teams to make sure that there’s alignment around priorities, information is flowing to the right team members, and that the proper mechanisms for communication, tooling, and working practices are in place and documented. What that can look like for you Run Agile ceremonies (Sprint Planning, Backlog Grooming, Daily Syncs, Retros, Stakeholder Demos) Coordinate across teams and establish best practices for cross-team collaboration Build a regular cadence for stakeholder updates and check-ins Create and maintain product/project documentation for visibility and historical context Team and Process Improvement Establishing best practices while driving delivery What sets the thoughtbot team apart is our ability to move your team and process forward while also building products that people love. A product is only as great as the team supporting it, which is why mentorship, knowledge sharing, and best practices documentation is such an important part of our delivery. Our Product Managers make sure your product, processes, and team are all improved as a part of our work together. thoughtbot has a structured process for delivery that sets clear expectations up front. I feel like I found not only a partner for product execution, but also a partner in thought leadership and business strategy. Dr. Michael Farmer M.D. Founder, Corverix Case Study Customer Focused Product Iteration Using customer feedback and KPI's to inform product strategy Your product is an evolving application that ebbs and flows with the ever-changing needs of your business and customers. Our Product Managers help champion the voice of your customers and continuously align the team around your business goals, KPIs, and business objectives. To maintain an evolving understanding of your customers, we utilize both qualitative and quantitative feedback that allows us to evaluate impact, validate assumptions, anticipate potential risks, and ultimately uncover the next set of features that will deliver the most value. Free Resource Research and Strategy Playbook Do you want to see how our product strategists approach specific use cases? We've outlined a step-by-step guide in our newest Playbook. It breaks down how thoughtbot tackles the most common client scenarios. For example: how to identify your target audience, minimize customer drop-off, uncover opportunities to successfully grow your business, and conduct a competitive analysis with actionable insights. View the Playbook Let's talk! What product are you looking to explore? Footer thoughtbot Services Case Studies Resources Let's Talk Our Company Careers Purpose Blog Events Sponsor Store Mastodon Bluesky GitHub YouTube Twitch Feeds © 2026\n      thoughtbot, inc. The design of a robot and thoughtbot are registered trademarks of thoughtbot, inc. US: +1 (877) 9-ROBOTS UK: +44 (0)20 3807 0560 Code of Conduct Accessibility Statement Privacy Policy",
+      "scope": "full_captured_text",
+      "text_hash": "a69fb371f1a21323763021e2fad20c7b4d71303b102edf94269d85fcda89fd33",
+      "capture_status": "captured",
+      "capture_error": "",
+      "captured_chars": 6392
+    }
+  ]
+}

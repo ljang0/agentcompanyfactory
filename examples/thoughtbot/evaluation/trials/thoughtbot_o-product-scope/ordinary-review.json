@@ -1,0 +1,28 @@
+{
+  "at": "2026-09-14T18:31:05.283044+00:00",
+  "kind": "operator inspection note",
+  "status": "public-brief and assessment alignment needs review",
+  "grade_changed": false,
+  "recorded_outcome": {
+    "class": "ordinary_failed",
+    "score": 0.7,
+    "reset": "pass"
+  },
+  "finding": "The public assignment explicitly requires correcting the four GitHub/Jira pairs, a shared explanation and a client draft. Private success criterion 1 additionally names the existing summer workflow summary. The ordinary team corrected the paired issues and wrote a new brief but did not update or explicitly supersede doc-july-research; all three judges failed criterion 1 on that basis.",
+  "context": "Seeded correspondence asks the team to use the shared summer summary for circulation and discusses its interpretation. This makes the document relevant, but does not remove the public-brief ambiguity about the required output.",
+  "interpretation": "Retain the observed teacher 1.00 and ordinary 0.70 outcomes. Do not treat their difference as clean evidence of task difficulty until the public output requirement is reviewed.",
+  "next_step": "Review whether correction or explicit supersession of the existing research summary should be named in a separately versioned public assignment. Preserve the current task, calibration and trials.",
+  "evidence_refs": [
+    "tasks/thoughtbot_o-product-scope/assignment.json",
+    "tasks/thoughtbot_o-product-scope/workflow.json",
+    "runtime/ordinary/thoughtbot_o-product-scope/runs/8f9b2b245e0b41688018e2fde3afd94e/company/runtime/exports/thoughtbot_o-product-scope/w-product-lead/Desktop/ASSIGNMENT.md",
+    "runtime/ordinary/thoughtbot_o-product-scope/runs/8f9b2b245e0b41688018e2fde3afd94e/company/runtime/grades/thoughtbot_o-product-scope/staged/report.json",
+    "runtime/ordinary/thoughtbot_o-product-scope/runs/8f9b2b245e0b41688018e2fde3afd94e/company/runtime/NATIVE-FINAL.json"
+  ],
+  "seeded_context_ids": [
+    "email-doc-july-research-first-summary",
+    "email-doc-july-research-aug07-update",
+    "email-pop-274-research-summary-history-discovery"
+  ],
+  "ablations": "Not run: the predeclared plan requires a successful ordinary baseline for interpretation; ordinary attempt 1 failed."
+}

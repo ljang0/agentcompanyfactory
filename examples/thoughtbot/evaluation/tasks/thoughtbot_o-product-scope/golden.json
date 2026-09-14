@@ -1,0 +1,437 @@
+[
+  {
+    "worker_id": "w-product-lead",
+    "app_id": "google_docs_mock",
+    "action": "set_current",
+    "state_patch": {
+      "documents": {
+        "doc-approval-delegation": {
+          "id": "doc-approval-delegation",
+          "title": "Approval requirements: delegation and decision boundaries",
+          "content": "<p>Mara Ellison — September 1, 2026. Complete the requirements correction by September 3.</p><p>Imani: interpret the original reviewer and approval correspondence, group continuing contacts, distinguish reported behavior from requested solutions, and update doc-july-research using the April 24 policy in doc-consent. Keep identifying correspondence and permission records private. Supply anonymous behavior examples and unanswered questions for RD-201 and RD-205.</p><p>Theo: use Imani's permitted interpretation alongside doc-contract, the main serializer and browser extracts, and the draft state sketch. Identify what existing data supports, what requires a lookup, and which state and consumer questions remain unanswered. Give Imani and me a written technical report before we settle requirements.</p><p>I will combine both reports into an internal scope direction. Imani and Theo must then apply that direction to their paired GitHub and Jira requirements. I retain RD-207 and the client draft: Petra's conflicting support answers do not establish reopening rights, and Elise is still collecting the customer promise.</p><p>Elise's September planning request requires remaining work and scope choices before customer dates. Preserve support allowance, Theo's dependency review and the September 18 maintenance deadline, June's September 4 leave, Imani's two-hour September 3 hiring panel, and the September 7 closure. Numeric remaining capacity and complete frontend estimates are unavailable. Scope changes require Elise; production authorization and scheduling belong to Nolan.</p><p>Owen's correspondence requires a chosen activity and period plus reliable person, account, activity and time records to measure workflow reach. Account census totals cannot establish approval-workflow usage. This assignment produces corrections and a recommendation, not a new implementation commitment.</p>",
+          "ownerId": "p-mara",
+          "starred": false,
+          "created": "2026-09-01T09:05:00-04:00",
+          "updated": "2026-09-01T09:05:00-04:00",
+          "sharedWith": [
+            {
+              "userId": "p-imani",
+              "permission": "editor"
+            },
+            {
+              "userId": "p-theo",
+              "permission": "editor"
+            },
+            {
+              "userId": "p-june",
+              "permission": "editor"
+            }
+          ],
+          "linkSharing": {
+            "enabled": false,
+            "permission": "viewer"
+          }
+        }
+      }
+    }
+  },
+  {
+    "worker_id": "w-designer",
+    "app_id": "google_docs_mock",
+    "action": "set_current",
+    "state_patch": {
+      "documents": {
+        "doc-july-research": {
+          "content": "<h1>Summer request workflow observations — corrected interpretation</h1><p>Imani Reed, September 1. Prepared under Mara's delegation in doc-approval-delegation. This replaces the earlier generalization that both information-finding accounts concern the next reviewer. Source correspondence considered spans July 21 through the September 1 snapshot; no new interview or reply is claimed.</p><p>Observation A: a person could see that a request was waiting but asked others who held it. The August 4 follow-up explicitly concerns the same request as July 21 and adds that the reviewer was eventually found in the activity list. These are two contacts about one continuing case, not two independent confirmations. Where the person first looked and what remained unclear after finding the reviewer are still unanswered.</p><p>Observation B: a separate, secondhand account concerns finding an approval in history and repeatedly opening the form. It does not establish uncertainty about the next reviewer. The August 10 clarification asks whether opening again meant reading or trying to change and submit; no answer is supplied. This cannot establish an attempt or a right to reopen a declined request.</p><p>Separate request: Cedar Reach requested automatic assignment of warehouse requests to a different reviewer and reported changing the reviewer manually. Attribution of the original request is permitted, but the follow-up questions remain open: how staff choose the reviewer, who would maintain routing, and what should happen with no designated reviewer. This is demand for routing behavior, not evidence that routing caused observations A or B.</p><p>Interpretation and proposed next work: investigate how existing review information can be found from request detail without confusing decision result with assignment. A visibility refinement may help; its effectiveness has not been tested. Keep automatic routing in RD-205 and reopening rights in RD-207 separate from RD-201. Ask Theo whether existing fields support each example before specifying names or state labels.</p><p>Follow-up questions for a later investigation: where did the person look before history; could they identify the relevant review information; what happened to the work while they searched; did the second account involve reading or editing? Complete that investigation with a permitted account of the actual sequence and remaining uncertainty, not an assumed customer response.</p><p>Sharing follows doc-consent. Restricted observations are paraphrased without personal names, organization names, distinctive roles or quotations. Participant notes and the source crosswalk remain with Imani. Internal note permission does not grant attributed quotation permission. Contact Imani Reed for quotation-removal requests. No prevalence or measured workflow reach follows from these contacts.</p>",
+          "updated": "2026-09-01T09:40:00-04:00"
+        },
+        "doc-approval-source-crosswalk": {
+          "id": "doc-approval-source-crosswalk",
+          "title": "Private approval correspondence crosswalk",
+          "content": "<p>Imani's private source crosswalk for the corrected doc-july-research. Do not circulate this crosswalk with implementation requirements.</p><p>Observation A: contact-alder-jul21 and contact-alder-aug04 share thread-alder-waiting-reviewer. The later contact explicitly identifies the same request and adds eventual discovery in activity. email-contact-alder-jul21-reply promises internal notes and an anonymous team summary, with separate permission before named quotation.</p><p>Observation B: contact-moraine-aug06 is the original secondhand report. email-pop-337-moraine-reopening-meaning asks whether opening the form meant reading or changing and submitting. No answer is supplied; the shared summary must remain anonymous.</p><p>Routing: contact-cedar-jul23 is the original request. email-pop-096-cedar-routing-scope-input records permission to attribute that original request and the still-open selection, maintenance and fallback questions. That permission does not establish answers to later questions.</p><p>Original correspondence is preserved. Apply doc-consent, effective April 24, rather than superseded doc-consent-old.</p>",
+          "ownerId": "p-imani",
+          "starred": false,
+          "created": "2026-09-01T09:40:00-04:00",
+          "updated": "2026-09-01T09:40:00-04:00",
+          "sharedWith": [],
+          "linkSharing": {
+            "enabled": false,
+            "permission": "viewer"
+          }
+        }
+      }
+    }
+  },
+  {
+    "worker_id": "w-backend",
+    "app_id": "gmail_mock",
+    "action": "set_current",
+    "state_patch": {
+      "emails": [
+        {
+          "id": "email-approval-technical-report",
+          "threadId": "thread-approval-technical-report",
+          "from": {
+            "name": "Theo Calder",
+            "email": "theo@harborloom.dev",
+            "avatar": ""
+          },
+          "to": [
+            {
+              "name": "Mara Ellison",
+              "email": "mara@harborloom.dev"
+            },
+            {
+              "name": "Imani Reed",
+              "email": "imani@harborloom.dev"
+            }
+          ],
+          "cc": [],
+          "bcc": [],
+          "subject": "Approval requirements: current data, proposed state and missing decisions",
+          "body": "<p>Mara, Imani,</p><p>Following doc-approval-delegation, I used Imani's corrected doc-july-research. The continuing reviewer-discovery case supports examining visibility; the separate approval-history account does not establish resubmission intent. Neither establishes a routing rule or reopening permission.</p><p>Static comparison: artifact-server-source on main at 8d72a6f934cd90a287b154c6be9a102f683dd421 serializes id, account_id, approved, rejected, reviewer_id and updated_at. doc-contract additionally describes an activity sequence. The extract does not show how to fetch that sequence, a display name, or reviewer availability. A nullable reviewer identifier is not proof of an accessible, usable person name. We need the authorized lookup and handling of unresolved or unavailable reviewers before promising named display.</p><p>artifact-browser-source on the same main revision checks approved first, then rejected. With approved=true it displays Approved; with approved=false and rejected=true it displays Declined. With both false it displays Waiting for review when reviewer_id is present, otherwise Unassigned. Imported requests can have neither flag set and no reviewer. If both flags are true, the code currently displays Approved because of precedence; this is not an agreed business interpretation of conflicting data.</p><p>artifact-state-contract-sketch belongs to draft PR #88, request-state-contract at 23e184c7b865af119a52d46e3900fa726d81bc55. Its proposed pending value combines the two undecided cases. State is not an existing serialized field. RD-203 must retain questions about assignment distinction, conflicting flags, derived versus stored state and consumer coexistence. Nolan's September 1 request also asks for transition and recovery options before infrastructure review.</p><p>Proposed investigation examples: compare current and proposed responses for approved, declined, undecided with reviewer, imported undecided without reviewer, and conflicting flags. Inventory consumers before removing any old field. Explore additive serialization with old fields retained; document how a new consumer could fall back to the existing representation if adoption is reversed. If stored state is chosen instead, define migration, backfill, conflict handling and recovery before implementation. These are options for review, not an approved migration.</p><p>For RD-201, existing distinctions can support further visibility refinement without requiring all of RD-203. A person should be able to find the known decision and relevant history; a reviewer name is conditional on a verified authorized lookup. Null assignment, failed lookup and denied access must not be collapsed into a single unassigned state. Avoid inferring current ownership from an old history entry.</p><p>RD-205 needs a maintained department-to-reviewer rule, its authority and a missing-reviewer fallback; none is supplied by this serializer. RD-207 needs Elise's business rule before anyone can specify who may change a declined decision. Reading a form is separate from performing that transition.</p><p>No browser checks or new test execution occurred in this assessment. June's frontend estimate and interaction review remain needed. I will apply your final internal scope direction to RD-203 and its Jira counterpart.</p><p>Theo</p>",
+          "snippet": "Current browser distinguishes waiting from unassigned; names need a verified lookup. State, routing and reopening decisions remain open.",
+          "timestamp": "2026-09-01T10:10:00-04:00",
+          "read": false,
+          "starred": false,
+          "important": false,
+          "labels": [
+            "label-relaydesk"
+          ],
+          "category": "primary",
+          "folder": "sent",
+          "attachments": []
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "w-product-lead",
+    "app_id": "google_docs_mock",
+    "action": "set_current",
+    "state_patch": {
+      "documents": {
+        "doc-approval-scope": {
+          "id": "doc-approval-scope",
+          "title": "Relaydesk approval scope: refinement and open decisions",
+          "content": "<h1>Internal scope direction — September 1, 2026</h1><p>Mara Ellison. This direction follows the assignments in doc-approval-delegation and incorporates Imani's corrected doc-july-research and Theo's email-approval-technical-report. It is an internal requirements boundary for the September 3 correction, not Elise's acceptance of new implementation scope.</p><p>Imani establishes one continuing reviewer-discovery case, a separate account of difficulty finding an approval whose reading-versus-editing meaning remains unanswered, and a distinct request for automatic department routing. Theo establishes that current decision labels and nullable assignment already distinguish waiting from unassigned, while names need a verified authorized lookup. The draft pending projection could erase that distinction. These findings narrow the proposed work from a combined approval redesign to focused information visibility.</p><p>Direction: advance RD-201 for refinement of finding existing review information from request detail. Include known decision result, assignment where available, and a useful route to relevant activity. Preserve waiting versus unassigned; confirm data access and name lookup before requiring a named reviewer. A broad layout redesign, automatic routing and new reopening rights are outside this refinement. RD-203 is not an automatic prerequisite: add only a demonstrated missing contract dependency to the affected example.</p><p>Imani: apply this direction and Theo's lookup and state constraints to RD-201 in GitHub and Jira. Keep the original contacts grouped and the approval-history meaning unresolved. Finalize RD-205 as a separate investigation: require examples of reviewer selection, maintenance authority, missing or unavailable reviewer handling and any manual override. No routing implementation estimate is reliable until those rules are agreed.</p><p>Theo: apply this direction to RD-203 in both systems. Keep PR #88 a draft and preserve old fields while consumer compatibility is investigated. Record separate assigned and unassigned undecided examples, conflicting flags, reviewer lookup limits, derived-versus-stored choices and transition/recovery options for June and Nolan. Return concrete contract decisions and an estimate of the chosen option; do not turn the pending sketch into a settled requirement.</p><p>I will correct RD-207 in both systems. Petra's conflicting notes and Elise's outstanding customer-promise collection leave reopening rights unknown. Exit requires an authoritative rule covering eligible actors, conditions, resulting decision and assignment, and retained history; Theo and June then assess enforcement and interface implications. Merely opening a form to read does not establish any of those rights.</p><p>RD-201 refinement exit: Imani and June agree the detail-to-history behavior and observable examples; Theo verifies the available activity and authorized reviewer lookup, including missing data; unresolved semantics remain named; Theo and June provide remaining-work estimates. This is the point for a capacity and scope proposal, not a promised delivery date. Preserve current owners and priorities. Existing story points remain historical planning values, not refreshed estimates. RD-201 and RD-203 remain in progress; RD-205 and RD-207 remain open backlog investigations.</p><p>Before a customer commitment, reconcile RD-211 with the support allowance, Theo's dependency review and RD-212's September 18 deadline, June's September 4 leave, Imani's two-hour September 3 panel and the September 7 closure. Remaining capacity has not been quantified. RD-202/PR #87 still needs keyboard-return and empty-result review and its remaining work must also be allowed for. No existing commitment is displaced by this correction. Any later proposed change must show Elise what would move out; Nolan retains deployment authorization and scheduling.</p><p>Reach remains unmeasured. Following Owen's request, a possible later analysis would examine opening request detail and consulting approval activity during July 21–August 31, with person, account, activity and time coverage checked first. Count distinct people separately from repeated actions; absence of a recorded event cannot be assumed to mean non-use. No such export or coverage validation has occurred. The 120-organization/3,500-user census is not approval-workflow reach, and the contacts are not prevalence estimates.</p><p>Shared material uses Imani's permitted paraphrases. Keep restricted source correspondence and the private crosswalk with Imani; do not attach them to requirements or the Elise draft. Unanswered questions stay visible until actual evidence or the authorized decision arrives.</p>",
+          "ownerId": "p-mara",
+          "starred": false,
+          "created": "2026-09-01T10:30:00-04:00",
+          "updated": "2026-09-01T10:30:00-04:00",
+          "sharedWith": [
+            {
+              "userId": "p-imani",
+              "permission": "editor"
+            },
+            {
+              "userId": "p-theo",
+              "permission": "editor"
+            },
+            {
+              "userId": "p-june",
+              "permission": "editor"
+            }
+          ],
+          "linkSharing": {
+            "enabled": false,
+            "permission": "viewer"
+          }
+        }
+      }
+    }
+  },
+  {
+    "worker_id": "w-designer",
+    "app_id": "github_mock",
+    "action": "set_current",
+    "state_patch": {
+      "issues": [
+        {
+          "id": "RD-201",
+          "repoId": "repo-relaydesk",
+          "number": 201,
+          "title": "Make existing review information easier to find on the request page",
+          "description": "Requirements corrected September 1, 2026 by Imani using doc-july-research, Theo's email-approval-technical-report and Mara's final internal direction in doc-approval-scope.\n\nEvidence: one continuing case reports seeing a waiting request but seeking its reviewer elsewhere. The July 21 and August 4 contacts concern the same request; the follow-up adds eventual discovery in activity, not independent confirmation. A separate secondhand account concerns finding an approval in history. Whether opening the form again meant reading or attempting an edit remains unanswered. Neither establishes reopening rights or demand for automatic routing. Restricted identities and quotations are omitted.\n\nProposed refinement: help an authorized person find existing decision and review information from request detail, preserving the route to relevant activity. Current main labels distinguish Approved, Declined, Waiting for review and Unassigned using approved, rejected and reviewer_id. A new state field is not deployed.\n\nProposed acceptance examples, not completed tests: (1) With both decision flags false and an assigned reviewer, retain Waiting for review and make current reviewer information findable only from a verified authorized lookup; do not infer the current reviewer from an old activity entry. (2) With both flags false and reviewer_id null, including an imported undecided request, retain Unassigned; do not invent a person or imply someone is reviewing. (3) With one decision flag set, make that known result and relevant history findable without implying another pending approval or a right to change the decision. (4) When a reviewer identifier cannot be resolved or the reviewer is unavailable, distinguish that condition from null assignment; exact copy and recovery await the data assessment. Denied access and temporary load failure must not appear as unassigned or empty history.\n\nOpen: where people first look, what remains unclear, the meaning of the second account, activity retrieval, authorized name lookup, reviewer availability and exact layout/copy. A nullable identifier alone does not guarantee a display name. Imani and June must review the detail-to-history journey, keyboard access and recovery; Theo must verify data availability. Theo and June then estimate the remaining work.\n\nApply Mara's boundary: refinement only, with RD-205 routing and RD-207 rights separate. RD-203 becomes a dependency only for a demonstrated missing contract requirement; its entire proposal does not block visibility refinement. Owner and High priority remain unchanged because the focused information-finding problem remains relevant. In progress, not implemented; existing cycle placement is not a customer date or new scope approval.",
+          "status": "open",
+          "authorId": "p-imani",
+          "assignees": [
+            "p-imani"
+          ],
+          "labels": [
+            "High",
+            "Review and approval"
+          ],
+          "milestone": "September first cycle",
+          "column": "inprogress",
+          "isPinned": false,
+          "reactions": {},
+          "createdAt": "2026-08-10T10:00:00-04:00",
+          "closedAt": null,
+          "comments": []
+        },
+        {
+          "id": "RD-205",
+          "repoId": "repo-relaydesk",
+          "number": 205,
+          "title": "Investigate ownership and fallback for department approval routing",
+          "description": "Requirements corrected September 1, 2026 by Imani using doc-july-research, Theo's email-approval-technical-report and Mara's final internal direction in doc-approval-scope.\n\nCedar Reach's July 23 request asks for automatic routing of warehouse requests to a different person and reports manual reviewer changes. Attribution of this original request is permitted. It is separate from the anonymous reviewer-discovery and approval-history observations; the repeat contact in the former adds no independent routing evidence. The request is not proof of a general need or of an existing automatic rule.\n\nInvestigation scope: obtain an example of how the reviewer is chosen today, identify the relevant customer segment and who may maintain department routing, and settle what happens when no reviewer is designated or the selected reviewer is unavailable. Ask whether manual override is needed and how it should interact with subsequent routing. These questions are unanswered.\n\nProposed behavior for discussion: a request in a department with an agreed routing rule would select the reviewer defined by that rule. This is requested behavior, not current behavior. Acceptance of the investigation requires explicit expected outcomes for a configured department, a department with no mapping, an unavailable reviewer and any manual override. Record who maintains the rule and who resolves exceptions; do not silently choose an administrator or default reviewer. The chosen rule must preserve request/account identity and explain its effect on existing requests and history.\n\nTheo's report shows reviewer_id is nullable and supplies neither a routing map nor maintenance authority. No name or availability guarantee follows from it. Department identifiers or decision labels alone cannot provide these rules.\n\nApply Mara's boundary: keep this as a separate backlog investigation, outside RD-201's visibility refinement. Exit requires a permitted concrete selection example and agreed maintenance, fallback and override behavior; Theo and June can then assess contract/interface work and estimates, with Elise deciding any scope change. No new interview, customer answer, approved rule or implementation is claimed. Imani retains ownership; Medium priority and To Do progress remain unchanged. Existing story points in Jira are not a validated implementation estimate.",
+          "status": "open",
+          "authorId": "p-imani",
+          "assignees": [
+            "p-imani"
+          ],
+          "labels": [
+            "Medium",
+            "Review and approval"
+          ],
+          "milestone": null,
+          "column": "todo",
+          "isPinned": false,
+          "reactions": {},
+          "createdAt": "2026-07-23T14:00:00-04:00",
+          "closedAt": null,
+          "comments": []
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "w-designer",
+    "app_id": "jira_mock",
+    "action": "set_current",
+    "state_patch": {
+      "issues": [
+        {
+          "id": "RD-201",
+          "key": "RD-201",
+          "projectId": "project-relaydesk",
+          "summary": "Make existing review information easier to find on the request page",
+          "description": "Requirements corrected September 1, 2026 by Imani using doc-july-research, Theo's email-approval-technical-report and Mara's final internal direction in doc-approval-scope.\n\nEvidence: one continuing case reports seeing a waiting request but seeking its reviewer elsewhere. The July 21 and August 4 contacts concern the same request; the follow-up adds eventual discovery in activity, not independent confirmation. A separate secondhand account concerns finding an approval in history. Whether opening the form again meant reading or attempting an edit remains unanswered. Neither establishes reopening rights or demand for automatic routing. Restricted identities and quotations are omitted.\n\nProposed refinement: help an authorized person find existing decision and review information from request detail, preserving the route to relevant activity. Current main labels distinguish Approved, Declined, Waiting for review and Unassigned using approved, rejected and reviewer_id. A new state field is not deployed.\n\nProposed acceptance examples, not completed tests: (1) With both decision flags false and an assigned reviewer, retain Waiting for review and make current reviewer information findable only from a verified authorized lookup; do not infer the current reviewer from an old activity entry. (2) With both flags false and reviewer_id null, including an imported undecided request, retain Unassigned; do not invent a person or imply someone is reviewing. (3) With one decision flag set, make that known result and relevant history findable without implying another pending approval or a right to change the decision. (4) When a reviewer identifier cannot be resolved or the reviewer is unavailable, distinguish that condition from null assignment; exact copy and recovery await the data assessment. Denied access and temporary load failure must not appear as unassigned or empty history.\n\nOpen: where people first look, what remains unclear, the meaning of the second account, activity retrieval, authorized name lookup, reviewer availability and exact layout/copy. A nullable identifier alone does not guarantee a display name. Imani and June must review the detail-to-history journey, keyboard access and recovery; Theo must verify data availability. Theo and June then estimate the remaining work.\n\nApply Mara's boundary: refinement only, with RD-205 routing and RD-207 rights separate. RD-203 becomes a dependency only for a demonstrated missing contract requirement; its entire proposal does not block visibility refinement. Owner and High priority remain unchanged because the focused information-finding problem remains relevant. In progress, not implemented; existing cycle placement is not a customer date or new scope approval. The retained 3 points are the existing planning value, not a refreshed estimate.",
+          "type": "Task",
+          "status": "In Progress",
+          "priority": "High",
+          "storyPoints": 3,
+          "reporterId": "p-imani",
+          "assigneeId": "p-imani",
+          "sprintId": "sprint-sep-a",
+          "epicId": null,
+          "labels": [
+            "area-approval"
+          ],
+          "subtasks": [],
+          "linkedIssueIds": [],
+          "createdAt": "2026-08-10T10:00:00-04:00",
+          "updatedAt": "2026-09-01T10:55:00-04:00"
+        },
+        {
+          "id": "RD-205",
+          "key": "RD-205",
+          "projectId": "project-relaydesk",
+          "summary": "Investigate ownership and fallback for department approval routing",
+          "description": "Requirements corrected September 1, 2026 by Imani using doc-july-research, Theo's email-approval-technical-report and Mara's final internal direction in doc-approval-scope.\n\nCedar Reach's July 23 request asks for automatic routing of warehouse requests to a different person and reports manual reviewer changes. Attribution of this original request is permitted. It is separate from the anonymous reviewer-discovery and approval-history observations; the repeat contact in the former adds no independent routing evidence. The request is not proof of a general need or of an existing automatic rule.\n\nInvestigation scope: obtain an example of how the reviewer is chosen today, identify the relevant customer segment and who may maintain department routing, and settle what happens when no reviewer is designated or the selected reviewer is unavailable. Ask whether manual override is needed and how it should interact with subsequent routing. These questions are unanswered.\n\nProposed behavior for discussion: a request in a department with an agreed routing rule would select the reviewer defined by that rule. This is requested behavior, not current behavior. Acceptance of the investigation requires explicit expected outcomes for a configured department, a department with no mapping, an unavailable reviewer and any manual override. Record who maintains the rule and who resolves exceptions; do not silently choose an administrator or default reviewer. The chosen rule must preserve request/account identity and explain its effect on existing requests and history.\n\nTheo's report shows reviewer_id is nullable and supplies neither a routing map nor maintenance authority. No name or availability guarantee follows from it. Department identifiers or decision labels alone cannot provide these rules.\n\nApply Mara's boundary: keep this as a separate backlog investigation, outside RD-201's visibility refinement. Exit requires a permitted concrete selection example and agreed maintenance, fallback and override behavior; Theo and June can then assess contract/interface work and estimates, with Elise deciding any scope change. No new interview, customer answer, approved rule or implementation is claimed. Imani retains ownership; Medium priority and To Do progress remain unchanged. The retained 5 points are the existing planning value, not a validated implementation estimate.",
+          "type": "Task",
+          "status": "To Do",
+          "priority": "Medium",
+          "storyPoints": 5,
+          "reporterId": "p-imani",
+          "assigneeId": "p-imani",
+          "sprintId": null,
+          "epicId": null,
+          "labels": [
+            "area-approval"
+          ],
+          "subtasks": [],
+          "linkedIssueIds": [],
+          "createdAt": "2026-07-23T14:00:00-04:00",
+          "updatedAt": "2026-09-01T10:55:00-04:00"
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "w-backend",
+    "app_id": "github_mock",
+    "action": "set_current",
+    "state_patch": {
+      "issues": [
+        {
+          "id": "RD-203",
+          "repoId": "repo-relaydesk",
+          "number": 203,
+          "title": "Resolve request-state semantics and consumer compatibility before implementation",
+          "description": "Requirements corrected September 1, 2026 by Theo. Applied Mara's final internal boundary in doc-approval-scope using Imani's doc-july-research and my email-approval-technical-report. Imani's corrected RD-201 needs findable existing information, not an assumed new state or a reopening transition. RD-205's routing request remains separate.\n\nExisting contract: doc-contract specifies stable request/account identity, approved and rejected booleans, nullable reviewer_id, activity and code/message errors. artifact-server-source on main at 8d72a6f934cd90a287b154c6be9a102f683dd421 serializes the flags and identifier, not state or a reviewer display name. Activity retrieval and the authorized reviewer/name/availability lookup are not established by that extract.\n\nCurrent browser examples from artifact-browser-source, stated as static code behavior rather than executed tests: approved=true/rejected=false gives Approved; approved=false/rejected=true gives Declined; both false with reviewer_id present gives Waiting for review; both false with reviewer_id null gives Unassigned, including possible imported undecided requests. Both true gives Approved through current precedence, but the intended business treatment of conflicting flags is unresolved. Decision result and assignment are different facts.\n\nProposal only: artifact-state-contract-sketch in draft PR #88 (pr-state-contract), main <- request-state-contract, revision 23e184c7b865af119a52d46e3900fa726d81bc55, suggests approved/declined/pending while retaining old fields. Pending collapses assigned and unassigned undecided cases. It cannot replace the browser distinctions without an agreed representation. June and Nolan remain requested reviewers; the PR remains open and draft.\n\nInvestigation acceptance: produce a current-versus-proposed response and expected consumer display for each case above, including imported undecided requests and conflicting flags. Decide how assignment remains available, how unresolved/unavailable reviewer lookup differs from null assignment, and whether state is a projection or stored data. Inventory consumers and agree coexistence and removal criteria for old fields before any removal.\n\nTransition/recovery options for Nolan's September 1 request: evaluate additive serialization retaining flags and reviewer_id with a reversible new-consumer adoption path and fallback to existing behavior. If stored state is selected, define backfill, conflicting-data handling, migration verification and recovery separately. Neither option is approved or implemented. Keep request identity, account ownership, activity history and existing error distinctions intact.\n\nApply Mara's direction: RD-203 is a bounded contract investigation, not a prerequisite for every RD-201 visibility improvement. Only a verified missing data requirement creates a specific dependency. Exit requires reviewed case mappings, consumer inventory, transition/recovery choice and estimates from Theo and June; unresolved business meanings go through Mara to Elise, infrastructure review to Nolan. Theo remains owner, Medium priority, in progress. Existing cycle placement and Jira points are not an implementation commitment. No customer answer, deployment or new test result is claimed.",
+          "status": "open",
+          "authorId": "p-theo",
+          "assignees": [
+            "p-theo"
+          ],
+          "labels": [
+            "Medium",
+            "Platform maintenance"
+          ],
+          "milestone": "September first cycle",
+          "column": "inprogress",
+          "isPinned": false,
+          "reactions": {},
+          "createdAt": "2026-08-12T11:10:00-04:00",
+          "closedAt": null,
+          "comments": []
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "w-backend",
+    "app_id": "jira_mock",
+    "action": "set_current",
+    "state_patch": {
+      "issues": [
+        {
+          "id": "RD-203",
+          "key": "RD-203",
+          "projectId": "project-relaydesk",
+          "summary": "Resolve request-state semantics and consumer compatibility before implementation",
+          "description": "Requirements corrected September 1, 2026 by Theo. Applied Mara's final internal boundary in doc-approval-scope using Imani's doc-july-research and my email-approval-technical-report. Imani's corrected RD-201 needs findable existing information, not an assumed new state or a reopening transition. RD-205's routing request remains separate.\n\nExisting contract: doc-contract specifies stable request/account identity, approved and rejected booleans, nullable reviewer_id, activity and code/message errors. artifact-server-source on main at 8d72a6f934cd90a287b154c6be9a102f683dd421 serializes the flags and identifier, not state or a reviewer display name. Activity retrieval and the authorized reviewer/name/availability lookup are not established by that extract.\n\nCurrent browser examples from artifact-browser-source, stated as static code behavior rather than executed tests: approved=true/rejected=false gives Approved; approved=false/rejected=true gives Declined; both false with reviewer_id present gives Waiting for review; both false with reviewer_id null gives Unassigned, including possible imported undecided requests. Both true gives Approved through current precedence, but the intended business treatment of conflicting flags is unresolved. Decision result and assignment are different facts.\n\nProposal only: artifact-state-contract-sketch in draft PR #88 (pr-state-contract), main <- request-state-contract, revision 23e184c7b865af119a52d46e3900fa726d81bc55, suggests approved/declined/pending while retaining old fields. Pending collapses assigned and unassigned undecided cases. It cannot replace the browser distinctions without an agreed representation. June and Nolan remain requested reviewers; the PR remains open and draft.\n\nInvestigation acceptance: produce a current-versus-proposed response and expected consumer display for each case above, including imported undecided requests and conflicting flags. Decide how assignment remains available, how unresolved/unavailable reviewer lookup differs from null assignment, and whether state is a projection or stored data. Inventory consumers and agree coexistence and removal criteria for old fields before any removal.\n\nTransition/recovery options for Nolan's September 1 request: evaluate additive serialization retaining flags and reviewer_id with a reversible new-consumer adoption path and fallback to existing behavior. If stored state is selected, define backfill, conflicting-data handling, migration verification and recovery separately. Neither option is approved or implemented. Keep request identity, account ownership, activity history and existing error distinctions intact.\n\nApply Mara's direction: RD-203 is a bounded contract investigation, not a prerequisite for every RD-201 visibility improvement. Only a verified missing data requirement creates a specific dependency. Exit requires reviewed case mappings, consumer inventory, transition/recovery choice and estimates from Theo and June; unresolved business meanings go through Mara to Elise, infrastructure review to Nolan. Theo remains owner, Medium priority, in progress. Existing cycle placement and the retained 5 points are not an implementation commitment or refreshed estimate. No customer answer, deployment or new test result is claimed.",
+          "type": "Task",
+          "status": "In Progress",
+          "priority": "Medium",
+          "storyPoints": 5,
+          "reporterId": "p-theo",
+          "assigneeId": "p-theo",
+          "sprintId": "sprint-sep-a",
+          "epicId": null,
+          "labels": [
+            "area-platform"
+          ],
+          "subtasks": [],
+          "linkedIssueIds": [],
+          "createdAt": "2026-08-12T11:10:00-04:00",
+          "updatedAt": "2026-09-01T11:15:00-04:00"
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "w-product-lead",
+    "app_id": "github_mock",
+    "action": "set_current",
+    "state_patch": {
+      "issues": [
+        {
+          "id": "RD-207",
+          "repoId": "repo-relaydesk",
+          "number": 207,
+          "title": "Establish the client rule for reopening declined requests",
+          "description": "Requirements corrected September 1, 2026 by Mara under doc-approval-scope, using Imani's corrected doc-july-research and Theo's email-approval-technical-report.\n\nExisting evidence: Petra found two different answers in support notes; Elise is collecting the current customer promise. No authoritative answer is supplied. Separately, an anonymous secondhand account about repeatedly opening a form to find an approval has an unanswered reading-versus-editing clarification. It neither demonstrates an attempt to change a declined request nor establishes reopening rights.\n\nScope: clarify the business rule before specifying a new decision-changing action. Current approved/rejected flags and reviewer_id describe result and assignment; they do not establish who can reopen or how a reopened request should transition. A proposed state field does not settle authority. Viewing a request under existing access permissions is distinct from changing its decision.\n\nInvestigation acceptance examples: (1) A person opening a declined request merely to read it does not thereby change its decision, reviewer or history. (2) For an actor the eventual client rule permits to reopen, specify the qualifying conditions, resulting decision fields, reviewer assignment and retained audit history. (3) For an actor the rule does not permit, specify denial and a useful explanation with no decision mutation. Actor roles, conditions and transition outcomes for examples 2 and 3 are unanswered placeholders for Elise's rule, not permissions granted here.\n\nNext action: Mara to obtain the authoritative customer promise and reconcile Petra's two accounts with Elise, retaining any account-specific conditions. Then Theo checks server enforcement, state compatibility and history implications; June and Imani assess the action, explanation and recovery. Exit requires the recorded rule and reviewed allowed/denied examples before estimates or implementation scope can be trusted. No client response or approval is claimed.\n\nSeparate from RD-201 visibility refinement and RD-205 routing. Mara retains ownership; Medium priority, open backlog/To Do. Description correction does not complete the business-rule investigation or implement reopening. Existing Jira points are not a refreshed estimate. Elise approves scope changes; Nolan retains production authorization and scheduling.",
+          "status": "open",
+          "authorId": "p-mara",
+          "assignees": [
+            "p-mara"
+          ],
+          "labels": [
+            "Medium",
+            "Review and approval"
+          ],
+          "milestone": null,
+          "column": "todo",
+          "isPinned": false,
+          "reactions": {},
+          "createdAt": "2026-08-19T11:00:00-04:00",
+          "closedAt": null,
+          "comments": []
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "w-product-lead",
+    "app_id": "jira_mock",
+    "action": "set_current",
+    "state_patch": {
+      "issues": [
+        {
+          "id": "RD-207",
+          "key": "RD-207",
+          "projectId": "project-relaydesk",
+          "summary": "Establish the client rule for reopening declined requests",
+          "description": "Requirements corrected September 1, 2026 by Mara under doc-approval-scope, using Imani's corrected doc-july-research and Theo's email-approval-technical-report.\n\nExisting evidence: Petra found two different answers in support notes; Elise is collecting the current customer promise. No authoritative answer is supplied. Separately, an anonymous secondhand account about repeatedly opening a form to find an approval has an unanswered reading-versus-editing clarification. It neither demonstrates an attempt to change a declined request nor establishes reopening rights.\n\nScope: clarify the business rule before specifying a new decision-changing action. Current approved/rejected flags and reviewer_id describe result and assignment; they do not establish who can reopen or how a reopened request should transition. A proposed state field does not settle authority. Viewing a request under existing access permissions is distinct from changing its decision.\n\nInvestigation acceptance examples: (1) A person opening a declined request merely to read it does not thereby change its decision, reviewer or history. (2) For an actor the eventual client rule permits to reopen, specify the qualifying conditions, resulting decision fields, reviewer assignment and retained audit history. (3) For an actor the rule does not permit, specify denial and a useful explanation with no decision mutation. Actor roles, conditions and transition outcomes for examples 2 and 3 are unanswered placeholders for Elise's rule, not permissions granted here.\n\nNext action: Mara to obtain the authoritative customer promise and reconcile Petra's two accounts with Elise, retaining any account-specific conditions. Then Theo checks server enforcement, state compatibility and history implications; June and Imani assess the action, explanation and recovery. Exit requires the recorded rule and reviewed allowed/denied examples before estimates or implementation scope can be trusted. No client response or approval is claimed.\n\nSeparate from RD-201 visibility refinement and RD-205 routing. Mara retains ownership; Medium priority, open backlog/To Do. Description correction does not complete the business-rule investigation or implement reopening. The retained 2 points are the existing planning value, not a refreshed estimate. Elise approves scope changes; Nolan retains production authorization and scheduling.",
+          "type": "Task",
+          "status": "To Do",
+          "priority": "Medium",
+          "storyPoints": 2,
+          "reporterId": "p-mara",
+          "assigneeId": "p-mara",
+          "sprintId": null,
+          "epicId": null,
+          "labels": [
+            "area-approval"
+          ],
+          "subtasks": [],
+          "linkedIssueIds": [],
+          "createdAt": "2026-08-19T11:00:00-04:00",
+          "updatedAt": "2026-09-01T11:30:00-04:00"
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "w-product-lead",
+    "app_id": "google_docs_mock",
+    "action": "set_current",
+    "state_patch": {
+      "comments": [
+        {
+          "id": "comment-approval-scope-records-aligned",
+          "docId": "doc-approval-scope",
+          "userId": "p-mara",
+          "content": "The four paired descriptions now implement this internal direction. Imani applied Theo's data constraints to RD-201: a named reviewer requires an authorized lookup, null assignment remains distinct, and finding a decision in history is separate from changing it. Her RD-205 correction requires selection, maintenance and fallback examples before estimation. Theo used the corrected research and this boundary in RD-203 to preserve assigned versus unassigned undecided cases and keep compatibility, transition and recovery under investigation. I corrected RD-207 around Elise's outstanding rule. GitHub and Jira agree on scope, owners, priorities and unfinished progress; no item was closed. Existing estimates were retained explicitly as earlier planning values. This is a completed requirements correction, not completed implementation, new research, measured reach, refreshed capacity or client acceptance. The next client draft will propose focused RD-201 refinement with the named exits above and leave other investigations open.",
+          "resolved": false,
+          "created": "2026-09-01T11:40:00-04:00",
+          "quotedText": "Direction: advance RD-201 for refinement of finding existing review information from request detail.",
+          "replies": []
+        }
+      ]
+    }
+  },
+  {
+    "worker_id": "w-product-lead",
+    "app_id": "gmail_mock",
+    "action": "set_current",
+    "state_patch": {
+      "drafts": [
+        {
+          "id": "draft-elise-approval-scope",
+          "threadId": "thread-rel-aug-review",
+          "from": {
+            "name": "Mara Ellison",
+            "email": "mara@harborloom.dev",
+            "avatar": ""
+          },
+          "to": [
+            {
+              "name": "Elise Park",
+              "email": "elise@brindleworks.io"
+            }
+          ],
+          "cc": [],
+          "bcc": [],
+          "subject": "Relaydesk approval scope: corrected requirements and proposed next step",
+          "body": "<p>Elise,</p><p>We have corrected RD-201, RD-203, RD-205 and RD-207 in GitHub and Jira and updated the summer workflow summary. The shared internal explanation is doc-approval-scope. This draft is for your review; it makes no implementation or customer-date commitment.</p><p>Imani's correspondence review separates one continuing reviewer-discovery case from a different account about finding an approval in history. The July and August follow-up concerns the same request, not an independent confirmation. The other account still does not establish whether opening the form meant reading or attempting a change. Cedar Reach's request for automatic department routing is separate. We have circulated permitted paraphrases and kept restricted participant identities and correspondence out of the requirements.</p><p>Theo's source comparison shows that today's browser already distinguishes approved, declined, waiting with a reviewer and unassigned requests. The existing response has a nullable reviewer identifier, which does not guarantee a display name or reviewer availability. The draft state proposal's pending value could collapse waiting and unassigned; it is not deployed behavior.</p><p>I recommend focused refinement of RD-201: make known review information easier to find from request detail, with relevant history and reviewer information where the authorized data lookup supports it. Imani has applied the missing-lookup and unassigned cases to the requirements. This can advance toward a small product change without making all of the state proposal a prerequisite. Before an implementation proposal, Imani and June must agree the interaction examples, Theo must confirm data access and lookup behavior, and Theo and June must estimate remaining work.</p><p>RD-203 remains a contract investigation. Theo has retained examples for imported undecided requests, assigned versus unassigned cases and conflicting flags, with consumer coexistence, derived versus stored state, transition and recovery still needing June and Nolan's review. RD-205 remains an investigation into how reviewers are selected, who maintains routing, and the missing or unavailable reviewer fallback and any override. A concrete example and agreed rules are needed before estimates.</p><p>For RD-207, could you confirm the current customer promise once your collection is complete, including permitted actors, conditions, the resulting decision and assignment, and retained history? Petra's two answers remain unreconciled. Opening a form to read an approval does not establish a right to reopen a declined request. We have not supplied a rule in your place.</p><p>All four items retain their owners and priorities and remain unfinished. Existing story points are earlier planning values, not new estimates. Before proposing a cycle commitment, I will account for June's September 4 leave, Imani's two-hour September 3 panel, the September 7 closure, support allowance and Theo's dependency review ahead of the September 18 deadline. Return filters still need keyboard-return and empty-result review. Numeric remaining capacity and complete frontend estimates are not yet available, so no work is newly promised or displaced here. Any proposed change to agreed scope will identify what would move out for your decision; Nolan retains production authorization and scheduling.</p><p>Workflow reach is also unmeasured. Owen needs a chosen activity and period and reliable person/account/activity/time records before analysis; account census totals cannot establish how many people use this approval workflow.</p><p>Please consider the focused visibility direction while we retain the explicit investigation exits and obtain estimates. The correction gives us a clearer basis for your later scope decision, without treating unanswered questions as settled.</p><p>Mara</p>",
+          "snippet": "Corrected approval requirements: focused visibility refinement proposed; state, routing, reopening rules, estimates and dates remain open.",
+          "timestamp": "2026-09-01T11:50:00-04:00",
+          "read": true,
+          "starred": false,
+          "important": false,
+          "labels": [
+            "label-relaydesk",
+            "label-delivery-reviews"
+          ],
+          "category": "primary",
+          "folder": "drafts",
+          "attachments": []
+        }
+      ]
+    }
+  }
+]

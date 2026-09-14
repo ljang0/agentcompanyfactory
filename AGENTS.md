@@ -266,8 +266,11 @@ reproducing the archive's fingerprints; do not substitute the current checkout.
 The earlier [software delivery world snapshot](examples/thoughtbot/README.md)
 records Stage 4, with seven retained review warnings and a separate clean-extraction
 receipt. Its provenance file maps those curated files to the original archive.
-The task and team-trial continuation reuses that company and preserves the earlier
-world snapshot; see [measured status](docs/END-TO-END-PLAN.md) for its results.
+The [task and team-trial continuation](examples/thoughtbot/evaluation/README.md)
+reuses that company and preserves the earlier world snapshot. Product scope has
+a passing teacher and a failed ordinary run with a public-brief/assessment alignment
+question; release readiness exhausted its teacher limit. Keep the recorded grades
+and that caveat together. See [measured status](docs/END-TO-END-PLAN.md).
 
 `prepare-collaborator --inspection` records accepted world/tasks/calibration and
 actual retained trial outcomes. Default packaging additionally enforces the full

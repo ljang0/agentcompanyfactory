@@ -1,0 +1,161 @@
+{
+  "criteria": [
+    {
+      "criterion": 1,
+      "weight": 30.0,
+      "must_pass": true,
+      "evidence": [
+        "gmail_mock.emails#contact-alder-jul21",
+        "gmail_mock.emails#contact-alder-aug04",
+        "gmail_mock.emails#email-contact-alder-jul21-reply",
+        "gmail_mock.emails#contact-moraine-aug06",
+        "gmail_mock.emails#email-pop-337-moraine-reopening-meaning",
+        "gmail_mock.emails#contact-cedar-jul23",
+        "google_docs_mock.documents#doc-consent",
+        "google_docs_mock.documents#doc-july-research"
+      ],
+      "rubric": "Corrections narrow the overgeneralized reviewer interpretation, preserve the repeated-contact relationship and distinguish Cedar's request from observed information-finding difficulty. Circulated material removes restricted identifying detail and does not invent answers to follow-up questions.",
+      "failure_cases": [
+        "Counts the Alder follow-up as independent confirmation.",
+        "States that Moraine attempted to change or resubmit a decision.",
+        "Presents department routing as the demonstrated cause of all observations.",
+        "Copies restricted attributed quotations or private correspondence into shared records."
+      ]
+    },
+    {
+      "criterion": 2,
+      "weight": 30.0,
+      "must_pass": true,
+      "evidence": [
+        "github_mock.files#artifact-server-source",
+        "github_mock.files#artifact-browser-source",
+        "github_mock.files#artifact-state-contract-sketch",
+        "google_docs_mock.documents#doc-contract",
+        "github_mock.issues#RD-207",
+        "gmail_mock.emails#email-pop-096-cedar-routing-scope-input",
+        "gmail_mock.emails#email-pop-240-state-contract-client-compatibility-question"
+      ],
+      "rubric": "Acceptance examples distinguish approval result, assignment and information visibility. They flag missing lookup or rule information, preserve imported undecided cases, and keep reopening rights separate from opening a form. Proposed requirements are labeled as proposals rather than observed behavior.",
+      "failure_cases": [
+        "Treats the proposed state field as existing behavior.",
+        "Assumes all undecided requests have reviewers.",
+        "Invents a client rule for reopening declined requests.",
+        "Claims a reviewer identifier guarantees a usable person name.",
+        "Makes every product correction depend on completing the state proposal without justification."
+      ]
+    },
+    {
+      "criterion": 3,
+      "weight": 20.0,
+      "must_pass": true,
+      "evidence": [
+        "github_mock.issues#RD-201",
+        "github_mock.issues#RD-203",
+        "github_mock.issues#RD-205",
+        "github_mock.issues#RD-207",
+        "jira_mock.issues#RD-201",
+        "jira_mock.issues#RD-203",
+        "jira_mock.issues#RD-205",
+        "jira_mock.issues#RD-207",
+        "google_docs_mock.documents#doc-working"
+      ],
+      "rubric": "Both systems express the same corrected scope and open questions. Records preserve work identity and ownership unless a reasoned reassignment is made; status changes reflect actual work progress. Historical correspondence remains intact.",
+      "failure_cases": [
+        "Corrects GitHub but leaves contradictory Jira descriptions.",
+        "Closes implementation work after documentation edits.",
+        "Deletes customer history to remove ambiguity.",
+        "Changes priorities without a scope-related reason."
+      ]
+    },
+    {
+      "criterion": 4,
+      "weight": 20.0,
+      "must_pass": true,
+      "evidence": [
+        "gmail_mock.emails#email-pop-040-september-client-expectations",
+        "gmail_mock.emails#email-pop-379-census-workflow-evidence-response",
+        "google_docs_mock.documents#doc-leave",
+        "google_docs_mock.documents#doc-working"
+      ],
+      "rubric": "The explanation connects corrected research and technical findings to a bounded product direction. It identifies unresolved estimates, business rules and decisions without promising dates or treating account counts as workflow usage. Team exchanges show specialists using Mara's scope decision to finalize requirements.",
+      "failure_cases": [
+        "Repeats the seeded backlog without explaining changed implications.",
+        "Claims measured workflow reach without activity data.",
+        "Makes an unconditional implementation commitment without capacity or estimates.",
+        "Chooses investigation without specifying questions and completion conditions."
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "worker_id": "w-product-lead",
+      "inputs": [
+        "gmail_mock.emails#email-pop-040-september-client-expectations",
+        "gmail_mock.emails#email-pop-379-census-workflow-evidence-response",
+        "github_mock.issues#RD-207",
+        "google_docs_mock.documents#doc-leave"
+      ],
+      "produces": "Scope direction, commitment limits and separation of client business decisions from internal requirements.",
+      "consumed_by": [
+        "w-designer",
+        "w-backend"
+      ],
+      "necessity": "Specialists need the chosen product boundary to finalize requirements without converting research or technical proposals into customer commitments.",
+      "authority_sources": [
+        "google_docs_mock.documents#doc-working"
+      ]
+    },
+    {
+      "worker_id": "w-designer",
+      "inputs": [
+        "gmail_mock.emails#contact-alder-jul21",
+        "gmail_mock.emails#contact-alder-aug04",
+        "gmail_mock.emails#contact-moraine-aug06",
+        "gmail_mock.emails#email-pop-337-moraine-reopening-meaning",
+        "gmail_mock.emails#contact-cedar-jul23",
+        "google_docs_mock.documents#doc-consent"
+      ],
+      "produces": "Permitted interpretation that separates observations, repeated contact and uncertain customer intent.",
+      "consumed_by": [
+        "w-product-lead",
+        "w-backend"
+      ],
+      "necessity": "Without the private correspondence interpretation, the team can preserve the misleading shared summary and specify the wrong product behavior.",
+      "authority_sources": [
+        "google_docs_mock.documents#doc-working",
+        "google_docs_mock.documents#doc-consent"
+      ]
+    },
+    {
+      "worker_id": "w-backend",
+      "inputs": [
+        "github_mock.files#artifact-server-source",
+        "github_mock.files#artifact-browser-source",
+        "github_mock.files#artifact-state-contract-sketch",
+        "gmail_mock.emails#email-pop-240-state-contract-client-compatibility-question"
+      ],
+      "produces": "Data and semantic constraints used to correct acceptance examples and dependencies.",
+      "consumed_by": [
+        "w-product-lead",
+        "w-designer"
+      ],
+      "necessity": "Research alone cannot establish which proposed behavior is supported by existing data or which assumptions collapse distinct request states.",
+      "authority_sources": [
+        "google_docs_mock.documents#doc-working",
+        "gmail_mock.emails#email-pop-240-state-contract-client-compatibility-question"
+      ]
+    }
+  ],
+  "alternative_successes": [
+    "Advance a narrowly defined reviewer-visibility refinement while leaving estimates and missing data lookups open.",
+    "Prioritize a bounded state-meaning investigation if its necessity is demonstrated without claiming customer behavior that was not observed.",
+    "Recommend further product investigation with concrete questions and exit conditions while completing all required record corrections."
+  ],
+  "prohibited_shortcuts": [
+    "Copying the shared research summary as the final interpretation.",
+    "Inventing a customer response, consent permission, usage measurement or capacity allowance.",
+    "Making cosmetic edits without correcting requirements.",
+    "Forwarding private research correspondence to bypass interpretation.",
+    "Claiming successful collaboration from acknowledgments or document signatures."
+  ]
+}

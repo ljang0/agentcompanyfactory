@@ -1,0 +1,233 @@
+{
+  "at": "2026-09-14T17:00:55.220571+00:00",
+  "status": "accepted",
+  "proof_key": "dcd1045b4b504def54aa2de1fc0d50c51eb53863c2500a48c7dc285aebb5d481",
+  "cases": [
+    {
+      "case": "noop",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "16084363a739aadaa9096b9d1e5a4716748e3ef5b62613cf050568e0038b730c"
+    },
+    {
+      "case": "noop",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "01cca129eb33076a711042c817ba77721afab2fcbfffd8feed9c39d2bd07162e"
+    },
+    {
+      "case": "reference",
+      "evidence_mode": "expanded",
+      "expected": "pass",
+      "observed": "pass",
+      "ok": true,
+      "report_hash": "e89fdaab6fd77aff4adad9894cfdcf0dfaa1de9714b41dfa4e03f8740cf7f8ec"
+    },
+    {
+      "case": "reference",
+      "evidence_mode": "encoded",
+      "expected": "pass",
+      "observed": "pass",
+      "ok": true,
+      "report_hash": "751007b63da389bde1db87b90af880be635d0bcbd4b76384ee26719fd9b7a00f"
+    },
+    {
+      "case": "alternative",
+      "evidence_mode": "expanded",
+      "expected": "pass",
+      "observed": "pass",
+      "ok": true,
+      "report_hash": "7f8442d1ab685bbe3a57d74125b973dc0474715b829115a085f437f7d13b11fe"
+    },
+    {
+      "case": "alternative",
+      "evidence_mode": "encoded",
+      "expected": "pass",
+      "observed": "pass",
+      "ok": true,
+      "report_hash": "8c6861f0a0c4fe58d4a3371ec6e434b08cb6c52bdbe1343bdf06b0f8548d7ca5"
+    },
+    {
+      "case": "forged_claim",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "3450586b79efa08c2529920cf16719e12277c62009f64643ee5b639427460267"
+    },
+    {
+      "case": "forged_claim",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "3f323180296c162fecd31ef7ff17a2dc605cb7347e99d3a2f7a5561fddae908e"
+    },
+    {
+      "case": "irrelevant_contribution",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "91a8c04d3e55483e957aceb78c908775ca330daa2522f7d234398f26a89641a5"
+    },
+    {
+      "case": "irrelevant_contribution",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "bb6d9b9bb6539f2b835a25f8a7d940c03f6daff7cbea3aa157a0655ce418a5e2"
+    },
+    {
+      "case": "missing_authority",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "5856857df0e399f50aba026a97823304ac6b7aa6346f994a3331c6f5a2c7d47c"
+    },
+    {
+      "case": "missing_authority",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "c544ea22e3774f27dd3abe656feb3f5761b1d4e8202917962a923cf900792e99"
+    },
+    {
+      "case": "missing_evidence",
+      "evidence_mode": "expanded",
+      "expected": "unavailable",
+      "observed": "unavailable",
+      "ok": true,
+      "error": "Final evidence must contain every app snapshot"
+    },
+    {
+      "case": "missing_evidence",
+      "evidence_mode": "encoded",
+      "expected": "unavailable",
+      "observed": "unavailable",
+      "ok": true,
+      "error": "Final evidence must contain every app snapshot"
+    },
+    {
+      "case": "partial",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "10c822b2a7abee19d47a5357bb4150946fc4c581368f22fa05b2e8857f91b0e7"
+    },
+    {
+      "case": "partial",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "343e7930d231c1e16d898cb424d10ac5a7ab610a6607451e74250fea811fb012"
+    },
+    {
+      "case": "wrong_record",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "f031e94d304c7d2509dfa0f56fbe3c8052a5f0c09920f44eb8a37416e93b620a"
+    },
+    {
+      "case": "wrong_record",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "dfba877d7cd4b9c8a96b395fc39f5d024264dbbcca2f87aa97fa4fd7ebe4f5f0"
+    },
+    {
+      "case": "wrong_total",
+      "evidence_mode": "expanded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "2425b494e1a0b75ef81d1866fda2862159597edd4e8d61f666547540ffe86ec6"
+    },
+    {
+      "case": "wrong_total",
+      "evidence_mode": "encoded",
+      "expected": "fail",
+      "observed": "fail",
+      "ok": true,
+      "report_hash": "a33d6320661fd480abc888f4100e5b294339d509978545efc030e4a1e727ca59"
+    }
+  ],
+  "reference_hash": "81b5d89be3503d5fa04ccd5ed3dcb6dce6cc4b3255ba5de29cf1551dee488cf3",
+  "golden_hash": "38652459c2ac71e227216d96faaf8649f776bb84367d999665fe7dd1182accbd",
+  "fixtures_hash": "297afe5e5179986cd2cf0e839ade757d5bad3cf4b196c79f12f93ed8f6b982c1",
+  "failure_targets": {
+    "alternative": {
+      "kind": "alternative",
+      "criteria": [],
+      "workers": [],
+      "reason": "The supported change in preparation order preserves required evidence, collaboration, conditions and authority boundaries."
+    },
+    "forged_claim": {
+      "kind": "forged_claim",
+      "criteria": [],
+      "workers": [
+        "w-designer"
+      ],
+      "reason": "Manager attribution cannot replace trusted evidence of the designer’s required production and consumption; complete business artifacts remain."
+    },
+    "irrelevant_contribution": {
+      "kind": "irrelevant_contribution",
+      "criteria": [],
+      "workers": [
+        "w-designer"
+      ],
+      "reason": "Unrelated studio-social work does not fulfill the designer’s required journey analysis, semantic objections and consumption of selected scope."
+    },
+    "missing_authority": {
+      "kind": "missing_authority",
+      "criteria": [
+        2
+      ],
+      "workers": [],
+      "reason": "Allowing Mara to accept scope and authorize production bypasses the required distinction between internal judgment, client acceptance and deployment authorization."
+    },
+    "missing_evidence": {
+      "kind": "missing_evidence",
+      "criteria": [],
+      "workers": [],
+      "reason": "Missing final snapshots prevent assessment of delivered state; this is an evidence gap."
+    },
+    "partial": {
+      "kind": "partial",
+      "criteria": [
+        4
+      ],
+      "workers": [],
+      "reason": "The unfinished client draft omits the recommendation, unresolved decisions and commitment limits required by criterion 4."
+    },
+    "wrong_record": {
+      "kind": "wrong_record",
+      "criteria": [
+        1
+      ],
+      "workers": [],
+      "reason": "Swapping the index and state-contract reviews breaks the required association of candidate assessments with their applicable revisions."
+    },
+    "wrong_total": {
+      "kind": "wrong_total",
+      "criteria": [
+        1
+      ],
+      "workers": [],
+      "reason": "The technical evidence assessment falsely reports timing sums as means: the correct means are 184 ms and 20 ms, not 552 ms and 60 ms."
+    }
+  },
+  "scope": "isolated mechanics and semantic calibration in expanded and losslessly encoded evidence modes; no real-team necessity proof"
+}

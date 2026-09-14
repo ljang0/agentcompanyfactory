@@ -1,0 +1,740 @@
+{
+  "at": "2026-09-14T17:45:15.856924+00:00",
+  "task_id": "thoughtbot_o-release-readiness",
+  "score": 0.8,
+  "passed": false,
+  "complete": true,
+  "assessment": {
+    "score": 0.8,
+    "must_pass_satisfied": false,
+    "complete": true,
+    "criteria": [
+      {
+        "criterion_ref": "/success_criteria/0",
+        "weight": 25.0,
+        "must_pass": true,
+        "score": 1.0,
+        "passed": true,
+        "complete": true
+      },
+      {
+        "criterion_ref": "/success_criteria/1",
+        "weight": 30.0,
+        "must_pass": true,
+        "score": 1.0,
+        "passed": true,
+        "complete": true
+      },
+      {
+        "criterion_ref": "/success_criteria/2",
+        "weight": 25.0,
+        "must_pass": true,
+        "score": 1.0,
+        "passed": true,
+        "complete": true
+      },
+      {
+        "criterion_ref": "/success_criteria/3",
+        "weight": 20.0,
+        "must_pass": true,
+        "score": 0.0,
+        "passed": false,
+        "complete": true
+      }
+    ]
+  },
+  "checks": [
+    {
+      "id": "criterion-1",
+      "criterion_ref": "/success_criteria/0",
+      "status": "pass",
+      "reason": "3 of 3 votes: New comments on PRs #87, #88 and #89 identify candidate revisions and distinguish source inspection, historical execution and outstanding verification without claiming new runs. #87 limits source findings to link construction and specifies missing return journeys. #88 correctly describes an additive proposal, waiting/unassigned semantics, conflicting flags and mixed-consumer transition gaps. #89 limits timing evidence to sampled lookup benefit and requires concrete locking, validity, interruption, retry and recovery checks. Historical main results are accurately reported and never used to clear candidate branches.",
+      "evidence_refs": [
+        "changes",
+        "actors",
+        "source:0",
+        "source:1",
+        "source:2",
+        "source:3",
+        "source:4",
+        "source:5",
+        "source:11",
+        "source:13",
+        "source:14"
+      ]
+    },
+    {
+      "id": "criterion-2",
+      "criterion_ref": "/success_criteria/1",
+      "status": "pass",
+      "reason": "3 of 3 votes: The newly created recommendation doc-1788222385556 substantively evaluates RD-202/#87, RD-203/#88 and RD-206/#89. It favors conditional index-only preparation, compares filters alone, filters plus index, combinations containing state, and holding all, explaining benefits deferred and verification requirements without inventing dependencies. It incorporates complete return and attachment journeys, waiting versus unassigned semantics, consumer compatibility and migration/recovery limitations. Historical checks are distinguished from unexecuted candidate checks. Capacity and sizing remain open, and the document explicitly separates Mara’s internal recommendation from Elise’s business-scope acceptance and Nolan’s deployment authorization. The recorded writes establish task-introduced content.",
+      "evidence_refs": [
+        "changes",
+        "actors",
+        "source:0",
+        "source:1",
+        "source:2",
+        "source:3",
+        "source:5",
+        "source:6",
+        "source:8",
+        "source:9",
+        "source:10",
+        "source:11",
+        "source:12"
+      ]
+    },
+    {
+      "id": "criterion-3",
+      "criterion_ref": "/success_criteria/2",
+      "status": "pass",
+      "reason": "3 of 3 votes: Task-introduced updates to RD-202, RD-203, RD-206 and RD-211 specify owners, priorities and observable remaining checks: return-navigation journeys, consumer compatibility examples, migration/recovery verification, and capacity reconciliation. All four retain appropriate open statuses. RD-211 protects September 18 maintenance, dependency review and support, accounts for leave, the hiring panel and closure, and assigns sizing and coverage responsibilities before dates are promised. Existing points are explicitly not treated as available hours or complete estimates. The issue requirements consistently reflect conditional index preparation and deferred state implementation without claiming completed repairs or verification.",
+      "evidence_refs": [
+        "changes",
+        "actors",
+        "source:9",
+        "source:16",
+        "source:17"
+      ]
+    },
+    {
+      "id": "criterion-4",
+      "criterion_ref": "/success_criteria/3",
+      "status": "fail",
+      "reason": "3 of 3 votes: Substantive specialist findings shaped RD-211 and the recommendation, and specialists applied the chosen scope in final follow-ups. However, the new Gmail draft hxxjvn3 has no recipients, no subject and an empty body. It communicates none of the recommendation, unresolved decisions or commitment limits, so the required client update is not delivered.",
+      "evidence_refs": [
+        "changes",
+        "actors"
+      ]
+    }
+  ],
+  "semantic_checks": [
+    {
+      "criterion": 1,
+      "status": "pass",
+      "reason": "3 of 3 votes: New comments on PRs #87, #88 and #89 identify candidate revisions and distinguish source inspection, historical execution and outstanding verification without claiming new runs. #87 limits source findings to link construction and specifies missing return journeys. #88 correctly describes an additive proposal, waiting/unassigned semantics, conflicting flags and mixed-consumer transition gaps. #89 limits timing evidence to sampled lookup benefit and requires concrete locking, validity, interruption, retry and recovery checks. Historical main results are accurately reported and never used to clear candidate branches."
+    },
+    {
+      "criterion": 2,
+      "status": "pass",
+      "reason": "3 of 3 votes: The newly created recommendation doc-1788222385556 substantively evaluates RD-202/#87, RD-203/#88 and RD-206/#89. It favors conditional index-only preparation, compares filters alone, filters plus index, combinations containing state, and holding all, explaining benefits deferred and verification requirements without inventing dependencies. It incorporates complete return and attachment journeys, waiting versus unassigned semantics, consumer compatibility and migration/recovery limitations. Historical checks are distinguished from unexecuted candidate checks. Capacity and sizing remain open, and the document explicitly separates Mara’s internal recommendation from Elise’s business-scope acceptance and Nolan’s deployment authorization. The recorded writes establish task-introduced content."
+    },
+    {
+      "criterion": 3,
+      "status": "pass",
+      "reason": "3 of 3 votes: Task-introduced updates to RD-202, RD-203, RD-206 and RD-211 specify owners, priorities and observable remaining checks: return-navigation journeys, consumer compatibility examples, migration/recovery verification, and capacity reconciliation. All four retain appropriate open statuses. RD-211 protects September 18 maintenance, dependency review and support, accounts for leave, the hiring panel and closure, and assigns sizing and coverage responsibilities before dates are promised. Existing points are explicitly not treated as available hours or complete estimates. The issue requirements consistently reflect conditional index preparation and deferred state implementation without claiming completed repairs or verification."
+    },
+    {
+      "criterion": 4,
+      "status": "fail",
+      "reason": "3 of 3 votes: Substantive specialist findings shaped RD-211 and the recommendation, and specialists applied the chosen scope in final follow-ups. However, the new Gmail draft hxxjvn3 has no recipients, no subject and an empty body. It communicates none of the recommendation, unresolved decisions or commitment limits, so the required client update is not delivered."
+    }
+  ],
+  "dependencies": [
+    {
+      "worker_id": "w-product-lead",
+      "status": "pass",
+      "reason": "3 of 3 votes: Trusted actor records establish Mara's new RD-211 scope decision and surviving written recommendation: prioritize conditional index-only preparation, defer state implementation, retain return-filter reconsideration, and require sizing while protecting maintenance, support and leave. These boundaries match the cited client request, coverage notes and authority records. Actual consumption is substantive: Imani's final RD-202/RD-203/RD-206 requirements distinguish immediate attachment preparation from deferred design; Theo's PR #88/#89 reviews and issue updates apply the deferred implementation and operational preparation scope; June's RD-202 update, PR #87 review and pre-leave handoff apply the hold, verification requirements and commitment limits. Actor sequences 29, 31, 34, 36, 39, 42, 44–47, 52, 59 and 61 corroborate production and use.",
+      "evidence_refs": [
+        "changes",
+        "actors",
+        "source:6",
+        "source:9",
+        "source:10",
+        "source:15"
+      ]
+    },
+    {
+      "worker_id": "w-designer",
+      "status": "pass",
+      "reason": "3 of 3 votes: Trusted actor records attribute new journey requirements and semantic objections to the designer (sequences 12, 13, 25), consistent with the cited browser agreement, state sketch, June’s request and design authority. Actual consumption survives in each consumer’s work: frontend translates them into RD-202/#87 verification requirements and RD-203 consumer analysis; backend incorporates waiting/unassigned distinctions into #88 and attachment interaction gates into RD-206/#89; product lead uses them in RD-211 and the written recommendation to defer state implementation and condition smaller release options on complete journeys. These are substantive, attributed changes, not acknowledgements alone.",
+      "evidence_refs": [
+        "actors",
+        "changes",
+        "source:5",
+        "source:8",
+        "source:10",
+        "source:22"
+      ]
+    },
+    {
+      "worker_id": "w-backend",
+      "status": "pass",
+      "reason": "3 of 3 votes: Trusted actor records establish Theo's new server and migration assessments (sequences 17 and 21), surviving in RD-203/RD-206 and PRs #88/#89. They address additive compatibility, imported undecided requests, coexistence and fallback, storage choices, sampled timing limits, concurrent-index risks and concrete rehearsal/recovery conditions, consistent with the cited inputs and authority. Actual use is substantive: June incorporates the transition assessment into her consumer matrix and ownership/deleted-row invariants into attachment checks (19, 22, 27); Imani translates those invariants into permission, list/count and recovery requirements (25, 45–46); Mara uses the compatibility and operational gaps to select conditional index-only preparation, defer state implementation and retain verification gates in RD-211 and the written recommendation (29, 47). This establishes production and consumption by every named consumer, beyond acknowledgements.",
+      "evidence_refs": [
+        "actors",
+        "changes",
+        "source:0",
+        "source:4",
+        "source:5",
+        "source:7",
+        "source:10",
+        "source:11",
+        "source:14"
+      ]
+    },
+    {
+      "worker_id": "w-frontend",
+      "status": "pass",
+      "reason": "3 of 3 votes: Trusted actor records attribute June's new browser assessments to w-frontend (sequences 16, 19–20). They correctly distinguish historical main checks from #87 verification and explain browser precedence, waiting/unassigned semantics, and concrete journey checks. Actual consumption survives: Mara incorporates these findings into RD-211 and the recommendation (29, 47); Theo incorporates them into compatibility and attachment requirements and PR reviews (26, 36, 39, 52, 59); Imani uses them to refine semantic and interaction requirements (25, 44–46). These are substantive applications consistent with the supplied inputs and working authority, not acknowledgements alone.",
+      "evidence_refs": [
+        "actors",
+        "changes",
+        "source:1",
+        "source:2",
+        "source:3",
+        "source:5",
+        "source:8",
+        "source:10",
+        "source:13"
+      ]
+    }
+  ],
+  "mechanical": {
+    "checks": {
+      "3": {
+        "passed": true,
+        "reason": "All four named Jira issues contain new, candidate-specific follow-up requirements with recognized assignees and valid priorities. Engineering and dependency maintenance remain open. RD-211 records leave, the panel, closure, support, maintenance deadline, sizing needs and commitment limits. Historical Jira review comments are retained. Prose accuracy, adequacy of estimates and cross-document consistency require semantic review."
+      }
+    },
+    "input_hash": "d2492a7a95850b675ca4b4b60d02476acc66069c6708533423e757f9e666ee14",
+    "code_hash": "f4e52e852ff57bd0958776b57001f6733c1606fdbc90f9ac2f9e0a5d85cb9dac",
+    "isolation": "bubblewrap: private network/pid/user namespaces; read-only inputs; no host home or credentials",
+    "runner_hash": "7f82877a79fb236f8fe4495c588f34fdbbd1141c80854227ee355bc643897430"
+  },
+  "errors": {},
+  "judgment_receipts": [
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:43:44.570161+00:00",
+      "prompt_hash": "6e63758a568b005f9eb3348e2173a6e46f0be72a90fdbb24a9089ee4b0f92a6c",
+      "call_id": "692190fa192f45d5b9536473eaa7e84be9e92587d45844d085ccf80d3dae6199",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 11.072519507957622,
+      "usage": {
+        "input_tokens": 171774,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 137,
+        "reasoning_output_tokens": 30
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a104-8bba-7a21-91a2-0426c47db93a"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:43:55.686758+00:00",
+      "prompt_hash": "f55f501c9d2b7df7aee57fb7639d7fed9cca7693a182e0dc5438db90bd1785ae",
+      "call_id": "bffc0ca4343d6b9d7c4e60a4054aaeef812753cbc823e5650f58166dc63d8fcc",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 11.16877169907093,
+      "usage": {
+        "input_tokens": 171774,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 158,
+        "reasoning_output_tokens": 42
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a104-b6e3-7523-9931-62ae163b35ed"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:44:06.900188+00:00",
+      "prompt_hash": "f2efdfa551fd156f81a06e770d6c28e0b8fb2056ae571685918b32ff49359729",
+      "call_id": "da7bf5341660ba36b680354321e4054c2d850c05bfddcab9a2294fb8385fb955",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 10.10910250688903,
+      "usage": {
+        "input_tokens": 171768,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 142,
+        "reasoning_output_tokens": 36
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a104-e2a8-7873-bbb5-4bbda594e32c"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:43:44.575371+00:00",
+      "prompt_hash": "0f83954f8a22004eaa7f9696a138775543ac64bb9997512da33edadd91b3dd9f",
+      "call_id": "8cc45497192cec213422f6930f10ec14ae90af672b1130f80832fe1bcb48c986",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 14.092418610816821,
+      "usage": {
+        "input_tokens": 171743,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 258,
+        "reasoning_output_tokens": 38
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a104-8bc3-7e60-9db2-b6a09f82abe8"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:43:58.699096+00:00",
+      "prompt_hash": "e93d6e01713d023bf7072b4ac816c03c86b9f4578f038bc13d771fe7785801db",
+      "call_id": "9129defd81b6169b8b9e78048518aa41c7e33c37679e2bc4add4c0e463a4a85f",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 14.775176257826388,
+      "usage": {
+        "input_tokens": 171767,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 229,
+        "reasoning_output_tokens": 39
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a104-c2a3-7f81-b079-4fea76e93a42"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:44:13.506384+00:00",
+      "prompt_hash": "4b4fc52dbd50a9d631cebc0b5387b021f61a79f4ba9d7ae5742ab74e216e5983",
+      "call_id": "457eb4e133866ae764dfc768d142ad812fbd44f843fc8ecf55cf2d2b4e85e012",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 12.425074295140803,
+      "usage": {
+        "input_tokens": 171752,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 220,
+        "reasoning_output_tokens": 36
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a104-fc76-7140-8402-d23fb88efc12"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:43:44.572903+00:00",
+      "prompt_hash": "fc729fe29f298b38d2f5e62740be8e129fae41b554f2a9077a3aadc2de3cab16",
+      "call_id": "a6c3a7e3bed9de9f4d6474e16f434502dbf790f4608c7d40e072923a9417c028",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 15.56022104807198,
+      "usage": {
+        "input_tokens": 171788,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 202,
+        "reasoning_output_tokens": 30
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a104-8bb0-79b3-a7e9-86b5863c5ef0"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:44:00.164876+00:00",
+      "prompt_hash": "9d976e2fe69e0b81847e2c6db86026292fc814d3130cbb43e39d1bfc6d887e28",
+      "call_id": "0616bf3663cbfdbab23a668541509fb6063e705c80c4d508911562d9e509b4a6",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 12.631057007005438,
+      "usage": {
+        "input_tokens": 171776,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 214,
+        "reasoning_output_tokens": 31
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a104-c863-7ef3-b055-794bbc817f2d"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:44:12.833251+00:00",
+      "prompt_hash": "9d184387aba660a5f764055d658adeb2c0e4b2c2d179097d75f5f31ed59068b7",
+      "call_id": "d5589f602a7306679a4d22900c72ee39201bcadf3967aad4f1d62465ea91967f",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 13.88203716604039,
+      "usage": {
+        "input_tokens": 171773,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 178,
+        "reasoning_output_tokens": 33
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a104-f9d7-7ed1-80ba-e9993a44a023"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:43:44.578140+00:00",
+      "prompt_hash": "e60310e2fc4b881cb5e2567c0a204aac3e9f7a003dcdb14f8fedffed706a446a",
+      "call_id": "cd39f2c3f04a0954fb02f819b119418cc0f45f6feb199fcad655cdce037353b3",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 12.75490502314642,
+      "usage": {
+        "input_tokens": 171763,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 212,
+        "reasoning_output_tokens": 33
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a104-8bae-7613-893a-7b4e1538567c"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:43:57.374505+00:00",
+      "prompt_hash": "95fa4a9e2a6b866de76c97013ff1c1c24d0465aa08f7e061cd5dbeac41cdc58a",
+      "call_id": "c0529177fbc9fed1d07392d112f39fbae71870ef599009302edf7cf9a48227d2",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 16.079715507803485,
+      "usage": {
+        "input_tokens": 171754,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 210,
+        "reasoning_output_tokens": 32
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a104-bd7f-75c0-b44b-3038c71f83b1"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:44:13.482505+00:00",
+      "prompt_hash": "63532d5e343a1b6189f40fee7a637fa9dededf843cf8557cfb40143b7c1ace0d",
+      "call_id": "e58cf6670985162132964fef67e673691f0c7c02855e08173b4d3e115295cfc2",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 16.83012783108279,
+      "usage": {
+        "input_tokens": 171760,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 272,
+        "reasoning_output_tokens": 38
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a104-fc64-7ac3-8fae-0788f6c60a8d"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:44:25.970132+00:00",
+      "prompt_hash": "848ff6aee0a2c8a1d41e84b862c502b15e6d60bda9bb4c0dc5399a47e666f1ab",
+      "call_id": "d0531259a1506b2105539fafdb5d492d22932e83aa00318fe14c55ffe5334756",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 13.414742585970089,
+      "usage": {
+        "input_tokens": 171892,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 233,
+        "reasoning_output_tokens": 51
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a105-2d20-7e62-b4b2-9f19c2198ddc"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:44:39.406982+00:00",
+      "prompt_hash": "02e495db10b7735978ec6252e996ee9bf66a8856d6b433ac16cfb9b37e8ef6af",
+      "call_id": "d7e286f3dd4984caa0a6c8e49ceb30bfd88e9caa53e64a78d5ad366eda571d76",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 12.065767381805927,
+      "usage": {
+        "input_tokens": 171913,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 213,
+        "reasoning_output_tokens": 39
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a105-619f-7110-8f33-b190c0551bec"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:44:51.504062+00:00",
+      "prompt_hash": "3e1a56da11ba557cd8b0f3e77c20b9442ce280d774e3f00339f4d8d3525f4fc6",
+      "call_id": "fb37b38b71b1b879d47cc93ae03ff5f37b895a786aeb512754727a01e4775db4",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 14.373534655896947,
+      "usage": {
+        "input_tokens": 171907,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 285,
+        "reasoning_output_tokens": 49
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a105-90e1-7ba0-a8e8-da1076bdd5fd"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:44:17.064059+00:00",
+      "prompt_hash": "bfae288b40bfc73d1ccb160a8dd4d7f745262089e4b7be9e2108fe1dec0a9ab9",
+      "call_id": "ed787e49a6877eaeb972a5c10268694656924d833df5787919b4b4bc20a05172",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 19.48039198713377,
+      "usage": {
+        "input_tokens": 171921,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 295,
+        "reasoning_output_tokens": 65
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a105-0a53-7682-9343-7e8ed31afa33"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:44:36.570230+00:00",
+      "prompt_hash": "d80ba74c93d0c103abef440bca145c283e0d6750c9f124fd1239a4ef7f9abc91",
+      "call_id": "3fdcb9869077cfb73bbb1c0f9fe9127870c46902efe2e4f590a461600ee439e5",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 16.176269791089,
+      "usage": {
+        "input_tokens": 171927,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 304,
+        "reasoning_output_tokens": 76
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a105-568f-7f23-bd0b-7df5e74699db"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:44:52.786180+00:00",
+      "prompt_hash": "9f90ee22d151b011846dca3168f72afb3036afc4bdac12485bd816200c50df26",
+      "call_id": "7b611cb8d00bbb9b28504ff159d3c1ea1f72c81fd52c104c04c8b6343e6e8497",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 13.664228816051036,
+      "usage": {
+        "input_tokens": 171942,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 273,
+        "reasoning_output_tokens": 49
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a105-95e1-7461-9397-4ef1b97bf7f6"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:44:26.765163+00:00",
+      "prompt_hash": "5451159cdce2e57fa54392c95b309a82e7f9638adddd730a3a199ddad21a6f25",
+      "call_id": "fc06819c37658ac2872f539b76ad4a1dfb207f17c31705f5560695ea3f782870",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 17.82804642408155,
+      "usage": {
+        "input_tokens": 171946,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 300,
+        "reasoning_output_tokens": 51
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a105-3046-7da0-a7dc-50c5951a01bf"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:44:44.619625+00:00",
+      "prompt_hash": "a484908badd0ce9f71fcf20b5d11ee48e30480875dabc641e6cf8ee1520c5f5e",
+      "call_id": "e198eb22f7afe6d72c12cb2904f3fce96cd7a9ea0418ad0adda7d93ca0790f6f",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 14.364450108958408,
+      "usage": {
+        "input_tokens": 171958,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 284,
+        "reasoning_output_tokens": 37
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a105-75f9-7e83-a5b8-cdbb3ae5763a"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:44:59.024579+00:00",
+      "prompt_hash": "e23cc701a13532b7346b7cd3c675382eac1eee04314b3ff184d9a70af82f788d",
+      "call_id": "d96a7fdb6277197911f857cf2000d8b927af50e35cd791820c6f60e0194208ae",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 15.727964338846505,
+      "usage": {
+        "input_tokens": 171946,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 310,
+        "reasoning_output_tokens": 54
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a105-ae4d-7f41-b4ea-f097ec6147b8"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:44:30.370955+00:00",
+      "prompt_hash": "045fcbe6a66ae034eead4c147afd7badb2c06c5f3c04eed549edf7c5cae97b32",
+      "call_id": "f3674a4b498b0877f05595579e8e180cee788a18396009ee68d5bd5f93c44843",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 14.020277022849768,
+      "usage": {
+        "input_tokens": 171905,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 253,
+        "reasoning_output_tokens": 53
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a105-3e59-79a2-982a-cf88ec3239c1"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:44:44.419446+00:00",
+      "prompt_hash": "da0df3732c38c4999760c782bf64513ffeab9ef1cf563ec190103d1c5a1e6586",
+      "call_id": "6a370d370ba6285be0dfa11bcc30fb32e170fe29f89f496c606fdec6d2c94514",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 15.775809612125158,
+      "usage": {
+        "input_tokens": 171905,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 303,
+        "reasoning_output_tokens": 61
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a105-753b-7871-b195-2fefc060661a"
+    },
+    {
+      "job": "task_judgment",
+      "model": "codex/gpt-6-astra",
+      "started_at": "2026-09-14T17:45:00.221008+00:00",
+      "prompt_hash": "8803ee8b909b3c2223ad5c1b687e5aa912056e643df0596efbe02ee309772f5e",
+      "call_id": "604204ae39a605532c91a162ef2d04fca6faa7d39fea45de7cd8555bf73f9e4f",
+      "attempt": 1,
+      "status": "complete",
+      "seconds": 15.62080117315054,
+      "usage": {
+        "input_tokens": 171911,
+        "cached_input_tokens": 6656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 285,
+        "reasoning_output_tokens": 47
+      },
+      "cost_usd": null,
+      "tool_context_hash": null,
+      "tool_calls": [],
+      "codex_home": "<user-home>/.codex-b",
+      "session_id": "01a0a105-b2e9-7af1-8be5-297312eb2284"
+    }
+  ],
+  "proof_key": "dcd1045b4b504def54aa2de1fc0d50c51eb53863c2500a48c7dc285aebb5d481",
+  "evidence_hash": "7d3e6c6032593fcc147c6bc10779a26cfaa2ae90e0f35de95b782c352cab3da5",
+  "actor_evidence_encoding": "expanded",
+  "necessity": "requires separate worker/input ablation trials"
+}
