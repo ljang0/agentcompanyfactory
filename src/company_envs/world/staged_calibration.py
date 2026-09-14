@@ -297,7 +297,10 @@ remove_worker_events can remove the trusted contribution evidence for specified 
 Every case needs an explicit, grounded rationale and expected pass/fail/unavailable.
 The alternative must change a meaningful allowed business decision while preserving every required
 obligation and evidence of collaboration. Update dependent prose/settings together; cosmetic
-paraphrase alone is insufficient. It must pass. partial, wrong_record, wrong_total,
+paraphrase alone is insufficient. Also update affected business-record before/after values in
+/events so the simulated history shows the manager choosing that alternative before specialists
+apply it. Preserve actors, sequence numbers and timestamps. Final records and their simulated
+write history must agree on the chosen scope and its consumption. It must pass. partial, wrong_record, wrong_total,
 missing_authority, irrelevant_contribution and forged_claim must fail for their specific defect.
 Irrelevant work or self-reported approvals must not substitute for actual required contributions.
 For missing_evidence replace /final with {} and expect unavailable, because missing snapshots
